@@ -1,0 +1,141 @@
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import Swiper from "swiper";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function SliderMarquee() {
+  useEffect(() => {
+    const marquee = document.querySelectorAll(".cb-marquee");
+
+    marquee.forEach((e) => {
+      // Create swiper carousel
+      const carousel = e.querySelectorAll(".cb-marquee-carousel");
+
+      carousel.forEach((e) => {
+        const items = e.querySelector(".cb-marquee-items");
+        const item = e.querySelectorAll(".cb-marquee-item");
+
+        e.classList.add("swiper-container");
+        items.classList.add("swiper-wrapper");
+        item.forEach((e) => e.classList.add("swiper-slide"));
+
+        const slider = new Swiper(e, {
+          slidesPerView: "auto",
+          loop: false,
+          freeMode: true,
+          freeModeMomentumBounce: false,
+          freeModeMomentumVelocityRatio: 0.5,
+        });
+      });
+      // Scroll triggered movement
+      const tl = new gsap.timeline();
+
+      tl.set(carousel, { willChange: "transform" });
+
+      tl.fromTo(
+        carousel[0],
+        {
+          x: 350,
+        },
+        {
+          x: 0,
+          ease: "none",
+        },
+        0
+      );
+
+      tl.fromTo(
+        carousel[1],
+        {
+          x: 2000,
+        },
+        {
+          x: 0,
+          ease: "none",
+        },
+        0
+      );
+
+      tl.set(carousel, { willChange: "auto" });
+
+      ScrollTrigger.create({
+        trigger: e,
+        animation: tl,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+        refreshPriority: -14,
+      });
+    });
+  });
+  return (
+    <div>
+      <div className="cb-layout">
+        <div className="cb-content">
+          <div className="project-slider-heading">
+            <h1>
+              More Projects{" "}
+              <span>
+                <img src="/assets/patronum/Vector.png" alt="Png" />
+              </span>
+            </h1>
+          </div>
+          <section className="cb-marquee">
+            <div className="cb-marquee-content">
+              <div className="cb-marquee-main project-marquee-main">
+                <div
+                  className="cb-marquee-carousel project-carousel caro-1"
+                  data-cursor-text="Drag"
+                  data-cursor-size="100px"
+                >
+                  <div className="cb-marquee-items">
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Image
+                        src="/assets/casestudies/kedarkala.png"
+                        width={2000}
+                        height={2000}
+                        alt="Slider"
+                      />
+                      <h2>Kedarkala</h2>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Image
+                        src="/assets/projects/wrag.png"
+                        width={2000}
+                        height={2000}
+                        alt="Slider"
+                        className="wragby"
+                      />
+                      <h2>Wragby</h2>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Image
+                        src="/assets/casestudies/gcm.png"
+                        width={2000}
+                        height={2000}
+                        alt="Slider"
+                      />
+                      <h2>gcm</h2>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Image
+                        src="/assets/casestudies/dharan.png"
+                        width={2000}
+                        height={2000}
+                        alt="Slider"
+                      />
+                      <h2>Dharan</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}

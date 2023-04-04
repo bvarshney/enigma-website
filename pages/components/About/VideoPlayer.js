@@ -1,0 +1,62 @@
+import { useState, useRef } from "react";
+import styles from "../../../styles/VideoPlayer.module.css";
+
+const VideoPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+
+    if (isPlaying) {
+      video.pause();
+      setIsPlaying(false);
+    } else {
+      video.play();
+      setIsPlaying(true);
+    }
+  };
+
+  let playPauseButtonStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    opacity: 1,
+    transition: "all 0.3s ease-in",
+  };
+
+  if (isPlaying) {
+    playPauseButtonStyle.opacity = 0;
+  }
+
+  return (
+    <div
+      style={{ position: "relative" }}
+      onClick={togglePlay}
+      data-cursor-text="Showreel"
+      data-cursor-size="100px"
+      data-cursor-color="#000"
+    >
+      <video ref={videoRef} src="/assets/reels/showreel.mp4" />
+      <div className="play-pause-button" style={playPauseButtonStyle}>
+        {isPlaying ? (
+          <div className={styles.svgBackground}>
+            <img src="https://img.icons8.com/ios-filled/100/000000/pause--v1.png" />
+          </div>
+        ) : (
+          <div className={styles.svgBackground}>
+            <img src="https://img.icons8.com/ios/100/000000/play-button-circled--v3.png" />
+          </div>
+        )}
+      </div>
+      <style jsx>{`
+        .play-pause-button {
+          cursor: pointer;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default VideoPlayer;

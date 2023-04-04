@@ -1,0 +1,23 @@
+.svgBackground {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.svgBackground svg {
+  width: 90px;
+}
+
+.svgBackground img {
+  width: 100px;
+  filter: invert(1);
+}
+
+@media screen and (max-width: 776px) {
+  .svgBackground img {
+    width: 50px;
+  }
+}
