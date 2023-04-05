@@ -223,15 +223,18 @@
   color: #1a1a1a;
   font-weight: 500;
   text-align: justify;
+  font-family: 'Ageo';
   margin-bottom: 3vw;
 }
 
 .paraTop h5 {
   font-size: 1.3vw;
   line-height: 1.5;
+  font-family: 'Ageo';
   margin-bottom: 3vw;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
+  text-align: justify;
 }
 
 .clientTestimonialSectionContent{
@@ -257,6 +260,7 @@
   font-weight: 500;
   text-align: justify;
   margin-bottom: 3vw;
+  font-family: 'Ageo';
 }
 .clientTestimonialSpan{
   color: #6f6f6f;

@@ -165,12 +165,13 @@
 .thirdSectionRightBox .buttonBox h1 {
   margin-right: 2vw;
   font-size: 1.2vw;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.7vw 2vw;
   border-radius: 100px;
   text-transform: uppercase;
   border: 0.01vw solid #1a1a1a;
   transition: all 0.3s ease-in;
+  font-family: 'Ageo';
 }
 
 
@@ -236,6 +237,7 @@
   font-weight: 500;
   text-align: justify;
   margin-bottom: 3vw;
+  font-family: 'Ageo';
 }
 .clientTestimonialSpan{
   color: #6f6f6f;
@@ -264,6 +266,7 @@
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.5px;
+  font-family: 'Ageo';
 }
 
 .paraTop h1 {
@@ -273,15 +276,17 @@
   font-weight: 500;
   text-align: justify;
   margin-bottom: 3vw;
+  font-family: 'Ageo';
 }
 
 .paraTop h5 {
   font-size: 1.3vw;
   line-height: 1.5;
   margin-bottom: 3vw;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.5px;
   text-align: justify;
+  font-family: 'Ageo';
 }
 
 .logoSection {

@@ -25,15 +25,22 @@
 
 @font-face {
   font-family: "Ageo";
-  src: url("/assets/fonts/Ageo-Medium.otf");
-  font-weight: 600;
+  src: url("/assets/fonts/Ageo.otf");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Ageo";
-  src: url("/assets/fonts/Ageo-Light.otf");
-  font-weight: 400;
+  src: url("/assets/fonts/Ageo-Medium.otf");
+  font-weight: 500;
 }
+
+@font-face {
+  font-family: "Ageo";
+  src: url("/assets/fonts/Ageo-SemiBold.otf");
+  font-weight: 600;
+}
+
 
 * {
   padding: 0;
@@ -1512,7 +1519,7 @@ label:hover circle {
   margin-top: 0px;
   margin-bottom: 40px;
   font-size: 2vw;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   font-synthesis: none;
   letter-spacing: 0;
@@ -2262,7 +2269,7 @@ ul {
   overflow: hidden;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
-  font-size: 1vw;
+  font-size: 1.2vw;
   padding-right: 16%;
   letter-spacing: 1px;
   margin-bottom: 30px;
@@ -2433,7 +2440,7 @@ ul {
 /* The Magic */
 .accordion:hover .accordion-item:hover .accordion-item-content,
 accordion-item--default .accordion .accordion-item-content {
-  height: 65vh;
+  height: 70vh;
 }
 
 .accordion-item-content,
@@ -2666,8 +2673,9 @@ accordion-item--default .accordion .accordion-item-content {
   font-size: 1.2vw;
   font-weight: 500;
   max-width: 23vw;
-  color: #383838;
+  color: #1a1a1a;
   margin-left: 12vw;
+  font-family: 'Ageo';
 }
 
 .first-box-contact .work {
@@ -3251,7 +3259,7 @@ input::placeholder {
 
 .first-sub-section .right-box-content p {
   font-size: 2vw;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.5;
   color: #1a1a1a;
   text-align: justify;
@@ -3768,7 +3776,7 @@ https://unsplash.com/@vinomamba24
 
 .first-box-service h3 {
   font-size: 1.2vw;
-  font-weight: 500;
+  font-weight: 400;
   text-align: justify;
   margin-left: 16vw;
   font-family: 'Ageo';
@@ -3856,9 +3864,9 @@ https://unsplash.com/@vinomamba24
 
 .service-cap-section .left-box .sub-text {
   font-size: 1.2vw;
-  color: #383838;
+  color: #1a1a1a;
   font-family: 'Ageo';
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .service-cap-section .right-box {
@@ -3867,16 +3875,16 @@ https://unsplash.com/@vinomamba24
 
 .service-cap-section .right-box h1 {
   font-size: 3vw;
-  color: #383838;
+  color: #1a1a1a;
   margin-bottom: 3vw;
 }
 
 .service-cap-section .right-box h4 {
   max-width: 35vw;
   font-size: 1.2vw;
-  font-weight: 600;
+  font-weight: 500;
   text-align: justify;
-  color: #383838;
+  color: #1a1a1a;
   font-family: 'Ageo';
 }
 
@@ -3906,8 +3914,8 @@ https://unsplash.com/@vinomamba24
 .left-strategy-box h4 {
   max-width: 33vw;
   font-size: 1.2vw;
-  font-weight: 600;
-  color: #383838;
+  font-weight: 500;
+  color: #1a1a1a;
   text-align: justify;
   font-family: 'Ageo';
 }
@@ -4016,7 +4024,7 @@ https://unsplash.com/@vinomamba24
 .box-we-para h4 {
   font-size: 1.7vw;
   color: #1a1a1a;
-  font-weight: 600;
+  font-weight: 500;
   font-family: 'Ageo';
 }
 /* How We Work END */
@@ -4253,6 +4261,7 @@ https://unsplash.com/@vinomamba24
   font-size: 1.2vw;
   font-weight: 500;
   line-height: 1.7;
+  font-family: 'Ageo';
 }
 
 .newsCard:hover img {
@@ -4472,7 +4481,7 @@ span.row-letter:nth-child(20) {
 }
 
 .banner .banner-row .row-col .row-message {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.55vw;
   line-height: 125%;
   width: 28vw;
@@ -5313,11 +5322,13 @@ body.loading {
 
 .main-blog-container .right-section p {
   font-size: 1.2vw;
-  font-weight: 500;
+  font-weight: 400;
   color: #8c8c8c;
+  font-family: 'Ageo';
 }
 
 .strong {
+  font-weight: 500;
   font-size: 3vw;
   letter-spacing: -0.05vw;
   border-left: 3px solid #1a1a1a;
@@ -5506,7 +5517,7 @@ body.loading {
 
 .right-en-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 40%;
   align-items: flex-end;
   height: 100%;
@@ -5858,6 +5869,9 @@ a:hover {
   .header-right-button {
     margin-top: -0.5vw;
   }
+  .accordion:hover .accordion-item:hover .accordion-item-content, accordion-item--default .accordion .accordion-item-content {
+    height: 63vh;
+}
 }
 
 @media screen and (max-width: 1512px) {
@@ -5882,7 +5896,7 @@ a:hover {
 
   .accordion:hover .accordion-item:hover .accordion-item-content,
   accordion-item--default .accordion .accordion-item-content {
-    height: 52vh;
+    height: 60vh;
   }
 
   .buttonNext___2mOCa {

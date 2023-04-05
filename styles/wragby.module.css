@@ -212,14 +212,17 @@
     font-weight: 500;
     text-align: justify;
     margin-bottom: 3vh;
+    font-family: 'Ageo';
   }
 
   .paraTop h5 {
     font-size: 1.3vw;
     line-height: 1.5;
     margin-bottom: 3vh;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5px;
+    font-family: 'Ageo';
+    text-align: justify;
   }
 
   .clientTestimonialSectionContent{
@@ -245,6 +248,7 @@
     font-weight: 500;
     text-align: justify;
     margin-bottom: 3vw;
+    font-family: 'Ageo';
   }
   .clientTestimonialSpan{
     color: #6f6f6f;
@@ -558,8 +562,9 @@
       line-height: 1.5;
       letter-spacing: 0.02vw;
       color: #1a1a1a;
-      font-weight: 500;
+      font-weight: 400;
       text-align: justify;
+      font-family: 'Ageo';
   }
 
   /* ========================= Media Queries ===================

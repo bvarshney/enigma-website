@@ -14,9 +14,10 @@ import MarqueeCata from "./components/MarqueeCata";
 import SliderMarquee from "./components/Srvc/SliderMarquee";
 import FooterMobile from "./components/Mobile/FooterMobile";
 import ServiceNextBox from "./components/NextBoxes/ServiceNextBox";
+import MagneticButton from "./components/MagneticButton";
 
 gsap.registerPlugin(ScrollTrigger);
-
+5;
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -304,7 +305,7 @@ export default function services() {
               <h1
                 className="do"
                 id="service-anim"
-                data-cursor-magnetic
+                // data-cursor-magnetic
                 data-cursor-background-image="/assets/gif/9.gif"
                 data-cursor-size="300px"
                 data-cursor-color="#000"
