@@ -370,17 +370,18 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20}`}
                 id="image-container"
               >
-                <Image
-                  src="/assets/projects/new-project/kedar.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-cursor-text="Click Me"
-                  // data-cursor-background-image="/assets/gif/kedar.gif"
-                  data-cursor-size="100px"
-                  data-cursor-color="#EF9E28"
-                  data-color="C2D4E8"
-                />
+                <a href="/kedarkala">
+                  <Image
+                    src="/assets/projects/new-project/kedarkala.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-cursor-text="Click Me"
+                    data-cursor-size="100px"
+                    data-cursor-color="#EF9E28"
+                    data-color="C2D4E8"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
@@ -445,16 +446,18 @@ export default function ProjectsHome() {
 
             <div className={`${styles.glide} ${styles.mb_0}`}>
               <div className={`${styles.glideContent}`} id="image-container">
-                <Image
-                  src="/assets/projects/new-project/patro.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-color="D1B1BC"
-                  data-cursor-text="Click Me"
-                  data-cursor-size="100px"
-                  data-cursor-color="#0F68DD"
-                />
+                <a href="/patronum">
+                  <Image
+                    src="/assets/projects/new-project/patronum2.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="D1B1BC"
+                    data-cursor-text="Click Me"
+                    data-cursor-size="100px"
+                    data-cursor-color="#0F68DD"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
@@ -526,16 +529,18 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <Image
-                  src="/assets/projects/new-project/wrag.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-color="A9ABB2"
-                  data-cursor-text="Click Me"
-                  data-cursor-size="100px"
-                  data-cursor-color="#535963"
-                />
+                <a href="/wragby">
+                  <Image
+                    src="/assets/projects/new-project/wragby.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="A9ABB2"
+                    data-cursor-text="Click Me"
+                    data-cursor-size="100px"
+                    data-cursor-color="#535963"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
@@ -600,16 +605,18 @@ export default function ProjectsHome() {
 
             <div className={`${styles.glide} ${styles.mb_0}`}>
               <div className={styles.glideContent} id="image-container">
-                <Image
-                  src="/assets/projects/new-project/gcm.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-color="C7B89B"
-                  data-cursor-text="Click Me"
-                  data-cursor-size="100px"
-                  data-cursor-color="#BBA777"
-                />
+                <a href="/gcm">
+                  <Image
+                    src="/assets/projects/new-project/gcm.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="C7B89B"
+                    data-cursor-text="Click Me"
+                    data-cursor-size="100px"
+                    data-cursor-color="#BBA777"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
@@ -681,16 +688,18 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <Image
-                  src="/assets/projects/new-project/pdtl.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-color="FFD795"
-                  data-cursor-text="Click Me"
-                  data-cursor-size="100px"
-                  data-cursor-color="#FEC969"
-                />
+                <a href="/pdtl">
+                  <Image
+                    src="/assets/projects/new-project/pdtl.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="FFD795"
+                    data-cursor-text="Click Me"
+                    data-cursor-size="100px"
+                    data-cursor-color="#FEC969"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
@@ -755,16 +764,18 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <Image
-                  src="/assets/projects/new-project/dharan.jpg"
-                  width={1000}
-                  height={1000}
-                  alt="Image"
-                  data-color="F989A1"
-                  data-cursor-size="100px"
-                  data-cursor-color="#AC0035"
-                  data-cursor-text="Click Me"
-                />
+                <a href="/dharan">
+                  <Image
+                    src="/assets/projects/new-project/dharan.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="F989A1"
+                    data-cursor-size="100px"
+                    data-cursor-color="#AC0035"
+                    data-cursor-text="Click Me"
+                  />
+                </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>

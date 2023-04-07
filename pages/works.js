@@ -85,6 +85,8 @@ export default function studio() {
         <li />
       </ul> */}
 
+      <SmoothScroll />
+
       <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
@@ -108,7 +110,6 @@ export default function studio() {
             </motion.div>
           ) : (
             <>
-              <SmoothScroll />
               <div data-cursor-size="10px" data-cursor-text="">
                 <Banner />
               </div>

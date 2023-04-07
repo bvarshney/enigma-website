@@ -49,7 +49,7 @@ export default function Aerosol() {
       },
       0
     );
-  });
+  }, []);
 
   return (
     <>

@@ -68,6 +68,14 @@
   position: relative;
 }
 
+.glide {
+  visibility: hidden;
+}
+
+.glide > *{
+  visibility: visible;
+}
+
 .glideContent {
   width: 100%;
   position: relative;

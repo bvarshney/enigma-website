@@ -54,7 +54,7 @@ export default function Button() {
             <span className="round" />
           </button>
         </Link> */}
-        {/* <MagneticButton
+        <MagneticButton
           className="primary-button"
           data-cursor-text="click"
           data-cursor-color="#1a1a1a"
@@ -62,35 +62,6 @@ export default function Button() {
         >
           <span className="round" />
           View All Projects
-        </MagneticButton> */}
-
-        <MagneticButton
-          className="button-1"
-          style={{ backgroundColor: "transparent" }}
-          scale={4}
-          tollerance={1}
-          speed={0.3}
-          borderRadius="50%"
-          onClick={() => {
-            console.log("click");
-          }}
-          data-cursor-text="click"
-          data-cursor-color="#1a1a1a"
-          data-cursor-size="100px"
-        >
-          <MagneticButton
-            className="button-1  primary-button"
-            scale={4}
-            tollerance={1}
-            speed={0.5}
-            borderRadius="50%"
-            onClick={() => {
-              console.log("click");
-            }}
-          >
-            View All Projects
-            <span className="round" />
-          </MagneticButton>
         </MagneticButton>
       </div>
     </>

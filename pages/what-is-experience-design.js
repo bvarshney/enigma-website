@@ -241,7 +241,7 @@ export default function blogDetails() {
               between them.
               <br />
               <br />
-              <strong> Donalad Arthur Norman</strong> coined the term ‘User
+              <strong> Donald Arthur Norman</strong> coined the term ‘User
               Experience Design’ while employed at Apple as a User Interface
               Architect. Sometime during the early 1990s, he decided to change
               his title to User Experience Architect. Why did he do it? In Don’s
@@ -257,7 +257,7 @@ export default function blogDetails() {
               </blockquote>
               <br />
               <br />
-              <span className="donald">Doland Arthur Norman</span>
+              <span className="donald">Donald Arthur Norman</span>
             </p>
             <div className="blog-img">
               <div className="image-container">

@@ -1,14 +1,27 @@
 import React, { useState, useEffect, useRef } from "react";
 import Menu from "./Menu";
 import gsap from "gsap";
-import { motion, easeInOut } from "framer-motion";
 
-const Hamburger = ({ history }) => {
+const Hamburger = () => {
   // State of our Menu
-  const navy = useRef();
+  const nav = useRef();
+  const buttonRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(navy.current, {
+    const button = buttonRef.current;
+    button.addEventListener("click", handleClick);
+    return () => {
+      button.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = () => {
+    const audio = new Audio("/assets/music/menu.mp3");
+    audio.play();
+  };
+
+  useEffect(() => {
+    gsap.from(nav.current, {
       duration: 1.5,
       // opacity: 0,
       ease: "power3.inOut",
@@ -28,12 +41,6 @@ const Hamburger = ({ history }) => {
       setDisabled(false);
     }, 1200);
   };
-
-  // useEffect(() => {
-  //   history.listen(() => {
-  //     setState({ clicked: false, menuName: "MENU" });
-  //   });
-  // });
 
   const btnHam = useRef();
 
@@ -62,12 +69,12 @@ const Hamburger = ({ history }) => {
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
-            <div className="menu menu-fixed" ref={navy}>
+            <div className="menu menu-fixed" ref={nav}>
               <div
                 className="menu header-right-button cross menu--1"
                 id="header-fixed"
               >
-             
+                <button ref={buttonRef}>
                   <label data-cursor-exclusion data-cursor-size="60px">
                     <input
                       type="checkbox"
@@ -93,6 +100,7 @@ const Hamburger = ({ history }) => {
                       />
                     </svg>
                   </label>
+                </button>
               </div>
             </div>
           </div>

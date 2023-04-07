@@ -20,7 +20,7 @@ const item = {
     y: 0,
     transition: {
       ease: "easeInOut",
-      duration: 1,
+      duration: 0.5,
       delay: 2,
       stagger: 0.5,
     },

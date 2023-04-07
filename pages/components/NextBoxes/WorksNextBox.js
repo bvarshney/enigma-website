@@ -12,7 +12,7 @@ export default function NextBox() {
           </div>
           <div
             className={styles.mainHeading}
-            data-cursor-background-image="/assets/gif/9.gif"
+            data-cursor-background-image="/assets/gif/10.gif"
             data-cursor-color="#000"
             data-cursor-size="400px"
           >

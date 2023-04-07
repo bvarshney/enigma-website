@@ -199,12 +199,73 @@ export default function patronum() {
     });
     tl.fromTo(
       "#line",
-      { opacity: 0, y: 100 },
+      { opacity: 0, width: "0" },
       {
-        y: 0,
+        width: "100%",
         opacity: 1,
-        duration: 0.7,
-        // stagger: 0.2,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "ease",
+      }
+    );
+  });
+
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "top top",
+      },
+    });
+    tl.fromTo(
+      "#line2",
+      { opacity: 0, width: "0" },
+      {
+        width: "100%",
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2,
+      }
+    );
+  });
+
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "top top",
+      },
+    });
+    tl.fromTo(
+      "#line3",
+      { opacity: 0, width: "0" },
+      {
+        width: "100%",
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.4,
+      }
+    );
+  });
+
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "top top",
+      },
+    });
+    tl.fromTo(
+      "#line4",
+      { opacity: 0, width: "0" },
+      {
+        width: "100%",
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.6,
       }
     );
   });
@@ -258,8 +319,8 @@ export default function patronum() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="40px"
-                  data-cursor-exclusion
+                  data-cursor-size="70px"
+                  data-cursor-text="Visit!"
                   data-cursor-color="#0165E1"
                 >
                   <Link href="" target="_blank" className={styles.Link}>
@@ -684,13 +745,13 @@ export default function patronum() {
                 <li className={styles.colorOne} id="line">
                   Hex: #00415F <br /> Hex: #00B4F4
                 </li>
-                <li className={styles.colorTwo} id="line">
+                <li className={styles.colorTwo} id="line2">
                   Hex: #E33B52
                 </li>
-                <li className={styles.colorThree} id="line">
+                <li className={styles.colorThree} id="line3">
                   Hex: #013C9F
                 </li>
-                <li className={styles.colorFour} id="line">
+                <li className={styles.colorFour} id="line4">
                   Hex: #F9BC40
                 </li>
               </ul>

@@ -240,7 +240,7 @@ export default function ConceptScrollNew() {
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
                       className="vid lazyload"
-                      src="/assets/reels/left.mp4"
+                      src="/assets/reels/left.webm"
                       autoPlay
                       muted
                       playsInline
@@ -277,7 +277,7 @@ export default function ConceptScrollNew() {
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
                       className="vid lazyload"
-                      src="/assets/reels/right.mp4"
+                      src="/assets/reels/right.webm"
                       autoPlay
                       muted
                       playsInline

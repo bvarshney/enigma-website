@@ -181,7 +181,7 @@ const Menu = ({ state }) => {
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
-                              <a
+                              <span
                                 className={
                                   router.pathname == "/about"
                                     ? "activeMenu"
@@ -189,7 +189,7 @@ const Menu = ({ state }) => {
                                 }
                               >
                                 About
-                              </a>
+                              </span>
                             </span>
                           </Link>
                         </div>
@@ -202,7 +202,7 @@ const Menu = ({ state }) => {
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
-                              <a
+                              <span
                                 className={
                                   router.pathname == "/services"
                                     ? "activeMenu"
@@ -210,7 +210,7 @@ const Menu = ({ state }) => {
                                 }
                               >
                                 Expertise
-                              </a>
+                              </span>
                             </span>
                           </Link>
                         </div>
@@ -223,7 +223,7 @@ const Menu = ({ state }) => {
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
-                              <a
+                              <span
                                 className={
                                   router.pathname == "/works"
                                     ? "activeMenu"
@@ -231,7 +231,7 @@ const Menu = ({ state }) => {
                                 }
                               >
                                 Works
-                              </a>
+                              </span>
                             </span>
                           </Link>
                         </div>
@@ -246,7 +246,7 @@ const Menu = ({ state }) => {
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
-                              <a
+                              <span
                                 className={
                                   router.pathname == "/blogs"
                                     ? "activeMenu"
@@ -254,7 +254,7 @@ const Menu = ({ state }) => {
                                 }
                               >
                                 Insight
-                              </a>
+                              </span>
                             </span>
                           </Link>
                         </div>
@@ -267,7 +267,7 @@ const Menu = ({ state }) => {
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
-                              <a
+                              <span
                                 className={
                                   router.pathname == "/contact"
                                     ? "activeMenu"
@@ -275,7 +275,7 @@ const Menu = ({ state }) => {
                                 }
                               >
                                 Contact
-                              </a>
+                              </span>
                             </span>
                           </Link>
                         </div>

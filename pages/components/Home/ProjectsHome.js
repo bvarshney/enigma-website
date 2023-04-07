@@ -372,7 +372,7 @@ export default function ProjectsHome() {
               >
                 <a href="/kedarkala">
                   <Image
-                    src="/assets/projects/new-project/kedar-1.png"
+                    src="/assets/projects/new-project/kedarkala2.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -451,13 +451,12 @@ export default function ProjectsHome() {
               <div className={`${styles.glideContent}`} id="image-container">
                 <a href="/patronum">
                   <Image
-                    src="/assets/projects/new-project/patro-1.png"
+                    src="/assets/projects/new-project/patronum.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
                     data-color="FFEBDF"
                     data-cursor-text="Click Me"
-                    // data-cursor-background-image="/assets/gif/patro.gif"
                     data-cursor-size="100px"
                     data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
@@ -537,7 +536,7 @@ export default function ProjectsHome() {
               >
                 <a href="/wragby">
                   <Image
-                    src="/assets/projects/new-project/wrag.jpg"
+                    src="/assets/projects/new-project/wragby.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -615,7 +614,7 @@ export default function ProjectsHome() {
               <div className={styles.glideContent} id="image-container">
                 <a href="/gcm">
                   <Image
-                    src="/assets/projects/new-project/gcm.jpg"
+                    src="/assets/projects/new-project/gcm.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -700,7 +699,7 @@ export default function ProjectsHome() {
               >
                 <a href="/pdtl">
                   <Image
-                    src="/assets/projects/new-project/pdtl.jpg"
+                    src="/assets/projects/new-project/pdtl.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -778,7 +777,7 @@ export default function ProjectsHome() {
               <div className={styles.glideContent} id="image-container">
                 <a href="/dharan">
                   <Image
-                    src="/assets/projects/new-project/dharan.jpg"
+                    src="/assets/projects/new-project/dharan.webp"
                     width={1000}
                     height={1000}
                     alt="Image"

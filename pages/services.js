@@ -85,6 +85,7 @@ export default function services() {
     tl.fromTo(
       "#grow",
       {
+        borderRadius: "100px",
         opacity: 0,
         scale: 0,
       },
@@ -138,7 +139,6 @@ export default function services() {
           var rotate = gsap
             .timeline({
               scrollTrigger: {
-                trigger: document.body,
                 scrub: true,
                 start: "top top",
                 end: "+=10000",
@@ -173,9 +173,7 @@ export default function services() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
+
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -192,14 +190,6 @@ export default function services() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   }, []);
@@ -219,9 +209,10 @@ export default function services() {
       });
       growTl.to("#grow", {
         duration: 1,
+        borderRadius: "0px",
         width: "90vw",
         right: "2vw",
-        y: "550px",
+        y: "420px",
       });
     });
     return () => ctx.revert();
@@ -301,18 +292,18 @@ export default function services() {
                 the enigmatic realm of bits & bytes.
               </h3>
             </div>
-            <div className="second-box-service">
-              <h1
-                className="do"
-                id="service-anim"
-                // data-cursor-magnetic
-                data-cursor-background-image="/assets/gif/9.gif"
-                data-cursor-size="300px"
-                data-cursor-color="#000"
-              >
-                Offer
-              </h1>
 
+            <h1
+              className="do"
+              id="service-anim"
+              data-cursor-magnetic
+              data-cursor-background-image="/assets/gif/9.gif"
+              data-cursor-size="300px"
+              data-cursor-color="#000"
+            >
+              Offer
+            </h1>
+            <div className="second-box-service">
               <section class="image-en">
                 <div className="absolute-img">
                   <video
@@ -597,13 +588,13 @@ export default function services() {
           {/* Boxes How we Work */}
 
           {/* 1 */}
-          <div
-            className="top-box"
-            data-cursor-color="#48ff00"
-            data-cursor-size="120px"
-            data-cursor-text="Define"
-          >
-            <div className="first-box-how">
+          <div className="top-box">
+            <div
+              className="first-box-how"
+              data-cursor-color="#fcba03"
+              data-cursor-size="120px"
+              data-cursor-text="Define"
+            >
               <div className="box-we">
                 <h1 className="disabled-work">Define</h1>
               </div>

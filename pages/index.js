@@ -282,7 +282,7 @@ export default function Home() {
                   }}
                 >
                   <video
-                    src="/assets/reels/hero.mp4"
+                    src="/assets/reels/hero.webm"
                     muted
                     autoPlay
                     loop

@@ -404,6 +404,7 @@
 .fontImagebox img {
   width: 100%;
   height: 100%;
+  mix-blend-mode: multiply;
 }
 
 .colorSection {
@@ -461,6 +462,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  display: grid;
+    grid-template-columns: 34% 28% 21% 17%;
 }
 
 .colorBoxesSection ul li {

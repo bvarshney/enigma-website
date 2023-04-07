@@ -250,7 +250,7 @@ const SmoothScroll = () => {
   }, [router]);
 
   useEffect(() => {
-    smoothscrollRef.current && smoothscrollRef.current.scrollTo(0, 0, 600);
+    smoothscrollRef.current && smoothscrollRef.current.scrollTo(0, 0);
   }, [router, smoothscrollRef]);
 
   useEffect(() => {

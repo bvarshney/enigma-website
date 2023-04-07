@@ -71,7 +71,7 @@ export default function Header() {
               data-cursor-size="100px"
             >
               <video
-                src="https://weareenigma.com/showreel.mp4"
+                src="/assets/reels/showreel.mp4"
                 autoPlay
                 loop
                 preload="auto"

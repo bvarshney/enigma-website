@@ -70,7 +70,7 @@ export default function HomeHero() {
         <div className="hero-main-content-section">
           <div className="video-box" id="video">
             <video
-              src="/assets/reels/hero.mp4"
+              src="/assets/reels/hero.webm"
               preload="auto"
               autoPlay
               muted

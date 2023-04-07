@@ -460,7 +460,7 @@ button:focus {
   position: absolute;
   z-index: 99;
   right: 0;
-  top: -0.2vw;
+  top: 0vw;
 }
 .menu-layer {
   position: relative;
@@ -3745,7 +3745,7 @@ https://unsplash.com/@vinomamba24
 /* ======================================== Service Hero ==================================== */
 .service-hero {
   width: 80%;
-  height: 84vh;
+  height: 50vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -3791,10 +3791,12 @@ https://unsplash.com/@vinomamba24
   position: relative;
 }
 
-.second-box-service .do {
+ .do {
   font-size: 10vw;
   font-weight: 600;
   color: #383838;
+  position: absolute !important;
+  left: 22vw;
 }
 
 .service-footer {
@@ -4079,7 +4081,8 @@ https://unsplash.com/@vinomamba24
 
 .cb-marquee-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .voro img {
@@ -4102,6 +4105,7 @@ https://unsplash.com/@vinomamba24
 #scroll-container {
   height: 100vh;
   overflow: hidden;
+  background: #f9f9f9;
 }
 
 .module {
@@ -4489,10 +4493,6 @@ span.row-letter:nth-child(20) {
   color: #1a1a1a !important;
 }
 
-.row-col span.row-letter:nth-child(8) {
-  width: 4vw;
-}
-
 .transition-image {
   position: absolute;
   top: 0;
@@ -4682,7 +4682,7 @@ body.loading {
 .loader .loader-inner .image-block.image-1 {
   width: 400px;
   left: 16%;
-  bottom: 14%;
+  bottom: 24%;
 }
 
 .loader .loader-inner .image-block img {
@@ -4693,20 +4693,20 @@ body.loading {
 .loader .loader-inner .image-block.image-3 {
   width: 300px;
   right: 12%;
-  top: 8%;
+  top: 20%;
 }
 
 .loader .loader-inner .image-block.image-4 {
   max-width: 400px;
   width: 40%;
   right: 20%;
-  bottom: 10%;
+  bottom: 25%;
 }
 
 .loader .loader-inner .image-block.image-5 {
   width: 280px;
   left: 14%;
-  top: 12%;
+  top: 25%;
 }
 
 .studio-spacing {
@@ -5703,7 +5703,7 @@ a:hover {
 }
 
 .project-marquee-item .wragby {
-  width: 175%;
+  width: 100%;
 }
 
 .project-marquee-item h2 {
@@ -6279,6 +6279,7 @@ container_hero_content #enigma-svg #e {
     line-height: 145%;
     text-align: justify;
     letter-spacing: 0.00464286em;
+    font-family: 'Ageo';
   }
 
   .mobile-hero-para .bold{
@@ -7427,8 +7428,8 @@ container_hero_content #enigma-svg #e {
   /* ================= Nav Menu ============================ */
 
   #header-fixed button {
-    right: -4vw;
-    top: -1vw;
+    right: 0;
+    top: 0;
   }
 
   .header-fixed {
@@ -7568,7 +7569,8 @@ container_hero_content #enigma-svg #e {
 
   .mobile-hero-para h4 {
     margin-top: 5vw;
-    font-size: 5vw;
+    font-size: 5.5vw;
+    font-family: 'Ageo';
     line-height: 155%;
     letter-spacing: 0.00464286em;
   }
@@ -7880,15 +7882,21 @@ container_hero_content #enigma-svg #e {
     margin: 0 auto;
   }
 
+  
+  .button-1{
+    padding: 20px 5px;
+  }
+
   .primary-button {
     width: 100%;
     height: 100%;
     background-color: #1a1a1a;
     color: #fff;
-    padding: 2vw 10vw;
+    padding: 4vw 8vw;
     font-family: "Gilroy";
     font-size: 5vw;
   }
+
   /* Projects Section END */
   /* ===================== Home Page Index END ==================== */
 
@@ -8340,8 +8348,9 @@ container_hero_content #enigma-svg #e {
     align-items: flex-end;
   }
 
-  .second-box-service .do {
+  .do {
     font-size: 18vw;
+    left: 45vw;
   }
 
   .second-box-service h3 {
@@ -8759,7 +8768,7 @@ container_hero_content #enigma-svg #e {
 
   .contact {
     height: 100%;
-    padding-bottom: 0;
+    margin-bottom: 6vw;
     z-index: 80;
   }
   .contact-content {
@@ -8937,6 +8946,7 @@ container_hero_content #enigma-svg #e {
 
   .main-blog-container .right-section p {
     font-size: 4.5vw;
+    text-align: justify;
   }
 
   .main-blog-container {
@@ -8992,6 +9002,7 @@ container_hero_content #enigma-svg #e {
   }
 
   .box-img-content {
+    width: 100%;
     margin-bottom: 10vw;
   }
 

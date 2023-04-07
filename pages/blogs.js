@@ -336,7 +336,7 @@ export default function blogs() {
               <div className="blog-showmore-box">
                 {showViewMore && (
                   <button className="view-more" onClick={handleViewMore}>
-                    View More
+                    <span>View More</span>
                   </button>
                 )}
               </div>

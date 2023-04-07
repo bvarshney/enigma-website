@@ -6,7 +6,7 @@ export default function HomeVideoSection() {
     <>
       <div className="video-section-mobile">
         <div className="video-box">
-          <video src="/assets/reels/hero.mp4" autoPlay muted loop></video>
+          <video src="/assets/reels/hero.webm" autoPlay muted loop></video>
         </div>
 
         <div className="video-content-box">
