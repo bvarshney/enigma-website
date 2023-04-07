@@ -210,7 +210,11 @@ export default function blogDetails() {
       </div>
 
       <div className="blog-detail-main-section">
-        <div className="blog-detail-heading">
+        <div
+          className="blog-detail-heading"
+          data-cursor-size="10px"
+          data-cursor-text=""
+        >
           <h1 data-jelly id="blog">
             WHAT IS EXPERIENCE DESIGN, AND HOW IS IT DIFFERENT FROM USER
             EXPERIENCE DESIGN (UX)?
@@ -248,17 +252,17 @@ export default function blogDetails() {
               own words -
               <br />
               <br />
-              <blockquote className="bold strong">
-                “I invented the term because I thought Human Interface and
-                usability were too narrow: I wanted to cover all aspects of the
-                person’s experience with a system, including industrial design,
-                graphics, the interface, the physical interaction, and the
-                manual.”
-              </blockquote>
-              <br />
-              <br />
-              <span className="donald">Donald Arthur Norman</span>
             </p>
+            <blockquote className="bold strong" id="anim">
+              “I invented the term because I thought Human Interface and
+              usability were too narrow: I wanted to cover all aspects of the
+              person’s experience with a system, including industrial design,
+              graphics, the interface, the physical interaction, and the
+              manual.”
+            </blockquote>
+            <br />
+            <br />
+            <span className="donald">Donald Arthur Norman</span>
             <div className="blog-img">
               <div className="image-container">
                 <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />

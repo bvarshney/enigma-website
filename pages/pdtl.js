@@ -189,6 +189,26 @@ export default function pdtl() {
     return () => ctx.revert();
   });
 
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "-150 top",
+      },
+    });
+    tl.fromTo(
+      "#line",
+      { opacity: 0, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1,
+      }
+    );
+  });
+
   return (
     <>
       <Head>
@@ -651,7 +671,23 @@ export default function pdtl() {
             </div>
 
             <div className={styles.colorBoxesSection}>
-              <img src="/assets/casestudies/pdtl/color.png" alt="color" />
+              <ul>
+                <li className={styles.colorOne} id="line">
+                  #000000
+                </li>
+                <li className={styles.colorTwo} id="line">
+                  #19073B
+                </li>
+                <li className={styles.colorThree} id="line">
+                  #BE1E2D
+                </li>
+                <li className={styles.colorFour} id="line">
+                  #0060AC
+                </li>
+                <li className={styles.colorFive} id="line">
+                  #FFFFFF
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -687,19 +723,29 @@ export default function pdtl() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h1 data-jelly>
-                  Our toolkit for this project included HTML, CSS, JS, jQuery, WordPress, and WooCommerce. This combination of technologies was chosen for several reasons:
+                    Our toolkit for this project included HTML, CSS, JS, jQuery,
+                    WordPress, and WooCommerce. This combination of technologies
+                    was chosen for several reasons:
                   </h1>
                   <h5 data-jelly>
-                  HTML and CSS provided a solid foundation for a responsive and visually striking website
+                    HTML and CSS provided a solid foundation for a responsive
+                    and visually striking website
                   </h5>
                   <h5 data-jelly>
-                  JavaScript (JS) allowed for dynamic interactivity, making the website engaging and user-friendly
+                    JavaScript (JS) allowed for dynamic interactivity, making
+                    the website engaging and user-friendly
                   </h5>
                   <h5 data-jelly>
-                  jQuery, a popular JS library, simplified the implementation of complex features and ensured consistency across devices
+                    jQuery, a popular JS library, simplified the implementation
+                    of complex features and ensured consistency across devices
                   </h5>
                   <h5 data-jelly>
-                  WooCommerce, a powerful e-commerce solution, was seamlessly integrated for driver training course booking and online payment processing. Its seamless integration with WordPress, the content management system used for PDTL's website, cost-effectiveness, customisability, and vast plugin ecosystem made it the obvious choice for this project.
+                    WooCommerce, a powerful e-commerce solution, was seamlessly
+                    integrated for driver training course booking and online
+                    payment processing. Its seamless integration with WordPress,
+                    the content management system used for PDTL's website,
+                    cost-effectiveness, customisability, and vast plugin
+                    ecosystem made it the obvious choice for this project.
                   </h5>
                 </div>
               </div>
@@ -739,19 +785,28 @@ export default function pdtl() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h1 data-jelly>
-                    The finished product was a website that not only looked the part but performed like a well-tuned lorry, delivering exceptional user experiences and tangible business results:
+                    The finished product was a website that not only looked the
+                    part but performed like a well-tuned lorry, delivering
+                    exceptional user experiences and tangible business results:
                   </h1>
                   <h5 data-jelly>
-                    A significant increase in website traffic and user engagement, thanks in part to the site's captivating design, streamlined navigation, and engaging content
+                    A significant increase in website traffic and user
+                    engagement, thanks in part to the site's captivating design,
+                    streamlined navigation, and engaging content
                   </h5>
                   <h5 data-jelly>
-                    A boost in online bookings for driver training courses, facilitated by the seamless integration of WooCommerce for secure and straightforward transactions
+                    A boost in online bookings for driver training courses,
+                    facilitated by the seamless integration of WooCommerce for
+                    secure and straightforward transactions
                   </h5>
                   <h5 data-jelly>
-                    An uptick in search engine rankings, driving organic traffic and cementing PDTL's online presence
+                    An uptick in search engine rankings, driving organic traffic
+                    and cementing PDTL's online presence
                   </h5>
                   <h5 data-jelly>
-                    Positive feedback from clients and partners, who praised the website's ease of use, informative content, and the occasional dash of British humour.
+                    Positive feedback from clients and partners, who praised the
+                    website's ease of use, informative content, and the
+                    occasional dash of British humour.
                   </h5>
                 </div>
               </div>
@@ -795,7 +850,14 @@ export default function pdtl() {
                 <div className={styles.clientTestimonialparaTop}>
                   <h1 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Enigma has truly knocked it out of the park! Their expertise, creativity, and dedication have transformed our online presence, capturing the essence of our brand and injecting just the right amount of British charm. The results speak for themselves: increased traffic, more bookings, and a website we're proud to call our own. Enigma is the bee's knees, and we couldn't be happier with their stellar work!
+                    Enigma has truly knocked it out of the park! Their
+                    expertise, creativity, and dedication have transformed our
+                    online presence, capturing the essence of our brand and
+                    injecting just the right amount of British charm. The
+                    results speak for themselves: increased traffic, more
+                    bookings, and a website we're proud to call our own. Enigma
+                    is the bee's knees, and we couldn't be happier with their
+                    stellar work!
                   </h1>
                 </div>
                 <div
@@ -807,7 +869,7 @@ export default function pdtl() {
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>
-                        Jared Bullock
+                      Jared Bullock
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Director, PDTL

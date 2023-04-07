@@ -51,9 +51,6 @@ export default function certvault() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function certvault() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   });
@@ -187,6 +176,26 @@ export default function certvault() {
       });
     });
     return () => ctx.revert();
+  });
+
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "-150 top",
+      },
+    });
+    tl.fromTo(
+      "#line",
+      { opacity: 0, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1,
+      }
+    );
   });
 
   return (
@@ -656,11 +665,11 @@ export default function certvault() {
 
               <div className={styles.colorBoxesSection}>
                 <ul>
-                  <li className={styles.colorOne}></li>
-                  <li className={styles.colorTwo}></li>
-                  <li className={styles.colorThree}></li>
-                  <li className={styles.colorFour}></li>
-                  <li className={styles.colorFive}></li>
+                  <li className={styles.colorOne} id="line"></li>
+                  <li className={styles.colorTwo} id="line"></li>
+                  <li className={styles.colorThree} id="line"></li>
+                  <li className={styles.colorFour} id="line"></li>
+                  <li className={styles.colorFive} id="line"></li>
                 </ul>
               </div>
             </div>

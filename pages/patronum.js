@@ -204,68 +204,7 @@ export default function patronum() {
         width: "100%",
         opacity: 1,
         duration: 0.8,
-        stagger: 0.2,
-        ease: "ease",
-      }
-    );
-  });
-
-  // LI Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#colorsection",
-        start: "top top",
-      },
-    });
-    tl.fromTo(
-      "#line2",
-      { opacity: 0, width: "0" },
-      {
-        width: "100%",
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.2,
-      }
-    );
-  });
-
-  // LI Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#colorsection",
-        start: "top top",
-      },
-    });
-    tl.fromTo(
-      "#line3",
-      { opacity: 0, width: "0" },
-      {
-        width: "100%",
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.4,
-      }
-    );
-  });
-
-  // LI Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#colorsection",
-        start: "top top",
-      },
-    });
-    tl.fromTo(
-      "#line4",
-      { opacity: 0, width: "0" },
-      {
-        width: "100%",
-        opacity: 1,
-        duration: 0.8,
-        delay: 0.6,
+        stagger: 0.1,
       }
     );
   });
@@ -745,13 +684,13 @@ export default function patronum() {
                 <li className={styles.colorOne} id="line">
                   Hex: #00415F <br /> Hex: #00B4F4
                 </li>
-                <li className={styles.colorTwo} id="line2">
+                <li className={styles.colorTwo} id="line">
                   Hex: #E33B52
                 </li>
-                <li className={styles.colorThree} id="line3">
+                <li className={styles.colorThree} id="line">
                   Hex: #013C9F
                 </li>
-                <li className={styles.colorFour} id="line4">
+                <li className={styles.colorFour} id="line">
                   Hex: #F9BC40
                 </li>
               </ul>

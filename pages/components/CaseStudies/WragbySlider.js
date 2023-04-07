@@ -94,14 +94,14 @@ export default function SliderMarquee() {
                 >
                   <div className="cb-marquee-items">
                     <div className="cb-marquee-item project-marquee-item">
-                      <Link href="/gcm">
+                      <Link href="/kedarkala">
                         <Image
-                          src="/assets/projects/new-project/gcm.webp"
+                          src="/assets/casestudies/kedarkala.png"
                           width={2000}
                           height={2000}
                           alt="Slider"
                         />
-                        <h2>gcm</h2>
+                        <h2>Kedarkala</h2>
                       </Link>
                     </div>
                     <div className="cb-marquee-item project-marquee-item">
@@ -117,9 +117,9 @@ export default function SliderMarquee() {
                       </Link>
                     </div>
                     <div className="cb-marquee-item project-marquee-item">
-                      <Link href="/patronum">
+                      <Link href="/gcm">
                         <Image
-                          src="/assets/casestudies/gcm.png"
+                          src="/assets/projects/new-project/gcm.webp"
                           width={2000}
                           height={2000}
                           alt="Slider"
@@ -136,6 +136,50 @@ export default function SliderMarquee() {
                           alt="Slider"
                         />
                         <h2>Dharan</h2>
+                      </Link>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Link href="/pdtl">
+                        <Image
+                          src="/assets/projects/new-project/pdtl.webp"
+                          width={2000}
+                          height={2000}
+                          alt="Slider"
+                        />
+                        <h2>PDTL</h2>
+                      </Link>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Link href="/dmtca">
+                        <Image
+                          src="/assets/projects/dmtca.png"
+                          width={2000}
+                          height={2000}
+                          alt="Slider"
+                        />
+                        <h2>DMTCA</h2>
+                      </Link>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Link href="/quick">
+                        <Image
+                          src="/assets/projects/quick-s.png"
+                          width={2000}
+                          height={2000}
+                          alt="Slider"
+                        />
+                        <h2>QuickX</h2>
+                      </Link>
+                    </div>
+                    <div className="cb-marquee-item project-marquee-item">
+                      <Link href="/certvault">
+                        <Image
+                          src="/assets/projects/certvault.webp"
+                          width={2000}
+                          height={2000}
+                          alt="Slider"
+                        />
+                        <h2>Certvault</h2>
                       </Link>
                     </div>
                   </div>

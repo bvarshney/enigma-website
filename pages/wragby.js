@@ -80,7 +80,7 @@ export default function wragby() {
       );
     });
     return () => ctx.revert();
-  });
+  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -194,16 +194,16 @@ export default function wragby() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#colorsection",
-        start: "-250 top",
+        start: "-150 top",
       },
     });
     tl.fromTo(
       "#line",
-      { opacity: 0, y: 100 },
+      { opacity: 0, scale: 0 },
       {
-        y: 0,
+        scale: 1,
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 1,
       }
     );
@@ -683,8 +683,25 @@ export default function wragby() {
               </div>
             </div>
 
+            {/* <img src="/assets/casestudies/wragby/color.webp" alt="color" /> */}
             <div className={styles.colorBoxesSection}>
-              <img src="/assets/casestudies/wragby/color.webp" alt="color" />
+              <ul>
+                <li className={styles.colorOne} id="line">
+                  #E30B25
+                </li>
+                <li className={styles.colorTwo} id="line">
+                  #2C5ED1
+                </li>
+                <li className={styles.colorThree} id="line">
+                  #FFFFFF
+                </li>
+                <li className={styles.colorFour} id="line">
+                  #E7EDEF
+                </li>
+                <li className={styles.colorFive} id="line">
+                  #151515
+                </li>
+              </ul>
             </div>
           </div>
 

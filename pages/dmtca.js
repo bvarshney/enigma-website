@@ -189,6 +189,26 @@ export default function patronum() {
     return () => ctx.revert();
   });
 
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "-150 top",
+      },
+    });
+    tl.fromTo(
+      "#line",
+      { opacity: 0, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1,
+      }
+    );
+  });
+
   return (
     <>
       <Head>
@@ -652,7 +672,23 @@ export default function patronum() {
             </div>
 
             <div className={styles.colorBoxesSection}>
-              <img src="/assets/casestudies/dmtca/color.png" alt="color" />
+              <ul>
+                <li className={styles.colorOne} id="line">
+                  #56B7BE
+                </li>
+                <li className={styles.colorTwo} id="line">
+                  #4FEAB8
+                </li>
+                <li className={styles.colorThree} id="line">
+                  #33B5F2
+                </li>
+                <li className={styles.colorFour} id="line">
+                  #62CCFD
+                </li>
+                <li className={styles.colorFive} id="line">
+                  #4FEAB8 <br /> #62CCFD
+                </li>
+              </ul>
             </div>
           </div>
 

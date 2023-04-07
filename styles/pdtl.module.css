@@ -140,7 +140,7 @@
 
 .thirdSectionLeftBox h1 {
   font-size: 1.4vw;
-  font-weight: 500;
+  font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
 }
@@ -188,7 +188,7 @@
 
 .forthSectionLeftBox h1 {
   font-size: 1.4vw;
-  font-weight: 500;
+  font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
   padding-top: 8vw;
@@ -449,18 +449,95 @@
 }
 
 .colorBoxesSection {
-  width: 100%;
-  height: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.colorBoxesSection img {
-  width: 70%;
-  z-index: 10;
-}
+  .colorBoxesSection img {
+    width: 70%;
+    z-index: 10;
+  }
+
+  .colorBoxesSection ul {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+  }
+
+  .colorBoxesSection ul li {
+    list-style: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Gilroy';
+    box-shadow: 2px 2px 25px #1a1a1a;
+    text-align: center;
+  }
+
+  .colorBoxesSection ul li:nth-child(5){
+    color: #1a1a1a;
+  }
+
+  .colorOne {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #000;
+    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+  }
+
+  .colorTwo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    z-index: 1;
+    background: #19073b;
+    position: absolute;
+    left: 13vw;
+  }
+
+  .colorThree {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    z-index: 1;
+    background: #BE1E2D;
+    position: absolute;
+    left: 26vw;
+  }
+
+  .colorFour {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    z-index: 1;
+    background: #0060AC;
+    position: absolute;
+    left: 39vw;
+  }
+
+  .colorFive {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    z-index: 1;
+    background: #FFFFFF;
+    position: absolute;
+    left: 52vw;
+  }
 
 .videoHeading {
   width: 90%;
@@ -505,7 +582,7 @@
 
 .websiteDesignSection .leftBox h1 {
   font-size: 1.4vw;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: #1a1a1a;
 }

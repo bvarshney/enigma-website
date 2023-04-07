@@ -199,11 +199,12 @@ export default function quickx() {
     });
     tl.fromTo(
       "#line",
-      { opacity: 0, y: 100 },
+      { opacity: 0, width: "0" },
       {
-        y: 0,
+        width: "100%",
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
+        stagger: 0.1,
       }
     );
   });

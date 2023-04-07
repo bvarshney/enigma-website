@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -41,6 +41,42 @@ const Menu = ({ state }) => {
   const link13 = useRef();
   const link14 = useRef();
   const link15 = useRef();
+
+  // Sound on Click
+  useEffect(() => {
+    const buttons = document.querySelectorAll(".btn-music");
+    const handleClick = () => {
+      const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
+      audio.play();
+    };
+    buttons.forEach((button) => button.addEventListener("click", handleClick));
+    return () => {
+      buttons.forEach((button) =>
+        button.removeEventListener("click", handleClick)
+      );
+    };
+  }, []);
+
+  // Sound on Hover
+  useEffect(() => {
+    const buttons = document.querySelectorAll(".btn-music");
+    const handleMouseOver = (event) => {
+      const audio = new Audio("/assets/music/hover.mp3"); // replace with the path to your audio file
+      audio.play();
+      event.target.addEventListener("mouseout", () => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    };
+    buttons.forEach((button) =>
+      button.addEventListener("mouseover", handleMouseOver)
+    );
+    return () => {
+      buttons.forEach((button) =>
+        button.removeEventListener("mouseover", handleMouseOver)
+      );
+    };
+  }, []);
 
   useEffect(() => {
     if (state.clicked === false) {
@@ -173,7 +209,7 @@ const Menu = ({ state }) => {
                     <div className="content-left-body-row">
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link1}>
-                          <Link href="/about">
+                          <Link href="/about" className="btn-music">
                             <span className="content-heading-serial">01</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -194,7 +230,7 @@ const Menu = ({ state }) => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link2}>
-                          <Link href="/services">
+                          <Link href="/services" className="btn-music">
                             <span className="content-heading-serial">02</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -215,7 +251,7 @@ const Menu = ({ state }) => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link3}>
-                          <Link href="/works">
+                          <Link href="/works" className="btn-music">
                             <span className="content-heading-serial">03</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -238,7 +274,7 @@ const Menu = ({ state }) => {
                       </div>
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link4}>
-                          <Link href="/blogs">
+                          <Link href="/blogs" className="btn-music">
                             <span className="content-heading-serial">04</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -259,7 +295,7 @@ const Menu = ({ state }) => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link5}>
-                          <Link href="/contact">
+                          <Link href="/contact" className="btn-music">
                             <span className="content-heading-serial">05</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
