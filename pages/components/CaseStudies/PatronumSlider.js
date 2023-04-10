@@ -80,7 +80,7 @@ export default function SliderMarquee() {
             <h1>
               More Projects{" "}
               <span>
-                <img src="/assets/patronum/Vector.png" alt="Png" />
+                <img src="/assets/casestudies/vector.webp" alt="Png" />
               </span>
             </h1>
           </div>

@@ -5,6 +5,12 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "next-share";
 
 import Header from "./components/Header/Header";
 import SmoothScroll from "./components/utils/SmoothScroll";
@@ -140,9 +146,6 @@ export default function blogDetails() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -159,14 +162,6 @@ export default function blogDetails() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   }, []);
@@ -198,9 +193,6 @@ export default function blogDetails() {
               Power of <span className="loader-font">Psychology!</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -235,7 +227,67 @@ export default function blogDetails() {
             </div>
             <div className="box-blog" id="anim">
               <h1>Share Article</h1>
-              {/* <h2>(Branding)</h2> */}
+              <div className="social-icons">
+                <FacebookShareButton
+                  url={
+                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
+                  }
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/facebook.webp"
+                    alt="social-icons"
+                  />
+                </FacebookShareButton>
+
+                <LinkedinShareButton
+                  url={
+                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
+                  }
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/linkedin.webp"
+                    alt="social-icons"
+                  />
+                </LinkedinShareButton>
+
+                <TwitterShareButton
+                  url={
+                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
+                  }
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/twitter.webp"
+                    alt="social-icons"
+                  />
+                </TwitterShareButton>
+
+                <WhatsappShareButton
+                  url={
+                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
+                  }
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
+                    alt="social-icons"
+                  />
+                </WhatsappShareButton>
+              </div>
             </div>
           </div>
           <div className="right-section" id="right-section">
@@ -254,14 +306,16 @@ export default function blogDetails() {
               <br />
               <br />
             </p>
-            <blockquote className="bold strong" id="anim">
-              The Connection Between Psychology and UX Design
-            </blockquote>
+            <h1 id="anim">
+              <strong className="bold fontSize">
+                The Connection Between Psychology and UX Design
+              </strong>
+            </h1>
             <br />
             <br />
             <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
+              <div className="image-container blog-img-container" id="anim">
+                <img src="/assets/blogs/blog-detail/uxbrain1.png" alt="Img" />
               </div>
             </div>
             <br />
@@ -284,26 +338,20 @@ export default function blogDetails() {
             </p>
             <br />
             <p>
-              Cognitive psychology: The study of mental processes such as
-              perception, memory, and problem-solving.
+              <strong>Cognitive psychology:</strong> The study of mental
+              processes such as perception, memory, and problem-solving.
             </p>
             <br />
             <p>
-              Behavioural psychology: The examination of observable human
-              behaviour and the factors that influence it.
+              <strong>Behavioural psychology:</strong> The examination of
+              observable human behaviour and the factors that influence it.
             </p>
             <br />
             <p>
-              Social psychology: The exploration of how people interact with one
-              another and how group dynamics affect individual behaviour.
+              <strong>Social psychology:</strong> The exploration of how people
+              interact with one another and how group dynamics affect individual
+              behaviour.
             </p>
-            <br />
-            <br />
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>
@@ -342,11 +390,11 @@ export default function blogDetails() {
               guide users' attention.
             </p>
 
-            <div className="blog-img">
+            {/* <div className="blog-img">
               <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
+                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
               </div>
-            </div>
+            </div> */}
             <br />
             <br />
             <h1>
@@ -367,25 +415,22 @@ export default function blogDetails() {
               <strong>Consider the following when designing for habit:</strong>
               <br />
               <br />
-              Familiarity: Leverage familiar design patterns, icons, and layouts
-              to create a sense of comfort and familiarity for users.
+              <strong>Familiarity: </strong>
+              Leverage familiar design patterns, icons, and layouts to create a
+              sense of comfort and familiarity for users.
               <br />
               <br />
-              Consistency: Maintain consistent design elements across your
-              digital product to reduce the learning curve and help users build
-              a mental model of how the interface works.
+              <strong>Consistency: </strong>
+              Maintain consistent design elements across your digital product to
+              reduce the learning curve and help users build a mental model of
+              how the interface works.
               <br />
               <br />
-              Feedback loops: Provide users with clear feedback on their
-              actions, helping them understand the consequences of their
-              behaviour and reinforcing positive habits.
+              <strong>Feedback loops: </strong>
+              Provide users with clear feedback on their actions, helping them
+              understand the consequences of their behaviour and reinforcing
+              positive habits.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>
@@ -410,8 +455,9 @@ export default function blogDetails() {
               evoke the desired emotional response.
               <br />
               <br />
-              Design for delight: Surprise and delight users with unexpected
-              elements, such as easter eggs or personalized content.
+              <strong>Design for delight: </strong>
+              Surprise and delight users with unexpected elements, such as
+              easter eggs or personalized content.
               <br />
               <br />
               Foster a sense of trust and security by using familiar design
@@ -420,7 +466,7 @@ export default function blogDetails() {
 
             <div className="blog-img">
               <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
+                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
               </div>
             </div>
             <br />
@@ -441,33 +487,30 @@ export default function blogDetails() {
               <strong>Some key principles to consider include:</strong>
               <br />
               <br />
-              Social proof: People are more likely to engage with a product or
-              service if they see others doing so. Leverage testimonials,
-              ratings, and reviews to demonstrate social proof.
+              <strong>Social proof: </strong>
+              People are more likely to engage with a product or service if they
+              see others doing so. Leverage testimonials, ratings, and reviews
+              to demonstrate social proof.
               <br />
               <br />
-              Authority: Users are more likely to trust and follow the advice of
-              experts or authority figures. Feature endorsements from industry
-              leaders or showcase your expertise and credentials to build
-              credibility.
+              <strong>Authority: </strong>
+              Users are more likely to trust and follow the advice of experts or
+              authority figures. Feature endorsements from industry leaders or
+              showcase your expertise and credentials to build credibility.
               <br />
               <br />
-              Reciprocity: People have a natural tendency to return favours or
-              kindness. Offer users valuable content, exclusive discounts, or
-              helpful tools to encourage engagement and loyalty.
+              <strong>Reciprocity: </strong>
+              People have a natural tendency to return favours or kindness.
+              Offer users valuable content, exclusive discounts, or helpful
+              tools to encourage engagement and loyalty.
               <br />
               <br />
-              Scarcity: Items or opportunities that are limited in availability
-              are often perceived as more valuable. Create a sense of urgency by
+              <strong>Scarcity: </strong>
+              Items or opportunities that are limited in availability are often
+              perceived as more valuable. Create a sense of urgency by
               highlighting limited-time offers, exclusive content, or low stock
               levels.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>
@@ -486,26 +529,28 @@ export default function blogDetails() {
               <strong>Key concepts to consider include:</strong>
               <br />
               <br />
-              Hick's Law: The time it takes to make a decision increases as the
-              number of options increases. Limit the number of choices presented
-              to users to prevent decision paralysis and simplify the user
-              experience.
+              <strong>Hick's Law: </strong>
+              The time it takes to make a decision increases as the number of
+              options increases. Limit the number of choices presented to users
+              to prevent decision paralysis and simplify the user experience.
               <br />
               <br />
-              Loss aversion: People are more motivated to avoid losses than to
-              acquire gains. Frame choices and actions in terms of potential
-              losses rather than gains to encourage users to take action.
+              <strong>Loss aversion: </strong>
+              People are more motivated to avoid losses than to acquire gains.
+              Frame choices and actions in terms of potential losses rather than
+              gains to encourage users to take action.
               <br />
               <br />
-              Anchoring: People tend to rely heavily on the first piece of
-              information they encounter when making decisions. Use anchoring
-              strategically to guide users' decision-making processes, such as
-              by highlighting the most popular or recommended options.
+              <strong>Anchoring: </strong>
+              People tend to rely heavily on the first piece of information they
+              encounter when making decisions. Use anchoring strategically to
+              guide users' decision-making processes, such as by highlighting
+              the most popular or recommended options.
             </p>
 
             <div className="blog-img">
               <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
+                <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
               </div>
             </div>
             <br />
@@ -527,26 +572,22 @@ export default function blogDetails() {
               </strong>
               <br />
               <br />
-              Self-determination theory: People are motivated by the need for
-              autonomy, competence, and relatedness. Design interfaces that
-              empower users, help them feel capable, and foster a sense of
-              connection with others.
+              <strong>Self-determination theory: </strong>
+              People are motivated by the need for autonomy, competence, and
+              relatedness. Design interfaces that empower users, help them feel
+              capable, and foster a sense of connection with others.
               <br />
               <br />
-              Flow theory: Users are most engaged when they are fully absorbed
-              in a task that is challenging but achievable. Design tasks that
-              balance difficulty and skill to promote flow and engagement.
+              <strong>Flow theory: </strong>
+              Users are most engaged when they are fully absorbed in a task that
+              is challenging but achievable. Design tasks that balance
+              difficulty and skill to promote flow and engagement.
               <br />
               <br />
-              Gamification: Incorporate game-like elements, such as points,
-              badges, and leader boards, to increase motivation and engagement.
+              <strong>Gamification: </strong>
+              Incorporate game-like elements, such as points, badges, and leader
+              boards, to increase motivation and engagement.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>
@@ -579,11 +620,6 @@ export default function blogDetails() {
               actions at different stages of their journey.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>
@@ -617,12 +653,6 @@ export default function blogDetails() {
               Consider cultural differences and avoid potentially offensive or
               exclusionary content.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
-            </div>
             <br />
             <br />
             <h1>

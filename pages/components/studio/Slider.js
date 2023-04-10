@@ -71,19 +71,19 @@ export default function SliderMarquee() {
       <div id="scroll-container">
         <div id="container" className="cf-10">
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-02.png" alt="image 1" />
+            <img src="/assets/slider/card-02.webp" alt="image 1" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-03.png" alt="image 2" />
+            <img src="/assets/slider/card-03.webp" alt="image 2" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-03.png" alt="image 3" />
+            <img src="/assets/slider/card-03.webp" alt="image 3" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-03.png" alt="image 4" />
+            <img src="/assets/slider/card-03.webp" alt="image 4" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-02.png" alt="image 5" />
+            <img src="/assets/slider/card-02.webp" alt="image 5" />
           </div>
           <div className="module"></div>
           <div className="module"></div>
@@ -91,13 +91,13 @@ export default function SliderMarquee() {
 
         <div id="container" className="cr-10">
           <div className="module-2 parallax-slider">
-            <img src="/assets/slider/card-04.png" alt="image 1" />
+            <img src="/assets/slider/card-04.webp" alt="image 1" />
           </div>
           <div className="module-2 parallax-slider">
-            <img src="/assets/slider/card-05.png" alt="image 2" />
+            <img src="/assets/slider/card-05.webp" alt="image 2" />
           </div>
           <div className="module-2 parallax-slider">
-            <img src="/assets/slider/card-06.jpg" alt="image 3" />
+            <img src="/assets/slider/card-06.webp" alt="image 3" />
           </div>
           <div className="module-2 parallax-slider">
             <img src="https://source.unsplash.com/jumNGn7kBl0" alt="image 4" />
@@ -121,13 +121,13 @@ export default function SliderMarquee() {
             />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-07.png" alt="image 2" />
+            <img src="/assets/slider/card-07.webp" alt="image 2" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-08.png" alt="image 3" />
+            <img src="/assets/slider/card-08.webp" alt="image 3" />
           </div>
           <div className="module parallax-slider">
-            <img src="/assets/slider/card-09.png" alt="image 4" />
+            <img src="/assets/slider/card-09.webp" alt="image 4" />
           </div>
           <div className="module parallax-slider">
             <img src="https://source.unsplash.com/ocku3zjNM7k" alt="image 5" />
@@ -142,10 +142,10 @@ export default function SliderMarquee() {
 
         <div id="container" className="cl-10">
           <div className="module-2 parallax-slider">
-            <img src="/assets/slider/card-01.png" alt="image 1" />
+            <img src="/assets/slider/card-01.webp" alt="image 1" />
           </div>
           <div className="module-2 parallax-slider">
-            <img src="/assets/slider/card-06.jpg" alt="image 2" />
+            <img src="/assets/slider/card-06.webp" alt="image 2" />
           </div>
           <div className="module-2 parallax-slider">
             <img src="https://source.unsplash.com/WDBUAblF48U" alt="image 3" />

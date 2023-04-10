@@ -51,9 +51,6 @@ export default function wragby() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function wragby() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   }, []);
@@ -235,9 +224,6 @@ export default function wragby() {
               <span className="loader-font">Wragby</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -258,9 +244,9 @@ export default function wragby() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="50px"
+                  data-cursor-size="60px"
                   data-cursor-color="#E30B25"
-                  data-cursor-text="Hi!"
+                  data-cursor-text="Visit!"
                 >
                   <Link
                     href="https://wragbysolutions.com"
@@ -271,11 +257,11 @@ export default function wragby() {
                       wragbysolutions.com
                     </button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   Wragby Business <br /> Solutions
                 </h1>
               </div>
@@ -297,7 +283,7 @@ export default function wragby() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/wragby/web.png"
+                    src="/assets/casestudies/wragby/img1.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -354,7 +340,7 @@ export default function wragby() {
             <div className={styles.imageBox} id="image-container">
               <figure className={styles.figure}>
                 <img
-                  src="/assets/casestudies/wragby/web1.png"
+                  src="/assets/casestudies/wragby/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -423,7 +409,7 @@ export default function wragby() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/3wragby.png"
+                    src="/assets/casestudies/wragby/web1.webp"
                     alt="Logo"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
@@ -440,7 +426,7 @@ export default function wragby() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/4wragby.png"
+                    src="/assets/casestudies/wragby/web2.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
@@ -460,7 +446,7 @@ export default function wragby() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby5.png"
+                    src="/assets/casestudies/wragby/web3.webp"
                     alt="Logo"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
@@ -473,7 +459,7 @@ export default function wragby() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby6.png"
+                    src="/assets/casestudies/wragby/web4.webp"
                     alt="Logo"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
@@ -566,7 +552,7 @@ export default function wragby() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby7.png"
+                    src="/assets/casestudies/wragby/web5.webp"
                     alt="Logo"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
@@ -583,7 +569,7 @@ export default function wragby() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby8.png"
+                    src="/assets/casestudies/wragby/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
@@ -603,7 +589,7 @@ export default function wragby() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby9.png"
+                    src="/assets/casestudies/wragby/web7.webp"
                     alt="Logo"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
@@ -616,7 +602,7 @@ export default function wragby() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/wragby10.png"
+                    src="/assets/casestudies/wragby/web8.webp"
                     alt="Logo"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
@@ -760,7 +746,7 @@ export default function wragby() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/wragby/web-s.png"
+                    src="/assets/casestudies/wragby/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -819,7 +805,7 @@ export default function wragby() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/wragby/web4.png"
+                    src="/assets/casestudies/wragby/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -863,7 +849,7 @@ export default function wragby() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/wragby/wragbyclient.png"></img>
+                    <img src="/assets/casestudies/wragby/wragbyclient.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

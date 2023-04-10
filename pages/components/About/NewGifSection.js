@@ -58,10 +58,14 @@ export default function NewGifSection() {
       <div className="gifSectionAbout" id="gif">
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="4">
-            <img
-              src="/assets/about/gif-section/culture.gif"
+            <video
+              autoPlay
+              loop
+              muted
+              loading="lazy" 
+              src="/assets/about/gif-section/culture.webm"
               className="gif-img"
-            />
+            ></video>
             <h2 className="about-gif-text">culture</h2>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -79,10 +83,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="5">
-            <img
-              src="/assets/about/gif-section/attitude.gif"
+            <video
+              autoPlay
+              loop
+              muted
+              src="/assets/about/gif-section/attitude.webm" loading='lazy'
               className="gif-img"
-            />
+            ></video>
             <h2 className="about-gif-text">attitude</h2>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -101,10 +108,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="3.5">
-            <img
-              src="/assets/about/gif-section/ethos.gif"
+            <video
+              autoPlay
+              loop
+              muted
+              src="/assets/about/gif-section/ethos.webm" loading='lazy'
               className="gif-img"
-            />
+            ></video>
             <h2 className="about-gif-text">ethos</h2>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -125,10 +135,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up MR-20" data-speed="2.5">
-            <img
-              src="/assets/about/gif-section/experience.gif"
+            <video
+              autoPlay
+              loop
+              muted
+              src="/assets/about/gif-section/experience.webm" loading='lazy'
               className="gif-img"
-            />
+            ></video>
             <h2 className="about-gif-text">experience</h2>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -147,10 +160,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="3.2">
-            <img
-              src="/assets/about/gif-section/magic.gif"
+            <video
+              autoPlay
+              loop
+              muted
+              src="/assets/about/gif-section/magic.webm" loading='lazy'
               className="gif-img"
-            />
+            ></video>
             <h2 className="about-gif-text">magic</h2>
             <img
               src="/assets/about/gif-section/arr.png"

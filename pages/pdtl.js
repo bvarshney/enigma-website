@@ -51,9 +51,6 @@ export default function pdtl() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function pdtl() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   });
@@ -235,9 +224,6 @@ export default function pdtl() {
               <span className="loader-font">PDTL</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -258,18 +244,18 @@ export default function pdtl() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="50px"
+                  data-cursor-size="60px"
                   data-cursor-color="#234BA7"
-                  data-cursor-text="Hi!"
+                  data-cursor-text="Visit!"
                 >
                   <Link href="#" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>PDTL.com</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   Driving Digital Success
                   <br /> for a Leading Logistics Firm
                 </h1>
@@ -291,7 +277,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/pdtlimg1.png"
+                  src="/assets/casestudies/pdtl/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -353,7 +339,7 @@ export default function pdtl() {
           <div className={styles.imageSecondSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/pdtl/img3.png"
+                src="/assets/casestudies/pdtl/img2.webp"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
@@ -423,7 +409,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo1.png"
+                    src="/assets/casestudies/pdtl/web1.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -440,7 +426,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo2.png"
+                    src="/assets/casestudies/pdtl/web2.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -460,7 +446,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo3.png"
+                    src="/assets/casestudies/pdtl/web3.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -473,7 +459,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo4.png"
+                    src="/assets/casestudies/pdtl/web4.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -557,7 +543,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo5.png"
+                    src="/assets/casestudies/pdtl/web5.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -574,7 +560,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo6.png"
+                    src="/assets/casestudies/pdtl/web6.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -594,7 +580,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo7.png"
+                    src="/assets/casestudies/pdtl/web7.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -607,7 +593,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/logo8.png"
+                    src="/assets/casestudies/pdtl/web8.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -648,8 +634,8 @@ export default function pdtl() {
               <h1>Fonts</h1>
             </div>
             <div className={styles.fontImagebox}>
-              <img src="/assets/casestudies/pdtl/font1.png" alt="Fonts" />
-              <img src="/assets/casestudies/pdtl/font2.png" alt="Fonts" />
+              <img src="/assets/casestudies/pdtl/font1.webp" alt="Fonts" />
+              <img src="/assets/casestudies/pdtl/font2.webp" alt="Fonts" />
             </div>
           </div>
 
@@ -762,7 +748,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/pdtlimg3.png"
+                  src="/assets/casestudies/pdtl/img3.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -823,7 +809,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/pdtlimg4.png"
+                  src="/assets/casestudies/pdtl/img4.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -865,7 +851,7 @@ export default function pdtl() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/pdtl/pdtlclient.png"></img>
+                    <img src="/assets/casestudies/pdtl/pdtlclient.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

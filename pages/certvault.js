@@ -224,9 +224,6 @@ export default function certvault() {
               <span className="loader-font">Certvault</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -247,18 +244,18 @@ export default function certvault() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="50px"
+                  data-cursor-size="60px"
                   data-cursor-color="#F50D37"
-                  data-cursor-text="Hi!"
+                  data-cursor-text="Visit!"
                 >
                   <Link href="#" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>certvault.com</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   CertVault a cloud-based
                   <br /> certificate repository
                 </h1>
@@ -280,7 +277,7 @@ export default function certvault() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/certvault/img1.png"
+                  src="/assets/casestudies/certvault/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -334,7 +331,7 @@ export default function certvault() {
             <div className={styles.imageBox} id="image-container">
               <figure className={styles.figure}>
                 <img
-                  src="/assets/casestudies/certvault/img2.png"
+                  src="/assets/casestudies/certvault/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -406,7 +403,7 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/certvault/web1.png"
+                    src="/assets/casestudies/certvault/web1.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -423,7 +420,7 @@ export default function certvault() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/certvault/web2.png"
+                    src="/assets/casestudies/certvault/web2.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -443,7 +440,7 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/certvault/web2.png"
+                    src="/assets/casestudies/certvault/web3.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -456,7 +453,7 @@ export default function certvault() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/certvault/web1.png"
+                    src="/assets/casestudies/certvault/web4.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -546,7 +543,7 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/3wragby.png"
+                    src="/assets/casestudies/certvault/web5.webp"
                     alt="Logo"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
@@ -563,7 +560,7 @@ export default function certvault() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/4wragby.png"
+                    src="/assets/casestudies/certvault/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
@@ -583,7 +580,7 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/5wragby.png"
+                    src="/assets/casestudies/certvault/web7.webp"
                     alt="Logo"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
@@ -596,7 +593,7 @@ export default function certvault() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/6wragby.png"
+                    src="/assets/casestudies/certvault/web8.webp"
                     alt="Logo"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
@@ -731,7 +728,7 @@ export default function certvault() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/certvault/img3.png"
+                    src="/assets/casestudies/certvault/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -790,7 +787,7 @@ export default function certvault() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/certvault/img3.png"
+                    src="/assets/casestudies/certvault/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -834,7 +831,7 @@ export default function certvault() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/patronum/paullees.png"></img>
+                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

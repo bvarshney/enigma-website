@@ -376,9 +376,9 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-cursor-text="Click Me"
+                    data-cursor-text="View Project"
                     // data-cursor-background-image="/assets/gif/kedar.gif"
-                    data-cursor-size="100px"
+                    data-cursor-size="110px"
                     data-cursor-color="#EF9E28"
                     data-color="DCECE2"
                     onMouseEnter={(e) => handleHover(e)}
@@ -388,7 +388,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Branding, Web Design</p>
                     <div className={styles.projectCta}>
                       <h1>Kedarkala</h1>
                       <div
@@ -456,8 +456,8 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="FFEBDF"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -466,7 +466,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2019</p> <p>Branding, Web Design, Marketing</p>
                     <div className={styles.projectCta}>
                       <h1>Patronum</h1>
                       <div
@@ -541,8 +541,8 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="E8E8E8"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#535963"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -551,7 +551,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>UI/ UX Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>Wragby</h1>
                       <div
@@ -621,15 +621,15 @@ export default function ProjectsHome() {
                     data-color="FFF6DF"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#BBA777"
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Web Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>GCM</h1>
                       <div
@@ -704,8 +704,8 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="FFE5DF"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -714,7 +714,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
                       <h1>PDTL</h1>
                       <div
@@ -782,9 +782,9 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="FFDFDF"
-                    data-cursor-size="100px"
+                    data-cursor-size="110px"
                     data-cursor-color="#AC0035"
-                    data-cursor-text="Click Me"
+                    data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -792,7 +792,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>Dharan</h1>
                       <div

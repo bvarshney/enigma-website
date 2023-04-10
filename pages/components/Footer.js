@@ -209,7 +209,7 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="">
+                    <a href="https://www.facebook.com/in.enigmadigital" target="blank">
                       <span data-text="Facebook">Facebook</span>
                     </a>
                   </div>
@@ -218,16 +218,15 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="">
+                    <a href="https://www.instagram.com/enigmadigital/" target="blank">
                       <span data-text="Instagram">Instagram</span>
                     </a>
                   </div>
                   <div
                     class="cb-menu-nav-item f__anim"
                     data-cursor-exclusion
-                    data-cursor-size="80px"
-                  >
-                    <a href="">
+                    data-cursor-size="80px">
+                    <a href="https://www.youtube.com/" target="blank">
                       <span data-text="Youtube">Youtube</span>
                     </a>
                   </div>
@@ -238,7 +237,7 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="">
+                    <a href="https://in.linkedin.com/company/in-enigmadigital" target="blank">
                       <span data-text="LinkedIn">LinkedIn</span>
                     </a>
                   </div>
@@ -247,7 +246,7 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="">
+                    <a href="https://twitter.com/_EnigmaDigital" target="blank">
                       <span data-text="Twitter">Twitter</span>
                     </a>
                   </div>
@@ -256,7 +255,7 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="">
+                    <a href="https://www.behance.net/enigma-digital" target="blank">
                       <span data-text="Behance">Behance</span>
                     </a>
                   </div>

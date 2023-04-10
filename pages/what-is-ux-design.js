@@ -5,6 +5,12 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "next-share";
 
 import Header from "./components/Header/Header";
 import SmoothScroll from "./components/utils/SmoothScroll";
@@ -140,9 +146,6 @@ export default function blogDetails() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -159,14 +162,6 @@ export default function blogDetails() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   }, []);
@@ -196,9 +191,6 @@ export default function blogDetails() {
           <span>
             <h1>What is UX Design?</h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -234,7 +226,59 @@ export default function blogDetails() {
             </div>
             <div className="box-blog" id="anim">
               <h1>Share Article</h1>
-              {/* <h2>(Branding)</h2> */}
+              <div className="social-icons">
+                <FacebookShareButton
+                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/facebook.webp"
+                    alt="social-icons"
+                  />
+                </FacebookShareButton>
+
+                <LinkedinShareButton
+                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/linkedin.webp"
+                    alt="social-icons"
+                  />
+                </LinkedinShareButton>
+
+                <TwitterShareButton
+                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/twitter.webp"
+                    alt="social-icons"
+                  />
+                </TwitterShareButton>
+
+                <WhatsappShareButton
+                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
+                    alt="social-icons"
+                  />
+                </WhatsappShareButton>
+              </div>
             </div>
           </div>
           <div className="right-section" id="right-section">

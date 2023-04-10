@@ -238,9 +238,9 @@ export default function dharan() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="50px"
+                  data-cursor-size="60px"
                   data-cursor-color="#FF8395"
-                  data-cursor-text="Hi!"
+                  data-cursor-text="Visit!"
                 >
                   <Link
                     href="https://www.dharan.co.in/"
@@ -249,11 +249,11 @@ export default function dharan() {
                   >
                     <button className={styles.linkButton}>Dharan.co.in</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   Dharan - Fashionable
                   <br /> Ecommerce Website
                 </h1>
@@ -275,7 +275,7 @@ export default function dharan() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/dharan/img1.png"
+                  src="/assets/casestudies/dharan/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -338,7 +338,7 @@ export default function dharan() {
             <div className={styles.imageBox} id="image-container">
               <figure className={styles.figure}>
                 <img
-                  src="/assets/casestudies/dharan/img2.png"
+                  src="/assets/casestudies/dharan/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -398,7 +398,7 @@ export default function dharan() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web1.png"
+                    src="/assets/casestudies/dharan/web1.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -415,7 +415,7 @@ export default function dharan() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web2.png"
+                    src="/assets/casestudies/dharan/web2.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -435,7 +435,7 @@ export default function dharan() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web3.png"
+                    src="/assets/casestudies/dharan/web3.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -448,7 +448,7 @@ export default function dharan() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web4.png"
+                    src="/assets/casestudies/dharan/web4.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -540,7 +540,7 @@ export default function dharan() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web5.png"
+                    src="/assets/casestudies/dharan/web5.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -557,7 +557,7 @@ export default function dharan() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/web6.png"
+                    src="/assets/casestudies/dharan/web6.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -577,7 +577,7 @@ export default function dharan() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/9dharan.png"
+                    src="/assets/casestudies/dharan/web7.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -590,7 +590,7 @@ export default function dharan() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/dharan/10dharan.png"
+                    src="/assets/casestudies/dharan/web8.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -804,7 +804,7 @@ export default function dharan() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/dharan/11dharan.png"
+                    src="/assets/casestudies/dharan/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -873,7 +873,7 @@ export default function dharan() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/dharan/img3.png"
+                    src="/assets/casestudies/dharan/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"

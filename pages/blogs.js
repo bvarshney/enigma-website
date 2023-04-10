@@ -32,8 +32,8 @@ const handleHoverExit = (e) => {
 const Blogs = [
   {
     id: 1,
-    name: "Technology",
-    category: "Technology",
+    name: "Design",
+    category: "Design",
     registro: 133,
     Link: "/what-is-experience-design",
     CP: 300,
@@ -44,19 +44,19 @@ const Blogs = [
   },
   {
     id: 2,
-    name: "Technology",
-    category: "Technology",
+    name: "Design",
+    category: "Design",
     Link: "/the-power-of-psychology-in-ux-design",
     registro: 123,
     CP: 500,
-    image: "/assets/blogs/Innovate.jpg",
+    image: "/assets/blogs/uxbrain.png",
     description:
       "The Power of Psychology in UX Design: Unlocking the Human Element",
   },
   {
     id: 3,
-    name: "Marketing",
-    category: "Marketing",
+    name: "Design",
+    category: "Design",
     Link: "/what-is-ux-design",
     registro: 123,
     CP: 500,
@@ -66,9 +66,9 @@ const Blogs = [
   },
   {
     id: 4,
-    name: "Technology",
-    category: "Technology",
-    Link: "/the-evolution",
+    name: "Design",
+    category: "Design",
+    Link: "/the-evolution-of-ux-design",
     registro: 63,
     CP: 350,
     image: "/assets/blogs/blog-detail/the-evalution/feature.jpg",
@@ -195,25 +195,6 @@ export default function blogs() {
     );
     return () => tl.kill();
   }, []);
-
-  // Hero Section Animation
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   tl.fromTo(
-  //     "#img",
-  //     {
-  //       opacity: 0,
-  //       translateY: 100,
-  //     },
-  //     {
-  //       delay: 0.5,
-  //       duration: 1,
-  //       opacity: 1,
-  //       stagger: 0.1,
-  //       translateY: 0,
-  //     }
-  //   );
-  // });
 
   // Page Transitions
   useEffect(() => {

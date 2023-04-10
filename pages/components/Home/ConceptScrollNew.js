@@ -207,18 +207,20 @@ export default function ConceptScrollNew() {
                   <div className="macbook_frame">
                     <div className="macbook_frame_content_upper"></div>
                     <video
+                      loading="lazy"
                       width="100%"
                       height="100%"
                       autoPlay
                       loop
                       muted
                       playsInline
+                      src="/assets//newProject/a.mp4"
                     >
-                      <source
+                      {/* <source
                         src="/assets/newProject/a.mp4"
                         type="video/mp4"
                         className="lazyload"
-                      />
+                      /> */}
                     </video>
                     <div className="macbook_frame_background" />
                   </div>
@@ -239,6 +241,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media1 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
+                      loading="lazy"
                       className="vid lazyload"
                       src="/assets/reels/left.webm"
                       autoPlay
@@ -276,6 +279,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media2 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
+                      loading="lazy"
                       className="vid lazyload"
                       src="/assets/reels/right.webm"
                       autoPlay

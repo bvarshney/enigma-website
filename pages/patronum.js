@@ -51,9 +51,6 @@ export default function patronum() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function patronum() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   });
@@ -235,9 +224,6 @@ export default function patronum() {
               <span className="loader-font">Patronum</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -258,18 +244,18 @@ export default function patronum() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="70px"
+                  data-cursor-size="60px"
                   data-cursor-text="Visit!"
                   data-cursor-color="#0165E1"
                 >
                   <Link href="" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>Patronum.io</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   Swiss Army Knife <br /> for Google Workspace
                 </h1>
               </div>
@@ -289,7 +275,7 @@ export default function patronum() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/patronum/patronum1.png"
+                  src="/assets/casestudies/patronum/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -342,7 +328,7 @@ export default function patronum() {
           <div className={styles.imageSecondSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/patronum/patronum2.png"
+                src="/assets/casestudies/patronum/img2.webp"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
@@ -428,7 +414,7 @@ export default function patronum() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/illus.png"
+                    src="/assets/casestudies/patronum/web1.webp"
                     alt="Logo"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
@@ -445,7 +431,7 @@ export default function patronum() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo1.png"
+                    src="/assets/casestudies/patronum/web2.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
@@ -465,7 +451,7 @@ export default function patronum() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/ports.png"
+                    src="/assets/casestudies/patronum/web3.webp"
                     alt="Logo"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
@@ -478,7 +464,7 @@ export default function patronum() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo0.png"
+                    src="/assets/casestudies/patronum/web4.webp"
                     alt="Logo"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
@@ -556,7 +542,7 @@ export default function patronum() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo-5.png"
+                    src="/assets/casestudies/patronum/web5.webp"
                     alt="Logo"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
@@ -573,7 +559,7 @@ export default function patronum() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo6.png"
+                    src="/assets/casestudies/patronum/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
@@ -593,7 +579,7 @@ export default function patronum() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo7.png"
+                    src="/assets/casestudies/patronum/web7.webp"
                     alt="Logo"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
@@ -606,7 +592,7 @@ export default function patronum() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/patronum/logo8.png"
+                    src="/assets/casestudies/patronum/web8.webp"
                     alt="Logo"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
@@ -646,12 +632,12 @@ export default function patronum() {
             </div>
             <div className={styles.fontImagebox}>
               <img
-                src="/assets/patronum/fonts.png"
+                src="/assets/casestudies/patronum/fonts.webp"
                 alt="Fonts"
                 className={styles.desktopFont}
               />
               <img
-                src="/assets/patronum/font-mobile.png"
+                src="/assets/casestudies/patronum/font-mobile.webp"
                 alt="Fonts"
                 className={styles.mobileFont}
               />
@@ -709,7 +695,12 @@ export default function patronum() {
           </div>
           <div className={styles.videoForthSection}>
             <div className={styles.videoContainer} id="video-container">
-              <video src="/assets/patronum/patronum.webm" autoPlay loop muted />
+              <video
+                src="/assets/casestudies/patronum/patronum.webm"
+                autoPlay
+                loop
+                muted
+              />
             </div>
           </div>
           {/* ====================== Forth Section END ======================== */}
@@ -749,7 +740,7 @@ export default function patronum() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/patronum/patronum3.png"
+                    src="/assets/casestudies/patronum/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -799,7 +790,7 @@ export default function patronum() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/patronum/patronum5.png"
+                    src="/assets/casestudies/patronum/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -843,7 +834,7 @@ export default function patronum() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/patronum/paullees.png"></img>
+                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>
@@ -883,7 +874,9 @@ export default function patronum() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>Certvault</h1>
+                <Link href="/certvault">
+                  <h1>Certvault</h1>
+                </Link>
               </div>
             </div>
           </div>

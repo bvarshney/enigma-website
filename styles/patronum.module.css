@@ -327,7 +327,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 130%;
+  height: 110%;
   object-fit: cover;
   object-position: center;
   padding: 0;
@@ -976,6 +976,8 @@
     font-size: 3.8vw;
   }
 
+  
+
   .clientTestimonialSectionContent{
     width: 85%;
     display: block;
@@ -1081,8 +1083,35 @@
 
   .colorBoxesSection {
     justify-content: flex-start;
-    height: 25vh;
+    height: 100%;
+    margin-top: 15vw;
   }
+
+    .colorBoxesSection ul{
+    display: block !important;
+  }
+
+  .colorBoxesSection ul li{
+    font-size: 4vw;
+  }
+
+  .colorOne{
+    height: 100px;
+  }
+
+  .colorTwo{
+    height: 100px;
+  }
+
+  .colorThree{
+    height: 100px;
+  }
+
+  .colorFour{
+    height: 100px;
+  }
+
+
 
   .colorBox {
     display: none;

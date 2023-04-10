@@ -543,6 +543,7 @@ export default function services() {
               autoPlay
               muted
               loop
+              loading="lazy"
               width={1920}
               height={1080}
               alt="services"

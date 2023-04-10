@@ -51,9 +51,6 @@ export default function quickx() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function quickx() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   });
@@ -235,9 +224,6 @@ export default function quickx() {
               <span className="loader-font">Quick-x</span>
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -258,18 +244,18 @@ export default function quickx() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="40px"
-                  data-cursor-text="Hi!"
+                  data-cursor-size="60px"
+                  data-cursor-text="Visit!"
                   data-cursor-color="#0D0A29"
                 >
                   <Link href="" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>quickx.app</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   QuickX Crypto <br /> Mobile Exchange
                 </h1>
               </div>
@@ -289,7 +275,7 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/quickx/img1.png"
+                  src="/assets/casestudies/quickx/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -336,7 +322,7 @@ export default function quickx() {
           <div className={styles.imageSecondSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/quickx/img2.png"
+                src="/assets/casestudies/quickx/img2.webp"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
@@ -403,7 +389,7 @@ export default function quickx() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web1.png"
+                    src="/assets/casestudies/quickx/web1.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -420,7 +406,7 @@ export default function quickx() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web2.png"
+                    src="/assets/casestudies/quickx/web2.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -440,7 +426,7 @@ export default function quickx() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web2.png"
+                    src="/assets/casestudies/quickx/web3.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -453,7 +439,7 @@ export default function quickx() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web1.png"
+                    src="/assets/casestudies/quickx/web4.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -545,7 +531,7 @@ export default function quickx() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web1.png"
+                    src="/assets/casestudies/quickx/web5.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -562,7 +548,7 @@ export default function quickx() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web2.png"
+                    src="/assets/casestudies/quickx/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -582,7 +568,7 @@ export default function quickx() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web2.png"
+                    src="/assets/casestudies/quickx/web7.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -595,7 +581,7 @@ export default function quickx() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/web1.png"
+                    src="/assets/casestudies/quickx/web8.webp"
                     alt="Logo"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="Quick-X"
@@ -744,7 +730,7 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/quickx/img3.png"
+                  src="/assets/casestudies/quickx/img3.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -799,7 +785,7 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/quickx/img3.png"
+                  src="/assets/casestudies/quickx/img4.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -842,7 +828,7 @@ export default function quickx() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/patronum/paullees.png"></img>
+                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

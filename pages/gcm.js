@@ -51,9 +51,6 @@ export default function gcm() {
         y: -200,
         skewY: 10,
       });
-      tl.to("span .dual-ring", {
-        y: -200,
-      });
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -70,14 +67,6 @@ export default function gcm() {
         zIndex: -1,
         display: "none",
       });
-      tl.from(
-        ".container h1",
-        {
-          y: 100,
-          opacity: 0,
-        },
-        "-=1.5"
-      );
     });
     return () => ctx.revert();
   });
@@ -235,9 +224,6 @@ export default function gcm() {
               Garden <span className="loader-font">City</span> Mall
             </h1>
           </span>
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
         </div>
       </div>
 
@@ -258,9 +244,9 @@ export default function gcm() {
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
-                  data-cursor-size="50px"
+                  data-cursor-size="60px"
                   data-cursor-color="#E73354"
-                  data-cursor-text="Hi!"
+                  data-cursor-text="Visit!"
                 >
                   <Link
                     href="https://grandmall.netlify.app/"
@@ -271,11 +257,11 @@ export default function gcm() {
                       gardencitymall.com
                     </button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/patronum/Vector.svg" alt="Svg" />
+                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
                     </span>
                   </Link>
                 </div>
-                <h1 id="patro" data-cursor-exclusion data-cursor-size="80px">
+                <h1 id="patro">
                   Revolutionizing the <br /> Shopping Mall Experience
                 </h1>
               </div>
@@ -296,7 +282,7 @@ export default function gcm() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/gcm/gcm1.png"
+                  src="/assets/casestudies/gcm/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -354,7 +340,7 @@ export default function gcm() {
             <div className={styles.imageBox} id="image-container">
               <figure className={styles.figure}>
                 <img
-                  src="/assets/casestudies/gcm/img2.png"
+                  src="/assets/casestudies/gcm/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -412,7 +398,7 @@ export default function gcm() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo1.png"
+                    src="/assets/casestudies/gcm/web1.webp"
                     alt="Logo"
                     data-cursor-color="#43B9D0"
                     data-cursor-text="GCM"
@@ -429,7 +415,7 @@ export default function gcm() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo2.png"
+                    src="/assets/casestudies/gcm/web2.webp"
                     alt="Logo"
                     data-cursor-color="#323B44"
                     data-cursor-text="GCM"
@@ -449,7 +435,7 @@ export default function gcm() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo3.png"
+                    src="/assets/casestudies/gcm/web3.webp"
                     alt="Logo"
                     data-cursor-color="#4BDC9A"
                     data-cursor-text="GCM"
@@ -462,7 +448,7 @@ export default function gcm() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo4.png"
+                    src="/assets/casestudies/gcm/web4.webp"
                     alt="Logo"
                     data-cursor-color="#FFB756"
                     data-cursor-text="GCM"
@@ -554,7 +540,7 @@ export default function gcm() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo5.png"
+                    src="/assets/casestudies/gcm/web5.webp"
                     alt="Logo"
                     data-cursor-color="#43B9D0"
                     data-cursor-text="GCM"
@@ -571,7 +557,7 @@ export default function gcm() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo6.png"
+                    src="/assets/casestudies/gcm/web6.webp"
                     alt="Logo"
                     data-cursor-color="#323B44"
                     data-cursor-text="GCM"
@@ -591,7 +577,7 @@ export default function gcm() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo7.png"
+                    src="/assets/casestudies/gcm/web7.webp"
                     alt="Logo"
                     data-cursor-color="#4BDC9A"
                     data-cursor-text="GCM"
@@ -604,7 +590,7 @@ export default function gcm() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/gcmlogo8.png"
+                    src="/assets/casestudies/gcm/web8.webp"
                     alt="Logo"
                     data-cursor-color="#FFB756"
                     data-cursor-text="GCM"
@@ -742,7 +728,7 @@ export default function gcm() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/gcm/img1.png"
+                    src="/assets/casestudies/gcm/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -815,7 +801,7 @@ export default function gcm() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/gcm/gcm8.png"
+                    src="/assets/casestudies/gcm/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
