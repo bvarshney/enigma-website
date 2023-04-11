@@ -36,7 +36,6 @@ export default function carousel() {
         opacity: 1,
       }
     );
-    return () => tl.kill();
   });
 
   useEffect(() => {

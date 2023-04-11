@@ -376,16 +376,18 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#EF9E28"
                     data-color="C2D4E8"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Branding, Web Design</p>
                     <div className={styles.projectCta}>
                       <h1>Kedarkala</h1>
                       <div
@@ -453,15 +455,17 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="D1B1BC"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#0F68DD"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2019</p> <p>Branding, Web Design, Marketing</p>
                     <div className={styles.projectCta}>
                       <h1>Patronum</h1>
                       <div
@@ -536,15 +540,17 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="A9ABB2"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#535963"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>UI/ UX Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>Wragby</h1>
                       <div
@@ -612,17 +618,19 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="C7B89B"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#BBA777"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Grandcity Mall</h1>
+                      <h1>Gardencity Mall</h1>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -695,15 +703,17 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="FFD795"
-                    data-cursor-text="Click Me"
-                    data-cursor-size="100px"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
                     data-cursor-color="#FEC969"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
                       <h1>PDTL</h1>
                       <div
@@ -771,17 +781,267 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="F989A1"
-                    data-cursor-size="100px"
+                    data-cursor-size="110px"
                     data-cursor-color="#AC0035"
-                    data-cursor-text="Click Me"
+                    data-cursor-text="View Project"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </a>
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>YEAR: 2020</p> <p>ROLE: UI/UX AND FRONT-END DEV</p>
+                    <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>Dharan</h1>
+                      <div
+                        className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
+                      >
+                        <svg
+                          id="arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 9.56 9.56"
+                        >
+                          <line
+                            id="line1"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <line
+                            id="line2"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-1"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-2"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* =============== Forth =================== */}
+
+          <div className={styles.projectSubSection}>
+            <div className={styles.glide}>
+              <div
+                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
+                id="image-container"
+              >
+                <a href="/certvault">
+                  <Image
+                    src="/assets/projects/new-project/pdtl.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="FFD795"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
+                    data-cursor-color="#FEC969"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                  />
+                </a>
+
+                <div className={styles.textContent}>
+                  <div className={styles.c_project_info}>
+                    <p>2022</p> <p>Web Design, Branding, Development</p>
+                    <div className={styles.projectCta}>
+                      <h1>Certvault</h1>
+                      <div
+                        className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
+                      >
+                        <svg
+                          id="arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 9.56 9.56"
+                        >
+                          <line
+                            id="line1"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <line
+                            id="line2"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-1"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-2"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.glide}>
+              <div className={styles.glideContent} id="image-container">
+                <a href="/quick">
+                  <Image
+                    src="/assets/projects/new-project/dharan.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="F989A1"
+                    data-cursor-size="110px"
+                    data-cursor-color="#AC0035"
+                    data-cursor-text="View Project"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                  />
+                </a>
+
+                <div className={styles.textContent}>
+                  <div className={styles.c_project_info}>
+                    <p>2020</p> <p>E-Commerce, Web Design, Development</p>
+                    <div className={styles.projectCta}>
+                      <h1>Quick-X</h1>
+                      <div
+                        className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
+                      >
+                        <svg
+                          id="arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 9.56 9.56"
+                        >
+                          <line
+                            id="line1"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <line
+                            id="line2"
+                            x1="0.27"
+                            y1="9.29"
+                            x2="9.18"
+                            y2="0.38"
+                            fill="#4e4e4e"
+                            stroke="#4e4e4e"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-1"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                          <polyline
+                            id="arrow-head-2"
+                            points="5.01 0.38 9.18 0.38 9.18 4.55"
+                            fill="none"
+                            stroke="#4e4e4e"
+                            strokeLinecap="round"
+                            strokeMiterlimit={10}
+                            strokeWidth="0.75"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* =============== Fifth =================== */}
+
+          <div className={styles.projectSubSection}>
+            <div className={styles.glide}>
+              <div
+                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
+                id="image-container"
+              >
+                <a href="/dmtca">
+                  <Image
+                    src="/assets/projects/new-project/pdtl.webp"
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    data-color="FFD795"
+                    data-cursor-text="View Project"
+                    data-cursor-size="110px"
+                    data-cursor-color="#FEC969"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                  />
+                </a>
+
+                <div className={styles.textContent}>
+                  <div className={styles.c_project_info}>
+                    <p>2022</p> <p>Web Design, Branding, Development</p>
+                    <div className={styles.projectCta}>
+                      <h1>DMTCA</h1>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >

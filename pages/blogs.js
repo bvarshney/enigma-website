@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Cursor } from "../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
-import { motion } from "framer-motion";
 
 import SmoothScroll from "./components/utils/SmoothScroll";
 import Header from "./components/Header/Header";
@@ -186,7 +185,7 @@ export default function blogs() {
         translateY: -50,
       },
       {
-        delay: 4.5,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -231,6 +230,26 @@ export default function blogs() {
       });
     });
     return () => ctx.revert();
+  }, []);
+
+  // Image Box Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#img",
+      {
+        opacity: 0,
+        translateY: 150,
+      },
+      {
+        delay: 3.8,
+        duration: 1.3,
+        opacity: 1,
+        stagger: 0.1,
+        translateY: 0,
+      }
+    );
+    return () => tl.kill();
   }, []);
 
   return (

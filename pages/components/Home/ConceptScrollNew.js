@@ -207,20 +207,14 @@ export default function ConceptScrollNew() {
                   <div className="macbook_frame">
                     <div className="macbook_frame_content_upper"></div>
                     <video
-                      loading="lazy"
                       width="100%"
                       height="100%"
                       autoPlay
                       loop
                       muted
                       playsInline
-                      src="/assets//newProject/a.mp4"
+                      src="/assets//newProject/a.webm" loading="lazy"
                     >
-                      {/* <source
-                        src="/assets/newProject/a.mp4"
-                        type="video/mp4"
-                        className="lazyload"
-                      /> */}
                     </video>
                     <div className="macbook_frame_background" />
                   </div>
@@ -249,7 +243,7 @@ export default function ConceptScrollNew() {
                       playsInline
                       loop
                       id="beach-waves"
-                      preload="auto"
+                      // preload="auto"
                     />
                   </div>
                 </div>
@@ -287,7 +281,7 @@ export default function ConceptScrollNew() {
                       playsInline
                       loop
                       id="beach-waves"
-                      preload="auto"
+                      // preload="auto"
                     />
                   </div>
                 </div>

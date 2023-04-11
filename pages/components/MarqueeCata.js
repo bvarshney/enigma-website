@@ -179,7 +179,7 @@ const Marquee = () => {
       </div>
       <div
         className="services-catalog-row margin-top-xs"
-        style={{ marginTop: "3vw" }}
+        style={{ marginTop: "2vw" }}
       >
         <div className="services-catalog-row-item">User Interface Design</div>
         <div className="services-catalog-row-item half-opacity">
@@ -232,7 +232,7 @@ const Marquee = () => {
       </div>
       <div
         className="services-catalog-row margin-top-xs"
-        style={{ marginTop: "4vw" }}
+        style={{ marginTop: "1.5vw" }}
       >
         <div className="services-catalog-row-item half-opacity">
           Social Media Management
@@ -250,7 +250,7 @@ const Marquee = () => {
       </div>
       <div
         className="services-catalog-row margin-top-xs"
-        style={{ marginTop: "5.5vw" }}
+        style={{ marginTop: "3.5vw" }}
       >
         <div className="services-catalog-row-item">
           Online Reputation Management

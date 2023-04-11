@@ -341,7 +341,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 240px;
   position: absolute;
   top: 1vw;
   right: 16vw;
@@ -2727,7 +2727,7 @@ accordion-item--default .accordion .accordion-item-content {
 }
 
 .img {
-  background-image: url("/assets/contact/contactbg.jpg");
+  background-image: url("/assets/contact/contactbg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3802,6 +3802,7 @@ https://unsplash.com/@vinomamba24
   color: #383838;
   position: absolute !important;
   left: 22vw;
+  top: 15.5vw;
 }
 
 .service-footer {
@@ -4128,7 +4129,10 @@ https://unsplash.com/@vinomamba24
   left: -15%;
   right: 0;
   bottom: 0;
-  width: 130%;
+  width: 125%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .module-2 {
@@ -4146,7 +4150,10 @@ https://unsplash.com/@vinomamba24
   left: -15%;
   right: 0;
   bottom: 0;
-  width: 120%;
+  width: 125%;
+    height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .cl-10 {

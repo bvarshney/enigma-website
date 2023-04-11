@@ -128,6 +128,7 @@
   border-radius: 50px;
   font-size: 1.5vw;
   font-weight: 500;
+  font-family: "Ageo";
 }
 
 .c_project_info {
@@ -153,7 +154,7 @@
 .c_project_info > p {
   display: block;
   padding: 12px 30px;
-  font-size: 0.6vw;
+  font-size: 0.8vw;
   background: #fff;
   color: #282828;
   margin: 10px 0;
@@ -163,6 +164,7 @@
   transition: 0.4s;
   width: max-content;
   font-weight: 500;
+  font-family: "Ageo";
 }
 
 .glide:hover .c_project_info p {

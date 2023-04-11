@@ -378,7 +378,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-cursor-text="View Project"
                     // data-cursor-background-image="/assets/gif/kedar.gif"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#EF9E28"
                     data-color="DCECE2"
                     onMouseEnter={(e) => handleHover(e)}
@@ -457,7 +457,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="FFEBDF"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -542,7 +542,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="E8E8E8"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#535963"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -622,7 +622,7 @@ export default function ProjectsHome() {
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#BBA777"
                   />
                 </a>
@@ -705,7 +705,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="FFE5DF"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -782,7 +782,7 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="FFDFDF"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#AC0035"
                     data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}

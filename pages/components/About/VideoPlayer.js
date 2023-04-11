@@ -7,6 +7,10 @@ const VideoPlayer = () => {
 
   const togglePlay = () => {
     const video = videoRef.current;
+    const overlay = document.getElementById("overlay");
+
+    // Set opacity to 0 to make the image disappear
+    overlay.style.opacity = 0;
 
     if (isPlaying) {
       video.pause();
@@ -32,12 +36,18 @@ const VideoPlayer = () => {
 
   return (
     <div
-      style={{ position: "relative" }}
+      style={{ position: "relative", overflow: "hidden" }}
       onClick={togglePlay}
       data-cursor-text="Showreel"
       data-cursor-size="100px"
       data-cursor-color="#000"
     >
+      <img
+        src="/assets/about/videoOverlay.webp"
+        alt="overlay"
+        id="overlay"
+        style={{ position: "absolute", top: "0px", left: "0px" }}
+      />
       <video ref={videoRef} src="/assets/reels/showreel.mp4" />
       <div className="play-pause-button" style={playPauseButtonStyle}>
         {isPlaying ? (

@@ -85,7 +85,8 @@ export default function services() {
     tl.fromTo(
       "#grow",
       {
-        borderRadius: "100px",
+        height: "16vh",
+        borderRadius: "400px",
         opacity: 0,
         scale: 0,
       },
@@ -173,7 +174,6 @@ export default function services() {
         y: -200,
         skewY: 10,
       });
-
       tl.to(svg, {
         duration: 0.5,
         attr: { d: curve },
@@ -210,6 +210,7 @@ export default function services() {
       growTl.to("#grow", {
         duration: 1,
         borderRadius: "0px",
+        height: "100vh",
         width: "90vw",
         right: "2vw",
         y: "420px",
@@ -391,16 +392,21 @@ export default function services() {
 
         {/* Strategy Box 1  */}
         <div className="strategy-box">
-          <div className="left-strategy-box" data-jelly>
+          <div
+            className="left-strategy-box"
+            data-jelly
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#2b8c87"
+          >
             <h1>Strategy</h1>
             <h4>
-              We design simple, beautiful and differentiated digital products. A
-              lot goes into that, but if we boil our approach down to one
-              objective. It would be discovering what users want and designing
-              the simplest way for them to get there. We can run this process
-              from start to finish, or act as an extension of your product team.
-              Interface design, Usability, Interactions, User experience,
-              Accessibility and etc.
+              Digital Advisory and Consulting, Integrated Digital Marketing Plan
+              (D.M.P.), User Experience Development, Customer Experience
+              Strategy, Consumer Research, Insights & Target Market Analysis,
+              Digital Capabilities Development, Persona Design & Customer
+              Segmentation, Competitive Analysis & Industry Insights, Brand &
+              Content Strategy, Digital Marketing and Website Performance Audit.
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -411,9 +417,6 @@ export default function services() {
                 width={500}
                 height={1000}
                 alt="services"
-                data-cursor-text="Strategy"
-                data-cursor-size="100px"
-                data-cursor-color="#2b8c87"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
               />
@@ -428,16 +431,20 @@ export default function services() {
 
         {/* Strategy Box 2  */}
         <div className="strategy-box flex-reverse">
-          <div className="left-strategy-box" data-jelly>
+          <div
+            className="left-strategy-box"
+            data-jelly
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#000"
+          >
             <h1>UI/UX Design</h1>
             <h4>
-              We design simple, beautiful and differentiated digital products. A
-              lot goes into that, but if we boil our approach down to one
-              objective. It would be discovering what users want and designing
-              the simplest way for them to get there. We can run this process
-              from start to finish, or act as an extension of your product team.
-              Interface design, Usability, Interactions, User experience,
-              Accessibility and etc.
+              User Interface Design, User Experience Design, Responsive Web
+              Design, Mobile App Design, Digital Interface Design, Design
+              Systems Creation, Experience Mapping, User Flow Mapping,
+              Wireframing & Prototyping, Illustrations & Animations, Visual
+              Designs, and UI Kits.
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -448,9 +455,6 @@ export default function services() {
                 width={500}
                 height={1000}
                 alt="services"
-                data-cursor-text="UI/UX"
-                data-cursor-size="100px"
-                data-cursor-color="#000"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
               />
@@ -464,16 +468,21 @@ export default function services() {
 
         {/* Strategy Box 3  */}
         <div className="strategy-box">
-          <div className="left-strategy-box" data-jelly>
+          <div
+            className="left-strategy-box"
+            data-jelly
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#fcc63d"
+          >
             <h1>Technology</h1>
             <h4>
-              We design simple, beautiful and differentiated digital products. A
-              lot goes into that, but if we boil our approach down to one
-              objective. It would be discovering what users want and designing
-              the simplest way for them to get there. We can run this process
-              from start to finish, or act as an extension of your product team.
-              Interface design, Usability, Interactions, User experience,
-              Accessibility and etc.
+              Front-End Development, Native & Hybrid Mobile Application
+              Development, Progressive Web Applications, Database Design &
+              Management, Cloud Infrastructure Services, Testing & Automation
+              TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP, Vue,
+              React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA, Grails,
+              Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and Google Cloud.
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -484,9 +493,6 @@ export default function services() {
                 width={500}
                 height={1000}
                 alt="services"
-                data-cursor-text="Technology"
-                data-cursor-size="100px"
-                data-cursor-color="#fcc63d"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
               />
@@ -500,16 +506,20 @@ export default function services() {
 
         {/* Strategy Box 4  */}
         <div className="strategy-box flex-reverse">
-          <div className="left-strategy-box" data-jelly>
+          <div
+            className="left-strategy-box"
+            data-jelly
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#000"
+          >
             <h1>Marketing</h1>
             <h4>
-              We design simple, beautiful and differentiated digital products. A
-              lot goes into that, but if we boil our approach down to one
-              objective. It would be discovering what users want and designing
-              the simplest way for them to get there. We can run this process
-              from start to finish, or act as an extension of your product team.
-              Interface design, Usability, Interactions, User experience,
-              Accessibility and etc.
+              Social Media Management, Content Creation & Curation, Search
+              Engine Optimisation, Influencer Management, Auction Media
+              Management, Online Reputation Management, Media Planning & Buying,
+              Marketing Automation, Email Marketing, Conversion Rate
+              Optimisation, Website & SEO Analysis.
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -520,9 +530,6 @@ export default function services() {
                 width={500}
                 height={1000}
                 alt="services"
-                data-cursor-text="Marketing"
-                data-cursor-size="100px"
-                data-cursor-color="#000"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
               />
