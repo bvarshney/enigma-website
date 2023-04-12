@@ -54,15 +54,17 @@ export default function Button() {
             <span className="round" />
           </button>
         </Link> */}
-        <MagneticButton
-          className="primary-button"
-          data-cursor-text="click"
-          data-cursor-color="#1a1a1a"
-          data-cursor-size="100px"
-        >
-          <span className="round" />
-          View All Projects
-        </MagneticButton>
+        <Link href="/works">
+          <MagneticButton
+            className="primary-button"
+            data-cursor-text="click"
+            data-cursor-color="#1a1a1a"
+            data-cursor-size="100px"
+          >
+            <span className="round" />
+            View All Projects
+          </MagneticButton>
+        </Link>
       </div>
     </>
   );

@@ -828,7 +828,7 @@ export default function quickx() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
+                    <img src="/assets/casestudies/quickx/client.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

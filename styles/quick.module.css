@@ -1070,7 +1070,32 @@
 
   .colorBoxesSection {
     justify-content: flex-start;
-    height: 25vh;
+    height: 100%;
+    margin-top: 10vw;
+  }
+
+  .colorBoxesSection ul{
+    display: block;
+  }
+
+   .colorBoxesSection ul li{
+    font-size: 4vw;
+  }
+
+  .colorOne{
+    height: 100px;
+  }
+
+  .colorTwo{
+    height: 100px;
+  }
+
+  .colorThree{
+    height: 100px;
+  }
+
+  .colorFour{
+    height: 100px;
   }
 
   .colorBox {

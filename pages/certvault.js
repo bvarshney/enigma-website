@@ -831,7 +831,7 @@ export default function certvault() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
+                    <img src="/assets/casestudies/certvault/client.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

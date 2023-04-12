@@ -241,7 +241,7 @@ export default function SliderMarquee() {
         <div id="container" className="cf-10">
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-02.webp"
+              src="/assets/slider-2/card-02.webp"
               alt="image 1"
               width={1000}
               height={1000}
@@ -249,7 +249,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-03.webp"
+              src="/assets/slider-2/card-03.webp"
               alt="image 2"
               width={1000}
               height={1000}
@@ -257,7 +257,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-03.webp"
+              src="/assets/slider-2/card-03.webp"
               alt="image 3"
               width={1000}
               height={1000}
@@ -265,7 +265,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-03.webp"
+              src="/assets/slider-2/card-03.webp"
               alt="image 4"
               width={1000}
               height={1000}
@@ -273,7 +273,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-02.webp"
+              src="/assets/slider-2/card-02.webp"
               alt="image 5"
               width={1000}
               height={1000}
@@ -284,7 +284,7 @@ export default function SliderMarquee() {
         <div id="container" className="cr-10">
           <div className="module-2 parallax-slider">
             <Image
-              src="/assets/slider/card-04.webp"
+              src="/assets/slider-2/card-04.webp"
               alt="image 1"
               width={1000}
               height={1000}
@@ -292,7 +292,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module-2 parallax-slider">
             <Image
-              src="/assets/slider/card-05.webp"
+              src="/assets/slider-2/card-05.webp"
               alt="image 2"
               width={1000}
               height={1000}
@@ -300,7 +300,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module-2 parallax-slider">
             <Image
-              src="/assets/slider/card-06.webp"
+              src="/assets/slider-2/card-06.webp"
               alt="image 3"
               width={1000}
               height={1000}
@@ -311,7 +311,7 @@ export default function SliderMarquee() {
         <div id="container" className="minus-10">
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-01.webp"
+              src="/assets/slider-2/card-01.webp"
               alt="image 1"
               width={1000}
               height={1000}
@@ -319,7 +319,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-07.webp"
+              src="/assets/slider-2/card-07.webp"
               alt="image 2"
               width={1000}
               height={1000}
@@ -327,7 +327,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-08.webp"
+              src="/assets/slider-2/card-08.webp"
               alt="image 3"
               width={800}
               height={550}
@@ -335,7 +335,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-09.webp"
+              src="/assets/slider-2/card-09.webp"
               alt="image 4"
               width={1000}
               height={1000}
@@ -343,7 +343,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-07.webp"
+              src="/assets/slider-2/card-07.webp"
               alt="image 5"
               width={1000}
               height={1000}
@@ -351,7 +351,7 @@ export default function SliderMarquee() {
           </div>
           <div className="module parallax-slider">
             <Image
-              src="/assets/slider/card-08.webp"
+              src="/assets/slider-2/card-08.webp"
               alt="image 6"
               width={1000}
               height={1000}

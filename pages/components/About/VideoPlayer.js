@@ -46,7 +46,13 @@ const VideoPlayer = () => {
         src="/assets/about/videoOverlay.webp"
         alt="overlay"
         id="overlay"
-        style={{ position: "absolute", top: "0px", left: "0px" }}
+        style={{
+          position: "absolute",
+          top: "0px",
+          left: "0px",
+          width: "100%",
+          height: "100%",
+        }}
       />
       <video ref={videoRef} src="/assets/reels/showreel.mp4" />
       <div className="play-pause-button" style={playPauseButtonStyle}>

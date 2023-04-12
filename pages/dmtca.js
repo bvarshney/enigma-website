@@ -690,7 +690,7 @@ export default function patronum() {
           <div className={styles.videoForthSection}>
             <div className={styles.videoContainer} id="video-container">
               <video
-                src="/assets/casestudies/dmtca/dmtca.mp4"
+                src="/assets/casestudies/dmtca/dmtca.webm"
                 autoPlay
                 loop
                 muted
@@ -830,7 +830,7 @@ export default function patronum() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/paullees.webp"></img>
+                    <img src="/assets/casestudies/dmtca/client.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h5>

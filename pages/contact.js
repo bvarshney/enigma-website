@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import ContactAero from "./components/Contact/ContactAerosol";
 import MarqueeCata from "./components/MarqueeCata";
 import FooterMobile from "./components/Mobile/FooterMobile";
-import Form from "./components/Contact/Form";
+import ContactForm from "./components/Contact/contactForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -154,10 +154,6 @@ export default function contact() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
-        <link
-          href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
       </Head>
 
       <Cursor isGelly={true} />
@@ -209,7 +205,7 @@ export default function contact() {
                     className="work"
                     id="contact-anim"
                     data-cursor-magnetic
-                    data-cursor-background-image="/assets/gif/8.gif"
+                    data-cursor-background-image="/assets/new-gif/16.webp"
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
@@ -277,7 +273,7 @@ export default function contact() {
               <div className="add__section" id="left-section">
                 <div className="add__content">
                   <h1>Email</h1>
-                  <a href="mailto:">
+                  <a href="mailto:hi@weareenigma.com">
                     <span>hi@weareenigma.com</span>
                   </a>
                 </div>
@@ -306,7 +302,7 @@ export default function contact() {
                 >
                   <h1>tell Us About Your Project.</h1>
                 </div>
-                <Form />
+                <ContactForm />
               </div>
             </div>
             <div className="space-large desktop"></div>

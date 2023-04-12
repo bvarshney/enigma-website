@@ -318,9 +318,9 @@ export default function blogDetails() {
               - Bhaskar Varshney, Founder, Enigma Digital
             </span>
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img
-                  src="/assets/blogs/blog-detail/what-is-ux/5.jpg"
+                  src="/assets/blogs/blog-detail/what-is-ux/5.webp"
                   alt="Img"
                 />
               </div>
@@ -347,9 +347,9 @@ export default function blogDetails() {
               users in action
             </p>
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img
-                  src="/assets/blogs/blog-detail/what-is-ux/2.jpg"
+                  src="/assets/blogs/blog-detail/what-is-ux/2.webp"
                   alt="Img"
                 />
               </div>
@@ -377,9 +377,9 @@ export default function blogDetails() {
               J.A.R.V.I.S.
             </p>
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img
-                  src="/assets/blogs/blog-detail/what-is-ux/3.jpg"
+                  src="/assets/blogs/blog-detail/what-is-ux/3.webp"
                   alt="Img"
                 />
               </div>
@@ -404,9 +404,9 @@ export default function blogDetails() {
               aesthetically pleasing and align with the overall user experience.
             </p>
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img
-                  src="/assets/blogs/blog-detail/what-is-ux/4.jpg"
+                  src="/assets/blogs/blog-detail/what-is-ux/4.webp"
                   alt="Img"
                 />
               </div>
@@ -446,6 +446,7 @@ export default function blogDetails() {
       <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
+
       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
@@ -457,53 +458,63 @@ export default function blogDetails() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/moon.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Strategy</h2>
+              <Link href="/what-is-experience-design">
+                <img
+                  src="/assets/blogs/experience-design.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
             <h1>
-              The Leadership Secret That Every Top CEO (and Gambler) Uses to Win
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
             </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/Money.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Design</h2>
+              <Link href="/the-power-of-psychology-in-ux-design">
+                <img
+                  src="/assets/blogs/uxbrain.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
-            <h1>Lessons on Cultivating Courage from Maya Angelou</h1>
+            <h1>
+              The Power of Psychology in UX Design: Unlocking the Human Element
+            </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/women.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Marketing</h2>
+              <Link href="/the-evolution-of-ux-design">
+                <img
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
             <h1>
-              How to Avoid the 5 Branding Mistakes That Can Cost You Customers
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>

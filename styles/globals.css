@@ -341,9 +341,9 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 240px;
+  width: 30.5vh;
   position: absolute;
-  top: 1vw;
+  top: 0;
   right: 16vw;
 }
 
@@ -2748,6 +2748,7 @@ accordion-item--default .accordion .accordion-item-content {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  position: relative;
 }
 
 .contact__text {
@@ -2794,6 +2795,17 @@ accordion-item--default .accordion .accordion-item-content {
   font-weight: 500;
   border-bottom: 1px solid rgba(165, 165, 165, 0.764);
   font-size: 1vw;
+  padding-bottom: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+.form-box{
+  padding-bottom: 3vw;
+}
+
+.chakra-form__error-message{
+  color: red;
+  padding-top: 0.7vw;
 }
 
 .form-control.is-invalid:focus,
@@ -2877,11 +2889,34 @@ accordion-item--default .accordion .accordion-item-content {
 
 .form__section {
   width: 55%;
-  margin-top: 40vw;
+  margin-top: 50vw;
 }
 
 form {
   margin-bottom: 50px;
+}
+
+.submit-btn-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.alert {
+  margin-left: 1vw;
+  color: #1a1a1a;
+  font-size: 1vw;
+  font-weight: 500;
+  transition: opacity 0.5s ease; /* Add CSS transition property */
+}
+
+.alert.hide {
+  opacity: 0; /* Update opacity to 0 to hide the alert */
+}
+
+.contact-form-submit-btn{
+  background: #1a1a1a;
+  color: #fff;
 }
 
 input:focus-visible {
@@ -2891,7 +2926,25 @@ input:focus-visible {
 input::placeholder {
   font-size: 17px;
   color: rgba(165, 165, 165);
+  font-family: 'Ageo';
+  font-weight: 500;
 }
+
+input{
+  font-family: 'Gilroy';
+}
+
+textarea{
+  font-family: 'Gilroy';
+}
+
+textarea::placeholder {
+  font-size: 17px;
+  font-family: 'Ageo';
+  font-weight: 500;
+  color: rgba(165, 165, 165);
+}
+
 .contact__form input {
   border: none;
   width: 37vw;
@@ -3802,7 +3855,7 @@ https://unsplash.com/@vinomamba24
   color: #383838;
   position: absolute !important;
   left: 22vw;
-  top: 15.5vw;
+  bottom: -3vw;
 }
 
 .service-footer {
@@ -5395,7 +5448,7 @@ body.loading {
 
 .blog-img .image-container img {
   width: 100%;
-  height: 100%;
+  height: 110%;
   bottom: 0;
   right: 0;
   top: 0;
@@ -5481,6 +5534,8 @@ body.loading {
 
 .img-box-related img {
   width: 100%;
+  height: 70vh;
+  object-fit: cover;
 }
 
 .img-box-related h2 {
@@ -5498,7 +5553,7 @@ body.loading {
 
 .related-box-img h1 {
   max-width: 96%;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   margin-top: 1vw;
   color: #1a1a1a;
   font-weight: 500;
@@ -7702,7 +7757,6 @@ container_hero_content #enigma-svg #e {
   /* Concept Scroll END */
 
 
-
   /* Video Section  */
   .video-section-mobile {
     width: 100%;
@@ -7767,6 +7821,10 @@ container_hero_content #enigma-svg #e {
 
   .accordion {
     width: 95%;
+  }
+
+  .plus-rotate{
+    top: 3.5vw;
   }
 
   .accordion-list li {

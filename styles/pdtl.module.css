@@ -1119,8 +1119,50 @@
   .colorBoxesSection {
     width: 85%;
     justify-content: flex-start;
-    height: 25vh;
+    height: 30vh;
   }
+
+  .colorBoxesSection{
+    width: 90%;
+  }
+
+  .colorBoxesSection ul{
+    align-items: center;
+  }
+
+  .colorBoxesSection ul li{
+    font-size: 2.7vw;
+  }
+
+  .colorOne{
+    width: 85px;
+    height: 85px;
+  }
+
+  .colorTwo{
+    width: 85px;
+    height: 85px;
+    left: 17vw;
+  }
+
+  .colorThree{
+    width: 85px;
+    height: 85px;
+    left: 34vw;
+  }
+
+  .colorFour{
+    width: 85px;
+    height: 85px;
+    left: 51vw;
+  }
+
+  .colorFive{
+    width: 85px;
+    height: 85px;
+    left: 68vw;
+  }
+
 
   .colorBox {
     display: none;

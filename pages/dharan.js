@@ -481,13 +481,6 @@ export default function dharan() {
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
@@ -616,13 +609,6 @@ export default function dharan() {
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>

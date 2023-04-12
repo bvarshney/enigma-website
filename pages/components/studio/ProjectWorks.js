@@ -377,7 +377,7 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#EF9E28"
                     data-color="C2D4E8"
                     onMouseEnter={(e) => handleHover(e)}
@@ -456,7 +456,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="D1B1BC"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -541,7 +541,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="A9ABB2"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#535963"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -619,7 +619,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="C7B89B"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#BBA777"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -704,7 +704,7 @@ export default function ProjectsHome() {
                     alt="Image"
                     data-color="FFD795"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -781,7 +781,7 @@ export default function ProjectsHome() {
                     height={1000}
                     alt="Image"
                     data-color="F989A1"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#AC0035"
                     data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
@@ -861,13 +861,13 @@ export default function ProjectsHome() {
               >
                 <a href="/certvault">
                   <Image
-                    src="/assets/projects/new-project/pdtl.webp"
+                    src="/assets/projects/new-project/cert.png"
                     width={1000}
                     height={1000}
                     alt="Image"
                     data-color="FFD795"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -937,14 +937,14 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/quick">
+                <a href="/quickx">
                   <Image
-                    src="/assets/projects/new-project/dharan.webp"
+                    src="/assets/projects/new-project/quick.png"
                     width={1000}
                     height={1000}
                     alt="Image"
                     data-color="F989A1"
-                    data-cursor-size="110px"
+                    data-cursor-size="120px"
                     data-cursor-color="#AC0035"
                     data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
@@ -1014,7 +1014,7 @@ export default function ProjectsHome() {
             </div>
           </div>
 
-          {/* =============== Fifth =================== */}
+          {/* =============== Forth =================== */}
 
           <div className={styles.projectSubSection}>
             <div className={styles.glide}>
@@ -1022,16 +1022,26 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
+                <a href="/certvault"></a>
+
+                <div className={styles.textContent}>
+                  <div className={styles.c_project_info}></div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.glide}>
+              <div className={styles.glideContent} id="image-container">
                 <a href="/dmtca">
                   <Image
-                    src="/assets/projects/new-project/pdtl.webp"
+                    src="/assets/projects/new-project/dmtca.png"
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFD795"
+                    data-color="F989A1"
+                    data-cursor-size="120px"
+                    data-cursor-color="#AC0035"
                     data-cursor-text="View Project"
-                    data-cursor-size="110px"
-                    data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -1039,7 +1049,7 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>2022</p> <p>Web Design, Branding, Development</p>
+                    <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
                       <h1>DMTCA</h1>
                       <div

@@ -315,7 +315,7 @@ export default function blogDetails() {
             <br />
             <div className="blog-img">
               <div className="image-container blog-img-container" id="anim">
-                <img src="/assets/blogs/blog-detail/uxbrain1.png" alt="Img" />
+                <img src="/assets/blogs/blog-detail/uxbrain.webp" alt="Img" />
               </div>
             </div>
             <br />
@@ -465,7 +465,7 @@ export default function blogDetails() {
             </p>
 
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
               </div>
             </div>
@@ -549,7 +549,7 @@ export default function blogDetails() {
             </p>
 
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
               </div>
             </div>
@@ -686,7 +686,7 @@ export default function blogDetails() {
             </p>
 
             <div className="blog-img">
-              <div className="image-container">
+              <div className="image-container blog-img-container">
                 <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
               </div>
             </div>
@@ -742,6 +742,7 @@ export default function blogDetails() {
       <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
+
       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
@@ -753,53 +754,64 @@ export default function blogDetails() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/moon.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Strategy</h2>
+              <Link href="/what-is-experience-design">
+                <img
+                  src="/assets/blogs/experience-design.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
             <h1>
-              The Leadership Secret That Every Top CEO (and Gambler) Uses to Win
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
             </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/Money.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Design</h2>
+              <Link href="/what-is-ux-design">
+                <img
+                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
-            <h1>Lessons on Cultivating Courage from Maya Angelou</h1>
+            <h1>
+              What is UX Design: A Simple and Informative Guide for the Curious
+              Minds
+            </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <img
-                src="/assets/blogs/blog-detail/women.jpg"
-                alt="img"
-                data-cursor-text="Read Now"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-              />
-              <h2>Marketing</h2>
+              <Link href="/the-evolution-of-ux-design">
+                <img
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
             </div>
             <h1>
-              How to Avoid the 5 Branding Mistakes That Can Cost You Customers
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>

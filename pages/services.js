@@ -85,8 +85,8 @@ export default function services() {
     tl.fromTo(
       "#grow",
       {
-        height: "16vh",
-        borderRadius: "400px",
+        height: "18vh",
+        borderRadius: "10vw",
         opacity: 0,
         scale: 0,
       },
@@ -209,7 +209,7 @@ export default function services() {
       });
       growTl.to("#grow", {
         duration: 1,
-        borderRadius: "0px",
+        borderRadius: "0vw",
         height: "100vh",
         width: "90vw",
         right: "2vw",

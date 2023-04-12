@@ -102,7 +102,7 @@ export const Cursor: FC<CursorProps> = ({
   const cursor = useRef<HTMLDivElement | null>(null);
   const cursorInner = useRef<HTMLDivElement | null>(null);
 
-  const pos: Pos = useInstance(() => ({ x: -10, y: 0 }));
+  const pos: Pos = useInstance(() => ({ x: -100, y: 0 }));
   const vel: Vel = useInstance(() => ({ x: 0, y: 0 }));
   const set: any = useInstance();
 
