@@ -158,7 +158,7 @@ export default function Home() {
 
   return (
     <>
-    <NextSeo
+      {/* <NextSeo
         title="Using More of Config"
         description="This example uses more of the available config options."
         canonical="https://www.canonical.ie/"
@@ -184,7 +184,7 @@ export default function Home() {
           site: "@site",
           cardType: "summary_large_image",
         }}
-      />
+      /> */}
 
       <Head>
         <title>Enigma | Digital Marketing & Creative Design Agency India</title>
@@ -195,7 +195,6 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
-        
       </Head>
 
       {/* <ul className="transition" style={{ zIndex: "255" }} id="loader">
