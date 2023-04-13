@@ -878,6 +878,24 @@ export default function wragby() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
+
+          {/* ================ Next Project Mobile ============================== */}
+
+          <div className={styles.nextUpContainer}>
+            <div className={styles.nextUpContent}>
+              <div className={styles.nextTitle}>
+                <h1>next up</h1>
+              </div>
+              <div className={styles.nextProjectHeading}>
+                <Link href="/gcm">
+                  <h1>GCM</h1>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* ================ Next Project Mobile ============================== */}
+
           <div className={styles.mobile}></div>
           <div className={styles.ipad}></div>
 

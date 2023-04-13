@@ -648,8 +648,6 @@ export default function patronum() {
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== COLORS Section ==================== */}
 
@@ -863,7 +861,6 @@ export default function patronum() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
           <div className={styles.ipad}></div>
 
           {/* ================ Next Project Mobile ============================== */}
@@ -883,7 +880,6 @@ export default function patronum() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

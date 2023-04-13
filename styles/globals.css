@@ -5987,8 +5987,9 @@ a:hover {
   .module-2 {
     height: 90%;
   }
+  
   #header-fixed button {
-    top: -0.6vw;
+    top: 0;
   }
 
   .accordion:hover .accordion-item:hover .accordion-item-content,
@@ -6592,7 +6593,11 @@ container_hero_content #enigma-svg #e {
 }
 
 .first-box-service h3{
-  font-size: 1.8vw;
+  font-size: 2vw;
+  position: absolute;
+  top: 31.5vw;
+  right: 0;
+  max-width: 40vw;
 }
 
   .second-box-service .do {
@@ -6601,6 +6606,17 @@ container_hero_content #enigma-svg #e {
 
   .second-box-service {
     width: 88%;
+  }
+
+  .do{
+    font-size: 11vw;
+    position: static !important;
+    margin-left: 20vw;
+  }
+
+  .mobile-video-service-section{
+    width: 90%;
+    margin: 0 auto;
   }
 
   .second-box-service h3 {
@@ -7253,6 +7269,10 @@ container_hero_content #enigma-svg #e {
   margin-bottom: 5vw;
 }
 
+.img-box-related img{
+  height: 40vh;
+}
+
 .img-box-related h2 {
     font-size: 2.5vw;
     padding: 0.7vw 2.5vw;
@@ -7479,6 +7499,10 @@ container_hero_content #enigma-svg #e {
   .c-cursor {
     display: none !important;
     visibility: hidden !important;
+  }
+
+  .about-header .header-section{
+    margin-left: 8vw;
   }
 
   .header-section {
@@ -8332,6 +8356,10 @@ container_hero_content #enigma-svg #e {
     margin-top: 25vw;
   }
 
+  .scnd__container .pin-spacer{
+    margin: 0 !important;
+  }
+
   .form-group {
     margin-bottom: 11vw;
   }
@@ -8346,7 +8374,11 @@ container_hero_content #enigma-svg #e {
 
   .form-control {
     width: 95%;
-    font-size: 3vw;
+    font-size: 4vw;
+  }
+
+  .contact__text{
+    margin-bottom: 15vw;
   }
 
   .submit-button {
@@ -8370,11 +8402,10 @@ container_hero_content #enigma-svg #e {
 
   .form__section {
     width: 100%;
-    margin-top: 10vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .form-box{
+    margin-bottom: 12vw !important;
   }
 
   .contact__text {
@@ -8449,8 +8480,9 @@ container_hero_content #enigma-svg #e {
   }
 
   .do {
+    position: static !important;
     font-size: 18vw;
-    left: 45vw;
+    margin-left: 48vw;
   }
 
   .second-box-service h3 {
@@ -9024,7 +9056,7 @@ container_hero_content #enigma-svg #e {
 
   .image-box-blog {
     width: 100%;
-    height: 100%;
+    height: 50vh;
   }
 
   .blog-showmore-box .view-more {
@@ -9042,6 +9074,15 @@ container_hero_content #enigma-svg #e {
   .blog-detail-heading h1 {
     max-width: 80vw;
     font-size: 6vw;
+  }
+
+  .social-icons{
+    width: 42vw;
+    margin-top: 1vw;
+  }
+
+  .social-icons img{
+    width: 25px;
   }
 
   .main-blog-container .right-section p {
@@ -9069,6 +9110,10 @@ container_hero_content #enigma-svg #e {
     transform: none !important;
   }
 
+  .bold{
+    font-size: 6vw !important;
+  }
+
   .main-blog-container .left-section h1 {
     font-size: 6vw;
   }
@@ -9087,6 +9132,7 @@ container_hero_content #enigma-svg #e {
   }
 
   .strong {
+    text-align: justify;
     font-size: 6vw;
     letter-spacing: -0.05vw;
     border-left: 2px solid #1a1a1a;
@@ -9094,7 +9140,8 @@ container_hero_content #enigma-svg #e {
   }
 
   .donald {
-    font-size: 4.5vw;
+    font-size: 4.2vw;
+    margin-left: 0;
   }
 
   .related-article-heading h4:before {
@@ -9130,7 +9177,17 @@ container_hero_content #enigma-svg #e {
 
   .img-box-related {
     width: 100%;
+    height: 50vh;
   }
+
+  .img-box-related img{
+    height: 100%;
+  }
+
+  .blog-img .image-container img {
+    height: 120%;
+    top: -10%;
+}
 
   .img-box-related h2 {
     top: 2vw;

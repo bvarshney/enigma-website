@@ -333,6 +333,8 @@ export default function quickx() {
           </div>
           {/* ====================== Parallax Image  END ====================== */}
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== Third Section ============================ */}
 
           <div className={styles.patronumForthSection}>
@@ -472,12 +474,14 @@ export default function quickx() {
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== FOURTH Section ============================ */}
 
           <div className={styles.patronumForthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Enigma's Approach</h1>
+                <h1 data-jelly>Our Approach</h1>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -615,6 +619,8 @@ export default function quickx() {
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== Fonts Section ======================== */}
           <div className={styles.fontSection}>
             <div className={styles.fontHeading}>
@@ -743,6 +749,8 @@ export default function quickx() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== FOURTH Section ============================ */}
 
           <div className={styles.patronumForthSection}>
@@ -778,7 +786,7 @@ export default function quickx() {
           {/* ====================== Fourth Section END ======================== */}
 
           <div className="space-large desktop"></div>
-
+          <div className={styles.ipad}></div>
           {/* ====================== Parallax Image Second =========================== */}
 
           <div className={styles.imageSecondSection}>
@@ -802,6 +810,7 @@ export default function quickx() {
 
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           <div className={styles.patronumForthSection}>
             <div className={styles.clientTestimonialSectionContent}>
@@ -858,7 +867,6 @@ export default function quickx() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -868,14 +876,15 @@ export default function quickx() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>PDTL</h1>
+                <Link href="/patronum">
+                  <h1>Patronum</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

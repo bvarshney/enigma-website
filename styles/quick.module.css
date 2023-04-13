@@ -190,7 +190,6 @@
   font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
-  padding-top: 8vw;
 }
 
 .forthSectionRightBox {
@@ -580,6 +579,10 @@
   .mobileFont {
     display: none;
   }
+
+  .nextUpContainer{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1920px) {
@@ -609,8 +612,8 @@
   }
 
   #ipad {
-    display: block !important;
-    visibility: visible !important;
+    display: none !important;
+    visibility: hidden !important;
   }
 
   .desktopSlider {
@@ -641,7 +644,7 @@
   }
 
   .HeroRightBox {
-    height: 97%;
+    height: 75%;
   }
 
   .HeroRightBox .work {
@@ -662,10 +665,11 @@
   }
 
   .thirdSectionContent {
-    height: 40vh;
+    width: 80%;
+    height: 25vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .thirdSectionLeftBox {
@@ -693,7 +697,11 @@
   }
 
   .patronumForthSection {
-    height: 40vh;
+    height: 100%;
+  }
+
+  .forthSectionContent{
+    width: 80%;
   }
 
   .forthSectionLeftBox {
@@ -722,7 +730,7 @@
     font-size: 2.5vw;
   }
   .clientTestimonialparaTop h1{
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .clientTestimonialparaTop h5{
     font-size: 1.8vw;
@@ -753,10 +761,12 @@
   }
 
   .firstLogoBox {
+    width: 42%;
     height: 100vh;
   }
 
   .secondLogoBox {
+    width: 42%;
     height: 100vh;
   }
 
@@ -770,7 +780,7 @@
   }
 
   .fontSection {
-    height: 50vh;
+    height: 100%;
   }
 
   .fontImagebox {
@@ -778,7 +788,8 @@
   }
 
   .colorSection {
-    height: 50vh;
+    height: 100%;
+    margin: 12vw 0;
   }
 
   .colorBoxesSection {
@@ -786,11 +797,31 @@
   }
 
   .colorBoxHeadingBackground h2 {
-    top: 70%;
+    display: none;
   }
 
-  .colorBoxesSection img {
-    width: 90%;
+  .colorBoxesSection ul{
+    display: block;
+  }
+
+   .colorBoxesSection ul li{
+    font-size: 2.5vw;
+   }
+
+  .colorOne{
+    height: 120px;
+  }
+
+  .colorTwo{
+    height: 120px;
+  }
+
+  .colorThree{
+    height: 120px;
+  }
+
+  .colorFour{
+    height: 120px;
   }
 
   .videoForthSection {
@@ -798,8 +829,9 @@
   }
 
   .websiteDesignSection {
-    height: 20vh;
+    height: 100%;
     width: 80%;
+    margin-bottom: 14vw;
   }
 
   .websiteDesignSection .leftBox h1 {
@@ -812,6 +844,18 @@
 
   .websiteDesignSection .patronum_rightBox {
     width: 80%;
+  }
+
+  .clientTestimonialSectionBottomBox{
+    width: 80%;
+  }
+
+  .clientTestimonialSectionFigure img{
+    width: 14vw;
+  }
+
+  .clientTestimonialSectionFigureText h5{
+    font-size: 2.5vw;
   }
 
   .nextUpContainer {
@@ -839,6 +883,84 @@
     font-size: 6vw;
     color: #1a1a1a;
     font-weight: 500;
+  }
+
+  .nextUpContainer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 15vw;
+  }
+
+  .nextUpContent {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nextTitle {
+    margin-right: 20vw;
+    text-align: left;
+  }
+
+  .nextTitle h1 {
+    font-size: 3vw;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-right: 0;
+    margin-bottom: 1vw;
+    color: #1a1a1a;
+  }
+
+  .nextProjectHeading {
+    width: 40%;
+    text-align: center;
+  }
+
+  .nextProjectHeading h1 {
+    font-size: 7vw;
+    font-weight: 500;
+    color: #1a1a1a;
+    position: relative;
+  }
+
+  .nextProjectHeading h1:before {
+    content: "";
+    display: block;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7.5vw;
+    height: 0.2vw;
+    background: currentColor;
+    -webkit-transition: -webkit-transform 0.45s
+      cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+  }
+
+  .nextProjectHeading h1:focus:before,
+  .nextProjectHeading h1:hover:before {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
   }
 }
 
@@ -910,7 +1032,8 @@
   }
 
   .img {
-    height: calc(100% + 15rem);
+    width: 100%;
+    height: 120%;
     object-fit: cover;
   }
 
@@ -938,6 +1061,10 @@
 
   .patronumForthSection {
     height: auto;
+  }
+
+  .forthSectionLeftBox{
+    width: 100%;
   }
 
   .forthSectionContent {
@@ -1157,48 +1284,8 @@
   .desktopSlider {
     display: none;
   }
-}
 
-
-@media (min-width: 1201px) and (max-width: 3839px) {
-
-  .nextUpContainer {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 991px) {
-
-  .nextUpContainer {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-  }
-
-  .nextUpContent {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .nextTitle h1 {
-    font-size: 2.4vw;
-    margin-right: 15vw;
-    color: #a2a2a2;
-  }
-
-  .nextProjectHeading h1 {
-    font-size: 6vw;
-    color: #1a1a1a;
-    font-weight: 500;
-  }
-}
-
-@media screen and (max-width: 776px) {
-  .nextUpContainer {
+   .nextUpContainer {
     width: 100%;
     height: 20vh;
     display: flex;

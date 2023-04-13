@@ -856,7 +856,7 @@ export default function ProjectsHome() {
           <div className={styles.projectSubSection}>
             <div className={styles.glide}>
               <div
-                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
+                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0} ${styles.forthMt}`}
                 id="image-container"
               >
                 <a href="/certvault">
@@ -1014,10 +1014,10 @@ export default function ProjectsHome() {
             </div>
           </div>
 
-          {/* =============== Forth =================== */}
+          {/* =============== Fifth =================== */}
 
           <div className={styles.projectSubSection}>
-            <div className={styles.glide}>
+            <div className={`${styles.glide} ${styles.displayNoneMobile}`}>
               <div
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
@@ -1110,6 +1110,8 @@ export default function ProjectsHome() {
           </div>
         </div>
       </div>
+
+      <div className={styles.ipad}></div>
     </>
   );
 }

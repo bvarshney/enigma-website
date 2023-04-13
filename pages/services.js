@@ -79,6 +79,28 @@ export default function services() {
     return () => tl.kill();
   }, []);
 
+  // Mobile Video Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#mobile-vid",
+      {
+        opacity: 0,
+        translateY: 300,
+        transformPerspective: "1000",
+        transformOrigin: "top center",
+      },
+      {
+        delay: 3.2,
+        duration: 1.3,
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.2,
+      }
+    );
+    return () => tl.kill();
+  }, []);
+
   // Video Reveal Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -334,7 +356,7 @@ export default function services() {
         </div>
 
         <div className="mobile-video-service-section">
-          <div className="video-service-mobile">
+          <div className="video-service-mobile" id="mobile-vid">
             <video
               className="vid"
               autoPlay

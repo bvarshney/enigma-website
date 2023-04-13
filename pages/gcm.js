@@ -295,6 +295,7 @@ export default function gcm() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
           {/* ====================== Third Section ============================ */}
 
           <div className={styles.patronumThirdSection}>
@@ -873,7 +874,6 @@ export default function gcm() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -883,14 +883,15 @@ export default function gcm() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>Dharan</h1>
+                <Link href="/dharan">
+                  <h1>Dharan</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

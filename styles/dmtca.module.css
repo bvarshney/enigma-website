@@ -185,7 +185,7 @@
   height: 60%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .forthSectionLeftBox h1 {
@@ -193,7 +193,6 @@
   font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
-  padding-top: 8vw;
 }
 
 .forthSectionRightBox {
@@ -645,8 +644,8 @@
   }
 
   #ipad {
-    display: block !important;
-    visibility: visible !important;
+    display: none !important;
+    visibility: hidden !important;
   }
 
   .desktopSlider {
@@ -677,7 +676,7 @@
   }
 
   .HeroRightBox {
-    height: 90%;
+    height: 77%;
   }
 
   .HeroRightBox .work {
@@ -693,15 +692,16 @@
   }
 
   .img {
-    width: 130%;
+    width: 100%;
+    height: 120%;
     object-fit: cover;
   }
 
   .thirdSectionContent {
-    height: 40vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .thirdSectionLeftBox {
@@ -729,7 +729,7 @@
   }
 
   .patronumForthSection {
-    height: 40vh;
+    height: 100%;
   }
 
   .forthSectionLeftBox {
@@ -755,13 +755,25 @@
   }
   
   .clientTestimonialSectionLeftBox h1{
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
   .clientTestimonialparaTop h1{
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .clientTestimonialparaTop h5{
     font-size: 1.8vw;
+  }
+
+  .clientTestimonialSectionFigure img{
+    width: 14vw;
+  }
+
+  .clientTestimonialSectionBottomBox{
+    width: 80%;
+  }
+
+  .clientTestimonialSectionFigureText h5{
+    font-size: 2.5vw;
   }
 
   .logoImageSection {
@@ -778,6 +790,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 130%;
     object-fit: cover;
     object-position: center;
     padding: 0;
@@ -789,10 +802,12 @@
   }
 
   .firstLogoBox {
+    width: 43%;
     height: 100vh;
   }
 
   .secondLogoBox {
+    width: 43%;
     height: 100vh;
   }
 
@@ -803,6 +818,10 @@
 
   .logoImageSectionSecond {
     height: 50vh;
+  }
+
+  .forthSectionContent{
+    width: 85%;
   }
 
   .fontSection {
@@ -826,15 +845,46 @@
   }
 
   .colorBoxesSection {
+    width: 85%;
     height: 80%;
   }
 
   .colorBoxHeadingBackground h2 {
     top: 70%;
+    font-size: 20vw;
   }
 
-  .colorBoxesSection img {
-    width: 90%;
+  .colorBoxesSection ul li{
+    font-size: 2.2vw;
+  }
+
+  .colorOne{
+    width: 180px;
+    height: 180px;
+  }
+
+  .colorTwo{
+    width: 180px;
+    height: 180px;
+    left: 16vw;
+  }
+
+  .colorThree{
+    width: 180px;
+    height: 180px;
+    left: 32vw;
+  }
+
+  .colorFour{
+    width: 180px;
+    height: 180px;
+    left: 48vw;
+  }
+
+  .colorFive{
+    width: 180px;
+    height: 180px;
+    left: 64vw;
   }
 
   .videoForthSection {
@@ -842,8 +892,8 @@
   }
 
   .websiteDesignSection {
-    height: 20vh;
-    width: 80%;
+    height: 35vh;
+    width: 85%;
   }
 
   .websiteDesignSection .leftBox h1 {
@@ -888,29 +938,80 @@
   
   .nextUpContainer {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 10vw;
   }
 
   .nextUpContent {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+  }
+
+  .nextTitle {
+    margin-right: 15vw;
+    text-align: left;
   }
 
   .nextTitle h1 {
-    font-size: 2.4vw;
-    margin-right: 15vw;
-    color: #a2a2a2;
+    font-size: 3vw;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-right: 0;
+    margin-bottom: 1vw;
+    color: #1a1a1a;
+  }
+
+  .nextProjectHeading {
+    width: 33%;
+    text-align: center;
   }
 
   .nextProjectHeading h1 {
-    font-size: 6vw;
-    color: #1a1a1a;
+    font-size: 7vw;
     font-weight: 500;
+    color: #1a1a1a;
+    position: relative;
+  }
+
+  .nextProjectHeading h1:before {
+    content: "";
+    display: block;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 9vw;
+    height: 0.2vw;
+    background: currentColor;
+    -webkit-transition: -webkit-transform 0.45s
+      cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+  }
+
+  .nextProjectHeading h1:focus:before,
+  .nextProjectHeading h1:hover:before {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
   }
 }
 
@@ -1271,7 +1372,7 @@
   }
 
   .nextTitle {
-    margin-right: 26vw;
+    margin-right: 18vw;
     text-align: left;
   }
 
@@ -1285,7 +1386,7 @@
   }
 
   .nextProjectHeading {
-    width: 56%;
+    width: 46%;
     text-align: center;
   }
 
@@ -1303,7 +1404,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 11vw;
+    top: 13vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s

@@ -6,24 +6,20 @@ import {
   Input,
   Textarea,
   Text,
-  useToast,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { sendContactForm } from "../../../lib/api";
-import Router from "next/router";
-import gsap from "gsap";
 
 const initValues = {
   name: "",
   email: "",
-  subject: "",
+  number: "",
   message: "",
 };
 
 const initState = { isLoading: false, error: "", values: initValues };
 
 export default function Home() {
-  const toast = useToast();
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
   const [isMessageSent, setIsMessageSent] = useState(false);
@@ -124,13 +120,13 @@ export default function Home() {
       <FormControl
         isRequired
         mb={5}
-        isInvalid={touched.subject && !values.subject}
+        isInvalid={touched.number && !values.number}
         className="form-box"
       >
         <Input
           type="text"
-          name="subject"
-          value={values.subject}
+          name="number"
+          value={values.number}
           onChange={handleChange}
           onBlur={onBlur}
           placeHolder="Phone Number*"

@@ -617,16 +617,16 @@
   }
 
   .HeroRightBox {
-    height: 77%;
+    height: 40%;
   }
 
   .HeroRightBox .work {
-    font-size: 2.5vw;
+    font-size: 2.1vw;
     margin-bottom: 1.8vw;
   }
 
   .HeroRightBox .year {
-    font-size: 2.5vw;
+    font-size: 2.1vw;
   }
 
   .imageSecondSection .imageBox {
@@ -635,7 +635,7 @@
 
   .img {
     width: 100%;
-    height: 100%;
+    height: 120%;
     object-fit: cover;
   }
 
@@ -723,10 +723,10 @@
 
   .imageContainer img {
     position: absolute;
-    bottom: 0;
+    top: -10%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 130%;
     object-fit: cover;
     object-position: center;
     padding: 0;
@@ -789,7 +789,11 @@
   }
 
   .videoForthSection {
-    height: 50vh;
+    height: 100%;
+  }
+
+  .forthSectionContent{
+    width: 85%;
   }
 
   .websiteDesignSection {
@@ -809,31 +813,93 @@
     width: 80%;
   }
 
-  .nextUpContainer {
+  .clientTestimonialSectionBottomBox{
+    width: 80%;
+  }
+
+  .clientTestimonialSectionFigure img{
+    width: 14vw;
+  }
+
+  .clientTestimonialSectionFigureText h5{
+    font-size: 2.5vw;
+  }
+
+ .nextUpContainer {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
   }
 
   .nextUpContent {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+  }
+
+  .nextTitle {
+    margin-right: 9vw;
+    text-align: left;
   }
 
   .nextTitle h1 {
-    font-size: 2.4vw;
-    margin-right: 11vw;
-    color: #a2a2a2;
+    font-size: 3vw;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-bottom: 1vw;
+    color: #1a1a1a;
+    margin-right: 0;
+  }
+
+  .nextProjectHeading {
+    width: 27%;
+    text-align: center;
   }
 
   .nextProjectHeading h1 {
     font-size: 6vw;
-    color: #1a1a1a;
     font-weight: 500;
+    color: #1a1a1a;
+    position: relative;
+  }
+
+  .nextProjectHeading h1:before {
+    content: "";
+    display: block;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7vw;
+    height: 0.2vw;
+    background: currentColor;
+    -webkit-transition: -webkit-transform 0.45s
+      cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+  }
+
+  .nextProjectHeading h1:focus:before,
+  .nextProjectHeading h1:hover:before {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
   }
 }
 
@@ -1033,8 +1099,9 @@
     font-size: 3.7vw;
   }
 
-  .secondLogoBox .imageContainer img {
-    height: 160%;
+ .imageContainer img {
+    height: 130%;
+    top: -20%;
   }
 
   .logoImageSectionSecond {

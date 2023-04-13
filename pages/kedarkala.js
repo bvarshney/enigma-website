@@ -274,6 +274,7 @@ export default function kedarkala() {
           {/* ====================== Parallax Image Second  END ====================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -822,7 +823,6 @@ export default function kedarkala() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -832,14 +832,15 @@ export default function kedarkala() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>DMTCA</h1>
+                <Link href="/dmtca">
+                  <h1>DMTCA</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

@@ -645,7 +645,7 @@
   }
 
   .HeroRightBox {
-    height: 50%;
+    height: 35%;
   }
 
   .HeroRightBox .work {
@@ -661,17 +661,18 @@
   }
 
   .img {
-    width: 110%;
-    height: 140%;
-    top: -15%;
+    width: 100%;
+    height: 120%;
+    top: -10%;
     object-fit: cover;
   }
 
   .thirdSectionContent {
+    width: 80%;
     height: 40vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .thirdSectionLeftBox {
@@ -694,8 +695,12 @@
   }
 
   .thirdSectionRightBox .buttonBox h1 {
-    font-size: 2vw;
+    font-size: 1.9vw;
     padding: 0.7vw 1vw;
+  }
+
+  .forthSectionContent{
+    width: 80%;
   }
 
   .patronumForthSection {
@@ -739,6 +744,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 130%;
     object-fit: cover;
     object-position: center;
     padding: 0;
@@ -835,7 +841,8 @@
   }
 
   .clientTestimonialSectionLeftBox h1{
-    font-size: 2.5vw;
+    font-size: 3vw;
+    margin-bottom: 5vw;
   }
 
   .clientTestimonialparaTop h1{
@@ -847,20 +854,14 @@
   }
   .clientTestimonialSectionBottomBox {
     width: 100%;
-    padding-top: 0vh;
-    flex-direction: column;
+    padding-top: 5vh;
   }
-  .clientTestimonialSectionBottomBox {
-    width: 100%;
-    padding-top: 0vh;
-    flex-direction: column;
-  }
+
   .clientTestimonialSectionFigure img{
-    width: 25vw;
+    width: 14vw;
   }
   .clientTestimonialSectionFigureText h5{
-    font-size: 4vw;
-    text-align: center;
+    font-size: 2.5vw;
   }
 
   .clientTestimonialSpan2{
@@ -870,60 +871,84 @@
   .websiteDesignSection .patronum_rightBox {
     width: 80%;
   }
-
-  .nextUpContainer {
+.nextUpContainer {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 10vw;
   }
 
   .nextUpContent {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
 
-  .nextTitle h1 {
-    font-size: 2.4vw;
+  .nextTitle {
     margin-right: 4vw;
-    color: #a2a2a2;
-  }
-
-  .nextProjectHeading h1 {
-    font-size: 6vw;
-    color: #1a1a1a;
-    font-weight: 500;
-  }
-
-  .nextUpContainer {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-  }
-
-  .nextUpContent {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: left;
   }
 
   .nextTitle h1 {
-    font-size: 2.4vw;
-    margin-right: 15vw;
-    color: #a2a2a2;
+    font-size: 3vw;
+    font-weight: 500;
+    opacity: 0.7;
+    margin-right: 0;
+    margin-bottom: 1vw;
+    color: #1a1a1a;
+  }
+
+  .nextProjectHeading {
+    width: 20%;
+    text-align: center;
   }
 
   .nextProjectHeading h1 {
-    font-size: 6vw;
-    color: #1a1a1a;
+    font-size: 7vw;
     font-weight: 500;
+    color: #1a1a1a;
+    position: relative;
   }
+
+  .nextProjectHeading h1:before {
+    content: "";
+    display: block;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7.5vw;
+    height: 0.2vw;
+    background: currentColor;
+    -webkit-transition: -webkit-transform 0.45s
+      cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+      -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+  }
+
+  .nextProjectHeading h1:focus:before,
+  .nextProjectHeading h1:hover:before {
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  
 }
 
 @media screen and (max-width: 776px) {
@@ -1016,7 +1041,7 @@
   }
 
   .thirdSectionRightBox .buttonBox h1 {
-    font-size: 3.2vw;
+    font-size: 3vw;
     padding: 1.3vw 3vw;
   }
 
@@ -1083,7 +1108,11 @@
   }
 
   .secondLogoBox .imageContainer img {
-    height: 160%;
+    height: 130%;
+  }
+
+  .forthSectionLeftBox{
+    width: 100%;
   }
 
   .logoImageSectionSecond {
@@ -1183,12 +1212,31 @@
     margin-top: 4vw;
   }
 
+
+
   .websiteDesignSection .rightBox h1 {
     font-size: 3.8vw;
   }
 
+  .clientTestimonialSectionBottomBox{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .clientTestimonialSectionContent{
+    width: 85%;
+  }
+
   .clientTestimonialSectionLeftBox h1 {
     font-size: 5vw;
+}
+
+.clientTestimonialSectionFigure img{
+  width: 25vw;
+}
+
+.clientTestimonialSectionFigureText h5{
+  font-size: 4vw;
 }
 
   .clientTestimonialparaTop h1{

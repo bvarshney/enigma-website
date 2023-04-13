@@ -290,6 +290,9 @@ export default function certvault() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
+          <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
+
           {/* ====================== Third Section ============================ */}
 
           <div className={styles.patronumThirdSection}>
@@ -323,6 +326,7 @@ export default function certvault() {
 
           {/* ====================== Third Section END ======================== */}
 
+          <div className={styles.ipad}></div>
           <div className="space-large desktop"></div>
 
           {/* ====================== Parallax Image =========================== */}
@@ -345,6 +349,8 @@ export default function certvault() {
           {/* ====================== Parallax Image  END ====================== */}
 
           {/* <div className="space-large desktop"></div> */}
+          <div className={styles.mobile}></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -491,7 +497,7 @@ export default function certvault() {
           <div className={styles.patronumForthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Enigma's Approach</h1>
+                <h1 data-jelly>Our Approach</h1>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -696,6 +702,7 @@ export default function certvault() {
           {/* ====================== Forth Section END ======================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Forth Section  ======================== */}
 
@@ -720,6 +727,7 @@ export default function certvault() {
           {/* ====================== Forth Section  ======================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Parallax Image Second =========================== */}
 
@@ -743,6 +751,8 @@ export default function certvault() {
           {/* ====================== Parallax Image Second  END ====================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.mobile}></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
@@ -779,6 +789,7 @@ export default function certvault() {
           {/* ====================== Fourth Section END ======================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Parallax Image Second =========================== */}
 
@@ -805,6 +816,8 @@ export default function certvault() {
 
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
+          <div className={styles.mobile}></div>
+          <div className={styles.ipad}></div>
 
           <div className={styles.patronumForthSection}>
             <div className={styles.clientTestimonialSectionContent}>
@@ -861,7 +874,6 @@ export default function certvault() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -871,7 +883,9 @@ export default function certvault() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>Patronum</h1>
+                <Link href="/kedarkala">
+                  <h1>Kedarkala</h1>
+                </Link>
               </div>
             </div>
           </div>

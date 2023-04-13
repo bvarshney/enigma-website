@@ -288,6 +288,7 @@ export default function dharan() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -933,7 +934,6 @@ export default function dharan() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -943,14 +943,15 @@ export default function dharan() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>GCM</h1>
+                <Link href="/pdtl">
+                  <h1>PDTL</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

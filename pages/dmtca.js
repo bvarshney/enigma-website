@@ -346,6 +346,7 @@ export default function patronum() {
           {/* ====================== Parallax Image  END ====================== */}
 
           {/* <div className="space-large desktop"></div> */}
+          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -488,12 +489,14 @@ export default function patronum() {
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== FOURTH Section ============================ */}
 
           <div className={styles.patronumForthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Enigma's Approach</h1>
+                <h1 data-jelly>Our Approach</h1>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -630,6 +633,8 @@ export default function patronum() {
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== Fonts Section ======================== */}
 
           <div className={styles.fontSection}>
@@ -745,6 +750,8 @@ export default function patronum() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
+          <div className={styles.ipad}></div>
+
           {/* ====================== FOURTH Section ============================ */}
 
           <div className={styles.patronumForthSection}>
@@ -780,7 +787,7 @@ export default function patronum() {
           {/* ====================== Fourth Section END ======================== */}
 
           <div className="space-large desktop"></div>
-
+          <div className={styles.ipad}></div>
           {/* ====================== Parallax Image Second =========================== */}
 
           <div className={styles.imageSecondSection}>
@@ -804,6 +811,7 @@ export default function patronum() {
 
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           <div className={styles.patronumForthSection}>
             <div className={styles.clientTestimonialSectionContent}>
@@ -859,7 +867,6 @@ export default function patronum() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -869,14 +876,15 @@ export default function patronum() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>Kedarkala</h1>
+                <Link href="/wragby">
+                  <h1>Wragby</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}

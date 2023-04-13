@@ -291,6 +291,7 @@ export default function pdtl() {
           {/* ====================== Parallax Image Second  END ====================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -881,7 +882,6 @@ export default function pdtl() {
           {/* ========================== Next Project END ======================= */}
 
           <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -891,14 +891,15 @@ export default function pdtl() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <h1>QuickX</h1>
+                <Link href="quickx">
+                  <h1>Quick-X</h1>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
 
           {/* ======================== Footer ====================== */}
