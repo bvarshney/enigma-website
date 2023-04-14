@@ -69,12 +69,12 @@ const Blogs = [
 
   {
     id: 5,
-    name: "Marketing",
-    category: "Marketing",
-    Link: "/the-evolution-of-ux-design",
-    image: "/assets/blogs/blog-detail/the-evalution/feature.webp",
+    name: "Design",
+    category: "Design",
+    Link: "/how-to-delightfully-design",
+    image: "/assets/blogs/blog-detail/delightfully/feature.webp",
     description:
-      "The Evolution of UX Design: An Informative Expedition Through The History",
+      "How to Delightfully Design for Diverse Digital Platforms: A User's Guide to Creative UX Mastery",
   },
 ];
 

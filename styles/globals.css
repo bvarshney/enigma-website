@@ -5448,10 +5448,10 @@ body.loading {
 
 .blog-img .image-container img {
   width: 100%;
-  height: 110%;
+  height: 130%;
   bottom: 0;
   right: 0;
-  top: 0;
+  top: -15%;
   left: 0;
   object-fit: cover;
 }

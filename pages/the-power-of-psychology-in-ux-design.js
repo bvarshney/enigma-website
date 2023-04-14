@@ -311,8 +311,6 @@ export default function blogDetails() {
                 The Connection Between Psychology and UX Design
               </strong>
             </h1>
-            <br />
-            <br />
             <div className="blog-img">
               <div className="image-container blog-img-container" id="anim">
                 <img src="/assets/blogs/blog-detail/uxbrain.webp" alt="Img" />
@@ -360,7 +358,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               One of the most critical psychological principles to consider in
               UX design is cognitive load – the amount of mental effort required
@@ -403,7 +400,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               Habits play a significant role in our daily lives, and they can
               also influence how users interact with digital products. By
@@ -439,7 +435,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               Emotions have a powerful impact on our decision-making processes
               and overall user experience. A positive emotional experience can
@@ -449,7 +444,6 @@ export default function blogDetails() {
               <br />
               <br />
               <strong>To create emotionally engaging designs:</strong>
-              <br />
               <br />
               Utilize colour, typography, imagery, and micro-interactions to
               evoke the desired emotional response.
@@ -476,7 +470,6 @@ export default function blogDetails() {
                 Social Influence and the Power of Persuasion
               </strong>
             </h1>
-            <br />
             <br />
             <p>
               Social psychology can offer valuable insights into how users are
@@ -519,7 +512,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               Understanding the psychological principles behind decision-making
               can help us design interfaces that support users in making choices
@@ -561,7 +553,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               Creating engaging user experiences requires an understanding of
               what motivates users and drives their behaviour.
@@ -596,7 +587,6 @@ export default function blogDetails() {
               </strong>
             </h1>
             <br />
-            <br />
             <p>
               Empathy – the ability to understand and share the feelings of
               others – is a crucial skill for UX designers. By putting ourselves
@@ -627,7 +617,6 @@ export default function blogDetails() {
                 Accessibility and Inclusive Design
               </strong>
             </h1>
-            <br />
             <br />
             <p>
               Inclusive design goes beyond just meeting accessibility
@@ -660,7 +649,6 @@ export default function blogDetails() {
                 The Ethics of Applying Psychology in UX Design
               </strong>
             </h1>
-            <br />
             <br />
             <p>
               While psychology offers powerful tools for influencing user
@@ -695,7 +683,6 @@ export default function blogDetails() {
             <h1>
               <strong className="bold fontSize">Conclusion:</strong>
             </h1>
-            <br />
             <br />
             <p>
               The intersection of psychology and UX design offers a wealth of
