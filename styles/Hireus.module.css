@@ -1,16 +1,19 @@
+.sectionMainType{
+    background: url('/assets/hireus/bg-bottom.png') no-repeat bottom right;
+    background-size: 100% auto;
+}
+
 .hidden{
     display: none;
 }
 
 .closeImg{
     width: 2%;
-    position: absolute !important;
+    position: fixed !important;
     top: 3vw;
     right: 3vw;
     transition: all 0.5s ease-in-out;
 }
-
-
 
 .closeImg:hover{
     transform: rotate(180deg);
@@ -37,7 +40,7 @@
     font-size: 5vw;
     color: #1a1a1a;
     font-family: "Ageo";
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .buttonSection{
@@ -87,7 +90,6 @@
 
 .activeButton img{
     display: none;  
-
 }
 
 .buttonsBox button img{
@@ -102,12 +104,444 @@
     font-size: 1.2vw;
     color: #1a1a1a;
     margin-top: 1vw;
-    font-weight: 600;
+    font-weight: 800;
     font-family: "Ageo";
 }
 
 .section{
     width: 100%;
+    height: 100%;
+}
+
+.ContainerFirst{
+    width: 100%;
+    height: 100%;
+}
+
+.firstBoxSection{
+    width: 100%;
     height: 100vh;
 }
 
+.headingFirst{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headingFirst h2{
+    color: #1a1a1a;
+    font-family: 'Ageo';
+    font-weight: 500;
+    font-size: 1.2vw;
+    margin-top: 4vw;
+}
+
+.headingFirst h2 .colorGrey{
+    color: #BFBBBB;
+}
+
+.headingFirst h1{
+    font-size: 6vw;
+    font-family: 'Ageo';
+    color: #1a1a1a;
+    line-height: 0.8;
+    margin-top: 2vw;
+    letter-spacing: 2px;
+}
+
+.optionsBox{
+    width: 65%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+}
+
+.buttonSubBox{
+    width: 25%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.active{
+    width: 80%;
+    height: 100%;
+    background: #D6372E !important;
+    background-size: 35% 35% !important;
+}
+
+.active img{
+    display: none;  
+}
+
+ .button{
+    border: none;
+    border-radius: 100%;
+    background: transparent;
+    border: 1px solid #e4e7f5;
+    padding: 25% 28%;
+    background-size: 35% 35%;
+    transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    background-image: url('https://buzzworthystudio.com/img/form/icon-selected.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    cursor: pointer;
+}
+
+.button img{
+    transition: all 0.3s ease-in;
+}
+
+.button:hover img{
+    transform: scale(0.9);
+}
+
+.buttonSubBox h1{
+    margin-top: 1vw;
+    color: #1a1a1a;
+    font-family: "Ageo";
+}
+
+
+.budgetTimeline{
+    width: 100%;
+    height: 100vh;
+    position: relative
+}
+
+
+.budgetTimeline .headingFirst h1{
+    line-height: 1;
+}
+
+.budgetTimeline .headingFirst p{
+    font-size: 1.1vw;
+    padding: 2vw 18vw;
+    text-align: center;
+    line-height: 1.5;
+}
+
+ 
+.sliderSectionBoxes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vw;
+
+}
+
+.sliderSectionBoxes .budgetSlider{
+    width: 43%;
+    height: 4px;
+    border: none;
+    background: #e4e7f5;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.sliderSectionBoxes h2{
+    margin-top: 2vw;
+    font-size: 0.9vw;
+    color: #1a1a1a;
+    font-family: "Ageo";
+    font-weight: 500;
+}
+
+
+.sliderSectionBoxes h1{
+    font-size: 2.5vw;
+    color: #1a1a1a;
+    font-family: "Ageo";
+    font-weight: 600;
+    margin-top: 0.5vw;
+}
+
+.sliderSectionBoxes .timelineSlider{
+    margin-top: 4vw;
+    width: 43%;
+    height: 4px;
+    border: none;
+    background: #e4e7f5;
+    -webkit-appearance: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.slider::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color: #D6372E;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -5px;
+    position: relative;
+    box-shadow: 0 7px 18px 0px rgba(0, 0, 0, 0.15);
+}
+
+.slider{
+    position: relative;
+}
+
+.slider:before {
+  content: url("/assets/hireus/left.svg"); /* Add the path to your SVG file */
+  position: absolute; /* Use absolute positioning to position the SVG relative to the .slider element */
+  top: -8px; /* Adjust the top position of the SVG as needed */
+  left: 12px; /* Use the --thumb-left and --thumb-width CSS variables to set the left position of the SVG based on the position of the slider thumb, and also considering the width of the thumb and SVG */
+  width: 16px; /* Set a fixed width for the SVG */
+  height: 16px;
+  z-index: 1; /* Add a higher z-index to make sure the SVG is displayed above the thumb */
+}
+
+.slider::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: url("/assets/hireus/right.svg") no-repeat;
+    background-size: contain;
+    top: -8px; /* Position the thumb above the slider */
+    left: 28px; 
+    z-index: 99;
+}
+
+.formSection{
+    width: 100%;
+    height: 100%;
+    margin-top: 10vh;
+}
+
+.formMain{
+    width: 50%;
+}
+
+.formBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vw;
+}
+
+.formSubBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formSubBox > div{
+    width: 100%;
+    margin: 5px 5px;
+}
+
+.websiteUrlDiv{
+    margin: 0 5px;
+}
+
+.formSubBox input, .websiteUrl  {
+    transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 4em!important;
+    height: 60px;
+    background-color: #EBECF1;
+    margin: 0 0 1em;
+    font-size: .75em;
+    font-family: "Lato", "Open Sans", sans-serif;
+    color: #253069;
+    padding: 0 2em;
+    border: none;
+}
+
+.formSubBox input::placeholder{
+    font-size: 1.1vw;
+    color: #989797;
+    font-weight: 400;
+}
+
+.formSubBox input:focus, .websiteUrl:focus {
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #e4e7f5;
+    transform: scale(1.025);
+    -moz-transform: scale(1.025);
+    -webkit-transform: scale(1.025);
+    -o-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+    color: #313132;
+}
+
+.websiteUrl::placeholder{
+    font-size: 1.1vw;
+    color: #989797;
+    font-weight: 400;
+}
+
+.err {
+    margin-bottom: 1vw;
+    color: #D6372E;
+}
+
+.messageBox{
+    height: 100%;
+    margin-top: 40vh;
+}
+
+.messageBox .headingFirst p{
+    font-size: 1vw;
+    font-family: 'Ageo';
+    color: #1a1a1a;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.messageTextArea{
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageTextArea textarea{
+    width: 75%;
+    height: 25vh;
+}
+
+.messageTextArea textarea  {
+    transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    width: 75%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 4em!important;
+    height: 20vh;
+    background-color: #EBECF1;
+    margin: 0 0 1em;
+    font-size: 1vw;
+    font-family: "Lato", "Open Sans", sans-serif;
+    color: #253069;
+    padding: 0 2em;
+    border: none;
+}
+
+.messageTextArea textarea::placeholder{
+    font-size: 1.2vw;
+    color: #989797;
+    font-weight: 400;
+}
+
+.messageTextArea textarea:focus {
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #e4e7f5;
+    transform: scale(1.025);
+    -webkit-transform: scale(1.025);
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
+    color: #253069;
+}
+
+.submitBtnBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitbtnWrap {
+    transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    margin-top: 2em;
+    position: relative;
+    width: 35%;
+    height: auto;
+    padding-top: 35%;
+    border-radius: 50%;
+    background-color: rgba(37, 48, 105, 0.15);
+}
+
+.submitbtnWrap .submitButton {
+    transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #D6372E;
+    font-family: 'Ageo';
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: .15em;
+    width: 80%;
+    margin: 10%;
+    height: 80%;
+    border-radius: 50%;
+    border: none;
+}
+
+.submitbtnWrap:hover {
+    transform: scale(0.8);
+}
+
+.submitbtnWrap:hover .submitButton {
+    transform: scale(1.4);
+}
+
+.justChatSection{
+    width: 100%;
+    height: 80vh;
+}
+
+.justchatHeading{
+    width: 80%;
+    display: block;
+}
+
+.justchatform{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+}
+
+.justchatformInput{
+    width: 100%;
+}
+
+.justChatSection .messageTextArea{
+    margin-top: 0;
+    width: 100%;
+}
+
+.justChatSection .messageTextArea textarea{
+    width: 100%;
+    margin: 0 5px;
+}

@@ -390,12 +390,12 @@ export default function blogDetails() {
             </div>
             <br />
             <br />
-            <h1>
+            <h2>
               <strong className="bold fontSize">
                 So, what precisely is the difference between Experience Design &
                 User Experience?
               </strong>
-            </h1>
+            </h2>
             <br />
             <br />
             <p>

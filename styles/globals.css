@@ -41,6 +41,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "Ageo";
+  src: url("/assets/fonts/Ageo-ExtraBold.otf");
+  font-weight: 800;
+}
+
 
 * {
   padding: 0;
@@ -64,6 +70,10 @@
   bottom: 0;
   left: 0;
   width: 100vw;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 ::selection {
@@ -5289,7 +5299,7 @@ body.loading {
 
 .desc-tag {
   font-size: 1.5vw;
-  font-weight: 500;
+  font-weight: 600;
   color: #1a1a1a;
   margin-top: 1vw;
 }
@@ -5433,6 +5443,7 @@ body.loading {
 .bold {
   font-weight: 600;
   color: #1a1a1a;
+  margin-bottom: 0.8vw;
 }
 
 .fontSize {

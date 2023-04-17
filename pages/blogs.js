@@ -66,7 +66,6 @@ const Blogs = [
     description:
       "The Evolution of UX Design: An Informative Expedition Through The History",
   },
-
   {
     id: 5,
     name: "Design",
@@ -75,6 +74,15 @@ const Blogs = [
     image: "/assets/blogs/blog-detail/delightfully/feature.webp",
     description:
       "How to Delightfully Design for Diverse Digital Platforms: A User's Guide to Creative UX Mastery",
+  },
+  {
+    id: 6,
+    name: "Marketing",
+    category: "Marketing",
+    Link: "/the-future-of-marketing",
+    image: "/assets/blogs/blog-detail/the-future-of-marketing/feature.webp",
+    description:
+      "The Future of Marketing: Why Every Marketer Should Learn Neuroscience and Master Neuromarketing",
   },
 ];
 

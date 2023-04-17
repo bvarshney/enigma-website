@@ -302,10 +302,14 @@ export default function blogDetails() {
               journey into the world of UX design mastery!
               <br />
               <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                Desktop Screens: The Grand Stage
-              </span>
               <br />
+            </p>
+
+            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+              Desktop Screens: The Grand Stage
+            </h3>
+
+            <p id="anim">
               Desktop screens are the grand stage where most of our digital
               lives unfold. They offer vast real estate for designers to
               showcase their creativity, and users expect a comprehensive and
@@ -347,13 +351,13 @@ export default function blogDetails() {
               </div>
             </div>
 
+            <br />
+            <br />
+
+            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+              TV: The Colossal Canvas
+            </h3>
             <p>
-              <br />
-              <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                TV: The Colossal Canvas
-              </span>
-              <br />
               Televisions are the colossal canvas of modern living rooms.
               Designing for this behemoth requires a unique approach that
               accommodates the TV's larger screen size and viewing distance.
@@ -393,13 +397,13 @@ export default function blogDetails() {
               </div>
             </div>
 
+            <br />
+            <br />
+            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+              Tablets: The Versatile Virtuosos
+            </h3>
+
             <p>
-              <br />
-              <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                Tablets: The Versatile Virtuosos
-              </span>
-              <br />
               Tablets are the versatile virtuosos of the digital world, bridging
               the gap between smartphones and desktops. They demand a tailored
               approach to accommodate their unique screen size and touch-based
@@ -439,13 +443,13 @@ export default function blogDetails() {
               </div>
             </div>
 
+            <br />
+            <br />
+            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+              Mobile Phones: The Pocket-Sized Powerhouses
+            </h3>
+
             <p>
-              <br />
-              <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                Mobile Phones: The Pocket-Sized Powerhouses
-              </span>
-              <br />
               Mobile phones are the pocket-sized powerhouses that have
               revolutionized the way we live, work, and play. With their
               ubiquity and extensive capabilities, designing for these compact
@@ -515,13 +519,13 @@ export default function blogDetails() {
               </div>
             </div>
 
+            <br />
+            <br />
+            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+              Wearables: The Tiny Titans
+            </h3>
+
             <p>
-              <br />
-              <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                Wearables: The Tiny Titans
-              </span>
-              <br />
               Wearables, like smartwatches and fitness trackers, are the tiny
               titans of the digital world. Their minimal screen real estate and
               intimate nature demand a reimagined design approach. Keep these

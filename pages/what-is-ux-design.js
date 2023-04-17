@@ -289,11 +289,11 @@ export default function blogDetails() {
               ado, let's dive right in!
               <br />
               <br />
-              <span className="bold" style={{ fontSize: "1.7vw" }}>
-                What is UX Design?
-              </span>
-              <br />
-              <br />
+            </p>
+            <h3 className="bold" id="anim" style={{ fontSize: "1.7vw" }}>
+              What is UX Design?
+            </h3>
+            <p id="anim">
               So, what exactly is UX design, and why should you care? UX, or
               User Experience Design, is the art and science of crafting
               user-centred designs that make digital interactions efficient,
