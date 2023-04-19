@@ -135,6 +135,31 @@ const Marquee = () => {
     return tl;
   }
 
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".services-catalog",
+        start: "-350 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll(".services-catalog");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 300,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+      }
+    );
+  });
+
   return (
     <div className="services-catalog">
       <div className="services-catalog-title">

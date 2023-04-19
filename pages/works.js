@@ -94,9 +94,7 @@ export default function studio() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>
-              What <span className="loader-font">We</span> Do
-            </h1>
+            <h1>Our Meticulously Crafted Projects</h1>
           </span>
         </div>
       </div>

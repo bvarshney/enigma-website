@@ -19,6 +19,7 @@ import HomeVideoSection from "./components/Mobile/HomeVideoSection";
 import ConceptScrollMobile from "./components/Mobile/ConceptScrollMobile";
 import ProjectsHome from "./components/Home/ProjectsHome";
 import TopHomeAero from "./components/Home/TopHomeAero";
+import Link from "next/link";
 
 export default function Home() {
   // Hero Section Animation
@@ -40,6 +41,25 @@ export default function Home() {
         opacity: 1,
         translateY: 0,
         stagger: 0.2,
+      }
+    );
+    return () => tl.kill();
+  });
+
+  // Hero Section Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#hireus",
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        delay: 5.5,
+        duration: 1.3,
+        scale: 1,
+        opacity: 1,
       }
     );
     return () => tl.kill();
@@ -251,11 +271,25 @@ export default function Home() {
 
       <SmoothScroll />
 
-      {/* <div id="blob"></div>
-      <div id="blur"></div> */}
-
       <main className="main-section">
         <HomeHero />
+
+        <div className="hireus-button" id="hireus">
+          <a
+            href="/hireus"
+            data-cursor-text="Hire Us!"
+            data-cursor-size="80px"
+            data-cursor-color="#5D5AD6"
+          >
+            <Image
+              src="/assets/hireus/icon-hireus.png"
+              alt="Icon"
+              width={70}
+              height={70}
+            />
+          </a>
+        </div>
+
         <div className="hero-main desktop">
           <div
             className="hero-section"

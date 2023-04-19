@@ -53,6 +53,32 @@ export default function NewGifSection() {
     );
   });
 
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".gifBottomText",
+        start: "-300 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll(".gifsubtetx p");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 200,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.2,
+      }
+    );
+  });
+
   return (
     <>
       <div className="gifSectionAbout" id="gif">
@@ -62,7 +88,7 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              loading="lazy" 
+              loading="lazy"
               src="/assets/about/gif-section/culture.webm"
               className="gif-img"
             ></video>
@@ -87,7 +113,8 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              src="/assets/about/gif-section/attitude.webm" loading='lazy'
+              src="/assets/about/gif-section/attitude.webm"
+              loading="lazy"
               className="gif-img"
             ></video>
             <h2 className="about-gif-text">attitude</h2>
@@ -112,7 +139,8 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              src="/assets/about/gif-section/ethos.webm" loading='lazy'
+              src="/assets/about/gif-section/ethos.webm"
+              loading="lazy"
               className="gif-img"
             ></video>
             <h2 className="about-gif-text">ethos</h2>
@@ -139,7 +167,8 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              src="/assets/about/gif-section/experience.webm" loading='lazy'
+              src="/assets/about/gif-section/experience.webm"
+              loading="lazy"
               className="gif-img"
             ></video>
             <h2 className="about-gif-text">experience</h2>
@@ -164,7 +193,8 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              src="/assets/about/gif-section/magic.webm" loading='lazy'
+              src="/assets/about/gif-section/magic.webm"
+              loading="lazy"
               className="gif-img"
             ></video>
             <h2 className="about-gif-text">magic</h2>

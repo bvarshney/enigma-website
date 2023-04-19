@@ -242,6 +242,60 @@ export default function services() {
     return () => ctx.revert();
   });
 
+  // Text Reveal Animation Top to Center
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".main-how",
+        start: "-450 top",
+      },
+    });
+
+    // Header
+    tl.fromTo(
+      ".line-anim .span",
+      0.8,
+      {
+        y: -350,
+        ease: "none",
+        skewY: -20,
+      },
+      {
+        y: 0,
+        skewY: 0,
+        stagger: 0.4,
+      }
+    );
+    return () => tl.kill();
+  }, []);
+
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".main-how",
+        start: "-200 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll(".top-box");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 200,
+      },
+      {
+        delay: 0.5,
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.5,
+      }
+    );
+  });
+
   return (
     <>
       <NextSeo
@@ -425,10 +479,10 @@ export default function services() {
               <br /> grow.
             </h2>
           </div>
-          <div className="right-box" data-jelly>
+          <div className="right-box">
             <div className="right-sub-content">
               <h1>Our Capabilities</h1>
-              <h4>
+              <h4 data-jelly>
                 We create evergreen brands that are highly effective at boosting
                 revenue, increasing brand equity, and improving ROI. Our big
                 picture approach powers your entire business, not just the
@@ -446,13 +500,12 @@ export default function services() {
         <div className="strategy-box">
           <div
             className="left-strategy-box"
-            data-jelly
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#2b8c87"
           >
             <h1>Strategy</h1>
-            <h4>
+            <h4 data-jelly>
               Digital Advisory and Consulting, Integrated Digital Marketing Plan
               (D.M.P.), User Experience Development, Customer Experience
               Strategy, Consumer Research, Insights & Target Market Analysis,
@@ -485,13 +538,12 @@ export default function services() {
         <div className="strategy-box flex-reverse">
           <div
             className="left-strategy-box"
-            data-jelly
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
             <h1>UI/UX Design</h1>
-            <h4>
+            <h4 data-jelly>
               User Interface Design, User Experience Design, Responsive Web
               Design, Mobile App Design, Digital Interface Design, Design
               Systems Creation, Experience Mapping, User Flow Mapping,
@@ -522,13 +574,12 @@ export default function services() {
         <div className="strategy-box">
           <div
             className="left-strategy-box"
-            data-jelly
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#fcc63d"
           >
             <h1>Technology</h1>
-            <h4>
+            <h4 data-jelly>
               Front-End Development, Native & Hybrid Mobile Application
               Development, Progressive Web Applications, Database Design &
               Management, Cloud Infrastructure Services, Testing & Automation
@@ -560,13 +611,12 @@ export default function services() {
         <div className="strategy-box flex-reverse">
           <div
             className="left-strategy-box"
-            data-jelly
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
             <h1>Marketing</h1>
-            <h4>
+            <h4 data-jelly>
               Social Media Management, Content Creation & Curation, Search
               Engine Optimisation, Influencer Management, Auction Media
               Management, Online Reputation Management, Media Planning & Buying,
@@ -635,10 +685,14 @@ export default function services() {
         <section className="main-how">
           <div className="how-we-work">
             <div className="first-heading-box">
-              <div className="sub-first-heading">
-                This is <span className="sub-first-highlight">how</span>
+              <div className="sub-first-heading line-anim">
+                <span className="span">
+                  This is <span className="sub-first-highlight"> how</span>
+                </span>
               </div>
-              <div className="sub-second-heading">we work</div>
+              <div className="sub-second-heading line-anim">
+                <span className="span">we work</span>
+              </div>
             </div>
           </div>
 

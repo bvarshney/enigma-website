@@ -189,7 +189,7 @@ export default function blogDetails() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>How to Delightfully Design</h1>
+            <h1>How to Design for Diverse Platforms</h1>
           </span>
         </div>
       </div>

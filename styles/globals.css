@@ -351,7 +351,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30.5vh;
+  width: 32vh;
   position: absolute;
   top: 0;
   right: 16vw;
@@ -474,7 +474,7 @@ button:focus {
   background: transparent;
   position: absolute;
   z-index: 99;
-  right: 0;
+  right: -0.5vw;
   top: 0vw;
 }
 .menu-layer {
@@ -954,6 +954,26 @@ label:hover circle {
   margin: 0 auto;
   flex-direction: column;
   line-height: 1;
+  position: relative;
+}
+
+.hireus-button{
+  position: absolute;
+  background: #1a1a1a;
+  border-radius: 50%;
+  right: 1vw;
+  bottom: 4vw;
+}
+
+.hireus-button a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hireus-button img{
+  width: 100%;
+  padding: 0.7vw;
 }
 
 .first-section {
@@ -4031,6 +4051,7 @@ https://unsplash.com/@vinomamba24
 }
 .sub-first-highlight {
   color: #5d5ad6;
+  /* margin-left: 2vw; */
 }
 
 .how-we-work .first-heading-box .sub-first-heading {
@@ -4039,11 +4060,22 @@ https://unsplash.com/@vinomamba24
   color: #1a1a1a;
 }
 
+.line-anim{
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-anim .span{
+ position: absolute;
+}
+
 .how-we-work .first-heading-box .sub-second-heading {
   font-size: 10vw;
   font-weight: 600;
   align-self: flex-end;
   color: #1a1a1a;
+  width: 53%;
 }
 
 .main-how .top-box {
@@ -5338,6 +5370,7 @@ body.loading {
   padding: 1vw 5vw;
   color: #1a1a1a;
   transition: all 0.5s ease-in-out;
+  position: relative;
 }
 
 /* Pagination */
@@ -5567,7 +5600,7 @@ body.loading {
   font-size: 1.4vw;
   margin-top: 1vw;
   color: #1a1a1a;
-  font-weight: 500;
+  font-weight: 600;
 }
 /* ================== Blog Details END ============================ */
 
@@ -9122,7 +9155,8 @@ container_hero_content #enigma-svg #e {
   }
 
   .bold{
-    font-size: 6vw !important;
+    font-size: 5vw !important;
+    margin-bottom: 2vw;
   }
 
   .main-blog-container .left-section h1 {

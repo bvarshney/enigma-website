@@ -31,40 +31,37 @@ const handleHoverExit = (e) => {
 const Blogs = [
   {
     id: 1,
-    name: "Design",
-    category: "Design",
-    Link: "/what-is-experience-design",
-    image: "/assets/blogs/experience-design.webp",
-    description:
-      "What is Experience Design, And How is it Different from User Experience Design (UX)?",
-    current: "active",
+    name: "Marketing",
+    category: "Marketing",
+    Link: "/how-search-engine-works",
+    image: "/assets/blogs/blog-detail/how-search-engine/feature.webp",
+    description: "How Search Engines Work: A Comprehensive Guide",
   },
   {
     id: 2,
-    name: "Design",
-    category: "Design",
-    Link: "/the-power-of-psychology-in-ux-design",
-    image: "/assets/blogs/uxbrain.webp",
-    description:
-      "The Power of Psychology in UX Design: Unlocking the Human Element",
+    name: "Marketing",
+    category: "Marketing",
+    Link: "/the-basics-of-seo",
+    image: "/assets/blogs/blog-detail/basic-seo/feature.webp",
+    description: "The Basics of SEO: A Comprehensive Beginner's Guide",
   },
   {
     id: 3,
-    name: "Design",
-    category: "Design",
-    Link: "/what-is-ux-design",
-    image: "/assets/blogs/blog-detail/what-is-ux/feature.webp",
+    name: "Marketing",
+    category: "Marketing",
+    Link: "/marketing-psychology",
+    image: "/assets/blogs/blog-detail/marketing-psychology/feature.webp",
     description:
-      "What is UX Design: A Simple and Informative Guide for the Curious Minds",
+      "Marketing Psychology: The Secret to Captivating Your Audience and Building Unforgettable Brands",
   },
   {
     id: 4,
-    name: "Design",
-    category: "Design",
-    Link: "/the-evolution-of-ux-design",
-    image: "/assets/blogs/blog-detail/the-evalution/feature.webp",
+    name: "Marketing",
+    category: "Marketing",
+    Link: "/the-future-of-marketing",
+    image: "/assets/blogs/blog-detail/the-future-of-marketing/feature.webp",
     description:
-      "The Evolution of UX Design: An Informative Expedition Through The History",
+      "The Future of Marketing: Why Every Marketer Should Learn Neuroscience and Master Neuromarketing",
   },
   {
     id: 5,
@@ -77,12 +74,40 @@ const Blogs = [
   },
   {
     id: 6,
-    name: "Marketing",
-    category: "Marketing",
-    Link: "/the-future-of-marketing",
-    image: "/assets/blogs/blog-detail/the-future-of-marketing/feature.webp",
+    name: "Design",
+    category: "Design",
+    Link: "/the-evolution-of-ux-design",
+    image: "/assets/blogs/blog-detail/the-evalution/feature.webp",
     description:
-      "The Future of Marketing: Why Every Marketer Should Learn Neuroscience and Master Neuromarketing",
+      "The Evolution of UX Design: An Informative Expedition Through The History",
+  },
+  {
+    id: 7,
+    name: "Design",
+    category: "Design",
+    Link: "/what-is-ux-design",
+    image: "/assets/blogs/blog-detail/what-is-ux/feature.webp",
+    description:
+      "What is UX Design: A Simple and Informative Guide for the Curious Minds",
+  },
+  {
+    id: 8,
+    name: "Design",
+    category: "Design",
+    Link: "/the-power-of-psychology-in-ux-design",
+    image: "/assets/blogs/uxbrain.webp",
+    description:
+      "The Power of Psychology in UX Design: Unlocking the Human Element",
+  },
+  {
+    id: 9,
+    name: "Design",
+    category: "Design",
+    Link: "/what-is-experience-design",
+    image: "/assets/blogs/experience-design.webp",
+    description:
+      "What is Experience Design, And How is it Different from User Experience Design (UX)?",
+    current: "active",
   },
 ];
 
@@ -238,9 +263,7 @@ export default function blogs() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>
-              Read our <span className="loader-font">Blogs!</span>
-            </h1>
+            <h1>Our Thoughts & Resources</h1>
           </span>
         </div>
       </div>
@@ -305,7 +328,10 @@ export default function blogs() {
 
               <div className="blog-showmore-box">
                 {showViewMore && (
-                  <button className="view-more" onClick={handleViewMore}>
+                  <button
+                    className="view-more button--calypso"
+                    onClick={handleViewMore}
+                  >
                     <span>View More</span>
                   </button>
                 )}

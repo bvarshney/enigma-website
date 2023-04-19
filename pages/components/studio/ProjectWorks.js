@@ -348,19 +348,49 @@ export default function ProjectsHome() {
       });
   });
 
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#c-works",
+        start: "-600 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll("#proj-work");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 150,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.2,
+      }
+    );
+  });
+
   return (
     <>
       <div className={styles.projectSectionMain} id="c-works">
         <div className={styles.mobileSpacing}></div>
         <div className={styles.projectHeading}>
           <div className={styles.projectFirstBox}>
-            <h1 className={styles.select}>Our Work</h1>
-            <h4 className={styles.paraProject}>
+            <h1 className={styles.select} id="proj-work">
+              Our Work
+            </h1>
+            <h4 className={styles.paraProject} id="proj-work">
               Crafting new bright brands, unique visual systems and digital
               experience focused on a wide range of original collabs.
             </h4>
           </div>
-          <h1 className={styles.project}>Showcase</h1>
+          <h1 className={styles.project} id="proj-work">
+            Showcase
+          </h1>
         </div>
 
         <div className={styles.projectHover}>

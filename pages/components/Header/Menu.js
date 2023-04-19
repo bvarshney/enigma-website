@@ -278,7 +278,7 @@ const Menu = ({ state }) => {
                             <span className="content-heading-serial">04</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
-                              data-fill="Insight"
+                              data-fill="Insights"
                               onMouseEnter={(e) => handleHover(e)}
                               onMouseOut={(e) => handleHoverExit(e)}
                             >
@@ -289,7 +289,7 @@ const Menu = ({ state }) => {
                                     : ""
                                 }
                               >
-                                Insight
+                                Insights
                               </span>
                             </span>
                           </Link>

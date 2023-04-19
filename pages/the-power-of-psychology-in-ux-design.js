@@ -189,9 +189,7 @@ export default function blogDetails() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>
-              Power of <span className="loader-font">Psychology!</span>
-            </h1>
+            <h1>Psychology in UX Design</h1>
           </span>
         </div>
       </div>

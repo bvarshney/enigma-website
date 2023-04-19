@@ -202,9 +202,7 @@ export default function contact() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>
-              Hi! <span className="loader-font">There</span>
-            </h1>
+            <h1>Hi, There! Let's Talk!?</h1>
           </span>
         </div>
       </div>

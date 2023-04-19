@@ -20,6 +20,21 @@ const Hamburger = () => {
     audio.play();
   };
 
+  // Sound on Click
+  useEffect(() => {
+    const buttons = document.querySelectorAll("#btn-music");
+    const handleClick = () => {
+      const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
+      audio.play();
+    };
+    buttons.forEach((button) => button.addEventListener("click", handleClick));
+    return () => {
+      buttons.forEach((button) =>
+        button.removeEventListener("click", handleClick)
+      );
+    };
+  }, []);
+
   useEffect(() => {
     gsap.from(nav.current, {
       duration: 1.5,
@@ -74,7 +89,7 @@ const Hamburger = () => {
                 className="menu header-right-button cross menu--1"
                 id="header-fixed"
               >
-                <button ref={buttonRef}>
+                <button ref={buttonRef} id="btn-music">
                   <label data-cursor-exclusion data-cursor-size="60px">
                     <input
                       type="checkbox"

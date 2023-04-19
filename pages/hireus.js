@@ -3,6 +3,7 @@ import styles from "../styles/Hireus.module.css";
 import { Cursor } from "../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Link from "next/link";
+import Head from "next/head";
 import gsap from "gsap";
 
 const MyComponent = () => {
@@ -107,6 +108,16 @@ const MyComponent = () => {
     sectionRef.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleButtonBudgetTimeline = () => {
+    const sectionRef = document.getElementById("budget-timeline"); // Replace "sectionId" with the actual ID of the section you want to scroll to
+    sectionRef.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleButtonFinishStrong = () => {
+    const sectionRef = document.getElementById("finish-strong"); // Replace "sectionId" with the actual ID of the section you want to scroll to
+    sectionRef.scrollIntoView({ behavior: "smooth" });
+  };
+
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -154,23 +165,23 @@ const MyComponent = () => {
   }, []);
 
   // Hero Close Image Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#close",
-      {
-        opacity: 0,
-        translateX: 100,
-      },
-      {
-        delay: 3,
-        duration: 1.5,
-        opacity: 1,
-        translateX: 0,
-      }
-    );
-    return () => tl.kill();
-  }, []);
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.fromTo(
+  //     "#close",
+  //     {
+  //       opacity: 0,
+  //       translateX: 100,
+  //     },
+  //     {
+  //       delay: 3,
+  //       duration: 1.5,
+  //       opacity: 1,
+  //       translateX: 0,
+  //     }
+  //   );
+  //   return () => tl.kill();
+  // }, []);
 
   // Page Transition
   useEffect(() => {
@@ -211,6 +222,16 @@ const MyComponent = () => {
 
   return (
     <div>
+      <Head>
+        <title>Hire us | Hire us - 50-60 characters</title>
+        <meta name="description" content="Hire us." />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+        />
+        <link rel="icon" href="/fav-icon.png" />
+      </Head>
+
       <div className="loader-wrap" id="loader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
@@ -228,7 +249,9 @@ const MyComponent = () => {
         <div>
           <div className={styles.headings}>
             <h4 id="anim">Let's Start</h4>
-            <h1 id="anim">How can we help you?</h1>
+            <h1 id="anim">
+              How can we <span>help</span> you?
+            </h1>
           </div>
 
           <Link href="/">
@@ -249,10 +272,7 @@ const MyComponent = () => {
                 activeSection === "section1" ? styles.activeButton : ""
               }
             >
-              <img
-                src="https://buzzworthystudio.com/img/form/icon-website.svg"
-                alt="image"
-              />
+              <img src="/assets/hireus/icon-website.svg" alt="image" />
             </button>
             <h1>Website</h1>
           </div>
@@ -264,10 +284,7 @@ const MyComponent = () => {
                 activeSection === "section2" ? styles.activeButton : ""
               }
             >
-              <img
-                src="https://buzzworthystudio.com/img/form/icon-ecommerce.svg"
-                alt="image"
-              />
+              <img src="/assets/hireus/icon-ecommerce.svg" alt="image" />
             </button>
             <h1>Marketing</h1>
           </div>
@@ -279,10 +296,7 @@ const MyComponent = () => {
                 activeSection === "section3" ? styles.activeButton : ""
               }
             >
-              <img
-                src="https://buzzworthystudio.com/img/form/icon-brand.svg"
-                alt="image"
-              />
+              <img src="/assets/hireus/icon-brand.svg" alt="image" />
             </button>
             <h1>Brand</h1>
           </div>
@@ -294,10 +308,7 @@ const MyComponent = () => {
                 activeSection === "section4" ? styles.activeButton : ""
               }
             >
-              <img
-                src="https://buzzworthystudio.com/img/form/icon-chat.svg"
-                alt="image"
-              />
+              <img src="/assets/hireus/icon-chat.svg" alt="image" />
             </button>
             <h1>Just Chat :)</h1>
           </div>
@@ -337,7 +348,7 @@ const MyComponent = () => {
                       onClick={() => handleWebsiteClick(1)}
                     >
                       <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-design.svg"
+                        src="/assets/hireus/icon-web-design.svg"
                         alt="image"
                       />
                     </button>
@@ -354,10 +365,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(2)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-code.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-code.svg" alt="image" />
                     </button>
                     <h1>Code</h1>
                   </div>
@@ -372,10 +380,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(3)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-both.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-both.svg" alt="image" />
                     </button>
                     <h1>Both</h1>
                   </div>
@@ -422,10 +427,17 @@ const MyComponent = () => {
                 />
                 <h2>ESTIMATED TIMELINE</h2>
                 <h1>{weeks} Weeks</h1>
+
+                <button
+                  className={styles.nextStepBtn}
+                  onClick={handleButtonBudgetTimeline}
+                >
+                  Next Step
+                </button>
               </div>
             </div>
 
-            <div className={styles.formSection}>
+            <div className={styles.formSection} id="budget-timeline">
               <div className={styles.headingFirst}>
                 <h2>
                   03 —<span className={styles.colorGrey}> 04</span>
@@ -509,7 +521,14 @@ const MyComponent = () => {
                     />
                   </div>
 
-                  <div className={styles.messageBox}>
+                  <button
+                    className={styles.nextStepBtn}
+                    onClick={handleButtonFinishStrong}
+                  >
+                    Next Step
+                  </button>
+
+                  <div className={styles.messageBox} id="finish-strong">
                     <div className={styles.headingFirst}>
                       <h2>
                         04 —<span className={styles.colorGrey}> 04</span>
@@ -527,9 +546,11 @@ const MyComponent = () => {
                   </div>
                   <div className={styles.submitBtnBox}>
                     <div className={styles.submitbtnWrap}>
-                      <button type="submit" className={styles.submitButton}>
-                        Send Over
-                      </button>
+                      <Link href="/message-sent">
+                        <button type="submit" className={styles.submitButton}>
+                          Send Over
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </form>
@@ -571,7 +592,7 @@ const MyComponent = () => {
                       onClick={() => handleWebsiteClick(4)}
                     >
                       <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-design.svg"
+                        src="/assets/hireus/icon-web-design.svg"
                         alt="image"
                       />
                     </button>
@@ -588,10 +609,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(5)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-code.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-code.svg" alt="image" />
                     </button>
                     <h1>PPC Campaign</h1>
                   </div>
@@ -606,10 +624,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(6)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-both.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-both.svg" alt="image" />
                     </button>
                     <h1>Both</h1>
                   </div>
@@ -805,7 +820,7 @@ const MyComponent = () => {
                       onClick={() => handleWebsiteClick(7)}
                     >
                       <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-design.svg"
+                        src="/assets/hireus/icon-web-design.svg"
                         alt="image"
                       />
                     </button>
@@ -822,10 +837,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(8)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-code.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-code.svg" alt="image" />
                     </button>
                     <h1>Brand Materials</h1>
                   </div>
@@ -840,10 +852,7 @@ const MyComponent = () => {
                       }`}
                       onClick={() => handleWebsiteClick(9)}
                     >
-                      <img
-                        src="https://buzzworthystudio.com/img/form/icon-web-both.svg"
-                        alt="image"
-                      />
+                      <img src="/assets/hireus/icon-web-both.svg" alt="image" />
                     </button>
                     <h1>Both</h1>
                   </div>

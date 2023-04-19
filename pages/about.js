@@ -168,6 +168,58 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".first-about-content-section",
+        start: "-500 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll(".left-box-heading h1");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.2,
+      }
+    );
+  });
+
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".client-about-content-section",
+        start: "-500 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll(".left-box-heading h1");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        y: 0,
+        duration: 1,
+        opacity: 1,
+        stagger: 0.2,
+      }
+    );
+  });
+
   return (
     <>
       <NextSeo

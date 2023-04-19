@@ -189,7 +189,7 @@ export default function blogDetails() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>The Evolution of UX Design</h1>
+            <h1>The History & Evolution of UX</h1>
           </span>
         </div>
       </div>
