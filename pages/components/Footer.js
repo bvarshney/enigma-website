@@ -103,7 +103,7 @@ function Footer() {
     tl.fromTo(
       demoHeader,
       {
-        y: 50,
+        y: 30,
         opacity: 0,
       },
       {
@@ -209,7 +209,10 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="https://www.facebook.com/in.enigmadigital" target="blank">
+                    <a
+                      href="https://www.facebook.com/in.enigmadigital"
+                      target="blank"
+                    >
                       <span data-text="Facebook">Facebook</span>
                     </a>
                   </div>
@@ -218,14 +221,18 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="https://www.instagram.com/enigmadigital/" target="blank">
+                    <a
+                      href="https://www.instagram.com/enigmadigital/"
+                      target="blank"
+                    >
                       <span data-text="Instagram">Instagram</span>
                     </a>
                   </div>
                   <div
                     class="cb-menu-nav-item f__anim"
                     data-cursor-exclusion
-                    data-cursor-size="80px">
+                    data-cursor-size="80px"
+                  >
                     <a href="https://www.youtube.com/" target="blank">
                       <span data-text="Youtube">Youtube</span>
                     </a>
@@ -237,7 +244,10 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="https://in.linkedin.com/company/in-enigmadigital" target="blank">
+                    <a
+                      href="https://in.linkedin.com/company/in-enigmadigital"
+                      target="blank"
+                    >
                       <span data-text="LinkedIn">LinkedIn</span>
                     </a>
                   </div>
@@ -255,7 +265,10 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="https://www.behance.net/enigma-digital" target="blank">
+                    <a
+                      href="https://www.behance.net/enigma-digital"
+                      target="blank"
+                    >
                       <span data-text="Behance">Behance</span>
                     </a>
                   </div>

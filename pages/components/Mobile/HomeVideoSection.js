@@ -20,7 +20,9 @@ export default function HomeVideoSection() {
             Do you think we're the right partners to bring your idea to life and
             take your brand to the Next Level? 🚀
           </h1>
-          <Link href="/contact">Say, Hello! 👋</Link>
+          <div className="cb-outro-header">
+            <Link href="/contact">Say, Hello! 👋</Link>
+          </div>
         </div>
       </div>
     </>

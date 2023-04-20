@@ -316,6 +316,9 @@ button:focus {
 
 /* ============================== New Hover =========================================== */
 
+
+
+
 /* ============================== New Hover END =========================================== */
 
 /* ============================== Image Reveal =========================================== */
@@ -351,10 +354,11 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32vh;
+  width: 20vw;
   position: absolute;
   top: 0;
-  right: 16vw;
+  right: 17vw;
+  object-fit: cover;
 }
 
 /* ============================== Image Reveal END =========================================== */
@@ -3857,16 +3861,18 @@ https://unsplash.com/@vinomamba24
 }
 
 .first-box-service .what-we {
-  font-size: 8.8vw;
+  font-size: 10.5vw;
   font-weight: 600;
   color: #383838;
 }
 
 .first-box-service h3 {
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight: 400;
   text-align: justify;
-  margin-left: 16vw;
+  margin-left: 5vw;
+  margin-right: 4vw;
+  line-height: 125%;
   font-family: 'Ageo';
 }
 
@@ -3880,12 +3886,12 @@ https://unsplash.com/@vinomamba24
 }
 
  .do {
-  font-size: 10vw;
+  font-size: 10.5vw;;
   font-weight: 600;
   color: #383838;
   position: absolute !important;
   left: 22vw;
-  bottom: -3vw;
+  bottom: -4.5vw;
 }
 
 .service-footer {
@@ -3999,7 +4005,7 @@ https://unsplash.com/@vinomamba24
 .left-strategy-box h1 {
   font-size: 5vw;
   color: #1a1a1a;
-  margin-bottom: 5vw;
+  margin-bottom: 2vw;
 }
 
 .left-strategy-box h4 {
@@ -4402,14 +4408,32 @@ https://unsplash.com/@vinomamba24
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .gifsubtetx p {
-  font-size: 4vw;
+  font-size: 4.5vw;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 1px;
   text-align: center;
+}
+
+.gifsubtetx > p {
+  background: linear-gradient( to right,rgb(6 6 6) 50%,rgb(237 232 232) 50% );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.gifsubtetx span {
+  font-size: 4vw;
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
 }
 
 /* Gif New Section END */
@@ -5996,9 +6020,7 @@ a:hover {
   .buttonNext___2mOCa {
     width: 4%;
   }
-  .first-box-service h3 {
-    margin-left: 15vw;
-  }
+  
 
   .accordion-item-content,
   .accordion:hover .accordion-item-content {
@@ -6068,9 +6090,6 @@ a:hover {
 
   .container_hero_content #enigma-svg #e {
     transform: scale(6.2) translate(-80px, -123px);
-  }
-  .first-box-service h3 {
-    margin-left: 14.5vw;
   }
 
   .accordion-item-content,
@@ -6537,11 +6556,6 @@ container_hero_content #enigma-svg #e {
   .video-section-mobile .video-content-box a {
     margin-top: 7vw;
     font-size: 4.2vw;
-    font-weight: 600;
-    border-radius: 10vw;
-    color: #fff;
-    padding: 2.5vw 7vw;
-    background-color: #1a1a1a;
   }
   /* ====================== Video Section  END ====================== */
 
@@ -7774,7 +7788,7 @@ container_hero_content #enigma-svg #e {
   }
 
   .mobli-cont .en-cicle {
-    background-image: url("/assets/mobile/concept/motion-circle.png");
+    background-image: url("/assets/mobile/concept/motion-circle.webp");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -7860,14 +7874,17 @@ container_hero_content #enigma-svg #e {
     text-align: center;
   }
 
+  .video-section-mobile .cb-outro-header{
+    margin-top: 10vw;
+    max-width: 45%;
+  }
+
   .video-section-mobile .video-content-box a {
-    margin-top: 7vw;
-    font-size: 5.2vw;
-    font-weight: 600;
-    border-radius: 10vw;
-    color: #fff;
-    padding: 2.5vw 7vw;
-    background-color: #1a1a1a;
+    font-size: 5.4vw;
+  }
+
+  .video-section-mobile .cb-outro-header a:before {
+    top: 5vw;
   }
 
   /* Video Section END */
@@ -7929,7 +7946,7 @@ container_hero_content #enigma-svg #e {
   .accordion-list p {
     font-size: 4vw;
     padding-right: 0%;
-    text-align: left;
+    text-align: justify;
     color: #1a1a1a;
     font-weight: 400;
     padding-left: 0%;

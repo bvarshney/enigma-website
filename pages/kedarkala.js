@@ -862,8 +862,8 @@ export default function kedarkala() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/dmtca">
-                  <h1>DMTCA</h1>
+                <Link href="/patronum">
+                  <h1>Patronum</h1>
                 </Link>
               </div>
             </div>

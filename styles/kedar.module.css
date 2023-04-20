@@ -1224,16 +1224,15 @@
   }
 
   .nextUpContent {
-    width: 80%;
+    width: 45%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .nextTitle {
-    margin-right: 15vw;
     text-align: left;
   }
 
@@ -1247,7 +1246,7 @@
   }
 
   .nextProjectHeading {
-    width: 45%;
+    width: 100%;
     text-align: center;
   }
 

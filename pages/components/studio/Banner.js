@@ -63,7 +63,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row"} id="create">
-      <div className="row-col" data-cursor-exclusion data-cursor-size="30px">
+      <div className="row-col">
         <AnimatedLetters title={title} />
       </div>
       <motion.div
@@ -87,11 +87,7 @@ const BannerRowTop = ({ title }) => {
 
 const BannerRowBottom = ({ title }) => {
   return (
-    <div
-      className={"banner-row center"}
-      data-cursor-exclusion
-      data-cursor-size="30px"
-    >
+    <div className={"banner-row center"}>
       <AnimatedLetters title={title} />
     </div>
   );

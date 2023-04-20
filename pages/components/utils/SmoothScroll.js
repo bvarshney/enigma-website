@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Scrollbar from "smooth-scrollbar";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+// import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
 
 gsap.registerPlugin(ScrollTrigger);
 class ScrollTriggerPlugin extends Scrollbar.ScrollbarPlugin {
@@ -138,31 +139,34 @@ const SmoothScroll = () => {
   //$ Check if Mobile or Desktop
   //   const isDesktop = checkDesktop();
 
+  // Scrollbar.use(OverscrollPlugin);
+
   //$ Run on Page Load
   useEffect(() => {
     const view = document.body; //` Declare View Reference
     const settings = {
-      damping: 0.03,
+      damping: 0.02,
+      thumbMinSize: 5,
       renderByPixels: true,
       delegateTo: document,
-      alwaysShowTracks: false,
-      continuousScrolling: false,
+      alwaysShowTracks: true,
+      continuousScrolling: true,
+      // plugins: {
+      //   overscroll: {
+      //     effect: "bounce",
+      //     damping: 0.15,
+      //     maxOverscroll: 80,
+      //   },
+      // },
     }; //` Options
 
-    const overscrollOptions = {
-      enable: true,
-      effect: "bounce",
-      maxOverscroll: 150,
-    };
-
     //$ Initialize with View and Settings
-    const smoothscroll = Scrollbar.init(view, settings, overscrollOptions);
+    const smoothscroll = Scrollbar.init(view, settings);
     smoothscrollRef.current = smoothscroll;
     const cursorRef = document.getElementById("c-cursor");
 
     smoothscroll.addListener(ScrollTrigger.update);
     ScrollTrigger.defaults({ scroller: document.body });
-
     //$ Jelly Motion Scroll for Mobiles
     //@ Jelly Scroll Class
     const JellyScroll = (options) => {

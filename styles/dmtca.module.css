@@ -1372,7 +1372,7 @@
   }
 
   .nextTitle {
-    margin-right: 18vw;
+    margin-right: 28vw;
     text-align: left;
   }
 
@@ -1386,7 +1386,7 @@
   }
 
   .nextProjectHeading {
-    width: 46%;
+    width: 60%;
     text-align: center;
   }
 
@@ -1404,7 +1404,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 13vw;
+    top: 11vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s

@@ -218,7 +218,7 @@ export default function blogDetails() {
           <div className="left-section" id="left-section">
             <div className="box-blog" id="anim">
               <h1>By Bhaskar Varshney</h1>
-              <h2>(UI/UX DESIGN)</h2>
+              <h2>(Marketing)</h2>
             </div>
             <div className="box-blog" id="anim">
               <h1>Posted on</h1>

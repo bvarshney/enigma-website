@@ -5,6 +5,7 @@ import Image from "next/image";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import Button from "../Button";
+import SplitType from "split-type";
 
 /*!
  * DrawSVGPlugin 3.4.0
@@ -349,48 +350,85 @@ export default function ProjectsHome() {
       });
   });
 
-  // Text Reveal Animation
+  // Text Reveal Animation For Each
+  useEffect(() => {
+    const totalSection = document.querySelectorAll("#c-works");
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelector("#proj-para-anim"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-450 top",
+          end: "bottom top",
+          markers: false,
+        },
+        duration: 1,
+        opacity: 0,
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.05,
+      });
+    });
+  }, []);
+
+  // Text Reveal Animation Top to Center
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#c-works",
-        start: "-600 top",
+        start: "-450 top",
       },
     });
 
-    const demoHeader = document.querySelectorAll("#proj-anim");
     // Header
     tl.fromTo(
-      demoHeader,
+      "#line-anim #span",
+      0.8,
       {
-        opacity: 0,
-        y: 150,
+        y: -350,
+        ease: "none",
+        skewY: -20,
       },
       {
         y: 0,
-        duration: 1,
-        opacity: 1,
-        stagger: 0.2,
+        skewY: 0,
+        stagger: 0.4,
       }
     );
-  });
+    return () => tl.kill();
+  }, []);
 
   return (
     <>
       <div className={styles.projectSectionMain} id="c-works">
         <div className={styles.projectHeading}>
-          <div className={styles.projectFirstBox}>
-            <h1 className={styles.select} id="proj-anim">
-              Selected
+          <div
+            className={`${styles.projectFirstBox} ${styles.lineAnim}`}
+            id="line-anim"
+          >
+            <h1 className={`${styles.select}`}>
+              <span className={styles.span} id="span">
+                Selected
+              </span>
             </h1>
-            <h4 className={styles.paraProject} id="proj-anim">
-              Crafting new bright brands, unique visual systems and digital
-              experience focused on a wide range of original collabs.
+            <h4 className={styles.paraProject} id="proj-para-anim">
+              <span>
+                Crafting new bright brands, unique visual systems and digital
+                experience focused on a wide range of original collabs.
+              </span>
             </h4>
           </div>
-          <h1 className={styles.project} id="proj-anim">
-            Projects
-          </h1>
+          <div
+            className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
+            id="line-anim"
+          >
+            <h1 className={styles.project}>
+              <span className={styles.span} id="span">
+                Projects
+              </span>
+            </h1>
+          </div>
         </div>
 
         <div className={styles.projectHover}>

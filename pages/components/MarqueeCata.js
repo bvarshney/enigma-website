@@ -140,11 +140,11 @@ const Marquee = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".services-catalog",
-        start: "-350 top",
+        start: "-750 top",
       },
     });
 
-    const demoHeader = document.querySelectorAll(".services-catalog");
+    const demoHeader = document.querySelectorAll(".service-catalog-anim");
     // Header
     tl.fromTo(
       demoHeader,
@@ -161,11 +161,11 @@ const Marquee = () => {
   });
 
   return (
-    <div className="services-catalog">
+    <div className="services-catalog service-catalog-anim">
       <div className="services-catalog-title">
         full catalogue of our services. 👨‍💻
       </div>
-      <div className="services-catalog-row margin-top-medium">
+      <div className="services-catalog-row margin-top-medium ">
         <div className="services-catalog-row-item half-opacity">
           Digital Advisory and Consulting
         </div>

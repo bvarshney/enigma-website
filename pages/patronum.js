@@ -871,8 +871,8 @@ export default function patronum() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/certvault">
-                  <h1>Certvault</h1>
+                <Link href="/wragby">
+                  <h1>Wragby</h1>
                 </Link>
               </div>
             </div>

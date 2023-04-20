@@ -242,6 +242,7 @@ export default function blogs() {
     return () => tl.kill();
   }, []);
 
+  console.clear();
   return (
     <>
       <Head>

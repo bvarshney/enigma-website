@@ -7,6 +7,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "intersection-observer";
 import { NextSeo } from "next-seo";
+import SplitType from "split-type";
 
 import Header from "./components/Header/Header";
 import SmoothScroll from "./components/utils/SmoothScroll";
@@ -108,7 +109,7 @@ export default function services() {
     tl.fromTo(
       "#grow",
       {
-        height: "18vh",
+        height: "16vh",
         borderRadius: "10vw",
         opacity: 0,
         scale: 0,
@@ -269,31 +270,48 @@ export default function services() {
     return () => tl.kill();
   }, []);
 
-  // Text Reveal Animation
+  // Text Reveal Animation For Each
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".main-how",
-        start: "-200 top",
-      },
-    });
-
-    const demoHeader = document.querySelectorAll(".top-box");
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        y: 200,
-      },
-      {
-        delay: 0.5,
-        y: 0,
+    const totalSection = document.querySelectorAll(".strategy-box-anim");
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-380 top",
+          end: "bottom top",
+          markers: false,
+        },
         duration: 1,
-        opacity: 1,
-        stagger: 0.5,
-      }
-    );
+        opacity: 0,
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.03,
+      });
+    });
+  });
+
+  // Text Reveal Animation For Each
+  useEffect(() => {
+    const totalSection = document.querySelectorAll(".main-how");
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelectorAll(".box-anim-gsap"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-50 top",
+          end: "bottom top",
+          markers: false,
+        },
+        duration: 1,
+        opacity: 0,
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.02,
+      });
+    });
   });
 
   return (
@@ -472,21 +490,25 @@ export default function services() {
         <div className="space-medium ipad"></div>
 
         {/* =================== Services and Capabilities Section ========================= */}
-        <div className="service-cap-section">
+        <div className="service-cap-section strategy-box-anim">
           <div className="left-box" data-jelly>
-            <h2 className="sub-text">
-              Here's how we help you
-              <br /> grow.
+            <h2 className="sub-text ser-text-head-anim">
+              <span>
+                Here's how we help you
+                <br /> grow.
+              </span>
             </h2>
           </div>
           <div className="right-box">
-            <div className="right-sub-content">
-              <h1>Our Capabilities</h1>
-              <h4 data-jelly>
-                We create evergreen brands that are highly effective at boosting
-                revenue, increasing brand equity, and improving ROI. Our big
-                picture approach powers your entire business, not just the
-                marketing department.
+            <div className="right-sub-content strategy-box-anim">
+              <h1 className="ser-text-head-anim">Our Capabilities</h1>
+              <h4 data-jelly className="ser-text-head-anim">
+                <span>
+                  We create evergreen brands that are highly effective at
+                  boosting revenue, increasing brand equity, and improving ROI.
+                  Our big picture approach powers your entire business, not just
+                  the marketing department.
+                </span>
               </h4>
             </div>
           </div>
@@ -497,21 +519,24 @@ export default function services() {
         <div className="space-large mobile"></div>
 
         {/* Strategy Box 1  */}
-        <div className="strategy-box">
+        <div className="strategy-box strategy-box-anim">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#2b8c87"
           >
-            <h1>Strategy</h1>
-            <h4 data-jelly>
-              Digital Advisory and Consulting, Integrated Digital Marketing Plan
-              (D.M.P.), User Experience Development, Customer Experience
-              Strategy, Consumer Research, Insights & Target Market Analysis,
-              Digital Capabilities Development, Persona Design & Customer
-              Segmentation, Competitive Analysis & Industry Insights, Brand &
-              Content Strategy, Digital Marketing and Website Performance Audit.
+            <h1 className="ser-text-head-anim">Strategy</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Digital Advisory and Consulting, Integrated Digital Marketing
+                Plan (D.M.P.), User Experience Development, Customer Experience
+                Strategy, Consumer Research, Insights & Target Market Analysis,
+                Digital Capabilities Development, Persona Design & Customer
+                Segmentation, Competitive Analysis & Industry Insights, Brand &
+                Content Strategy, Digital Marketing and Website Performance
+                Audit.
+              </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -535,20 +560,22 @@ export default function services() {
         <div className="space-large desktop"></div>
 
         {/* Strategy Box 2  */}
-        <div className="strategy-box flex-reverse">
+        <div className="strategy-box strategy-box-anim flex-reverse">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-            <h1>UI/UX Design</h1>
-            <h4 data-jelly>
-              User Interface Design, User Experience Design, Responsive Web
-              Design, Mobile App Design, Digital Interface Design, Design
-              Systems Creation, Experience Mapping, User Flow Mapping,
-              Wireframing & Prototyping, Illustrations & Animations, Visual
-              Designs, and UI Kits.
+            <h1 className="ser-text-head-anim">UI/UX Design</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                User Interface Design, User Experience Design, Responsive Web
+                Design, Mobile App Design, Digital Interface Design, Design
+                Systems Creation, Experience Mapping, User Flow Mapping,
+                Wireframing & Prototyping, Illustrations & Animations, Visual
+                Designs, and UI Kits.
+              </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -571,21 +598,24 @@ export default function services() {
         <div className="space-large desktop"></div>
 
         {/* Strategy Box 3  */}
-        <div className="strategy-box">
+        <div className="strategy-box strategy-box-anim">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#fcc63d"
           >
-            <h1>Technology</h1>
-            <h4 data-jelly>
-              Front-End Development, Native & Hybrid Mobile Application
-              Development, Progressive Web Applications, Database Design &
-              Management, Cloud Infrastructure Services, Testing & Automation
-              TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP, Vue,
-              React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA, Grails,
-              Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and Google Cloud.
+            <h1 className="ser-text-head-anim">Technology</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Front-End Development, Native & Hybrid Mobile Application
+                Development, Progressive Web Applications, Database Design &
+                Management, Cloud Infrastructure Services, Testing & Automation
+                TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
+                Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
+                Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
+                Google Cloud.
+              </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -608,20 +638,22 @@ export default function services() {
         <div className="space-large desktop"></div>
 
         {/* Strategy Box 4  */}
-        <div className="strategy-box flex-reverse">
+        <div className="strategy-box strategy-box-anim flex-reverse">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-            <h1>Marketing</h1>
-            <h4 data-jelly>
-              Social Media Management, Content Creation & Curation, Search
-              Engine Optimisation, Influencer Management, Auction Media
-              Management, Online Reputation Management, Media Planning & Buying,
-              Marketing Automation, Email Marketing, Conversion Rate
-              Optimisation, Website & SEO Analysis.
+            <h1 className="ser-text-head-anim">Marketing</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Social Media Management, Content Creation & Curation, Search
+                Engine Optimisation, Influencer Management, Auction Media
+                Management, Online Reputation Management, Media Planning &
+                Buying, Marketing Automation, Email Marketing, Conversion Rate
+                Optimisation, Website & SEO Analysis.
+              </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
           </div>
@@ -704,7 +736,7 @@ export default function services() {
           {/* 1 */}
           <div className="top-box">
             <div
-              className="first-box-how"
+              className="first-box-how box-anim-gsap"
               data-cursor-color="#fcba03"
               data-cursor-size="120px"
               data-cursor-text="Define"
@@ -714,14 +746,16 @@ export default function services() {
               </div>
               <div className="box-we-para">
                 <h4>
-                  Develop a thorough understanding of the project, audience, and
-                  objectives to formulate a strategy.
+                  <span>
+                    Develop a thorough understanding of the project, audience,
+                    and objectives to formulate a strategy.
+                  </span>
                 </h4>
               </div>
             </div>
 
             <div
-              className="first-box-how"
+              className="first-box-how box-anim-gsap"
               data-cursor-size="120px"
               data-cursor-color="#00ffdd"
               data-cursor-text="Design"
@@ -731,8 +765,10 @@ export default function services() {
               </div>
               <div className="box-we-para">
                 <h4>
-                  Craft a purposeful design to reflect the objectives and
-                  indicate the direction for the entire project.
+                  <span>
+                    Craft a purposeful design to reflect the objectives and
+                    indicate the direction for the entire project.
+                  </span>
                 </h4>
               </div>
             </div>
@@ -746,20 +782,22 @@ export default function services() {
             data-cursor-color="#CA022C"
             data-cursor-text="Implement"
           >
-            <div className="first-box-how">
+            <div className="first-box-how box-anim-gsap">
               <div className="box-we">
                 <h1 className="disabled-work">Implement</h1>
               </div>
               <div className="box-we-para">
                 <h4>
-                  Bring the design to life in the form of an interactive and
-                  functional prototype. Review, refine and optimise.
+                  <span>
+                    Bring the design to life in the form of an interactive and
+                    functional prototype. Review, refine and optimise.
+                  </span>
                 </h4>
               </div>
             </div>
 
             <div
-              className="first-box-how"
+              className="first-box-how box-anim-gsap"
               data-cursor-size="120px"
               data-cursor-color="#536cd4"
               data-cursor-text="Develop"
@@ -769,8 +807,10 @@ export default function services() {
               </div>
               <div className="box-we-para">
                 <h4>
-                  Incorporate implementation and technical components into a
-                  highly functional system, ready for review.
+                  <span>
+                    Incorporate implementation and technical components into a
+                    highly functional system, ready for review.
+                  </span>
                 </h4>
               </div>
             </div>
@@ -784,14 +824,16 @@ export default function services() {
             data-cursor-color="#bcd15e"
             data-cursor-text="Deliver"
           >
-            <div className="first-box-how">
+            <div className="first-box-how box-anim-gsap">
               <div className="box-we">
                 <h1 className="disabled-work">Deliver</h1>
               </div>
               <div className="box-we-para">
                 <h4>
-                  Review, refine, test and prepare final product for delivery.
-                  Launch and continue to evolve over time.
+                  <span>
+                    Review, refine, test and prepare final product for delivery.
+                    Launch and continue to evolve over time.
+                  </span>
                 </h4>
               </div>
             </div>

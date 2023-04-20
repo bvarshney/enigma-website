@@ -56,11 +56,37 @@ export default function carousel() {
     return () => tl.kill();
   });
 
+  // Text Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#caro-slider-logo",
+        start: "-400 top",
+      },
+    });
+
+    const demoHeader = document.querySelectorAll("#slider-anim");
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        x: 250,
+      },
+      {
+        x: 0,
+        duration: 1,
+        opacity: 1,
+      }
+    );
+  }, []);
+
   return (
     <CarouselProvider
       naturalSlideWidth={100}
       naturalSlideHeight={125}
       totalSlides={3}
+      id="caro-slider-logo"
     >
       <ButtonBack>
         <span className="back-button-svg">
@@ -162,7 +188,7 @@ export default function carousel() {
           </svg>
         </span>
       </ButtonNext>
-      <Slider>
+      <Slider id="slider-anim">
         <Slide
           index={0}
           className={styles.slide__caro}

@@ -177,7 +177,7 @@ export default function about() {
       },
     });
 
-    const demoHeader = document.querySelectorAll(".left-box-heading h1");
+    const demoHeader = document.querySelectorAll(".why-us-anim");
     // Header
     tl.fromTo(
       demoHeader,
@@ -189,21 +189,21 @@ export default function about() {
         y: 0,
         duration: 1,
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.4,
       }
     );
-  });
+  }, []);
 
   // Text Reveal Animation
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".client-about-content-section",
+        trigger: "#client-loveus",
         start: "-500 top",
       },
     });
 
-    const demoHeader = document.querySelectorAll(".left-box-heading h1");
+    const demoHeader = document.querySelectorAll(".client-anim-heading");
     // Header
     tl.fromTo(
       demoHeader,
@@ -215,10 +215,10 @@ export default function about() {
         y: 0,
         duration: 1,
         opacity: 1,
-        stagger: 0.2,
+        stagger: 0.4,
       }
     );
-  });
+  }, []);
 
   return (
     <>
@@ -713,18 +713,18 @@ export default function about() {
         <div className="first-about-content-section">
           <div className="first-sub-section">
             <div className="left-box-heading">
-              <h1>
+              <h1 className="why-us-anim">
                 <span className="stroke">why</span> us.
               </h1>
             </div>
             <div className="right-box-content">
-              <p data-jelly>
+              <p data-jelly className="why-us-anim">
                 We have been asked this question like a zillion times – How are
                 you different than the other agencies out there. Well, the truth
                 is that we were “Born Different”.{" "}
               </p>
               <br />
-              <p className="mt-about" data-jelly>
+              <p className="mt-about why-us-anim" data-jelly>
                 We see the bigger picture, we are ambitious, we set the bar high
                 in all facets of our work, we love what we do and most
                 importantly, we were not made for the overpopulated plains of
@@ -759,15 +759,15 @@ export default function about() {
         <div className="ipad desktop"></div>
 
         {/* Client LOVE US  Section */}
-        <div className="client-about-content-section">
+        <div className="client-about-content-section" id="client-loveus">
           <div className="first-sub-section">
             <div className="left-box-heading">
-              <h1>
+              <h1 className="client-anim-heading">
                 <span className="stroke">clients</span> love us.
               </h1>
             </div>
             <div className="right-box-content">
-              <p data-jelly>
+              <p data-jelly className="client-anim-heading">
                 It’s not just the eminence & superior quality of our work. It’s
                 our attitude, our approach, our meticulous attention to detail,
                 our ability to understand their business & their goals, and most

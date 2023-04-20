@@ -872,7 +872,6 @@
   }
 
   .nextTitle {
-    margin-right: 18vw;
     text-align: left;
   }
 
@@ -1261,16 +1260,16 @@
   }
 
   .nextUpContent {
-    width: 80%;
+    width: 45%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .nextTitle {
-    margin-right: 26vw;
+    margin-left: 4vw;
     text-align: left;
   }
 
@@ -1284,7 +1283,7 @@
   }
 
   .nextProjectHeading {
-    width: 56%;
+    width: 100%;
     text-align: center;
   }
 
@@ -1299,10 +1298,11 @@
     content: "";
     display: block;
     position: absolute !important;
-    left: 0;
+    left: 3vw;
+    width: 85%;
     right: 0;
     bottom: 0;
-    top: 11vw;
+    top: 13vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s

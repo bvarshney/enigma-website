@@ -891,8 +891,8 @@ export default function pdtl() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="quickx">
-                  <h1>Quick-X</h1>
+                <Link href="dharan">
+                  <h1>Dharan</h1>
                 </Link>
               </div>
             </div>

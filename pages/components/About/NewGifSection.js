@@ -53,30 +53,22 @@ export default function NewGifSection() {
     );
   });
 
-  // Text Reveal Animation
+  // Text Fill Animation on Scroll
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".gifBottomText",
-        start: "-300 top",
-      },
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.to(".gifsubtetx p", {
+        backgroundPositionX: "0%",
+        stagger: 1,
+        scrollTrigger: {
+          trigger: ".gifsubtetx p",
+          scrub: 1,
+          start: "-100 center",
+          end: "bottom center",
+        },
+      });
     });
-
-    const demoHeader = document.querySelectorAll(".gifsubtetx p");
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        y: 200,
-      },
-      {
-        y: 0,
-        duration: 1,
-        opacity: 1,
-        stagger: 0.2,
-      }
-    );
+    return () => ctx.revert();
   });
 
   return (
@@ -216,10 +208,9 @@ export default function NewGifSection() {
 
         <div className="gifBottomText">
           <div className="gifsubtetx">
-            <p>
-              We are 'Inherently Distinctive' from your traditional digital
-              agency. 👼
-            </p>
+            <p>We are 'Inherently Distinctive' from</p>
+            <p>your traditional digital agency.</p>
+            <span>👼</span>
           </div>
         </div>
       </div>

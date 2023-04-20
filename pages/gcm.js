@@ -883,8 +883,8 @@ export default function gcm() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/dharan">
-                  <h1>Dharan</h1>
+                <Link href="/pdtl">
+                  <h1>PDTL</h1>
                 </Link>
               </div>
             </div>
