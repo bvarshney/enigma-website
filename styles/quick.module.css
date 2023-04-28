@@ -1033,7 +1033,7 @@
 
   .img {
     width: 100%;
-    height: 120%;
+    height: 130%;
     object-fit: cover;
   }
 
@@ -1150,6 +1150,8 @@
   }
 
   .imageContainer img {
+    height: 130%;
+    top: -20%;
     object-fit: cover;
   }
 
@@ -1164,7 +1166,8 @@
   }
 
   .secondLogoBox .imageContainer img {
-    height: 160%;
+    height: 130%;
+    top: -20%;
   }
 
   .logoImageSectionSecond {
@@ -1179,6 +1182,7 @@
   }
 
   .fontImagebox {
+    width: 100%;
     padding: 10vw 0;
     height: 100%;
   }

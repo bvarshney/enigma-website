@@ -11,7 +11,6 @@ import AboutAerosol from "./components/About/AboutAerosol";
 import Footer from "./components/Footer";
 import FooterMobile from "./components/Mobile/FooterMobile";
 import SliderMarquee from "./components/Srvc/SliderMarquee";
-import PinSection from "./components/About/PinSection";
 import VideoPlayer from "./components/About/VideoPlayer";
 import AboutNextBox from "./components/NextBoxes/AboutNextBox";
 import LogoCarousel from "./components/About/LogoCarousel";
@@ -740,8 +739,6 @@ export default function about() {
 
         {/* =============== Horizontal Section ================== */}
         <div className="pin-about">
-          {/* <PinSection /> */}
-          {/* <ImageReveal /> */}
           <NewGifSection />
         </div>
         {/* =============== Horizontal Section END ================== */}

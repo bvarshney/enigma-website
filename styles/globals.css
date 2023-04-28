@@ -145,6 +145,58 @@ button:focus {
   font-weight: 600;
 }
 
+/* =============== Preloader Home Page Only =================== */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #000; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loading-bar-container {
+  width: 20%;
+  height: 5px;
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.loading-bar {
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.5s ease-in-out;
+}
+
+.words-preloader {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Ageo";
+  font-weight: 600;
+  z-index: 99;
+}
+
+.preloader svg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 110vh;
+  overflow: visible;
+}
+
+/* =============== Preloader Home Page Only END =================== */
+
 .loader-wrap {
   position: absolute;
   z-index: 10;
@@ -634,7 +686,7 @@ button:focus {
 }
 
 .header-logo {
-  z-index: 99;
+  z-index: 100;
 }
 
 .header-section .header-logo .main-logo {
@@ -2140,7 +2192,7 @@ ul {
 
 .accordion-list li {
   position: relative !important;
-  border-bottom: 2px solid #1a1a1a;
+  /* border-bottom: 2px solid #1a1a1a; */
   margin-bottom: 1vw;
 }
 
@@ -2762,6 +2814,7 @@ accordion-item--default .accordion .accordion-item-content {
 
 .img {
   background-image: url("/assets/contact/contactbg.webp");
+  /* background-image: url("/assets/contact/1.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3963,7 +4016,7 @@ https://unsplash.com/@vinomamba24
   font-size: 1.2vw;
   color: #1a1a1a;
   font-family: 'Ageo';
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .service-cap-section .right-box {
@@ -3979,7 +4032,7 @@ https://unsplash.com/@vinomamba24
 .service-cap-section .right-box h4 {
   max-width: 35vw;
   font-size: 1.2vw;
-  font-weight: 500;
+  font-weight: 400;
   text-align: justify;
   color: #1a1a1a;
   font-family: 'Ageo';
@@ -4011,7 +4064,7 @@ https://unsplash.com/@vinomamba24
 .left-strategy-box h4 {
   max-width: 33vw;
   font-size: 1.2vw;
-  font-weight: 500;
+  font-weight: 400;
   color: #1a1a1a;
   text-align: justify;
   font-family: 'Ageo';
@@ -4024,14 +4077,15 @@ https://unsplash.com/@vinomamba24
 .service-box-image {
   position: relative;
   width: 27vw;
-  height: 27vw;
+  height: 70vh;
 }
 
 .service-box-image img {
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-position: center;
   padding: 0;
+  top: -5%;
 }
 /* Strategy Sections END */
 
@@ -4101,8 +4155,8 @@ https://unsplash.com/@vinomamba24
 .main-how .top-box .first-box-how {
   width: 90%;
   height: 30vh;
-  border-top: 0.01vw solid #a2a2a2;
-  display: flex;
+  /* border-top: 0.01vw solid #a2a2a2; */
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
 }
@@ -4134,6 +4188,7 @@ https://unsplash.com/@vinomamba24
   font-size: 1.7vw;
   color: #1a1a1a;
   font-weight: 500;
+  text-align: justify;
   font-family: 'Ageo';
 }
 /* How We Work END */
@@ -5386,7 +5441,7 @@ body.loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10vw 0 0 0;
+  margin-top: 6vw;
 }
 
 .blog-showmore-box .view-more {
@@ -5400,6 +5455,15 @@ body.loading {
 /* Pagination */
 
 /* ================== Blog Details ================================ */
+
+.blog-mt-0{
+  margin-bottom: 0 !important;
+}
+
+.list-blog{
+  display: list-item;
+  margin-left: 1.3vw;
+}
 
 .blog-detail-main-section {
   width: 100%;
@@ -5440,6 +5504,19 @@ body.loading {
   width: 20%;
 }
 
+.share-box-blog{
+  display: flex;
+  align-items: center;
+}
+
+.share-box-blog h1{
+  margin-left: 0.5vw;
+}
+
+.timezone-update{
+  margin-left: 1.5vw;
+}
+
 .main-blog-container .left-section h1 {
   font-size: 1.4vw;
   font-weight: 500;
@@ -5459,7 +5536,8 @@ body.loading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5vw;
+  margin-top: 0.5vw;
+  /* margin-left: 1.5vw; */
 }
 
 .social-icons img{
@@ -5490,6 +5568,14 @@ body.loading {
   font-family: 'Ageo';
 }
 
+.italic-text{
+  font-size: 1.5vw;
+  font-family: "Ageo";
+  font-style: italic;
+  font-weight: 500;
+  text-align: justify;
+}
+
 .donald {
   font-size: 1.8vw;
   color: #1a1a1a;
@@ -5501,6 +5587,8 @@ body.loading {
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 0.8vw;
+  font-family: "Ageo";
+  font-size: 1.5vw !important;
 }
 
 .fontSize {
@@ -5511,7 +5599,7 @@ body.loading {
   width: 100%;
   overflow: hidden;
   height: 60vh;
-  margin-top: 3vw;
+  margin-top: 2vw;
 }
 
 .blog-img .image-container img {
@@ -5625,6 +5713,9 @@ body.loading {
   margin-top: 1vw;
   color: #1a1a1a;
   font-weight: 600;
+}
+.span-font-size-2{
+  font-size: 1.3vw !important;
 }
 /* ================== Blog Details END ============================ */
 
@@ -7510,6 +7601,14 @@ container_hero_content #enigma-svg #e {
     visibility: hidden !important;
   }
 
+  .hireus-button{
+    display: none;
+  }
+
+  .nav__link{
+    margin-bottom: 2.5vw;
+  }
+
   .loader-wrap .loader-wrap-heading h2 {
     font-size: 30px;
   }
@@ -7526,8 +7625,24 @@ container_hero_content #enigma-svg #e {
     display: block;
   }
 
+  .loading-bar-container {
+  width: 50%;
+}
+
+.words-preloader {
+  font-size: 1.5rem;
+}
+
   .loader-wrap .loader-wrap-heading h1 {
-    font-size: 10vw;
+    font-size: 8vw;
+    /* margin-left: 5vw; */
+  }
+
+  .loader-wrap .loader-wrap-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .loader-wrap .loader-wrap-heading .loader-font {
@@ -7646,7 +7761,7 @@ container_hero_content #enigma-svg #e {
   }
 
   .content-right-body {
-    width: 90%;
+    width: 100%;
   }
 
   .content-right .content-title {
@@ -7656,6 +7771,7 @@ container_hero_content #enigma-svg #e {
   .content-right-body-socials .cb-menu-nav-item a {
     font-size: 4.5vw;
     margin-bottom: 4vw;
+    padding: 0 0 1vw 0;
   }
 
   .content-link .cb-outro-header {
@@ -7914,7 +8030,10 @@ container_hero_content #enigma-svg #e {
 
   .accordion-list li {
     margin-bottom: 6vw;
-    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .line-animation{
+    height: 1px !important;
   }
 
   .accordion-item-content,
@@ -8376,7 +8495,7 @@ container_hero_content #enigma-svg #e {
 
   .first-box-contact .work {
     margin-left: 4vw;
-    font-size: 16vw;
+    font-size: 18vw;
     overflow: visible;
   }
 
@@ -8386,6 +8505,7 @@ container_hero_content #enigma-svg #e {
 
   .second-box-contact {
     flex-direction: column;
+    margin-top: 2vw;
   }
 
   .second-box-contact .together {
@@ -8641,9 +8761,12 @@ container_hero_content #enigma-svg #e {
     align-items: center;
   }
 
+  .right-strategy-box{
+    width: 100%;
+  }
+
   .service-box-image{
     width: 100%;
-    height: auto;
   }
 
   .left-strategy-box {
@@ -8742,7 +8865,7 @@ container_hero_content #enigma-svg #e {
   }
 
   .services-catalog-row-item {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-right: 15vw;
   }
 
@@ -9092,15 +9215,16 @@ container_hero_content #enigma-svg #e {
 
   .blog-list-tag {
     position: absolute;
-    top: 2vw;
+    top: 4vw;
     left: 2vw;
     padding: 2vw 4.5vw;
     font-size: 5vw;
   }
 
   .desc-tag {
-    font-size: 4vw;
+    font-size: 4.5vw;
     margin-top: 2vw;
+    text-align: justify;
   }
 
   .ul-items {
@@ -9189,6 +9313,10 @@ container_hero_content #enigma-svg #e {
     margin-top: 10vw;
   }
 
+  .italic-text{
+    font-size: 5.5vw;
+  }
+
   .main-blog-container .right-section h1 {
     font-size: 4vw;
   }
@@ -9213,6 +9341,7 @@ container_hero_content #enigma-svg #e {
   .box-img-content {
     width: 100%;
     margin-bottom: 10vw;
+    padding: 0 2vw;
   }
 
   .blog-img {
@@ -9247,8 +9376,8 @@ container_hero_content #enigma-svg #e {
   }
 
   .blog-img .image-container img {
-    height: 120%;
-    top: -10%;
+    height: 150%;
+    top: -20%;
 }
 
   .img-box-related h2 {
@@ -9260,6 +9389,7 @@ container_hero_content #enigma-svg #e {
 
   .related-box-img h1 {
     font-size: 4.5vw;
+    text-align: justify;
   }
   /* Blog Detail END */
   /* ======================= Blog Page Index END ================= */

@@ -122,10 +122,31 @@ export default function Category() {
         y: 100,
       },
       {
+        delay: 0.5,
         y: 0,
         duration: 0.5,
         opacity: 1,
         stagger: 0.2,
+      }
+    );
+  });
+
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#services",
+        start: "-400 top",
+      },
+    });
+    tl.fromTo(
+      ".line-animation",
+      { opacity: 0, width: "0" },
+      {
+        width: "100%",
+        opacity: 1,
+        duration: 1,
+        stagger: 0.5,
       }
     );
   });
@@ -188,6 +209,14 @@ export default function Category() {
                       </div>
                     </div>
                   </div>
+                  <div
+                    className="line-animation"
+                    style={{
+                      width: "100%",
+                      height: "2px",
+                      background: "black",
+                    }}
+                  ></div>
                 </li>
                 <li>
                   <div className="accordion-title accordion-item">
@@ -241,6 +270,14 @@ export default function Category() {
                       </div>
                     </div>
                   </div>
+                  <div
+                    className="line-animation"
+                    style={{
+                      width: "100%",
+                      height: "2px",
+                      background: "black",
+                    }}
+                  ></div>
                 </li>
                 <li>
                   <div className="accordion-title accordion-item">
@@ -295,6 +332,14 @@ export default function Category() {
                       </div>
                     </div>
                   </div>
+                  <div
+                    className="line-animation"
+                    style={{
+                      width: "100%",
+                      height: "2px",
+                      background: "black",
+                    }}
+                  ></div>
                 </li>
                 <li>
                   <div className="accordion-title accordion-item">
@@ -348,6 +393,14 @@ export default function Category() {
                       </div>
                     </div>
                   </div>
+                  <div
+                    className="line-animation"
+                    style={{
+                      width: "100%",
+                      height: "2px",
+                      background: "black",
+                    }}
+                  ></div>
                 </li>
               </ul>
             </div>

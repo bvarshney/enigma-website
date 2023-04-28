@@ -398,6 +398,31 @@ export default function ProjectsHome() {
     return () => tl.kill();
   }, []);
 
+  // Project Section Reveal Animation
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#c-works",
+        start: "-250 top",
+      },
+    });
+
+    // Header
+    tl.fromTo(
+      "#project-work",
+      0.8,
+      {
+        opacity: 0,
+      },
+      {
+        delay: 0.5,
+        duration: 1,
+        opacity: 1,
+      }
+    );
+    return () => tl.kill();
+  }, []);
+
   return (
     <>
       <div className={styles.projectSectionMain} id="c-works">
@@ -431,7 +456,7 @@ export default function ProjectsHome() {
           </div>
         </div>
 
-        <div className={styles.projectHover}>
+        <div className={styles.projectHover} id="project-work">
           <div className={styles.projectSubSection}>
             <div className={styles.glide}>
               <div

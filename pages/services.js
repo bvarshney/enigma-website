@@ -287,21 +287,21 @@ export default function services() {
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
-        stagger: 0.03,
+        stagger: 0.02,
       });
     });
   });
 
   // Text Reveal Animation For Each
   useEffect(() => {
-    const totalSection = document.querySelectorAll(".main-how");
+    const totalSection = document.querySelectorAll(".top-box");
     totalSection.forEach(function (elem, index) {
       const text = new SplitType(elem.querySelectorAll(".box-anim-gsap"));
       let textwords = text.words;
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-50 top",
+          start: "-450 top",
           end: "bottom top",
           markers: false,
         },
@@ -309,10 +309,51 @@ export default function services() {
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
-        stagger: 0.02,
+        // stagger: 0.2,
       });
     });
   });
+
+  // Line Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".top-box",
+        start: "-500 top",
+      },
+    });
+    tl.fromTo(
+      ".line-animation",
+      { opacity: 0, width: "0" },
+      {
+        width: "90%",
+        opacity: 1,
+        duration: 1,
+        stagger: 0.5,
+      }
+    );
+  });
+
+  // Line Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".service-box-image",
+        start: "-300 top",
+      },
+    });
+    tl.fromTo(
+      ".anim-img-service",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        stagger: 1.8,
+      }
+    );
+  });
+
+  console.clear();
 
   return (
     <>
@@ -363,9 +404,7 @@ export default function services() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>
-              What <span className="loader-font">We</span> Do
-            </h1>
+            <h1>What We Do</h1>
           </span>
         </div>
       </div>
@@ -541,7 +580,7 @@ export default function services() {
             {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
-            <div className="image-container-en service-box-image">
+            <div className="image-container service-box-image">
               <Image
                 src="/assets/services/strategy.png"
                 width={500}
@@ -549,6 +588,7 @@ export default function services() {
                 alt="services"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
               />
             </div>
           </div>
@@ -580,14 +620,15 @@ export default function services() {
             {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
-            <div className="image-container-en service-box-image">
+            <div className="image-container service-box-image">
               <Image
-                src="/assets/services/ui.png"
+                src="/assets/services/design.png"
                 width={500}
                 height={1000}
                 alt="services"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
               />
             </div>
           </div>
@@ -620,7 +661,7 @@ export default function services() {
             {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
-            <div className="image-container-en service-box-image">
+            <div className="image-container service-box-image">
               <Image
                 src="/assets/services/tech.png"
                 width={500}
@@ -628,6 +669,7 @@ export default function services() {
                 alt="services"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
               />
             </div>
           </div>
@@ -658,14 +700,15 @@ export default function services() {
             {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
-            <div className="image-container-en service-box-image">
+            <div className="image-container service-box-image">
               <Image
-                src="/assets/services/marketing.png"
+                src="/assets/services/market.png"
                 width={500}
                 height={1000}
                 alt="services"
                 onMouseEnter={(e) => handleHover(e)}
                 onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
               />
             </div>
           </div>
@@ -734,7 +777,16 @@ export default function services() {
           {/* Boxes How we Work */}
 
           {/* 1 */}
+
           <div className="top-box">
+            <div
+              className="line-animation"
+              style={{
+                width: "0%",
+                height: "1px",
+                background: "#a2a2a2",
+              }}
+            ></div>
             <div
               className="first-box-how box-anim-gsap"
               data-cursor-color="#fcba03"
@@ -753,7 +805,17 @@ export default function services() {
                 </h4>
               </div>
             </div>
+          </div>
 
+          <div className="top-box">
+            <div
+              className="line-animation"
+              style={{
+                width: "0%",
+                height: "1px",
+                background: "#a2a2a2",
+              }}
+            ></div>
             <div
               className="first-box-how box-anim-gsap"
               data-cursor-size="120px"
@@ -782,6 +844,14 @@ export default function services() {
             data-cursor-color="#CA022C"
             data-cursor-text="Implement"
           >
+            <div
+              className="line-animation"
+              style={{
+                width: "0%",
+                height: "1px",
+                background: "#a2a2a2",
+              }}
+            ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
                 <h1 className="disabled-work">Implement</h1>
@@ -795,7 +865,17 @@ export default function services() {
                 </h4>
               </div>
             </div>
+          </div>
 
+          <div className="top-box">
+            <div
+              className="line-animation"
+              style={{
+                width: "0%",
+                height: "1px",
+                background: "#a2a2a2",
+              }}
+            ></div>
             <div
               className="first-box-how box-anim-gsap"
               data-cursor-size="120px"
@@ -824,6 +904,14 @@ export default function services() {
             data-cursor-color="#bcd15e"
             data-cursor-text="Deliver"
           >
+            <div
+              className="line-animation"
+              style={{
+                width: "0%",
+                height: "1px",
+                background: "#a2a2a2",
+              }}
+            ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
                 <h1 className="disabled-work">Deliver</h1>

@@ -1080,6 +1080,7 @@
 
   .firstLogoBox {
     width: 85%;
+    margin-right: 0;
   }
 
   .secondLogoBox {
@@ -1093,7 +1094,8 @@
   }
 
   .imageContainer img {
-    height: 110%;
+    height: 130%;
+    top: -20%;
     object-fit: cover;
   }
 
@@ -1109,6 +1111,7 @@
 
   .secondLogoBox .imageContainer img {
     height: 130%;
+    top: -20%;
   }
 
   .forthSectionLeftBox{

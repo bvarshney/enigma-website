@@ -1070,6 +1070,7 @@
 
   .imageContainer img {
     object-fit: cover;
+    top: -10%;
   }
 
   .firstLogoBox h1 {
@@ -1083,7 +1084,8 @@
   }
 
   .secondLogoBox .imageContainer img {
-    height: 160%;
+    height: 130%;
+    top: -20%;
   }
 
   .logoImageSectionSecond {

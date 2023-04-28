@@ -39,7 +39,7 @@
 
 .HeroLeftBox .Link {
   font-size: 1.1vw;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: #000;
   margin-bottom: 2vw;
   font-weight: 500;
@@ -1073,6 +1073,7 @@
 
   .firstLogoBox {
     width: 85%;
+    margin-right: 0;
   }
 
   .secondLogoBox {

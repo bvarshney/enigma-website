@@ -339,13 +339,20 @@
     padding: 40vw 0 15vw 0;
   }
 
-  .projectHeading .select {
-    font-size: 13vw;
+  .projectHeading .select{
+    height: 60px;
+    font-size: 14vw;
+  }
+
+  .projectHomeHeading{
+    margin-right: 49vw;
+    height: 70px;
+    width: 150%;
+
   }
 
   .projectHeading .project {
-    font-size: 13vw;
-    margin-left: 27vw;
+    font-size: 14vw;
   }
 
   .projectSubSection {

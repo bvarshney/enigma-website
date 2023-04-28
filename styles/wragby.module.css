@@ -1084,11 +1084,15 @@
       height: auto;
     }
 
+    .forthSectionLeftBox{
+      width: 100%;
+    }
+
     .forthSectionContent {
       width: 85%;
       flex-direction: column;
       height: 100%;
-      padding: 15vw 0;
+      padding: 15vw 0 10vw 0;
     }
 
     .forthSectionLeftBox h1 {

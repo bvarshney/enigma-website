@@ -831,7 +831,7 @@ export default function kedarkala() {
                       Shraddha Kasaudhan
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        FOUNDER & CEO, Kedarkala Design Studios
+                        Founder & CEO, Kedarkala Design Studios
                       </span>
                     </h5>
                   </div>

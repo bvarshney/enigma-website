@@ -222,7 +222,7 @@ export default function blogDetails() {
             </div>
             <div className="box-blog" id="anim">
               <h1>Posted on</h1>
-              <h2>18/04/2023</h2>
+              <h2>02/12/2022</h2>
             </div>
             <div className="box-blog" id="anim">
               <h1>Share Article</h1>

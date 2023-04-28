@@ -20,6 +20,7 @@ import ConceptScrollMobile from "./components/Mobile/ConceptScrollMobile";
 import ProjectsHome from "./components/Home/ProjectsHome";
 import TopHomeAero from "./components/Home/TopHomeAero";
 import Link from "next/link";
+import Preloader from "./components/PreLoader";
 
 export default function Home() {
   // Hero Section Animation
@@ -35,7 +36,7 @@ export default function Home() {
         transformOrigin: "top center",
       },
       {
-        delay: 4.8,
+        delay: 5.5,
         duration: 1.3,
         rotationX: 0,
         opacity: 1,
@@ -44,7 +45,7 @@ export default function Home() {
       }
     );
     return () => tl.kill();
-  });
+  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -56,14 +57,14 @@ export default function Home() {
         opacity: 0,
       },
       {
-        delay: 5.5,
+        delay: 6.3,
         duration: 1.3,
         scale: 1,
         opacity: 1,
       }
     );
     return () => tl.kill();
-  });
+  }, []);
 
   // Page Transitions OLD
   // useEffect(() => {
@@ -94,87 +95,87 @@ export default function Home() {
   // });
 
   // New Page Transition
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const svg = document.getElementById("svg");
-      const tl = gsap.timeline();
-      const curve = "M0, 502S175, 272, 500, 272s500, 230, 500, 230V0H0Z";
-      const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const svg = document.getElementById("svg");
+  //     const tl = gsap.timeline();
+  //     const curve = "M0, 502S175, 272, 500, 272s500, 230, 500, 230V0H0Z";
+  //     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-      tl.from(".loader-wrap-heading .hi", {
-        duration: 0.05,
-      }).to(".loader-wrap-heading .hi", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .hi", {
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .hi", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .hello", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .hello", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .hello", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .hello", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .hola", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .hola", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .hola", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .hola", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .ciao", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .ciao", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .ciao", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .ciao", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .ola", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .ola", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .ola", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .ola", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .bon", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .bon", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .bon", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .bon", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .salam", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .salam", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .salam", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .salam", {
+  //       opacity: 0,
+  //     });
 
-      tl.from(".loader-wrap-heading .shalom", {
-        opacity: 0,
-        duration: 0.05,
-      }).to(".loader-wrap-heading .shalom", {
-        opacity: 0,
-      });
+  //     tl.from(".loader-wrap-heading .shalom", {
+  //       opacity: 0,
+  //       duration: 0.05,
+  //     }).to(".loader-wrap-heading .shalom", {
+  //       opacity: 0,
+  //     });
 
-      tl.to(svg, {
-        duration: 0.5,
-        attr: { d: curve },
-        ease: "power2.easeIn",
-      }).to(svg, {
-        duration: 0.5,
-        attr: { d: flat },
-        ease: "power2.easeOut",
-      });
-      tl.to(".loader-wrap", {
-        y: -1500,
-      });
-      tl.to(".loader-wrap", {
-        zIndex: -1,
-        display: "none",
-      });
-    });
-    return () => ctx.revert();
-  });
+  //     tl.to(svg, {
+  //       duration: 0.5,
+  //       attr: { d: curve },
+  //       ease: "power2.easeIn",
+  //     }).to(svg, {
+  //       duration: 0.5,
+  //       attr: { d: flat },
+  //       ease: "power2.easeOut",
+  //     });
+  //     tl.to(".loader-wrap", {
+  //       y: -1500,
+  //     });
+  //     tl.to(".loader-wrap", {
+  //       zIndex: -1,
+  //       display: "none",
+  //     });
+  //   });
+  //   return () => ctx.revert();
+  // });
 
   return (
     <>
@@ -221,47 +222,7 @@ export default function Home() {
         <li />
       </ul> */}
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: "9999" }}>
-        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-          <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
-        </svg>
-
-        <div className="loader-wrap-heading">
-          <span className="span">
-            <h2 className="hi">Namaste! 🙏</h2>
-          </span>
-          <span className="span">
-            <h2 className="hello">Hello!</h2>
-          </span>
-          <span className="span">
-            <h2 className="hola">Hola!</h2>
-          </span>
-          <span className="span">
-            <h2 className="ciao">Bonjour</h2>
-          </span>
-          <span className="span">
-            <h2 className="ola">Ciao</h2>
-          </span>
-          <span className="span">
-            <h2 className="bon">Aloha</h2>
-          </span>
-          <span className="span">
-            <h2 className="salam">Olá</h2>
-          </span>
-          <span className="span">
-            <h2 className="shalom">Shalom</h2>
-          </span>
-
-          {/* <span>
-            <h1>
-              We're <span className="loader-font">Enigma</span>
-            </h1>
-          </span> */}
-          {/* <span className="rings">
-            <div className="dual-ring"></div>
-          </span> */}
-        </div>
-      </div>
+      <Preloader />
 
       <Cursor isGelly={true} />
 
@@ -336,7 +297,7 @@ export default function Home() {
                   transition={{
                     ease: "easeInOut",
                     duration: 1,
-                    delay: 5,
+                    delay: 6,
                   }}
                 >
                   <video

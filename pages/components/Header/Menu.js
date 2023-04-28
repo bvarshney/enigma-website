@@ -145,6 +145,8 @@ const Menu = ({ state }) => {
           rotationX: 0,
           opacity: 1,
           translateY: 0,
+          transformPerspective: "1000",
+          transformOrigin: "top center",
         }
       );
 
@@ -160,8 +162,8 @@ const Menu = ({ state }) => {
           delay: 0.8,
           duration: 0.8,
           opacity: 0,
-          translateY: "200",
-          rotationX: "-100deg",
+          translateY: 200,
+          rotationX: -80,
           stagger: {
             amount: 0.4,
           },
