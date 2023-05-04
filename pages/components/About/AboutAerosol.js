@@ -37,14 +37,14 @@ export default function Aerosol() {
       demoHeader,
       {
         opacity: 0,
-        yPercent: 320,
+        yPercent: 520,
         skewY: 30,
       },
       {
         opacity: 1,
         yPercent: 0,
         skewY: 0,
-        duration: 3,
+        duration: 4,
         ease: "expo.out",
       },
       0

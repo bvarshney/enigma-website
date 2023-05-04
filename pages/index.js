@@ -66,6 +66,25 @@ export default function Home() {
     return () => tl.kill();
   }, []);
 
+  // Home Header Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      ".home-page-header",
+      {
+        y: -50,
+        opacity: 0,
+      },
+      {
+        delay: 5.5,
+        duration: 1.3,
+        opacity: 1,
+        y: 0,
+      }
+    );
+    return () => tl.kill();
+  }, []);
+
   // Page Transitions OLD
   // useEffect(() => {
   //   var tl = gsap.timeline();
@@ -104,6 +123,7 @@ export default function Home() {
 
   //     tl.from(".loader-wrap-heading .hi", {
   //       duration: 0.05,
+  //       delay: 0.5,
   //     }).to(".loader-wrap-heading .hi", {
   //       opacity: 0,
   //     });
@@ -221,6 +241,38 @@ export default function Home() {
         <li />
         <li />
       </ul> */}
+
+      {/* <div className="loader-wrap" id="loader" style={{ zIndex: "999999" }}>
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
+        </svg>
+        <div className="loader-wrap-heading">
+          <span className="span">
+            <h2 className="hi">Namaste! 🙏</h2>
+          </span>
+          <span className="span">
+            <h2 className="hello">Hello!</h2>
+          </span>
+          <span className="span">
+            <h2 className="hola">Hola!</h2>
+          </span>
+          <span className="span">
+            <h2 className="ciao">Bonjour</h2>
+          </span>
+          <span className="span">
+            <h2 className="ola">Ciao</h2>
+          </span>
+          <span className="span">
+            <h2 className="bon">Aloha</h2>
+          </span>
+          <span className="span">
+            <h2 className="salam">Olá</h2>
+          </span>
+          <span className="span">
+            <h2 className="shalom">Shalom</h2>
+          </span>
+        </div>
+      </div> */}
 
       <Preloader />
 
@@ -341,7 +393,7 @@ export default function Home() {
         {/* ======================== Hero Footer ====================== */}
 
         <div className="hero-footer">
-          <div className="scroll-img">
+          <div className="scroll-img home-page-header">
             <Image
               src="/assets/hero-footer/scroll.svg"
               width={200}
@@ -350,7 +402,7 @@ export default function Home() {
             ></Image>
           </div>
 
-          <div className="content-section">
+          <div className="content-section home-page-header">
             <div className="f-sub-content">
               <div className="f-content-text">
                 <span className="f-disabled">timezone</span>
@@ -382,9 +434,6 @@ export default function Home() {
       <div className="space-large desktop"></div>
       <div className="space-mobile desktop"></div>
       <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
 
       {/* ======================== Home Aero ====================== */}
       <div
@@ -396,10 +445,6 @@ export default function Home() {
         <TopHomeAero />
       </div>
       {/* ======================== Home Aero END ====================== */}
-      <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
-      <div className="space-mobile desktop"></div>
       <div className="space-mobile desktop"></div>
 
       <div className="space-large desktop"></div>

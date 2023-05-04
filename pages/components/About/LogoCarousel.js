@@ -217,12 +217,7 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+              Jellyfish, a fast-growing IT services provider, sought to elevate their online presence and improve their customer experience. Recognizing Enigma Digital's expertise in UX design, they partnered with the agency to enhance their website's user interface and overall design.
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -260,7 +255,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>Kedarkala, a unique artisanal interior design studio, aimed to establish a strong brand identity and offer an exceptional online experience to its customers. They turned to Enigma Digital for their expertise in branding, UI/UX design, and website development.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -297,7 +292,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>DMTCA, a forward-thinking digital agency, engaged Enigma Digital to develop a strong brand identity and cohesive website design. The agency's branding and design expertise helped DMTCA establish a memorable presence that effectively communicated their innovative approach and commitment to delivering top-tier digital solutions.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -334,7 +329,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>RivaBuild, a renowned real estate developer, enlisted Enigma Digital to create an immersive digital experience that showcased their properties and services. The agency designed a stunning website, user-friendly app, engaging collaterals, and captivating videos that highlighted RivaBuild's dedication to quality, innovation, and customer satisfaction.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -371,7 +366,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>Quickx, a cutting-edge cryptocurrency platform, partnered with Enigma Digital to create a seamless and secure web and mobile app experience. The agency's expertise in app design allowed them to deliver intuitive and user-friendly interfaces that facilitated smooth cryptocurrency transactions while reinforcing Quickx's reputation as a reliable and innovative fintech solution.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -408,7 +403,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>Bespin Labs, a leading IT company, partnered with Enigma Digital to enhance its online presence and marketing materials. The agency's expertise in website design and collaterals production enabled Bespin Labs to communicate their technical expertise and industry leadership effectively, attracting new clients and establishing a strong brand identity.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -445,7 +440,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>Patronum, an innovative SaaS company offering Google Workspace management solutions, sought to increase brand awareness and drive customer acquisition. Enigma Digital's full-service approach, encompassing branding, web design, and organic marketing, made them the ideal partner for Patronum.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -482,7 +477,7 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>hello</p>
+              <p>Patra, an insure-tech company, collaborated with Enigma Digital to develop a user-centric app and implement effective marketing strategies. The agency's UI/UX design expertise and data-driven marketing approach helped Patra create a highly engaging web experience and reach their target audience, resulting in increased user adoption and brand awareness.</p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"

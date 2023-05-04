@@ -217,8 +217,8 @@ export default function blogDetails() {
         <div className="main-blog-container" id="main-blog-container">
           <div className="left-section" id="left-section">
             <div className="box-blog" id="anim">
-              <h1>By Bhaskar Varshney</h1>
-              <h2>(Marketing)</h2>
+              <h1>Posted By</h1>
+              <h2>Bhaskar Varshney</h2>
             </div>
             <div className="box-blog" id="anim">
               <h1>Posted on</h1>
@@ -227,19 +227,6 @@ export default function blogDetails() {
             <div className="box-blog" id="anim">
               <h1>Share Article</h1>
               <div className="social-icons">
-                <FacebookShareButton
-                  url={"https://weareenigma.com/30-websites"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
                 <LinkedinShareButton
                   url={"https://weareenigma.com/30-websites"}
                   quote={
@@ -252,6 +239,19 @@ export default function blogDetails() {
                     alt="social-icons"
                   />
                 </LinkedinShareButton>
+
+                <FacebookShareButton
+                  url={"https://weareenigma.com/30-websites"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/facebook.webp"
+                    alt="social-icons"
+                  />
+                </FacebookShareButton>
 
                 <TwitterShareButton
                   url={"https://weareenigma.com/30-websites"}

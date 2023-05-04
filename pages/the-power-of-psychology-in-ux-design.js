@@ -216,8 +216,8 @@ export default function blogDetails() {
         <div className="main-blog-container" id="main-blog-container">
           <div className="left-section" id="left-section">
             <div className="box-blog" id="anim">
-              <h1>By Bhaskar Varshney</h1>
-              <h2>(UI/UX DESIGN)</h2>
+              <h1>Posted By</h1>
+              <h2>Bhaskar Varshney</h2>
             </div>
             <div className="box-blog" id="anim">
               <h1>Posted on</h1>
@@ -226,21 +226,6 @@ export default function blogDetails() {
             <div className="box-blog" id="anim">
               <h1>Share Article</h1>
               <div className="social-icons">
-                <FacebookShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
                 <LinkedinShareButton
                   url={
                     "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
@@ -251,10 +236,25 @@ export default function blogDetails() {
                   hashtag={"#weareenigma"}
                 >
                   <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
+                    src="/assets\blogs\blog-detail\social/linkedin.png"
                     alt="social-icons"
                   />
                 </LinkedinShareButton>
+
+                <FacebookShareButton
+                  url={
+                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
+                  }
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/facebook.png"
+                    alt="social-icons"
+                  />
+                </FacebookShareButton>
 
                 <TwitterShareButton
                   url={
@@ -266,7 +266,7 @@ export default function blogDetails() {
                   hashtag={"#weareenigma"}
                 >
                   <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
+                    src="/assets\blogs\blog-detail\social/twitter.png"
                     alt="social-icons"
                   />
                 </TwitterShareButton>
@@ -281,7 +281,7 @@ export default function blogDetails() {
                   hashtag={"#weareenigma"}
                 >
                   <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
+                    src="/assets\blogs\blog-detail\social/whatsapp.png"
                     alt="social-icons"
                   />
                 </WhatsappShareButton>
@@ -741,7 +741,7 @@ export default function blogDetails() {
             <div className="img-box-related">
               <Link href="/what-is-experience-design">
                 <img
-                  src="/assets/blogs/experience-design.webp"
+                  src="/assets/blogs/feature.jpg"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -783,7 +783,7 @@ export default function blogDetails() {
             <div className="img-box-related">
               <Link href="/the-evolution-of-ux-design">
                 <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
+                  src="/assets/blogs/blog-detail/the-evalution/feature.jpg"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"

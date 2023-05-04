@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Head from "next/head";
-import Image from "next/image";
 import "react-creative-cursor/dist/styles.css";
 import { Cursor } from "../cursor/index";
 import SmoothScroll from "./components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
-
 import { motion } from "framer-motion";
 
 import Header from "./components/Header/Header";
@@ -223,7 +221,7 @@ export default function contact() {
                     className="lets"
                     id="contact-anim"
                     data-cursor-magnetic
-                    data-cursor-background-image="/assets/gif/7.gif"
+                    data-cursor-background-image="/assets/new-gif/16.webp"
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
@@ -233,7 +231,7 @@ export default function contact() {
                     className="work"
                     id="contact-anim"
                     data-cursor-magnetic
-                    data-cursor-background-image="/assets/new-gif/16.webp"
+                    data-cursor-background-image="/assets/gif/5.gif"
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
@@ -249,7 +247,7 @@ export default function contact() {
                     className="together"
                     id="contact-anim"
                     data-cursor-magnetic
-                    data-cursor-background-image="/assets/gif/9.gif"
+                    data-cursor-background-image="/assets/gif/17.webp"
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
@@ -277,7 +275,14 @@ export default function contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 3 }}
               >
-                <div class="img"></div>
+                <div class="img">
+                  <video
+                    src="/assets/contact/contact-bg-video.webm"
+                    autoPlay
+                    muted
+                    loop
+                  ></video>
+                </div>
               </motion.div>
             </div>
             {/* ====================== Pinned Image  END =========================== */}

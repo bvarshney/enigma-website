@@ -31,6 +31,7 @@
 
 .HeroLeftBox {
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -193,7 +194,7 @@
   height: 60%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .forthSectionLeftBox h1 {
@@ -201,7 +202,6 @@
   font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
-  padding-top: 8vw;
 }
 
 .forthSectionRightBox {
@@ -211,7 +211,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 8vw;
 }
 
 .clientTestimonialSectionContent{
@@ -490,7 +489,7 @@
 
 .videoForthSection {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .videoContainer {

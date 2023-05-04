@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useLayoutEffect, useRef } from "react";
-
 import { gsap, Expo, Power4, Power1 } from "gsap";
 
 interface Pos {
@@ -279,6 +278,7 @@ export const Cursor: FC<CursorProps> = ({
         }
       });
     });
+
     textElements.forEach((el) => {
       el.addEventListener("mouseleave", (e: MouseEvent) => {
         if (e.target instanceof HTMLElement && cursorInner.current) {
@@ -304,6 +304,7 @@ export const Cursor: FC<CursorProps> = ({
         }
       });
     });
+
     colorElements.forEach((el) => {
       el.addEventListener("mouseleave", (e: MouseEvent) => {
         if (e.target instanceof HTMLElement && cursor.current) {
@@ -325,6 +326,7 @@ export const Cursor: FC<CursorProps> = ({
         }
       });
     });
+
     exclusionElements.forEach((el) => {
       el.addEventListener("mouseleave", (e: MouseEvent) => {
         if (e.target instanceof HTMLElement && cursor.current) {
@@ -401,6 +403,7 @@ export const Cursor: FC<CursorProps> = ({
         });
       });
     });
+
     magneticElements.forEach((el) => {
       el.addEventListener("mouseleave", (e) => {
         const areatarget = e.target as HTMLElement;

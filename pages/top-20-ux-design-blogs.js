@@ -219,26 +219,14 @@ export default function blogDetails() {
           <div className="left-section" id="left-section">
             <div className="box-blog" id="anim">
               <div className="share-box-blog">
-                <Image
-                  width={20}
-                  height={20}
-                  src="/assets/blogs/blog-detail/user.png"
-                  alt="User"
-                />
                 <div>
-                  <h1>By Bhaskar Varshney</h1>
+                  <h1>Posted By</h1>
                 </div>
               </div>
-              <h2 className="timezone-update">(UX Design)</h2>
+              <h2 className="timezone-update">Bhaskar Varshney</h2>
             </div>
             <div className="box-blog" id="anim">
               <div className="share-box-blog">
-                <Image
-                  width={20}
-                  height={20}
-                  src="/assets/blogs/blog-detail/blogging.png"
-                  alt="Blog"
-                />
                 <div>
                   <h1>Posted on</h1>
                 </div>
@@ -247,28 +235,9 @@ export default function blogDetails() {
             </div>
             <div className="box-blog" id="anim">
               <div className="share-box-blog">
-                <Image
-                  width={20}
-                  height={20}
-                  src="/assets/blogs/blog-detail/share.png"
-                  alt="Share"
-                />
                 <h1>Share Article</h1>
               </div>
               <div className="social-icons">
-                <FacebookShareButton
-                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
                 <LinkedinShareButton
                   url={"https://weareenigma.com/top-20-ux-design-blogs"}
                   quote={
@@ -281,6 +250,19 @@ export default function blogDetails() {
                     alt="social-icons"
                   />
                 </LinkedinShareButton>
+
+                <FacebookShareButton
+                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
+                  quote={
+                    "next-share is a social share buttons for your next React apps."
+                  }
+                  hashtag={"#weareenigma"}
+                >
+                  <img
+                    src="/assets\blogs\blog-detail\social/facebook.webp"
+                    alt="social-icons"
+                  />
+                </FacebookShareButton>
 
                 <TwitterShareButton
                   url={"https://weareenigma.com/top-20-ux-design-blogs"}

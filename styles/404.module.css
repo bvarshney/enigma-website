@@ -1,0 +1,142 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(180deg,#b5ab9b 0%,hsl(205,22%,44%) 100%);
+}
+
+.gifBox{
+    position: absolute;
+    top: 3vw;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourZeroFour{
+    font-family: "Ageo";
+    font-size: 20vw;
+    background-image: url('/assets/404/404.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 37%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    color: #1a1a1a;
+    font-style: normal;
+    font-weight: 900;
+    text-align: center;
+    white-space: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    margin-top: 5vw;
+}
+
+.paraText{
+    font-family: "Ageo";
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding: 0 30vw;
+    text-align: center;
+}
+
+.buttonHome{
+    font-family: "Ageo";
+    font-size: 1.5vw;
+    background: transparent;
+    font-weight: 600;
+    border: none;
+    margin-top: 3vw;
+    border: 1px solid #1a1a1a;
+    border-radius: 50px;
+    padding: 0.7vw 2vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.buttoncalypso::before,
+.buttoncalypso::after {
+	position: absolute;
+	top: -1vw;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.buttoncalypso {
+	overflow: hidden;
+	color: #1a1a1a;
+}
+
+.buttoncalypso span {
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.buttoncalypso:hover span {
+  color: #fff;
+  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+@keyframes MoveScaleUpInitial {
+	to {
+		transform: translate3d(0,-105%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleUpEnd {
+	from {
+		transform: translate3d(0,100%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+.buttoncalypso::before {
+	content: '';
+	background: #1a1a1a;
+	width: 120%;
+	height: 0;
+	padding-bottom: 120%;
+	top: -110%;
+	left: -10%;
+	border-radius: 50%;
+	transform: translate3d(0,68%,0) scale3d(0,0,0);
+}
+
+.buttoncalypso:hover::before {
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.buttoncalypso::after {
+	content: '';
+	background: #1a1a1a;
+	transform: translate3d(0,-100%,0);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.buttoncalypso:hover::after {
+	transform: translate3d(0,0,0);
+	transition-duration: 0.05s;
+	transition-delay: 0.4s;
+    color: #fff;
+	transition-timing-function: linear;
+}

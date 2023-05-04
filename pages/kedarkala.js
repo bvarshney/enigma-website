@@ -358,7 +358,7 @@ export default function kedarkala() {
           </div>
 
           {/* ====================== Parallax Image  END ====================== */}
-
+          <div className="space-large desktop"></div>
           {/* ====================== Third Section ============================ */}
 
           <div className={styles.patronumForthSection}>
@@ -479,6 +479,7 @@ export default function kedarkala() {
 
           {/* ========================== The LOGO Section END ======================= */}
 
+          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
@@ -679,7 +680,7 @@ export default function kedarkala() {
 
           {/* ====================== Forth Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
+          <div className="space-large desktop"></div>
 
           {/* ====================== Forth Section  ======================== */}
 
@@ -735,7 +736,7 @@ export default function kedarkala() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          {/* <div className="space-large desktop"></div> */}
+          <div className="space-large desktop"></div>
 
           {/* ====================== FOURTH Section ============================ */}
 

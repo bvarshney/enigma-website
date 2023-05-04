@@ -46,10 +46,10 @@ const Preloader = () => {
           opacity: 0,
           duration: 0.5,
         });
-        tl.to(".loading-bar-container ", {
-          opacity: 0,
-          duration: 0.5,
-        });
+        // tl.to(".loading-bar-container ", {
+        //   opacity: 0,
+        //   duration: 0.5,
+        // });
         tl.to(svg, {
           duration: 0.5,
           attr: { d: curve },
@@ -75,9 +75,9 @@ const Preloader = () => {
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
       </svg>
       <div className="words-preloader">{word}</div>
-      <div className="loading-bar-container">
-        <div className="loading-bar" style={{ width: `${progress}%` }}></div>
-      </div>
+      {/* <div className="loading-bar-container"> */}
+      {/* <div className="loading-bar" style={{ width: `${progress}%` }}></div> */}
+      {/* </div> */}
     </div>
   );
 };

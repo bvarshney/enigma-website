@@ -193,10 +193,12 @@ export default function services() {
         delay: 0.5,
         y: 200,
         skewY: 10,
+        duration: 0.7,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
         skewY: 10,
+        duration: 0.7,
       });
       tl.to(svg, {
         duration: 0.5,
@@ -867,7 +869,12 @@ export default function services() {
             </div>
           </div>
 
-          <div className="top-box">
+          <div
+            className="top-box"
+            data-cursor-size="120px"
+            data-cursor-color="#536cd4"
+            data-cursor-text="Develop"
+          >
             <div
               className="line-animation"
               style={{
@@ -876,22 +883,19 @@ export default function services() {
                 background: "#a2a2a2",
               }}
             ></div>
-            <div
-              className="first-box-how box-anim-gsap"
-              data-cursor-size="120px"
-              data-cursor-color="#536cd4"
-              data-cursor-text="Develop"
-            >
-              <div className="box-we">
-                <h1 className="disabled-work">Develop</h1>
-              </div>
-              <div className="box-we-para">
-                <h4>
-                  <span>
-                    Incorporate implementation and technical components into a
-                    highly functional system, ready for review.
-                  </span>
-                </h4>
+            <div className="box-anim-gsap develop-box-service">
+              <div className="first-box-how">
+                <div className="box-we">
+                  <h1 className="disabled-work">Develop</h1>
+                </div>
+                <div className="box-we-para">
+                  <h4>
+                    <span>
+                      Incorporate implementation and technical components into a
+                      highly functional system, ready for review.
+                    </span>
+                  </h4>
+                </div>
               </div>
             </div>
           </div>

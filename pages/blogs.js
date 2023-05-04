@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Cursor } from "../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
+import Image from "next/image";
 
 import SmoothScroll from "./components/utils/SmoothScroll";
 import Header from "./components/Header/Header";
@@ -32,6 +33,22 @@ const Blogs = [
   {
     name: "Design",
     category: "Design",
+    Link: "/how-to-choose-right-ux-agency",
+    image: "/assets/blogs/blog-detail/right-ux-agency/feature.png",
+    description:
+      "How to Choose the Right UX Agency to Partner withfor Your Product Ideas",
+  },
+  {
+    name: "Design",
+    category: "Design",
+    Link: "/unmasking-the-web-dark-side",
+    image: "/assets/blogs/blog-detail/unmasking-web-dark/feature.jpg",
+    description:
+      "Unmasking the Web's Dark Side: 5 Insider Secrets to Safeguard Your Site from Deceptive Design!",
+  },
+  {
+    name: "Design",
+    category: "Design",
     Link: "/the-power-of-psychology-in-ux-design",
     image: "/assets/blogs/uxbrain.webp",
     description:
@@ -52,7 +69,7 @@ const Blogs = [
     category: "Marketing",
     Link: "/top-20-digital-marketing-blogs",
     image:
-      "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature.jpg",
+      "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature.png",
     description:
       "Top 20 Digital Marketing Blogs to Follow for Expert Insights and Strategies",
   },
@@ -60,7 +77,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/the-minds-playground",
-    image: "/assets/blogs/blog-detail/the-mind-playground/feature.jpg",
+    image: "/assets/blogs/blog-detail/the-mind-playground/feature.webp",
     description:
       "The Mind's Playground: 12 Cognitive Biases Ecommerce Marketers Need to Know",
   },
@@ -68,7 +85,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/30-websites",
-    image: "/assets/blogs/blog-detail/30-websites/feature.jpg",
+    image: "/assets/blogs/blog-detail/30-websites/feature.webp",
     description:
       "Beginners Guide to SEO: 30 websites to help you getting started on your link building journey",
   },
@@ -76,14 +93,14 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/beginner-guide-to-technical-seo",
-    image: "/assets/blogs/blog-detail/the-technical-seo/feature.jpg",
+    image: "/assets/blogs/blog-detail/the-technical-seo/feature.webp",
     description: "A Beginner's Guide to Technical SEO",
   },
   {
     name: "Marketing",
     category: "Marketing",
     Link: "/beginner-guide-link-building",
-    image: "/assets/blogs/blog-detail/link-building/feature.jpg",
+    image: "/assets/blogs/blog-detail/link-building/feature.webp",
     description: "A Beginner's Guide to Link Building",
   },
 
@@ -91,7 +108,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/onpage-and-offpage-seo",
-    image: "/assets/blogs/blog-detail/off-on-page-seo/feature.jpg",
+    image: "/assets/blogs/blog-detail/off-on-page-seo/feature.webp",
     description:
       "On-Page & Off-Page SEO: A Beginner's Guide to Optimizing Your Website",
   },
@@ -99,7 +116,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/keyword-research",
-    image: "/assets/blogs/blog-detail/keyword-research/feature.jpg",
+    image: "/assets/blogs/blog-detail/keyword-research/feature.webp",
     description: "Keyword Research: A Comprehensive Guide for SEO Success",
   },
   {
@@ -113,14 +130,14 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/how-search-engine-works",
-    image: "/assets/blogs/blog-detail/how-search-engine/feature.webp",
+    image: "/assets/blogs/blog-detail/how-search-engine/feature.png",
     description: "How Search Engines Work: A Comprehensive Guide",
   },
   {
     name: "Marketing",
     category: "Marketing",
     Link: "/organic-digital-marketing",
-    image: "/assets/blogs/blog-detail/organic-digital-marketing/feature.jpg",
+    image: "/assets/blogs/blog-detail/organic-digital-marketing/feature.png",
     description:
       "Organic Digital Marketing: The Game Changer Your Business Needs",
   },
@@ -128,7 +145,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/turbo-charge-your-b2b-linkedin",
-    image: "/assets/blogs/blog-detail/b2b-linkedin/feature-1.jpg",
+    image: "/assets/blogs/blog-detail/b2b-linkedin/feature.webp",
     description:
       "Turbocharge Your B2B LinkedIn Game with these 6 unbelievable strategies",
   },
@@ -136,7 +153,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/unleashing-the-power-of-remote-designers",
-    image: "/assets/blogs/blog-detail/unleash/feature.jpg",
+    image: "/assets/blogs/blog-detail/unleash/feature.webp",
     description:
       "Unleashing the Power of Remote Designers: Why Outsourcing to India is the Winning Move",
   },
@@ -153,7 +170,7 @@ const Blogs = [
     name: "Marketing",
     category: "Marketing",
     Link: "/the-future-of-marketing",
-    image: "/assets/blogs/blog-detail/the-future-of-marketing/feature-1.jpg",
+    image: "/assets/blogs/blog-detail/the-future-of-marketing/feature.webp",
     description:
       "The Future of Marketing: Why Every Marketer Should Learn Neuroscience and Master Neuromarketing",
   },
@@ -177,7 +194,7 @@ const Blogs = [
     name: "Design",
     category: "Design",
     Link: "/the-evolution-of-ux-design",
-    image: "/assets/blogs/blog-detail/the-evalution/feature.jpg",
+    image: "/assets/blogs/blog-detail/the-evalution/feature.webp",
     description:
       "The Evolution of UX Design: An Informative Expedition Through The History",
   },
@@ -201,7 +218,7 @@ const buttons = [
 
 export default function blogs() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visiblePosts, setVisiblePosts] = useState(6);
+  const [visiblePosts, setVisiblePosts] = useState(9);
 
   const handleButtonClick = (index) => {
     setActiveIndex(index);
@@ -225,7 +242,7 @@ export default function blogs() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#blog",
+      ".blogs-heading #blog",
       {
         rotationX: -80,
         opacity: 0,
@@ -276,11 +293,13 @@ export default function blogs() {
       tl.from(".loader-wrap-heading h1", {
         delay: 0.5,
         y: 200,
+        duration: 0.7,
         skewY: 10,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
         skewY: 10,
+        duration: 0.7,
       });
       tl.to(svg, {
         duration: 0.5,
@@ -364,7 +383,9 @@ export default function blogs() {
               data-cursor-size="10px"
               data-cursor-text=""
             >
-              <h1 id="blog">All Articles</h1>
+              <h1 id="blog">
+                <span>All Articles</span>
+              </h1>
             </div>
 
             <div className="blogs-section">
@@ -390,7 +411,7 @@ export default function blogs() {
                     <ul key={type.id} className="ul-blog" id="img">
                       <Link href={`${type.Link}`}>
                         <div className="image-box-blog">
-                          <img
+                          <Image
                             src={type.image}
                             className="img-blog"
                             onMouseEnter={(e) => handleHover(e)}
@@ -398,6 +419,9 @@ export default function blogs() {
                             data-cursor-text="Read Now"
                             data-cursor-size="120px"
                             data-cursor-color="#000"
+                            alt="Blog-img"
+                            width={1000}
+                            height={1000}
                           />
                         </div>
                         <li className="blog-list-tag">{type.name}</li>

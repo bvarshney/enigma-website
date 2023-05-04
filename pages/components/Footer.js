@@ -17,14 +17,14 @@ function Footer() {
     tl.fromTo(
       demoHeader,
       {
-        rotationX: -80,
+        rotationX: -120,
         opacity: 0,
-        translateY: 150,
+        translateY: 300,
         transformPerspective: "1000",
         transformOrigin: "top center",
       },
       {
-        duration: 0.7,
+        duration: 0.8,
         rotationX: 0,
         opacity: 1,
         translateY: 0,
@@ -103,11 +103,11 @@ function Footer() {
     tl.fromTo(
       demoHeader,
       {
-        y: 30,
+        y: 50,
         opacity: 0,
       },
       {
-        delay: 1,
+        delay: 2,
         duration: 1,
         opacity: 1,
         y: 0,

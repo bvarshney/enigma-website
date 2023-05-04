@@ -142,10 +142,12 @@ export default function about() {
         delay: 0.5,
         y: 200,
         skewY: 10,
+        duration: 0.7,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
         skewY: 10,
+        duration: 0.7,
       });
       tl.to(svg, {
         duration: 0.5,
