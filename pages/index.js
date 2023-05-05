@@ -276,13 +276,13 @@ export default function Home() {
 
       <Preloader />
 
+      <SmoothScroll />
+
       <Cursor isGelly={true} />
 
       <div>
         <Header />
       </div>
-
-      <SmoothScroll />
 
       <main className="main-section">
         <HomeHero />
@@ -399,6 +399,7 @@ export default function Home() {
               width={200}
               height={200}
               alt="Scroll"
+              className="svg-dark-mode"
             ></Image>
           </div>
 

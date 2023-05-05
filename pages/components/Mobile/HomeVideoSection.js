@@ -18,10 +18,13 @@ export default function HomeVideoSection() {
         <div className="video-content-box">
           <h1>
             Do you think we're the right partners to bring your idea to life and
-            take your brand to the Next Level? 🚀
+            take your brand to the Next Level?{" "}
+            <span className="emoji-dark">🚀</span>
           </h1>
           <div className="cb-outro-header">
-            <Link href="/contact">Say, Hello! 👋</Link>
+            <Link href="/contact">
+              Say, Hello! <span className="emoji-dark">👋</span>
+            </Link>
           </div>
         </div>
       </div>

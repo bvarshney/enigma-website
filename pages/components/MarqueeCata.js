@@ -163,7 +163,7 @@ const Marquee = () => {
   return (
     <div className="services-catalog service-catalog-anim">
       <div className="services-catalog-title">
-        full catalogue of our services. 👨‍💻
+        full catalogue of our services. <span className="emoji-dark">👨‍💻</span>
       </div>
       <div className="services-catalog-row margin-top-medium ">
         <div className="services-catalog-row-item half-opacity">

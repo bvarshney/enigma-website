@@ -199,7 +199,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 8vw;
 }
 
 .clientTestimonialSectionContent{
@@ -269,11 +268,14 @@
 .paraTop h5 {
   font-size: 1.3vw;
   line-height: 1.5;
-  margin-bottom: 3vw;
   font-weight: 400;
   letter-spacing: 0.5px;
   font-family: "Ageo";
   text-align: justify;
+}
+
+.marginBottom{
+  margin-bottom: 3vw;
 }
 
 .logoSection {

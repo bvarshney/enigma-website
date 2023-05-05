@@ -448,7 +448,7 @@ export default function ProjectsHome() {
             className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
             id="line-anim"
           >
-            <h1 className={styles.project}>
+            <h1 className={styles.project} id="darkMode-project">
               <span className={styles.span} id="span">
                 Projects
               </span>

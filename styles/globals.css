@@ -87,6 +87,180 @@
   font-size: 0.9vw !important;
 }
 
+/* ========== Dark Mode ============= */
+
+.dark-mode ::selection {
+  background: #fff;
+}
+
+.dark-mode-btn{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1.5vw;
+}
+
+.dark-mode-btn .dark-mode-svg-switch{
+  width: 100%;
+}
+
+.dark-mode {
+  filter: invert(1);
+  transition: -webkit-filter .55s ease-in-out !important;
+  transition: filter .55s ease-in-out !important;
+  transition: filter .55s ease-in-out,-webkit-filter .85s ease-in-out !important;
+}
+
+.dark-mode .activeMenu{
+  filter: invert(1);
+}
+
+.dark-mode .c-cursor__inner {
+    color: #fff !important
+}
+
+.dark-mode .lapi_div .macbook_pro{
+  filter: invert(1);
+}
+
+.dark-mode .size-emo{
+  filter: invert(1);
+}
+
+.dark-mode .svg-dark-mode {
+  filter: invert(0) !important;
+  z-index: 1;
+}
+
+.dark-mode #darkMode-project{
+  filter: invert(1);
+}
+
+.dark-mode .c-cursor__inner{
+  filter: invert(0) !important;
+}
+
+.dark-mode .footer-dark-img{
+  filter: invert(0) !important;
+}
+
+.dark-mode img,
+.dark-mode video{
+  filter: invert(1) !important;
+  z-index: 1;
+}
+
+.dark-mode .overlay-2, .dark-mode [class*="text-stroke-fill-"]:before, [class*="text-fill-"]:before{
+  filter: invert(1);
+}
+
+.dark-mode .shape.shape-1, .dark-mode .shape.shape-2, .dark-mode .shape.shape-3{
+  filter: invert(1);
+}
+
+.dark-mode .experience{
+  filter: invert(1);
+}
+
+.dark-mode .content-hero-box-mobile .third-text h1{
+  filter: invert(1);
+}
+
+
+/* About Page */
+
+.dark-mode .about-gif-text, .dark-mode .about-gif-num, .dark-mode .gifsubtetx span, .dark-mode .emoji-dark{
+  filter: invert(1);
+}
+
+.dark-mode #darkMode-reel-img{
+  filter: invert(1);
+}
+
+.dark-mode .slideInner___2mfX9 .image-box-slider img, .dark-mode .caro-img-box img{
+  filter: invert(0) !important;
+}
+/* About Page END */
+
+/* Service Page */
+
+.dark-mode .w-e, .dark-mode .sub-first-highlight{
+  filter: invert(1);
+}
+
+/* Service Page END */
+
+/* Works Page */
+
+.dark-mode .loading{
+  filter: invert(1);
+  background: #fff;
+}
+
+.dark-mode #create .row-col .row-title .row-letter:nth-child(4),
+.dark-mode #create .row-col .row-title .row-letter:nth-child(5),
+.dark-mode #create .row-col .row-title .row-letter:nth-child(6),
+.dark-mode #create .row-col .row-title .row-letter:nth-child(7),
+.dark-mode #create .row-col .row-title .row-letter:nth-child(8),
+.dark-mode #create .row-col .row-title .row-letter:nth-child(9)
+{
+  filter: invert(1);
+}
+
+.dark-mode #proj-work{
+  filter: invert(1);
+}
+/* Works Page END */
+
+/* contact Page */
+
+.dark-mode .first-box-contact .work{
+  filter: invert(1);
+}
+
+/* contact Page END */
+
+/* Blog  */
+
+.dark-mode  .blog-list-tag{
+  z-index: 10;
+}
+
+/* Blog Detail */
+
+.dark-mode .social-icons img{
+  filter: invert(0) !important;
+}
+
+/* Blog Detail END */
+
+/* Blog  END */
+
+
+/* ========= Case Studies ===============
+========================================= */
+
+.dark-mode #dark-mode-colors-casestudy #line, .dark-mode #palette{
+  filter: invert(1);
+}
+
+.dark-mode #case-study-arrow, .dark-mode #fonts-dark-casestudy{
+  filter: invert(0) !important;
+}
+
+.dark-mode #kedar-font-section{
+  filter: invert(1);
+}
+
+.dark-mode #kedar-font-img{
+  filter: invert(0) !important;
+}
+
+/* ========= Case Studies END ===========
+========================================= */
+
+/* ========== Dark Mode END ============= */
+
 .scroll-content {
   background: #f9f9f9;
   backface-visibility: hidden;
@@ -108,7 +282,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
@@ -531,7 +705,7 @@ button:focus {
   position: absolute;
   z-index: 99;
   right: -0.5vw;
-  top: 0vw;
+  top: 0.2vw;
 }
 .menu-layer {
   position: relative;
@@ -3749,7 +3923,7 @@ https://unsplash.com/@vinomamba24
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ffffff;
+  background: #eaeaea;
 }
 
 .slideInner___2mfX9 img {
@@ -4711,7 +4885,7 @@ span.row-letter:nth-child(20) {
   justify-content: center;
 }
 
-.transition-image video {
+.transition-image img {
   max-width: 800px;
   display: -webkit-flex;
   display: flex;
@@ -4869,6 +5043,7 @@ body.loading {
   overflow: hidden;
   height: 100vh;
   z-index: 99999;
+  background: #f9f9f9;
 }
 
 .loader .loader-inner .image-block {
@@ -5625,12 +5800,6 @@ body.loading {
   object-fit: cover;
 }
 
-.comment-box{
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 15vh;
-}
-
 .related-articles {
   width: 90%;
   margin: 0 auto;
@@ -5993,6 +6162,7 @@ a:hover {
   text-transform: uppercase;
   padding: 0.5vw 2vw;
   border-radius: 50px;
+  z-index: 10;
 }
 /* ========================================== Project Marquee END ========================================== */
 
@@ -7622,6 +7792,22 @@ container_hero_content #enigma-svg #e {
     visibility: hidden !important;
   }
 
+  .dark-mode .mobli-cont .en-bg{
+    filter: invert(1);
+  }
+
+  .right-section-header{
+    margin-right: 13vw;
+  }
+
+  .right-section-header .dark-mode-btn img{
+    width: 27px;
+  }
+
+  .about-header .dark-mode-btn{
+    margin-right: 8.5vw;
+  }
+
   .hireus-button{
     display: none;
   }
@@ -7671,6 +7857,8 @@ container_hero_content #enigma-svg #e {
 
   .mobile-footer {
     display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .hero-main.desktop {
@@ -7700,7 +7888,7 @@ container_hero_content #enigma-svg #e {
 
   .header-section {
     width: 85%;
-    padding-top: 6.5vw;
+    padding-top: 5.8vw;
   }
 
   .header-section .header-logo .main-logo {
@@ -9331,11 +9519,6 @@ container_hero_content #enigma-svg #e {
   .main-blog-container .left-section h1 {
     font-size: 3vw;
     margin-bottom: 1vw;
-  }
-
-  .comment-box{
-    margin-top: 10vh;
-    margin-bottom: 10vh;
   }
 
   .main-blog-container .left-section h2 {

@@ -251,7 +251,11 @@ export default function quickx() {
                   <Link href="" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>quickx.app</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -333,6 +337,7 @@ export default function quickx() {
           </div>
           {/* ====================== Parallax Image  END ====================== */}
 
+          <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
@@ -349,7 +354,7 @@ export default function quickx() {
                     obstacles that tested their creativity, technical expertise,
                     and resilience.
                   </h1>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     While Wragby's vision was as clear as a cloudless sky, the
                     challenges were as daunting as climbing Mount Everest in
                     flip-flops. The first hurdle: creating a website that
@@ -360,7 +365,7 @@ export default function quickx() {
                     digestible format was like trying to solve a Rubik's cube
                     blindfolded.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     The second challenge: designing a user experience that even
                     your tech-averse grandma could navigate with ease. In a
                     world where attention spans rival those of goldfish, the
@@ -461,6 +466,7 @@ export default function quickx() {
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
+          <div className="space-large desktop"></div>
 
           <div className={styles.mobile}></div>
           <div className={styles.mobile}></div>
@@ -485,7 +491,7 @@ export default function quickx() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     We decided to play by our own rulebook, tossing conventional
                     wisdom out the window like an old Nokia brick phone. We
                     began with a deep dive into Wragby's psyche, absorbing their
@@ -493,7 +499,7 @@ export default function quickx() {
                     ocean. This immersion allowed our team to channel Wragby's
                     innovative spirit into every aspect of the website.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     Next, we concocted a design so visually alluring, it could
                     make the Sirens of Greek mythology green with envy. The
                     design featured bold colors, futuristic layouts, and
@@ -501,7 +507,7 @@ export default function quickx() {
                     playground, inviting users to explore and discover Wragby's
                     groundbreaking solutions.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     Then we addressed the challenge of presenting complex
                     information in a digestible manner. We employed storytelling
                     techniques, weaving Wragby's technical offerings into
@@ -647,8 +653,6 @@ export default function quickx() {
           {/* ====================== Fonts Section END ==================== */}
 
           <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           <div className={styles.mobile}></div>
 
@@ -666,7 +670,10 @@ export default function quickx() {
               </div>
             </div>
 
-            <div className={styles.colorBoxesSection}>
+            <div
+              className={styles.colorBoxesSection}
+              id="dark-mode-colors-casestudy"
+            >
               <ul>
                 <li className={styles.colorOne} id="line">
                   Hex: #841AFF <br /> Hex: #5C0DF6 <br /> Hex: #B305FA
@@ -749,6 +756,7 @@ export default function quickx() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
+          <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
 
           {/* ====================== FOURTH Section ============================ */}
@@ -808,7 +816,6 @@ export default function quickx() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
 

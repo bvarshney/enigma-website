@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 const words = [
-  "Namaste! 🙏",
+  "Namaste!",
   "Hola",
   "Hello",
   "Jomor",

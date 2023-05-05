@@ -200,7 +200,7 @@ export default function Category() {
                           >
                             <span data-text="Transform Your Business">
                               Transform Your Business
-                              <span className="arro">
+                              <span className="arro emoji-dark">
                                 <img src="/assets/arrow.png" alt="Icon" />
                               </span>
                             </span>
@@ -261,7 +261,7 @@ export default function Category() {
                           >
                             <span data-text="Upgrade Your Experience">
                               Upgrade Your Experience
-                              <span className="arro">
+                              <span className="arro emoji-dark">
                                 <img src="/assets/arrow.png" alt="Icon" />
                               </span>
                             </span>
@@ -323,7 +323,7 @@ export default function Category() {
                           >
                             <span data-text="Let’s Build Your Idea">
                               Let’s Build Your Idea
-                              <span className="arro">
+                              <span className="arro emoji-dark">
                                 <img src="/assets/arrow.png" alt="Icon" />
                               </span>
                             </span>
@@ -384,7 +384,7 @@ export default function Category() {
                                                 Moving"
                             >
                               Ready? Let’s Get Moving
-                              <span className="arro">
+                              <span className="arro emoji-dark">
                                 <img src="/assets/arrow.png" alt="Icon" />
                               </span>
                             </span>

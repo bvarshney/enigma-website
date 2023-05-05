@@ -202,7 +202,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 8vw;
 }
 
 .clientTestimonialSectionContent{
@@ -271,11 +270,14 @@
 .paraTop h5 {
   font-size: 1.3vw;
   line-height: 1.5;
-  margin-bottom: 3vw;
   font-weight: 400;
   letter-spacing: 0.5px;
   font-family: 'Ageo';
   text-align: justify;
+}
+
+.marginBottom{
+  margin-bottom: 3vw;
 }
 
 .logoSection {
@@ -449,7 +451,7 @@
 }
 
 .colorBoxesSection {
-  width: 70%;
+  width: 55%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -481,8 +483,8 @@
 }
 
 .colorOne {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     background: #56b7be;
     z-index: 1;
@@ -492,44 +494,44 @@
   }
 
   .colorTwo {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #4feab8;
     position: absolute;
-    left: 13vw;
+    left: 10vw;
   }
 
   .colorThree {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #33b5f2;
     position: absolute;
-    left: 26vw;
+    left: 20vw;
   }
 
   .colorFour {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #62ccfd;
     position: absolute;
-    left: 39vw;
+    left: 30vw;
   }
 
   .colorFive {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
      background: transparent linear-gradient(90deg, #4feab8 0%, #62ccfd 100%) 0% 0%
     no-repeat padding-box;
     position: absolute;
-    left: 52vw;
+    left: 40vw;
   }
 
 .videoHeading {

@@ -353,7 +353,7 @@ export default function ProjectsHome() {
   useEffect(() => {
     const totalSection = document.querySelectorAll("#c-works");
     totalSection.forEach(function (elem, index) {
-      const text = new SplitType(elem.querySelector("#proj-work"));
+      const text = new SplitType(elem.querySelector("#proj-work-anim"));
       let textwords = text.words;
       gsap.from(textwords, {
         scrollTrigger: {
@@ -437,7 +437,7 @@ export default function ProjectsHome() {
                 Our Work
               </span>
             </h1>
-            <h4 className={styles.paraProject} id="proj-work">
+            <h4 className={styles.paraProject} id="proj-work-anim">
               <span>
                 Crafting new bright brands, unique visual systems and digital
                 experience focused on a wide range of original collabs.

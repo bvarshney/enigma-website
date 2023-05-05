@@ -449,7 +449,7 @@
 }
 
 .colorBoxesSection {
-    width: 70%;
+    width: 55%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -476,7 +476,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     line-height: 1.5;
     font-weight: 500;
     font-family: 'Gilroy';
@@ -489,8 +489,8 @@
   }
 
   .colorOne {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     background: #000;
     z-index: 1;
@@ -500,43 +500,43 @@
   }
 
   .colorTwo {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #19073b;
     position: absolute;
-    left: 13vw;
+    left: 10vw;
   }
 
   .colorThree {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #BE1E2D;
     position: absolute;
-    left: 26vw;
+    left: 20vw;
   }
 
   .colorFour {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #0060AC;
     position: absolute;
-    left: 39vw;
+    left: 30vw;
   }
 
   .colorFive {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     z-index: 1;
     background: #FFFFFF;
     position: absolute;
-    left: 52vw;
+    left: 40vw;
   }
 
 .videoHeading {

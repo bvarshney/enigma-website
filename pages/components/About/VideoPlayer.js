@@ -28,6 +28,7 @@ const VideoPlayer = () => {
     transform: "translate(-50%, -50%)",
     opacity: 1,
     transition: "all 0.3s ease-in",
+    zIndex: "99",
   };
 
   if (isPlaying) {
@@ -55,7 +56,11 @@ const VideoPlayer = () => {
         }}
       />
       <video ref={videoRef} src="/assets/reels/showreel.mp4" />
-      <div className="play-pause-button" style={playPauseButtonStyle}>
+      <div
+        className="play-pause-button"
+        style={playPauseButtonStyle}
+        id="darkMode-reel-img"
+      >
         {isPlaying ? (
           <div className={styles.svgBackground}>
             <img src="https://img.icons8.com/ios-filled/100/000000/pause--v1.png" />
@@ -66,11 +71,6 @@ const VideoPlayer = () => {
           </div>
         )}
       </div>
-      <style jsx>{`
-        .play-pause-button {
-          cursor: pointer;
-        }
-      `}</style>
     </div>
   );
 };

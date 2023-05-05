@@ -139,6 +139,7 @@ function Footer() {
                 src="/assets/footer-main/Vector.png"
                 width={250}
                 height={50}
+                className="footer-dark-img"
               />
             </div>
             <div

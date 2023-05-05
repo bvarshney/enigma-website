@@ -255,7 +255,11 @@ export default function patronum() {
                   >
                     <button className={styles.linkButton}>dmtca.agency</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -345,7 +349,7 @@ export default function patronum() {
 
           {/* ====================== Parallax Image  END ====================== */}
 
-          {/* <div className="space-large desktop"></div> */}
+          <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
@@ -362,7 +366,7 @@ export default function patronum() {
                     obstacles that tested their creativity, technical expertise,
                     and resilience.
                   </h1>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     While Wragby's vision was as clear as a cloudless sky, the
                     challenges were as daunting as climbing Mount Everest in
                     flip-flops. The first hurdle: creating a website that
@@ -373,7 +377,7 @@ export default function patronum() {
                     digestible format was like trying to solve a Rubik's cube
                     blindfolded.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     The second challenge: designing a user experience that even
                     your tech-averse grandma could navigate with ease. In a
                     world where attention spans rival those of goldfish, the
@@ -470,7 +474,7 @@ export default function patronum() {
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          {/* <div className="space-large desktop"></div> */}
+          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
@@ -500,7 +504,7 @@ export default function patronum() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     We decided to play by our own rulebook, tossing conventional
                     wisdom out the window like an old Nokia brick phone. We
                     began with a deep dive into Wragby's psyche, absorbing their
@@ -508,7 +512,7 @@ export default function patronum() {
                     ocean. This immersion allowed our team to channel Wragby's
                     innovative spirit into every aspect of the website.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     Next, we concocted a design so visually alluring, it could
                     make the Sirens of Greek mythology green with envy. The
                     design featured bold colors, futuristic layouts, and
@@ -516,7 +520,7 @@ export default function patronum() {
                     playground, inviting users to explore and discover Wragby's
                     groundbreaking solutions.
                   </h5>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     Then we addressed the challenge of presenting complex
                     information in a digestible manner. We employed storytelling
                     techniques, weaving Wragby's technical offerings into
@@ -662,7 +666,10 @@ export default function patronum() {
               </div>
             </div>
 
-            <div className={styles.colorBoxesSection}>
+            <div
+              className={styles.colorBoxesSection}
+              id="dark-mode-colors-casestudy"
+            >
               <ul>
                 <li className={styles.colorOne} id="line">
                   #56B7BE
@@ -750,6 +757,7 @@ export default function patronum() {
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
+          <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
 
           {/* ====================== FOURTH Section ============================ */}
@@ -761,7 +769,7 @@ export default function patronum() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <h5 data-jelly className={styles.marginBottom}>
                     Wragby's innovative spirit now had a digital home that not
                     only reflected its essence but also attracted talent,
                     clients, and partners from across the African continent and

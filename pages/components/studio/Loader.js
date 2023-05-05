@@ -61,9 +61,9 @@ const Loader = ({ setLoading }) => {
       >
         <ImageBlock variants={item} id="image-1" />
         <motion.div variants={itemMain} className="transition-image">
-          <motion.video
+          <motion.img
             layoutId="main-image-1"
-            src={`/assets/reels/enigma3.mp4`}
+            src={`/assets/reels/enigma.png`}
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />

@@ -17,7 +17,6 @@ import Header from "./components/Header/Header";
 import SmoothScroll from "./components/utils/SmoothScroll";
 import Footer from "./components/Footer";
 import FooterMobile from "./components/Mobile/FooterMobile";
-import Disqus from "./components/Disqus";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -951,10 +950,6 @@ export default function blogDetails() {
         </div>
       </div>
       <div className="space-large desktop"></div>
-
-      {/* <div className="comment-box">
-        <Disqus />
-      </div> */}
 
       {/* =================== Related Articles =========================== */}
       <div className="related-articles">

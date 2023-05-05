@@ -13,8 +13,6 @@
   font-weight: 400;
 }
 
-
-
 .projectHeading {
   padding: 5vw 0 6vw 0;
   width: 80%;
@@ -153,6 +151,7 @@
   bottom: 0.2vw;
   text-decoration: none;
   padding: 0 0 20px 20px;
+  z-index: 10;
 }
 
 .c_project_info > p {

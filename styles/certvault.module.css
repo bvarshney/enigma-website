@@ -185,7 +185,6 @@
   font-weight: 600;
   color: #1a1a1a;
   text-transform: uppercase;
-  padding-top: 8vw;
 }
 
 .forthSectionRightBox {
@@ -195,7 +194,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 8vw;
 }
 
 .paraTop h1 {
@@ -211,11 +209,14 @@
 .paraTop h5 {
   font-size: 1.3vw;
   line-height: 1.5;
-  margin-bottom: 3vw;
   font-weight: 400;
   letter-spacing: 0.5px;
   text-align: justify;
   font-family: 'Ageo';
+}
+
+.marginBottom{
+  margin-bottom: 3vw;
 }
 
 .clientTestimonialSectionContent{
@@ -521,7 +522,7 @@
 
 .videoForthSection {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .videoContainer {

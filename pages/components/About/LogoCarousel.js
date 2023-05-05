@@ -11,15 +11,15 @@ import styles from "../../../styles/Carousel.module.css";
 import gsap from "gsap";
 
 export default function carousel() {
-  // const [isShown, setIsShown] = useState(false);
-  const [textToggle, textToggleState] = useState(true);
-  const [textToggleTwo, textToggleStateTwo] = useState(true);
-  const [textToggleThree, textToggleStateThree] = useState(true);
-  const [textToggleFour, textToggleStateFour] = useState(true);
-  const [textToggleFive, textToggleStateFive] = useState(true);
-  const [textToggleSix, textToggleStateSix] = useState(true);
-  const [textToggleSeven, textToggleStateSeven] = useState(true);
-  const [textToggleEight, textToggleStateEight] = useState(true);
+  const [openSlideIndex, setOpenSlideIndex] = useState(null);
+
+  const handleSlideClick = (slideIndex) => {
+    if (slideIndex === openSlideIndex) {
+      setOpenSlideIndex(null);
+    } else {
+      setOpenSlideIndex(slideIndex);
+    }
+  };
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -192,16 +192,14 @@ export default function carousel() {
         <Slide
           index={0}
           className={styles.slide__caro}
-          onClick={() => textToggleState(!textToggle)}
+          onClick={() => handleSlideClick(0)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggle ? (
+          {openSlideIndex !== 0 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/jelly.png" />
               </div>
               <div className="bottom-caro-box">
@@ -217,7 +215,11 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-              Jellyfish, a fast-growing IT services provider, sought to elevate their online presence and improve their customer experience. Recognizing Enigma Digital's expertise in UX design, they partnered with the agency to enhance their website's user interface and overall design.
+                Jellyfish, a fast-growing IT services provider, sought to
+                elevate their online presence and improve their customer
+                experience. Recognizing Enigma Digital's expertise in UX design,
+                they partnered with the agency to enhance their website's user
+                interface and overall design.
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -231,16 +233,14 @@ export default function carousel() {
         <Slide
           index={1}
           className={styles.slide__caro}
-          onClick={() => textToggleStateTwo(!textToggleTwo)}
+          onClick={() => handleSlideClick(1)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleTwo ? (
+          {openSlideIndex !== 1 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/kk.png" />
               </div>
               <div className="bottom-caro-box">
@@ -255,7 +255,13 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>Kedarkala, a unique artisanal interior design studio, aimed to establish a strong brand identity and offer an exceptional online experience to its customers. They turned to Enigma Digital for their expertise in branding, UI/UX design, and website development.</p>
+              <p>
+                Kedarkala, a unique artisanal interior design studio, aimed to
+                establish a strong brand identity and offer an exceptional
+                online experience to its customers. They turned to Enigma
+                Digital for their expertise in branding, UI/UX design, and
+                website development.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -268,16 +274,14 @@ export default function carousel() {
         <Slide
           index={2}
           className={styles.slide__caro}
-          onClick={() => textToggleStateThree(!textToggleThree)}
+          onClick={() => handleSlideClick(2)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleThree ? (
+          {openSlideIndex !== 2 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/dmtca.png" />
               </div>
               <div className="bottom-caro-box">
@@ -292,7 +296,14 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>DMTCA, a forward-thinking digital agency, engaged Enigma Digital to develop a strong brand identity and cohesive website design. The agency's branding and design expertise helped DMTCA establish a memorable presence that effectively communicated their innovative approach and commitment to delivering top-tier digital solutions.</p>
+              <p>
+                DMTCA, a forward-thinking digital agency, engaged Enigma Digital
+                to develop a strong brand identity and cohesive website design.
+                The agency's branding and design expertise helped DMTCA
+                establish a memorable presence that effectively communicated
+                their innovative approach and commitment to delivering top-tier
+                digital solutions.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -305,16 +316,14 @@ export default function carousel() {
         <Slide
           index={3}
           className={styles.slide__caro}
-          onClick={() => textToggleStateFour(!textToggleFour)}
+          onClick={() => handleSlideClick(3)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleFour ? (
+          {openSlideIndex !== 3 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/riva.png" />
               </div>
               <div className="bottom-caro-box">
@@ -329,7 +338,14 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>RivaBuild, a renowned real estate developer, enlisted Enigma Digital to create an immersive digital experience that showcased their properties and services. The agency designed a stunning website, user-friendly app, engaging collaterals, and captivating videos that highlighted RivaBuild's dedication to quality, innovation, and customer satisfaction.</p>
+              <p>
+                RivaBuild, a renowned real estate developer, enlisted Enigma
+                Digital to create an immersive digital experience that showcased
+                their properties and services. The agency designed a stunning
+                website, user-friendly app, engaging collaterals, and
+                captivating videos that highlighted RivaBuild's dedication to
+                quality, innovation, and customer satisfaction.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -342,16 +358,14 @@ export default function carousel() {
         <Slide
           index={4}
           className={styles.slide__caro}
-          onClick={() => textToggleStateFive(!textToggleFive)}
+          onClick={() => handleSlideClick(4)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleFive ? (
+          {openSlideIndex !== 4 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/quickx.png" />
               </div>
               <div className="bottom-caro-box">
@@ -366,7 +380,15 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>Quickx, a cutting-edge cryptocurrency platform, partnered with Enigma Digital to create a seamless and secure web and mobile app experience. The agency's expertise in app design allowed them to deliver intuitive and user-friendly interfaces that facilitated smooth cryptocurrency transactions while reinforcing Quickx's reputation as a reliable and innovative fintech solution.</p>
+              <p>
+                Quickx, a cutting-edge cryptocurrency platform, partnered with
+                Enigma Digital to create a seamless and secure web and mobile
+                app experience. The agency's expertise in app design allowed
+                them to deliver intuitive and user-friendly interfaces that
+                facilitated smooth cryptocurrency transactions while reinforcing
+                Quickx's reputation as a reliable and innovative fintech
+                solution.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -379,16 +401,14 @@ export default function carousel() {
         <Slide
           index={5}
           className={styles.slide__caro}
-          onClick={() => textToggleStateSix(!textToggleSix)}
+          onClick={() => handleSlideClick(5)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleSix ? (
+          {openSlideIndex !== 5 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/bespin.png" />
               </div>
               <div className="bottom-caro-box">
@@ -403,7 +423,14 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>Bespin Labs, a leading IT company, partnered with Enigma Digital to enhance its online presence and marketing materials. The agency's expertise in website design and collaterals production enabled Bespin Labs to communicate their technical expertise and industry leadership effectively, attracting new clients and establishing a strong brand identity.</p>
+              <p>
+                Bespin Labs, a leading IT company, partnered with Enigma Digital
+                to enhance its online presence and marketing materials. The
+                agency's expertise in website design and collaterals production
+                enabled Bespin Labs to communicate their technical expertise and
+                industry leadership effectively, attracting new clients and
+                establishing a strong brand identity.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -416,16 +443,14 @@ export default function carousel() {
         <Slide
           index={6}
           className={styles.slide__caro}
-          onClick={() => textToggleStateSeven(!textToggleSeven)}
+          onClick={() => handleSlideClick(6)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleSeven ? (
+          {openSlideIndex !== 6 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/patronum.png" />
               </div>
               <div className="bottom-caro-box">
@@ -440,7 +465,13 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>Patronum, an innovative SaaS company offering Google Workspace management solutions, sought to increase brand awareness and drive customer acquisition. Enigma Digital's full-service approach, encompassing branding, web design, and organic marketing, made them the ideal partner for Patronum.</p>
+              <p>
+                Patronum, an innovative SaaS company offering Google Workspace
+                management solutions, sought to increase brand awareness and
+                drive customer acquisition. Enigma Digital's full-service
+                approach, encompassing branding, web design, and organic
+                marketing, made them the ideal partner for Patronum.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
@@ -453,16 +484,14 @@ export default function carousel() {
         <Slide
           index={7}
           className={styles.slide__caro}
-          onClick={() => textToggleStateEight(!textToggleEight)}
+          onClick={() => handleSlideClick(7)}
+          data-cursor-text="Drag"
+          data-cursor-color="#000"
+          data-cursor-size="100px"
         >
-          {textToggleEight ? (
+          {openSlideIndex !== 7 ? (
             <>
-              <div
-                className="image-box-slider"
-                data-cursor-text="Drag"
-                data-cursor-color="#000"
-                data-cursor-size="100px"
-              >
+              <div className="image-box-slider">
                 <img src="/assets/about/black/patra.png" />
               </div>
               <div className="bottom-caro-box">
@@ -477,7 +506,14 @@ export default function carousel() {
             </>
           ) : (
             <div className="hide-div-caro">
-              <p>Patra, an insure-tech company, collaborated with Enigma Digital to develop a user-centric app and implement effective marketing strategies. The agency's UI/UX design expertise and data-driven marketing approach helped Patra create a highly engaging web experience and reach their target audience, resulting in increased user adoption and brand awareness.</p>
+              <p>
+                Patra, an insure-tech company, collaborated with Enigma Digital
+                to develop a user-centric app and implement effective marketing
+                strategies. The agency's UI/UX design expertise and data-driven
+                marketing approach helped Patra create a highly engaging web
+                experience and reach their target audience, resulting in
+                increased user adoption and brand awareness.
+              </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"

@@ -249,7 +249,11 @@ export default function dharan() {
                   >
                     <button className={styles.linkButton}>Dharan.co.in</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -659,10 +663,17 @@ export default function dharan() {
                 </div>
               </div>
 
-              <div className={styles.colorBoxesSection}>
+              <div
+                className={styles.colorBoxesSection}
+                id="dark-mode-colors-casestudy"
+              >
                 <ul>
-                  <li className={styles.colorOne}>#EB298E</li>
-                  <li className={styles.colorTwo}>#48484B</li>
+                  <li className={styles.colorOne} id="line">
+                    #EB298E
+                  </li>
+                  <li className={styles.colorTwo} id="line">
+                    #48484B
+                  </li>
                 </ul>
               </div>
               <div className={styles.mobileImg}>

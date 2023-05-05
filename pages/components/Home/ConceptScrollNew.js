@@ -213,9 +213,9 @@ export default function ConceptScrollNew() {
                       loop
                       muted
                       playsInline
-                      src="/assets//newProject/a.webm" loading="lazy"
-                    >
-                    </video>
+                      src="/assets//newProject/a.webm"
+                      loading="lazy"
+                    ></video>
                     <div className="macbook_frame_background" />
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function ConceptScrollNew() {
                     <br />
                     and take your brand
                     <br />
-                    to the Next Level? 🚀
+                    to the Next Level? <span className="emoji-dark">🚀</span>
                   </h4>
                   <div className="c-hm-us_title">
                     <h2 className="t-d3-fluid cta">
@@ -264,7 +264,8 @@ export default function ConceptScrollNew() {
                           data-cursor-size="100px"
                           data-cursor-exclusion
                         >
-                          Say, Hello! <span className="wave">👋</span>
+                          Say, Hello!{" "}
+                          <span className="wave emoji-dark">👋</span>
                         </Link>
                       </div>
                     </h2>

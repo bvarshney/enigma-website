@@ -80,7 +80,11 @@ export default function SliderMarquee() {
             <h1>
               More Projects{" "}
               <span>
-                <img src="/assets/casestudies/vector.webp" alt="Png" />
+                <img
+                  src="/assets/casestudies/vector.webp"
+                  alt="Png"
+                  id="case-study-arrow"
+                />
               </span>
             </h1>
           </div>
@@ -161,7 +165,7 @@ export default function SliderMarquee() {
                       </Link>
                     </div>
                     <div className="cb-marquee-item project-marquee-item">
-                      <Link href="/quick">
+                      <Link href="/quickx">
                         <Image
                           src="/assets/projects/quick-s.png"
                           width={2000}

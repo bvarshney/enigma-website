@@ -257,7 +257,11 @@ export default function wragby() {
                       wragbysolutions.com
                     </button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -288,7 +292,7 @@ export default function wragby() {
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    data-cursor-text="WragBy"
+                    data-cursor-text="Wragby"
                   />
                 </figure>
               </div>
@@ -345,13 +349,15 @@ export default function wragby() {
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#E30B25"
-                  data-cursor-text="WragBy"
+                  data-cursor-text="Wragby"
                 />
               </figure>
             </div>
           </div>
 
           {/* ====================== Parallax Image  END ====================== */}
+
+          <div className="space-large desktop"></div>
 
           {/* ====================== Third Section ============================ */}
 
@@ -475,21 +481,6 @@ export default function wragby() {
           {/* ========================== The LOGO Section END ======================= */}
 
           <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           <div className={styles.ipad}></div>
 
@@ -617,22 +608,7 @@ export default function wragby() {
 
           {/* ========================== The LOGO Section END ======================= */}
           <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
           {/* ====================== Fonts Section ======================== */}
 
           <div className={styles.fontSection}>
@@ -670,7 +646,10 @@ export default function wragby() {
             </div>
 
             {/* <img src="/assets/casestudies/wragby/color.webp" alt="color" /> */}
-            <div className={styles.colorBoxesSection}>
+            <div
+              className={styles.colorBoxesSection}
+              id="dark-mode-colors-casestudy"
+            >
               <ul>
                 <li className={styles.colorOne} id="line">
                   #E30B25
@@ -751,7 +730,7 @@ export default function wragby() {
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    data-cursor-text="WragBy"
+                    data-cursor-text="Wragby"
                   />
                 </figure>
               </div>
@@ -810,7 +789,7 @@ export default function wragby() {
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    data-cursor-text="WragBy"
+                    data-cursor-text="Wragby"
                   />
                 </figure>
               </div>
@@ -821,7 +800,6 @@ export default function wragby() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
           <div className={styles.patronumForthSection}>

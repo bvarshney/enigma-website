@@ -257,7 +257,11 @@ export default function gcm() {
                       gardencitymall.com
                     </button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -638,8 +642,16 @@ export default function gcm() {
               <h1>Fonts</h1>
             </div>
             <div className={styles.gcmfontImagebox}>
-              <img src="/assets/casestudies/gcm/font1.png" alt="Fonts" />
-              <img src="/assets/casestudies/gcm/font2.png" alt="Fonts" />
+              <img
+                src="/assets/casestudies/gcm/font1.png"
+                alt="Fonts"
+                id="fonts-dark-casestudy"
+              />
+              <img
+                src="/assets/casestudies/gcm/font2.png"
+                alt="Fonts"
+                id="fonts-dark-casestudy"
+              />
             </div>
           </div>
 

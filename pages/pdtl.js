@@ -251,7 +251,11 @@ export default function pdtl() {
                   <Link href="#" target="_blank" className={styles.Link}>
                     <button className={styles.linkButton}>PDTL.com</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -657,7 +661,10 @@ export default function pdtl() {
               </div>
             </div>
 
-            <div className={styles.colorBoxesSection}>
+            <div
+              className={styles.colorBoxesSection}
+              id="dark-mode-colors-casestudy"
+            >
               <ul>
                 <li className={styles.colorOne} id="line">
                   #000000

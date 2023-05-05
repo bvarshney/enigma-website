@@ -729,8 +729,9 @@ export default function about() {
                 We see the bigger picture, we are ambitious, we set the bar high
                 in all facets of our work, we love what we do and most
                 importantly, we were not made for the overpopulated plains of
-                mediocrity. Swayed already? 😏 But we’ve got a few more reasons
-                for why you’d want to work with us:
+                mediocrity. Swayed already?{" "}
+                <span className="emoji-dark">😏</span> But we’ve got a few more
+                reasons for why you’d want to work with us:
               </p>
             </div>
           </div>

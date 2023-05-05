@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Menu from "./Hamburger";
 import { easeInOut, motion } from "framer-motion";
@@ -7,10 +7,55 @@ import Link from "next/link";
 
 export default function Header() {
   const [show, setShow] = useState(false);
+  const [invertText, setInvertText] = useState(
+    typeof window !== "undefined"
+      ? localStorage.getItem("invertText") === "true"
+      : false
+  );
+
+  const [imgSrc, setImgSrc] = useState(
+    typeof window !== "undefined"
+      ? localStorage.getItem("imgSrc") === "ture"
+      : false
+  );
+
+  useEffect(() => {
+    localStorage.setItem("invertText", invertText);
+
+    localStorage.setItem("imgSrc", imgSrc);
+    setImgSrc(invertText ? "/dark/moon.svg" : "/dark/sun.svg");
+
+    const div = document.querySelector(".scroll-content");
+    if (invertText) {
+      div.classList.add("dark-mode");
+    } else {
+      div.classList.remove("dark-mode");
+    }
+  }, [invertText, imgSrc]);
+
+  const selectImage = (src) => {
+    setImgSrc(src);
+  };
 
   function clickHandler() {
     setShow(true);
   }
+
+  // Sound on Click
+  const buttonRefDarkMode = useRef(null);
+
+  useEffect(() => {
+    const button = buttonRefDarkMode.current;
+    button.addEventListener("click", handleClick);
+    return () => {
+      button.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  const handleClick = () => {
+    const audio = new Audio("/assets/music/click.mp3");
+    audio.play();
+  };
 
   return (
     <header className="header-section">
@@ -26,7 +71,7 @@ export default function Header() {
             width={80}
             height={80}
             alt="main-logo"
-            className="main-logo"
+            className="main-logo svg-dark-mode"
             data-cursor-size="60px"
             data-cursor-exclusion
             id="main-logo"
@@ -79,6 +124,13 @@ export default function Header() {
             </Showreel>
           </div>
         </div>
+        <button
+          onClick={() => setInvertText(!invertText)}
+          className="dark-mode-btn"
+          ref={buttonRefDarkMode}
+        >
+          <Image src={imgSrc} alt="Inverted" width={31} height={31} />
+        </button>
         <Menu />
       </div>
     </header>

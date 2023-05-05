@@ -255,7 +255,7 @@ export default function kedarkala() {
                 <div
                   id="patroSub"
                   data-cursor-size="60px"
-                  data-cursor-color="#CF9F37"
+                  data-cursor-color="#000"
                   data-cursor-text="Visit!"
                 >
                   <Link
@@ -265,7 +265,11 @@ export default function kedarkala() {
                   >
                     <button className={styles.linkButton}>kedarkala.com</button>
                     <span className={styles.linkSvg}>
-                      <img src="/assets/casestudies/Vector.svg" alt="Svg" />
+                      <img
+                        src="/assets/casestudies/Vector.svg"
+                        alt="Svg"
+                        id="case-study-arrow"
+                      />
                     </span>
                   </Link>
                 </div>
@@ -642,7 +646,7 @@ export default function kedarkala() {
 
           {/* ====================== Fonts Section ======================== */}
 
-          <div className={styles.fontSection}>
+          <div className={styles.fontSection} id="kedar-font-section">
             <div className={styles.fontHeading}>
               <h1>Typography</h1>
             </div>
@@ -651,8 +655,13 @@ export default function kedarkala() {
                 src="/assets/casestudies/kedarkala/typo-img.webp"
                 alt="Fonts"
                 className={styles.typoImgFirst}
+                id="kedar-font-img"
               />
-              <img src="/assets/casestudies/kedarkala/typo.webp" alt="Fonts" />
+              <img
+                src="/assets/casestudies/kedarkala/typo.webp"
+                alt="Fonts"
+                id="kedar-font-img"
+              />
             </div>
           </div>
 
@@ -797,7 +806,6 @@ export default function kedarkala() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
           <div className={styles.patronumForthSection}>
