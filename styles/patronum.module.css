@@ -46,6 +46,11 @@
   font-weight: 500;
 }
 
+.linkButton{
+  font-family: "Gilroy";
+  font-weight: 500;
+}
+
 .linkSvg img {
   margin-left: 0.2vw;
   width: 0.8vw;
@@ -718,7 +723,7 @@
   }
 
   .forthSectionLeftBox{
-    width: 100%;
+    width: 30%;
   }
 
   .forthSectionLeftBox h1 {
@@ -757,8 +762,8 @@
   }
 
   .imageContainer {
-    width: 35vw;
-    height: 35%;
+    width: 37vw;
+    height: 85%;
   }
 
   .imageContainer img {
@@ -777,12 +782,12 @@
   }
 
   .firstLogoBox {
-    height: 100vh;
+    height: 100%;
     margin-right: 3vw;
   }
 
   .secondLogoBox {
-    height: 100vh;
+    height: 100%;
   }
 
   .secondLogoBox h1 {
@@ -889,7 +894,7 @@
   }
 
   .nextProjectHeading {
-    width: 40%;
+    width: 35%;
     text-align: center;
   }
 
@@ -907,7 +912,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 8vw;
+    top: 8.5vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s
@@ -1009,6 +1014,7 @@
   .thirdSectionContent {
     height: 100%;
     width: 85%;
+    margin: 0 auto;
     padding: 15vw 0;
     flex-direction: column;
     align-items: flex-start;
@@ -1030,13 +1036,18 @@
 
   .patronumForthSection {
     height: auto;
+    margin-bottom: 10vh;
   }
 
   .forthSectionContent {
     width: 85%;
     flex-direction: column;
     height: 100%;
-    padding: 15vw 0;
+    padding: 0;
+  }
+
+  .forthSectionLeftBox{
+    width: 100%;
   }
 
   .forthSectionLeftBox h1 {

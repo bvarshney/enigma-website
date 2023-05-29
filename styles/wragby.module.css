@@ -46,6 +46,11 @@
     font-weight: 500;
   }
 
+  .linkButton{
+  font-family: "Gilroy";
+  font-weight: 500;
+}
+
   .linkSvg img {
     margin-left: 0.2vw;
     width: 0.8vw;
@@ -115,6 +120,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 110%;
+    object-fit: cover;
   }
 
   .patronumThirdSection {
@@ -469,7 +476,7 @@
     line-height: 1.5;
     font-weight: 500;
     font-family: 'Gilroy';
-    box-shadow: 2px 2px 25px #1a1a1a;
+    box-shadow: 5px 5px 15px 0px #1a1a1a47;
     text-align: center;
   }
 
@@ -759,6 +766,7 @@
 
     .clientTestimonialSectionContent{
       width: 80%;
+      gap: 5vh;
     }
     
     .clientTestimonialSectionLeftBox h1{
@@ -776,8 +784,8 @@
     }
 
     .imageContainer {
-      width: 35vw;
-      height: 35%;
+      width: 38vw;
+      height: 85%;
     }
 
     .imageContainer img {
@@ -785,6 +793,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
+      height: 120%;
       object-fit: cover;
       object-position: center;
       padding: 0;
@@ -801,6 +810,7 @@
     }
 
     .secondLogoBox {
+      width: 40%;
       height: 50vh;
     }
 
@@ -999,7 +1009,7 @@
     }
 
     .linkSvg img {
-      margin-bottom: 1vw;
+      margin-bottom: 1.5vw;
       margin-left: 1.5vw;
       width: 2.7vw;
       height: auto;
@@ -1049,13 +1059,15 @@
     }
 
     .img {
-      height: calc(100% + 15rem);
+      height: 130%;
       object-fit: cover;
+      top: -10%;
     }
 
     .thirdSectionContent {
       height: 100%;
       width: 85%;
+      margin: 0 auto;
       padding: 15vw 0;
       flex-direction: column;
       align-items: flex-start;
@@ -1076,6 +1088,8 @@
     }
 
     .patronumForthSection {
+      margin-top: 0;
+      margin-bottom: 0;
       height: auto;
     }
 

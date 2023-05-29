@@ -290,7 +290,7 @@ export default function gcm() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  data-cursor-color="#E73354"
+                  data-cursor-color="#EF9C34"
                   data-cursor-text="GCM"
                 />
               </div>
@@ -298,8 +298,10 @@ export default function gcm() {
           </div>
 
           {/* ====================== Parallax Image Second  END ====================== */}
+
           <div className="space-large desktop"></div>
           <div className={styles.ipad}></div>
+
           {/* ====================== Third Section ============================ */}
 
           <div className={styles.patronumThirdSection}>
@@ -349,7 +351,7 @@ export default function gcm() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  data-cursor-color="#E73354"
+                  data-cursor-color="#EBA17D"
                   data-cursor-text="GCM"
                 />
               </figure>
@@ -393,7 +395,6 @@ export default function gcm() {
 
           {/* ====================== Third Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
           <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
@@ -405,34 +406,26 @@ export default function gcm() {
                   <img
                     src="/assets/casestudies/gcm/web1.webp"
                     alt="Logo"
-                    data-cursor-color="#43B9D0"
+                    data-cursor-color="#A4A4CD"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
                     src="/assets/casestudies/gcm/web2.webp"
                     alt="Logo"
-                    data-cursor-color="#323B44"
+                    data-cursor-color="#FFC09F"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
@@ -442,7 +435,7 @@ export default function gcm() {
                   <img
                     src="/assets/casestudies/gcm/web3.webp"
                     alt="Logo"
-                    data-cursor-color="#4BDC9A"
+                    data-cursor-color="#F8E890"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
@@ -455,17 +448,13 @@ export default function gcm() {
                   <img
                     src="/assets/casestudies/gcm/web4.webp"
                     alt="Logo"
-                    data-cursor-color="#FFB756"
+                    data-cursor-color="#ADF8B5"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
           </div>
@@ -547,23 +536,6 @@ export default function gcm() {
                   <img
                     src="/assets/casestudies/gcm/web5.webp"
                     alt="Logo"
-                    data-cursor-color="#43B9D0"
-                    data-cursor-text="GCM"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
-              </div>
-              <div className={styles.secondLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <img
-                    src="/assets/casestudies/gcm/web6.webp"
-                    alt="Logo"
                     data-cursor-color="#323B44"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -571,10 +543,19 @@ export default function gcm() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
+              </div>
+              <div className={styles.secondLogoBox}>
+                <div className={styles.imageContainer} id="image-container">
+                  <img
+                    src="/assets/casestudies/gcm/web6.webp"
+                    alt="Logo"
+                    data-cursor-color="#FF9870"
+                    data-cursor-text="GCM"
+                    data-cursor-size="120px"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                  />
+                </div>
               </div>
             </div>
 
@@ -582,9 +563,9 @@ export default function gcm() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/web7.webp"
+                    src="/assets/casestudies/gcm/web7.png"
                     alt="Logo"
-                    data-cursor-color="#4BDC9A"
+                    data-cursor-color="#EF96B6"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
@@ -597,7 +578,7 @@ export default function gcm() {
                   <img
                     src="/assets/casestudies/gcm/web8.webp"
                     alt="Logo"
-                    data-cursor-color="#FFB756"
+                    data-cursor-color="#E5BBA2"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
@@ -670,7 +651,7 @@ export default function gcm() {
             </div>
 
             <div className={styles.colorBoxesSection}>
-              <img src="/assets/casestudies/gcm/color.png" alt="color" />
+              <img src="/assets/casestudies/gcm/color-2.png" alt="color" />
             </div>
           </div>
 
@@ -830,7 +811,6 @@ export default function gcm() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
           <div className={styles.patronumForthSection}>

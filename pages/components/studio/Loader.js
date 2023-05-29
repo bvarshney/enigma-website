@@ -20,9 +20,7 @@ const item = {
     y: 0,
     transition: {
       ease: "easeInOut",
-      duration: 0.5,
-      delay: 2,
-      stagger: 0.5,
+      duration: 1,
     },
   },
   exit: {
@@ -30,7 +28,7 @@ const item = {
     y: -200,
     transition: {
       ease: "easeInOut",
-      duration: 0.8,
+      duration: 1,
     },
   },
 };
@@ -43,7 +41,6 @@ const itemMain = {
     transition: {
       ease: "easeInOut",
       duration: 1,
-      delay: 1,
     },
   },
 };

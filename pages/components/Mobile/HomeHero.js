@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
+import SplitType from "split-type";
 
 export default function HomeHero() {
   // Hero Section Animation
@@ -23,28 +24,7 @@ export default function HomeHero() {
         stagger: 0.2,
       }
     );
-  });
-
-  // Hero Section Para Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#para",
-      {
-        opacity: 0,
-        translateY: 200,
-        transformPerspective: "1000",
-        transformOrigin: "top center",
-      },
-      {
-        delay: 5,
-        duration: 1.3,
-        opacity: 1,
-        translateY: 0,
-        stagger: 0.2,
-      }
-    );
-  });
+  }, []);
 
   // Hero Video Section Animation
   useEffect(() => {
@@ -62,7 +42,25 @@ export default function HomeHero() {
         opacity: 1,
       }
     );
-  });
+  }, []);
+
+  // Text Reveal Animation For Each
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#para h4",
+      {
+        opacity: 0,
+        translateY: 300,
+      },
+      {
+        delay: 6,
+        duration: 2,
+        opacity: 1,
+        translateY: 0,
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -101,8 +99,8 @@ export default function HomeHero() {
               <h4>
                 Leveraging the power of{" "}
                 <span className="bold">
-                  Emotion, Consumer Psychology, and Technology,
-                </span>{" "}
+                  Emotion, Consumer Psychology, and Technology,{" "}
+                </span>
                 we create Digital Brand Experiences that propel your success in
                 the enigmatic realm of bits & bytes.
               </h4>

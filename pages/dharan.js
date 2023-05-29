@@ -629,7 +629,7 @@ export default function dharan() {
               <h1>Fonts</h1>
             </div>
             <div className={styles.fontImagebox}>
-              <img src="/assets/casestudies/dharan/font.webp" alt="Fonts" />
+              <img src="/assets/casestudies/dharan/font.png" alt="Fonts" />
             </div>
           </div>
 
@@ -887,7 +887,6 @@ export default function dharan() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
           <div className={styles.patronumForthSection}>

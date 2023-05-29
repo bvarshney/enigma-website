@@ -384,17 +384,18 @@ export default function ProjectsHome() {
     // Header
     tl.fromTo(
       "#line-anim #span",
-      0.8,
+      2,
       {
-        y: -350,
-        ease: "none",
+        y: -650,
+        ease: "Power3.inOut",
         skewY: -20,
       },
       {
         y: 0,
         skewY: 0,
         stagger: 0.4,
-      }
+      },
+      "-0.6"
     );
     return () => tl.kill();
   }, []);

@@ -46,10 +46,12 @@ export default function certvault() {
         delay: 0.5,
         y: 200,
         skewY: 10,
+        duration: 1,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
         skewY: 10,
+        duration: 1,
       });
       tl.to(svg, {
         duration: 0.5,
@@ -84,7 +86,7 @@ export default function certvault() {
         transformOrigin: "top center",
       },
       {
-        delay: 3.5,
+        delay: 3.6,
         duration: 1.3,
         rotationX: 0,
         opacity: 1,
@@ -104,7 +106,7 @@ export default function certvault() {
         translateY: 100,
       },
       {
-        delay: 3.5,
+        delay: 3.7,
         duration: 1.3,
         opacity: 1,
         translateY: 0,
@@ -124,7 +126,7 @@ export default function certvault() {
         transformOrigin: "top center",
       },
       {
-        delay: 4,
+        delay: 4.2,
         duration: 1.3,
         opacity: 1,
         translateY: 0,
@@ -248,8 +250,12 @@ export default function certvault() {
                   data-cursor-color="#F50D37"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="#" target="_blank" className={styles.Link}>
-                    <button className={styles.linkButton}>certvault.com</button>
+                  <Link
+                    href="https://certvault.org/"
+                    target="_blank"
+                    className={styles.Link}
+                  >
+                    <button className={styles.linkButton}>certvault.org</button>
                     <span className={styles.linkSvg}>
                       <img
                         src="/assets/casestudies/Vector.svg"
@@ -558,8 +564,8 @@ export default function certvault() {
                   <img
                     src="/assets/casestudies/certvault/web5.webp"
                     alt="Logo"
-                    data-cursor-color="#EE384E"
-                    data-cursor-text="Illustration"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -575,8 +581,8 @@ export default function certvault() {
                   <img
                     src="/assets/casestudies/certvault/web6.webp"
                     alt="Logo"
-                    data-cursor-color="#0A489B"
-                    data-cursor-text="Logo"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -595,8 +601,8 @@ export default function certvault() {
                   <img
                     src="/assets/casestudies/certvault/web7.webp"
                     alt="Logo"
-                    data-cursor-color="#EE3C50"
-                    data-cursor-text="Illustration"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -608,8 +614,8 @@ export default function certvault() {
                   <img
                     src="/assets/casestudies/certvault/web8.webp"
                     alt="Logo"
-                    data-cursor-color="#3F86E4"
-                    data-cursor-text="Logo Pattern"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}

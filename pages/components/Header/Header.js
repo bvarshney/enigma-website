@@ -5,6 +5,8 @@ import { easeInOut, motion } from "framer-motion";
 import Showreel from "../Home/Showreel";
 import Link from "next/link";
 
+import gsap from "gsap";
+
 export default function Header() {
   const [show, setShow] = useState(false);
   const [invertText, setInvertText] = useState(
@@ -25,7 +27,8 @@ export default function Header() {
     localStorage.setItem("imgSrc", imgSrc);
     setImgSrc(invertText ? "/dark/moon.svg" : "/dark/sun.svg");
 
-    const div = document.querySelector(".scroll-content");
+    // const div = document.querySelector(".scroll-content");
+    const div = document.body;
     if (invertText) {
       div.classList.add("dark-mode");
     } else {
@@ -56,6 +59,16 @@ export default function Header() {
     const audio = new Audio("/assets/music/click.mp3");
     audio.play();
   };
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      ".gsap-dark-img",
+      { scale: 0, rotate: "-280deg" },
+      { scale: 1, rotate: "0deg", duration: 0.7 }
+    );
+  });
 
   return (
     <header className="header-section">
@@ -124,13 +137,25 @@ export default function Header() {
             </Showreel>
           </div>
         </div>
-        <button
-          onClick={() => setInvertText(!invertText)}
-          className="dark-mode-btn"
-          ref={buttonRefDarkMode}
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 3.5, duration: 0.5, transition: easeInOut }}
         >
-          <Image src={imgSrc} alt="Inverted" width={31} height={31} />
-        </button>
+          <button
+            onClick={() => setInvertText(!invertText)}
+            className="dark-mode-btn"
+            ref={buttonRefDarkMode}
+          >
+            <Image
+              src={imgSrc}
+              alt="Inverted"
+              width={25}
+              height={25}
+              className="gsap-dark-img"
+            />
+          </button>
+        </motion.div>
         <Menu />
       </div>
     </header>

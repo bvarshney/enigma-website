@@ -9,6 +9,7 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "../../../styles/Carousel.module.css";
 import gsap from "gsap";
+import SplitType from "split-type";
 
 export default function carousel() {
   const [openSlideIndex, setOpenSlideIndex] = useState(null);
@@ -21,21 +22,26 @@ export default function carousel() {
     }
   };
 
+  // Text Reveal Animation For Each
   useEffect(() => {
-    const tl = gsap.timeline();
-
-    tl.fromTo(
-      ".hide-div-caro p",
-      {
-        translateY: 100,
+    const totalSection = document.querySelectorAll(".hide-div-caro");
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelectorAll(".hide-div-caro p"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-380 top",
+          end: "bottom top",
+          markers: false,
+        },
+        duration: 0.8,
         opacity: 0,
-      },
-      {
-        duration: 1,
-        translateY: 0,
-        opacity: 1,
-      }
-    );
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.02,
+      });
+    });
   });
 
   useEffect(() => {
@@ -215,11 +221,13 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Jellyfish, a fast-growing IT services provider, sought to
-                elevate their online presence and improve their customer
-                experience. Recognizing Enigma Digital's expertise in UX design,
-                they partnered with the agency to enhance their website's user
-                interface and overall design.
+                <span>
+                  Jellyfish, a fast-growing IT services provider, sought to
+                  elevate their online presence and improve their customer
+                  experience. Recognizing Enigma Digital's expertise in UX
+                  design, they partnered with the agency to enhance their
+                  website's user interface and overall design.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -256,11 +264,13 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Kedarkala, a unique artisanal interior design studio, aimed to
-                establish a strong brand identity and offer an exceptional
-                online experience to its customers. They turned to Enigma
-                Digital for their expertise in branding, UI/UX design, and
-                website development.
+                <span>
+                  Kedarkala, a unique artisanal interior design studio, aimed to
+                  establish a strong brand identity and offer an exceptional
+                  online experience to its customers. They turned to Enigma
+                  Digital for their expertise in branding, UI/UX design, and
+                  website development.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -297,12 +307,14 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                DMTCA, a forward-thinking digital agency, engaged Enigma Digital
-                to develop a strong brand identity and cohesive website design.
-                The agency's branding and design expertise helped DMTCA
-                establish a memorable presence that effectively communicated
-                their innovative approach and commitment to delivering top-tier
-                digital solutions.
+                <span>
+                  DMTCA, a forward-thinking digital agency, engaged Enigma
+                  Digital to develop a strong brand identity and cohesive
+                  website design. The agency's branding and design expertise
+                  helped DMTCA establish a memorable presence that effectively
+                  communicated their innovative approach and commitment to
+                  delivering top-tier digital solutions.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -339,12 +351,14 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                RivaBuild, a renowned real estate developer, enlisted Enigma
-                Digital to create an immersive digital experience that showcased
-                their properties and services. The agency designed a stunning
-                website, user-friendly app, engaging collaterals, and
-                captivating videos that highlighted RivaBuild's dedication to
-                quality, innovation, and customer satisfaction.
+                <span>
+                  RivaBuild, a renowned real estate developer, enlisted Enigma
+                  Digital to create an immersive digital experience that
+                  showcased their properties and services. The agency designed a
+                  stunning website, user-friendly app, engaging collaterals, and
+                  captivating videos that highlighted RivaBuild's dedication to
+                  quality, innovation, and customer satisfaction.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -381,13 +395,15 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Quickx, a cutting-edge cryptocurrency platform, partnered with
-                Enigma Digital to create a seamless and secure web and mobile
-                app experience. The agency's expertise in app design allowed
-                them to deliver intuitive and user-friendly interfaces that
-                facilitated smooth cryptocurrency transactions while reinforcing
-                Quickx's reputation as a reliable and innovative fintech
-                solution.
+                <span>
+                  Quickx, a cutting-edge cryptocurrency platform, partnered with
+                  Enigma Digital to create a seamless and secure web and mobile
+                  app experience. The agency's expertise in app design allowed
+                  them to deliver intuitive and user-friendly interfaces that
+                  facilitated smooth cryptocurrency transactions while
+                  reinforcing Quickx's reputation as a reliable and innovative
+                  fintech solution.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -424,12 +440,15 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Bespin Labs, a leading IT company, partnered with Enigma Digital
-                to enhance its online presence and marketing materials. The
-                agency's expertise in website design and collaterals production
-                enabled Bespin Labs to communicate their technical expertise and
-                industry leadership effectively, attracting new clients and
-                establishing a strong brand identity.
+                <span>
+                  Bespin Labs, a leading IT company, partnered with Enigma
+                  Digital to enhance its online presence and marketing
+                  materials. The agency's expertise in website design and
+                  collaterals production enabled Bespin Labs to communicate
+                  their technical expertise and industry leadership effectively,
+                  attracting new clients and establishing a strong brand
+                  identity.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -466,11 +485,13 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Patronum, an innovative SaaS company offering Google Workspace
-                management solutions, sought to increase brand awareness and
-                drive customer acquisition. Enigma Digital's full-service
-                approach, encompassing branding, web design, and organic
-                marketing, made them the ideal partner for Patronum.
+                <span>
+                  Patronum, an innovative SaaS company offering Google Workspace
+                  management solutions, sought to increase brand awareness and
+                  drive customer acquisition. Enigma Digital's full-service
+                  approach, encompassing branding, web design, and organic
+                  marketing, made them the ideal partner for Patronum.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img
@@ -507,12 +528,14 @@ export default function carousel() {
           ) : (
             <div className="hide-div-caro">
               <p>
-                Patra, an insure-tech company, collaborated with Enigma Digital
-                to develop a user-centric app and implement effective marketing
-                strategies. The agency's UI/UX design expertise and data-driven
-                marketing approach helped Patra create a highly engaging web
-                experience and reach their target audience, resulting in
-                increased user adoption and brand awareness.
+                <span>
+                  Patra, an insure-tech company, collaborated with Enigma
+                  Digital to develop a user-centric app and implement effective
+                  marketing strategies. The agency's UI/UX design expertise and
+                  data-driven marketing approach helped Patra create a highly
+                  engaging web experience and reach their target audience,
+                  resulting in increased user adoption and brand awareness.
+                </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
                 <img

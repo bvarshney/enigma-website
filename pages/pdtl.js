@@ -281,7 +281,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/img1.webp"
+                  src="/assets/casestudies/pdtl/img1.png"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -344,7 +344,7 @@ export default function pdtl() {
           <div className={styles.imageSecondSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/pdtl/img2.webp"
+                src="/assets/casestudies/pdtl/img2.png"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
@@ -431,7 +431,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web2.webp"
+                    src="/assets/casestudies/pdtl/web2.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -451,7 +451,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web3.webp"
+                    src="/assets/casestudies/pdtl/web3.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -464,7 +464,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web4.webp"
+                    src="/assets/casestudies/pdtl/web4.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -548,7 +548,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web5.webp"
+                    src="/assets/casestudies/pdtl/web5.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -565,7 +565,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web6.webp"
+                    src="/assets/casestudies/pdtl/web6.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -585,7 +585,7 @@ export default function pdtl() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web7.webp"
+                    src="/assets/casestudies/pdtl/web7.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -598,7 +598,7 @@ export default function pdtl() {
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/web8.webp"
+                    src="/assets/casestudies/pdtl/web8.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
@@ -756,7 +756,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/img3.webp"
+                  src="/assets/casestudies/pdtl/img3.png"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -817,7 +817,7 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/img4.webp"
+                  src="/assets/casestudies/pdtl/img4.png"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
@@ -832,7 +832,6 @@ export default function pdtl() {
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
           <div className="space-large desktop"></div>
 
           <div className={styles.patronumForthSection}>

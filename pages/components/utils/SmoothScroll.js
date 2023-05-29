@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import Scrollbar from "smooth-scrollbar";
+import Scrollbar, { ScrollbarPlugin } from "smooth-scrollbar";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
-// import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
+import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
 
 gsap.registerPlugin(ScrollTrigger);
 class ScrollTriggerPlugin extends Scrollbar.ScrollbarPlugin {
@@ -139,7 +139,28 @@ const SmoothScroll = () => {
   //$ Check if Mobile or Desktop
   //   const isDesktop = checkDesktop();
 
-  // Scrollbar.use(OverscrollPlugin);
+  // Mobile
+
+  class SmoothTouchScrollPlugin extends ScrollbarPlugin {
+    static pluginName = "smoothTouchScroll";
+
+    transformDelta(delta, fromEvent) {
+      if (fromEvent.type === "touchmove") {
+        this.scrollbar.options.damping = 0.05; // change this to whatever you want
+      }
+      return delta;
+    }
+  }
+  class SmoothTouchendScrollPlugin extends ScrollbarPlugin {
+    static pluginName = "smoothTouchendScroll";
+
+    transformDelta(delta, fromEvent) {
+      if (fromEvent.type === "touchend") {
+        this.scrollbar.options.damping = 0.01; // change this to whatever you want
+      }
+      return delta;
+    }
+  }
 
   //$ Run on Page Load
   useEffect(() => {
@@ -151,22 +172,29 @@ const SmoothScroll = () => {
       delegateTo: document,
       alwaysShowTracks: true,
       continuousScrolling: true,
-      // plugins: {
-      //   overscroll: {
-      //     effect: "bounce",
-      //     damping: 0.15,
-      //     maxOverscroll: 80,
-      //   },
-      // },
+      plugins: {
+        overscroll: {
+          effect: "bounce",
+          damping: 0.15,
+          maxOverscroll: 80,
+        },
+        mobile: {
+          // speed: 10,
+        },
+      },
     }; //` Options
 
     //$ Initialize with View and Settings
+    Scrollbar.use(SmoothTouchendScrollPlugin, SmoothTouchScrollPlugin);
     const smoothscroll = Scrollbar.init(view, settings);
     smoothscrollRef.current = smoothscroll;
     const cursorRef = document.getElementById("c-cursor");
 
     smoothscroll.addListener(ScrollTrigger.update);
     ScrollTrigger.defaults({ scroller: document.body });
+
+    // Mobile Plugin
+
     //$ Jelly Motion Scroll for Mobiles
     //@ Jelly Scroll Class
     const JellyScroll = (options) => {
@@ -242,7 +270,6 @@ const SmoothScroll = () => {
     });
 
     //  Modal Video Wrapper
-
     const modalWrapper = document.getElementById("modal-video-wrapper");
 
     smoothscroll.addListener(function (status) {

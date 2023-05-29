@@ -59,6 +59,11 @@
 
 @media screen and (max-width: 991px) {
   .modalWrapper{
-    height: 50vh;
+    background: #00000095;
+    height: 100vh;
+  }
+
+  .modal{
+    height: 50%;
   }
 }

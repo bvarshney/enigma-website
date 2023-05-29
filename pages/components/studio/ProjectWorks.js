@@ -383,7 +383,7 @@ export default function ProjectsHome() {
     // Header
     tl.fromTo(
       "#line-anim #span",
-      0.8,
+      1.5,
       {
         y: -350,
         ease: "none",
@@ -1049,7 +1049,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Quick-X</h1>
+                      <h1>QuickX</h1>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >

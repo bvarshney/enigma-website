@@ -5,6 +5,7 @@ import { Cursor } from "../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "./components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
+import SplitType from "split-type";
 
 import Header from "./components/Header/Header";
 import AboutAerosol from "./components/About/AboutAerosol";
@@ -142,12 +143,12 @@ export default function about() {
         delay: 0.5,
         y: 200,
         skewY: 10,
-        duration: 0.7,
+        duration: 1,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
         skewY: 10,
-        duration: 0.7,
+        duration: 1,
       });
       tl.to(svg, {
         duration: 0.5,
@@ -169,56 +170,50 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
-  // Text Reveal Animation
+  // Text Reveal Animation For Each Whys US
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".first-about-content-section",
-        start: "-500 top",
-      },
-    });
-
-    const demoHeader = document.querySelectorAll(".why-us-anim");
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        y: 0,
-        duration: 1,
-        opacity: 1,
-        stagger: 0.4,
-      }
+    const totalSection = document.querySelectorAll(
+      ".first-about-content-section"
     );
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelectorAll(".why-us-anim"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-380 top",
+          end: "bottom top",
+          markers: false,
+        },
+        duration: 1,
+        opacity: 0,
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.02,
+      });
+    });
   }, []);
 
-  // Text Reveal Animation
+  // Text Reveal Animation For Each Client Love Us
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#client-loveus",
-        start: "-500 top",
-      },
-    });
-
-    const demoHeader = document.querySelectorAll(".client-anim-heading");
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        y: 100,
-      },
-      {
-        y: 0,
+    const totalSection = document.querySelectorAll("#client-loveus");
+    totalSection.forEach(function (elem, index) {
+      const text = new SplitType(elem.querySelectorAll(".client-anim-heading"));
+      let textwords = text.words;
+      gsap.from(textwords, {
+        scrollTrigger: {
+          trigger: elem,
+          start: "-380 top",
+          end: "bottom top",
+          markers: false,
+        },
         duration: 1,
-        opacity: 1,
-        stagger: 0.4,
-      }
-    );
+        opacity: 0,
+        yPercent: 100,
+        ease: "Power3.out",
+        stagger: 0.02,
+      });
+    });
   }, []);
 
   return (
@@ -271,7 +266,7 @@ export default function about() {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>Who we are</h1>
+            <h1>Who We Are</h1>
           </span>
         </div>
       </div>
@@ -720,18 +715,22 @@ export default function about() {
             </div>
             <div className="right-box-content">
               <p data-jelly className="why-us-anim">
-                We have been asked this question like a zillion times – How are
-                you different than the other agencies out there. Well, the truth
-                is that we were “Born Different”.{" "}
+                <span>
+                  We have been asked this question like a zillion times – How
+                  are you different than the other agencies out there. Well, the
+                  truth is that we were “Born Different”.{" "}
+                </span>
               </p>
               <br />
               <p className="mt-about why-us-anim" data-jelly>
-                We see the bigger picture, we are ambitious, we set the bar high
-                in all facets of our work, we love what we do and most
-                importantly, we were not made for the overpopulated plains of
-                mediocrity. Swayed already?{" "}
-                <span className="emoji-dark">😏</span> But we’ve got a few more
-                reasons for why you’d want to work with us:
+                <span>
+                  We see the bigger picture, we are ambitious, we set the bar
+                  high in all facets of our work, we love what we do and most
+                  importantly, we were not made for the overpopulated plains of
+                  mediocrity. Swayed already?{" "}
+                  <span className="emoji-dark">😏</span> But we’ve got a few
+                  more reasons for why you’d want to work with us:
+                </span>
               </p>
             </div>
           </div>
@@ -754,7 +753,6 @@ export default function about() {
         {/* =============== Slider Marquee END ================== */}
 
         <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
         <div className="ipad desktop"></div>
         <div className="ipad desktop"></div>
 
@@ -768,12 +766,14 @@ export default function about() {
             </div>
             <div className="right-box-content">
               <p data-jelly className="client-anim-heading">
-                It’s not just the eminence & superior quality of our work. It’s
-                our attitude, our approach, our meticulous attention to detail,
-                our ability to understand their business & their goals, and most
-                of all, it’s the way we treat our clients –They walk in as
-                clients and stay as friends! That’s why we say, we don’t work
-                for clients, we work with our friends.
+                <span>
+                  It’s not just the eminence & superior quality of our work.
+                  It’s our attitude, our approach, our meticulous attention to
+                  detail, our ability to understand their business & their
+                  goals, and most of all, it’s the way we treat our clients
+                  –They walk in as clients and stay as friends! That’s why we
+                  say, we don’t work for clients, we work with our friends.
+                </span>
               </p>
             </div>
           </div>

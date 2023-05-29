@@ -46,9 +46,11 @@ export default function patronum() {
         delay: 0.5,
         y: 200,
         skewY: 10,
+        duration: 1,
       }).to(".loader-wrap-heading h1", {
         delay: 0.5,
         y: -200,
+        duration: 1,
         skewY: 10,
       });
       tl.to(svg, {
@@ -818,9 +820,8 @@ export default function patronum() {
           {/* ====================== Client Section ============================ */}
 
           <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
 
+          <div className={styles.ipad}></div>
           <div className={styles.patronumForthSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>

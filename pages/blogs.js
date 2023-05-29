@@ -31,6 +31,14 @@ const handleHoverExit = (e) => {
 
 const Blogs = [
   {
+    name: "Strategy",
+    category: "Strategy",
+    Link: "/how-much-should-a-website-cost",
+    image: "/assets/blogs/blog-detail/website-cost/feature.jpg",
+    description:
+      "How Much Should a Website Cost? Cracking the Ultimate Conundrum",
+  },
+  {
     name: "Design",
     category: "Design",
     Link: "/how-to-choose-right-ux-agency",

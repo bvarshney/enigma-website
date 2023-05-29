@@ -345,6 +345,7 @@ export default function kedarkala() {
           {/* ====================== Third Section END ======================== */}
 
           <div className="space-large desktop"></div>
+          <div className={styles.ipad}></div>
 
           {/* ====================== Parallax Image =========================== */}
 
@@ -652,7 +653,7 @@ export default function kedarkala() {
             </div>
             <div className={styles.kedarfontImagebox}>
               <img
-                src="/assets/casestudies/kedarkala/typo-img.webp"
+                src="/assets/casestudies/kedarkala/typo-img.png"
                 alt="Fonts"
                 className={styles.typoImgFirst}
                 id="kedar-font-img"

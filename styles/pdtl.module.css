@@ -46,6 +46,11 @@
   font-weight: 500;
 }
 
+.linkButton{
+  font-family: "Gilroy";
+  font-weight: 500;
+}
+
 .linkSvg img {
   margin-left: 0.2vw;
   width: 0.8vw;
@@ -480,7 +485,7 @@
     line-height: 1.5;
     font-weight: 500;
     font-family: 'Gilroy';
-    box-shadow: 2px 2px 25px #1a1a1a;
+    box-shadow: 5px 5px 15px 0px #1a1a1a47;
     text-align: center;
   }
 

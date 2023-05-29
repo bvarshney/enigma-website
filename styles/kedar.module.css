@@ -46,6 +46,11 @@
   font-weight: 500;
 }
 
+.linkButton{
+  font-family: "Gilroy";
+  font-weight: 500;
+}
+
 .linkSvg img {
   margin-left: 0.2vw;
   width: 0.8vw;
@@ -408,7 +413,7 @@
 }
 
 .kedarfontImagebox {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding-top: 8vw;
   display: flex;
@@ -417,7 +422,7 @@
 }
 
 .kedarfontImagebox .typoImgFirst {
-  width: 25%;
+  width: 30%;
 }
 
 .kedarfontImagebox img {
@@ -639,10 +644,10 @@
   }
 
   .thirdSectionContent {
-    height: 40vh;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .thirdSectionLeftBox {
@@ -716,8 +721,8 @@
   }
 
   .imageContainer {
-    width: 35vw;
-    height: 35%;
+    width: 37vw;
+    height: 85%;
   }
 
   .imageContainer img {
@@ -738,11 +743,11 @@
 
   .firstLogoBox {
     margin-right: 3vw;
-    height: 100vh;
+    height: 100%;
   }
 
   .secondLogoBox {
-    height: 100vh;
+    height: 100%;
   }
 
   .secondLogoBox h1 {
@@ -756,7 +761,7 @@
 
   .fontSection {
     height: 65vh;
-    margin-top: 10vw;
+    margin-top: 20vw;
   }
 
   .kedarfontImagebox .typoImgFirst {
@@ -1000,6 +1005,7 @@
 
   .patronumForthSection {
     height: auto;
+    margin-top: 5vh;
   }
 
   .forthSectionContent {
