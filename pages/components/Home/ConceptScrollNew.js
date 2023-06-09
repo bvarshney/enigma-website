@@ -213,7 +213,7 @@ export default function ConceptScrollNew() {
                       loop
                       muted
                       playsInline
-                      src="/assets//newProject/a.webm"
+                      src="/assets/newProject/a.webm"
                       loading="lazy"
                     ></video>
                     <div className="macbook_frame_background" />
@@ -249,12 +249,10 @@ export default function ConceptScrollNew() {
                 </div>
                 <div className="c-hm-us_s2">
                   <h4 className="t-lead">
-                    Do you think we're the right <br /> partners to bring your
-                    idea to life
-                    <br />
-                    and take your brand
-                    <br />
-                    to the Next Level? <span className="emoji-dark">🚀</span>
+                  Unleash your brand's true potential with our<br/>
+                  expert UI/UX design, powerful organic marketing,<br/>
+                  and top-notch front-end development <br/>
+                  services. Ready to skyrocket? <span className="emoji-dark">🚀</span>
                   </h4>
                   <div className="c-hm-us_title">
                     <h2 className="t-d3-fluid cta">

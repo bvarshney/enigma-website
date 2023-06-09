@@ -1,0 +1,1344 @@
+.Main .linkButton {
+    background: transparent;
+    border: none;
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: -0.04vw;
+  }
+  
+  .Main {
+    width: 100%;
+    height: auto;
+  }
+  
+  .HeroSection {
+    width: 75%;
+    height: 65vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mainSubSection {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+  
+  }
+  
+  .HeroLeftBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .HeroLeftBox .Link {
+    font-size: 1.1vw;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 2vw;
+    font-weight: 500;
+  }
+  
+  .linkButton{
+    font-family: "Gilroy";
+    font-weight: 500;
+  }
+  
+  .linkSvg img {
+    margin-left: 0.2vw;
+    width: 0.8vw;
+    height: 0.7vw;
+  }
+  
+  .HeroLeftBox h1 {
+    font-size: 4.5vw;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 2vw;
+  }
+  
+  .HeroRightBox {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .HeroRightBox .work {
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    color: #1a1a1a;
+  }
+  
+  .HeroRightBox .year {
+    font-size: 1.3vw;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-bottom: 1.5vh;
+  }
+  
+  .thirdSectionRightBox .buttonBox {
+    width: 100%;
+    display: flex;
+    padding-top: 3vh;
+    justify-content: flex-start;
+  }
+  
+  .paraTop h1 {
+    font-size: 2.2vw;
+    letter-spacing: 0.02vw;
+    color: #1a1a1a;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 3vh;
+  }
+  
+  .imageSecondSection {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  
+  .imageSecondSection .imageBox {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .patronumThirdSection {
+    width: 100%;
+    height: auto;
+  }
+  
+  .thirdSectionContent {
+    width: 75%;
+    height: 60vh;
+    margin: 10vw auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .thirdSectionLeftBox {
+    width: 40%;
+    height: 100%;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+  }
+  
+  .thirdSectionLeftBox h1 {
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+  }
+  
+  .thirdSectionRightBox {
+    width: 70%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; */
+    /* padding-top: 5vw; */
+  }
+  
+  .thirdSectionRightBox .buttonBox h1 {
+    margin-right: 2vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    padding: 0.7vw 2vw;
+    border-radius: 100px;
+    text-transform: uppercase;
+    border: 0.01vw solid #1a1a1a;
+    transition: all 0.3s ease-in;
+  }
+  
+  .patronumForthSection {
+    width: 100%;
+    height: auto;
+  }
+  
+  .forthSectionContent {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .forthSectionLeftBox {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .forthSectionLeftBox h1 {
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    padding-top: 8vw;
+  }
+  
+  .forthSectionRightBox {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 8vw;
+  }
+  
+  .clientTestimonialSectionContent{
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10vh;
+  }
+  
+  .clientTestimonialSectionLeftBox h1{
+    font-size: 1.4vw;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-transform: uppercase;
+  }
+  .clientTestimonialparaTop h1{
+    font-size: 1.9vw;
+    letter-spacing: 0.5px;
+    color: #1a1a1a;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 3vw;
+    font-family: 'Ageo';
+  }
+  .clientTestimonialSpan{
+    color: #6f6f6f;
+  }
+  .clientTestimonialSpan2{
+    color: #a7a7a7;
+    font-size: 9vw;
+    line-height: 0;
+    font-family: sans-serif;
+    vertical-align: bottom;
+  }
+  .clientTestimonialSectionBottomBox{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 60%;
+    padding-top: 5vh;
+  }
+  
+  .clientTestimonialSectionFigure img{
+    width: 6vw;
+    border-radius: 50%;
+  }
+  .clientTestimonialSectionFigureText h5{
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .paraTop h1 {
+    font-size: 2.2vw;
+    letter-spacing: 0.02vw;
+    color: #1a1a1a;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 3vw;
+    font-family: 'Ageo';
+  }
+  
+  .paraTop h5 {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    margin-bottom: 3vw;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: 'Ageo';
+    text-align: justify;
+  }
+  
+  .logoSection {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .logoContentSection {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logoContentSection h1 {
+    font-size: 5vw;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .logoContentSection h3 {
+    font-size: 1.3vw;
+    text-align: left;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 2vw;
+  }
+  
+  .logoImageSection {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    width: 35vw;
+    height: 80%;
+  }
+  
+  .imageContainer img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+  }
+  
+  .firstLogoBox {
+    width: 37%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .firstLogoBox h1 {
+    max-width: 30vw;
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 3vw;
+  }
+  
+  .secondLogoBox {
+    width: 37%;
+    margin-top: 10vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .secondLogoBox h1 {
+    max-width: 30vw;
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-top: 3vw;
+  }
+  
+  .logoImageSectionSecond {
+    width: 100%;
+    height: 90vh;
+    margin-top: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fontSection {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .fontHeading {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .fontHeading h1 {
+    font-size: 4vw;
+    color: #1a1a1a;
+    text-transform: uppercase;
+  }
+  
+  .fontImagebox {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 5vw;
+  }
+  
+  .fontImagebox img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+  
+  .colorSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .colorHeading {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .colorHeading h1 {
+    font-size: 4vw;
+    color: #1a1a1a;
+  }
+  
+  .colorBox {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 5vw;
+  }
+  
+  .colorBoxHeadingBackground h2 {
+    position: absolute;
+    font-size: 17vw;
+    font-family: "Poppins", sans-serif;
+    top: 80%;
+    left: 50%;
+    line-height: calc(50px + 350 * ((100vw - 320px) / 1920));
+    font-weight: 600;
+    opacity: 0.4;
+    color: #bbbbbb61;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  
+  .colorBoxesSection {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .colorBoxesSection img {
+    width: 70%;
+    z-index: 10;
+  }
+  
+  .colorBoxesSection ul {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 34% 28% 21% 17%;
+  }
+  
+  .colorBoxesSection ul li {
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+    list-style: none;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 0.8vw;
+    line-height: 1.5;
+  }
+  
+  .colorOne {
+    width: 100%;
+    height: 210px;
+    background: #436AD6;
+    z-index: 1;
+    transform-origin: left center;
+  }
+  
+  .colorTwo {
+    width: 100%;
+    height: 160px;
+    z-index: 1;
+    background: #00CA72;
+  }
+  
+  .colorThree {
+    width: 100%;
+    height: 110px;
+    z-index: 1;
+    background: #FFCC00;
+  }
+  
+  .colorFour {
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    background: #FB275D;
+  }
+  
+  .videoHeading {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 4vw;
+  }
+  
+  .videoHeading h1 {
+    font-size: 4vw;
+    color: #1a1a1a;
+    font-weight: 500;
+    max-width: 42vw;
+  }
+  
+  .videoForthSection {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .videoContainer {
+    margin: 0 auto;
+    width: 90vw;
+  }
+  
+  .videoContainer video {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
+  
+  .websiteDesignSection {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .websiteDesignSection .leftBox {
+    width: 40%;
+  }
+  
+  .websiteDesignSection .leftBox h1 {
+    font-size: 1.4vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+  
+  .websiteDesignSection .rightBox {
+    width: 70%;
+  }
+  
+  .websiteDesignSection .rightBox h1 {
+      font-size: 1.4vw;
+      line-height: 1.5;
+      letter-spacing: 0.02vw;
+      color: #1a1a1a;
+      font-weight: 400;
+      text-align: justify;
+      font-family: 'Ageo';
+  }
+  
+  /* ========================= Media Queries ===================
+  ==============================================================
+  ============================================================== */
+  
+  @media (min-width: 1201px) and (max-width: 3839px) {
+    .mobile {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  
+    .mobileImg {
+      display: none !important;
+    }
+  
+    .mobileFont {
+      display: none;
+    }
+    
+    .nextUpContainer {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1920px) {
+    .mainSubSection {
+      height: 27vh;
+    }
+  }
+  
+  @media screen and (max-width: 1536px) {
+    .mainSubSection {
+      height: 17vh;
+    }
+    .HeroRightBox .year{
+      margin-bottom: -1.5vh;
+    }
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .mainSubSection {
+      height: 17vh;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    .ipad {
+      height: 10vh;
+    }
+  
+    #ipad {
+      display: none !important;
+    }
+  
+    .desktopSlider {
+      display: none;
+    }
+  
+    .desktopFont {
+      display: none;
+    }
+  
+    .HeroSection {
+      height: 40vh;
+    }
+  
+    .HeroLeftBox h1 {
+      font-size: 5.5vw;
+    }
+  
+    .Main .linkButton {
+      font-size: 2.5vw;
+    }
+  
+    .linkSvg img {
+      margin-bottom: 0.5vw;
+      margin-left: 0.2vw;
+      width: 2.8vw;
+      height: 1.7vw;
+    }
+  
+    .HeroRightBox {
+      height: 75%;
+    }
+  
+    .HeroRightBox .work {
+      font-size: 2.5vw;
+    }
+  
+    .HeroRightBox .year {
+      font-size: 2.5vw;
+    }
+  
+    .imageSecondSection .imageBox {
+      height: 50vh;
+    }
+  
+    .img {
+      width: 130%;
+      object-fit: cover;
+    }
+  
+    .thirdSectionContent {
+      width: 80%;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .thirdSectionLeftBox {
+      height: 38%;
+      align-items: flex-start;
+    }
+  
+    .thirdSectionLeftBox h1 {
+      font-size: 2.5vw;
+    }
+  
+    .thirdSectionRightBox {
+      height: 95%;
+      width: 80%;
+      padding-top: 0;
+    }
+  
+    .paraTop h1 {
+      font-size: 2.5vw;
+    }
+  
+    .thirdSectionRightBox .buttonBox h1 {
+      font-size: 2vw;
+      padding: 0.7vw 1vw;
+    }
+  
+    .patronumForthSection {
+      height: 100%;
+      margin-top: 10vw;
+      margin-bottom: 5vw;
+    }
+  
+    .forthSectionContent{
+      width: 80%;
+    }
+  
+    .forthSectionLeftBox {
+      height: 40%;
+    }
+  
+    .forthSectionLeftBox{
+      width: 30%;
+    }
+  
+    .forthSectionLeftBox h1 {
+      font-size: 2.5vw;
+      padding-top: 0;
+    }
+  
+    .forthSectionRightBox {
+      width: 80%;
+      height: 80%;
+      padding-top: 0;
+    }
+  
+    .paraTop h5 {
+      font-size: 2.5vw;
+      text-align: justify;
+    }
+  
+    .clientTestimonialSectionContent{
+      width: 85%;
+      gap: 5vh;
+    }
+    
+    .clientTestimonialSectionLeftBox h1{
+      font-size: 3vw;
+    }
+    .clientTestimonialparaTop h1{
+      font-size: 2.5vw;
+    }
+    .clientTestimonialparaTop h5{
+      font-size: 2vw;
+    }
+  
+    .logoImageSection {
+      height: 50vh;
+    }
+  
+    .imageContainer {
+      width: 37vw;
+      height: 85%;
+    }
+  
+    .imageContainer img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      padding: 0;
+    }
+  
+    .firstLogoBox h1 {
+      max-width: 32vw;
+      font-size: 2vw;
+    }
+  
+    .firstLogoBox {
+      height: 100%;
+      margin-right: 3vw;
+    }
+  
+    .secondLogoBox {
+      height: 100%;
+    }
+  
+    .secondLogoBox h1 {
+      max-width: 32vw;
+      font-size: 2vw;
+    }
+  
+    .logoImageSectionSecond {
+      height: 50vh;
+    }
+  
+    .fontSection {
+      height: 100%;
+    }
+  
+    .fontImagebox {
+      padding-top: 10vw;
+    }
+  
+    .colorSection {
+      height: 100%;
+      margin: 10vw 0;
+    }
+  
+    .colorBoxesSection {
+      height: 80%;
+    }
+  
+    .colorBoxHeadingBackground h2 {
+      display: none;
+    }
+  
+  .colorBoxesSection ul{
+    display: block;
+  }
+  
+  .colorBoxesSection ul li{
+    font-size: 2vw;
+  }
+  
+  .colorOne, .colorTwo, .colorThree, .colorFour{
+    height: 120px;
+  }
+  
+    .videoForthSection {
+      height: 45vh;
+    }
+  
+    .websiteDesignSection {
+      height: 45vh;
+      width: 80%;
+    }
+  
+    .websiteDesignSection .leftBox h1 {
+      font-size: 2.5vw;
+    }
+  
+    .websiteDesignSection .rightBox h1 {
+      font-size: 2.5vw;
+    }
+  
+    .websiteDesignSection .patronum_rightBox {
+      width: 80%;
+    }
+  
+    .clientTestimonialSectionFigure img{
+      width: 14vw;
+    }
+  
+    .clientTestimonialSectionFigureText h5{
+      font-size: 2.5vw;
+    }
+    .nextUpContainer {
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      flex-direction: column;
+      margin-top: 15vw;
+    }
+  
+    .nextUpContent {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .nextTitle {
+      text-align: left;
+    }
+  
+    .nextTitle h1 {
+      font-size: 3vw;
+      font-weight: 500;
+      opacity: 0.7;
+      margin-right: 0;
+      margin-bottom: 1vw;
+      color: #1a1a1a;
+    }
+  
+    .nextProjectHeading {
+      width: 35%;
+      text-align: center;
+    }
+  
+    .nextProjectHeading h1 {
+      font-size: 7vw;
+      font-weight: 500;
+      color: #1a1a1a;
+      position: relative;
+    }
+  
+    .nextProjectHeading h1:before {
+      content: "";
+      display: block;
+      position: absolute !important;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 8.5vw;
+      height: 0.2vw;
+      background: currentColor;
+      -webkit-transition: -webkit-transform 0.45s
+        cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    }
+  
+    .nextProjectHeading h1:focus:before,
+    .nextProjectHeading h1:hover:before {
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      -o-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+    
+  }
+  
+  @media screen and (max-width: 776px) {
+    .mobile {
+      height: 10vh;
+    }
+  
+    .ipad {
+      display: none;
+    }
+  
+    #ipad {
+      display: none !important;
+    }
+  
+    .Main .linkButton {
+      font-size: 4vw;
+    }
+  
+    .linkSvg img {
+      margin-bottom: 1vw;
+      margin-left: 1.5vw;
+      width: 2.7vw;
+      height: auto;
+    }
+  
+    .HeroSection {
+      flex-direction: column;
+      width: 85%;
+      height: 100%;
+      padding: 30vw 0;
+      justify-content: center;
+    }
+  
+    .mainSubSection {
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .HeroLeftBox h1 {
+      font-size: 8vw;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-top: 10vw;
+    }
+  
+    .HeroRightBox {
+      width: 100%;
+      margin-top: 10vw;
+      align-items: flex-start;
+    }
+  
+    .HeroRightBox .work {
+      font-size: 4vw;
+      margin-bottom: 4vw;
+    }
+  
+    .HeroRightBox .year {
+      font-size: 4vw;
+    }
+  
+    .imageSecondSection .imageBox {
+      height: 50vh;
+    }
+  
+    .figure {
+      height: 100%;
+    }
+  
+    .img {
+      height: calc(100% + 15rem);
+      object-fit: cover;
+    }
+  
+    .thirdSectionContent {
+      height: 100%;
+      width: 85%;
+      margin: 0 auto;
+      padding: 15vw 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .thirdSectionLeftBox h1 {
+      font-size: 6vw;
+    }
+  
+    .thirdSectionRightBox {
+      width: 100%;
+      margin-top: 6vw;
+    }
+  
+    .thirdSectionRightBox .buttonBox h1 {
+      font-size: 3.2vw;
+      padding: 1.2vw 3vw;
+    }
+  
+    .patronumForthSection {
+      height: auto;
+      margin-bottom: 10vh;
+    }
+  
+    .forthSectionContent {
+      width: 85%;
+      flex-direction: column;
+      height: 100%;
+      padding: 0;
+    }
+  
+    .forthSectionLeftBox{
+      width: 100%;
+    }
+  
+    .forthSectionLeftBox h1 {
+      font-size: 6vw;
+    }
+  
+    .forthSectionRightBox {
+      width: 100%;
+      margin-top: 6vw;
+    }
+  
+    .paraTop h1 {
+      font-size: 3.8vw;
+    }
+  
+    .paraTop h5 {
+      font-size: 3.8vw;
+    }
+  
+    
+  
+    .clientTestimonialSectionContent{
+      width: 85%;
+      display: block;
+      padding-top: 5vh;
+    }
+    
+    .clientTestimonialSectionLeftBox h1{
+      font-size: 5vw;
+      padding-bottom: 5vh;
+    }
+    .clientTestimonialparaTop h1{
+      font-size: 3.8vw;
+      padding-bottom: 3vh;
+    }
+    .clientTestimonialparaTop h5{
+      font-size: 3.5vw;
+    }
+    .clientTestimonialSectionBottomBox {
+      width: 100%;
+      padding-top: 0vh;
+      flex-direction: column;
+    }
+    .clientTestimonialSectionBottomBox {
+      width: 100%;
+      padding-top: 0vh;
+      flex-direction: column;
+    }
+    .clientTestimonialSectionFigure img{
+      width: 25vw;
+    }
+    .clientTestimonialSectionFigureText h5{
+      font-size: 4vw;
+      text-align: center;
+    }
+  
+    .clientTestimonialSpan2{
+      font-size: 18vw;
+    }
+    .logoImageSection {
+      height: 100%;
+      flex-direction: column;
+    }
+  
+    .firstLogoBox {
+      width: 85%;
+      margin-right: 0;
+    }
+  
+    .secondLogoBox {
+      width: 85%;
+      margin-top: 15vw;
+    }
+  
+    .imageContainer {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .imageContainer img {
+      object-fit: cover;
+    }
+  
+    .firstLogoBox h1 {
+      max-width: 85vw;
+      font-size: 3.7vw;
+    }
+  
+    .secondLogoBox h1 {
+      max-width: 85vw;
+      font-size: 3.7vw;
+    }
+  
+    .secondLogoBox .imageContainer img {
+      height: 160%;
+    }
+  
+    .logoImageSectionSecond {
+      flex-direction: column;
+      height: 100%;
+      padding-top: 10vw;
+    }
+  
+    .fontSection {
+      height: auto;
+      padding: 10vw 0;
+    }
+  
+    .fontImagebox {
+      padding: 10vw 0;
+      height: 100%;
+    }
+  
+    .fontHeading h1 {
+      font-size: 7vw;
+    }
+  
+    .desktopFont {
+      display: none;
+    }
+  
+    .colorSection {
+      height: 100%;
+    }
+  
+    .colorBoxesSection {
+      justify-content: flex-start;
+      height: 100%;
+      margin-top: 15vw;
+    }
+  
+      .colorBoxesSection ul{
+      display: block !important;
+    }
+  
+    .colorBoxesSection ul li{
+      font-size: 4vw;
+    }
+  
+    .colorOne{
+      height: 100px;
+    }
+  
+    .colorTwo{
+      height: 100px;
+    }
+  
+    .colorThree{
+      height: 100px;
+    }
+  
+    .colorFour{
+      height: 100px;
+    }
+  
+  
+  
+    .colorBox {
+      display: none;
+    }
+  
+    .colorBoxesSection img {
+      width: 100%;
+    }
+  
+    .mobileImg {
+      width: 90%;
+      margin: 0 auto;
+      padding: 10vw 0;
+    }
+  
+    .mobileImg img {
+      width: 100%;
+    }
+  
+    .colorHeading h1 {
+      font-size: 7vw;
+    }
+  
+    .videoHeading h1 {
+      font-size: 7vw;
+      max-width: 80vw;
+    }
+  
+    .videoForthSection {
+      height: auto;
+      margin-bottom: 10vw;
+    }
+  
+    .websiteDesignSection {
+      flex-direction: column;
+      width: 85%;
+      height: 100%;
+      padding: 10vw 0;
+    }
+  
+    .websiteDesignSection .leftBox {
+      width: 100%;
+    }
+  
+    .websiteDesignSection .leftBox h1 {
+      font-size: 6vw;
+    }
+  
+    .websiteDesignSection .rightBox {
+      width: 100%;
+      margin-top: 4vw;
+    }
+  
+    .websiteDesignSection .rightBox h1 {
+      font-size: 3.8vw;
+    }
+  
+    .desktopSlider {
+      display: none;
+    }
+  
+     .nextUpContainer {
+      width: 100%;
+      height: 20vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      flex-direction: column;
+    }
+  
+    .nextUpContent {
+      width: 45%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .nextTitle {
+      margin-left: 4vw;
+      text-align: left;
+    }
+  
+    .nextTitle h1 {
+      font-size: 5vw;
+      font-weight: 500;
+      opacity: 0.7;
+      margin-right: 0;
+      margin-bottom: 1vw;
+      color: #1a1a1a;
+    }
+  
+    .nextProjectHeading {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nextProjectHeading h1 {
+      font-size: 10vw;
+      font-weight: 500;
+      color: #1a1a1a;
+      position: relative;
+    }
+  
+    .nextProjectHeading h1:before {
+      content: "";
+      display: block;
+      position: absolute !important;
+      left: 3vw;
+      width: 85%;
+      right: 0;
+      bottom: 0;
+      top: 13vw;
+      height: 0.2vw;
+      background: currentColor;
+      -webkit-transition: -webkit-transform 0.45s
+        cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      -o-transition: -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      -moz-transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+      transition: transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -webkit-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -moz-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+        -o-transform 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+    }
+  
+    .nextProjectHeading h1:focus:before,
+    .nextProjectHeading h1:hover:before {
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      -o-transform: scaleX(0);
+      transform: scaleX(0);
+    }
+  }
