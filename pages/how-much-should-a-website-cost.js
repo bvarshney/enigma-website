@@ -357,7 +357,7 @@ export default function blogWebsiteCost() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Decoding Website Scoping
             </h3>
             <p id="anim">
@@ -367,7 +367,7 @@ export default function blogWebsiteCost() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Billable Hours Conundrum
             </h3>
             <p id="anim">
@@ -399,7 +399,7 @@ export default function blogWebsiteCost() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Establishing Your Budget: The Ball is in Your Court
             </h3>
             <p>
@@ -413,7 +413,7 @@ export default function blogWebsiteCost() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Establishing Your Budget: The How-To Guide
             </h3>
             <p>
@@ -443,7 +443,7 @@ export default function blogWebsiteCost() {
             <br />
             <br />
 
-            <h3 className="bold " style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h ">
               Navigating the Agency Landscape: Choosing the Right One
             </h3>
             <p>

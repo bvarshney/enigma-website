@@ -324,7 +324,7 @@ export default function blogTurboChargeYourB2B() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Tip 1: Consistent Content & Visuals: Your Brand's Stylish Ensemble
             </h3>
             <p id="anim">
@@ -336,7 +336,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.1 Develop a Content Calendar:
             </h3>
             <p id="anim">
@@ -349,7 +349,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.2 Create a Cohesive Visual Identity:
             </h3>
             <p id="anim">
@@ -372,7 +372,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tip 2: Targeting the Right Audience: LinkedIn's Secret Handshake
             </h3>
 
@@ -386,7 +386,7 @@ export default function blogTurboChargeYourB2B() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.1 Use LinkedIn's Native Targeting Tools:
             </h3>
 
@@ -399,7 +399,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.2 Engage in Relevant Groups and Conversations:
             </h3>
 
@@ -414,7 +414,7 @@ export default function blogTurboChargeYourB2B() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tip 3: Establish Credibility: Your LinkedIn Seal of Approval{" "}
             </h3>
 
@@ -425,7 +425,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.1 Showcase Your Expertise:
             </h3>
 
@@ -437,7 +437,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.2 Highlight Client Testimonials and Success Stories:
             </h3>
 
@@ -459,7 +459,7 @@ export default function blogTurboChargeYourB2B() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tip 4: Establish Thought Leadership: The B2B LinkedIn VIP Lounge
             </h3>
 
@@ -470,7 +470,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.1 Share Original, Insightful Content:
             </h3>
 
@@ -482,7 +482,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.2 Engage with Industry Influencers and Experts:
             </h3>
 
@@ -498,7 +498,7 @@ export default function blogTurboChargeYourB2B() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tip 5: Experiment with and Improve Your Content: The LinkedIn
               Laboratory
             </h3>
@@ -512,7 +512,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               5.1 Test Different Content Formats:
             </h3>
 
@@ -525,7 +525,7 @@ export default function blogTurboChargeYourB2B() {
             </p>
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               5.2 Analyse and Optimize:{" "}
             </h3>
 
@@ -549,7 +549,7 @@ export default function blogTurboChargeYourB2B() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tip 6: A Proper B2B Marketing Strategy: The LinkedIn Master Plan
             </h3>
 
@@ -563,7 +563,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               6.1 Set Clear Goals and Objectives:
             </h3>
 
@@ -576,7 +576,7 @@ export default function blogTurboChargeYourB2B() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               6.2 Align Your LinkedIn Strategy with Your Overall Marketing Plan:
             </h3>
 

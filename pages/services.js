@@ -18,6 +18,11 @@ import FooterMobile from "./components/Mobile/FooterMobile";
 import ServiceNextBox from "./components/NextBoxes/ServiceNextBox";
 import MagneticButton from "./components/MagneticButton";
 
+gsap.config({
+  nullTargetWarn: false,
+  trialWarn: false
+});
+
 gsap.registerPlugin(ScrollTrigger);
 5;
 // Hover on the link
@@ -250,7 +255,7 @@ export default function services() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".main-how",
-        start: "-450 top",
+        start: "top 80%",
       },
     });
 
@@ -259,7 +264,7 @@ export default function services() {
       ".line-anim .span",
       0.8,
       {
-        y: -350,
+        y: 400,
         ease: "none",
         skewY: -20,
       },
@@ -281,7 +286,7 @@ export default function services() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
+          start: "top 80%",
           end: "bottom top",
           markers: false,
         },
@@ -303,7 +308,7 @@ export default function services() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-450 top",
+          start: "top 80%",
           end: "bottom top",
           markers: false,
         },
@@ -321,7 +326,7 @@ export default function services() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".top-box",
-        start: "-500 top",
+        start: "top 80%",
       },
     });
     tl.fromTo(
@@ -341,7 +346,7 @@ export default function services() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".service-box-image",
-        start: "-300 top",
+        start: "top 75%",
       },
     });
     tl.fromTo(
@@ -450,12 +455,13 @@ export default function services() {
               </div>
 
               <h3 className="para-hero" id="service-anim">
-                Leveraging the power of{" "}
+                {/* Leveraging the power of{" "}
                 <span className="bold-600">
                   Emotion, Consumer Psychology, and Technology,
                 </span>{" "}
                 we create Digital Brand Experiences that propel your success in
-                the enigmatic realm of bits & bytes.
+                the enigmatic realm of bits & bytes. */}
+                We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights. 
               </h3>
             </div>
 
@@ -545,10 +551,7 @@ export default function services() {
               <h1 className="ser-text-head-anim">Our Capabilities</h1>
               <h4 data-jelly className="ser-text-head-anim">
                 <span>
-                  We create evergreen brands that are highly effective at
-                  boosting revenue, increasing brand equity, and improving ROI.
-                  Our big picture approach powers your entire business, not just
-                  the marketing department.
+                  We are pioneers in crafting immersive User Experience (UX) and intuitive User Interface (UI) designs. With a robust foundation built on 10,000+ hours of honing our craft, our potent combination of boundless imagination, strategic vision, and technical mastery can transform your digital presence from mediocre to magnificent.
                 </span>
               </h4>
             </div>
@@ -570,13 +573,12 @@ export default function services() {
             <h1 className="ser-text-head-anim">Strategy</h1>
             <h4 data-jelly className="ser-text-head-anim">
               <span>
-                Digital Advisory and Consulting, Integrated Digital Marketing
-                Plan (D.M.P.), User Experience Development, Customer Experience
-                Strategy, Consumer Research, Insights & Target Market Analysis,
-                Digital Capabilities Development, Persona Design & Customer
-                Segmentation, Competitive Analysis & Industry Insights, Brand &
-                Content Strategy, Digital Marketing and Website Performance
-                Audit.
+              Strategic planning based on insight is the starting point of everything we do. Using a blend of strategic thinking, broad marketing experience, insights, proven best practices, and sound judgment, we create effective strategies that transform insights into actionable plans and deliver measurable results.
+              </span>
+            </h4>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+              Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital Capabilities Development, Persona Design & Customer Segmentation, Competitive Analysis & Industry Insights, Brand & Content Strategy, Digital Marketing and Website Performance Audit.
               </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
@@ -612,11 +614,12 @@ export default function services() {
             <h1 className="ser-text-head-anim">UI/UX Design</h1>
             <h4 data-jelly className="ser-text-head-anim">
               <span>
-                User Interface Design, User Experience Design, Responsive Web
-                Design, Mobile App Design, Digital Interface Design, Design
-                Systems Creation, Experience Mapping, User Flow Mapping,
-                Wireframing & Prototyping, Illustrations & Animations, Visual
-                Designs, and UI Kits.
+                We unravel complex design challenges through meticulous user research, expert analysis, prototyping, and collaborative design with users and stakeholders. Harnessing the power of cutting-edge tools and our proprietary approach we craft delightful and intuitive experiences that seamlessly connect the physical and digital worlds.
+              </span>
+            </h4>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                User Interface Design, User Experience Design, Responsive Web Design, Mobile App Design, Digital Interface Design, Design Systems Creation, Experience Mapping, User Flow Mapping, Wireframing & Prototyping, Illustrations & Animations, Visual Designs.
               </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
@@ -651,13 +654,12 @@ export default function services() {
             <h1 className="ser-text-head-anim">Technology</h1>
             <h4 data-jelly className="ser-text-head-anim">
               <span>
-                Front-End Development, Native & Hybrid Mobile Application
-                Development, Progressive Web Applications, Database Design &
-                Management, Cloud Infrastructure Services, Testing & Automation
-                TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
-                Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
-                Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
-                Google Cloud.
+                A human-centred, design-led approach to product development that leverages cutting-edge technologies & agile methodology, committed to putting you on a path to success in the ever-changing technological landscape.
+              </span>
+            </h4>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                HTML, CSS, JavaScript, Vue, React, Angular, GSAP, and WordPress. For mobile application development, we utilize technologies like Ionic and Flutter. On the server-side, we leverage PHP, NodeJS and Python to create robust back-ends.
               </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}
@@ -692,11 +694,12 @@ export default function services() {
             <h1 className="ser-text-head-anim">Marketing</h1>
             <h4 data-jelly className="ser-text-head-anim">
               <span>
-                Social Media Management, Content Creation & Curation, Search
-                Engine Optimisation, Influencer Management, Auction Media
-                Management, Online Reputation Management, Media Planning &
-                Buying, Marketing Automation, Email Marketing, Conversion Rate
-                Optimisation, Website & SEO Analysis.
+                Our marketing strategies are not just designed to create a lasting impact, but to drive engagement, foster brand loyalty, and navigate the ever-evolving digital landscape with finesse and agility.
+              </span>
+            </h4>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Social Media Management, Content Creation & Curation, Search Engine Optimisation, Influencer Management, Online Reputation Management, Marketing Automation, Email Marketing, Conversion Rate Optimisation and Website & SEO Analysis.
               </span>
             </h4>
             {/* <h4 className="bottom-text"></h4> */}

@@ -64,7 +64,7 @@ export default function NewGifSection() {
           trigger: ".gifsubtetx p",
           scrub: 1,
           start: "-100 center",
-          end: "bottom center",
+          end: "bottom 25%",
         },
       });
     });
@@ -84,7 +84,7 @@ export default function NewGifSection() {
               src="/assets/about/gif-section/culture.webm"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">culture</h2>
+            <h2 className="about-gif-text">Culture</h2>
             <img
               src="/assets/about/gif-section/arr.png"
               className="about-gif-arrow"
@@ -109,7 +109,7 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">attitude</h2>
+            <h2 className="about-gif-text">Attitude</h2>
             <img
               src="/assets/about/gif-section/arr.png"
               className="about-gif-arrow"
@@ -135,7 +135,7 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">ethos</h2>
+            <h2 className="about-gif-text">Ethos</h2>
             <img
               src="/assets/about/gif-section/arr.png"
               className="about-gif-arrow"
@@ -163,7 +163,7 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">experience</h2>
+            <h2 className="about-gif-text">Experience</h2>
             <img
               src="/assets/about/gif-section/arr.png"
               className="about-gif-arrow"
@@ -189,7 +189,7 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">magic</h2>
+            <h2 className="about-gif-text">Magic</h2>
             <img
               src="/assets/about/gif-section/arr.png"
               className="about-gif-arrow"
@@ -208,9 +208,12 @@ export default function NewGifSection() {
 
         <div className="gifBottomText">
           <div className="gifsubtetx">
-            <p>We are 'Inherently Distinctive' from</p>
-            <p>your traditional digital agency.</p>
-            <span>👼</span>
+            <p>We don't adapt to change, we anticipate it!</p>
+            <span className="span1">💡</span>
+            <p>Our digital solutions have transformed brands</p>
+            {/* <span className="span2"></span> */}
+            <p>and empowered businesses globally.</p>
+            <span className="span3">🌎🚀</span>
           </div>
         </div>
       </div>

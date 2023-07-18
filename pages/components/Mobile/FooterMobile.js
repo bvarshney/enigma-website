@@ -7,10 +7,10 @@ export default function FooterMobile() {
       <div className="contact mobile-footer">
         <div className="contact-content">
           <div className="contact-content-heading">
-            Let's have a
+            Let's bring your
             <br />
             <span className="contact-content-heading-sub">
-              &nbsp;Conversation
+              &nbsp;ideas to life!
             </span>
           </div>
           <div className="contact-content-mail">

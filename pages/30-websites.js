@@ -383,7 +383,7 @@ export default function blogWebsites() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Medium (Blogging platform)
             </h3>
 
@@ -396,7 +396,7 @@ export default function blogWebsites() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Quora (Q&A platform)
             </h3>
 
@@ -409,7 +409,7 @@ export default function blogWebsites() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               LinkedIn (Professional networking platform)
             </h3>
 
@@ -424,7 +424,7 @@ export default function blogWebsites() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Blogger (Blogging platform)
             </h3>
 
@@ -436,7 +436,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Tumblr (Microblogging platform)
             </h3>
 
@@ -449,7 +449,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Reddit (Social news aggregation and discussion platform)
             </h3>
 
@@ -462,7 +462,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Scoop.it (Content curation platform)
             </h3>
 
@@ -475,7 +475,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Pinterest (Visual bookmarking platform)
             </h3>
 
@@ -488,7 +488,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Slideshare (Slide hosting service)
             </h3>
 
@@ -501,7 +501,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Vimeo (Video hosting platform)
             </h3>
 
@@ -513,7 +513,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Dailymotion (Video hosting platform)
             </h3>
 
@@ -525,7 +525,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Flickr (Image and video hosting platform)
             </h3>
 
@@ -537,7 +537,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               HubPages (Content publishing platform)
             </h3>
 
@@ -550,7 +550,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               EzineArticles (Article directory)
             </h3>
 
@@ -562,7 +562,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Triberr (Blogger community platform)
             </h3>
 
@@ -586,7 +586,7 @@ export default function blogWebsites() {
             <br />
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               BlogEngage (Blog promotion platform)
             </h3>
 
@@ -598,7 +598,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               GrowthHackers (Growth hacking community)
             </h3>
 
@@ -611,7 +611,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               BizSugar (Small business community)
             </h3>
 
@@ -624,7 +624,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Inbound.org (Inbound marketing community)
             </h3>
 
@@ -637,7 +637,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Alltop (Content aggregator)
             </h3>
 
@@ -650,7 +650,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Blogarama (Blog directory)
             </h3>
 
@@ -663,7 +663,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               BlogLovin (Blog discovery platform)
             </h3>
 
@@ -676,7 +676,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Muck Rack (Journalist and blogger platform)
             </h3>
 
@@ -689,7 +689,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Paper.li (Content curation platform)
             </h3>
 
@@ -702,7 +702,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Visual.ly (Visual content creation platform)
             </h3>
 
@@ -715,7 +715,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               MyBlogU (Blogger collaboration platform)
             </h3>
 
@@ -728,7 +728,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Yell (Online business directory)
             </h3>
 
@@ -740,7 +740,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Brownbook (Global business directory)
             </h3>
 
@@ -752,7 +752,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Cylex (Business directory)
             </h3>
 
@@ -764,7 +764,7 @@ export default function blogWebsites() {
             </p>
 
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Alignable (Small business networking platform)
             </h3>
 

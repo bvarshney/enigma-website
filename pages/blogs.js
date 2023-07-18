@@ -32,6 +32,14 @@ const handleHoverExit = (e) => {
 
 const Blogs = [
   {
+    name: "Design",
+    category: "Design",
+    Link: "/ux-design-glossary",
+    image: "/assets/blogs/blog-detail/website-cost/feature.jpg",
+    description:
+      "The UX Design Glossary: Deciphering the Alphabet Soup of UX Jargon",
+  },
+  {
     name: "Strategy",
     category: "Strategy",
     Link: "/how-much-should-a-website-cost",

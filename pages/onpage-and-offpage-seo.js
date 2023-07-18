@@ -326,12 +326,7 @@ export default function blogOnPageSeo() {
               <br />
             </p>
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-                marginBottom: "0",
-              }}
+              className="bold-h-u"
               id="anim"
             >
               On-Page SEO: Optimizing Your Website's Content and Structure
@@ -440,12 +435,7 @@ export default function blogOnPageSeo() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-                marginBottom: "0",
-              }}
+              className="bold-h-u"
             >
               Off-Page SEO: Building Your Website's Authority and
               Trustworthiness
@@ -517,12 +507,7 @@ export default function blogOnPageSeo() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
             >
               Domain Authority and Its Impact on SEO
             </h3>
@@ -542,12 +527,7 @@ export default function blogOnPageSeo() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
             >
               Examples of Websites for Easy and Quick Link Building
             </h3>
@@ -582,7 +562,7 @@ export default function blogOnPageSeo() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Creating a Targeted Keyword List
             </h3>
 

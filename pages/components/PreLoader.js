@@ -28,10 +28,23 @@ const Preloader = () => {
         const diff = Math.random() * 10;
         return Math.min(prevProgress + diff, 100);
       });
-      setWord(words[Math.floor(Math.random() * words.length)]);
-    }, 180); // Change this to adjust the interval between progress updates
+  
+      gsap.to(".words-preloader", {
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => {
+          setWord(words[Math.floor(Math.random() * words.length)]);
+          gsap.to(".words-preloader", {
+            opacity: 1,
+            duration: 0.3,
+          });
+        },
+      });
+    }, 500); // Change this to adjust the interval between progress updates
+  
     return () => clearInterval(timer);
   }, []);
+  
 
   useEffect(() => {
     if (!loading) {
@@ -40,28 +53,26 @@ const Preloader = () => {
         const tl = gsap.timeline();
         const curve = "M0, 502S175, 272, 500, 272s500, 230, 500, 230V0H0Z";
         const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-
+  
         tl.to(".words-preloader", {
           opacity: 0,
           duration: 0.5,
-        });
-        // tl.to(".loading-bar-container ", {
-        //   opacity: 0,
-        //   duration: 0.5,
-        // });
-        tl.to(svg, {
-          duration: 0.5,
-          attr: { d: curve },
-          ease: "power2.easeIn",
-        }).to(svg, {
-          duration: 0.5,
-          attr: { d: flat },
-          ease: "power2.easeOut",
-        });
-        tl.to(".preloader", {
-          y: "-1500",
-          opacity: 0,
-          ease: "power2.inOut",
+        }).add(() => {
+          setWord(""); // Clear the word after fade-out
+          tl.to(svg, {
+            duration: 0.5,
+            attr: { d: curve },
+            ease: "power2.easeIn",
+          }).to(svg, {
+            duration: 0.5,
+            attr: { d: flat },
+            ease: "power2.easeOut",
+          });
+          tl.to(".preloader", {
+            y: "-1500",
+            opacity: 0,
+            ease: "power2.inOut",
+          });
         });
       });
       return () => ctx.revert();

@@ -125,17 +125,18 @@ export default function contact() {
   // Ploygon
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to(".img-container", {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      gsap.to(".img", {
+        transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
         duration: 4,
         ease: "none",
         scrollTrigger: {
           trigger: ".img-container",
-          start: "top 70%",
+          start: "top 75%",
           end: "center center",
           // pin: true,
-          scrub: true,
-          markers: false,
+          scrub: .5,
+
+          // markers: true,
         },
       });
     });
@@ -270,11 +271,6 @@ export default function contact() {
 
             {/* ====================== Pinned Image =========================== */}
             <div class="img-container clip-path-img">
-              <motion.div
-                initial={{ opacity: 0, y: 200 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 3 }}
-              >
                 <div class="img">
                   <video
                     src="/assets/contact/contact-bg-video.webm"
@@ -283,7 +279,6 @@ export default function contact() {
                     loop
                   ></video>
                 </div>
-              </motion.div>
             </div>
             {/* ====================== Pinned Image  END =========================== */}
 

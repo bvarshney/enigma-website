@@ -346,7 +346,7 @@ export default function blogMindsPlayground() {
             </p>
             <h3
               className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              style={{ fontSize: "1.5vw !important" }}
               id="anim"
             >
               1. Availability Cascade:
@@ -369,7 +369,7 @@ export default function blogMindsPlayground() {
             <br />
             <h3
               className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              style={{ fontSize: "1.5vw !important" }}
               id="anim"
             >
               2. Anchoring Bias:
@@ -391,7 +391,7 @@ export default function blogMindsPlayground() {
             <br />
             <h3
               className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              style={{ fontSize: "1.5vw !important" }}
               id="anim"
             >
               3. Confirmation Bias:
@@ -415,7 +415,7 @@ export default function blogMindsPlayground() {
             <br />
             <h3
               className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              style={{ fontSize: "1.5vw !important" }}
               id="anim"
             >
               4. Scarcity Bias:
@@ -445,7 +445,7 @@ export default function blogMindsPlayground() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               5. Decoy Effect:
             </h3>
             <p>
@@ -464,7 +464,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               6. Loss Aversion:
             </h3>
             <p>
@@ -486,7 +486,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               7. Reciprocity Principle:
             </h3>
             <p>
@@ -506,7 +506,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               8. Halo Effect:
             </h3>
             <p>
@@ -527,7 +527,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               9. The Mere Exposure Effect:
             </h3>
             <p>
@@ -556,7 +556,7 @@ export default function blogMindsPlayground() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               10. Choice Paralysis:
             </h3>
             <p>
@@ -577,7 +577,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               11. Social Proof:
             </h3>
             <p>
@@ -597,7 +597,7 @@ export default function blogMindsPlayground() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               12. The Bandwagon Effect:
             </h3>
             <p>

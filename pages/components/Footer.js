@@ -8,7 +8,7 @@ function Footer() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".en-footer-section",
-        start: "-300 top",
+        start: "top 80%",
       },
     });
 
@@ -38,7 +38,7 @@ function Footer() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".en-footer-section",
-        start: "-300 top",
+        start: "top 70%",
       },
     });
 
@@ -124,12 +124,12 @@ function Footer() {
           <div className="en-f__content">
             <h1>
               <span className="wt-400" id="say">
-                Let's have a
+                Let's bring your
               </span>
             </h1>
             <h1>
               <span className="wt-400 mr-11" id="say">
-                Conversation
+                ideas to life!
               </span>
             </h1>
           </div>

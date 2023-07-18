@@ -332,11 +332,10 @@ export default function blogPowerOfPsychologyUxDesign() {
               <br />
               <br />
             </p>
-            <h1 id="anim">
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Connection Between Psychology and UX Design
-              </strong>
-            </h1>
+            </h3>
             <div className="blog-img">
               <div className="image-container blog-img-container" id="anim">
                 <img src="/assets/blogs/blog-detail/uxbrain.webp" alt="Img" />
@@ -378,11 +377,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </p>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 Cognitive Load and Information Processing
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               One of the most critical psychological principles to consider in
@@ -412,19 +410,12 @@ export default function blogPowerOfPsychologyUxDesign() {
               Leverage visual cues such as colour, contrast, and whitespace to
               guide users' attention.
             </p>
-
-            {/* <div className="blog-img">
-              <div className="image-container">
-                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
-              </div>
-            </div> */}
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Power of Habit in User Behaviour
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Habits play a significant role in our daily lives, and they can
@@ -455,11 +446,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </p>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Role of Emotions in UX Design
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Emotions have a powerful impact on our decision-making processes
@@ -491,11 +481,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </div>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 Social Influence and the Power of Persuasion
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Social psychology can offer valuable insights into how users are
@@ -532,11 +521,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </p>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 Decision-Making and Choice Architecture
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Understanding the psychological principles behind decision-making
@@ -573,11 +561,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </div>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Psychology of Motivation and Engagement
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Creating engaging user experiences requires an understanding of
@@ -607,11 +594,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </p>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Importance of Empathy in UX Design
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Empathy – the ability to understand and share the feelings of
@@ -638,11 +624,10 @@ export default function blogPowerOfPsychologyUxDesign() {
 
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 Accessibility and Inclusive Design
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               Inclusive design goes beyond just meeting accessibility
@@ -670,11 +655,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </p>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">
+            <h3 id="anim" 
+                className="bold-h">
                 The Ethics of Applying Psychology in UX Design
-              </strong>
-            </h1>
+            </h3>
             <br />
             <p>
               While psychology offers powerful tools for influencing user
@@ -706,9 +690,10 @@ export default function blogPowerOfPsychologyUxDesign() {
             </div>
             <br />
             <br />
-            <h1>
-              <strong className="bold fontSize">Conclusion:</strong>
-            </h1>
+            <h3 id="anim" 
+                className="bold-h">
+                Conclusion:
+            </h3>
             <br />
             <p>
               The intersection of psychology and UX design offers a wealth of

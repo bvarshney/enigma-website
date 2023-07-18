@@ -335,7 +335,7 @@ export default function blogOrganicDigitalMarketing() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1. The Irresistible Charm of Search Engine Optimization (SEO)
             </h3>
             <p id="anim">
@@ -347,7 +347,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.1 Long-term Results:
             </h3>
             <p id="anim">
@@ -360,7 +360,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.2 Cost-effectiveness:
             </h3>
             <p id="anim">
@@ -373,7 +373,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.3 Trust and Credibility:
             </h3>
             <p id="anim">
@@ -386,7 +386,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.4 Mobile Optimization and Local SEO:
             </h3>
             <p id="anim">
@@ -401,7 +401,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               1.5 Improved User Experience:
             </h3>
             <p id="anim">
@@ -423,7 +423,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2. The Mesmerizing Power of Social Media Marketing (SMM)
             </h3>
 
@@ -438,7 +438,7 @@ export default function blogOrganicDigitalMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.1 Immense Reach and Targeting Capabilities:
             </h3>
 
@@ -452,7 +452,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.2 Enhanced Customer Engagement:
             </h3>
 
@@ -466,7 +466,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.3 Valuable Customer Insights:
             </h3>
 
@@ -479,7 +479,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.4 Influencer Marketing:
             </h3>
 
@@ -495,7 +495,7 @@ export default function blogOrganicDigitalMarketing() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               2.5 User-generated Content:
             </h3>
 
@@ -518,7 +518,7 @@ export default function blogOrganicDigitalMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3. The Spellbinding World of Content Marketing
             </h3>
 
@@ -531,7 +531,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.1 Building Trust and Brand Authority:
             </h3>
 
@@ -544,7 +544,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Increased Collaboration and Innovation
             </h3>
 
@@ -558,7 +558,7 @@ export default function blogOrganicDigitalMarketing() {
               indicating a boost in innovation (Harvard Business Review, 2020).
             </p>
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.2 Driving Organic Traffic and Generating Leads:
             </h3>
 
@@ -571,7 +571,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.3 Boosting Conversion Rates:
             </h3>
 
@@ -584,7 +584,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.4 Diversified Content Formats:
             </h3>
 
@@ -597,7 +597,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               3.5 Repurposing and Recycling Content:
             </h3>
 
@@ -622,7 +622,7 @@ export default function blogOrganicDigitalMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4. The Compelling Case for Organic Digital Marketing
             </h3>
 
@@ -634,7 +634,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.1 Sustainable Growth and Lasting Results:
             </h3>
 
@@ -648,7 +648,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.2 Cost-Effectiveness and Higher ROI:
             </h3>
 
@@ -661,7 +661,7 @@ export default function blogOrganicDigitalMarketing() {
               marketing efforts (Deloitte, 2020).
             </p>
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.3 Enhanced Customer Experience and Personalization:
             </h3>
 
@@ -674,7 +674,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.4 Building a Loyal Community:
             </h3>
 
@@ -687,7 +687,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.5 Agility and Adaptability:
             </h3>
 
@@ -700,7 +700,7 @@ export default function blogOrganicDigitalMarketing() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               4.6 Synergy Between Strategies:
             </h3>
 

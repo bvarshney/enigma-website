@@ -333,8 +333,7 @@ export default function blogChooseUxAgency() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               1. They publish quality content on UI/UX topics
@@ -354,8 +353,7 @@ export default function blogChooseUxAgency() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               2. Their website meets UX best practices
@@ -382,7 +380,7 @@ export default function blogChooseUxAgency() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               3. Their portfolio and case studies outline UX challenges and
               solutions
             </h3>
@@ -400,7 +398,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               4. They have worked on complex UI/UX projects
             </h3>
             <p>
@@ -415,7 +413,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               5. They have an extensive skill set
             </h3>
             <p>
@@ -431,7 +429,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               6. They have an established, well-explained workflow and
               methodology
             </h3>
@@ -448,7 +446,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               7. Client testimonials and reviews
             </h3>
             <p>
@@ -462,7 +460,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               8. Effective communication and collaboration
             </h3>
             <p>
@@ -477,7 +475,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               9. Flexibility and adaptability
             </h3>
             <p>
@@ -492,7 +490,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               10. Competitive pricing and transparent cost structure
             </h3>
             <p>
@@ -528,7 +526,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               1. Enigma Digital
             </h3>
             <p>
@@ -542,7 +540,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Comprehensive suite of services</p>
@@ -551,7 +549,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">
@@ -570,7 +568,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               2. Lollypop Design Studio
             </h3>
             <p>
@@ -583,7 +581,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Award-winning design team</p>
@@ -592,7 +590,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">
@@ -612,7 +610,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               3. NetBramha Studios
             </h3>
             <p>
@@ -625,7 +623,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Full-service design agency</p>
@@ -636,7 +634,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">Limited availability due to high demand</p>
@@ -654,7 +652,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               4. Fractal Ink Design Studio
             </h3>
             <p>
@@ -667,7 +665,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Proven track record of success</p>
@@ -676,7 +674,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">
@@ -696,7 +694,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               5. Think Design
             </h3>
             <p>
@@ -709,7 +707,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Comprehensive suite of services</p>
@@ -718,7 +716,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">Limited availability due to high demand</p>
@@ -743,7 +741,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               6. WowMakers
             </h3>
             <p>
@@ -756,7 +754,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">
@@ -767,7 +765,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">
@@ -787,7 +785,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               7. Beard Design
             </h3>
             <p>
@@ -800,7 +798,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Customized design solutions</p>
@@ -809,7 +807,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">Limited availability due to high demand</p>
@@ -827,7 +825,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               8. Thence
             </h3>
             <p>
@@ -840,7 +838,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Research-driven design approach</p>
@@ -849,7 +847,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">
@@ -869,7 +867,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               9. YUJ Designs
             </h3>
             <p>
@@ -882,7 +880,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Award-winning design team</p>
@@ -891,7 +889,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">Limited availability due to high demand</p>
@@ -907,7 +905,7 @@ export default function blogChooseUxAgency() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               10. Sparklin Innovations
             </h3>
             <p>
@@ -921,7 +919,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               pros:
             </h3>
             <p className="list-blog">Diverse range of services</p>
@@ -930,7 +928,7 @@ export default function blogChooseUxAgency() {
 
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               cons:
             </h3>
             <p className="list-blog">

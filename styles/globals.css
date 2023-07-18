@@ -109,9 +109,12 @@ body {
   transition: filter .55s ease-in-out;
   transition: filter .55s ease-in-out, -webkit-filter .85s ease-in-out
 }
-
+/* .dark-mode .words-preloader {
+  filter: invert(1);
+} */
 .dark-mode ::selection {
-  background: #fff;
+  color: #000;
+  background: #a2a529;
 }
 
 .dark-mode-btn {
@@ -153,8 +156,8 @@ body {
 }
 
 .dark-mode .c-cursor__inner {
-  color: #fff !important;
-  background: #000;
+  color: #000 !important;
+  /* background: #000; */
 }
 
 .dark-mode .lapi_div .macbook_pro {
@@ -420,6 +423,8 @@ button:focus {
   font-family: "Ageo";
   font-weight: 600;
   z-index: 99;
+  opacity: 0;
+  transition: opacity 0.05s;
 }
 
 .preloader svg {
@@ -732,7 +737,7 @@ button:focus {
 
 .nav {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -1136,6 +1141,7 @@ label:hover circle {
       #5d5ad6,
       #5d5ad6,
       #5d5ad6) !important;
+      background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 0;
   -webkit-text-fill-color: transparent;
@@ -1429,7 +1435,7 @@ label:hover circle {
   font-size: 1.5vw;
   font-weight: 500;
   letter-spacing: -0.01vw;
-  line-height: 100%;
+  line-height: 1.2;
   text-decoration: none;
   font-family: "Gilroy";
 }
@@ -1583,7 +1589,7 @@ label:hover circle {
   opacity: 1;
   z-index: 13;
   position: relative;
-  top: 50%;
+  top: 49%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   bottom: 0;
@@ -1625,7 +1631,7 @@ label:hover circle {
 
 .container_lapi {
   width: 100vw;
-  height: 99.9vh;
+  height: 100vh;
   position: absolute;
 }
 
@@ -1720,7 +1726,7 @@ label:hover circle {
 
 .container_lapi .container_lapi_content .enigma_bg_container .enigma_bg {
   position: relative;
-  top: 50% !important;
+  top: 49% !important;
   -webkit-transform: translateY(-50%) !important;
   transform: translateY(-50%) !important;
   width: 100%;
@@ -1849,7 +1855,7 @@ label:hover circle {
 
 .c-hm-us_title {
   max-width: 38vw;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-bottom: 5em;
 }
 
@@ -2383,9 +2389,9 @@ label:hover circle {
 
 /* Brings the child items back in, even though the parent is `hidden` */
 
-.sibling-fade>* {
+/* .sibling-fade>* { */
   /* transition: opacity 200ms linear 150ms, transform 200ms ease-in-out 150ms; */
-}
+/* } */
 
 /* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
 
@@ -2437,6 +2443,10 @@ label:hover circle {
 ul {
   list-style: none outside none;
 }
+
+/* .accordion-list-item{
+  opacity: 1;
+} */
 
 .accordion-list li {
   position: relative !important;
@@ -2737,6 +2747,7 @@ ul {
       #363636,
       #363636) !important;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-stroke: 0;
   -webkit-text-fill-color: transparent;
   transition: all 0.7s cubic-bezier(0.19, 1, 0.4, 1);
@@ -3056,7 +3067,6 @@ accordion-item--default .accordion .accordion-item-content {
   margin: 0 auto;
   position: relative;
   top: 0px;
-  clip-path: polygon(35% 0%, 65% 0%, 65% 50%, 35% 50%);
 }
 
 .img {
@@ -3064,6 +3074,12 @@ accordion-item--default .accordion .accordion-item-content {
   background-position: center;
   background-size: cover;
   height: 90vh;
+  transform: translate3d(0px, -115.738px, 0px) 
+             scale3d(0.537048, 0.537048, 1) 
+             rotateX(0deg) 
+             rotateY(0deg) 
+             rotateZ(20.2541deg) 
+             skew(0deg, 0deg);
 }
 
 .img video {
@@ -3441,7 +3457,7 @@ textarea::placeholder {
 }
 
 .container_hero_content #enigma-svg #e {
-  transform: scale(5.1) translate(-95px, -116px);
+  transform: scale(5.5) translate(-90px, -116px);
 }
 
 .container_hero_content #enigma-svg #n {
@@ -3491,8 +3507,8 @@ textarea::placeholder {
   display: block;
   width: 6%;
   cursor: pointer;
-  bottom: 1vw;
-  right: 1vw;
+  bottom: 20px;
+  right: 20px;
   overflow: hidden;
   opacity: 0.5;
 }
@@ -3513,10 +3529,10 @@ textarea::placeholder {
 
 .action-icon .inner {
   width: 12%;
-  height: auto;
+  height: 45%;
   position: absolute;
-  top: 2.5vw;
-  left: 2.3vw;
+  top: 45px;
+  left: 43px;
   filter: invert(1);
 }
 
@@ -4131,7 +4147,7 @@ https://unsplash.com/@vinomamba24
   padding: 0 2.5vw;
   text-align: justify;
   color: #1a1a1a;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-family: 'Ageo';
 }
 
@@ -4282,7 +4298,7 @@ https://unsplash.com/@vinomamba24
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .service-cap-section .left-box .sub-text {
@@ -4290,6 +4306,7 @@ https://unsplash.com/@vinomamba24
   color: #1a1a1a;
   font-family: 'Ageo';
   font-weight: 400;
+  padding-top: 2vw;
 }
 
 .service-cap-section .right-box {
@@ -4345,11 +4362,12 @@ https://unsplash.com/@vinomamba24
   text-align: justify;
   font-family: 'Ageo';
   overflow: hidden;
+  padding-bottom: 1.8vw;
 }
 
-.left-strategy-box .bottom-text {
-  /* margin-top: 10vw; */
-}
+/* .left-strategy-box .bottom-text {
+  margin-top: 10vw;
+} */
 
 .service-box-image {
   position: relative;
@@ -4542,9 +4560,9 @@ https://unsplash.com/@vinomamba24
   object-fit: cover;
 }
 
-.voro img {
-  /* height: 100%; */
-}
+/* .voro img {
+  height: 100%;
+} */
 
 #container {
   display: flex;
@@ -4687,7 +4705,7 @@ https://unsplash.com/@vinomamba24
   height: 100%;
   object-fit: cover;
   transition: all 0.6s ease-in-out;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
 }
 
 .newsCard .about-gif-arrow {
@@ -4725,7 +4743,7 @@ https://unsplash.com/@vinomamba24
 
 .newsCaption-content {
   margin: 0;
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   font-weight: 500;
   line-height: 1.7;
   font-family: 'Ageo';
@@ -4754,37 +4772,48 @@ https://unsplash.com/@vinomamba24
 }
 
 .gifsubtetx {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
+    width: 80%;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
 }
 
 .gifsubtetx p {
-  font-size: 4.5vw;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-align: center;
+    font-size: 3vw;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .gifsubtetx>p {
-  background: linear-gradient(to right, rgb(6 6 6) 50%, rgb(237 232 232) 50%);
-  background-size: 200% 100%;
-  background-position-x: 100%;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+    background: linear-gradient(90deg,#060606 50%,#ede8e8 0);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.gifsubtetx span {
-  font-size: 4vw;
-  position: absolute;
-  right: 1vw;
-  bottom: 1vw;
+.gifsubtetx .span1 {
+    font-size: 3.5vw;
+    position: absolute;
+    right: 3.5vw;
+    top: 0vw;
 }
+.gifsubtetx .span2 {
+    font-size: 3.5vw;
+    position: absolute;
+    right: 1.5vw;
+    bottom: 5.5vw;
+}
+.gifsubtetx .span3 {
+    font-size: 3.5vw;
+    position: absolute;
+    right: 4vw;
+    bottom: 0.2vw;
+}
+
 
 /* Gif New Section END */
 
@@ -5612,7 +5641,7 @@ body.loading {
 }
 
 .blog-page-grid {
-  width: 33%;
+  width: 30%;
 }
 
 .blogs-section button {
@@ -5711,10 +5740,10 @@ body.loading {
 
 .blogs-section .ul-blog {
   position: relative;
-  margin-top: 5vw;
-  width: 90%;
+  margin-top: 6vw;
+  width: 100%;
   height: 100%;
-  margin-right: 3vw;
+  /* margin-right: 3vw; */
 }
 
 .image-box-blog {
@@ -5739,7 +5768,7 @@ body.loading {
 .ul-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -5901,7 +5930,22 @@ body.loading {
   color: #1a1a1a;
   margin-bottom: 0.8vw;
   font-family: "Ageo";
-  font-size: 1.5vw !important;
+  font-size: 1.3vw !important;
+}
+.bold-h{
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Ageo";
+  font-size: 1.5vw;
+  margin-bottom: "0";
+}
+.bold-h-u{
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Ageo";
+  font-size: 1.7vw;
+  margin-bottom: 10px;
+  text-decoration: underline;
 }
 
 .fontSize {
@@ -6050,21 +6094,21 @@ body.loading {
 .en-f__content {
   display: flex;
   flex-direction: column;
-  line-height: 0.5;
+  line-height: 1;
+  padding-top: 5vw;
 }
 
 .en-footer-section .en-f__content h1 {
   font-size: 7vw;
   color: #1a1a1a;
-  padding-top: 3vw;
   display: inline-flex;
-  line-height: 0.5;
+  line-height: 1;
   overflow: hidden;
   height: 145px;
 }
 
 .mr-11 {
-  margin-left: 11vw;
+  margin-left: 18vw;
 }
 
 .en-footer-section .en-f__content h1 div {
@@ -6089,18 +6133,18 @@ body.loading {
 
 .right-en-box {
   display: flex;
-  justify-content: space-evenly;
-  width: 40%;
+  width: 35%;
   align-items: flex-end;
   height: 100%;
+  justify-content: space-around;
 }
 
 .contact-us-box button {
   border: none;
   background: #1a1a1a;
   color: #fff;
-  width: 230px;
-  height: 230px;
+  width: 14vw;
+  height: 14vw;
   cursor: pointer;
   font-size: 1.5vw;
   border-radius: 50%;
@@ -6462,6 +6506,12 @@ a:hover {
   .accordion:hover .accordion-item:hover .accordion-item-content,
   accordion-item--default .accordion .accordion-item-content {
     height: 63vh;
+  }
+  .contact-us-box button {
+    margin-bottom: 2.3vw;
+  }
+  .en-footer-section .en-f__content h1{
+    height: 8vw;
   }
 }
 
@@ -9726,7 +9776,7 @@ a:hover {
   }
 
   .main-blog-container .right-section p {
-    font-size: 4.5vw;
+    font-size: 4vw;
     text-align: justify;
   }
 
@@ -9751,8 +9801,15 @@ a:hover {
   }
 
   .bold {
-    font-size: 5vw !important;
+    font-size: 4vw !important;
     margin-bottom: 2vw;
+  }
+  .bold-h{
+    font-size: 4.5vw;
+  }
+  .bold-h-u{
+    font-size: 5vw;
+    margin-bottom: 8px;
   }
 
   .main-blog-container .left-section h1 {
@@ -9909,4 +9966,23 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+
+/* Blog Detail Start */
+.main-blog-container .right-section p{
+  font-size: 4.5vw;
+}
+.bold {
+  font-size: 4.5vw;
+}
+.bold-h {
+  font-size: 5vw;
+}
+.bold-h-u{
+  font-size: 5.5vw;
+  margin-bottom: 5px;
+}
+
+
+}
 /* ========================================== Media Queries END ========================================== */

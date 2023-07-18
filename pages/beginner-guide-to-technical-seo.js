@@ -313,7 +313,7 @@ export default function technicleSeo() {
             </div>
           </div>
           <div className="right-section" id="right-section">
-            <h3 className="bold blog-mt-0" id="anim">
+            <h3 className="bold-h blog-mt-0" id="anim">
               What is Technical SEO?
             </h3>
             <p id="anim">
@@ -339,21 +339,14 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
               id="anim"
             >
               Key Technical Factors and Optimization Techniques
             </h3>
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Site Speed:
@@ -387,10 +380,7 @@ export default function technicleSeo() {
             <br />
             <br />
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Mobile-Friendliness:
@@ -426,10 +416,7 @@ export default function technicleSeo() {
             <br />
             <br />
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Secure Connections (HTTPS):
@@ -473,10 +460,7 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
             >
               XML Sitemaps:
             </h3>
@@ -513,10 +497,7 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
             >
               Robots.txt Files:
             </h3>
@@ -552,10 +533,7 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
             >
               Structured Data Markup:
             </h3>
@@ -600,22 +578,14 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
               id="anim"
             >
               Monitoring and Analysing Website Performance
             </h3>
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
-            >
+              className="bold-h blog-mt-0">
               Google Search Console:
             </h3>
 
@@ -652,10 +622,7 @@ export default function technicleSeo() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{
-                fontSize: "1.7vw",
-              }}
+              className="bold-h blog-mt-0"
             >
               Google Analytics:
             </h3>

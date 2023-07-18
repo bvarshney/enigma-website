@@ -39,7 +39,7 @@ const VideoPlayer = () => {
     <div
       style={{ position: "relative", overflow: "hidden" }}
       onClick={togglePlay}
-      data-cursor-text="Showreel"
+      data-cursor-text="Play"
       data-cursor-size="100px"
       data-cursor-color="#000"
     >

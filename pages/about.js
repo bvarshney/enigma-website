@@ -181,7 +181,7 @@ export default function about() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
+          start: "top 80%",
           end: "bottom top",
           markers: false,
         },
@@ -203,11 +203,11 @@ export default function about() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
+          start: "top 80%",
           end: "bottom top",
           markers: false,
         },
-        duration: 1,
+        duration: 0.5,
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",

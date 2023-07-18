@@ -321,7 +321,7 @@ export default function blogBasicsOfSeo() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               White-hat vs. Black-hat SEO
             </h3>
             <p id="anim">
@@ -351,7 +351,7 @@ export default function blogBasicsOfSeo() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               On-page SEO
             </h3>
 
@@ -431,7 +431,7 @@ export default function blogBasicsOfSeo() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Off-page SEO
             </h3>
 
@@ -514,7 +514,7 @@ export default function blogBasicsOfSeo() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Quality Content, Website Structure, and Promotion
             </h3>
 

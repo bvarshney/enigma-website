@@ -249,10 +249,11 @@ export default function ConceptScrollNew() {
                 </div>
                 <div className="c-hm-us_s2">
                   <h4 className="t-lead">
-                  Unleash your brand's true potential with our<br/>
-                  expert UI/UX design, powerful organic marketing,<br/>
-                  and top-notch front-end development <br/>
-                  services. Ready to skyrocket? <span className="emoji-dark">🚀</span>
+                  Empowered by neuromarketing principles,<br/>
+                  our services open endless opportunities<br/>
+                  For each brand we partner with.<br/><br/>
+                  Let's amplify your potential! 
+                  <span className="emoji-dark"> 🚀</span>
                   </h4>
                   <div className="c-hm-us_title">
                     <h2 className="t-d3-fluid cta">

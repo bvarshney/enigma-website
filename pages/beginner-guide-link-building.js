@@ -330,11 +330,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
               id="anim"
             >
               Link Building Techniques
@@ -349,11 +345,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-              }}
+              className="bold-h"
               id="anim"
             >
               Guest Posting:
@@ -376,11 +368,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-              }}
+              className="bold-h"
               id="anim"
             >
               Broken Link Building:
@@ -401,11 +389,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-              }}
+              className="bold-h"
               id="anim"
             >
               Resource Page Link Building:
@@ -426,11 +410,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-              }}
+              className="bold-h"
               id="anim"
             >
               Skyscraper Technique:
@@ -453,11 +433,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                marginBottom: "0",
-              }}
+              className="bold-h"
               id="anim"
             >
               Social Media Sharing:
@@ -487,11 +463,7 @@ export default function blogBeginnerGuideLinkBuilding() {
             <br />
 
             <h3
-              className="bold"
-              style={{
-                fontSize: "1.7vw",
-                textDecoration: "underline",
-              }}
+              className="bold-h-u"
             >
               Quality Over Quantity and Assessing the Value of Potential Link
               Sources

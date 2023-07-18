@@ -335,7 +335,7 @@ export default function blogHowToDesign() {
               <br />
             </p>
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Desktop Screens: The Grand Stage
             </h3>
 
@@ -384,7 +384,7 @@ export default function blogHowToDesign() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               TV: The Colossal Canvas
             </h3>
             <p>
@@ -429,7 +429,7 @@ export default function blogHowToDesign() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Tablets: The Versatile Virtuosos
             </h3>
 
@@ -475,7 +475,7 @@ export default function blogHowToDesign() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Mobile Phones: The Pocket-Sized Powerhouses
             </h3>
 
@@ -551,7 +551,7 @@ export default function blogHowToDesign() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Wearables: The Tiny Titans
             </h3>
 

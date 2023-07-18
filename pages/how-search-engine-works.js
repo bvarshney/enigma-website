@@ -319,7 +319,7 @@ export default function blogSearchEngineWorks() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Web Crawlers
             </h3>
             <p id="anim">
@@ -359,7 +359,7 @@ export default function blogSearchEngineWorks() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Indexing
             </h3>
 
@@ -386,7 +386,7 @@ export default function blogSearchEngineWorks() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Ranking Algorithms
             </h3>
 
@@ -457,7 +457,7 @@ export default function blogSearchEngineWorks() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Understanding Search Engine Behaviour for SEO
             </h3>
 

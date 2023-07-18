@@ -5,7 +5,7 @@ import HomeParticles from "./HomeParticles";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Aerosol() {
+export default function HomeAero() {
   useEffect(() => {
     document.body.addEventListener("mousemove", (evt) => {
       const mouseX = evt.clientX;

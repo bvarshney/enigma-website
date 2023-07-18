@@ -357,8 +357,7 @@ export default function blogTop20UxDesignTools() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               NN/g Nielsen Norman Group
@@ -379,8 +378,7 @@ export default function blogTop20UxDesignTools() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               UX Collective
@@ -402,8 +400,7 @@ export default function blogTop20UxDesignTools() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               A List Apart
@@ -424,8 +421,7 @@ export default function blogTop20UxDesignTools() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Smashing Magazine
@@ -453,7 +449,7 @@ export default function blogTop20UxDesignTools() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Enigma Digital
             </h3>
             <p>
@@ -473,7 +469,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Design
             </h3>
             <p>
@@ -490,7 +486,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Booth
             </h3>
             <p>
@@ -508,7 +504,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Matters
             </h3>
             <p>
@@ -527,7 +523,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               InVision Blog
             </h3>
             <p>
@@ -546,7 +542,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Planet
             </h3>
             <p>
@@ -572,7 +568,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Usability Geek
             </h3>
             <p>
@@ -590,7 +586,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               52 Weeks of UX
             </h3>
             <p>
@@ -608,7 +604,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UIE Brain Sparks
             </h3>
             <p>
@@ -627,7 +623,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Movement
             </h3>
             <p>
@@ -645,7 +641,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               The UX Blog
             </h3>
             <p>
@@ -663,7 +659,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               UX Mastery
             </h3>
             <p>
@@ -691,7 +687,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Interaction Design Foundation (IDF) Blog
             </h3>
             <p>
@@ -709,7 +705,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Studio by UXPin
             </h3>
             <p>
@@ -727,7 +723,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Loop11 Blog
             </h3>
             <p>
@@ -746,7 +742,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Usabilla Blog
             </h3>
             <p>
@@ -764,7 +760,7 @@ export default function blogTop20UxDesignTools() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               That’s A Wrap..!
             </h3>
             <p>

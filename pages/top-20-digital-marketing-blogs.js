@@ -341,8 +341,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Moz
@@ -362,8 +361,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Content Marketing Institute (CMI)
@@ -382,8 +380,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               HubSpot
@@ -401,8 +398,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Neil Patel
@@ -420,8 +416,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
               id="anim"
             >
               Social Media Examiner
@@ -446,7 +441,7 @@ export default function blog20DigitalMarketingBlogs() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Search Engine Land
             </h3>
             <p>
@@ -460,7 +455,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Enigma Digital
             </h3>
             <p>
@@ -477,7 +472,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Copyblogger
             </h3>
             <p>
@@ -491,7 +486,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               MarketingProfs
             </h3>
             <p>
@@ -508,7 +503,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Convince & Convert
             </h3>
             <p>
@@ -525,7 +520,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Ahrefs
             </h3>
             <p>
@@ -548,7 +543,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Buffer
             </h3>
             <p>
@@ -563,7 +558,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Digiday
             </h3>
             <p>
@@ -579,7 +574,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Search Engine Journal
             </h3>
             <p>
@@ -594,7 +589,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Marketing Land
             </h3>
             <p>
@@ -611,7 +606,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Backlinko
             </h3>
             <p>
@@ -625,7 +620,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               AdEspresso
             </h3>
             <p>
@@ -649,7 +644,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Unbounce
             </h3>
             <p>
@@ -665,7 +660,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               KlientBoost
             </h3>
             <p>
@@ -680,7 +675,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Grow
             </h3>
             <p>
@@ -697,7 +692,7 @@ export default function blog20DigitalMarketingBlogs() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               That’s A Wrap..!
             </h3>
             <p>

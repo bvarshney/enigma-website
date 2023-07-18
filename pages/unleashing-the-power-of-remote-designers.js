@@ -339,7 +339,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Unparalleled Talent Pool and Expertise
             </h3>
             <p id="anim">
@@ -353,7 +353,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               recognition (LinkedIn, 2021).
             </p>
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Cost-Effectiveness – A Win-Win Situation
             </h3>
             <p id="anim">
@@ -378,7 +378,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Flexibility and Adaptability
             </h3>
 
@@ -396,7 +396,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Technological Prowess
             </h3>
 
@@ -415,7 +415,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Debunking the Communication Barrier Myth
             </h3>
 
@@ -432,7 +432,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
 
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Scalability and Growth
             </h3>
 
@@ -458,7 +458,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Intellectual Property Protection
             </h3>
 
@@ -473,7 +473,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Cultural Diversity and Global Outlook
             </h3>
 
@@ -487,7 +487,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Increased Collaboration and Innovation
             </h3>
 
@@ -501,7 +501,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               indicating a boost in innovation (Harvard Business Review, 2020).
             </p>
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Improved Work-Life Balance for In-House Team Members
             </h3>
 

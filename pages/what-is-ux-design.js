@@ -316,7 +316,7 @@ export default function blogUxDesign() {
               <br />
               <br />
             </p>
-            <h3 className="bold" id="anim" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               What is UX Design?
             </h3>
             <p id="anim">

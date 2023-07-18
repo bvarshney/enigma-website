@@ -318,7 +318,7 @@ export default function blogKeywordResearch() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Importance of Keyword Research
             </h3>
             <p id="anim">Keyword research is essential for several reasons:</p>
@@ -362,7 +362,7 @@ export default function blogKeywordResearch() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Keyword Research Tools
             </h3>
 
@@ -433,7 +433,7 @@ export default function blogKeywordResearch() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Analysing Keyword Competitiveness, Search Volume, and User Intent
             </h3>
 
@@ -482,7 +482,7 @@ export default function blogKeywordResearch() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Creating a Targeted Keyword List
             </h3>
 
@@ -508,7 +508,7 @@ export default function blogKeywordResearch() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Importance of Long-tail Keywords
             </h3>
 
@@ -525,7 +525,7 @@ export default function blogKeywordResearch() {
             </p>
 
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Local SEO and Keyword Research
             </h3>
 

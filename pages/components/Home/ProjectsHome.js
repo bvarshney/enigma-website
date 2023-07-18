@@ -359,8 +359,8 @@ export default function ProjectsHome() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-450 top",
-          end: "bottom top",
+          start: "top 80%",
+          // end: "bottom top",
           markers: false,
         },
         duration: 1,
@@ -377,16 +377,16 @@ export default function ProjectsHome() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#c-works",
-        start: "-450 top",
+        start: "top 80%",
       },
     });
 
     // Header
     tl.fromTo(
       "#line-anim #span",
-      2,
+      1.5,
       {
-        y: -650,
+        y: 600,
         ease: "Power3.inOut",
         skewY: -20,
       },
@@ -440,8 +440,8 @@ export default function ProjectsHome() {
             </h1>
             <h4 className={styles.paraProject} id="proj-para-anim">
               <span>
-                Crafting new bright brands, unique visual systems and digital
-                experience focused on a wide range of original collabs.
+              Our showcase of a spectrum of Innovative Collaborations, 
+              Redefined Digital Experiences, and Brand Transformations.
               </span>
             </h4>
           </div>

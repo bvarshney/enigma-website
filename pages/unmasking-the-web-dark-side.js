@@ -331,8 +331,8 @@ export default function blogUnmaskingWebSide() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
+             
               id="anim"
             >
               There’s nothing worse than something that auto-renews
@@ -362,8 +362,8 @@ export default function blogUnmaskingWebSide() {
             <br />
 
             <h3
-              className="bold blog-mt-0"
-              style={{ fontSize: "1.7vw" }}
+              className="bold-h blog-mt-0"
+             
               id="anim"
             >
               Be Clear with Data Usage
@@ -399,7 +399,7 @@ export default function blogUnmaskingWebSide() {
 
             <br />
             <br />
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Products Should Never Sneak into the Cart
             </h3>
             <p>
@@ -424,7 +424,7 @@ export default function blogUnmaskingWebSide() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Charges Should Come with a Notification
             </h3>
             <p>
@@ -449,7 +449,7 @@ export default function blogUnmaskingWebSide() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               Copyblogger
             </h3>
             <p>
@@ -483,7 +483,7 @@ export default function blogUnmaskingWebSide() {
             <br />
             <br />
 
-            <h3 className="bold blog-mt-0" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h blog-mt-0">
               No More False Urgency or Scarcity, Please
             </h3>
             <p>

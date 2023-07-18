@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -81,39 +82,16 @@ export default function Category() {
     return () => ctx.revert();
   });
 
-  // Services Accordian
-  // useEffect(() => {
-  //   let accordion = document.querySelector(".accordion-list");
-  //   let items = accordion.querySelectorAll("li");
-  //   let questions = accordion.querySelectorAll(".accordion-title");
-
-  //   questions.forEach((question) =>
-  //     question.addEventListener("click", toggleAccordion)
-  //   );
-
-  //   function toggleAccordion() {
-  //     let thisItem;
-  //     thisItem = this.parentNode;
-
-  //     items.forEach((item) => {
-  //       if (thisItem == item) {
-  //         thisItem.classList.add("open");
-  //         return;
-  //       }
-  //       item.classList.remove("open");
-  //     });
-  //   }
-  // });
-
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".category-section-new",
-        start: "-600 top",
+        start: "top 70%",
+        // markers: "true",
       },
     });
 
-    const demoHeader = document.querySelectorAll(".accordion-list li");
+    const demoHeader = document.querySelectorAll(".accordion-list>li");
     // Header
     tl.fromTo(
       demoHeader,
@@ -131,12 +109,53 @@ export default function Category() {
     );
   });
 
+//   useEffect(() => {
+//     // Select the marker element
+//     const marker = document.getElementById('services');
+
+//     // Select all the li elements
+//     const listItems = document.querySelectorAll('.accordion-list-item');
+
+//   //   // Loop through each li element
+//   //   listItems.forEach((item) => {
+//   //     // Create a GSAP animation for the current li element
+//   //     gsap.from(item, {
+//   //       opacity: 0,
+//   //       y: 100,
+//   //       duration: 0.5,
+//   //       ease: 'power2.out',
+//   //       scrollTrigger: {
+//   //         trigger: marker,
+//   //         start: 'top 80%', // Adjust the start position as per your needs
+//   //         end: '+=100', // Adjust the end position as per your needs
+//   //         toggleActions: 'play none none reverse',
+//   //       },
+//   //     });
+//   //   });
+
+
+//   listItems.forEach((item) => {
+//     // Create a GSAP animation for the current li element
+//     gsap.fromTo(
+//       item,
+//       { opacity: 0, y: 100 },
+//       { opacity: 1, y: 0, duration: 1, ease: 'power2.out', scrollTrigger: {
+//           trigger: marker,
+//           start: 'top 80%',
+//           end: '+=100',
+//           markers: "true",
+//         },
+//       }
+//     );
+//   });
+// }, []);
+
   // LI Animate
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#services",
-        start: "-400 top",
+        start: "top 70%",
       },
     });
     tl.fromTo(
@@ -158,7 +177,7 @@ export default function Category() {
           <div className="container">
             <div className="accordion-container flex-column-center">
               <ul className="accordion-list accordion">
-                <li>
+                <li className="accordion-list-item">
                   <div className="accordion-title accordion-item">
                     <div className="accordion-item-content">
                       <span>01</span>
@@ -174,22 +193,10 @@ export default function Category() {
 
                       <div className="cont">
                         <p>
-                          Strategic planning based on insight is the starting
-                          point of everything we do. Using a blend of strategic
-                          thinking, broad marketing experience, insights, proven
-                          best practices, and sound judgment, we create
-                          effective strategies that transform insights into
-                          actionable plans and deliver measurable results.
+                        Strategic planning based on insight is the starting point of everything we do. Using a blend of strategic thinking, broad marketing experience, insights, proven best practices, and sound judgment, we create effective strategies that transform insights into actionable plans and deliver measurable results.
                         </p>
                         <p>
-                          <b> </b> Digital Advisory and Consulting, Integrated
-                          Digital Marketing Plan (D.M.P.), User Experience
-                          Development, Customer Experience Strategy, Consumer
-                          Research, Insights &amp; Target Market Analysis,
-                          Digital Capabilities Development, Persona Design &amp;
-                          Customer Segmentation, Competitive Analysis &amp;
-                          Industry Insights, Brand &amp; Content Strategy,
-                          Digital Marketing and Website Performance Audit.
+                          Driving growth and success for your brand needs a brilliant plan (roadmap) that is rooted in deep insights and aimed at delivering tangible results. Our strategy consulting services includes: Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital Capabilities Development, Persona Design & Customer Segmentation, Competitive Analysis & Industry Insights, Brand & Content Strategy, Digital Marketing and Website Performance Audit.
                         </p>
                         <div className="en-form-submit">
                           <a
@@ -218,7 +225,7 @@ export default function Category() {
                     }}
                   ></div>
                 </li>
-                <li>
+                <li className="accordion-list-item">
                   <div className="accordion-title accordion-item">
                     <div className="accordion-item-content">
                       <span>02</span>
@@ -236,21 +243,10 @@ export default function Category() {
 
                       <div className="cont">
                         <p>
-                          We solve complex design problems through user
-                          research, expert analysis, prototyping and
-                          collaborative design with users &amp; stakeholders.
-                          Embracing the power of modern tools and our
-                          proprietary approach, we to build delightful &amp;
-                          intuitive experiences to bridge the gap between the
-                          physical &amp; digital world.
+                        We unravel complex design challenges through meticulous user research, expert analysis, prototyping, and collaborative design with users and stakeholders. Harnessing the power of cutting-edge tools and our proprietary approach we craft delightful and intuitive experiences that seamlessly connect the physical and digital worlds.
                         </p>
                         <p>
-                          <strong /> User Interface Design, User Experience
-                          Design, Responsive Web Design, Mobile App Design,
-                          Digital Interface Design, Design Systems Creation,
-                          Experience Mapping, User Flow Mapping, Wireframing
-                          &amp; Prototyping, Illustrations &amp; Animations,
-                          Visual Designs, and UI Kits.
+                          <strong /> Our design services are a symphony of creativity and functionality, creating digital experiences that captivate and engage. Services we offer include: User Interface Design, User Experience Design, Responsive Web Design, Mobile App Design, Digital Interface Design, Design Systems Creation, Experience Mapping, User Flow Mapping, Wireframing & Prototyping, Illustrations & Animations, Visual Designs.
                         </p>
                         <div className="en-form-submit">
                           <a
@@ -279,7 +275,7 @@ export default function Category() {
                     }}
                   ></div>
                 </li>
-                <li>
+                <li className="accordion-list-item">
                   <div className="accordion-title accordion-item">
                     <div className="accordion-item-content">
                       <span>03</span>
@@ -298,21 +294,10 @@ export default function Category() {
 
                       <div className="cont">
                         <p>
-                          A human-centred, design-led approach to product
-                          development that leverages cutting-edge technologies
-                          &amp; agile methodology, committed to putting you on a
-                          path to success in the ever-changing technological
-                          landscape.
+                        A human-centred, design-led approach to product development that leverages cutting-edge technologies & agile methodology, committed to putting you on a path to success in the ever-changing technological landscape.
                         </p>
                         <p>
-                          <strong /> Front-End Development, Native &amp; Hybrid
-                          Mobile Application Development, Progressive Web
-                          Applications, Database Design &amp; Management, Cloud
-                          Infrastructure Services, Testing &amp; Automation TECH
-                          STACK - HTML, CSS, Sass, Less, JavaScript, jQuery,
-                          GSAP, Vue, React, React Native, Ionic, Flutter,
-                          NodeJS, Spring, JAVA, Grails, Hibernate, MySQL,
-                          PostgreSQL, Oracle, Mongo, AWS and Google Cloud.
+                        We craft digital solutions that are not just functional, but also intuitive and engaging. Our front-end development services include: HTML, CSS, JavaScript, Vue, React, Angular, GSAP, and WordPress. For mobile application development, we utilize technologies like Ionic and Flutter. On the server-side, we leverage PHP, NodeJS and Python to create robust back-ends. 
                         </p>
                         <div className="en-form-submit">
                           <a
@@ -341,7 +326,7 @@ export default function Category() {
                     }}
                   ></div>
                 </li>
-                <li>
+                <li className="accordion-list-item">
                   <div className="accordion-title accordion-item">
                     <div className="accordion-item-content">
                       <span>04</span>
@@ -357,20 +342,10 @@ export default function Category() {
 
                       <div className="cont">
                         <p>
-                          We believe digital isn’t just the word of the moment.
-                          It is the way forward! Combining this belief with our
-                          passion for creating state-of-the-art digital
-                          campaigns and captivating user experiences, we have
-                          evolved into an agency capable of adapting to the
-                          ever-changing world of digital marketing.
+                          Our marketing strategies are not just designed to create a lasting impact, but to drive engagement, foster brand loyalty, and navigate the ever-evolving digital landscape with finesse and agility.
                         </p>
                         <p>
-                          <strong /> Social Media Management, Content Creation
-                          &amp; Curation, Search Engine Optimisation, Influencer
-                          Management, Auction Media Management, Online
-                          Reputation Management, Media Planning &amp; Buying,
-                          Marketing Automation, Email Marketing, Conversion Rate
-                          Optimisation, Website &amp; SEO Analysis.
+                          For us, 'DIGITAL' isn't just a buzzword—it's the path to the future! This belief has shaped our service offerings to evolve for our clients' requirements & subsequently their success. We offer: Social Media Management, Content Creation & Curation, Search Engine Optimisation, Influencer Management, Online Reputation Management, Marketing Automation, Email Marketing, Conversion Rate Optimisation and Website & SEO Analysis.
                         </p>
                         <div className="en-form-submit">
                           <a

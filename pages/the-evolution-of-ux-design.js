@@ -330,7 +330,7 @@ export default function blogEvolutionUxDesign() {
               <br />
               <br />
             </p>
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Once Upon a Time: The Birth of UX Design
             </h3>
             <p id="anim">
@@ -362,7 +362,7 @@ export default function blogEvolutionUxDesign() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The First Steps: UX Design's Emergence as a Discipline
             </h3>
 
@@ -384,7 +384,7 @@ export default function blogEvolutionUxDesign() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Digital Revolution: UX Design in the 21st Century
             </h3>
 
@@ -415,7 +415,7 @@ export default function blogEvolutionUxDesign() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Future: Where UX Design is Headed
             </h3>
 

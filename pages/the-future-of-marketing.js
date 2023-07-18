@@ -325,7 +325,7 @@ export default function blogFutureMarketing() {
               <br />
             </p>
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Unveiling the Mystery of Consumer Decision-Making:
             </h3>
 
@@ -342,7 +342,7 @@ export default function blogFutureMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Create More Persuasive Messaging:
             </h3>
 
@@ -373,7 +373,7 @@ export default function blogFutureMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Enhance Brand Experiences:
             </h3>
 
@@ -392,7 +392,7 @@ export default function blogFutureMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Improve Advertising Effectiveness:
             </h3>
 
@@ -411,7 +411,7 @@ export default function blogFutureMarketing() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               Optimize Marketing ROI:
             </h3>
 
@@ -438,7 +438,7 @@ export default function blogFutureMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Foster Innovation and Creativity:
             </h3>
 
@@ -454,7 +454,7 @@ export default function blogFutureMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Gain a Competitive Edge:
             </h3>
 
@@ -473,7 +473,7 @@ export default function blogFutureMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Drive Personalization and Relevance:
             </h3>
 
@@ -503,7 +503,7 @@ export default function blogFutureMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Enhance Ethical Marketing Practices:
             </h3>
 
@@ -519,7 +519,7 @@ export default function blogFutureMarketing() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               Future-Proof Your Marketing Career:
             </h3>
 

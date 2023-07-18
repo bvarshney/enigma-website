@@ -324,7 +324,7 @@ export default function blogMarketingPsychology() {
               <br />
             </p>
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               What is Marketing Psychology?
             </h3>
 
@@ -343,7 +343,7 @@ export default function blogMarketingPsychology() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Role of Emotions in Marketing:
             </h3>
 
@@ -377,7 +377,7 @@ export default function blogMarketingPsychology() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Power of Social Influence:
             </h3>
 
@@ -399,7 +399,7 @@ export default function blogMarketingPsychology() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Psychology of Persuasion:
             </h3>
 
@@ -422,7 +422,7 @@ export default function blogMarketingPsychology() {
             <br />
             <br />
 
-            <h3 className="bold" style={{ fontSize: "1.7vw" }} id="anim">
+            <h3 className="bold-h" id="anim">
               The Importance of Cognitive Biases:
             </h3>
 
@@ -453,7 +453,7 @@ export default function blogMarketingPsychology() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Role of Memory and Attention:
             </h3>
 
@@ -483,7 +483,7 @@ export default function blogMarketingPsychology() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Impact of Personalization and Relevance:
             </h3>
 
@@ -513,7 +513,7 @@ export default function blogMarketingPsychology() {
 
             <br />
             <br />
-            <h3 className="bold" style={{ fontSize: "1.7vw" }}>
+            <h3 className="bold-h">
               The Power of Neuromarketing:
             </h3>
 
