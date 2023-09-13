@@ -2,31 +2,31 @@ export const projects = [
     {
         name: "Patronum",
         client: "Patronum",
-        description: "A partnership between Google & SN37.",
+        description: "The Google Workspace Manager",
         src: "1.webp",
-        year: 2023,
+        year: 2020,
         link: "patronum",
     },
     {
         name: "Dharan",
         client: "Dharan",
-        description: "Portfolio site for Dharan.",
+        description: "Traditional Clothing, Modern E-Commerce Website",
         src: "2.webp",
-        year: 2023,
+        year: 2021,
         link: "dharan"
     },
     {
         name: "Kedarkala",
         client: "Kedarkala",
-        description: "Portfolio site for Kedarkala.",
+        description: "Branding & Website for a Interior Design Studio.",
         src: "3.webp",
-        year: 2022,
+        year: 2021,
         link: "kedarkala"
     },
     {
         name: "Grand City Mall",
         client: "GCM",
-        description: "Portfolio site for GCM.",
+        description: "Interactive Website for an Upcoming Retail Centre",
         src: "4.webp",
         year: 2022,
         link: "gcm"
@@ -34,47 +34,47 @@ export const projects = [
     {
         name: "Quick X",
         client: "Quick X",
-        description: "The online presence for Quick X",
+        description: "Branding, Website & Mobile App for a Blockchain Company",
         src: "5.webp",
-        year: 2023,
+        year: 2020,
         link: "quickx"
     },
     {
         name: "Certvault",
         client: "Certvault",
-        description: "An Italian animation studio.",
+        description: "UX Planning & UI Design for a cloud-based certificate repository and delivery system",
         src: "6.webp",
-        year: 2022,
+        year: 2020,
         link: "pdtl"
     },
     {
         name: "DMTCA",
         client: "DMTCA",
-        description: "An Italian animation studio.",
+        description: "Branding & website for a leading Digital Agency in West Africa",
         src: "7-2.webp",
-        year: 2022,
+        year: 2020,
         link: "dmtca"
     },
     {
         name: "PDTL",
         client: "PDTL",
-        description: "An Italian animation studio.",
+        description: "A logistics company website with an automated e-commerce system",
         src: "9.webp",
-        year: 2022,
+        year: 2021,
         link: "pdtl"
     },
     {
         name: "Wragby",
         client: "Wragby",
-        description: "An Italian animation studio.",
+        description: "A new website fro a leading tech company in West Africa",
         src: "10.webp",
         year: 2022,
         link: "wragby"
     },
     {
-        name: "Patra",
+        name: "Patra CRD",
         client: "Patra",
-        description: "An Italian animation studio.",
+        description: "Client Reporting Dashboard for an InsureTech Company",
         src: "8.webp",
         year: 2022,
         link: "patra"
