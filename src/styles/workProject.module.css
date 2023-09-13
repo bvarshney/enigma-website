@@ -1,0 +1,394 @@
+.projectSectionMain {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5vw;
+}
+
+.mt20 {
+  margin-top: 10vw;
+}
+
+.font {
+  font-family: "Averta";
+  font-weight: 400;
+}
+
+.projectHeading {
+  padding: 5vw 0 6vw 0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectFirstBox {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paraProject {
+  font-size: 1.2vw;
+  max-width: 25vw;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: justify;
+  font-family: 'Ageo';
+}
+
+.projectHeading .select {
+  font-size: 8vw;
+  color: #1a1a1a;
+  line-height: 1;
+  height: 150px;
+}
+
+.projectHomeHeading{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20vw;
+}
+
+.projectHeading .project {
+  font-size: 8vw;
+  margin-left: 9vw;
+  color: #5d5ad6;
+}
+
+
+.lineAnim{
+  position: relative;
+  overflow: hidden;
+}
+
+/* .lineAnim .span{
+ position: absolute;
+} */
+
+.projectSubSection {
+  width: 77%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.glide {
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.glide {
+  visibility: hidden;
+}
+
+.glide > *{
+  visibility: visible;
+}
+
+.glideContent {
+  width: 100%;
+  position: relative;
+  height: 95%;
+  overflow: hidden;
+  border-radius: 2.5vw;
+}
+
+.glideContent img {
+  width: 115%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.projectHover {
+  visibility: hidden;
+}
+
+/* Prevents :hover from triggering in the gaps between items */
+
+.projectHover > * {
+  visibility: visible;
+}
+
+.projectHover:hover > * img:not(:hover) {
+  filter: grayscale(1);
+}
+
+/* Fade out all items when the parent is hovered */
+
+.projectSubSection > *:hover {
+  filter: grayscale(0);
+  transition-delay: 1ms, 1ms;
+}
+
+.textContent h1 {
+  background: #fff;
+  padding: 0.7vw 3.3vw;
+  border-radius: 50px;
+  font-size: 1.5vw;
+  font-weight: 500;
+  font-family: "Ageo";
+}
+
+.c_project_info {
+  width: auto;
+  position: absolute;
+  bottom: 0.2vw;
+  text-decoration: none;
+  padding: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.c_project_info > p {
+  display: block;
+  padding: 12px 30px;
+  font-size: 10px;
+  background: #fff;
+  color: #282828;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 0.4s;
+}
+
+.c_project_info > p {
+  display: block;
+  padding: 12px 30px;
+  font-size: 0.8vw;
+  background: #fff;
+  color: #282828;
+  margin: 10px 0;
+  opacity: 0;
+  border-radius: 20px;
+  transform: translateY(-50%);
+  transition: 0.4s;
+  width: max-content;
+  font-weight: 500;
+  font-family: 'Ageo';
+}
+
+.glide:hover .c_project_info p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.c_project_info > p:first-child {
+  transition-delay: 0.1s;
+}
+
+.c_project_info > p:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.projectCta {
+  display: flex;
+  align-items: center;
+}
+
+.c_prj_btn {
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 18px;
+  display: flex;
+  margin-left: 1vw;
+  height: max-content;
+}
+
+.c_prj_btn svg {
+  width: 1.1vw;
+}
+
+@media screen and (max-width: 1536px) {
+  .projectSubSection {
+    height: 85vh;
+  }
+
+  .glideContent img {
+    top: -10%;
+    width: 120%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .projectSubSection {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .projectSubSection {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projectSubSection {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .projectHeading {
+    width: 100%;
+  }
+
+  .projectHeading .select {
+    font-size: 12vw;
+    height: 100px;
+    font-weight: 500;
+  }
+
+  .paraProject {
+    display: none;
+    font-size: 2vw;
+    max-width: 40vw;
+  }
+
+  .projectHomeHeading{
+    height: auto;
+  }
+
+  .projectHeading .project {
+    font-size: 12vw;
+    margin-left: 40vw;
+    font-weight: 500;
+    height: 130px;
+  }
+
+  .projectSubSection {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .glide {
+    width: 80%;
+    height: 70vh;
+    margin-bottom: 10vw;
+  }
+
+  .glideContent {
+    border-radius: 6.5vw;
+  }
+
+  .glideContent img {
+    top: -20%;
+  }
+
+  .mb_0 {
+    margin-bottom: 0vw;
+  }
+
+  .mt20 {
+    margin-top: 5vw;
+  }
+
+  .mt0 {
+    margin-top: 5vw;
+  }
+
+  .textContent h1 {
+    font-size: 4vw;
+    padding: 1vw 5.5vw;
+  }
+
+  .c_prj_btn svg {
+    width: 2.5vw;
+  }
+
+  .c_project_info > p {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt20 {
+    margin-top: 0;
+  }
+
+  .projectHeading {
+    padding: 0vw 0 10vw 0;
+  }
+
+  .projectHeading .select {
+    font-size: 14vw;
+    height: 60px;
+  }
+
+  .projectHomeHeading {
+    width: 100%;
+    height: 70px;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+}
+
+  .projectHeading .project {
+    font-size: 14vw;
+    margin-left: 20vw;
+  }
+
+  .projectSubSection {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .glide {
+    width: 100%;
+    margin: auto;
+    height: 60vh;
+    margin-bottom: 15vw;
+  }
+
+  .glideContent {
+    width: 100%;
+    height: 100%;
+    border-radius: 8vw;
+  }
+
+  .textContent h1 {
+    font-size: 4.5vw;
+    padding: 2.2vw 9vw;
+  }
+
+  .paraProject {
+    display: none;
+  }
+
+  .font {
+    font-size: 13vw;
+  }
+
+  .glideContent img {
+    height: 140%;
+    top: -20%;
+  }
+
+  .c_prj_btn {
+    padding: 13px;
+    margin-left: 2vw;
+  }
+
+  .c_prj_btn svg {
+    width: 4vw;
+  }
+
+  .c_project_info > p {
+    font-size: 2vw;
+  }
+}
