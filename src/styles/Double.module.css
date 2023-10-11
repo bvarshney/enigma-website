@@ -30,19 +30,22 @@
   font-size: 16px;
   padding: 10px;
 }
-.double .body h3 {
-  font-size: 1.6vw;
+.double .body h2 {
+  font-size: 1.7vw;
   margin-bottom: 5px;
   margin-top: 0px;
   font-weight: 500;
   font-family: 'CLashDisplay';
   color: var(--black1);
-}
+} 
 
-.double .body h4 {
+.double .body h3 {
   font-size: 1.5vw;
   margin: 0px;
   color: var(--black2);
+  font-family: 'Ageo';
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .double .body p {

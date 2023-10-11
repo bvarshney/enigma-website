@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function digitalmarketingblogs() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -185,15 +185,15 @@ export default function blogHowToDesign() {
         title: "Top 20 Digital Marketing Blogs to Follow for Expert Insights and Strategies",
         description:
           "In the fast-paced and ever-changing world of digital marketing, staying up-to-date with the latest trends, best practices, and expert insights is crucial to ensure the success of your marketing efforts.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/top-20-digital-marketing-blogs",
       }}
@@ -205,7 +205,6 @@ export default function blogHowToDesign() {
           Strategies
         </title>
         <meta name="description" content="In the fast-paced and ever-changing world of digital marketing, staying up-to-date with the latest trends, best practices, and expert insights is crucial to ensure the success of your marketing efforts." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

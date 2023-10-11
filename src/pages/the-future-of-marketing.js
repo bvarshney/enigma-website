@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function futureofmarketing() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -182,15 +182,15 @@ export default function blogHowToDesign() {
         title: "The Future of Marketing: Why Every Marketer Should Learn Neuroscience and Master Neuromarketing",
         description:
           "Neuromarketing seeks to understand the cognitive processes that drive consumers' decisions. By studying the brain's response to various marketing stimuli, neuromarketers can predict consumers' preferences and behaviours with more accuracy than traditional methods.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/the-future-of-marketing",
       }}
@@ -202,7 +202,6 @@ export default function blogHowToDesign() {
           and Master Neuromarketing
         </title>
         <meta name="description" content="Neuromarketing seeks to understand the cognitive processes that drive consumers' decisions. By studying the brain's response to various marketing stimuli, neuromarketers can predict consumers' preferences and behaviours with more accuracy than traditional methods." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

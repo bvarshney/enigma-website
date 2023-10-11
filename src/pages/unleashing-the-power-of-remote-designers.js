@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function powerofremotedesigners() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -181,15 +181,15 @@ export default function blogHowToDesign() {
         title: "Unleashing the Power of Remote Designers: Why Outsourcing to India is the Winning Move",
         description:
           "In this blog, we will explore the myriad advantages of hiring remote designers from India, debunking common misconceptions and  providing solid evidence that supports the value of outsourcing design work to the South Asian giant.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/unleashing-the-power-of-remote-designers",
       }}
@@ -201,7 +201,6 @@ export default function blogHowToDesign() {
           the Winning Move
         </title>
         <meta name="description" content="In this blog, we will explore the myriad advantages of hiring remote designers from India, debunking common misconceptions and  providing solid evidence that supports the value of outsourcing design work to the South Asian giant." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

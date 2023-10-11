@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function whatuxdesignblog() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -181,15 +181,15 @@ export default function blogHowToDesign() {
         title: "What is UX Design: A Simple and Informative Guide for the Curious Minds",
         description:
           "Welcome to the fascinating world of UX design. Grab your popcorn, and let's explore this exciting realm. Our goal is to make UX design as accessible and enjoyable as possible, so without further ado, let's dive right in!",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/what-is-ux-design",
       }}
@@ -201,7 +201,6 @@ export default function blogHowToDesign() {
           Minds
         </title>
         <meta name="description" content="Welcome to the fascinating world of UX design. Grab your popcorn, and let's explore this exciting realm. Our goal is to make UX design as accessible and enjoyable as possible, so without further ado, let's dive right in!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function blogbasicofseo() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
         title: "The Basics of SEO: A Comprehensive Beginner's Guide",
         description:
           "A well-optimized website attracts more organic traffic, which can lead to increased brand awareness, customer engagement, and sales conversions.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/the-basics-of-seo",
       }}
@@ -202,7 +202,6 @@ export default function blogHowToDesign() {
         <meta name="description" content="A well-optimized website attracts more organic traffic,
               which can lead to increased brand awareness, customer engagement,
               and sales conversions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

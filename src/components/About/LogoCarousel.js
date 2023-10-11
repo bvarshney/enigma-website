@@ -10,6 +10,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from "@/styles/Carousel.module.css";
 import gsap from "gsap";
 import SplitType from "split-type";
+import Image from "next/image";
 
 export default function carousel() {
   const [openSlideIndex, setOpenSlideIndex] = useState(null);
@@ -206,14 +207,19 @@ export default function carousel() {
           {openSlideIndex !== 0 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/jelly.png"
+                <Image 
+                  height={300}
+                  width={300} 
+                  src="/assets/about/black/jelly.webp"
                  alt="client logo" />
               </div>
               <div className="bottom-caro-box">
                 <h1>JellyFish</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -232,8 +238,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -252,15 +260,20 @@ export default function carousel() {
           {openSlideIndex !== 1 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/kk.png" 
+              <Image 
+                  height={300}
+                  width={300}  
+                  src="/assets/about/black/kk.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>Kedarkala</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -279,8 +292,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -299,15 +314,19 @@ export default function carousel() {
           {openSlideIndex !== 2 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/dmtca.png" 
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/dmtca.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>DMTCA</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -327,8 +346,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -347,15 +368,19 @@ export default function carousel() {
           {openSlideIndex !== 3 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/riva.png" 
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/riva.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>Riva</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -375,8 +400,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -395,15 +422,19 @@ export default function carousel() {
           {openSlideIndex !== 4 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/quickx.png" 
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/quickx.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>Quick-X</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -424,8 +455,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -444,15 +477,19 @@ export default function carousel() {
           {openSlideIndex !== 5 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/bespin.png" 
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/bespin.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>Bespin Labs</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -473,8 +510,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -493,15 +532,19 @@ export default function carousel() {
           {openSlideIndex !== 6 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/patronum.png" 
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/patronum.webp" 
                   alt="client logo"
                 />
               </div>
               <div className="bottom-caro-box">
                 <h1>Patronum</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -520,8 +563,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   className="caro-plus gsap-caro"
                   alt="plus icon"
                 />
@@ -540,14 +585,18 @@ export default function carousel() {
           {openSlideIndex !== 7 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/patra.png"
+              <Image 
+                  height={300}
+                  width={300} src="/assets/about/black/patra.webp"
                 alt="client logo" />
               </div>
               <div className="bottom-caro-box">
                 <h1>Patra</h1>
                 <div className="caro-img-box">
-                  <img
-                    src="/assets/about/black/plus.png"
+                <Image
+                    height={50}
+                    width={50}
+                    src="/assets/about/black/plus.webp"
                     className="caro-plus"
                     alt="plus icon"
                   />
@@ -567,8 +616,10 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-box hide-caro-box">
-                <img
-                  src="/assets/about/black/plus.png"
+              <Image
+                    height={50}
+                    width={50}
+                  src="/assets/about/black/plus.webp"
                   alt="plus icon"
                   className="caro-plus gsap-caro"
                 />

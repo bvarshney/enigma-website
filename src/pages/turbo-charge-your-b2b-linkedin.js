@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function turbochargeb2blinking() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -182,15 +182,15 @@ export default function blogHowToDesign() {
         title: "Turbocharge Your B2B LinkedIn Game with these 6 unbelievable strategies",
         description:
           "Ah, LinkedIn - the sophisticated, well-dressed sibling of the social media family. Suited up and ready for business, LinkedIn  has evolved into the go-to platform for B2B marketing professionals who are hungry for success.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/turbo-charge-your-b2b-linkedin",
       }}
@@ -202,7 +202,6 @@ export default function blogHowToDesign() {
           strategies
         </title>
         <meta name="description" content="Ah, LinkedIn - the sophisticated, well-dressed sibling of the social media family. Suited up and ready for business, LinkedIn  has evolved into the go-to platform for B2B marketing professionals who are hungry for success." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

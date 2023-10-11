@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function organicdigitalmarketing() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
         title: "Organic Digital Marketing: The Game Changer Your Business Needs",
         description:
           "In this captivating article, we explore the undeniable benefits of organic digital marketing strategies such as Search Engine Optimization (SEO), Social Media Marketing (SMM), and Content Marketing compared to other forms of digital marketing.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/organic-digital-marketing",
       }}
@@ -202,7 +202,6 @@ export default function blogHowToDesign() {
           Organic Digital Marketing: The Game Changer Your Business Needs
         </title>
         <meta name="description" content="In this captivating article, we explore the undeniable benefits of organic digital marketing strategies such as Search Engine Optimization (SEO), Social Media Marketing (SMM), and Content Marketing compared to other forms of digital marketing." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

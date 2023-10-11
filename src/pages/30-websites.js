@@ -182,15 +182,15 @@ export default function blogWebsites() {
           title: "About Enigma | India's Premier UX Agency",
           description:
             "Link-building is a crucial aspect of any SEO strategy, helping to establish your website's authority and increase its visibility on search engines.",
-          images: [
-            {
-              url: "",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+            { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://www.weareenigma.com/30-websites",
         }}
@@ -202,7 +202,6 @@ export default function blogWebsites() {
           your link building journey
         </title>
         <meta name="description" content="Link-building is a crucial aspect of any SEO strategy, helping to establish your website's authority and increase its visibility on search engines." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

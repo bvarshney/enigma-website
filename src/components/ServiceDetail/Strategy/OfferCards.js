@@ -25,47 +25,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function OfferCards() {
 
-// FadeUp Animation
-    useEffect(() => {
-        let ctx = gsap.context(() => {
-        const cardHead = document.querySelector(".our-service-anim");
-        const cards = document.querySelectorAll(".service-offer-card");
-        const tl = gsap.timeline({
-            ScrollTrigger: {
-                trigger: '.service-offer-container',
-                start: 'top 85%',
-            }
-        });
-            tl. from(cardHead, {
-                yPercent: 100,
-                opacity: 0, 
-                duration: 0.7
-            })
-            tl.from(cards, {
-                opacity: "0",
-                y: 100,
-                duration: 0.7,
-                stagger: 0.2,
-                ease: 'power1.Out',
-            });
-        });
-        return () => ctx.revert();
-      });
-
     return (
         <>
-            <div>
-                <div className="service-offer-container">
+                <div className="service-offer-container" id="card-container">
                     <div className='service-offer'>
                         <div className='service-offer-top'>
-                             <h2 className='our-service-anim'>
+                             <h2 className='our-service-anim'  id="fadeUp">
                                 Our Services<span className='stroke'> Include</span>
                             </h2>
                         </div>
                     </div>
                     <div className="service-offer-section width-full flex flex-wrap">
                         <div className="service-offer-card-wrapper w-1/3 p-3 image-card-wrapper">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg shapes-10">
                                     <span className="card-shape-1 card-bg-1"></span>
@@ -76,7 +48,7 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                 <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg">
                                     <span className="card-shape-2 card-bg-1"></span>
@@ -87,8 +59,8 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                        <div className="service-offer-card image-card">
-                            <Image src='/assets/service-detail/our-service-1.webp' 
+                        <div className="service-offer-card image-card" id="fadeUp">
+                            <Image src='/assets/service-detail/strategy/strategy4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -99,7 +71,7 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                 <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg">
                                     <span className="card-shape-3 card-bg-1"></span>
@@ -110,8 +82,8 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card image-card">
-                            <Image src='/assets/service-detail/our-service-2.webp' 
+                            <div className="service-offer-card image-card" id="fadeUp">
+                            <Image src='/assets/service-detail/strategy/strategy5.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -122,7 +94,7 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                 <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg">
                                     <span className="card-shape-4 card-bg-1"></span>
@@ -133,7 +105,7 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                 <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg">
                                     <span className="card-shape-5 card-bg-1"></span>
@@ -144,7 +116,7 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card">
+                            <div className="service-offer-card" id="fadeUp">
                                 <div className="service-offer-card-blur"></div>
                                 <div className="service-offer-card-bg">
                                     <span className="card-shape-6 card-bg-1"></span>
@@ -156,7 +128,6 @@ export default function OfferCards() {
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     )
 }

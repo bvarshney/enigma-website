@@ -180,15 +180,15 @@ export default function blogKeywordResearch() {
                 title: "Keyword Research: A Comprehensive Guide for SEO Success",
                 description:
                   "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/keyword-research",
               }}
@@ -197,7 +197,6 @@ export default function blogKeywordResearch() {
       <Head>
         <title>Keyword Research: A Comprehensive Guide for SEO Success</title>
         <meta name="description" content="Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

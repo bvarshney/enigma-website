@@ -82,7 +82,7 @@ export default function SliderMarquee() {
               <span>
                 <img
                   src="/assets/casestudies/vector.webp"
-                  alt="Png"
+                  alt="arrow image more projects"
                   id="case-study-arrow"
                 />
               </span>

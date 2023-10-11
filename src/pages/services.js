@@ -21,6 +21,7 @@ import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -370,15 +371,15 @@ export default function services() {
             " Enigma Digital | Services | Expert UI/UX, Development & Marketing",
           description:
             "Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth.",
-          images: [
-            {
-              url: "",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://www.weareenigma.com/services",
         }}
@@ -392,7 +393,6 @@ export default function services() {
           name="description"
           content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
@@ -424,6 +424,10 @@ export default function services() {
         <Header />
       </div>
 
+{/* PopUp Modal Button */}
+<Modal />
+{/* End */}
+
       <main>
         <section
           className="service-hero"
@@ -454,9 +458,9 @@ export default function services() {
                 <span className="w-e">We</span>
               </div>
 
-              <h3 className="para-hero" id="service-anim">
+              <p className="para-hero" id="service-anim">
                 We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </h3>
+              </p>
             </div>
 
             <h1
@@ -574,15 +578,15 @@ export default function services() {
               data-cursor-text="Define"
             >
               <div className="box-we">
-                <h1 className="disabled-work">Define</h1>
+                <h4 className="disabled-work">Define</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Develop a thorough understanding of the project, audience,
                     and objectives to formulate a strategy.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -603,15 +607,15 @@ export default function services() {
               data-cursor-text="Design"
             >
               <div className="box-we">
-                <h1 className="disabled-work">Design</h1>
+                <h4 className="disabled-work">Design</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Craft a purposeful design to reflect the objectives and
                     indicate the direction for the entire project.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -634,15 +638,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h1 className="disabled-work">Implement</h1>
+                <h4 className="disabled-work">Implement</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Bring the design to life in the form of an interactive and
                     functional prototype. Review, refine and optimise.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -664,15 +668,15 @@ export default function services() {
             <div className="box-anim-gsap develop-box-service">
               <div className="first-box-how">
                 <div className="box-we flex-start-remove">
-                  <h1 className="disabled-work">Develop</h1>
+                  <h4 className="disabled-work">Develop</h4>
                 </div>
                 <div className="box-we-para">
-                  <h4>
+                  <p>
                     <span>
                       Incorporate implementation and technical components into a
                       highly functional system, ready for review.
                     </span>
-                  </h4>
+                  </p>
                 </div>
               </div>
             </div>
@@ -696,15 +700,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h1 className="disabled-work">Deliver</h1>
+                <h4 className="disabled-work">Deliver</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Review, refine, test and prepare final product for delivery.
                     Launch and continue to evolve over time.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>

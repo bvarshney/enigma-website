@@ -181,15 +181,15 @@ export default function blogWebsiteCost() {
                 title: "How Much Should a Website Cost? Cracking the Ultimate Conundrum",
                 description:
                   "In this article, we delve into the factors that influence website costs, how agencies allocate your budget at each stage of a website build, and the importance of creating a well-thought-out strategy.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/how-much-should-a-website-cost",
               }}
@@ -204,7 +204,6 @@ export default function blogWebsiteCost() {
               costs, how agencies allocate your budget at each stage of a
               website build, and the importance of creating a well-thought-out
               strategy." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

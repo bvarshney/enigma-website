@@ -175,15 +175,15 @@ export default function technicleSeo() {
                 title: "Beginner's Guide to Technical SEO",
                 description:
                   "Technical SEO refers to the process of optimizing your website's infrastructure and underlying code, making it easier for search engines to crawl, index, and rank your content.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/beginner-guide-to-technical-seo",
               }}
@@ -192,7 +192,6 @@ export default function technicleSeo() {
       <Head>
         <title>Beginner's Guide to Technical SEO</title>
         <meta name="description" content="Technical SEO refers to the process of optimizing your website's infrastructure and underlying code, making it easier for search engines to crawl, index, and rank your content." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

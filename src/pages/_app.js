@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Script
         async
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
       />
       <Script

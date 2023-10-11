@@ -311,7 +311,7 @@ export default function ProjectsHome() {
         gsap.to(image, {
           y: () => image.offsetHeight - container.offsetHeight,
           ease: "none",
-          startAt: { y: "-25%" },
+          startAt: { y: "-20%" },
           scrollTrigger: {
             trigger: container,
             scrub: true,
@@ -319,29 +319,13 @@ export default function ProjectsHome() {
             markers: false,
             invalidateOnRefresh: true,
           },
-          y: "25%",
+          y: "20%",
           ease: "none",
         });
       });
     });
     return () => ctx.revert();
   });
-
-  //  Body Color Changer
-  // useEffect(() => {
-  //   const colorChange = document
-  //     .querySelectorAll("#image-container")
-  //     .forEach(function (colorChanger) {
-  //       colorChanger.addEventListener("mousemove", function (dets) {
-  //         let color = document.querySelector(".scroll-content");
-  //         color.style.backgroundColor = "#" + dets.target.dataset.color;
-  //       });
-  //       colorChanger.addEventListener("mouseleave", function (dets) {
-  //         let leaveColor = document.querySelector(".scroll-content");
-  //         leaveColor.style.backgroundColor = "#f9f9f9";
-  //       });
-  //     });
-  // });
 
   // Text Reveal Animation Top to Center
   if (globalThis.innerWidth < 1024) {
@@ -365,14 +349,13 @@ export default function ProjectsHome() {
         {
           y: 0,
           skewY: 0,
-          stagger: 0.5,
+          stagger: 0.2,
         },
         "-0.6"
       );
       return () => tl.kill();
     }, []);
   }
-
 
   // Project Section Reveal Animation
   useEffect(() => {
@@ -444,10 +427,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#EF9E28"
-                    data-color="DCECE2"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -522,10 +501,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFEBDF"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -607,10 +582,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="E8E8E8"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#535963"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -685,12 +656,8 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFF6DF"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#BBA777"
                   />
                 </a>
 
@@ -770,10 +737,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFE5DF"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -848,10 +811,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFDFDF"
-                    data-cursor-size="120px"
-                    data-cursor-color="#AC0035"
-                    data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />

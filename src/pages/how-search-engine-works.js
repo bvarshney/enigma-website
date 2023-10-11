@@ -174,18 +174,18 @@ export default function blogSearchEngineWorks() {
               canonical="https://www.weareenigma.com/how-search-engine-works"
               openGraph={{
                 url: "https://www.weareenigma.com/how-search-engine-works",
-                title: "",
+                title: "How Search Engines Work: A Comprehensive Guide",
                 description:
                   "Search engines serve as the backbone of the internet, facilitating access to the vast amount of information available online.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/how-search-engine-works",
               }}
@@ -195,7 +195,6 @@ export default function blogSearchEngineWorks() {
         <title>How Search Engines Work: A Comprehensive Guide</title>
         <meta name="description" content="Search engines serve as the backbone of the internet, facilitating
               access to the vast amount of information available online." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

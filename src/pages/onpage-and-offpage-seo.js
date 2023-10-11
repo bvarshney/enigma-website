@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function onpageseo() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
         title: "On-Page & Off-Page SEO: A Beginner's Guide to Optimizing Your Website",
         description:
           "Search engine optimization (SEO) is a critical aspect of any successful digital marketing strategy. SEO can be divided into two main categories: on-page and off-page optimization.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/onpage-and-offpage-seo",
       }}
@@ -204,7 +204,6 @@ export default function blogHowToDesign() {
         <meta name="description" content="Search engine optimization (SEO) is a critical aspect of any
               successful digital marketing strategy. SEO can be divided into two
               main categories: on-page and off-page optimization." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

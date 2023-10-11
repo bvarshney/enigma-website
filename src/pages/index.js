@@ -1,12 +1,10 @@
 import Head from "next/head";
-import gsap from "gsap";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import Header from "@/components/Header/Header";
+import Header from "@/components/Header/Header";  
 import HomeAero from "@/components/Home/HomeAero";
 import HeroDesktop from "@/components/Home/HeroDesktop";
 import Footer from "@/components/Footer";
@@ -20,24 +18,16 @@ import TopHomeAero from "@/components/Home/TopAero";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
-import { useEffect, useState } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.config({
-  nullTargetWarn: false,
-});
+import Modal from "../components/PopupForm/formModal";
 
 export default function Home() {
-
-  console.clear();
 
   return (
     <>
       <NextSeo
         title="Enigma | Digital Product Design, UI/UX & Neuromarketing Agency"
         description="Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
-        canonical="https://www.canonical.ie/"
+        canonical="https://www.weareenigma.com/"
         openGraph={{
           url: "https://www.weareenigma.com/",
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
@@ -53,7 +43,7 @@ export default function Home() {
             },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "weareenigma.com",
+          siteName: "weareenigma.com/",
         }}
       />
 
@@ -90,23 +80,16 @@ export default function Home() {
             <HeroDesktop />
           </section>
 
+{/* PopUp Modal Button */}
+<div>
+  <Modal />
+</div>
+{/* End */}
+
       {/* ======================== Concept Scroll ====================== */}
       <section>
         <ConceptScrollNew />
       </section>
-
-      {/* <section className="popUpButtonContainer">
-        <button className="popUpButton">
-          Hi
-        </button>
-        
-        <div id="PopUpMyModal" className="PopUpModal">
-          <div className="PopUp-modal-content">
-            <span className="PopUpClose">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
-        </div>
-      </section> */}
 
       <section>
         <ConceptScrollMobile />

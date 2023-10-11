@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function marketpsychology() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -181,15 +181,15 @@ export default function blogHowToDesign() {
                 title: "Marketing Psychology: The Secret to Captivating Your Audience and Building Unforgettable Brands",
                 description:
                   "Marketing professionals are continually searching for innovative ways to engage and captivate their target audience.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/marketing-psychology",
               }}
@@ -201,7 +201,6 @@ export default function blogHowToDesign() {
           Building Unforgettable Brands
         </title>
         <meta name="description" content="Marketing professionals are continually searching for innovative ways to engage and captivate their target audience." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

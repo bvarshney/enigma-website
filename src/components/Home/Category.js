@@ -91,7 +91,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/strategy">
+                        <a href="/strategy-and-planning">
                           <span className="cat-btn-text">
                             Transform Your Business
                           </span>
@@ -131,7 +131,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/design" >
+                        <a href="/ui-ux-design" >
                           <span className="cat-btn-text">
                             Upgrade Your Experience
                           </span>
@@ -172,7 +172,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/technology" >
+                        <a href="/technology-stack" >
                           <span className="cat-btn-text">
                             Let’s Build Your Idea
                           </span>
@@ -209,7 +209,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/marketing" >
+                        <a href="/marketing-and-analysis" >
                           <span className="cat-btn-text">
                             Ready? Let’s Get Moving
                           </span>

@@ -21,15 +21,15 @@ export default function NotFound() {
                 title: "404 Page Not Found",
                 description:
                   "404 Page Not Found",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/404",
               }}
@@ -38,7 +38,6 @@ export default function NotFound() {
       <Head>
         <title>404 Page Not Found</title>
         <meta name="description" content="404 Page Not Found" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"

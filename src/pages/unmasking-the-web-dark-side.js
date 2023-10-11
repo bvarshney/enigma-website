@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function unmaskingwebdarksecrets() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -184,15 +184,15 @@ export default function blogHowToDesign() {
         title: "Unmasking the Web's Dark Side: 5 Insider Secrets to Safeguard Your Site from Deceptive Design!",
         description:
           "Navigating the digital world can be a fun and rewarding experience, but it can also be frustrating when you encounter sneaky tactics and deceptive practices.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/unmasking-the-web-dark-side",
       }}
@@ -204,7 +204,6 @@ export default function blogHowToDesign() {
           Site from Deceptive Design!
         </title>
         <meta name="description" content="Navigating the digital world can be a fun and rewarding experience, but it can also be frustrating when you encounter sneaky tactics and deceptive practices." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

@@ -21,7 +21,7 @@ export default async (req, res) => {
       const mailOptions = {
         from: emailform,
         to: emailform,
-        subject: "New Contact Form Response",
+        subject: "PopUp Form Response",
         text: message, // You can customize the email message here
       };
 

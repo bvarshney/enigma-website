@@ -6,15 +6,8 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import SplitType from "split-type";
 
-/*!
- * DrawSVGPlugin 3.4.0
- * https://greensock.com
- *
- * @license Copyright 2008-2020, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
- * @author: Jack Doyle, jack@greensock.com
- */ var _s,
+
+var _s,
   ws,
   bs,
   xs,
@@ -317,7 +310,7 @@ export default function ProjectsHome() {
         gsap.to(image, {
           y: () => image.offsetHeight - container.offsetHeight,
           ease: "none",
-          startAt: { y: "-25%" },
+          startAt: { y: "-20%" },
           scrollTrigger: {
             trigger: container,
             scrub: true,
@@ -325,29 +318,13 @@ export default function ProjectsHome() {
             markers: false,
             invalidateOnRefresh: true,
           },
-          y: "25%",
+          y: "20%",
           ease: "none",
         });
       });
     });
     return () => ctx.revert();
   });
-
-  //  Body Color Changer
-  // useEffect(() => {
-  //   const colorChange = document
-  //     .querySelectorAll("#image-container")
-  //     .forEach(function (colorChanger) {
-  //       colorChanger.addEventListener("mousemove", function (dets) {
-  //         let color = document.querySelector(".scroll-content");
-  //         color.style.backgroundColor = "#" + dets.target.dataset.color;
-  //       });
-  //       colorChanger.addEventListener("mouseleave", function (dets) {
-  //         let leaveColor = document.querySelector(".scroll-content");
-  //         leaveColor.style.backgroundColor = "#f9f9f9";
-  //       });
-  //     });
-  // });
 
   // Text Reveal Animation For Each
   useEffect(() => {
@@ -373,7 +350,35 @@ export default function ProjectsHome() {
 
   // Text Reveal Animation Top to Center
   if (globalThis.innerWidth < 1024) {
+    useEffect(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#m-works",
+          start: "top 90%",
+        },
+      });
+  
+      // Header
+      tl.fromTo(
+        "#line-anim #span",
+        1.2,
+        {
+          y: 600,
+          ease: "Power3.inOut",
+          skewY: -20,
+        },
+        {
+          y: 0,
+          skewY: 0,
+          stagger: 0.2,
+        },
+        "-0.6"
+      );
+      return () => tl.kill();
+    }, []);
+  }
 
+  // Project Section Reveal Animation
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -384,35 +389,7 @@ export default function ProjectsHome() {
 
     // Header
     tl.fromTo(
-      "#line-anim #span",
-      1.5,
-      {
-        y: 600,
-        ease: "Power3.inOut",
-        skewY: -20,
-      },
-      {
-        y: 0,
-        skewY: 0,
-        stagger: 0.4,
-      }
-    );
-    return () => tl.kill();
-  }, []);
-}
-
-  // Project Section Reveal Animation
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#m-works",
-        start: "-250 top",
-      },
-    });
-
-    // Header
-    tl.fromTo(
-      "#project-work",
+      "#project-home",
       0.8,
       {
         opacity: 0,
@@ -434,15 +411,15 @@ export default function ProjectsHome() {
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
             id="line-anim"
           >
-            <h1 className={styles.select}>
+            <h1 className={`${styles.select}`}>
               <span className={styles.span} id="span">
                 Our Work
               </span>
             </h1>
-            <h4 className={styles.paraProject} id="proj-work-anim">
+            <h4 className={styles.paraProject} id="proj-para-anim">
               <span>
-                Crafting new bright brands, unique visual systems and digital
-                experience focused on a wide range of original collabs.
+              Our showcase of a spectrum of Innovative Collaborations, 
+              Redefined Digital Experiences, and Brand Transformations.
               </span>
             </h4>
           </div>
@@ -450,7 +427,7 @@ export default function ProjectsHome() {
             className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
             id="line-anim"
           >
-            <h1 className={styles.project} id="proj-work">
+            <h1 className={styles.project} id="darkMode-project">
               <span className={styles.span} id="span">
                 Showcase
               </span>
@@ -471,10 +448,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#EF9E28"
-                    data-color="C2D4E8"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -549,10 +522,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="D1B1BC"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#0F68DD"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -634,10 +603,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="A9ABB2"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#535963"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -712,10 +677,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="C7B89B"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#BBA777"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -797,10 +758,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFD795"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -875,10 +832,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="F989A1"
-                    data-cursor-size="120px"
-                    data-cursor-color="#AC0035"
-                    data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -960,10 +913,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFD795"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -1038,10 +987,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="F989A1"
-                    data-cursor-size="120px"
-                    data-cursor-color="#AC0035"
-                    data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -1123,10 +1068,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="FFD795"
-                    data-cursor-text="View Project"
-                    data-cursor-size="120px"
-                    data-cursor-color="#FEC969"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -1201,10 +1142,6 @@ export default function ProjectsHome() {
                     width={1000}
                     height={1000}
                     alt="Image"
-                    data-color="F989A1"
-                    data-cursor-size="120px"
-                    data-cursor-color="#AC0035"
-                    data-cursor-text="View Project"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
@@ -1271,103 +1208,8 @@ export default function ProjectsHome() {
               </div>
             </div>
           </div>
-
-          {/* <div className={styles.projectSubSection}>
-            <div className={`${styles.glide} ${styles.displayNoneMobile}`}>
-              <div
-                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
-                id="image-container"
-              >
-                <a href="/certvault"></a>
-
-                <div className={styles.textContent}>
-                  <div className={styles.c_project_info}></div>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.glide}>
-              <div className={styles.glideContent} id="image-container">
-                <a href="/dmtca">
-                  <Image
-                    src="/assets/projects/new-project/dmtca.png"
-                    width={1000}
-                    height={1000}
-                    alt="Image"
-                    data-color="F989A1"
-                    data-cursor-size="120px"
-                    data-cursor-color="#AC0035"
-                    data-cursor-text="View Project"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </a>
-
-                <div className={styles.textContent}>
-                  <div className={styles.c_project_info}>
-                    <p>2020</p> <p>E-Commerce, Web Design, Development</p>
-                    <div className={styles.projectCta}>
-                      <h1>DMTCA</h1>
-                      <div
-                        className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
-                      >
-                        <svg
-                          id="arrow"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 9.56 9.56"
-                        >
-                          <line
-                            id="line1"
-                            x1="0.27"
-                            y1="9.29"
-                            x2="9.18"
-                            y2="0.38"
-                            fill="#4e4e4e"
-                            stroke="#4e4e4e"
-                            strokeMiterlimit={10}
-                            strokeWidth="0.75"
-                          />
-                          <line
-                            id="line2"
-                            x1="0.27"
-                            y1="9.29"
-                            x2="9.18"
-                            y2="0.38"
-                            fill="#4e4e4e"
-                            stroke="#4e4e4e"
-                            strokeMiterlimit={10}
-                            strokeWidth="0.75"
-                          />
-                          <polyline
-                            id="arrow-head-1"
-                            points="5.01 0.38 9.18 0.38 9.18 4.55"
-                            fill="none"
-                            stroke="#4e4e4e"
-                            strokeLinecap="round"
-                            strokeMiterlimit={10}
-                            strokeWidth="0.75"
-                          />
-                          <polyline
-                            id="arrow-head-2"
-                            points="5.01 0.38 9.18 0.38 9.18 4.55"
-                            fill="none"
-                            stroke="#4e4e4e"
-                            strokeLinecap="round"
-                            strokeMiterlimit={10}
-                            strokeWidth="0.75"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div> 
-
-      <div className={styles.ipad}></div>
     </>
   );
 }

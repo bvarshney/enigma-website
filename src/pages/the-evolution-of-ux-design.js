@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function evolutionofdesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
         title: "The Evolution of UX Design: An Informative Expedition Through The History",
         description:
           "Welcome to a thrilling adventure through the history of UX design! Fasten your seatbelts, and join us on this journey as we uncover the origins of User Experience Design.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/the-evolution-of-ux-design",
       }}
@@ -205,7 +205,6 @@ export default function blogHowToDesign() {
         <meta name="description" content="Welcome to a thrilling adventure through the history of UX design!
               Fasten your seatbelts, and join us on this journey as we uncover
               the origins of User Experience Design." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

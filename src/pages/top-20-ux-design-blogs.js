@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function uxdesigntools() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -184,15 +184,15 @@ export default function blogHowToDesign() {
         title: "Top 20 UX Design Blogs to Follow for Innovative Ideas and Expert Insights",
         description:
           "The realm of User Experience (UX) design is ever-evolving, with new trends, tools, and best practices constantly emerging to create better, more user-centred digital experiences.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/top-20-ux-design-blogs",
       }}
@@ -206,7 +206,6 @@ export default function blogHowToDesign() {
         <meta name="description" content="The realm of User Experience (UX) design is ever-evolving, with
               new trends, tools, and best practices constantly emerging to
               create better, more user-centred digital experiences." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

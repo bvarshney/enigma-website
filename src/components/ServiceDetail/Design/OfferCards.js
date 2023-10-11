@@ -36,7 +36,7 @@ export default function OfferCards() {
                 start: 'top 85%',
             }
         });
-            tl. from(cardHead, {
+            tl.from(cardHead, {
                 yPercent: 100,
                 opacity: 0, 
                 duration: 0.7
@@ -88,7 +88,7 @@ export default function OfferCards() {
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
                         <div className="service-offer-card image-card">
-                            <Image src='/assets/service-detail/our-service-1.webp' 
+                            <Image src='/assets/service-detail/design/design4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -111,7 +111,7 @@ export default function OfferCards() {
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
                             <div className="service-offer-card image-card">
-                            <Image src='/assets/service-detail/our-service-2.webp' 
+                            <Image src='/assets/service-detail/design/design5.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}

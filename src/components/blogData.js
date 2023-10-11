@@ -5,7 +5,7 @@ const Blogs = [
       name: "Design",
       category: "Design",
       Link: "/ux-design-glossary",
-      image: "/assets/blogs/blog-detail/website-cost/feature.jpg",
+      image: "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature2.webp",
       description:
         "The UX Design Glossary: Deciphering the Alphabet Soup of UX Jargon",
     },
@@ -13,7 +13,7 @@ const Blogs = [
       name: "Strategy",
       category: "Strategy",
       Link: "/how-much-should-a-website-cost",
-      image: "/assets/blogs/blog-detail/website-cost/feature.jpg",
+      image: "/assets/blogs/blog-detail/website-cost/feature.webp",
       description:
         "How Much Should a Website Cost? Cracking the Ultimate Conundrum",
     },
@@ -21,7 +21,7 @@ const Blogs = [
       name: "Design",
       category: "Design",
       Link: "/how-to-choose-right-ux-agency",
-      image: "/assets/blogs/blog-detail/right-ux-agency/feature.png",
+      image: "/assets/blogs/blog-detail/right-ux-agency/feature.webp",
       description:
         "How to Choose the Right UX Agency to Partner withfor Your Product Ideas",
     },
@@ -29,7 +29,7 @@ const Blogs = [
       name: "Design",
       category: "Design",
       Link: "/unmasking-the-web-dark-side",
-      image: "/assets/blogs/blog-detail/unmasking-web-dark/feature.jpg",
+      image: "/assets/blogs/blog-detail/unmasking-web-dark/feature.webp",
       description:
         "Unmasking the Web's Dark Side: 5 Insider Secrets to Safeguard Your Site from Deceptive Design!",
     },
@@ -45,7 +45,7 @@ const Blogs = [
       name: "Design",
       category: "Design",
       Link: "/what-is-experience-design",
-      image: "/assets/blogs/feature.jpg",
+      image: "/assets/blogs/feature.webp",
       description:
         "What is Experience Design, And How is it Different from User Experience Design (UX)?",
       current: "active",
@@ -56,7 +56,7 @@ const Blogs = [
       category: "Marketing",
       Link: "/top-20-digital-marketing-blogs",
       image:
-        "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature.png",
+        "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature.webp",
       description:
         "Top 20 Digital Marketing Blogs to Follow for Expert Insights and Strategies",
     },
@@ -117,14 +117,14 @@ const Blogs = [
       name: "Marketing",
       category: "Marketing",
       Link: "/how-search-engine-works",
-      image: "/assets/blogs/blog-detail/how-search-engine/feature.png",
+      image: "/assets/blogs/blog-detail/how-search-engine/feature.webp",
       description: "How Search Engines Work: A Comprehensive Guide",
     },
     {
       name: "Marketing",
       category: "Marketing",
       Link: "/organic-digital-marketing",
-      image: "/assets/blogs/blog-detail/organic-digital-marketing/feature.png",
+      image: "/assets/blogs/blog-detail/organic-digital-marketing/feature.webp",
       description:
         "Organic Digital Marketing: The Game Changer Your Business Needs",
     },
@@ -165,7 +165,7 @@ const Blogs = [
       name: "Design",
       category: "Design",
       Link: "/top-20-ux-design-blogs",
-      image: "/assets/blogs/blog-detail/top-20-ux-design-blogs/feature.jpg",
+      image: "/assets/blogs/blog-detail/top-20-ux-design-blogs/feature.webp",
       description:
         "Top 20 UX Design Blogs to Follow for Innovative Ideas and Expert Insights",
     },

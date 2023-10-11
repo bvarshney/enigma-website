@@ -100,24 +100,24 @@ export default function StrategySection() {
         <>
             <div className="service-cap-section strategy-box-anim">
           <div className="left-box" data-jelly>
-            <h2 className="sub-text ser-text-head-anim">
+            <p className="sub-text ser-text-head-anim">
               <span>
                 Here's how we help you
                 <br /> grow.
               </span>
-            </h2>
+            </p>
           </div>
           <div className="right-box">
             <div className="right-sub-content strategy-box-anim">
-              <h1 className="ser-text-head-anim">Our Capabilities</h1>
-              <h4 data-jelly className="ser-text-head-anim">
+              <h2 className="ser-text-head-anim">Our Capabilities</h2>
+              <p data-jelly className="ser-text-head-anim">
                 <span>
                   We create evergreen brands that are highly effective at
                   boosting revenue, increasing brand equity, and improving ROI.
                   Our big picture approach powers your entire business, not just
                   the marketing department.
                 </span>
-              </h4>
+              </p>
             </div>
           </div>
         </div>
@@ -131,9 +131,9 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#2b8c87"
           >
-          <Link href='/strategy'>
-            <h1 className="ser-text-head-anim">Strategy</h1>
-            <h4 data-jelly className="ser-text-head-anim">
+          <Link href='/strategy-and-planning'>
+            <h3 className="ser-text-head-anim">Strategy</h3>
+            <p data-jelly className="ser-text-head-anim">
               <span>
                   Digital Advisory and Consulting, Integrated Digital Marketing
                   Plan (D.M.P.), User Experience Development, Customer Experience
@@ -143,7 +143,7 @@ export default function StrategySection() {
                   Content Strategy, Digital Marketing and Website Performance
                   Audit.
               </span>
-            </h4>
+            </p>
           </Link> 
           </div>
 
@@ -173,9 +173,9 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-          <Link href='/design'>
-            <h1 className="ser-text-head-anim">UI/UX Design</h1>
-              <h4 data-jelly className="ser-text-head-anim">
+          <Link href='/ui-ux-design'>
+            <h3 className="ser-text-head-anim">UI/UX Design</h3>
+              <p data-jelly className="ser-text-head-anim">
                 <span>
                   User Interface Design, User Experience Design, Responsive Web
                   Design, Mobile App Design, Digital Interface Design, Design
@@ -183,7 +183,7 @@ export default function StrategySection() {
                   Wireframing & Prototyping, Illustrations & Animations, Visual
                   Designs, and UI Kits.
                 </span>
-              </h4>
+              </p>
           </Link>
             
           </div>
@@ -212,9 +212,9 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#fcc63d"
           >
-          <Link href='/technology'>
-            <h1 className="ser-text-head-anim">Technology</h1>
-              <h4 data-jelly className="ser-text-head-anim">
+          <Link href='/technology-stack'>
+            <h3 className="ser-text-head-anim">Technology</h3>
+              <p data-jelly className="ser-text-head-anim">
                 <span>
                   Front-End Development, Native & Hybrid Mobile Application
                   Development, Progressive Web Applications, Database Design &
@@ -224,7 +224,7 @@ export default function StrategySection() {
                   Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
                   Google Cloud.
                 </span>
-              </h4>
+              </p>
           </Link>
           </div>
 
@@ -252,9 +252,9 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-            <Link href='/marketing'>
-              <h1 className="ser-text-head-anim">Marketing</h1>
-              <h4 data-jelly className="ser-text-head-anim">
+            <Link href='/marketing-and-analysis'>
+              <h3 className="ser-text-head-anim">Marketing</h3>
+              <p data-jelly className="ser-text-head-anim">
                 <span>
                   Social Media Management, Content Creation & Curation, Search
                   Engine Optimisation, Influencer Management, Auction Media
@@ -262,7 +262,7 @@ export default function StrategySection() {
                   Buying, Marketing Automation, Email Marketing, Conversion Rate
                   Optimisation, Website & SEO Analysis.
                 </span>
-              </h4>
+              </p>
             </Link>
           </div>
 

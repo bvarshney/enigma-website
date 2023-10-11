@@ -16,7 +16,7 @@ export default function NextBox() {
             data-cursor-color="#000"
             data-cursor-size="400px"
           >
-            <Link href="/strategy">
+            <Link href="/strategy-and-planning">
               <h1>Strategy</h1>
             </Link>
           </div>

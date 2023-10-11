@@ -67,7 +67,7 @@ export default function Home() {
     if (isMessageSent) {
       setTimeout(() => {
         setIsMessageSent(false);
-      }, 3000); // 3 seconds
+      }, 2000); // 3 seconds
     }
   }, [isMessageSent]);
 

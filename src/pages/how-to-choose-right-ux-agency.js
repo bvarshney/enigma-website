@@ -179,15 +179,15 @@ useEffect(() => {
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
                 description:
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/how-to-choose-right-ux-agency",
               }}
@@ -199,7 +199,6 @@ useEffect(() => {
           Ideas
         </title>
         <meta name="description" content="Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

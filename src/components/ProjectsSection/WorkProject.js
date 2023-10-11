@@ -1,9 +1,7 @@
-'use client'
-
-import styles from '@/styles/HomeProject.module.css'
+import styles from './styles.module.css'
 import { projects } from './ProjectData';
 import Double from './Double';
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { gsap } from 'gsap/dist/gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from "split-type";
@@ -11,11 +9,6 @@ import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);   
 
 export default function WorkProject() {
-
-  const selected = useRef(null);
-  const projecth1 = useRef(null);
-  const workPara = useRef(null);
-  const mainSection = useRef(null);
 
   useEffect(() => {
     const totalSection = document.querySelectorAll("#c-works");
@@ -25,7 +18,7 @@ export default function WorkProject() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "top 85%",
+          start: "top 80%",
           markers: false,
         },
         duration: 1,
@@ -39,19 +32,21 @@ export default function WorkProject() {
 
   // Text Reveal Animation Top to Center
   useEffect(() => {
+
+    const lineAnim = document.querySelectorAll("#line-anim")
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#c-works",
-        start: "top 85%",
+        start: "top 80%",
       },
     });
 
     // Header
-    tl.fromTo(
-      "#line-anim #span",
+    tl.fromTo( lineAnim,
       1.2,
       {
-        y: 600,
+        y: '200px',
         ease: "Power3.inOut",
         skewY: -20,
       },
@@ -59,6 +54,7 @@ export default function WorkProject() {
         y: 0,
         skewY: 0,
         stagger: 0.5,
+        duration: 1
       },
       "-0.6"
     );
@@ -72,13 +68,12 @@ export default function WorkProject() {
         <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
-            id="line-anim"
           >
-            <h1 className={`${styles.select}`}>
-              <span className={styles.span} id="span">
-                Our Work
-              </span>
-            </h1>
+          <div className={`${styles.headContainer}`}>
+            <h1 className={`${styles.select}`} id='line-anim'>
+                  Our Work
+              </h1>
+          </div>
             <p className={styles.paraProject} id="proj-para-anim">
               <span>
               Our showcase of a spectrum of Innovative Collaborations, 
@@ -86,14 +81,9 @@ export default function WorkProject() {
               </span>
             </p>
           </div>
-          <div
-            className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
-            id="line-anim"
-          >
-            <h1 className={styles.project} id="darkMode-project">
-              <span className={styles.span} id="span">
+          <div className={`${styles.headContainer}`}>
+            <h1 className='color-primary' id='line-anim'>
                 Showcase
-              </span>
             </h1>
           </div>
         </div>
@@ -102,8 +92,8 @@ export default function WorkProject() {
         <Double projects={[projects[0], projects[1]]}/>
         <Double projects={[projects[2], projects[3]]} reversed={true}/>
         <Double projects={[projects[4], projects[5]]}/>
-        <Double projects={[projects[2], projects[3]]} reversed={true}/>
-        <Double projects={[projects[0], projects[1]]}/>
+        <Double projects={[projects[6], projects[7]]} reversed={true}/>
+        <Double projects={[projects[8], projects[9]]}/>
       </div>
     </div>
   )

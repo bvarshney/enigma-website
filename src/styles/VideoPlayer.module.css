@@ -1,6 +1,6 @@
 .svgBackground {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,11 +8,11 @@
 }
 
 .svgBackground svg {
-  width: 90px;
+  width: 100px;
 }
 
 .svgBackground img {
-  width: 100px;
+  width: 150px;
   filter: invert(1);
 }
 

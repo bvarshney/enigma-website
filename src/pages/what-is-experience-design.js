@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function experiencedesignblog() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -172,32 +172,31 @@ export default function blogHowToDesign() {
     <>
 
     <NextSeo
-      title=">UI/UX Design | Best UI/UX Design Agency in India"
+      title="What is Experience Design Blog | Best UI/UX Design Agency in India"
       description="Over the past few years, the term Experience Design and User Experience have become so closely associated that they're often used interchangeably. They're interconnected, but they're not identical. And that disparity means there are vital differences between them."
       canonical="https://www.weareenigma.com/what-is-experience-design"
       openGraph={{
         url: "https://www.weareenigma.com/what-is-experience-design",
-        title: ">UI/UX Design | Best UI/UX Design Agency in India",
+        title: ">What is Experience Design Blog | Best UI/UX Design Agency in India",
         description:
           " Over the past few years, the term Experience Design and User Experience have become so closely associated that they're often used interchangeably. They're interconnected, but they're not identical. And that disparity means there are vital differences between them.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/what-is-experience-design",
       }}
     />    
 
       <Head>
-        <title>UI/UX Design | Best UI/UX Design Agency in India</title>
+        <title>What is Experience Design Blog | Best UI/UX Design Agency in India</title>
         <meta name="description" content="Over the past few years, the term Experience Design and User Experience have become so closely associated that they're often used interchangeably. They're interconnected, but they're not identical. And that disparity means there are vital differences between them." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
@@ -330,9 +329,8 @@ export default function blogHowToDesign() {
               Architect. Sometime during the early 1990s, he decided to change
               his title to User Experience Architect. Why did he do it? In Don’s
               own words -
-              
-              
             </p>
+            
             <blockquote className="bold strong" id="anim">
               “I invented the term because I thought Human Interface and
               usability were too narrow: I wanted to cover all aspects of the
@@ -340,9 +338,8 @@ export default function blogHowToDesign() {
               graphics, the interface, the physical interaction, and the
               manual.”
             </blockquote>
+            <span className="donald">— Donald Arthur Norman</span>
             
-            
-            <span className="donald">Donald Arthur Norman</span>
             <br />
             <br />
             <div className="blog-img">

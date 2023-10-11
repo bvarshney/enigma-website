@@ -82,7 +82,7 @@ function Footer() {
           opacity: 0,
         },
         {
-          delay: -0.5,
+          delay: -0.8,
           duration: 0.8,
           opacity: 1,
           y: 0,
@@ -110,10 +110,12 @@ function Footer() {
           </div>
           <div className="right-en-box">
             <div className="image-box contact-us-box">
-              <img
+              <Image
                 src="/assets/footer-main/Vector.png"
                 className="footer-dark-img"
                 alt="Foter contact image"
+                width={500}
+                height={500}
               />
             </div>
             <div
@@ -151,24 +153,24 @@ function Footer() {
                 <p> even better call us</p>
                 <div className="num">
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
                     <a href="tel:+91 8178 026 136">
                       <span data-text="+91 8178 026 136">
-                        <span className="disabled">+91</span> 8178 026 136
-                      </span>
+                        +91 8178 026 136
+                      </span> 
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
                     <a href="tel:+91 7303 644 520">
                       <span data-text="+91 7303 644 520">
-                        <span className="disabled">+91</span> 7303 644 520
+                        +91 7303 644 520
                       </span>
                     </a>
                   </div>
@@ -180,7 +182,7 @@ function Footer() {
               <div className="socials">
                 <div className="top-socials f__anim">
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -192,7 +194,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -204,7 +206,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -215,7 +217,7 @@ function Footer() {
                 </div>
                 <div className="bottom-socials f__anim">
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -227,7 +229,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -236,7 +238,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >

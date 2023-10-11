@@ -21,7 +21,7 @@ export default function Index({projects, reversed}) {
       },
     });
 
-    const demoHeader = document.querySelectorAll("#double-image-anim");
+    const demoHeader = document.querySelectorAll("#doubleImage");
 
     // Header
     tl.fromTo(
@@ -35,7 +35,7 @@ export default function Index({projects, reversed}) {
         yPercent: 0,
         duration: 3,
         ease: "expo.out",
-        stagger: 0.2
+        stagger: 0.3
       },
       0
     );
@@ -93,13 +93,12 @@ export default function Index({projects, reversed}) {
                 sizes="(max-width: 1200px) 100vw, 50vw"
                 priority={false} 
                 alt="project image"
-                id='double-image-anim'
               />
             </div>
             <div className={styles.body}
             id='double-image-anim'>
-                <h3>{projects[0].name}</h3>
-                <h4>{projects[0].description}</h4>
+                <h2>{projects[0].name}</h2>
+                <h3>{projects[0].description}</h3>
                 <p>{projects[0].year}</p>
             </div>
             </Link>
@@ -122,8 +121,8 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}
             id='double-image-anim'>
-                <h3>{projects[1].name}</h3>
-                <h4>{projects[1].description}</h4>
+                <h2>{projects[1].name}</h2>
+                <h3>{projects[1].description}</h3>
                 <p>{projects[1].year}</p>
             </div>
           </Link>

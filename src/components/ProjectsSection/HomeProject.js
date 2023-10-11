@@ -1,6 +1,4 @@
-'use client'
-
-import styles from '@/styles/HomeProject.module.css'
+import styles from './styles.module.css'
 import { projects } from './ProjectData';
 import Double from './Double';
 import { useRef, useEffect } from 'react';
@@ -20,7 +18,7 @@ export default function HomeProject() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "top 85%",
+          start: "top 80%",
           markers: false,
         },
         duration: 1,
@@ -33,65 +31,63 @@ export default function HomeProject() {
   }, []);
 
 
-  // Text Reveal Animation bottom to Center
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#c-works",
-        start: "top 85%",
-      },
-    });
+// Text Reveal Animation Top to Center
+useEffect(() => {
 
-    tl.fromTo(
-      "#line-anim #span",
-      1.2,
-      {
-        y: 600,
-        ease: "Power3.inOut",
-        skewY: -20,
-      },
-      {
-        y: 0,
-        skewY: 0,
-        stagger: 0.5,
-      },
-      "-0.6"
-    );
-    return () => tl.kill();
-  }, []);
+  const lineAnim = document.querySelectorAll("#line-anim")
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#c-works",
+      start: "top 80%",
+    },
+  });
+
+  // Header
+  tl.fromTo( lineAnim,
+    1.2,
+    {
+      y: '200px',
+      ease: "Power3.inOut",
+      skewY: -20,
+    },
+    {
+      y: 0,
+      skewY: 0,
+      stagger: 0.5,
+      duration: 1
+    },
+    "-0.6"
+  );
+  return () => tl.kill();
+}, []);
 
 
   return (
     
     <div className={styles.projectSectionMain} id="c-works">
-        <div className={styles.projectHeading}>
-          <div
-            className={`${styles.projectFirstBox} ${styles.lineAnim}`}
-            id="line-anim"
-          >
-            <h1 className={`${styles.select}`}>
-              <span className={styles.span} id="span">
-                Selected
-              </span>
-            </h1>
-            <p className={styles.paraProject} id="proj-para-anim">
-              <span>
-              Our showcase of a spectrum of Innovative Collaborations, 
-              Redefined Digital Experiences, and Brand Transformations.
-              </span>
-            </p>
-          </div>
-          <div
-            className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
-            id="line-anim"
-          >
-            <h1 className={styles.project} id="darkMode-project">
-              <span className={styles.span} id="span">
-                Projects
-              </span>
-            </h1>
-          </div>
-        </div>
+    <div className={styles.projectHeading}>
+      <div
+        className={`${styles.projectFirstBox} ${styles.lineAnim}`}
+      >
+      <div className={`${styles.headContainer}`}>
+        <h1 className={`${styles.select}`} id='line-anim'>
+              Selected
+          </h1>
+      </div>
+        <p className={styles.paraProject} id="proj-para-anim">
+          <span>
+          Our showcase of a spectrum of Innovative Collaborations, 
+          Redefined Digital Experiences, and Brand Transformations.
+          </span>
+        </p>
+      </div>
+      <div className={`${styles.headContainer}`}>
+        <h1 className='color-primary' id='line-anim'>
+            Projects
+        </h1>
+      </div>
+    </div>
       
       <div className={styles.gallery} id='imgContainer'>
         <Double projects={[projects[0], projects[1]]} id="projectImg" />

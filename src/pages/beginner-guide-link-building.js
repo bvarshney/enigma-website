@@ -183,15 +183,15 @@ export default function blogBeginnerGuideLinkBuilding() {
                 title: "A Beginner's Guide to Link Building",
                 description:
                   "Link building is an essential aspect of Search Engine Optimization (SEO), which involves acquiring backlinks from other websites to your own.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/beginner-guide-link-building",
               }}
@@ -200,7 +200,6 @@ export default function blogBeginnerGuideLinkBuilding() {
       <Head>
         <title>A Beginner's Guide to Link Building</title>
         <meta name="description" content="Link building is an essential aspect of Search Engine Optimization (SEO), which involves acquiring backlinks from other websites to your own." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

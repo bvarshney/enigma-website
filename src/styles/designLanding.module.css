@@ -1,0 +1,1774 @@
+
+.mainContainer{
+    position: relative;
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+.mainContainer p, .mainContainer a{
+    font-family: 'Arial';
+    font-weight: 400;
+} 
+
+
+/* -----------------------Dark Mode -----------------------*/
+
+.dark .cursorDesign{
+    background: #ffffff !important;
+}
+
+.dark .mainContainer{
+    background: var(--black);
+}
+.dark .backgroundImg{
+    display: none;
+}
+.dark .darkBackgroundImg{
+    display: block;
+    opacity: 1;
+}
+
+/* Header */
+.dark img, .dark svg{
+    filter: invert(1);
+}
+.dark .headerMain{
+    background: #00000050;
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    border: 2px solid #ffffff20;
+}
+.dark .headerCta{
+    filter: invert(1);
+}
+.dark .darkToggle img{
+    filter: invert(0);
+}
+.dark .mobileNav {
+    filter: invert(1);
+}
+
+/* Hero */
+.dark .hero{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .heroBottom p span{
+    filter: invert(1);
+}
+
+/* Section 2 */
+.dark .reinvent{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .reinventTextGradient {
+    background-image: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+}
+.dark .reinventRightText{
+    filter: invert(1);
+}
+
+/* Benefit */
+.dark .membership{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 991px) {
+    .dark .memberMobImg{
+        display: none;
+    }
+    .dark .darkMemberMobImg{
+        filter: invert(1);
+        display: block;
+    }
+}
+
+/* Work */
+.dark .work{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+
+/* Pricing */
+.dark .pricing{
+    transition: all 0.3s ease;
+}
+.dark .pricingTop{
+    filter: invert(1);
+}
+.dark .pricingBg{
+    display: none;
+}
+.dark .priceCard{
+    background: #00000020;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff20;
+}
+.dark .pricingBg{
+    display: none;
+}
+.dark .darkPricingBg{
+    filter: invert(1);
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    left: 0;
+}
+.dark .priceCard:last-child{
+    background: #2545ff90;
+}
+
+/* Faq */
+.dark .faq{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .faq img{
+    filter: invert(0);
+}
+
+/* Footer */
+.dark .footer{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .footerBottom img{
+    filter: invert(0);
+}
+
+
+/*------------------ Dark Mode CSS End-------------------- */
+
+/*------------------Main CSS Start ----------------------*/
+
+.loader{
+    position: fixed;
+}
+
+/* Header */
+.headerContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+    margin-top: 30px;
+}
+
+.headerDesktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.headLogo{
+    width: 8%;
+}
+.headLogo img{
+    width: 2.5vw;
+    height: auto;
+}
+.headerMain{
+    background: #000000ab;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3vw;
+    box-shadow: 2px 2px 10px 0px #00000040;
+}
+.nav{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navItems a{
+    color: var(--white);
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+}
+
+.footerNav a{
+    color: var(--black1);
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+}
+
+.navItems a span, .footerNav a span{
+    display: block;
+    transition: transform .45s ease;
+}
+.navItems a span:after, .footerNav a span:after{
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: var(--white);
+}
+
+.footerNav a span:after{
+    color: var(--black1) !important;
+}
+
+.navItems a:hover span, .footerNav a:hover span{
+    transform: translateY(-110%);
+}
+
+.darkToggle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18vw;
+    background-color: #f1f1f1;
+    z-index: 100;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.darkToggle img{
+    width: 75%;
+}
+
+.headerCta{
+    background: var(--black);
+    box-shadow: 2px 2px 5px 0px #00000040;
+    border-radius: 150px;
+    text-align: center;
+    height: 100%;
+    padding: 15px 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.headerCta a{
+    font-size: 1.2vw;
+    font-family: 'Arial';
+    color: var(--white);
+}
+
+/* Hero Section */
+.hero{
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    padding: 0 5vw;
+}
+
+.backgroundImg{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 52%;
+}
+
+.backgroundImg img{
+    width: 100%;
+    height: auto;
+}
+.darkBackgroundImg{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.heroContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    z-index: 1;
+    flex-direction: column;
+    position: relative;
+}
+.heroTopEle h1{
+    color: var(--black3);
+    font-size: 7.8vw;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    text-shadow: 1px 1px 5px #ffffff80;
+}
+
+.heroTopEle{
+    width: 80%;
+}
+.heroTopEle h1 .span{
+    font-size: 4vw;
+}
+.heroTopEle h1 .headContainer{
+    font-size: 4vw;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100px;
+    overflow: hidden;
+    line-height: 1.2;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+}
+.heroTopEle h1 .headContainer .headItems{
+    display: flex;
+    flex-direction: column;
+    animation: moveUp 6s infinite;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+      }
+    10% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-32%);
+    }
+    50% {
+        transform: translateY(-32%);
+    }
+    80% {
+        transform: translateY(-64%);
+    }
+    90% {
+        transform: translateY(-64%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heroBottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 1vw;
+}
+
+.heroBottom p{
+    font-size: 1.5vw;
+    color: var(--black3);
+}
+
+.heroBottom p:last-child{
+    font-size: 1.3vw;
+    color: #1f1f1f90;
+}
+
+.heroBottom p span{
+    color: #ffffff;
+}
+
+/* Button Hero */
+
+.btnCta{
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: inline-flex;
+    transform: translateZ(0);
+    height: 4vw;
+    border-radius: 100px;
+    line-height: 1.5;
+    padding: 0 6vw;
+    font-size: 1.5vw;
+    transition: transform .3s;
+    position: relative;
+    border: 2px solid;
+  }
+
+  .btnCtaTitle {
+    position: relative;
+    display: block;
+    padding: 0 0.16em 0 0;
+    overflow: hidden;
+    z-index: 2;
+    font-family: 'Arial';
+  }
+  .btnCtaTitle span {
+    display: block;
+    transition: transform .8s cubic-bezier(.16,1,.3,1);
+}
+  .btnCtaTitle span:after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: var(--white);
+}
+.btnCtaRipple {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateZ(0);
+  border-radius: inherit;
+}
+.btnCtaRipple span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(101%);
+  background: currentColor;
+  border-radius: 50% 50% 0 0;
+  transition: transform .5s cubic-bezier(.4,0,0,1),border-radius .5s cubic-bezier(.4,0,0,1);
+}
+.btnCta:hover .btnCtaRipple span {
+  border-radius: 0;
+  transform: translateY(0);
+  transition-duration: .5s,.9s;
+}
+.btnCta:hover .btnCtaTitle span {
+  transform: translateY(-110%);
+}
+.form-button-2 p{
+  font-size: 1.5vw;
+  font-family: 'Ageo';
+  color: red;
+  margin: 20px 0;
+}
+ 
+.btnCta:focus .btnCtaRipple span {
+  border-radius: 0;
+  transform: translateY(0);
+  transition-duration: .5s,.9s;
+}
+
+.btnCta:focus .btnCtaTitle span {
+  transform: translateY(-110%);
+}
+
+/* Section 2 */
+.reinvent{
+    background: var(--white);
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10vw;
+}
+.reinventContainer{
+    width: 100%;
+    padding-left: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reinventLeft{
+    width: 60%;
+}
+.heading1{
+    font-size: 5vw;
+    font-weight: 500;
+    color: var(--black3);
+    line-height: 1.2;
+}
+.reinventTextGradient{
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(28,62,255,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(28,62,255,1) 100%);
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(28,62,255,1) 100%);
+} 
+
+.para1{
+    width: 65%;
+    font-size: 1.5vw;
+    color: var(--black3);
+    margin-top: 20px;
+}
+
+.reinventRight{
+    width: 40%;
+    text-align: right;
+    position: relative;
+}
+
+.reinventItems{
+    height: 50em;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.reinventItem{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.reinventItem img{
+    width: 80%;
+}
+.reinventRightText{
+    text-align: left;
+    background: var(--black1);
+    padding: 30px 30px;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 85%;
+    height: 400px;
+}
+.reinventRightText h3{
+    font-size: 4vw;
+    color: var(--gray);
+    font-weight: 500;
+    line-height: 1;
+}
+.reinventRightText p{
+    font-size: 1.5vw;
+    color: var(--white);
+    padding-top: 15px;
+}
+
+.reinventItems > * {
+    animation: 12s autoplay6 infinite linear;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    opacity: 0.0
+  }
+  
+  .reinventItems > *:nth-child(1) {animation-delay: 0s}
+  .reinventItems > *:nth-child(2) {animation-delay: 4s}
+  .reinventItems > *:nth-child(3) {animation-delay: 8s}
+  
+  @keyframes autoplay6 {
+    0% {opacity: 0.0}
+    4% {opacity: 1.0}
+    33.33% {opacity: 1.0}
+    37.33% {opacity: 0.0}
+    100% {opacity: 0.0}
+  }
+
+/* Testimoial Section */
+.testimonialContainer{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/landing-page/design/testimonial.webp);
+    background-position: center center;
+    margin: 15vh 0;
+}
+.testimonial{
+    height: 100%;
+    width: 100%;
+    background-color: #000000c2;
+}
+.testimonialCarousel{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+.horizontalSlider___281Ls{
+    margin-left: 0 !important;
+}
+
+.testiCard{
+    width: 100%;
+    margin: 0;
+    background: none;
+    text-align: center;
+}
+.testiCard p{
+    font-weight: 500 !important;
+    font-family: 'ClashDisplay' !important;
+    color: var(--white);
+}
+.testiContent{
+    font-size: 3vw !important;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.testiName{
+    font-size: 2.5vw;
+    text-align: center;
+    color: var(--white);
+    margin-top: 1rem; 
+}
+.testiButtonContainer{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    left: 50%;
+}
+.testiButton{
+    background: #ffffff50;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    padding: 15px;
+    margin: 0;
+}
+.testiButton:hover{
+    background: #ffffff;
+}
+.testiButton.backbtn{
+    transform: rotate(180deg) !important;
+}
+
+
+/* Membership */
+.membership{
+    padding: 3%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.memberContent{
+    background: #f1f1f1;
+}
+.memberContentBox{
+    text-align: left;
+    position: absolute;
+    right: 0;
+    width: 45%;
+    top: 15%;
+    z-index: 1;
+}
+.memberContentBox p{
+    width: 80%;
+}
+.memberDeskImg{
+    text-align: left;
+    margin-top: 10vw;
+    width: 75%;
+}
+.memberButton {
+    margin-top: 40px;
+}
+
+.memberMobImg, .darkMemberMobImg{
+    display: none;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* Recent Work */
+.work{
+    height: 100%;
+    text-align: center;
+    padding: 10% 5%;
+}
+.workTopBox{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 6vw;
+}
+.workTopBox p{
+    width: 100%;
+    padding: 0 20px;
+}
+.workTesti{
+    position: relative;
+}
+.workTesti button{
+    display: none !important;
+}
+.workWhiteSpace{
+    position: absolute !important;
+    width: 110%;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    border-radius: 50%;
+    left: -5%;
+    top: -16%;
+}
+.workWhiteSpace1{
+    position: absolute !important;
+    width: 110%;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    border-radius: 50%;
+    left: -5%;
+    bottom: -15%;
+}
+.workCarouselImg{
+    height: 60vh;
+    width: 100%;
+    padding: 0 20px;
+}
+.workCarouselImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: center center;
+}
+
+
+/* Pricing Table */
+.pricing{
+    width: 100%;
+    margin: 5% auto;
+}
+.pricingTop{
+    width: 85%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+.pricingTop .para1{
+    width: 100%;
+}
+.pricingTable{
+    position: relative;
+    padding-bottom: 5%;
+}
+.priceCards{
+    display: flex;
+    gap: 2rem;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.darkPricingBg{
+    display: none;
+}
+.priceCard{
+    transition: all 0.3s ease;
+    padding: 3vw 2.5vw;
+    background: #111827;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.priceCard:last-child{
+    background: #2545ff;
+}
+.priceCard span.h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.priceCard p{
+    font-size: 1vw;
+}
+.priceh5{
+    font-size: 1.4vw;
+    font-family: 'Arial';
+}
+.priceCard ul{
+    list-style: disc;
+    font-family: 'Arial';
+    margin-left: 20px;
+}
+.priceCard ul li{
+    font-size: 1vw;
+    margin-bottom: 5px;
+}
+.priceRecommend{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    background: #ffffff30;
+    color: white;
+    font-size: 0.8vw;
+    font-family: 'Arial';
+    padding: 10px 10px;
+}
+.priceCard .btnCta{
+    color: #ffffff;
+    width: 100%;
+}
+.priceCard .btnCtaTitle span:after {
+    color: #000000 !important;
+}
+
+/* Faq */
+.faq{
+    padding: 8% 10%;
+    text-align: center;
+}
+.faqTopBox .para1{
+    text-align: center;
+    width: auto;
+}
+.faqBottomBox{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    margin-top: 100px;
+}
+.faqBottomBox span{
+    font-family: 'Arial';
+    font-size: 1.6vw;
+}
+.faqBottomBox p{
+    font-size: 1.4vw;
+}
+.arrowRotate {
+    transform: rotate(45deg);
+    width: 1.3vw;
+    transition: transform 0.5s ease;
+}
+.arrowStatic {
+    width: 1.3vw;
+    transition: transform 0.5s ease;
+}
+.contentHidden {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.contentVisible {
+    height: 180px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.contentHidden img {
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+
+/* Footer */
+.footer{
+    width: 100%;
+    padding: 5% 0;
+    padding-bottom: 0;
+}
+.footerTop{
+    background: #f1f1f1;
+    padding: 8%;
+    overflow: hidden;
+    position: relative;
+}
+.footerTop img{
+    position: absolute;
+    right: -35%;
+    bottom: -35%;
+    width: 80%;
+}
+
+.footerCta{
+    display: flex;
+    gap: 70px;
+    padding-top: 80px;
+}
+
+.footerBottom{
+    width: 84%;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLeft{
+    text-align: center;
+}
+
+.footerLeft p{
+    margin-top: 25px;
+    font-size: 28px;
+}
+
+.footerRight ul{
+    display: flex;
+    gap: 100px;
+}
+
+/* Media Queries */
+@media screen and (max-width:1536px) {
+    .heroTopEle h1 .headContainer{
+        height: 90px;
+        bottom: -15px;
+    }
+    .headerMain{
+        height: 70px;
+    }
+    .darkToggle{
+        right: 20vw
+    }
+    .reinvent{
+        height: 100%;
+    }
+    .reinventItems{
+        height: 40em;
+    }
+    .reinventRightText{
+        bottom: 0px;
+        height: 250px;
+    }
+    .testimonialContainer{
+        height: 80vh;
+    }
+    .testiButtonContainer{
+        top: 45%;
+    }
+    .contentVisible{
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .heroTopEle h1 .headContainer{
+        height: 80px;
+        bottom: -8px;
+    }
+}
+
+  .headerMobile{
+    display: none;
+  }
+
+  @media screen and (max-width:991px) {
+    /* Mobile */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 80px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 100;
+  }
+  .hamRotate {
+    transform: rotate(0deg);
+  }
+  .active {
+    transform: rotate(45deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  .lineTop {
+    stroke-dasharray: 40 121;
+  }
+  .lineBottom {
+    stroke-dasharray: 40 121;
+  }
+  .active .lineTop {
+    stroke-dashoffset: -68px;
+  }
+  .active .lineBottom {
+    stroke-dashoffset: -68px;
+  }
+    .headerContainer{
+        margin-top: 0;
+    }
+    .headerDesktop{
+        display: none;
+    }
+    .headerMobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .headerMobileContainer{
+        padding: 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .headLogo{
+        width: fit-content;
+        margin-left: 20px;
+    }
+    .headLogo img{
+        width: 55px;
+    }
+    .mobileNav{
+        right: -100%;
+        top: 0;
+        position: absolute;
+        width: 80vw;
+        z-index: 10;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 -2px 8px #00000030;
+        padding-left: 50px;
+        transition: all 0.5s ease;
+        overflow: hidden;
+    }
+    .activeNav{
+        right: 0%;
+        transition: all 0.5s ease;
+    }
+    .mobileNavBg{
+        position: absolute;
+        right: -20%;
+        max-width: unset;
+        z-index: -1;
+        height: 100%;
+        width: auto;
+    }
+    .mobileNavLinks{
+        position: relative;
+        z-index: 2;
+    }
+    .navListLinks a{
+      font-size: 7vw;
+      font-family: 'ClashDisplay' !important;
+      font-weight: 500;
+    }
+    .navCta{
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        display: inline-flex;
+        transform: translateZ(0);
+        border-radius: 100px;
+        line-height: 1.5;
+        font-size: 5.5vw;
+        transition: transform .3s;
+        position: relative;
+        background: #000000;
+        color: #ffffff;
+        margin-top: 30px;
+        padding: 1vw 10vw;
+      }
+      .navCta a{
+        color: #ffffff;
+        letter-spacing: 1px;
+      }
+      .navBottom{
+        margin-top: 150px;
+      }
+      .navBottom img{
+        width: 12rem;
+        filter: invert(1);
+      }
+      .darkToggle{
+        right: 15vw;
+        z-index: 10;
+      }
+
+      /* Hero */
+      .backgroundImg{
+        width: 80%;
+        filter: blur(2px);
+      }
+      .heroContent{
+        padding-top: 10vw;
+      }
+      .heroTopEle{
+        width: 100%;
+      }
+      .heroTopEle h1{
+        font-size: 14vw;
+        text-shadow: none;
+    }
+    .heroTopEle h1 .span{
+        font-size: 10vw;
+    }
+    .heroTopEle h1 .headContainer{
+        font-size: 10vw;
+        position: absolute;
+        bottom: 0px;
+        left: 40px;
+        height: 8vh;
+        line-height: 1.2;
+    }
+    .heroTopEle h1 .headContainer .headItems{
+        display: flex;
+        flex-direction: column;
+        animation: moveUp 6s infinite;
+    }
+    .heroBottom{
+        margin-top: 5vw;
+        gap: 3vw;
+        width: 100%;
+    }
+    .heroBottom p{
+        font-size: 4vw;
+    }
+    .btnCta{
+        padding: 0;
+        font-size: 5vw;
+        height: 90px;
+        width: 55vw;
+    }
+    .heroBottom p:last-child{
+        font-size: 4vw;
+    }
+
+    /* Second Section */
+    .reinventContainer{
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    .reinvent{
+        width: 100%;
+        padding: 0 5%;
+        margin: 0;
+    }
+    .reinventLeft{
+        width: 100%;
+    }
+    .reinventRight{
+        width: 100%;
+        margin-top: 15vw;
+    }
+    .heading1{
+        font-size: 8vw;
+    }
+    .para1{
+        width: 100%;
+        font-size: 4vw;
+    }
+    .reinventItems{
+        height: 60vh;
+    }
+    .reinventItem img{
+        width: 70%;
+    }
+    .reinventRightText{
+        height: 20vh;
+        padding: 20px;
+        bottom: 0;
+    }
+    .reinventRightText h3{
+        font-size: 7vw;
+    }
+    .reinventRightText p{
+        font-size: 3.5vw;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Testimonial */
+    .testiContent{
+        font-size: 8vw !important;
+    }
+    .testiName{
+        font-size: 6vw;
+    }
+    .testiButtonContainer{
+        width: 60%;
+        left: 50%;
+        top: 80%;
+    }
+    .testiButton{
+        background: #ffffff50;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* MemberShip */
+    .membership{
+        padding: 10% 5%;
+        background: #f1f1f1;
+    }
+    .memberContentBox{
+        position: relative;
+        width: 100%;
+        top: unset;
+        right: unset;
+        margin-bottom: 10%;
+    }
+    .memberContentBox p{
+        width: 100%;
+    }
+    .memberDeskImg{
+        display: none;
+    }
+    .memberMobImg{
+        display: block;
+        width: 100%;
+    }
+
+    /*Recent Work */
+    .work{
+        padding: 25% 5% 10%;
+        text-align: left;
+    }
+    .workTopBox{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15vw;
+    }
+    .workTopBox p{
+        padding: 0;
+    }
+    .memberButton{
+        margin-top: 30px;
+    }
+    .workCarouselImg{
+        height: 50vh;
+        padding: 10px;
+    }
+    .workWhiteSpace{
+        height: 120px;
+        top: -8%;
+    }
+    .workWhiteSpace1{
+        height: 120px;
+        bottom: -10%;
+    }
+
+    /* pricing */
+    .pricing{
+        margin: 10vh auto;
+    }
+    .darkPricingBg{
+        display: none !important;
+    }
+    .pricingTop{
+        width: 90%;
+        padding-bottom: 10%;
+    }
+    .priceCards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .priceCard{
+        width: 100%;
+        padding: 7vw;
+    }
+    .priceCard span.h5{
+        font-size: 5vw;
+    }
+    .priceCard p{
+        font-size: 4vw;
+    }
+    .priceCard ul li{
+        font-size: 4vw;
+    }
+    .priceCard div{
+        margin-bottom: 40px;
+    }
+    .priceCard div:last-child{
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    .priceRecommend{
+        font-size: 3vw;
+    }
+
+    /* Faq */
+    .faq{
+        text-align: left;
+        padding: 5%;
+        width: 100%;
+    }
+    .faqTopBox .para1 {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .faqBottomBox{
+        width: 100%;
+        margin-top: 0;
+    }
+    .faqBottomBox span{
+        font-size: 4.5vw;
+    }
+    .faqBottomBox p{
+        font-size: 3.5vw;
+        width: 90%;
+        text-align: justify;
+    }
+    .arrowStatic, .arrowRotate{
+        width: 3vw;
+    }
+    .contentVisible {
+        height: 280px;
+    }
+
+    /* Footer */
+    .footer{
+        padding: 15vh 0 5vh;
+    }
+    .footerTop img{
+        width: 150%;
+        bottom: -50px;
+        max-width: unset;
+        right: -50%;
+    }
+    .footerTop{
+        width: 100%;
+        padding: 10% 5%;
+    }
+    .footerCta{
+        padding: 8% 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    .footerBottom{
+        width: 100%;
+        padding: 10% 5% 0;
+        align-items: flex-start;
+    }
+    .footerLeft{
+        width: 50%;
+        text-align: left;
+    }
+    .footerLeft img{
+        width: 60%;
+    }
+    .footerLeft p{
+        margin-top: 5px;
+        font-size: 3.3vw;
+    }
+    .footerRight ul{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .footerRight ul li a{
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .heroTopEle h1 .span,
+    .heroTopEle h1 .headContainer{
+        font-size: 8vw;
+    }
+    .reinventRight{
+        margin-top: 10vw;
+    }
+    .reinventItems{
+        height: 67vh;
+    }
+    .workCarouselImg{
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 55px;
+        margin-right: 10px;
+        position: relative;
+        z-index: 100;
+      }
+   .headerContainer{
+        margin-top: 0;
+    } 
+    .headerDesktop{
+        display: none;
+    }
+    .headerMobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .headerMobileContainer{
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .headLogo{
+        width: fit-content;
+        margin-left: 20px;
+    }
+    .headLogo img{
+        width: 40px;
+    }
+    .mobileNav{
+        right: -100%;
+        top: 0;
+        position: absolute;
+        width: 80vw;
+        z-index: 10;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 -2px 8px #00000030;
+        padding-left: 30px;
+        transition: all 0.5s ease;
+        overflow: hidden;
+    }
+    .mobileNavBg{
+        right: -40%;
+    }
+
+    .darkToggle{
+        width: 28px;
+        height: 28px;
+        z-index: 10;
+        right: 18vw;
+    }
+
+    .activeNav{
+        right: 0%;
+        transition: all 0.5s ease;
+    }
+    .mobileNavLinks{
+        position: relative;
+        z-index: 2;
+    }
+    .navListLinks a{
+      font-size: 8vw;
+      font-family: 'ClashDisplay' !important;
+      font-weight: 500;
+    }
+    .navCta{
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        display: inline-flex;
+        transform: translateZ(0);
+        height: 50px;
+        border-radius: 100px;
+        line-height: 1.5;
+        font-size: 5.5vw;
+        transition: transform .3s;
+        position: relative;
+        width: 250px;
+        background: #000000;
+        color: #ffffff;
+        margin-top: 30px;
+      }
+      .navCta a{
+        color: #ffffff;
+        letter-spacing: 1px;
+      }
+      .navBottom{
+        margin-top: 150px;
+      }
+      .navBottom img{
+        width: 8rem;
+        filter: invert(1);
+      }
+
+      /* Hero */
+      .backgroundImg{
+        width: 80%;
+        filter: blur(2px);
+      }
+      .heroTopEle{
+        width: 100%;
+      }
+      .heroTopEle h1{
+        font-size: 14vw;
+        text-shadow: none;
+    }
+    .heroTopEle h1 .span{
+        font-size: 10vw;
+    }
+    .heroTopEle h1 .headContainer{
+        font-size: 10vw;
+        position: absolute;
+        bottom: -4px;
+        left: 25px;
+        height: 55px;
+        line-height: 1.2;
+    }
+    .heroTopEle h1 .headContainer .headItems{
+        display: flex;
+        flex-direction: column;
+        animation: moveUp 6s infinite;
+    }
+    .heroBottom{
+        margin-top: 8vw;
+        gap: 6vw;
+        width: 100%;
+    }
+    .heroBottom p{
+        font-size: 6vw;
+    }
+    .btnCta{
+        width: 330px;
+        padding: 0;
+        font-size: 5vw;
+        height: 60px;
+    }
+    .heroBottom p:last-child{
+        font-size: 5vw;
+    }
+
+    /* Second Section */
+    .reinventContainer{
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    .reinvent{
+        width: 100%;
+        padding: 0 5%;
+        margin: 0;
+    }
+    .reinventLeft{
+        width: 100%;
+    }
+    .reinventRight{
+        width: 100%;
+        margin-top: 15vw;
+    }
+    .heading1{
+        font-size: 10vw;
+    }
+    .para1{
+        width: 100%;
+        font-size: 5vw;
+    }
+    .reinventItems{
+        height: 60vh;
+    }
+    .reinventRightText{
+        height: 20vh;
+        padding: 20px;
+        bottom: 80px;
+    }
+    .reinventRightText h3{
+        font-size: 8vw;
+    }
+    .reinventRightText p{
+        font-size: 4vw;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Testimonial */
+    .testiContent{
+        font-size: 8vw !important;
+    }
+    .testiName{
+        font-size: 6vw;
+    }
+    .testiButtonContainer{
+        width: 60%;
+        left: 50%;
+        top: 80%;
+    }
+    .testiButton{
+        background: #ffffff50;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* MemberShip */
+    .membership{
+        padding: 10% 5%;
+        background: #f1f1f1;
+    }
+    .memberContentBox{
+        position: relative;
+        width: 100%;
+        top: unset;
+        right: unset;
+        margin-bottom: 10%;
+    }
+    .memberMobImg{
+        display: block;
+        width: 100%;
+    }
+
+    /*Recent Work */
+    .work{
+        padding: 25% 5% 10%;
+        text-align: left;
+    }
+    .workTopBox{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15vw;
+    }
+    .workTopBox p{
+        padding: 0;
+    }
+    .memberButton{
+        margin-top: 30px;
+    }
+    .workWhiteSpace{
+        height: 80px;
+        top: -10%;
+    }
+    .workWhiteSpace1{
+        height: 80px;
+        bottom: -5%;
+    }
+
+    /* pricing */
+    .pricing{
+        margin: 10vh auto;
+    }
+    .pricingTop{
+        width: 90%;
+        padding-bottom: 10%;
+    }
+    .priceCards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .priceCard{
+        width: 100%;
+        padding: 7vw;
+    }
+    .priceCard span.h5{
+        font-size: 5vw;
+    }
+    .priceCard p{
+        font-size: 4vw;
+    }
+    .priceCard ul li{
+        font-size: 4vw;
+    }
+    .priceCard div{
+        margin-bottom: 40px;
+    }
+    .priceCard div:last-child{
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    .priceRecommend{
+        font-size: 3vw;
+    }
+
+    /* Faq */
+    .faq{
+        text-align: left;
+        padding: 5%;
+        width: 100%;
+    }
+    .faqTopBox .para1 {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .faqBottomBox{
+        width: 100%;
+        margin-top: 0;
+    }
+    .faqBottomBox span{
+        font-size: 5.5vw;
+    }
+    .faqBottomBox p{
+        font-size: 5vw;
+    }
+    .arrowStatic, .arrowRotate{
+        width: 4vw;
+    }
+    .contentHidden{
+        height: 0;
+    }
+    .contentVisible.thirdItem {
+        height: 330px;
+    }
+      .contentVisible:not(.thirdItem) {
+        height: 250px;
+      }
+
+    /* Footer */
+    .footer{
+        padding: 15vh 0 5vh;
+    }
+    .footerTop img{
+        width: 150%;
+        bottom: -50px;
+        max-width: unset;
+        right: -50%;
+    }
+    .footerTop{
+        width: 100%;
+        padding: 10% 5%;
+    }
+    .footerCta{
+        padding: 8% 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footerBottom{
+        width: 100%;
+        padding: 10% 5% 0;
+        align-items: flex-start;
+    }
+    .footerLeft{
+        width: 50%;
+        text-align: left;
+    }
+    .footerLeft img{
+        width: 70%;
+    }
+    .footerLeft p{
+        margin-top: 5px;
+        font-size: 16px;
+    }
+    .footerRight ul{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .footerRight ul li a{
+        font-size: 4vw;
+    }
+}

@@ -34,8 +34,8 @@ export default function FooterMobile() {
         }).from(footerMobileLinks, {
           opacity: 0,
           y: 100,
-          duration: 1,
-          delay: -0.5,
+          duration: 0.8,
+          delay: -0.8,
           stagger: 0.1,
         });
         });

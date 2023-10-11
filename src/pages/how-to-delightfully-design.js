@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
                 title: "How to Delightfully Design for Diverse Digital Platforms: A User's Guide to Creative UX Mastery",
                 description:
                   "Today, we're here to equip you with the knowledge and tools to create delightful designs for diverse digital platforms.",
-                images: [
+                  images: [
                   {
-                    url: "",
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
                     width: 400,
                     height: 600,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "" },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
                 siteName: "https://www.weareenigma.com/how-to-delightfully-design",
               }}
@@ -205,7 +205,6 @@ export default function blogHowToDesign() {
         <meta name="description" content="Today, we're here to equip you with
               the knowledge and tools to create delightful designs for diverse
               digital platforms." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

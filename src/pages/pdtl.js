@@ -211,15 +211,15 @@ export default function pdtl() {
         title: "PDTL | Case Study",
         description:
           "PDTL case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/pdtl",
       }}
@@ -228,7 +228,6 @@ export default function pdtl() {
       <Head>
         <title>PDTL | Case Study</title>
         <meta name="description" content="PDTL case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

@@ -2,31 +2,31 @@ export const projects = [
     {
         name: "Patronum",
         client: "Patronum",
-        description: "The Google Workspace Manager",
+        description: "Branding, Web Design, Marketing",
         src: "1.webp",
-        year: 2020,
+        year: 2023,
         link: "patronum",
     },
     {
         name: "Dharan",
         client: "Dharan",
-        description: "Traditional Clothing, Modern E-Commerce Website",
+        description: "E-Commerce, Web Design, Development",
         src: "2.webp",
-        year: 2021,
+        year: 2023,
         link: "dharan"
     },
     {
         name: "Kedarkala",
         client: "Kedarkala",
-        description: "Branding & Website for a Interior Design Studio.",
+        description: "Branding, Web Design",
         src: "3.webp",
-        year: 2021,
+        year: 2022,
         link: "kedarkala"
     },
     {
         name: "Grand City Mall",
         client: "GCM",
-        description: "Interactive Website for an Upcoming Retail Centre",
+        description: "Web Design, Development",
         src: "4.webp",
         year: 2022,
         link: "gcm"
@@ -34,47 +34,47 @@ export const projects = [
     {
         name: "Quick X",
         client: "Quick X",
-        description: "Branding, Website & Mobile App for a Blockchain Company",
+        description: "Branding, Web Design, Marketing",
         src: "5.webp",
-        year: 2020,
+        year: 2023,
         link: "quickx"
     },
     {
         name: "Certvault",
         client: "Certvault",
-        description: "UX Planning & UI Design for a cloud-based certificate repository and delivery system",
+        description: "UX Planning, UI Design",
         src: "6.webp",
-        year: 2020,
-        link: "pdtl"
+        year: 2022,
+        link: "certvault"
     },
     {
         name: "DMTCA",
         client: "DMTCA",
-        description: "Branding & website for a leading Digital Agency in West Africa",
+        description: "Branding, Web Design",
         src: "7-2.webp",
-        year: 2020,
+        year: 2022,
         link: "dmtca"
     },
     {
         name: "PDTL",
         client: "PDTL",
-        description: "A logistics company website with an automated e-commerce system",
+        description: "Web Design, Branding, Development",
         src: "9.webp",
-        year: 2021,
+        year: 2022,
         link: "pdtl"
     },
     {
         name: "Wragby",
         client: "Wragby",
-        description: "A new website fro a leading tech company in West Africa",
+        description: "UI/UX Design, Web Design, Development",
         src: "10.webp",
         year: 2022,
         link: "wragby"
     },
     {
-        name: "Patra CRD",
+        name: "Patra",
         client: "Patra",
-        description: "Client Reporting Dashboard for an InsureTech Company",
+        description: "UX Planning, UI Design, Development",
         src: "8.webp",
         year: 2022,
         link: "patra"

@@ -43,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function mindsplayground() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -184,15 +184,15 @@ export default function blogHowToDesign() {
         title: "The Mind's Playground: 12 Cognitive Biases Ecommerce Marketers Need to Know",
         description:
           "Discover the fascinating world of cognitive biases and learn how to master them to create captivating e-commerce campaigns that leave your audience in awe.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/the-minds-playground",
       }}
@@ -204,7 +204,6 @@ export default function blogHowToDesign() {
           Know
         </title>
         <meta name="description" content="Discover the fascinating world of cognitive biases and learn how to master them to create captivating e-commerce campaigns that leave your audience in awe." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

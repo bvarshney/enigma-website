@@ -42,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogHowToDesign() {
+export default function powerofpsychology() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -183,15 +183,15 @@ export default function blogHowToDesign() {
         title: "The Power of Psychology in UX Design | Best UI/UX Design Agency in India",
         description:
           "As a design thinking expert, one of the most fascinating aspects of UX design is the intricate relationship between psychology and user experience.",
-        images: [
-          {
-            url: "",
-            width: 400,
-            height: 600,
-            alt: "Enigma Image",
-            type: "image/png",
-          },
-          { url: "" },
+          images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
         siteName: "https://www.weareenigma.com/the-power-of-psychology-in-ux-design",
       }}
@@ -203,7 +203,6 @@ export default function blogHowToDesign() {
           India
         </title>
         <meta name="description" content="As a design thinking expert, one of the most fascinating aspects of UX design is the intricate relationship between psychology and user experience." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
