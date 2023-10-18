@@ -10,6 +10,7 @@ export default function ContactUs({props}) {
   // Create a ref to the dropdown element
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
 
     const [step, setStep] = useState(1);
     const router = useRouter();
@@ -194,6 +195,7 @@ const handleBudgetChange = (value) => {
     };
     
     const handleSubmit = async () => {
+      setIsLoading(true);
       // Initialize a formData object to send data to the server
       const formData = new FormData();
   
@@ -242,13 +244,15 @@ const handleBudgetChange = (value) => {
           setMessageStatus('success');
           setTimeout(() => {
             router.push('/thankyou');
-          }, 50000);
+          }, 1000);
         } else {
           setMessageStatus('error');
         }
       } catch (error) {
         console.error('Error sending email:', error);
         setMessageStatus('error');
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -715,23 +719,30 @@ const handleBudgetChange = (value) => {
           </button>
         </div>
       </div>
-
-      <div className='form-button-2'>
-          <button className='btn_CTA' onClick={handleSubmit}>
-              <span className="btn_CTA-ripple">
-              <span></span>
-              </span>
-              <span className='btn_CTA-title'>
-              <span data-text='Submit'>Submit</span>
-              </span>
-          </button>
-          {messageStatus === 'success' && (
-              <p className="text-green-400">Thank You, your details have been submitted.</p>
-          )}
-          {messageStatus === 'error' && (
+            <div className='form-button-2'>
+            
+            {isLoading ? (
+                <div className="loading-state">
+                  <img src="/assets/icons/loading.svg"/>
+                </div>
+              ) : (
+                <button className='btn_CTA' onClick={handleSubmit}>
+                  <span className="btn_CTA-ripple">
+                    <span></span>
+                  </span>
+                  <span className='btn_CTA-title'>
+                    <span data-text='Submit'>Submit</span>
+                  </span>
+                </button>
+              )}
+          
+            {messageStatus === 'success' && (
+            <p className="text-green-400">Thankyou, your details have been submitted.</p>
+            )}
+            {messageStatus === 'error' && (
               <p className="error">Failed to send the message. Please try again later.</p>
-          )}
-      </div>
+            )}
+        </div>
       </div>
     </div>
       )}

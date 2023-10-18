@@ -87,6 +87,13 @@
   filter: invert(1);
 }
 
+.bgc-primary{
+  background: var(--primary);
+}
+.dark-mode .bgc-primary{
+  background: var(--dark-primary) !important;
+}
+
 /*01. Fonts */
 /*==============FONTS===================*/
 @font-face {
@@ -11065,6 +11072,32 @@ label.label:hover:before{
     transition: transform .3s;
     position: relative;
     border: 1px solid;
+  }
+
+  .form-button-2 .btn_CTA{
+    padding: 0;
+    width: 12.5rem
+  }
+
+  .loading-state{
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    height: 4rem;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid;
+    width: 12.5rem;
+    padding: 0;
+    background: currentColor;
+  }
+
+  .loading-state img{
+    position: absolute;
+    width: 36px;
+    z-index: 100;
+    animation: rotate-animation 0.7s infinite linear;
   }
 
   .btn_CTA-title {

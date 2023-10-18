@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import Head from "next/head";
 import gsap from "gsap";
 
 const ThankYou = () => {
+  const [countdown, setCountdown] = useState(6);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -41,6 +42,22 @@ const ThankYou = () => {
       );
     return () => tl.kill();
   }, []);
+
+  useEffect(() => {
+
+     const countdownInterval = setInterval(() => {
+      if (countdown > 1) {
+        setCountdown(countdown - 1);
+      } else {
+        clearInterval(countdownInterval);
+        window.location.href = "/";
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(countdownInterval);
+    };
+  }, [countdown]);
 
   return (
     <div>
@@ -107,6 +124,11 @@ const ThankYou = () => {
               </button>
             </Link>
           </div>
+
+          <div className="mt-10" id="anim">
+            <p>Redirecting to the homepage in {countdown} seconds...</p>
+          </div>
+
         </div>
       </main>
     </div>
