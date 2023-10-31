@@ -128,7 +128,7 @@ class JellyMotion {
 Scrollbar.use(ScrollTriggerPlugin);
 
 //& Smooth Scroll with Edge Damping
-const SmoothScroll = () => {
+const SmoothScroll = ({ onScroll }) => {
   /// Prop Definitions
   /// 1: stickyStuff - Array of Refs for Fixing Elements on Screen - from 'PageEssentials'
 
@@ -301,7 +301,18 @@ const SmoothScroll = () => {
       modalWrapper.style.top = offset.y + "px";
       modalWrapper.style.left = offset.x + "px";
     });
-  }, [router]);
+
+    if (onScroll) {
+      smoothscroll.addListener(onScroll);
+    }
+
+    return () => {
+      // Cleanup: Remove the custom scroll event listener
+      if (onScroll) {
+        smoothscroll.removeListener(onScroll);
+      }
+    };
+  }, [onScroll, router]);
 
   useEffect(() => {
     smoothscrollRef.current && smoothscrollRef.current.scrollTo(0, 0);

@@ -79,24 +79,36 @@ export default function FooterMobile() {
           <div className="contact-content-socials">
             <div className="contact-content-socials-row">
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>Facebook</span>
+                <a target="blank" href="https://www.facebook.com/in.enigmadigital">
+                  <span>Facebook</span>
+                </a>
               </div>
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>Instagram</span>
+                <a target="blank" href="https://www.instagram.com/enigmadigital/">
+                  <span>Instagram</span>
+                </a>
               </div>
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>Youtube</span>
+                <a target="blank" href="https://www.youtube.com/">
+                  <span>Youtube</span>
+                </a>
               </div>
             </div>
             <div className="contact-content-socials-row">
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>LinkedIn</span>
+                <a target="blank" href="https://in.linkedin.com/company/in-enigmadigital">
+                  <span>LinkedIn</span>
+                </a>
               </div>
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>Twitter</span>
+                <a target="blank" href="https://twitter.com/_EnigmaDigital">
+                  <span>Twitter</span>
+                </a>
               </div>
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <span>Behance</span>
+                <a target="blank" href="https://www.behance.net/enigma-digital">
+                  <span>Behance</span>
+                </a>
               </div>
             </div>
           </div>

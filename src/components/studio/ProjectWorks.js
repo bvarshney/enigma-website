@@ -6,6 +6,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import SplitType from "split-type";
 
+gsap.registerPlugin("ScrollTrigger");
 
 var _s,
   ws,
@@ -437,12 +438,13 @@ export default function ProjectsHome() {
 
         <div className={styles.projectHover} id="project-work">
           <div className={styles.projectSubSection}>
+
             <div className={styles.glide}>
               <div
                 className={`${styles.glideContent} ${styles.mt20}`}
                 id="image-container"
               >
-                <a href="/kedarkala">
+                <a href="/kedarkala-portfolio-website-case-study">
                   <Image
                     src="/assets/projects/new-project/kedarkala2.webp"
                     width={1000}
@@ -514,11 +516,14 @@ export default function ProjectsHome() {
               </div>
             </div>
 
-            <div className={`${styles.glide} ${styles.mb_0}`}>
-              <div className={`${styles.glideContent}`} id="image-container">
-                <a href="/patronum">
+            <div className={styles.glide}>
+              <div
+                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0} ${styles.forthMt}`}
+                id="image-container"
+              >
+                <a href="/patra-saas-insurtech-case-study">
                   <Image
-                    src="/assets/projects/new-project/patronum.webp"
+                    src="/assets/projects/new-project/patra1.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -529,9 +534,9 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>2019</p> <p>Branding, Web Design, Marketing</p>
+                    <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Patronum</h1>
+                      <h1>Patra</h1>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -587,6 +592,7 @@ export default function ProjectsHome() {
                 </div>
               </div>
             </div>
+
           </div>
 
           {/* ================= Second ====================== */}
@@ -597,7 +603,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <a href="/wragby">
+                <a href="/wragby-solutions-case-study">
                   <Image
                     src="/assets/projects/new-project/wragby.webp"
                     width={1000}
@@ -671,7 +677,7 @@ export default function ProjectsHome() {
 
             <div className={`${styles.glide} ${styles.mb_0}`}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/gcm">
+                <a href="/gcm-phygital-shopping-case-study">
                   <Image
                     src="/assets/projects/new-project/gcm.webp"
                     width={1000}
@@ -752,7 +758,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <a href="/pdtl">
+                <a href="/pdtl-ecommerce-automation-case-study">
                   <Image
                     src="/assets/projects/new-project/pdtl.webp"
                     width={1000}
@@ -826,7 +832,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dharan">
+                <a href="/dharan-ecommerce-case-study">
                   <Image
                     src="/assets/projects/new-project/dharan.webp"
                     width={1000}
@@ -907,7 +913,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0} ${styles.forthMt}`}
                 id="image-container"
               >
-                <a href="/certvault">
+                <a href="/certvault-case-study">
                   <Image
                     src="/assets/projects/new-project/cert.png"
                     width={1000}
@@ -981,7 +987,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/quickx">
+                <a href="/quickx-crypto-case-study">
                   <Image
                     src="/assets/projects/new-project/quick.png"
                     width={1000}
@@ -1057,14 +1063,12 @@ export default function ProjectsHome() {
           {/* =============== Fifth =================== */}
 
           <div className={styles.projectSubSection}>
-            <div className={styles.glide}>
-              <div
-                className={`${styles.glideContent} ${styles.mt20} ${styles.mt0} ${styles.forthMt}`}
-                id="image-container"
-              >
-                <a href="/patra">
+
+          <div className={`${styles.glide} ${styles.mb_0}`}>
+              <div className={`${styles.glideContent}`} id="image-container">
+                <a href="/patronum-saas-case-study">
                   <Image
-                    src="/assets/projects/new-project/patra1.webp"
+                    src="/assets/projects/new-project/patronum.webp"
                     width={1000}
                     height={1000}
                     alt="Image"
@@ -1075,9 +1079,9 @@ export default function ProjectsHome() {
 
                 <div className={styles.textContent}>
                   <div className={styles.c_project_info}>
-                    <p>2022</p> <p>Web Design, Branding, Development</p>
+                    <p>2019</p> <p>Branding, Web Design, Marketing</p>
                     <div className={styles.projectCta}>
-                      <h1>Patra</h1>
+                      <h1>Patronum</h1>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -1136,7 +1140,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dmtca">
+                <a href="/dmtca-digital-branding-case-study">
                   <Image
                     src="/assets/projects/new-project/dmtca.png"
                     width={1000}

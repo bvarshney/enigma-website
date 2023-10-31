@@ -5,7 +5,8 @@ export const projects = [
         description: "Branding, Web Design, Marketing",
         src: "1.webp",
         year: 2023,
-        link: "patronum",
+        link: "patronum-saas-case-study",
+        srcSLider: "patronum.webp",
     },
     {
         name: "Dharan",
@@ -13,7 +14,8 @@ export const projects = [
         description: "E-Commerce, Web Design, Development",
         src: "2.webp",
         year: 2023,
-        link: "dharan"
+        link: "dharan-ecommerce-case-study",
+        srcSLider: "dharan.webp",
     },
     {
         name: "Kedarkala",
@@ -21,7 +23,8 @@ export const projects = [
         description: "Branding, Web Design",
         src: "3.webp",
         year: 2022,
-        link: "kedarkala"
+        link: "kedarkala-portfolio-website-case-study",
+        srcSLider: "kedarkala.webp",
     },
     {
         name: "Grand City Mall",
@@ -29,7 +32,8 @@ export const projects = [
         description: "Web Design, Development",
         src: "4.webp",
         year: 2022,
-        link: "gcm"
+        link: "gcm-phygital-shopping-case-study",
+        srcSLider: "gcm.webp",
     },
     {
         name: "Quick X",
@@ -37,7 +41,8 @@ export const projects = [
         description: "Branding, Web Design, Marketing",
         src: "5.webp",
         year: 2023,
-        link: "quickx"
+        link: "quickx-crypto-case-study",
+        srcSLider: "quickx.webp",
     },
     {
         name: "Certvault",
@@ -45,7 +50,8 @@ export const projects = [
         description: "UX Planning, UI Design",
         src: "6.webp",
         year: 2022,
-        link: "certvault"
+        link: "certvault-case-study",
+        srcSLider: "certvault.webp",
     },
     {
         name: "DMTCA",
@@ -53,7 +59,8 @@ export const projects = [
         description: "Branding, Web Design",
         src: "7-2.webp",
         year: 2022,
-        link: "dmtca"
+        link: "dmtca-digital-branding-case-study",
+        srcSLider: "dmtca.webp",
     },
     {
         name: "PDTL",
@@ -61,7 +68,8 @@ export const projects = [
         description: "Web Design, Branding, Development",
         src: "9.webp",
         year: 2022,
-        link: "pdtl"
+        link: "pdtl-ecommerce-automation-case-study",
+        srcSLider: "pdtl.webp",
     },
     {
         name: "Wragby",
@@ -69,7 +77,8 @@ export const projects = [
         description: "UI/UX Design, Web Design, Development",
         src: "10.webp",
         year: 2022,
-        link: "wragby"
+        link: "wragby-solutions-case-study",
+        srcSLider: "wragby.webp",
     },
     {
         name: "Patra",
@@ -77,7 +86,8 @@ export const projects = [
         description: "UX Planning, UI Design, Development",
         src: "8.webp",
         year: 2022,
-        link: "patra"
+        link: "patra-saas-insurtech-case-study",
+        srcSLider: "patra.webp",
     },
 ]
 

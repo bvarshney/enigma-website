@@ -737,7 +737,7 @@ const handleBudgetChange = (value) => {
               )}
           
             {messageStatus === 'success' && (
-            <p className="text-green-400">Thank You. We'll be in touch soon!</p>
+            <p className="text-green-400">Thank you, your details have been submitted.</p>
             )}
             {messageStatus === 'error' && (
               <p className="error">Failed to send the message. Please try again later.</p>

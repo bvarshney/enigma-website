@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 
 // Main View
-const Marquee = () => {
+const Marquee = ({ serviceMarquee }) => {
   // GSAP Animation
   useEffect(() => {
     gsap.utils.toArray(".services-catalog-row").forEach((line, i) => {
@@ -165,6 +165,8 @@ const Marquee = () => {
       <div className="services-catalog-title">
         full catalogue of our services. <span className="emoji-dark">👨‍💻</span>
       </div>
+
+      {/* Row 1 */}
       <div className="services-catalog-row margin-top-medium ">
         <div className="services-catalog-row-item half-opacity">
           Digital Advisory and Consulting
@@ -189,9 +191,6 @@ const Marquee = () => {
           Persona Design & Customer Segmentation
         </div>
         <div className="services-catalog-row-item">
-          Persona Design & Customer Segmentation
-        </div>
-        <div className="services-catalog-row-item">
           Competitive Analysis & Industry Insights
         </div>
         <div className="services-catalog-row-item">
@@ -202,6 +201,8 @@ const Marquee = () => {
           Website Performance Audit
         </div>
       </div>
+
+    {/* Row 2 */}
       <div
         className="services-catalog-row margin-top-xs"
         style={{ marginTop: "2vw" }}
@@ -236,6 +237,8 @@ const Marquee = () => {
           Visual Designs & UI Kits.
         </div>
       </div>
+
+      {/* Row 3 */}
       <div
         className="services-catalog-row margin-top-xs"
         style={{ marginTop: "3.5vw" }}
@@ -255,6 +258,8 @@ const Marquee = () => {
         </div>
         <div className="services-catalog-row-item">Testing & Automation</div>
       </div>
+
+      {/* Row 4 */}
       <div
         className="services-catalog-row margin-top-xs"
         style={{ marginTop: "1.5vw" }}
@@ -273,6 +278,8 @@ const Marquee = () => {
           Auction Media Management
         </div>
       </div>
+
+      {/* Row 5 */}
       <div
         className="services-catalog-row margin-top-xs"
         style={{ marginTop: "3.5vw" }}
@@ -296,6 +303,69 @@ const Marquee = () => {
       </div>
     </div>
   );
-};
+}
+
+// export async function getStaticProps() {
+//   const { data } = await client.query({
+//     query: gql`
+//       query ServicesMarquee {
+//           posts {
+//             nodes {
+//               serviceMarquee {
+//                 fieldGroupName
+//                 heading
+//                 text1
+//                 text2
+//                 text3
+//                 text4
+//                 text5
+//                 text6
+//                 text7
+//                 text8
+//                 text9
+//                 text10
+//                 text11
+//                 text12
+//                 text13
+//                 text14
+//                 text15
+//                 text16
+//                 text17
+//                 text18
+//                 text19
+//                 text20
+//                 text21
+//                 text22
+//                 text23
+//                 text24
+//                 text25
+//                 text26
+//                 text27
+//                 text28
+//                 text29
+//                 text30
+//                 text31
+//                 text32
+//                 text33
+//                 text34
+//                 text35
+//                 text36
+//                 text37
+//                 text38
+//                 text39
+//                 text40
+//               }
+//             }
+//           }
+//       }
+//     `,
+//   });
+
+//   return {
+//     props: {
+//       serviceMarquee : data.serviceMarquee.nodes,
+//     },
+//   };
+// }
 
 export default Marquee;

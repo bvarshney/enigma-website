@@ -237,15 +237,19 @@ export default function carousel() {
                   website's user interface and overall design.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" rel="nofollow" target="blank" href="https://www.jellyfishtele.com/">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
+              
             </div>
           )}
         </Slide>
@@ -291,14 +295,17 @@ export default function carousel() {
                   website development.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" href="/kedarkala-portfolio-website-case-study">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -345,15 +352,18 @@ export default function carousel() {
                   delivering top-tier digital solutions.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
-              </div>
+                <div className="bottom-caro-link-content">
+                  <a className="hide-div-caro-link" href="/dmtca-digital-branding-case-study">Read More</a>
+                  <div className="bottom-caro-box hide-caro-box">
+                    <Image
+                        height={50}
+                        width={50}
+                      src="/assets/about/black/plus.webp"
+                      className="caro-plus gsap-caro"
+                      alt="plus icon"
+                    />
+                  </div>
+                </div>
             </div>
           )}
         </Slide>
@@ -399,14 +409,17 @@ export default function carousel() {
                   quality, innovation, and customer satisfaction.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" rel="nofollow" href="#">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -454,14 +467,17 @@ export default function carousel() {
                   fintech solution.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" href="/quickx-crypto-case-study">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -509,14 +525,17 @@ export default function carousel() {
                   identity.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" target="blank" href="https://www.bespinlabs.com/">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -562,14 +581,17 @@ export default function carousel() {
                   marketing, made them the ideal partner for Patronum.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  className="caro-plus gsap-caro"
-                  alt="plus icon"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" href="/patronum-saas-case-study">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}
@@ -615,14 +637,17 @@ export default function carousel() {
                   resulting in increased user adoption and brand awareness.
                 </span>
               </p>
-              <div className="bottom-caro-box hide-caro-box">
-              <Image
-                    height={50}
-                    width={50}
-                  src="/assets/about/black/plus.webp"
-                  alt="plus icon"
-                  className="caro-plus gsap-caro"
-                />
+              <div className="bottom-caro-link-content">
+                <a className="hide-div-caro-link" href="/patra-saas-insurtech-case-study">Read More</a>
+                <div className="bottom-caro-box hide-caro-box">
+                  <Image
+                      height={50}
+                      width={50}
+                    src="/assets/about/black/plus.webp"
+                    className="caro-plus gsap-caro"
+                    alt="plus icon"
+                  />
+                </div>
               </div>
             </div>
           )}

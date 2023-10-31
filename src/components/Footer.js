@@ -124,7 +124,7 @@ function Footer() {
               data-cursor-color="#5d5ad6"
               data-cursor-size="100px"
             >
-              <Link href="/contact">
+              <Link href="/get-in-touch">
                 <button>Contact Us</button>
               </Link>
             </div>

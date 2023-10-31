@@ -421,7 +421,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20}`}
                 id="image-container"
               >
-                <a href="/kedarkala">
+                <a href="/kedarkala-portfolio-website-case-study">
                   <Image
                     src="/assets/projects/new-project/kedarkala2.webp"
                     width={1000}
@@ -495,7 +495,7 @@ export default function ProjectsHome() {
 
             <div className={`${styles.glide} ${styles.mb_0}`}>
               <div className={`${styles.glideContent}`} id="image-container">
-                <a href="/patronum">
+                <a href="/patronum-saas-case-study">
                   <Image
                     src="/assets/projects/new-project/patronum.webp"
                     width={1000}
@@ -576,7 +576,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <a href="/wragby">
+                <a href="/wragby-solutions-case-study">
                   <Image
                     src="/assets/projects/new-project/wragby.webp"
                     width={1000}
@@ -650,7 +650,7 @@ export default function ProjectsHome() {
 
             <div className={`${styles.glide} ${styles.mb_0}`}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/gcm">
+                <a href="/gcm-phygital-shopping-case-study">
                   <Image
                     src="/assets/projects/new-project/gcm.webp"
                     width={1000}
@@ -731,7 +731,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0}`}
                 id="image-container"
               >
-                <a href="/pdtl">
+                <a href="/pdtl-ecommerce-automation-case-study">
                   <Image
                     src="/assets/projects/new-project/pdtl.webp"
                     width={1000}
@@ -805,7 +805,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dharan">
+                <a href="/dharan-ecommerce-case-study">
                   <Image
                     src="/assets/projects/new-project/dharan.webp"
                     width={1000}

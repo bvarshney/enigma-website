@@ -173,9 +173,9 @@ useEffect(() => {
               description="Your product ideas deserve the best possible user experience (UX)
               design, and to achieve that, you need to partner with the right UX
               agency."
-              canonical="https://www.weareenigma.com/how-to-choose-right-ux-agency"
+              canonical="https://weareenigma.com/how-to-choose-right-ux-agency"
               openGraph={{
-                url: "https://www.weareenigma.com/how-to-choose-right-ux-agency",
+                url: "https://weareenigma.com/how-to-choose-right-ux-agency",
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
                 description:
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",
@@ -187,24 +187,11 @@ useEffect(() => {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/how-to-choose-right-ux-agency",
+                siteName: "Enigma Digital Website",
               }}
             />
 
-      <Head>
-        <title>
-          How to Choose the Right UX Agency to Partner with for Your Product
-          Ideas
-        </title>
-        <meta name="description" content="Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
       <div className="loader-wrap" id="loader">
       <div className='mainLoaderBg'>
             <span className='mainLoaderBar' id='loaderbars'></span>
@@ -973,10 +960,11 @@ useEffect(() => {
       </div>
 
       {/* =================== Related Articles =========================== */}
+
       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
-          <Link href="/blogs">
+          <Link href="/blog">
             <h4>All articles</h4>
           </Link>
         </div>
@@ -984,7 +972,7 @@ useEffect(() => {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-future-of-marketing">
+              <Link href="/future-of-marketing-neuromarketing">
                 <img
                   src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
                   alt="img"
@@ -1005,9 +993,9 @@ useEffect(() => {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-basics-of-seo">
+              <Link href="/delightful-digital-design-guide">
                 <img
-                  src="/assets/blogs/blog-detail/basic-seo/feature.webp"
+                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -1015,15 +1003,18 @@ useEffect(() => {
                   onMouseEnter={(e) => handleHover(e)}
                   onMouseOut={(e) => handleHoverExit(e)}
                 />
-                <h2>Marketing</h2>
+                <h2>Design</h2>
               </Link>
             </div>
-            <h1>The Basics of SEO: A Comprehensive Beginner's Guide</h1>
+            <h1>
+              How to Delightfully Design for Diverse Digital Platforms: A User's
+              Guide to Creative UX Mastery
+            </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/marketing-psychology">
+              <Link href="/captivate-audiences-marketing-psychology">
                 <img
                   src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
                   alt="img"

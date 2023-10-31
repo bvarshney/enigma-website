@@ -5,6 +5,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from "split-type";
+import Button from '../Button';
 
 gsap.registerPlugin(ScrollTrigger);   
 
@@ -94,6 +95,9 @@ useEffect(() => {
         <Double projects={[projects[2], projects[3]]} reversed={true} id="projectImg" />
         <Double projects={[projects[4], projects[5]]} id="projectImg" />
       </div>
+
+      <Button />
+      
     </div>
   )
 }

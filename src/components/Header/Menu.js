@@ -218,7 +218,7 @@ useEffect(() => {
                     <div className="content-left-body-row">
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link1}>
-                          <Link href="/about" className="btn-music">
+                          <Link href="/who-we-are" className="btn-music">
                             <span className="content-heading-serial">01</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -228,7 +228,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/about"
+                                  router.pathname == "/who-we-are"
                                     ? "activeMenu"
                                     : ""
                                 }
@@ -260,7 +260,7 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link3}>
-                          <Link href="/works" className="btn-music">
+                          <Link href="/our-portfolio" className="btn-music">
                             <span className="content-heading-serial">03</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -270,7 +270,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/works"
+                                  router.pathname == "/our-portfolio"
                                     ? "activeMenu"
                                     : ""
                                 }
@@ -283,7 +283,7 @@ useEffect(() => {
                       </div>
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link4}>
-                          <Link href="/blogs" className="btn-music">
+                          <Link href="/blog" className="btn-music">
                             <span className="content-heading-serial">04</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -293,7 +293,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/blogs"
+                                  router.pathname == "/blog"
                                     ? "activeMenu"
                                     : ""
                                 }
@@ -304,7 +304,7 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link5}>
-                          <Link href="/contact" className="btn-music">
+                          <Link href="/get-in-touch" className="btn-music">
                             <span className="content-heading-serial">05</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -314,7 +314,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/contact"
+                                  router.pathname == "/get-in-touch"
                                     ? "activeMenu"
                                     : ""
                                 }
@@ -342,7 +342,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://www.facebook.com/in.enigmadigital">
+                          <a target="blank" href="https://www.facebook.com/in.enigmadigital">
                             <span data-text="Facebook">Facebook</span>
                           </a>
                         </div>
@@ -352,7 +352,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://www.instagram.com/enigmadigital/">
+                          <a target="blank" href="https://www.instagram.com/enigmadigital/">
                             <span data-text="Instagram">Instagram</span>
                           </a>
                         </div>
@@ -362,7 +362,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://www.youtube.com/">
+                          <a target="blank" href="https://www.youtube.com/">
                             <span data-text="Youtube">Youtube</span>
                           </a>
                         </div>
@@ -374,7 +374,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://twitter.com/_EnigmaDigital">
+                          <a target="blank" href="https://twitter.com/_EnigmaDigital">
                             <span data-text="Twitter">Twitter</span>
                           </a>
                         </div>
@@ -384,7 +384,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://in.linkedin.com/company/in-enigmadigital">
+                          <a target="blank" href="https://in.linkedin.com/company/in-enigmadigital">
                             <span data-text="LinkedIn">LinkedIn</span>
                           </a>
                         </div>
@@ -394,7 +394,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a href="https://www.behance.net/enigma-digital">
+                          <a target="blank" href="https://www.behance.net/enigma-digital">
                             <span data-text="Behance">Behance</span>
                           </a>
                         </div>

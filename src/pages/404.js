@@ -13,14 +13,14 @@ export default function NotFound() {
     <div>
 
       <NextSeo
-              title="404 Page Not Found"
-              description="404 Page Not Found"
-              canonical="https://www.weareenigma.com/404"
+              title="404 | Page Not Found"
+              description="404 Page not found please go back to home. This is Enigma Digital."
+              canonical="https://weareenigma.com/404"
               openGraph={{
-                url: "https://www.weareenigma.com/404",
-                title: "404 Page Not Found",
+                url: "https://weareenigma.com/404",
+                title: "404 | Page Not Found",
                 description:
-                  "404 Page Not Found",
+                  "404 Page not found please go back to home. This is Enigma Digital.",
                   images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -31,19 +31,9 @@ export default function NotFound() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/404",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>404 Page Not Found</title>
-        <meta name="description" content="404 Page Not Found" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 

@@ -2345,7 +2345,6 @@ label:hover circle {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 10vw;
 }
 
 .primary-button {
@@ -4057,7 +4056,24 @@ https://unsplash.com/@vinomamba24
   align-items: center;
   flex-direction: column;
 }
-
+.bottom-caro-link-content{
+  width: 100%;
+  padding: 0 2.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.hide-div-caro-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 1px solid #000000;
+  border-radius: 18px;
+  padding: 10px 30px;
+  color: #ffffff;
+  background: #000000;
+}
+.hide-div-caro-link:hover{
+  color: #ffffff;
+}
 .hide-caro-box {
   background: var(--black1);
   display: flex;
@@ -4067,7 +4083,6 @@ https://unsplash.com/@vinomamba24
   height: 1.5vw;
   border-radius: 50%;
   align-self: flex-end;
-  margin-right: 2.3vw;
 }
 
 .hide-div-caro p {
@@ -5540,7 +5555,7 @@ body.loading {
 }
 
 .blogs-sub-section {
-  width: 90%;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
 }
@@ -5563,10 +5578,11 @@ body.loading {
 
 .blogs-section {
   margin-top: 2vw;
+  margin-bottom: 4rem;
 }
 
 .blog-page-grid {
-  width: 33%;
+  width: 100%;
 }
 
 .blogs-section button {
@@ -5665,10 +5681,9 @@ body.loading {
 
 .blogs-section .ul-blog {
   position: relative;
-  margin-top: 7vw;
-  width: 90%;
+  margin-top: 5vw;
+  width: 100%;
   height: 100%;
-  margin-right: 3vw;
 }
 
 .image-box-blog {
@@ -5691,9 +5706,9 @@ body.loading {
 }
 
 .ul-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -6279,6 +6294,36 @@ a:hover {
 .project-slider-heading img{
   width: 2.7vw;
   height: auto;
+}
+
+.project-slider{
+  width: 100vw;
+  padding: 5vw 0 12vw 0;
+}
+
+.project-slide{
+  position: relative;
+  height: 30vw;
+  width: 30vw !important;
+}
+
+.project-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-slide a{
+  position: absolute;
+  background: var(--white);
+  bottom: 1vw;
+  left: 1vw;
+  font-size: 1.3vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5vw 2vw;
+  border-radius: 50px;
+  z-index: 10;
 }
 
 .project-marquee-item {
@@ -7818,6 +7863,9 @@ a:hover {
   /* ==================== Blog Page  ====================== */
   .blogs-heading h1 {
     font-size: 11.5vw;
+    line-height: 1;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   .blogs-section button {
@@ -7828,15 +7876,12 @@ a:hover {
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
-    padding-top: 7vw;
+    padding-top: 5vw;
+    grid-template-columns: 47% 47%;
   }
 
   .blogs-section .ul-blog {
     width: 100%;
-  }
-
-  .blog-page-grid {
-    width: 47%;
   }
 
   .image-box-blog {
@@ -8959,7 +9004,7 @@ a:hover {
 
   .Carousel_slide__caro__ckaQX {
     width: 9% !important;
-    height: 40vh !important;
+    height: 60vh !important;
     padding: 10px;
   }
 
@@ -9741,7 +9786,7 @@ a:hover {
   }
 
   .blogs-section button {
-    font-size: 4vw;
+    font-size: 1.5rem;
     margin-right: 3vw;
     padding: 2vw 5vw;
     margin-bottom: 3vw;
@@ -9769,10 +9814,11 @@ a:hover {
 
   .ul-items {
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 5vw;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    grid-template-columns: 100%;
   }
 
   .blog-page-grid {
@@ -9781,7 +9827,7 @@ a:hover {
 
   .image-box-blog {
     width: 100%;
-    height: 50vh;
+    height: 80vh;
   }
 
   .blog-showmore-box .view-more {
@@ -9998,7 +10044,22 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .blogs-section button {
+    font-size: 1rem;
+  }
+  .Carousel_slide__caro__ckaQX{
+    height: 40vh !important;
+  }
+  .hide-div-caro-link {
+    font-size: 1rem;
+    padding: 5px 20px;
+  }
+  .image-box-blog {
+    height: 50vh;
+  }
+}
 
+@media screen and (max-width: 480px) {
   .loader-wrap .loader-wrap-heading h1 {
     font-size: 28px;
   }
@@ -11739,3 +11800,132 @@ label.label:hover:before{
   }
 }
 
+
+/* Careers Page Testimonial */
+.c__testimain .slick-list{
+  padding: 20px 0px;
+  width: 90%;
+  margin: auto;
+}
+
+.c__testimain .slick-prev:before, 
+.c__testimain .slick-next:before{
+  color: #1a1a1a !important;
+  font-family: unset !important;
+  font-size: 40px !important;
+}
+
+.c__testimain .slick-prev, 
+.c__testimain .slick-next{
+  width: auto;
+}
+
+.c__testimain .slick-prev{
+  transform: rotate(180deg);
+  left: 0;
+}
+.c__testimain .slick-next{
+  right: 0;
+}
+
+.c__testimain .slick-next:before{
+  content: '➜';
+}
+.c__testimain .slick-prev:before{
+  content: '➜';
+}
+
+
+@media screen and (max-width: 480px){
+  .c__testimain .slick-prev, 
+  .c__testimain .slick-next{
+  display: none;
+}
+.c__testimain .slick-prev:before, 
+.c__testimain .slick-next:before{
+  display: none;
+}
+.c__testimain .slick-list{
+  width: 100%;
+}
+}
+
+
+/* JD Page */
+.jd__bgcover{
+  background: #0000009e;
+  position: absolute;
+  height: 57vh;
+  width: 100%;
+  top: -7vh;
+  z-index: -1;
+}
+
+.jd__main .menu svg path {
+  stroke: var(--white);
+}
+.jd__main .showreel .btn-primary{
+  color: var(--white);
+}
+.jd__main .header-section .header-logo .main-logo{
+  filter: invert(1);
+}
+.dark-mode .jd__main .jd__bg{
+  z-index: -2;
+}
+.dark-mode .jd__bgcover{
+  filter: invert(1);
+  z-index: -1;
+}
+.dark-mode .jd__head{
+  filter: invert(1);
+}
+.dark-mode .jd__main .menu svg path {
+  filter: invert(1);
+}
+.dark-mode .jd__main .menu--1 input:checked+svg .line--1,.dark-mode .jd__main .menu--1 input:checked+svg .line--3{
+  stroke: #000000;
+}
+.dark-mode .jd__main .showreel .btn-primary{
+  color: var(--black);
+}
+.dark-mode .jd__main .dark-mode-btn{
+  background: #ffffff;
+}
+
+.jd__form__content input:-webkit-autofill, 
+.jd__form__content input:-webkit-autofill:hover, 
+.jd__form__content input:-webkit-autofill:focus, 
+.jd__form__content input:-webkit-autofill:active{
+  background-clip: unset;
+  background-color: none !important;
+  border: 1px solid #00000010;
+}
+
+.jd__form__content input:-internal-autofill-selected {
+  background-color: none !important;
+}
+
+
+/* Dark Mode Careers */
+.dark-mode .tw-primary{
+  filter: invert(1);
+  color: #ffffff !important;
+}
+
+.dark-mode .tw-hover:hover{
+  color: var(--dark-primary);
+}
+
+.dark-mode .tw-no-invert{
+  filter: invert(1);
+}
+
+.dark-mode .tw-no-invert img{
+  filter: invert(0) !important;
+}
+
+.dark-mode .tw-border {
+  --tw-ring-color: var(--dark-primary) !important;
+  border-color: var(--dark-primary) !important;
+}

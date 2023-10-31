@@ -265,9 +265,6 @@ export default function SliderMarquee() {
               height={1000}
             />
           </div>
-          {/* <div className="module-2">
-            <image src="https://source.unsplash.com/x6qwirOyK10" alt="image 6" />
-          </div> */}
         </div>
       </div>
     </div>
