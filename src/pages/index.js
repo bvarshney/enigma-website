@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -18,8 +17,8 @@ import TopHomeAero from "@/components/Home/TopAero";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
-import Modal from "../components/PopupForm/formModal";
-import Link from "next/link";
+import Modal from "@/components/PopupForm/formModal";
+import HomeBlogs from "@/components/Home/HomeBlogs";
 
 export default function Home() {
 
@@ -34,18 +33,18 @@ export default function Home() {
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
           description:
             "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
-          images: [
-            {
-              url: "https://i.ibb.co/k0NMQw9/home.png",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-          ],
-          siteName: "https://weareenigma.com/",
-        }}
-      />
+            images: [
+              {
+                url: "https://weareenigma.com/assets/featured-images/index.png",
+                width: 1200,
+                height: 630,
+                alt: "HomePage Feature Image",
+                type: "image/png",
+              },
+            ],
+            siteName: "Enigma Digital",
+          }}
+        />
 
       <Preloader />
 
@@ -55,9 +54,7 @@ export default function Home() {
 
       <main>
       
-        <section>
-          <Header />
-        </section>
+      <Header />
 
       {/*===============================Hero Section=========================*/}
           <section className="main-section"
@@ -121,79 +118,7 @@ export default function Home() {
       {/* ======================== Home Aero END ====================== */}
       
       {/* ======================== Related Blogs ====================== */}
-      {/* <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/what-is-experience-design">
-                <img
-                  src="/assets/blogs/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is Experience Design, And How is it Different from User
-              Experience Design (UX)?
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/the-power-of-psychology-in-ux-design">
-                <img
-                  src="/assets/blogs/uxbrain.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Power of Psychology in UX Design: Unlocking the Human Element
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/what-is-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is UX Design: A Simple and Informative Guide for the Curious
-              Minds
-            </h1>
-          </div>
-        </div>
-      </div> */}
-
+        <HomeBlogs />
       {/* ======================== Related Blogs ====================== */}
       
       {/* ======================== Footer ====================== */}

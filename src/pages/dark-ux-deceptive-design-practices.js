@@ -1,49 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-import Image from "next/image";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function unmaskingwebdarksecrets() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -72,13 +43,13 @@ export default function unmaskingwebdarksecrets() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -88,10 +59,11 @@ export default function unmaskingwebdarksecrets() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -99,75 +71,14 @@ export default function unmaskingwebdarksecrets() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -182,130 +93,44 @@ export default function unmaskingwebdarksecrets() {
         description:
           "Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enimga Digital Website",
-      }}
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/dark-design-practices.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "dark ux design practices",
+                      type: "image/png",
+                    },
+                  ],
+                  siteName: "Enigma Digital",
+                }}
     />    
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Unmasking the Web's Dark Side</h1>
-          </span>
-        </div>
-      </div>
       <SmoothScroll />
+
       <Cursor isGelly={true} />
-      <div>
-        <Header />
-      </div>
-      <div className="blog-detail-main-section">
+
+      <PageLoader text="Unmasking the Web's Dark Side"/>
+
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
-            Unmasking the Web's Dark Side: 5 Insider Secrets to Safeguard Your
+          Unmasking the Web's Dark Side: 5 Insider Secrets to Safeguard Your
             Site from Deceptive Design!
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted By</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">Bhaskar varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted on</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">01/03/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <h1>Share Article</h1>
-              </div>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/unmasking-the-web-dark-side"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.png"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/unmasking-the-web-dark-side"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.png"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/unmasking-the-web-dark-side"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.png"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/unmasking-the-web-dark-side"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.png"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"01/03/2023"} shareLink={"dark-ux-deceptive-design-practices"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+            <p>
               Navigating the digital world can be a fun and rewarding
               experience, but it can also be frustrating when you encounter
               sneaky tactics and deceptive practices. As a website design agency
@@ -316,29 +141,18 @@ export default function unmaskingwebdarksecrets() {
               and trust. Let's dive in!
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-             
-              id="anim"
-            >
+            <h2>
               There’s nothing worse than something that auto-renews
               unexpectedly.
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               We've all been there – signing up for a free trial or
               subscription, only to be automatically charged when the trial
               period ends. This deceptive pattern not only leaves a bad taste in
               your mouth, but it can also negatively impact a company's
               reputation and customer trust.
             </p>
-
-            
-            
-
-            <p id="anim">
+            <p>
               <span className="bold">Alternative:</span> Be upfront and
               transparent about auto-renewals. Clearly state that a subscription
               will auto-renew, and provide the option to opt-out or set a
@@ -347,28 +161,24 @@ export default function unmaskingwebdarksecrets() {
               experience.
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/unmasking-web-dark/unmasking-web-dark-2.webp"
+                alt="Unmasking Web Dark Image 1"
+              />
+            </div>
 
-            <h3
-              className="bold-h blog-mt-0"
-             
-              id="anim"
-            >
+            <h2>
               Be Clear with Data Usage
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               In today's digital landscape, data privacy is paramount. It's
               essential to be transparent about how your website collects, uses,
               and shares user data. This not only establishes trust but also
               adheres to data privacy regulations, such as the General Data
               Protection Regulation (GDPR).
             </p>
-
-            
-            
-
-            <p id="anim">
+            <p>
               <span className="bold">Alternative:</span> Craft a comprehensive,
               easy-to-understand privacy policy and present it in a
               user-friendly manner. Be sure to highlight key points, such as how
@@ -377,30 +187,15 @@ export default function unmaskingwebdarksecrets() {
               further demonstrates your commitment to user privacy
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Products Should Never Sneak into the Cart
-            </h3>
+            </h2>
             <p>
               Imagine adding a product to your cart, only to find additional
               items have been automatically included without your consent. This
               underhanded tactic may lead to higher sales in the short term, but
               it ultimately damages the user experience and erodes trust.
             </p>
-
-            
-            
-
             <p>
               <span className="bold">Alternative:</span> Prioritize user choice
               and consent. Allow customers to add or remove products from their
@@ -410,22 +205,15 @@ export default function unmaskingwebdarksecrets() {
               a positive shopping experience.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Charges Should Come with a Notification
-            </h3>
+            </h2>
             <p>
               Hidden fees and unexpected charges are not only frustrating but
               can also lead to a loss of customer trust. Transparency in pricing
               is essential to maintaining a positive user experience and
               building long-term customer loyalty.
             </p>
-
-            
-            
-
             <p>
               <span className="bold">Alternative:</span> Disclose all fees and
               charges upfront. Provide a clear breakdown of costs during the
@@ -435,12 +223,16 @@ export default function unmaskingwebdarksecrets() {
               order.
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/unmasking-web-dark/unmasking-web-dark-1.webp"
+                alt="Unmasking Web Dark Image 2"
+              />
+            </div>
 
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Copyblogger
-            </h3>
+            </h2>
             <p>
               Copyblogger is a leading blog on content marketing, copywriting,
               and blogging. They provide practical advice, tips, and strategies
@@ -448,10 +240,6 @@ export default function unmaskingwebdarksecrets() {
               Copyblogger is known for its in-depth articles, real-world
               examples, and focus on writing techniques that drive results.
             </p>
-
-            
-            
-
             <p>
               <span className="bold">Alternative:</span> Adopt a respectful and
               straightforward approach. Instead of using shame tactics, provide
@@ -461,20 +249,9 @@ export default function unmaskingwebdarksecrets() {
               compliance.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               No More False Urgency or Scarcity, Please
-            </h3>
+            </h2>
             <p>
               Creating a false sense of urgency or scarcity, such as fake
               limited-time offers or dwindling stock, can lead to impulsive
@@ -482,10 +259,6 @@ export default function unmaskingwebdarksecrets() {
               hurts your reputation but also undermines the trustworthiness of
               your website.
             </p>
-
-            
-            
-
             <p>
               <span className="bold">Alternative:</span> Be genuine with your
               promotions and offers. If you have a limited-time offer, make sure
@@ -495,10 +268,6 @@ export default function unmaskingwebdarksecrets() {
               honesty and transparency will result in long-term customer loyalty
               and a positive reputation.
             </p>
-
-            
-            
-
             <p>
               Deceptive patterns in website design can lead to short-term gains,
               but they often come at the expense of customer trust and
@@ -506,10 +275,6 @@ export default function unmaskingwebdarksecrets() {
               design in India, we believe that a transparent and user-friendly
               approach is the key to long-lasting success.
             </p>
-
-            
-            
-
             <p>
               By avoiding these deceptive practices and implementing the
               alternatives outlined in this article, you can create a website
@@ -518,85 +283,27 @@ export default function unmaskingwebdarksecrets() {
               transparency will always be appreciated by both your readers and
               SEO bots alike. Happy designing!
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Website Costing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    UI/UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Strategy
+                </h1>
+            </div>
           </div>
         </div>
       </div>
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/dark-ux-deceptive-design-practices"} category={"design"} />
       {/* =================== Related Articles END =========================== */}
 
       {/* ======================== Footer ====================== */}

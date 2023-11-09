@@ -293,7 +293,7 @@ export default function JobApply(){
     
     return(
         <>
-        <form onSubmit={handleSubmit} className="jd__form__content">
+        <form onSubmit={handleSubmit} className="jd__form__content text-left">
             <div className="font-body mb-16">
                 <h4 className="text-3xl font-medium mb-4">
                     Personal Information

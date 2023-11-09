@@ -1,7 +1,4 @@
-'use client'
-
 import React, { useEffect, useRef } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import SplitType from 'split-type';
@@ -19,6 +16,9 @@ import NextBox from '@/components/ServiceDetail/Marketing/MarketingNext';
 import OfferCards from '@/components/ServiceDetail/Marketing/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
+import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
+import PageLoader from '@/components/pageLoader';
+// import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,37 +47,32 @@ const handleHover = (e) => {
 
 export default function marketingandplanning() {
 
-// Page Transitions
-useEffect(() => {
-  const loaderBars = document.querySelectorAll("#loaderbars");
-  const tl = gsap.timeline();
-
-  let ctx = gsap.context(() => {
-
-    tl.from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-      duration: 1,
-    }).to(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: -200,
-      skewY: 10,
-      duration: 1,
-    }).to(loaderBars, {
-      height: 0,
-      duration: 0.6,
-      delay: -0.5,
-      ease: "power2.easeIn",
-      stagger: 0.1,
-    }).to("#loader", {
-      y: "-1500",
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-  });
-  return () => ctx.revert();
-}, []);
+//   const blogFaqData = [
+//     {
+//         question: "What is a SAAS platform?",
+//         answer: "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality."
+//     },
+//     {
+//         question: "How does billing work?",
+//         answer: "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
+//     },
+//     {
+//         question: "Can I get a refund for my subscription?",
+//         answer: "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
+//     },
+//     {
+//         question: "How do I cancel my subscription?",
+//         answer: "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing."
+//     },
+//     {
+//         question: "Can I try this platform for free?",
+//         answer: "We offers a free trial of its  platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged."
+//     },
+//     {
+//         question: "How do I access documentation?",
+//         answer: "Documentation is available on the company's website and can be accessed by logging in to your account. The documentation provides detailed information on how to use the , as well as code examples and other resources."
+//     },
+// ]
 
 if (globalThis.innerWidth>1200) {
 // Hero Section Animation
@@ -155,27 +150,25 @@ useEffect(() => {
   });
 
 // Portfolio Section Animation
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#section-3",
-            start: "top top",
-            end: "bottom top",
-            scrub: 1,
-            ease: "easeInOut",
-            pin: true,
-            markers: false,
-          },
-        });
-        
-      tl.to("#service-port-main", {
-        duration: 10,
-        x: "-58.5%",
-        delay: 0.5,
-      });
+useEffect(() => {
+  let ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section-3",
+        start: "top top",
+        end: "2500 top",
+        scrub: 1,
+        pin: true,
+        markers: false,
+      },
+    });
+    
+  tl.to("#service-port-main", {
+    transform: "translateX(-66.8%)",
+    ease: "power1.out",
   });
-  return () => ctx.revert();
+});
+return () => ctx.revert();
 });
 
 
@@ -190,7 +183,7 @@ useEffect(() => {
             trigger: "#section-5",
             pin: "#approachImgCont",
             pinSpacing: true,
-            start: "top top",
+            start: "top -10%",
             end: "bottom bottom",
             markers: false
           }
@@ -221,7 +214,7 @@ useEffect(() => {
   });
   return () => ctx.revert();
 }, []);
-  }
+}
 
 // Text Reveal Animation For Section 2
     useEffect(() => {
@@ -282,47 +275,28 @@ useEffect(() => {
                   "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/service-marketing.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Marketing Services Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-                ],
-                siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
               }}
             />  
-
-      {/*Page Loader*/}
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Marketing & Services</h1>
-          </span>
-        </div>
-      </div>
-      {/*Page Loader*/}
 
     <SmoothScroll />
 
     <Cursor isGelly={true} />
 
-    <div>
-        <Header />
-    </div>
+    <PageLoader text="Marketing & Services" />
 
-{/* PopUp Modal Button */}
-<Modal />
-{/* End */}
+    <Header />
+
+    {/* PopUp Modal Button */}
+    <Modal />
+    {/* End */}
 
     <main className={styles['main']}>
       <div className={styles['container']}>
@@ -336,7 +310,7 @@ useEffect(() => {
                 Marketing
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
+                We leverage the power of Emotion, Consumer Psychology & Technology to propel your success in the enigmatic realm of bits & bytes.
               </p>
             </div>
             <div>
@@ -353,20 +327,24 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                At Enigma Digital, we believe that a winning strategy isn't a rare gem—it's a well-crafted masterpiece that we create for our clients, time and again. Our strategic planning, rooted in deep insights, forms the bedrock of our operations. We blend strategic thinking, innovative ideas, broad marketing experience, and proven best practices to transform insights into actionable plans that deliver measurable results.
+                In a world where digital noise is deafening, your brand's voice deserves to be heard. We weave together the threads of SEO, Content Marketing, and Social Media, to create narratives that captivates and retains customer interest through organic search presence, compelling content, and meaningful social interactions. It’s time to rise above the cacophony without paying the price of admission.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
+                In the digital landscape, visibility is paramount, yet achieving it organically is becoming increasingly challenging. Businesses grapple with the reality that their voice is just one among millions clamouring for attention in the online arena. Oh! the frustration of crafting quality content that aligns perfectly with your brand ethos, only to watch it languish in the obscurity of search engine back pages can leave many feeling invisible, their valuable content unseen and unheard. At Enigma, we transcends these challenges by cultivate an organic presence for you that not only reaches but resonates with your audience. From content that informs and delights, to social media strategies that engage and build communities – we offer a holistic path to elevate your brand's online presence naturally and sustainably.
               </span>
             </p>
-            <span className={`${styles['btn-10']}`} 
-                  data-cursor-size="100px"
-                  data-cursor-exclusion>
-              kickstart your growth
-            </span>
+            <a 
+              href='/get-in-touch'
+              className={`${styles['btn-10']}`} 
+              data-cursor-size="100px"
+              data-cursor-exclusion>
+              <span>
+                Let’s Skyrocket Your Growth 
+              </span>
+            </a>
           </div>
         </div>
           
@@ -389,7 +367,7 @@ useEffect(() => {
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Strategy 
+                Marketing
                 <br /> 
                 Portfolio
             </h2>
@@ -402,11 +380,69 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
+                    <Image src='/assets/service-detail/portfolio/patronum.webp'
                         loading='lazy'
                         alt='portfolio image'
                         width={600}
                         height={600}
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <a className={styles['btn-10']} href='#'>
+                  View CaseStudy
+                </a>
+              </div>
+              <div className={styles['service-card-bottom']}>
+                <h3 className='color-primary'>
+                  Patronum
+                </h3>
+                <p>
+                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles['service-portfolio-cards-item']}
+                 data-cursor-size="100px"
+                 data-cursor-color="#E30B25"
+                 data-cursor-text="View More" id='fadeIn'>
+              <div className={styles['service-card-top']}>
+                <div>
+                    <Image src='/assets/service-detail/portfolio/dmtca.webp'
+                         loading='lazy'
+                         width={600}
+                        height={600}
+                        alt='portfolio image'
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <a className={styles['btn-10']} href='#'>
+                  View CaseStudy
+                </a>
+              </div>
+              <div className={styles['service-card-bottom']}>
+                <h3 className='color-primary'>
+                  DMTCA
+                </h3>
+                <p>
+                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles['service-portfolio-cards-item']}
+                 data-cursor-size="100px"
+                 data-cursor-color="#FF8395"
+                 data-cursor-text="View More" id='fadeIn'>
+              <div className={styles['service-card-top']}>
+                <div>
+                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
+                        alt='portfolio image'
+                        width={600}
+                        height={600}
+                        loading='lazy'
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
                     </Image>
@@ -427,69 +463,11 @@ useEffect(() => {
 
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
-                 data-cursor-color="#E30B25"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/wragby.webp'
-                         loading='lazy'
-                         width={600}
-                        height={600}
-                        alt='portfolio image'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
-                  Wragby
-                </h3>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#FF8395"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/dharan.webp'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        loading='lazy'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
-                  Dharan
-                </h3>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
                  data-cursor-color="#0D0A29"
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/quickx.webp'
+                    <Image src='/assets/service-detail/portfolio/enigma.webp'
                         alt='portfolio image'
                         width={600}
                         height={600}
@@ -504,7 +482,7 @@ useEffect(() => {
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  QuickX
+                  Enigma
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -520,21 +498,26 @@ useEffect(() => {
     <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-4'>
       <div className={styles['service-detail-process']}>
         <div className={styles['service-detail-process-left']}>
-          <h3 className='why-us-anim'>
-            Approach and
+          <h3 className={`${styles['sd__approach']} why-us-anim`}>
+            Our
             <br />
-            <span className='stroke'>Process</span>
+            <span className='stroke'>Approach</span>
           </h3>
         </div>
         <div className={styles['service-detail-process-right']}>
-          <h4 className='why-us-anim' data-jelly>
+          <p className={`${styles['mb-50']} why-us-anim`} data-jelly>
             <span>
-              At Enigma Digital, we believe that the journey to digital success is a strategic one, meticulously charted and navigated with precision. Our approach is not just about creating strategies; it's about crafting success stories. We understand that each brand is unique, each with its own story to tell and milestones to achieve. We believe that a strategy is not a static blueprint but a dynamic roadmap, one that evolves with changing market dynamics, customer behaviors, and brand goals.
+              Our approach to Organic Digital Marketing is rooted in a deep understanding of the digital ecosystem and the behaviours of its inhabitants. We recognize that true organic growth stems from a synergy of well-crafted content, search engine optimization, and social media engagement, all working in concert to amplify your brand's narrative.
             </span>
-          </h4>
+          </p>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-              We begin by immersing ourselves in your brand, absorbing its ethos, understanding its vision, and aligning ourselves with its goals. We delve into the intricate details, the nuances that make your brand unique, and the aspirations that drive it forward. This deep understanding enables us to create strategies that are not just aligned with your brand but are an extension of it.
+              We begin by immersing ourselves in your brand's world, understanding your unique story, and the audience you wish to captivate. This foundational knowledge informs our content strategy, ensuring that every blog post, article, and social media update is not only relevant and engaging but also serves as a beacon, guiding your audience back to you. SEO is the compass by which we navigate the vastness of the digital landscape. Our experts meticulously optimize your online presence, ensuring that your brand ranks high for the right reasons and the right queries. We focus on building a robust framework that withstands the test of time and algorithm changes. Social media is the pulse of organic digital marketing, and we treat it with the respect it deserves. We craft social strategies that foster genuine connections, encourage conversations, and build communities around your brand.
+            </span>
+          </p>
+          <p className={`${styles['m-50']} why-us-anim`} data-jelly>
+            <span>
+              In essence, our approach is not about quick wins or shortcuts. It's about building a lasting digital presence that grows organically, driven by quality, relevance, and engagement. With us, your brand is not just seen; it's remembered and revered.
             </span>
           </p>
         </div>
@@ -543,6 +526,10 @@ useEffect(() => {
 
 {/* Section 5 Img And Cards */}
 <section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
+                <h3 className={`${styles['sd__approach']} why-us-anim`}>
+                  Our
+                  <span className='stroke'> Process</span>
+                </h3>
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
@@ -583,27 +570,27 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Understanding Your Brand</h4>
+                    <h4 className='color-primary'>Gauge and Analyze</h4>
                     <p>
-                        We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
+                      We begin by gauging your current market standing, analyzing your brand's digital presence, audience demographics, and competitive landscape to inform our strategy.
                     </p>
                     </div>
 
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Identifying Your Target Audience</h4>
-                    <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
+                    <h4 className='color-primary'>Research-Driven Strategy</h4>
+                    <p>Our next step is to develop a research-driven organic marketing strategy, tailored to your brand's unique voice and objectives, ensuring every initiative is targeted and effective.</p>
                     </div>
                 </div>
                 <div className={`${styles['service-approach-text-container']} text-card`}
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Analyzing the Competition</h4>
-                    <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
+                    <h4 className='color-primary'>Optimize Content</h4>
+                    <p>Content optimization is key. We craft and refine SEO-rich, engaging content that resonates with your audience and elevates your brand's online authority.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Creating a Unique Value Proposition</h4>
-                    <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
+                    <h4 className='color-primary'>Widen Reach</h4>
+                    <p>We then widen your brand's reach by strategically deploying content across the right channels, ensuring visibility and engagement with your target audience.
                     </p>
                     </div>
                 </div>
@@ -611,12 +598,12 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Setting Measurable Goals</h4>
-                    <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
+                    <h4 className='color-primary'>Tend to Engagement</h4>
+                    <p>Engagement is crucial for organic growth. We actively manage your social presence, fostering a community around your brand and encouraging meaningful interactions.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Iterative Improvement</h4>
-                    <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
+                    <h4 className='color-primary'>Hone with Analytics</h4>
+                    <p>Finally, we hone our strategy using analytics, tracking performance and refining our tactics based on data-driven insights to ensure sustained growth and success.</p>
                     </div>
                 </div>
                 </div>
@@ -628,12 +615,19 @@ useEffect(() => {
           <OfferCards />
         </section>
 
+        {/* faq */}
+        {/* <Faq faqData={blogFaqData} /> */}
+
+        {/* ================================Related Blogs==================== */}
+        <ServiceBlogs category={"marketing"} />
+        {/* ================================Related Blogs==================== */}
+
         {/* ======================= Next Page Box ====================== */}
         <section className={styles['m-10-15']}>
             <NextBox />
         </section>
         {/* ======================= Next Page Box END ====================== */}
-
+    
         {/* ======================== Footer ====================== */}
         <div className="footer-desktop">
           <Footer />

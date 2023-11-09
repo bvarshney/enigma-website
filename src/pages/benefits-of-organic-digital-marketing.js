@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function organicdigitalmarketing() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -71,13 +43,13 @@ export default function organicdigitalmarketing() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -87,10 +59,11 @@ export default function organicdigitalmarketing() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -98,75 +71,14 @@ export default function organicdigitalmarketing() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -181,123 +93,43 @@ export default function organicdigitalmarketing() {
         description:
           "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "benefits of organic digital marketing",
+                      type: "image/png",
+                    },
+                  ],
+                  siteName: "Enigma Digital",
       }}
     />    
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Organic Digital Marketing</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Organic Digital Marketing" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             Organic Digital Marketing: The Game Changer Your Business Needs
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>20/12/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/organic-digital-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/organic-digital-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/organic-digital-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/organic-digital-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"20/12/2022"} shareLink={"benefits-of-organic-digital-marketing"} />
           </div>
-          <div className="right-section" id="right-section">
-            <h3 id="anim" className="italic-text">
+
+          <div className="b__dt-content" id="right-section">
+            <p className="b__dt-it">
               In this captivating article, we explore the undeniable benefits of
               organic digital marketing strategies such as Search Engine
               Optimization (SEO), Social Media Marketing (SMM), and Content
@@ -306,11 +138,9 @@ export default function organicdigitalmarketing() {
               tactics, highlighting how they can propel businesses to new
               heights. This article aims to enlighten readers about the
               transformative power of organic digital marketing.
-            </h3>
-
+            </p>
             
-            
-            <p id="anim">
+            <p >
               The digital marketing landscape is a dynamic, ever-changing
               terrain that can bewilder even the savviest of entrepreneurs. With
               so many strategies and tactics to choose from, how does one know
@@ -321,13 +151,19 @@ export default function organicdigitalmarketing() {
               as compared to any other form of digital marketing. So, buckle up
               and prepare for a thrilling ride through the captivating world of
               organic digital marketing
-              
-              
             </p>
-            <h3 className="bold-h" id="anim">
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-1.webp"
+                alt="Organic Digital Marketing Image 1"
+              />
+            </div>
+
+            <h2 >
               1. The Irresistible Charm of Search Engine Optimization (SEO)
-            </h3>
-            <p id="anim">
+            </h2>
+            <p >
               SEO, the enchanting practice of optimizing websites to rank higher
               on search engine results pages (SERPs), is a tried-and-true method
               for increasing visibility, driving organic traffic, and boosting
@@ -336,10 +172,10 @@ export default function organicdigitalmarketing() {
             </p>
 
             
-            <h3 className="bold-h" id="anim">
+            <h3 >
               1.1 Long-term Results:
             </h3>
-            <p id="anim">
+            <p >
               Unlike paid advertising, which offers temporary gains, SEO
               provides long-lasting results. A study by Ahrefs found that the
               average top-ranking page on Google is over two years old,
@@ -349,23 +185,21 @@ export default function organicdigitalmarketing() {
 
             
 
-            <h3 className="bold-h" id="anim">
+            <h3 >
               1.2 Cost-effectiveness:
             </h3>
-            <p id="anim">
+            <p >
               SEO is one of the most cost-effective digital marketing
               strategies, as it targets users who are actively searching for
               your products or services. According to Forbes, businesses that
               invest in SEO save an average of 61% on their cost per lead
               compared to traditional marketing channels (Forbes, 2020).
             </p>
-
             
-
-            <h3 className="bold-h" id="anim">
+            <h3 >
               1.3 Trust and Credibility:
             </h3>
-            <p id="anim">
+            <p >
               A high SERP ranking not only increases visibility but also
               enhances brand credibility. A study by BrightEdge found that
               organic search results receive 20 times more clicks than paid
@@ -375,10 +209,10 @@ export default function organicdigitalmarketing() {
 
             
 
-            <h3 className="bold-h" id="anim">
+            <h3>
               1.4 Mobile Optimization and Local SEO:
             </h3>
-            <p id="anim">
+            <p >
               As mobile usage continues to rise, optimizing your website for
               mobile devices is crucial for reaching a wider audience. Local
               SEO, which targets users searching for products or services within
@@ -390,10 +224,10 @@ export default function organicdigitalmarketing() {
 
             
 
-            <h3 className="bold-h" id="anim">
+            <h3>
               1.5 Improved User Experience:
             </h3>
-            <p id="anim">
+            <p >
               SEO is not just about keywords and backlinks; it also involves
               improving the overall user experience of your website. By
               optimizing your site's architecture, design, and content, you can
@@ -401,20 +235,18 @@ export default function organicdigitalmarketing() {
               ultimately result in higher conversion rates.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/organic-digital-marketing/1.jpg"
-                  alt="Img"
-                />
-              </div>
+            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-2.webp"
+                alt="Organic Digital Marketing Image 2"
+              />
             </div>
-
             
             
-            <h3 className="bold-h">
+            <h2>
               2. The Mesmerizing Power of Social Media Marketing (SMM)
-            </h3>
+            </h2>
 
             <p>
               Social media is a magical realm where consumers and businesses can
@@ -427,7 +259,7 @@ export default function organicdigitalmarketing() {
             
             
 
-            <h3 className="bold-h">
+            <h3>
               2.1 Immense Reach and Targeting Capabilities:
             </h3>
 
@@ -438,13 +270,9 @@ export default function organicdigitalmarketing() {
               can precisely target their desired audience based on demographics,
               interests, and behaviours.
             </p>
-
-            
-
-            <h3 className="bold-h">
+            <h3>
               2.2 Enhanced Customer Engagement:
             </h3>
-
             <p>
               SMM enables businesses to interact directly with their audience,
               fostering customer engagement and brand loyalty. A study by Sprout
@@ -452,13 +280,9 @@ export default function organicdigitalmarketing() {
               a brand they feel connected to on social media (Sprout Social,
               2020).
             </p>
-
-            
-
-            <h3 className="bold-h">
+            <h3>
               2.3 Valuable Customer Insights:
             </h3>
-
             <p>
               By monitoring social media conversations, businesses can gain
               valuable insights into customer preferences, sentiments, and
@@ -466,12 +290,9 @@ export default function organicdigitalmarketing() {
               marketing strategies accordingly.
             </p>
 
-            
-
-            <h3 className="bold-h">
+            <h3>
               2.4 Influencer Marketing:
             </h3>
-
             <p>
               In the enchanting world of social media, influencers wield
               tremendous power over their followers. By partnering with
@@ -481,13 +302,9 @@ export default function organicdigitalmarketing() {
               generate better ROI than other marketing channels (Mediakix,
               2019).
             </p>
-
-            
-
-            <h3 className="bold-h">
+            <h3>
               2.5 User-generated Content:
             </h3>
-
             <p>
               User-generated content (UGC), such as reviews, testimonials, and
               social media posts, can serve as powerful social proof and enhance
@@ -496,21 +313,16 @@ export default function organicdigitalmarketing() {
               featured in a positive UGC post (Olapic, 2018).
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/organic-digital-marketing/2.jpg"
-                  alt="Img"
-                />
-              </div>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-3.webp"
+                alt="Organic Digital Marketing Image 3"
+              />
             </div>
-            
-            
 
-            <h3 className="bold-h">
+            <h2>
               3. The Spellbinding World of Content Marketing
-            </h3>
-
+            </h2>
             <p>
               Content Marketing, the bewitching craft of creating and
               distributing valuable, relevant, and consistent content to attract
@@ -518,12 +330,9 @@ export default function organicdigitalmarketing() {
               irresistible benefits that eclipse those of other digital
               marketing techniques:
             </p>
-
-            
-            <h3 className="bold-h">
+            <h3>
               3.1 Building Trust and Brand Authority:
             </h3>
-
             <p>
               High-quality, informative content establishes your brand as an
               industry expert, earning the trust and respect of your audience.
@@ -532,11 +341,9 @@ export default function organicdigitalmarketing() {
               and trust in a brand (CMI, 2020).
             </p>
 
-            
-            <h3 className="bold-h">
-              Increased Collaboration and Innovation
+            <h3>
+              3.2 Increased Collaboration and Innovation
             </h3>
-
             <p>
               Outsourcing design work to India can also foster increased
               collaboration and innovation within your organization. By bringing
@@ -547,10 +354,9 @@ export default function organicdigitalmarketing() {
               indicating a boost in innovation (Harvard Business Review, 2020).
             </p>
             
-            <h3 className="bold-h">
-              3.2 Driving Organic Traffic and Generating Leads:
+            <h3>
+              3.3 Driving Organic Traffic and Generating Leads:
             </h3>
-
             <p>
               Content marketing, when combined with SEO, can drive organic
               traffic to your website and generate high-quality leads. HubSpot
@@ -558,10 +364,8 @@ export default function organicdigitalmarketing() {
               experience 3.5 times more traffic and 4.5 times more leads than
               those that don't (HubSpot, 2021).
             </p>
-
-            
-            <h3 className="bold-h">
-              3.3 Boosting Conversion Rates:
+            <h3>
+              3.4 Boosting Conversion Rates:
             </h3>
 
             <p>
@@ -571,12 +375,9 @@ export default function organicdigitalmarketing() {
               strategies have an average conversion rate of 2.9%, compared to a
               mere 0.5% for those without (Aberdeen Group, 2019).
             </p>
-
-            
-            <h3 className="bold-h">
-              3.4 Diversified Content Formats:
+            <h3>
+              3.5 Diversified Content Formats:
             </h3>
-
             <p>
               Content marketing allows for the creation and distribution of
               content in various formats, such as blog posts, infographics,
@@ -584,12 +385,9 @@ export default function organicdigitalmarketing() {
               cater to the unique preferences and consumption habits of their
               audience, ensuring maximum engagement and reach.
             </p>
-
-            
-            <h3 className="bold-h">
-              3.5 Repurposing and Recycling Content:
+            <h3>
+              3.6 Repurposing and Recycling Content:
             </h3>
-
             <p>
               One of the most magical aspects of content marketing is its
               ability to be repurposed and recycled. By transforming existing
@@ -598,35 +396,18 @@ export default function organicdigitalmarketing() {
               saving time and resources.
             </p>
 
-            
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/organic-digital-marketing/3.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            <h3 className="bold-h">
+            <h2>
               4. The Compelling Case for Organic Digital Marketing
-            </h3>
-
+            </h2>
             <p>
               Now that we've delved into the magical realms of SEO, SMM, and
               Content Marketing, let's examine why these organic digital
               marketing strategies are the best choice for your business as
               compared to other forms of digital marketing:
             </p>
-
-            
-            <h3 className="bold-h">
+            <h3>
               4.1 Sustainable Growth and Lasting Results:
             </h3>
-
             <p>
               Organic digital marketing strategies focus on building long-term
               relationships with customers, fostering brand loyalty, and driving
@@ -637,7 +418,7 @@ export default function organicdigitalmarketing() {
             </p>
 
             
-            <h3 className="bold-h">
+            <h3>
               4.2 Cost-Effectiveness and Higher ROI:
             </h3>
 
@@ -650,7 +431,7 @@ export default function organicdigitalmarketing() {
               marketing efforts (Deloitte, 2020).
             </p>
             
-            <h3 className="bold-h">
+            <h3>
               4.3 Enhanced Customer Experience and Personalization:
             </h3>
 
@@ -663,7 +444,7 @@ export default function organicdigitalmarketing() {
             </p>
 
             
-            <h3 className="bold-h">
+            <h3>
               4.4 Building a Loyal Community:
             </h3>
 
@@ -676,7 +457,7 @@ export default function organicdigitalmarketing() {
             </p>
 
             
-            <h3 className="bold-h">
+            <h3>
               4.5 Agility and Adaptability:
             </h3>
 
@@ -689,7 +470,7 @@ export default function organicdigitalmarketing() {
             </p>
 
             
-            <h3 className="bold-h">
+            <h3>
               4.6 Synergy Between Strategies:
             </h3>
 
@@ -700,10 +481,6 @@ export default function organicdigitalmarketing() {
               visibility on SERPs, while sharing it on social media can drive
               additional traffic and engagement.
             </p>
-
-            
-            
-
             <p>
               In this amusing, data-driven article, we have unveiled the
               irresistible allure of organic digital marketing strategies – SEO,
@@ -716,86 +493,23 @@ export default function organicdigitalmarketing() {
               journey to success!
             </p>
 
-            
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Organic Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Seo
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Startegies
+                </h1>
+            </div>
           </div>
         </div>
       </div>
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/benefits-of-organic-digital-marketing"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
 
       {/* ======================== Footer ====================== */}

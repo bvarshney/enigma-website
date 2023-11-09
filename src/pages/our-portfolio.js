@@ -1,10 +1,7 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import gsap from "gsap";
+import { motion, AnimatePresence } from "framer-motion";
 import { NextSeo } from "next-seo";
 
 import Banner from "@/components/studio/Banner";
@@ -18,7 +15,8 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectWorks from "@/components/studio/ProjectWorks";
 import WorksNextBox from "@/components/NextBoxes/WorksNextBox";
-import Modal from "../components/PopupForm/formModal";
+import Modal from "@/components/PopupForm/formModal";
+import PageLoader from '@/components/pageLoader';
 
 export default function studio() {
   const [loading, setLoading] = useState(true);
@@ -33,38 +31,6 @@ export default function studio() {
     3000
   );
 
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   return (
     <>
 
@@ -78,16 +44,15 @@ export default function studio() {
         description:
           "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+              {
+                url: "https://weareenigma.com/assets/featured-images/work.png",
+                width: 1200,
+                height: 630,
+                alt: "Our Portfolio Feature Image",
+                type: "image/png",
+              },
+            ],
+          siteName: "Enigma Digital",
       }}
     />    
 
@@ -95,21 +60,7 @@ export default function studio() {
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: 9999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Our Meticulously Crafted Projects</h1>
-          </span>
-        </div>
-      </div>
+      <PageLoader text="Our Meticulously Crafted Projects" />
 
       <div className="studio">
         <Header />

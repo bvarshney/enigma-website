@@ -12,7 +12,8 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
-import ProjectSlider from "../components/CaseStudies/ProjectSlider";
+import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,38 +40,6 @@ const handleHoverExit = (e) => {
 };
 
 export default function gcm() {
-  
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -213,43 +182,25 @@ export default function gcm() {
                   "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-gcm.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "GCM Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              Garden <span className="loader-font">City</span> Mall
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
 
+      <PageLoader text="Garden City Mall Case Study" />
+
       <main>
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         <div className={styles.Main}>
 
@@ -299,11 +250,11 @@ export default function gcm() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/gcm/img1.webp"
+                  src="/assets/casestudies/gcm/gcm-casestudy-image-1.webp"
+                  alt="GCM casestudy image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#EF9C34"
                   data-cursor-text="GCM"
                 />
@@ -350,11 +301,12 @@ export default function gcm() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                 src="/assets/casestudies/gcm/img2.webp"
+                  src="/assets/casestudies/gcm/gcm-casestudy-image-2.webp"
+                  alt="GCM casestudy image 2"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#EBA17D"
                   data-cursor-text="GCM"
               />
@@ -406,8 +358,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-5.webp"
+                    alt="GCM casestudy image 5"
+                    loading="lazy"
                     data-cursor-color="#A4A4CD"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -421,8 +374,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-6.webp"
+                    alt="GCM casestudy image 6"
+                    loading="lazy"
                     data-cursor-color="#FFC09F"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -439,8 +393,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-7.webp"
+                    alt="GCM casestudy image 7"
+                    loading="lazy"
                     data-cursor-color="#F8E890"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -454,8 +409,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-8.webp"
+                    alt="GCM casestudy image 8"
+                    loading="lazy"
                     data-cursor-color="#ADF8B5"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -525,8 +481,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-9.webp"
+                    alt="GCM casestudy image 9"
+                    loading="lazy"
                     data-cursor-color="#323B44"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -540,8 +497,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web6.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-10.webp"
+                    alt="GCM casestudy image 10"
+                    loading="lazy"
                     data-cursor-color="#FF9870"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -558,8 +516,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web7.png"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-11.webp"
+                    alt="GCM casestudy image 11"
+                    loading="lazy"
                     data-cursor-color="#EF96B6"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -573,8 +532,9 @@ export default function gcm() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/gcm/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-12.webp"
+                    alt="GCM casestudy image 12"
+                    loading="lazy"
                     data-cursor-color="#E5BBA2"
                     data-cursor-text="GCM"
                     data-cursor-size="120px"
@@ -595,13 +555,15 @@ export default function gcm() {
             </div>
             <div className={styles.gcmfontImagebox}>
               <img
-                src="/assets/casestudies/gcm/font1.png"
-                alt="Fonts"
+                src="/assets/casestudies/gcm/gcm-casestudy-font-1.webp"
+                alt="Gcm Casestudy Fonts Image 1"
+                loading="lazy"
                 id="fonts-dark-casestudy"
               />
               <img
-                src="/assets/casestudies/gcm/font2.png"
-                alt="Fonts"
+                src="/assets/casestudies/gcm/gcm-casestudy-font-2.webp"
+                alt="Gcm Casestudy Fonts Image 2"
+                loading="lazy"
                 id="fonts-dark-casestudy"
               />
             </div>
@@ -627,7 +589,7 @@ export default function gcm() {
               className={styles.gcmcolorBoxesSection}
               id="dark-mode-colors-casestudy"
             >
-              <img src="/assets/casestudies/gcm/color-2.png" alt="color" />
+              <img src="/assets/casestudies/gcm/gcm-casestudy-colors.webp" alt="GCM casestudy color image" />
             </div>
           </section>
 
@@ -696,10 +658,11 @@ export default function gcm() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/gcm/img3.webp"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-3.webp"
+                    alt="GCM casestudy image 3"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
-                    alt="portfolio image"
                     data-cursor-size="100px"
                     data-cursor-color="#00232E"
                     data-cursor-text="GCM"
@@ -766,11 +729,12 @@ export default function gcm() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/gcm/img4.webp"
+                    src="/assets/casestudies/gcm/gcm-casestudy-image-4.webp"
+                    alt="GCM casestudy image 4"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#00232E"
                     data-cursor-text="GCM"
                 />
@@ -808,7 +772,7 @@ export default function gcm() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/gcm/gcmclient.png" alt="clinet img"></img>
+                    <img src="/assets/casestudies/gcm/gcm-client.webp" alt="Client Image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

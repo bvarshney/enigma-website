@@ -7,18 +7,18 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import Head from "next/head";
 
-import Header from "../components/LandingPage/Design/Header";
-import Hero from "../components/LandingPage/Design/Hero";
-import Section2 from "../components/LandingPage/Design/Section2";
-import Testimonial from "../components/LandingPage/Design/Testimonial";
-import Membership from "../components/LandingPage/Design/Membership";
-import RecentWork from "../components/LandingPage/Design/RecentWork";
-import Pricing from "../components/LandingPage/Design/Pricing";
-import Faq from "../components/LandingPage/Design/Faq";
-import Footer from "../components/LandingPage/Design/Footer";
+import Header from "@/components/LandingPage/Design/Header";
+import Hero from "@/components/LandingPage/Design/Hero";
+import Section2 from "@/components/LandingPage/Design/Section2";
+import Testimonial from "@/components/LandingPage/Design/Testimonial";
+import Membership from "@/components/LandingPage/Design/Membership";
+import RecentWork from "@/components/LandingPage/Design/RecentWork";
+import Pricing from "@/components/LandingPage/Design/Pricing";
+import Faq from "@/components/LandingPage/Design/Faq";
+import Footer from "@/components/LandingPage/Design/Footer";
 import { NextSeo } from "next-seo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -74,96 +74,35 @@ useEffect(() => {
   }
 }, []);
 
-// Loader Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   return (
         <>
 
             <NextSeo
               title="Graphic Design Services | Graphic Design Subscription"
               description="Graphic Design Services | Graphic Design Subscription"
-              canonical="https://www.weareenigma.com/graphic-design-subscription"
+              canonical="https://weareenigma.com/graphic-design-subscription"
               openGraph={{
-                url: "https://www.weareenigma.com/graphic-design-subscription",
+                url: "https://weareenigma.com/graphic-design-subscription",
                 title: "Graphic Design Services | Graphic Design Subscription",
                 description:
                   "Graphic Design Services | Graphic Design Subscription",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/index.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Graphic Design Subscription",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-                ],
-                siteName: "https://www.weareenigma.com/graphic-design-subscription",
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
-        <Head>
-          <title>
-           Graphic Design Services | Graphic Design Subscription
-          </title>
-          <meta
-            name="description"
-            content="Graphic Design Services | Graphic Design Subscription"
-          />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
-          </meta>
-          <link rel="icon" href="/fav-icon.png" />
-        </Head>
-
-{/* Loader */}
-        <div className={`loader-wrap ${styles.loader}`} id="loader" style={{ zIndex: 999 }}>
-          <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-          <div className="loader-wrap-heading">
-            <span>
-              <h1>Design Subscription</h1>
-            </span>
-          </div>
-        </div>
-
         <Cursor isGelly={true} />
+
+        <PageLoader text="Graphic Design Subscription" />
+
               <main id="design-landing" className={`${styles.mainContainer} ${isDarkMode ? styles.dark : "dark"}`}>
                 
                 <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />

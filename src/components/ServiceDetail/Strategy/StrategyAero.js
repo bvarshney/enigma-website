@@ -60,14 +60,14 @@ export default function CursorAero() {
         {/* Text Container with Blend Mode Effect */}
         <div className="text-container aero-demo">
           <h1 className="aero-desk-1">
-            we craft winning strategies 
+              We craft digital strategies 
             <br />
-            for digital success
+              for unrivalled dominance 
           </h1>
           <h1 className="aero-mob-1">
-            we craft winning
-            <br /> strategies for
-            <br />digital success
+            We craft digital 
+            <br />strategies for 
+            <br />unrivalled dominance 
           </h1>
           <CursorParticles />
         </div>

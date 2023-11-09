@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Head from "next/head";
 import "react-creative-cursor/dist/styles.css";
 import { Cursor } from "../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -15,6 +14,7 @@ import MarqueeCata from "@/components/MarqueeCata";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
 import Modal from "../components/PopupForm/formModal";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,38 +41,6 @@ export default function contact() {
       }
     );
     return () => tl.kill();
-  }, []);
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
   }, []);
 
   // Reveal TimeLine Contact left Elements On Scroll Stagger
@@ -141,9 +109,6 @@ export default function contact() {
   });
 }
 
-// console.clear;
-
-
   return (
     <>
       <NextSeo
@@ -158,14 +123,14 @@ export default function contact() {
             "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/contact.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Contact Us Feature Image",
                     type: "image/png",
                   },
-          ],
-          siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
         }}
       />
 
@@ -173,21 +138,7 @@ export default function contact() {
 
       <Cursor isGelly={true} />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Hi, There! Let's Talk!?</h1>
-          </span>
-        </div>
-      </div>
+      <PageLoader text="Hi, There! Let's Talk!?" />
 
       <>
         <main>

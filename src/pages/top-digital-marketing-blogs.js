@@ -1,49 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-import Image from "next/image";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function digitalmarketingblogs() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -72,13 +43,13 @@ export default function digitalmarketingblogs() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -88,10 +59,11 @@ export default function digitalmarketingblogs() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -99,75 +71,14 @@ export default function digitalmarketingblogs() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -183,133 +94,43 @@ export default function digitalmarketingblogs() {
           "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Top Marketing Blogs",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
-        siteName: "Enimga Digital Website",
+        siteName: "Enigma Digital",
       }}
     />    
-
-      <div className="loader-wrap" id="loader">
-        <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Top 20 Digital Marketing Blogs</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Top 20 Digital Marketing Blogs" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             Top 20 Digital Marketing Blogs to Follow for Expert Insights and
             Strategies
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted By</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted on</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">07/02/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <h1>Share Article</h1>
-              </div>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/top-20-digital-marketing-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/top-20-digital-marketing-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/top-20-digital-marketing-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/top-20-digital-marketing-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"07/02/2023"} shareLink={"top-digital-marketing-blogs"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+            <p>
               In the fast-paced and ever-changing world of digital marketing,
               staying up-to-date with the latest trends, best practices, and
               expert insights is crucial to ensure the success of your marketing
@@ -324,16 +145,17 @@ export default function digitalmarketingblogs() {
               digital marketing expertise and explore these must-follow blogs!
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-1.webp"
+                alt="Top Digital Marketing Blogs Image 1"
+              />
+            </div>
 
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               Moz
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Moz is renowned for its expertise in search engine optimization
               (SEO), making it a go-to resource for digital marketers looking to
               enhance their online visibility. Their blog covers a wide range of
@@ -344,16 +166,10 @@ export default function digitalmarketingblogs() {
               your website's performance.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               Content Marketing Institute (CMI)
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               As the name suggests, Content Marketing Institute focuses on
               content marketing strategies and best practices. Their blog is an
               excellent resource for marketers looking to improve their content
@@ -361,18 +177,12 @@ export default function digitalmarketingblogs() {
               valuable, researchbacked insights from industry leaders and
               provides practical tips on creating and executing successful
               content marketing campaigns.
-            </p>
+            </p>      
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               HubSpot
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               HubSpot's blog is a treasure trove of inbound marketing knowledge.
               They cover various topics, including marketing automation, lead
               generation, and email marketing, to help businesses grow and
@@ -381,16 +191,10 @@ export default function digitalmarketingblogs() {
               one-stop-shop for all things inbound marketing.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               Neil Patel
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Neil Patel's blog is a must-read for marketers looking to improve
               their digital marketing skills. The founder of Crazy Egg and
               Kissmetrics, Neil shares valuable insights and tips based on his
@@ -399,38 +203,21 @@ export default function digitalmarketingblogs() {
               to everyone.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               Social Media Examiner
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Social Media Examiner is the go-to resource for social media
               marketing tips, strategies, and news. Their blog covers all major
               platforms and provides practical advice for businesses looking to
               expand their social media presence. Their content is regularly
               updated to ensure readers stay current on the latest social media
               trends and best practices.
-            </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
+            </p>           
             
-            
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Search Engine Land
-            </h3>
+            </h2>
             <p>
               Search Engine Land is a leading authority on SEO and SEM. Their
               blog provides the latest news, trends, and expert advice on search
@@ -439,12 +226,9 @@ export default function digitalmarketingblogs() {
               staying informed on search-related topics.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Enigma Digital
-            </h3>
+            </h2>
             <p>
               Enigma Digital's blog is an indispensable resource for digital
               marketers looking to stay upto-date with the latest industry
@@ -456,12 +240,16 @@ export default function digitalmarketingblogs() {
               only informative but also engaging and accessible
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-2.webp"
+                alt="Top Digital Marketing Blogs Image 2"
+              />
+            </div>
 
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Copyblogger
-            </h3>
+            </h2>
             <p>
               Copyblogger is a leading blog on content marketing, copywriting,
               and blogging. They provide practical advice, tips, and strategies
@@ -470,12 +258,9 @@ export default function digitalmarketingblogs() {
               examples, and focus on writing techniques that drive results.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               MarketingProfs
-            </h3>
+            </h2>
             <p>
               MarketingProfs is a comprehensive marketing resource that offers a
               wide range of topics, including digital marketing, content
@@ -487,12 +272,9 @@ export default function digitalmarketingblogs() {
               skills and stay ahead of the curve.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Convince & Convert
-            </h3>
+            </h2>
             <p>
               Convince & Convert is a renowned digital marketing blog that
               focuses on social media, content marketing, and customer
@@ -504,12 +286,9 @@ export default function digitalmarketingblogs() {
               customers first.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Ahrefs
-            </h3>
+            </h2>
             <p>
               Ahrefs is a leading SEO toolset provider, and their blog is a
               treasure trove of SEO tips, strategies, and insights. They cover a
@@ -517,22 +296,11 @@ export default function digitalmarketingblogs() {
               and beyond. Ahrefs offers data-driven insights and practical
               tutorials, ensuring that marketers have access to the most
               up-to-date and effective SEO strategies
-            </p>
+            </p>      
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Buffer
-            </h3>
+            </h2>
             <p>
               Buffer is a popular social media management tool, and their blog
               is an excellent resource for social media marketing tips and
@@ -542,12 +310,9 @@ export default function digitalmarketingblogs() {
               presence and drive better results.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Digiday
-            </h3>
+            </h2>
             <p>
               Digiday is a leading digital marketing and media publication that
               covers the latest industry news, trends, and strategies. Their
@@ -558,12 +323,16 @@ export default function digitalmarketingblogs() {
               marketers of all skill levels.
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-3.webp"
+                alt="Top Digital Marketing Blogs Image 3"
+              />
+            </div>
 
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Search Engine Journal
-            </h3>
+            </h2>
             <p>
               Search Engine Journal is another top resource for SEO and SEM
               professionals. Their blog covers a wide range of search-related
@@ -573,12 +342,9 @@ export default function digitalmarketingblogs() {
               the most current and effective search marketing strategies.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Marketing Land
-            </h3>
+            </h2>
             <p>
               Marketing Land is a popular digital marketing publication that
               covers a wide range of topics, from SEO and social media to
@@ -590,12 +356,9 @@ export default function digitalmarketingblogs() {
               expertise.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Backlinko
-            </h3>
+            </h2>
             <p>
               Backlinko, founded by Brian Dean, is a well-known SEO blog that
               offers in-depth guides and case studies to help marketers improve
@@ -604,12 +367,9 @@ export default function digitalmarketingblogs() {
               providing high-quality, easy-to-understand content.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               AdEspresso
-            </h3>
+            </h2>
             <p>
               AdEspresso is a leading resource for Facebook and Google Ads tips
               and strategies. Their blog offers insightful articles and guides
@@ -619,21 +379,9 @@ export default function digitalmarketingblogs() {
               platforms.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/3.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Unbounce
-            </h3>
+            </h2>
             <p>
               Unbounce is a popular landing page builder, and their blog is an
               excellent resource for marketers looking to improve their
@@ -644,12 +392,9 @@ export default function digitalmarketingblogs() {
               optimize landing pages that drive results.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               KlientBoost
-            </h3>
+            </h2>
             <p>
               KlientBoost is a performance marketing agency that shares valuable
               insights on their blog, covering topics like pay-per-click (PPC)
@@ -659,12 +404,9 @@ export default function digitalmarketingblogs() {
               marketers.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Grow
-            </h3>
+            </h2>
             <p>
               Grow, by Mark Schaefer, is a thought-provoking blog that explores
               the intersection of marketing, technology, and humanity. The blog
@@ -676,12 +418,9 @@ export default function digitalmarketingblogs() {
               tactics.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               That’s A Wrap..!
-            </h3>
+            </h2>
             <p>
               By following these top 20 digital marketing blogs, you can stay
               ahead of the curve, armed with the latest industry insights,
@@ -696,89 +435,28 @@ export default function digitalmarketingblogs() {
               blogs, subscribe to their newsletters, and harness the wealth of
               knowledge they have to offer. Happy reading and marketing!
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                  Top Marketing Blogs
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Successful Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                  Conversion Rates
+                </h1>
+                <h1 className="blog__dt-tag">
+                  SEO Tactics
+                </h1>
+            </div>
           </div>
         </div>
       </div>
-
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/top-digital-marketing-blogs"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
-
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

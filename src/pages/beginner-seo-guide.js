@@ -1,49 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function onpageseo() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -72,13 +43,13 @@ export default function onpageseo() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -88,10 +59,11 @@ export default function onpageseo() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -99,75 +71,14 @@ export default function onpageseo() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -182,124 +93,43 @@ export default function onpageseo() {
         description:
           "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/beginner-seo-guide.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "beginner seo guide",
+                      type: "image/png",
+                    },
+                  ],
+                  siteName: "Enigma Digital",
       }}
     />    
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>On-Page & Off-Page SEO</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="On-Page & Off-Page SEO" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
-          data-cursor-size="10px"
-          data-cursor-text=""
-        >
-          <h1 data-jelly id="blog">
-            On-Page & Off-Page SEO: A Beginner's Guide to Optimizing Your
-            Website
-          </h1>
-        </div>
-
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>17/01/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/onpage-and-offpage-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/onpage-and-offpage-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/onpage-and-offpage-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/onpage-and-offpage-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+            className="b__dt-head-contain"
+            data-cursor-size="10px"
+            data-cursor-text="">
+            <h1 data-jelly id="blog">
+              On-Page & Off-Page SEO: A Beginner's Guide to Optimizing Your Website
+            </h1>
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-main-blog" id="main-blog-container">
+            <div className="b__dt-auth" id="left-section">
+              <BlogInfo author={"Bhaskar Varshney"} date={"17/01/2023"} shareLink={"beginner-seo-guide"} />
+            </div>
+  
+          <div className="b__dt-content" id="right-section">
+            <p>
               Search engine optimization (SEO) is a critical aspect of any
               successful digital marketing strategy. SEO can be divided into two
               main categories: on-page and off-page optimization. On-page SEO
@@ -312,19 +142,25 @@ export default function onpageseo() {
               results. Let's dive into the world of SEO and learn how to
               optimize your website for maximum visibility and success.
             </p>
-            <h3
-              className="bold-h-u"
-              id="anim"
-            >
+
+            <div className="b__dt-img" id="anim">
+                <img
+                  src="/assets/blogs/blog-detail/beginner-guide-to-seo/beginner-guide-to-seo-1.webp"
+                  alt="Beginner Guide To Seo Image 1"
+                />
+            </div>
+            
+            <h2>
               On-Page SEO: Optimizing Your Website's Content and Structure
-            </h3>
-            <p id="anim">
+            </h2>
+
+            <p>
               On-page SEO involves optimizing individual web pages on your site
               to improve their search engine rankings and user experience. Some
               key elements of on-page SEO include:
             </p>
 
-            <p id="anim">
+            <p>
               <span className="bold">Title tags:</span> These are HTML tags that
               define the title of your web page and appear in search engine
               results and browser tabs. Optimizing title tags involves including
@@ -332,7 +168,7 @@ export default function onpageseo() {
               accurately reflects your page's content
             </p>
 
-            <p id="anim">
+            <p>
               <span className="bold">Meta descriptions:</span> Meta descriptions
               are brief summaries of your web page's content that appear in
               search engine results. A well-crafted meta description should
@@ -340,7 +176,7 @@ export default function onpageseo() {
               entice users to click on your link.
             </p>
 
-            <p id="anim">
+            <p>
               <span className="bold">URL structure:</span> A clean, descriptive
               URL structure can improve user experience and make it easier for
               search engines to understand and index your content. Include
@@ -348,7 +184,7 @@ export default function onpageseo() {
               strings of characters.
             </p>
 
-            <p id="anim">
+            <p>
               <span className="bold">Header tags:</span> Header tags (H1, H2,
               H3, etc.) are used to structure your content and indicate the
               hierarchy of information on your page. Including relevant keywords
@@ -356,7 +192,7 @@ export default function onpageseo() {
               content better and improve your search engine rankings.
             </p>
 
-            <p id="anim">
+            <p >
               <span className="bold">Keyword usage: </span>
               Incorporate relevant keywords naturally and strategically
               throughout your content, including in the title, headings, body
@@ -365,16 +201,14 @@ export default function onpageseo() {
             </p>
 
             
-            <p id="anim">
+            <p>
               <span className="bold">Internal linking:</span> Including internal
               links to other pages on your website can improve user experience,
               increase time spent on your site, and help search engines
               understand the structure and relevance of your content.
             </p>
 
-            
-
-            <p id="anim">
+            <p>
               <span className="bold">Image optimization:</span> Optimize images
               on your website by compressing them to reduce file size, using
               descriptive file names, and adding keyword-rich alt text. This can
@@ -382,17 +216,13 @@ export default function onpageseo() {
               context of your images.
             </p>
 
-            
-
-            <p id="anim">
+            <p>
               <span className="bold">Mobile-friendliness:</span> Ensure that
               your website is easily accessible and readable on mobile devices,
               as this can improve user experience and search engine rankings.
             </p>
 
-            
-
-            <p id="anim">
+            <p>
               <span className="bold">Ahrefs:</span> Another popular paid tool,
               Ahrefs offers a wealth of information for keyword research and SEO
               analysis. With features like keyword explorer, content gap
@@ -401,24 +231,17 @@ export default function onpageseo() {
               landscape
             </p>
 
-            <div className="blog-img" id="anim">
-              <div className="image-container blog-img-container">
+            <div className="b__dt-img" id="anim">
                 <img
-                  src="/assets/blogs/blog-detail/off-on-page-seo/1.jpg"
-                  alt="Img"
+                  src="/assets/blogs/blog-detail/beginner-guide-to-seo/beginner-guide-to-seo-2.webp"
+                  alt="Beginner Guide To Seo Image 2"
                 />
-              </div>
             </div>
 
-            
-            
-
-            <h3
-              className="bold-h-u"
-            >
+            <h2>
               Off-Page SEO: Building Your Website's Authority and
               Trustworthiness
-            </h3>
+            </h2>
 
             <p>
               Off-page SEO refers to activities outside your website that
@@ -426,7 +249,6 @@ export default function onpageseo() {
               include:
             </p>
 
-            
             <p>
               <span className="bold">Backlinks: </span>
               Backlinks, also known as inbound links or incoming links, are
@@ -435,25 +257,19 @@ export default function onpageseo() {
               and search engine rankings.
             </p>
 
-            
-
             <p>
               <span className="bold">Social media:</span> A strong presence on
               social media platforms like Facebook, Twitter, LinkedIn, and
               Instagram can help increase your brand's visibility, drive traffic
               to your website, and improve your search engine rankings.
             </p>
-
             
-
             <p>
               <span className="bold">Online directories:</span> Listing your
               website on reputable online directories can help improve your
               site's visibility, generate referral traffic, and boost your
               search engine rankings.
             </p>
-
-            
 
             <p>
               <span className="bold">Brand mentions:</span> When other websites,
@@ -463,9 +279,7 @@ export default function onpageseo() {
               with your audience, and collaborating with influencers in your
               niche.
             </p>
-
             
-
             <p>
               <span className="bold">Guest posting:</span> Writing high-quality,
               informative guest posts for authoritative websites in your
@@ -473,23 +287,10 @@ export default function onpageseo() {
               online visibility, and establish your brand as an expert in your
               field.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/off-on-page-seo/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
             
-            
-
-            <h3
-              className="bold-h-u"
-            >
+            <h2>
               Domain Authority and Its Impact on SEO
-            </h3>
+            </h2>
 
             <p>
               Domain Authority (DA) is a metric developed by Moz that predicts
@@ -502,21 +303,14 @@ export default function onpageseo() {
               organic traffic to your site, and enhance your online credibility.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h-u"
-            >
+            <h2>
               Examples of Websites for Easy and Quick Link Building
-            </h3>
+            </h2>
 
             <p>
               There are several websites where you can do link-building easily
               and get quick results. Some examples include:
             </p>
-
-            
 
             <p>
               <span className="bold">Medium:</span> A popular blogging platform
@@ -524,26 +318,21 @@ export default function onpageseo() {
               website.
             </p>
 
-            
-
             <p>
               <span className="bold">Quora: </span>A question-and-answer website
               where you can answer user questions and include relevant links to
               your site.
             </p>
 
-            
-
             <p>
               <span className="bold">LinkedIn:</span> A professional networking
               platform where you can publish articles and share content with
               links to your website
             </p>
-
             
-            <h3 className="bold-h">
+            <h2>
               Creating a Targeted Keyword List
-            </h3>
+            </h2>
 
             <p>
               After analysing keyword competitiveness, search volume, and user
@@ -555,9 +344,6 @@ export default function onpageseo() {
               Regularly review and update your keyword list to stay current with
               industry trends and search engine algorithm changes.
             </p>
-
-            
-            
 
             <p>
               On-page and off-page SEO are crucial components of any successful
@@ -571,88 +357,29 @@ export default function onpageseo() {
               ensure your website remains competitive and engaging for your
               target audience.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    On Page Seo
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Digital Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    DA
+                </h1>
+            </div>
+
           </div>
         </div>
       </div>
 
-
-       {/* =================== Related Articles =========================== */}
-
-       <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+      {/* =================== Related Articles =========================== */}
+      <RelatedBlogs currentBlogLink={"/beginner-seo-guide"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

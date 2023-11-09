@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import Image from "next/image";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import React, { useEffect } from "react";
+import React from "react";
+import styles from '@/styles/serviceDetail.module.css';
 
 // Hover on the link
 const handleHover2 = (e) => {
@@ -21,36 +21,7 @@ const handleHover2 = (e) => {
     });
   };  
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function OfferCards() {
-
-// FadeUp Animation
-    useEffect(() => {
-        let ctx = gsap.context(() => {
-        const cardHead = document.querySelector(".our-service-anim");
-        const cards = document.querySelectorAll(".service-offer-card");
-        const tl = gsap.timeline({
-            ScrollTrigger: {
-                trigger: '.service-offer-container',
-                start: 'top 85%',
-            }
-        });
-            tl. from(cardHead, {
-                yPercent: 100,
-                opacity: 0, 
-                duration: 0.7
-            })
-            tl.from(cards, {
-                opacity: "0",
-                y: 100,
-                duration: 0.7,
-                stagger: 0.2,
-                ease: 'power1.Out',
-            });
-        });
-        return () => ctx.revert();
-      });
 
     return (
         <>
@@ -58,7 +29,7 @@ export default function OfferCards() {
                 <div className="service-offer-container">
                     <div className='service-offer'>
                         <div className='service-offer-top'>
-                             <h2 className='our-service-anim'>
+                             <h2 className={`${styles['sd__approach']} our-service-anim`} id="fadeUp">
                                 Our Services<span className='stroke'> Include</span>
                             </h2>
                         </div>
@@ -72,7 +43,7 @@ export default function OfferCards() {
                                     <span className="card-shape-1 card-bg-2"></span>
                                     <span className="card-shape-1 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Advisory and Consulting</p>
+                                <h3 className="text-2xl font-medium z-10">Custom Software Development</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -83,12 +54,12 @@ export default function OfferCards() {
                                     <span className="card-shape-2 card-bg-2"></span>
                                     <span className="card-shape-2 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">User Experience Development</p>
+                                <h3 className="text-2xl font-medium z-10">Mobile Application Development</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                        <div className="service-offer-card image-card">
-                            <Image src='/assets/service-detail/technology/technology4.webp' 
+                            <div className="service-offer-card image-card">
+                                <Image src='/assets/service-detail/technology/technology4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -106,7 +77,7 @@ export default function OfferCards() {
                                     <span className="card-shape-3 card-bg-2"></span>
                                     <span className="card-shape-3 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Brand & content strategy</p>
+                                <h3 className="text-2xl font-medium z-10">Web Application Development</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -129,7 +100,7 @@ export default function OfferCards() {
                                     <span className="card-shape-4 card-bg-2"></span>
                                     <span className="card-shape-4 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Personal design & customer segmentationg</p>
+                                <h3 className="text-2xl font-medium z-10">E-commerce Solutions</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -140,7 +111,7 @@ export default function OfferCards() {
                                     <span className="card-shape-5 card-bg-2"></span>
                                     <span className="card-shape-5 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Capabilities Development</p>
+                                <h3 className="text-2xl font-medium z-10">DevOps Services</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -151,7 +122,29 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Marketing & Website Performance Audit</p>
+                                <h3 className="text-2xl font-medium z-10">Technology Consulting</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Quality Assurance and Testing</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Continuous Support and Maintenance</h3>
                             </div>
                         </div>
                     </div>

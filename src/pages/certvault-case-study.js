@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
+import PageLoader from "../components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,38 +40,6 @@ const handleHoverExit = (e) => {
 };
 
 export default function certvault() {
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -213,43 +182,25 @@ export default function certvault() {
                   "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-certvault.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Certvault Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              <span className="loader-font">Certvault</span>
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
 
+      <PageLoader text="Certvault CaseStudy" />
+
       <main>
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         <div className={styles.Main}>
            {/*Section 1  */}
@@ -273,7 +224,6 @@ export default function certvault() {
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
-                        loading="lazy"
                       />
                     </span>
                     </button>
@@ -300,14 +250,13 @@ export default function certvault() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/certvault/img1.webp"
+                  src="/assets/casestudies/certvault/certvault-casestudy-image-1.webp"
+                  alt="Certvault Casestudy Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
                   data-cursor-text="Certvault"
-                  alt="portfolio image"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -345,12 +294,12 @@ export default function certvault() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/certvault/img2.webp"
+                  src="/assets/casestudies/certvault/certvault-casestudy-image-2.webp"
+                  alt="Certvault Casestudy Image 2"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
-                  alt="portfolio image"
                   data-cursor-text="Certvault"
                   loading="lazy"
               />
@@ -388,11 +337,11 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <Image
-                        loading="lazy"
+                    loading="lazy"
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-3.webp"
+                    alt="Certvault Casestudy Image 3"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -406,8 +355,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-4.webp"
+                    alt="Certvault Casestudy Image 3"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -426,8 +375,8 @@ export default function certvault() {
                     width={1000}
                     height={1000}
                     loading="lazy"
-                    src="/assets/casestudies/certvault/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-5.webp"
+                    alt="Certvault Casestudy Image 4"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -441,8 +390,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-6.webp"
+                    alt="Certvault Casestudy Image 5"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -494,8 +443,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-7.webp"
+                    alt="Certvault Casestudy Image 7"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -510,9 +459,9 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web6.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-8.webp"
+                    alt="Certvault Casestudy Image 8"
                     loading="lazy"
-                    alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -529,9 +478,9 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web7.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-9.webp"
+                    alt="Certvault Casestudy Image 9"
                     loading="lazy"
-                    alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -545,8 +494,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-10.webp"
+                    alt="Certvault Casestudy Image 10"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -569,8 +518,9 @@ export default function certvault() {
             </div>
             <div className={`${styles.certvaultfontImagebox}  projectNoInvert`}>
               <img
-                src="/assets/casestudies/certvault/font-typo.webp"
-                alt="Fonts"
+                src="/assets/casestudies/certvault/certvault-casestudy-fonts.webp"
+                alt="Certvault Casestudy Fonts Image"
+                loading="lazy"
               />
             </div>
           </section>
@@ -662,14 +612,14 @@ export default function certvault() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/certvault/img3.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-11.webp"
+                    alt="Certvault Casestudy Image 11"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#F50D37"
-                    alt="portfolio image"
                     data-cursor-text="Certvault"
-                    loading="lazy"
                   />
                 </figure>
               </div>
@@ -712,11 +662,11 @@ export default function certvault() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/certvault/img4.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-12.webp"
+                    alt="Certvault Casestudy Image 12"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     loading="lazy"
@@ -750,9 +700,8 @@ export default function certvault() {
                     <Image  
                       height={100}
                       width={100}
-                      loading="lazy"
-                      alt="portfolio image" 
-                      src="/assets/casestudies/certvault/client.webp" />
+                      alt="client image" 
+                      src="/assets/casestudies/certvault/client-image.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

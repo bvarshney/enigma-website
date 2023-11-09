@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function blogbasicofseo() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -71,13 +43,13 @@ export default function blogbasicofseo() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -87,10 +59,11 @@ export default function blogbasicofseo() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -98,207 +71,67 @@ export default function blogbasicofseo() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
+}
 
   return (
     <>
-
-    <NextSeo
-      title="A Beginner's Guide to Search Engine Optimization | Enigma"
-      description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
-      canonical="https://weareenigma.com/basics-of-seo"
-      openGraph={{
-        url: "https://weareenigma.com/basics-of-seo",
-        title: "A Beginner's Guide to Search Engine Optimization | Enigma",
-        description:
-          "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
+      <NextSeo
+        title="A Beginner's Guide to Search Engine Optimization | Enigma"
+        description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
+        canonical="https://weareenigma.com/basics-of-seo"
+        openGraph={{
+          url: "https://weareenigma.com/basics-of-seo",
+          title: "A Beginner's Guide to Search Engine Optimization | Enigma",
+          description:
+            "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
-      }}
-    />    
+            {
+              url: "https://weareenigma.com/assets/featured-images/basics-of-seo.png",
+              width: 1200,
+              height: 630,
+              alt: "basics of seo",
+              type: "image/png",
+            },
+          ],
+          siteName: "Enigma Digital",
+        }}
+      />   
+    
+    <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-       <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
+    <Cursor isGelly={true} />
 
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>The Basics of SEO</h1>
-          </span>
-        </div>
-      </div>
+    <PageLoader text="The Basics of SEO" />
 
-      <SmoothScroll />
+    <Header />
 
-      <Cursor isGelly={true} />
+      <div className="b__dt-main">
 
-      <div>
-        <Header />
-      </div>
-
-      <div className="blog-detail-main-section">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             The Basics of SEO: A Comprehensive Beginner's Guide
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>03/01/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/the-basics-of-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
+        <div className="b__dt-main-blog" id="main-blog-container">
 
-                <FacebookShareButton
-                  url={"https://weareenigma.com/the-basics-of-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/the-basics-of-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/the-basics-of-seo"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"03/01/2023"} shareLink={"basics-of-seo"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p>
               Search Engine Optimization (SEO) is the process of improving a
               website's visibility and ranking on search engine results pages
               (SERPs). A well-optimized website attracts more organic traffic,
@@ -310,10 +143,18 @@ export default function blogbasicofseo() {
               approach, this guide is designed to be your guide, mentor and
               friend in your SEO journey
             </p>
-            <h3 className="bold-h" id="anim">
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/basic-seo/basics-of-seo-1.webp"
+                alt="Basics of Seo Image 1"
+              />
+            </div>
+
+            <h2>
               White-hat vs. Black-hat SEO
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               SEO techniques can be broadly categorized into two types:
               white-hat and black-hat. Whitehat SEO refers to ethical practices
               that adhere to search engine guidelines and focus on providing
@@ -329,20 +170,11 @@ export default function blogbasicofseo() {
               avoid negative consequences.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/basic-seo/1.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
+            
 
-            
-            
-            <h3 className="bold-h">
+            <h2>
               On-page SEO
-            </h3>
+            </h2>
 
             <p>
               On-page SEO involves optimizing the elements of a website that are
@@ -409,29 +241,22 @@ export default function blogbasicofseo() {
               user-friendly experience.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/basic-seo/2.webp"
-                  alt="Img"
-                />
-              </div>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/basic-seo/basics-of-seo-2.webp"
+                alt="Basics of Seo Image 2"
+              />
             </div>
-            
-            
 
-            <h3 className="bold-h">
+            <h2>
               Off-page SEO
-            </h3>
+            </h2>
 
             <p>
               Off-page SEO focuses on external factors that influence a
               website's ranking, such as backlinks, social media presence, and
               brand mentions. Key off-page strategies include:
             </p>
-
-            
-            
 
             <p>
               <span className="bold">Link building: </span>
@@ -443,8 +268,6 @@ export default function blogbasicofseo() {
               with high domain authority, as these carry more weight in search
               engine algorithms.
             </p>
-
-            
 
             <p>
               <span className="bold">Social media marketing: </span>
@@ -458,8 +281,6 @@ export default function blogbasicofseo() {
               sharing.
             </p>
 
-            
-
             <p>
               <span className="bold">Online reputation management: </span>
               Monitoring and addressing brand mentions and reviews to maintain a
@@ -468,8 +289,6 @@ export default function blogbasicofseo() {
               A strong online reputation can enhance trust and credibility,
               which can influence search engine rankings and user engagement.
             </p>
-
-            
 
             <p>
               <span className="bold">Content promotion and outreach: </span>
@@ -480,9 +299,7 @@ export default function blogbasicofseo() {
               forums, Q&A sites, and blog comments to share your expertise and
               drive traffic to your website.
             </p>
-
             
-
             <p>
               <span className="bold">Local SEO: </span>
               Optimizing your website for local search results can improve
@@ -492,20 +309,16 @@ export default function blogbasicofseo() {
               reviews.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/basic-seo/3.webp"
-                  alt="Img"
-                />
-              </div>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/basic-seo/basics-of-seo-3.webp"
+                alt="Basics of Seo Image 3"
+              />
             </div>
             
-            
-
-            <h3 className="bold-h">
+            <h2>
               Quality Content, Website Structure, and Promotion
-            </h3>
+            </h2>
 
             <p>
               Creating quality content is the foundation of any successful SEO
@@ -513,24 +326,23 @@ export default function blogbasicofseo() {
               and establishes your website as a reliable source of information.
               To optimize content for SEO, incorporate target keywords, maintain
               readability, and ensure topical relevance.
-              <br />
-              <br />A well-structured website facilitates easy navigation,
+            </p>
+            
+            <p>
+              A well-structured website facilitates easy navigation,
               improves user experience, and helps search engines index and rank
               your content. Focus on clear navigation menus, a logical URL
               structure, and a mobile-friendly design to optimize your site's
               structure.
             </p>
-
-            
-            
             <p>
               Promoting your site online is crucial for increasing visibility,
               attracting new visitors, and earning backlinks. Utilize social
               media platforms, guest blogging opportunities, and online
               communities to share your content and connect with your target
               audience.
-              <br />
-              <br />
+            </p>
+            <p>
               Understanding the basics of SEO is the first step towards
               improving your website's search engine rankings and visibility. By
               focusing on ethical practices and implementing effective on-page
@@ -541,88 +353,28 @@ export default function blogbasicofseo() {
               search engine algorithm updates to maintain a competitive edge and
               ensure long-term success in the ever-evolving digital landscape.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Website Seo
+                </h1>
+                <h1 className="blog__dt-tag">
+                    White Hat
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Black Hat
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Seo Spaming
+                </h1>
+            </div>
           </div>
         </div>
       </div>
-
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/basics-of-seo"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

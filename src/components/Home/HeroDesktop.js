@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import { Cursor } from "../../../cursor";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const HeroDesktop = () => {

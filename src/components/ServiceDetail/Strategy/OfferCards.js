@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import Image from "next/image";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import React, { useEffect } from "react";
+import React from "react";
+import styles from '@/styles/serviceDetail.module.css';
 
 // Hover on the link
 const handleHover2 = (e) => {
@@ -21,16 +21,14 @@ const handleHover2 = (e) => {
     });
   };  
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function OfferCards() {
 
     return (
-        <>
+            <>
                 <div className="service-offer-container" id="card-container">
                     <div className='service-offer'>
                         <div className='service-offer-top'>
-                             <h2 className='our-service-anim'  id="fadeUp">
+                             <h2 className={`${styles['sd__approach']} our-service-anim`} id="fadeUp">
                                 Our Services<span className='stroke'> Include</span>
                             </h2>
                         </div>
@@ -44,7 +42,7 @@ export default function OfferCards() {
                                     <span className="card-shape-1 card-bg-2"></span>
                                     <span className="card-shape-1 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Advisory and Consulting</p>
+                                <h3 className="text-2xl font-medium z-10">Digital Marketing Auditing and Consulting</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -55,12 +53,12 @@ export default function OfferCards() {
                                     <span className="card-shape-2 card-bg-2"></span>
                                     <span className="card-shape-2 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">User Experience Development</p>
+                                <h3 className="text-2xl font-medium z-10">User Experience Consultation</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                        <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/strategy/strategy4.webp' 
+                            <div className="service-offer-card image-card" id="fadeUp">
+                                <Image src='/assets/service-detail/strategy/strategy4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -78,7 +76,7 @@ export default function OfferCards() {
                                     <span className="card-shape-3 card-bg-2"></span>
                                     <span className="card-shape-3 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Brand & content strategy</p>
+                                <h3 className="text-2xl font-medium z-10">Conversion Rate Optimization</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -101,7 +99,7 @@ export default function OfferCards() {
                                     <span className="card-shape-4 card-bg-2"></span>
                                     <span className="card-shape-4 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Personal design & customer segmentationg</p>
+                                <h3 className="text-2xl font-medium z-10">Data Analytics and Insights</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -112,7 +110,7 @@ export default function OfferCards() {
                                     <span className="card-shape-5 card-bg-2"></span>
                                     <span className="card-shape-5 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Capabilities Development</p>
+                                <h3 className="text-2xl font-medium z-10">Brand & Content Strategy</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -123,7 +121,41 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <p className="text-2xl font-medium z-10">Digital Marketing & Website Performance Audit</p>
+                                <h3 className="text-2xl font-medium z-10">SEO and SMM Optimization</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card" id="fadeUp">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Social Media Strategy</h3>
+                            </div>
+                        </div>
+                        
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card" id="fadeUp">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Omni-Channel Strategy Development</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card" id="fadeUp">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Customer Journey Mapping</h3>
                             </div>
                         </div>
                     </div>

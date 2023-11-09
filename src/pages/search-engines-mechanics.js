@@ -1,44 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function blogSearchEngineWorks() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -67,13 +43,13 @@ export default function blogSearchEngineWorks() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -83,10 +59,11 @@ export default function blogSearchEngineWorks() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -94,75 +71,14 @@ export default function blogSearchEngineWorks() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-  // Parallax Image
-  if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -170,140 +86,50 @@ export default function blogSearchEngineWorks() {
             <NextSeo
               title="Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
               description="Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
-              canonical="https://www.weareenigma.com/how-search-engine-works"
+              canonical="https://weareenigma.com/search-engines-mechanics"
               openGraph={{
-                url: "https://www.weareenigma.com/how-search-engine-works",
+                url: "https://weareenigma.com/search-engines-mechanics",
                 title: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",
                 description:
                   "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "search engines mechanics",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/how-search-engine-works",
+                siteName: "Enigma Digital",
               }}
             />
-
-      <Head>
-        <title>Uncovering The Mechanics of How Search Engines Work - A Deep Dive</title>
-        <meta name="description" content="Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>How Search Engines Work</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Search Engines Mechanics" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             How Search Engines Work: A Comprehensive Guide
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>30/12/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/how-search-engine-works"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/how-search-engine-works"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/how-search-engine-works"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/how-search-engine-works"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"30/12/2022"} shareLink={"search-engines-mechanics"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+            <p>
               Search engines serve as the backbone of the internet, facilitating
               access to the vast amount of information available online. Their
               primary purpose is to provide users with the most relevant and
@@ -315,17 +141,17 @@ export default function blogSearchEngineWorks() {
               algorithms, and underscores the importance of understanding search
               engine behaviour for effective SEO.
             </p>
-            <h3 className="bold-h" id="anim">
+            <h2>
               Web Crawlers
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Web crawlers, also known as spiders or bots, are automated
               programs used by search engines to discover and navigate websites.
               These crawlers continuously scour the internet, following links
               from one page to another, and collecting information about each
               webpage they encounter.
             </p>
-            <p id="anim">
+            <p>
               Crawlers collect data such as the content, meta tags, internal and
               external links, and the overall structure of a website. This
               information is then sent back to the search engine's database,
@@ -343,20 +169,16 @@ export default function blogSearchEngineWorks() {
               sitemap.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
+            <div className="b__dt-img">
                 <img
-                  src="/assets/blogs/blog-detail/how-search-engine/1.webp"
-                  alt="Img"
+                  src="/assets/blogs/blog-detail/how-search-engine/how-search-engine-1.webp"
+                  alt="How Search Engines Work Blog Image 1"
                 />
-              </div>
             </div>
 
-            
-            
-            <h3 className="bold-h">
+            <h2>
               Indexing
-            </h3>
+            </h2>
 
             <p>
               Once web crawlers have collected the necessary data, search
@@ -365,8 +187,6 @@ export default function blogSearchEngineWorks() {
               way that makes it easily accessible and retrievable for search
               queries.
             </p>
-
-            
 
             <p>
               Search engines use algorithms to analyse the indexed data,
@@ -378,12 +198,9 @@ export default function blogSearchEngineWorks() {
               indexed and highly visible in search results.
             </p>
 
-            
-            
-
-            <h3 className="bold-h">
+            <h2>
               Ranking Algorithms
-            </h3>
+            </h2>
 
             <p>
               Search engines use complex ranking algorithms to determine the
@@ -393,9 +210,7 @@ export default function blogSearchEngineWorks() {
               given search query.
             </p>
 
-            
-
-            <h3 className="bold">Some key ranking factors include:</h3>
+            <h3>Some key ranking factors include:</h3>
 
             <p>
               <span className="bold">Relevance:</span> Search engines assess the
@@ -404,16 +219,12 @@ export default function blogSearchEngineWorks() {
               content quality.
             </p>
 
-            
-
             <p>
               <span className="bold">Authority: </span>
               Search engines evaluate the credibility and trustworthiness of a
               website based on factors such as the number and quality of
               backlinks, domain age, and brand recognition.
             </p>
-
-            
 
             <p>
               <span className="bold">User Experience: </span>
@@ -423,16 +234,12 @@ export default function blogSearchEngineWorks() {
               ranking websites.
             </p>
 
-            
-
             <p>
               <span className="bold">Personalisation: </span>
               Search engines may tailor search results based on a user's
               browsing history, location, and other personal preferences,
               providing more relevant and targeted results.
             </p>
-
-            
 
             <p>
               <span className="bold">Security: </span>
@@ -441,20 +248,16 @@ export default function blogSearchEngineWorks() {
               as they provide a safer browsing experience.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
+            <div className="b__dt-img">
                 <img
-                  src="/assets/blogs/blog-detail/how-search-engine/2.webp"
-                  alt="Img"
+                  src="/assets/blogs/blog-detail/how-search-engine/how-search-engine-2.webp"
+                  alt="How Search Engines Work Blog Image 2"
                 />
-              </div>
             </div>
             
-            
-
-            <h3 className="bold-h">
+            <h2>
               Understanding Search Engine Behaviour for SEO
-            </h3>
+            </h2>
 
             <p>
               Comprehending how search engines work is fundamental to devising
@@ -462,16 +265,16 @@ export default function blogSearchEngineWorks() {
               indexing, and ranking algorithms, website owners can make informed
               decisions on optimising their sites for higher visibility and
               rankings.
-              
-              <br />
+            </p>
+            <p>
               Effective SEO involves implementing best practices, such as
               creating high-quality content, optimising on-page elements (e.g.,
               title tags, meta descriptions, and header tags), and building a
               robust backlink profile. Additionally, addressing technical SEO
               aspects, such as site speed, mobile-friendliness, and structured
               data, further enhances a website's performance in search results.
-              
-              <br />
+            </p>
+            <p>
               Staying up-to-date with search engine algorithm updates and
               industry trends is also essential, as search engines continuously
               refine their ranking criteria to provide users with the best
@@ -479,8 +282,8 @@ export default function blogSearchEngineWorks() {
               tools like Google Search Console and Google Analytics can help
               identify areas for improvement and track the effectiveness of
               implemented SEO strategies.
-              
-              <br />
+            </p>
+            <p>
               To sum it up, understanding how search engines work lays the
               foundation for successful SEO efforts. By familiarising oneself
               with web crawlers, indexing, ranking algorithms, and search engine
@@ -491,88 +294,28 @@ export default function blogSearchEngineWorks() {
               stay ahead of the competition and thrive in the ever-evolving
               digital landscape.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Search Engines Mechanics
+                </h1>
+                <h1 className="blog__dt-tag">
+                    UI/UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Google Search Console
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Google Analytics
+                </h1>
+            </div>
           </div>
         </div>
       </div>
-
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/search-engines-mechanics"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -16,7 +15,8 @@ import VideoPlayer from "@/components/About/VideoPlayer";
 import AboutNextBox from "@/components/NextBoxes/AboutNextBox";
 import LogoCarousel from "@/components/About/LogoCarousel";
 import NewGifSection from "@/components/About/NewGifSection";
-import Modal from "../components/PopupForm/formModal";
+import Modal from "@/components/PopupForm/formModal";
+import PageLoader from "@/components/pageLoader";
 
 gsap.config({
   nullTargetWarn: false,
@@ -136,38 +136,6 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Text Reveal Animation For Each Whys US
   useEffect(() => {
     const totalSection = document.querySelectorAll(
@@ -236,8 +204,6 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
-  console.clear();
-
   return (
     <>
       <NextSeo
@@ -250,50 +216,23 @@ export default function about() {
           description:
             "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
             images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "https://weareenigma.com/who-we-are",
+              {
+                url: "https://weareenigma.com/assets/featured-images/about.png",
+                width: 1200,
+                height: 630,
+                alt: "About Us Feature Image",
+                type: "image/png",
+              },
+            ],
+          siteName: "Enigma Digital",
         }}
       />
-
-      <Head>
-        <title>About Enigma - UI/UX Design & Digital Marketing Agency India</title>
-        <meta
-          name="description"
-          content="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: 9999 }}>
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Who We Are</h1>
-          </span>
-        </div>
-        <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-      </div>
+      <PageLoader text="Who We Are" />
       
       <div className="about-header">
         <Header />
@@ -522,7 +461,9 @@ export default function about() {
               data-cursor-exclusion
             >
               <img
-              src="/assets/hero-footer/scroll.svg"/>
+                src="/assets/hero-footer/scroll.svg"
+                alt="scroll below icon"
+                />
               </div>
           </div>
         </section>

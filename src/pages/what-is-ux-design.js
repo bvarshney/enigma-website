@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function whatuxdesignblog() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -71,13 +43,13 @@ export default function whatuxdesignblog() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -87,10 +59,11 @@ export default function whatuxdesignblog() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -98,75 +71,14 @@ export default function whatuxdesignblog() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -182,135 +94,62 @@ export default function whatuxdesignblog() {
           "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/what-is-ux.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "What is UX Design",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
-        siteName: "Enigma Digital Website",
+        siteName: "Enigma Digital",
       }}
     />    
-
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>A Simple Guide to UX Design</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="A Simple Guide to UX Design" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             What is UX Design: A Simple and Informative Guide for the Curious
             Minds
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>01/11/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.vercel.app/what-is-ux-design"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"01/11/2022"} shareLink={"what-is-ux-design"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p className="b__dt-it">
               Welcome to the fascinating world of UX design. Grab your popcorn,
               and let's explore this exciting realm. Our goal is to make UX
               design as accessible and enjoyable as possible, so without further
               ado, let's dive right in!
-              
-              
             </p>
-            <h3 className="bold-h">
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-1.webp"
+                alt="What is ux design blog Image 1"
+              />
+            </div>
+
+            <h2>
               What is UX Design?
-            </h3>
-            <p id="anim">
+            </h2>
+
+            <p>
               So, what exactly is UX design, and why should you care? UX, or
               User Experience Design, is the art and science of crafting
               user-centred designs that make digital interactions efficient,
@@ -319,31 +158,18 @@ export default function whatuxdesignblog() {
               those desires. In other words, UX design is the superhero behind
               the scene that ensures your digital interactions are as delightful
               as an episode of Friends.
-              
-              
             </p>
-            <blockquote className="bold strong" id="anim">
-              UX design is all about understanding what users want and need,
-              just like how a skilled chef anticipates the taste buds of their
-              diners. It involves researching, planning, and designing various
-              elements to create a harmonious flow that makes using a website or
-              app as smooth as Michael Jackson's moonwalk.
-            </blockquote>
-            <br />
-            <span className="donald">
-              - Bhaskar Varshney, Founder, Enigma Digital
-            </span>
-            <br />
-            <br />
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/5.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
             
+            <div className="b__dt-quote">
+              <p className="bold">
+                UX design is all about understanding what users want and need,
+                just like how a skilled chef anticipates the taste buds of their
+                diners. It involves researching, planning, and designing various
+                elements to create a harmonious flow that makes using a website or
+                app as smooth as Michael Jackson's moonwalk.
+              </p>
+              <span className="quote-auth light">— Bhaskar Varshney, Founder, Enigma Digital</span>
+            </div>
             
             <p>
               UX design involves researching, planning, and designing various
@@ -354,7 +180,13 @@ export default function whatuxdesignblog() {
               recipe.
             </p>
             
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-2.webp"
+                alt="What is ux design blog Image 2"
+              />
+            </div>
+
             <p>
               <span className="bold">User Research:</span> Like Sherlock Holmes,
               UX designers are like skilled detectives, conducting research to
@@ -364,15 +196,6 @@ export default function whatuxdesignblog() {
               This process might involve interviews, surveys, and observing
               users in action
             </p>
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/2.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
             
             <p>
               <span className="bold">Information Architecture:</span> UX
@@ -382,7 +205,6 @@ export default function whatuxdesignblog() {
               find what they're looking for, so they don't feel lost or
               overwhelmed.
             </p>
-            
             
             <p>
               <span className="bold">Interaction Design: </span>
@@ -394,15 +216,13 @@ export default function whatuxdesignblog() {
               natural and responsive as having a conversation with Iron Man's
               J.A.R.V.I.S.
             </p>
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/3.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
             
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-3.webp"
+                alt="What is ux design blog Image 3"
+              />
+            </div>
             
             <p>
               <span className="bold">Usability Testing: </span>
@@ -413,7 +233,6 @@ export default function whatuxdesignblog() {
               big show.
             </p>
             
-            
             <p>
               <span className="bold">Visual Design: </span>
                Finally, UX designers collaborate with U.I. (User Interface)
@@ -421,15 +240,6 @@ export default function whatuxdesignblog() {
               functional and beautiful. They ensure that digital landscapes are
               aesthetically pleasing and align with the overall user experience.
             </p>
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/4.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
             
             <p>
               Now that we&#39;ve uncovered the essential elements of UX design,
@@ -439,8 +249,16 @@ export default function whatuxdesignblog() {
               usability testing, and visual design. Then, they put them together
               to create a coherent and delightful experience that users will
               appreciate and enjoy, just like a cult classic movie.
-              <br />
-              <br />
+            </p>
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-4.webp"
+                alt="What is ux design blog Image 4"
+              />
+            </div>
+
+            <p>
               In conclusion, UX design is the secret ingredient that makes
               digital products enjoyable and user-friendly. It&#39;s an
               essential part of creating memorable experiences that keep users
@@ -448,8 +266,6 @@ export default function whatuxdesignblog() {
               or an app, take a moment to appreciate the UX designers who&#39;ve
               worked tirelessly to make your journey smooth and enjoyable.
             </p>
-
-            
             
             <p>
               And that&#39;s a wrap! Now that you know about UX design, go forth
@@ -457,86 +273,28 @@ export default function whatuxdesignblog() {
               UX Design maestros at Enigma and help make the digital world a
               more delightful place for everyone. Happy designing!
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    What is UX
+                </h1>
+                <h1 className="blog__dt-tag">
+                    User Research
+                </h1>
+                <h1 className="blog__dt-tag">
+                    UI/UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                   What is UI
+                </h1>
+            </div>
           </div>
         </div>
       </div>
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/experience-design-vs-ux">
-                <img
-                  src="/assets/blogs/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is Experience Design, And How is it Different from User
-              Experience Design (UX)?
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/psychology-in-ux">
-                <img
-                  src="/assets/blogs/uxbrain.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Power of Psychology in UX Design: Unlocking the Human Element
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/evolution-of-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Evolution of UX Design: An Informative Expedition Through The
-              History
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/what-is-ux-design"} category={"design"} />
       {/* =================== Related Articles END =========================== */}
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

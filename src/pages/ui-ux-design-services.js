@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import Head from 'next/head';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import SplitType from 'split-type';
@@ -17,6 +16,9 @@ import NextBox from '@/components/ServiceDetail/Design/DesignNext';
 import OfferCards from '@/components/ServiceDetail/Design/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
+import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
+import PageLoader from "@/components/pageLoader";
+// import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,37 +47,32 @@ const handleHover = (e) => {
 
 export default function uiuxservices() {
 
-// Page Transitions
-useEffect(() => {
-  const loaderBars = document.querySelectorAll("#loaderbars");
-  const tl = gsap.timeline();
-
-  let ctx = gsap.context(() => {
-
-    tl.from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-      duration: 1,
-    }).to(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: -200,
-      skewY: 10,
-      duration: 1,
-    }).to(loaderBars, {
-      height: 0,
-      duration: 0.6,
-      delay: -0.5,
-      ease: "power2.easeIn",
-      stagger: 0.1,
-    }).to("#loader", {
-      y: "-1500",
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-  });
-  return () => ctx.revert();
-}, []);
+//   const blogFaqData = [
+//     {
+//         question: "What is a SAAS platform?",
+//         answer: "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality."
+//     },
+//     {
+//         question: "How does billing work?",
+//         answer: "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
+//     },
+//     {
+//         question: "Can I get a refund for my subscription?",
+//         answer: "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
+//     },
+//     {
+//         question: "How do I cancel my subscription?",
+//         answer: "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing."
+//     },
+//     {
+//         question: "Can I try this platform for free?",
+//         answer: "We offers a free trial of its  platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged."
+//     },
+//     {
+//         question: "How do I access documentation?",
+//         answer: "Documentation is available on the company's website and can be accessed by logging in to your account. The documentation provides detailed information on how to use the , as well as code examples and other resources."
+//     },
+// ]
 
 if (globalThis.innerWidth>1200) {
 // Hero Section Animation
@@ -153,27 +150,25 @@ useEffect(() => {
   });
 
 // Portfolio Section Animation
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#section-3",
-            start: "top top",
-            end: "bottom top",
-            scrub: 1,
-            ease: "easeInOut",
-            pin: true,
-            markers: false,
-          },
-        });
-        
-      tl.to("#service-port-main", {
-        duration: 10,
-        x: "-58.5%",
-        delay: 0.5,
-      });
+useEffect(() => {
+  let ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section-3",
+        start: "top top",
+        end: "2500 top",
+        scrub: 1,
+        pin: true,
+        markers: false,
+      },
+    });
+    
+  tl.to("#service-port-main", {
+    transform: "translateX(-66.8%)",
+    ease: "power1.out",
   });
-  return () => ctx.revert();
+});
+return () => ctx.revert();
 });
 
 
@@ -188,7 +183,7 @@ useEffect(() => {
             trigger: "#section-5",
             pin: "#approachImgCont",
             pinSpacing: true,
-            start: "top top",
+            start: "top -10%",
             end: "bottom bottom",
             markers: false
           }
@@ -281,15 +276,14 @@ useEffect(() => {
             "Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/service-ui-ux.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "UI/UX Design Services Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
         }}
       />
 
@@ -297,27 +291,9 @@ useEffect(() => {
 
 <Cursor isGelly={true} />
 
-      {/*Page Loader*/}
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
+      <PageLoader text="UI/UX Design Services" />
 
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>UI/UX Design</h1>
-          </span>
-        </div>
-      </div>
-      {/*Page Loader*/}
-
-    <div>
-        <Header />
-    </div>
+      <Header />
 
 {/* PopUp Modal Button */}
   <Modal />
@@ -335,7 +311,7 @@ useEffect(() => {
                 UI/UX
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                We seamlessly blend physical and digital to craft exceptional experiences that boost revenue, conversions, and loyalty through meticulous attention to detail.
+                We seamlessly blend physical and digital worlds to craft exceptional experiences that boost revenue, conversions and loyalty.
               </p>
             </div>
             <div>
@@ -352,20 +328,24 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                First impressions matter! The user interface (UI) and user experience (UX) make or break that crucial first interaction with your brand. Leveraging the power of modern tools and our unique approach, our UI/UX design masters solve complex design problems through user research, expert analysis, prototyping, and collaborative design with users & stakeholders. At Enigma, our UI/UX design masters craft stunning visual interfaces and smooth digital experiences so your customers keep coming back for more.
+                Leveraging the power of modern tools, understanding of human behavioural patterns and our unique approach, we transform your vision into visually appealing and functionally seamless digital experiences that users love to explore and engage with. By understanding the needs of your users and your business goals, we approach the design process with an emotionally balanced human-centric approach. This enables us to deliver simple, stunning and user centric designs that engage your customers and boost your conversion rates as a by-product.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                A poorly designed website or app can destroy your business. But with our human-centered design approach, we create intuitive digital experiences that delight users and drive results. Our secret sauce is combining empathy and data. We dive deep to understand your users' needs and pains. Then we analyze metrics to identify issues and opportunities. This informs designs that resonate emotionally and convert.
+                In a digital-first world, the quality of a user's interaction with your digital touchpoints is pivotal — often the linchpin between a thriving business and a faltering venture. Users demand not just functionality but an intuitive, seamless, and aesthetically pleasing journey through your website or application. Recognising the importance of these touchpoints, we at Enigma Digital champion a human-centred design philosophy that meticulously blends empathy with empirical data to craft digital experiences that captivate and convert. Our approach is thorough: we delve into the heart of user needs and frustrations, employing robust analytics to illuminate the path forward. This culminates into designs that not only meet but exceed user expectations, fostering engagement and driving tangible business results.
               </span>
             </p>
-            <span className={`${styles['btn-10']}`} 
-                  data-cursor-size="100px"
-                  data-cursor-exclusion>
-              kickstart your growth
-            </span>
+            <a 
+              href='/get-in-touch'
+              className={`${styles['btn-10']}`} 
+              data-cursor-size="100px"
+              data-cursor-exclusion>
+              <span>
+                Advance to Superior UX
+              </span>
+            </a>
           </div>
         </div>
           
@@ -388,9 +368,9 @@ useEffect(() => {
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Design
+                UI UX Design 
                 <br /> 
-                Portfolio
+                Success Stories 
             </h2>
           </div>
           
@@ -401,7 +381,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
+                    <Image src='/assets/service-detail/portfolio/patra.webp'
                         loading='lazy'
                         alt='portfolio image'
                         width={600}
@@ -416,7 +396,7 @@ useEffect(() => {
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  Kedarkala
+                  Patra CRD 
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -430,69 +410,11 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/wragby.webp'
+                    <Image src='/assets/service-detail/portfolio/quickx.webp'
                          loading='lazy'
                          width={600}
                         height={600}
                         alt='portfolio image'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
-                  Wragby
-                </h3>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#FF8395"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/dharan.webp'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        loading='lazy'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
-                  Dharan
-                </h3>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#0D0A29"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/quickx.webp'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        loading='lazy'
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
                     </Image>
@@ -510,6 +432,64 @@ useEffect(() => {
                 </p>
               </div>
             </div>
+
+            <div className={styles['service-portfolio-cards-item']}
+                 data-cursor-size="100px"
+                 data-cursor-color="#FF8395"
+                 data-cursor-text="View More" id='fadeIn'>
+              <div className={styles['service-card-top']}>
+                <div>
+                    <Image src='/assets/service-detail/portfolio/certvault.webp'
+                        alt='portfolio image'
+                        width={600}
+                        height={600}
+                        loading='lazy'
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <a className={styles['btn-10']} href='#'>
+                  View CaseStudy
+                </a>
+              </div>
+              <div className={styles['service-card-bottom']}>
+                <h3 className='color-primary'>
+                  Certvault
+                </h3>
+                <p>
+                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles['service-portfolio-cards-item']}
+                 data-cursor-size="100px"
+                 data-cursor-color="#0D0A29"
+                 data-cursor-text="View More" id='fadeIn'>
+              <div className={styles['service-card-top']}>
+                <div>
+                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
+                        alt='portfolio image'
+                        width={600}
+                        height={600}
+                        loading='lazy'
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <a className={styles['btn-10']} href='#'>
+                  View CaseStudy
+                </a>
+              </div>
+              <div className={styles['service-card-bottom']}>
+                <h3 className='color-primary'>
+                  KedarKala
+                </h3>
+                <p>
+                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -519,33 +499,26 @@ useEffect(() => {
     <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-4'>
       <div className={styles['service-detail-process']}>
         <div className={styles['service-detail-process-left']}>
-          <h3 className='why-us-anim'>
-            Approach and
+          <h3 className={`${styles['sd__approach']} why-us-anim`}>
+            Our
             <br />
-            <span className='stroke'>Process</span>
+            <span className='stroke'>Approach</span>
           </h3>
         </div>
         <div className={styles['service-detail-process-right']}>
-          <h4 className='why-us-anim' data-jelly>
+          <p className={`${styles['mb-50']} why-us-anim`}   data-jelly>
             <span>
-              Understanding human behavior is key to great UX. Our secret weapon is neuroscience expertise. Unlike other agencies that claim to be experts in UX Design, our team includes in-house psychologists & neuro-scientists who apply the latest behavioral research to penetrate the user's mindset. This unlocks designs that resonates emotionally and triggers desired actions. Armed with these neurological insights, we create experiences with proven psychological pull. Users feel understood, empowered and engaged. Our unique neuro-informed design process yields:
+              Innovation fuels our creative process, as we harness cutting-edge tools and technologies to push the boundaries of design. We delve into the heart of user behaviour, leveraging extensive research to ensure our designs resonate deeply and deliver a personal touch. Our commitment to collaboration is unwavering, involving clients and stakeholders at every stage to align our creative vision with your business objectives. Through iterative prototyping and testing, we refine our designs to perfection, ensuring a seamless and intuitive user experience.
             </span>
-          </h4>
+          </p>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-                - Clean, intuitive interfaces that feel effortless to use
+              Quality is the cornerstone of our approach at Enigma Digital. We pride ourselves on delivering designs that are meticulously crafted and rigorously tested to meet the highest standards. Our holistic design solutions cover every touchpoint of the user's journey, ensuring a cohesive and impactful digital presence.
             </span>
+          </p>
+          <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-              - Smart UX that maps to users' mental models
-            </span>
-            <span>
-              - Pleasant aesthetics that fit brand and user sensibilities
-            </span>
-            <span>
-              - Micro-interactions that surprise and delight
-            </span>
-            <span>
-                - Aligning user needs and business goals for win-win experiences
+              Our team is dedicated to staying ahead of the curve, crafting experiences that are not only contemporary but also future-proof. Data is our compass & human psychology is our co-pilot in this creative journey, guiding our design decisions with actionable insights to enhance usability and conversion rates.
             </span>
           </p>
         </div>
@@ -554,6 +527,10 @@ useEffect(() => {
 
 {/* Section 5 Img And Cards */}
 <section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
+              <h3 className={`${styles['sd__approach']} why-us-anim`}>
+                The
+                <span className='stroke'> Process</span>
+              </h3>
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
@@ -594,27 +571,16 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>RESEARCH</h4>
+                    <h4 className='color-primary'>Discover</h4>
                     <p>
-                      (Building the understanding of your business as our own) - We begin at the most fundamental level. We conduct thorough research to gather information about your industry, your company and its products and services. We want to know everything that matters - your company’s vision, the product, its purpose, its U.S.P.s, your target audience and the business expectations.
+                      Our process begins with discovery, where we immerse ourselves in your industry, brand, and audience. We conduct market research, analyse your competitors, and identify your unique value proposition to ensure our designs align with your business goals and resonate with your target users.
                     </p>
                     </div>
 
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>DISCOVERY</h4>
-                    <p>(Understanding the goals & challenges) - We then sit with you for an extensive discovery session to understand your business goals, challenges and pain points you’re trying to solve through design. We’ll also look at the data that tells us which parts of your current interface are working and which are not. This will help us create a plan of action tailored to your needs.</p>
-                    </div>
-                </div>
-                <div className={`${styles['service-approach-text-container']} text-card`}
-                    data-cursor-size='100px'
-                    data-cursor-exclusion>
-                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>STORYBOARDS</h4>
-                    <p> (Customer Journey Mapping) - We develop ideas based on our findings in the research & discovery phase. We identify the core functionality of your product, define use cases and build storyboards for each use case.</p>
-                    </div>
-                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>WIRE-FRAMING & PROTOTYPING</h4>
-                    <p>(Designing the Interface) - We present design strategies that include various colour schemes, style tiles, collections of typography, navigation structure, & call to actions that convey your brand identity and message to your target audience.
+                    <h4 className='color-primary'>Empathize</h4>
+                    <p>
+                      Empathy is the heart of our design philosophy. We engage with real users to understand their needs, frustrations, and desires. Through user interviews, surveys, and persona development, we gain insights that inform every aspect of our design strategy.
                     </p>
                     </div>
                 </div>
@@ -622,12 +588,25 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>VISUAL/U.I. DESIGN</h4>
-                    <p>We map your audience’s online behaviour and digital touchpoints to define the consumer journey.</p>
+                    <h4 className='color-primary'>Sketch</h4>
+                    <p> With a solid understanding of the user and your business, we move to sketching and wireframing. This stage is all about rapid visualization of ideas, exploring different concepts, and laying the foundation for the user interface.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>REFINEMENT</h4>
-                    <p>(Usability Testing & User Feedback) - We conduct user-testing sessions and perform a detailed analysis on the pre-established KPIs to understand the areas of improvement and the aberration from the desirable effect on the target audience. We then analyse all the collected data and synthesise our findings into actionable design improvements to further enhance your product.</p>
+                    <h4 className='color-primary'>Iterate</h4>
+                    <p>Iteration is key to excellence. We refine our sketches into detailed prototypes, testing and tweaking as we go. User feedback is integral at this stage, ensuring our designs are not only aesthetically pleasing but also highly functional and user-friendly.
+                    </p>
+                    </div>
+                </div>
+                <div className={`${styles['service-approach-text-container']} text-card`}
+                    data-cursor-size='100px'
+                    data-cursor-exclusion>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h4 className='color-primary'>Generate</h4>
+                    <p>Once we've honed our designs through multiple iterations, we generate the final high-fidelity designs. This includes the creation of a cohesive visual language for your brand, from colour palettes and typography to interactive elements and animations.</p>
+                    </div>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h4 className='color-primary'>Nurture</h4>
+                    <p>The design journey doesn't end at launch. We continue to nurture and evolve the design based on user interaction data, A/B testing, and ongoing feedback. Our goal is to ensure your UI/UX not only stands the test of time but also adapts to the ever-changing digital landscape.</p>
                     </div>
                 </div>
                 </div>
@@ -638,6 +617,13 @@ useEffect(() => {
         <section className={`${styles['main-container']}`}>
           <OfferCards />
         </section>
+
+        {/* faq */}
+        {/* <Faq faqData={blogFaqData} /> */}
+
+        {/* ================================Related Blogs==================== */}
+        <ServiceBlogs category={"design"} />
+        {/* ================================Related Blogs==================== */}
 
         {/* ======================= Next Page Box ====================== */}
         <section className={styles['m-10-15']}>

@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function evolutionofdesign() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -71,13 +43,13 @@ export default function evolutionofdesign() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -87,10 +59,11 @@ export default function evolutionofdesign() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -98,75 +71,14 @@ export default function evolutionofdesign() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -182,159 +94,62 @@ export default function evolutionofdesign() {
           "A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/evolution-of-ux-design.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "evolution of ux design",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                ],
+          siteName: "Enigma Digital",
       }}
-    />    
-
-      <Head>
-        <title>
-          The Evolution of UX Design: An Informative Expedition Through The
-          History
-        </title>
-        <meta name="description" content="Welcome to a thrilling adventure through the history of UX design!
-              Fasten your seatbelts, and join us on this journey as we uncover
-              the origins of User Experience Design." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>The History & Evolution of UX</h1>
-          </span>
-        </div>
-      </div>
+    />   
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="The History & Evolution of UX" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+      
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
-            The Evolution of UX Design: An Informative Expedition Through The
+          The Evolution of UX Design: An Informative Expedition Through The
             History
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>11/11/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-evolution-of-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-evolution-of-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-evolution-of-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-evolution-of-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"11/11/2022"} shareLink={"evolution-of-ux-design"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+            <p className="b__dt-it">
               Welcome to a thrilling adventure through the history of UX design!
               Fasten your seatbelts, and join us on this journey as we uncover
               the origins of User Experience Design. From its humble beginnings
               to its current status as a highly sought-after field, UX design
               has come a long way. So, grab your favourite beverage, sit back,
               and let's dive into the intriguing world of UX design.
-              <br />
-              <br />
             </p>
-            <h3 className="bold-h" id="anim">
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/evolution-of-ux-design/evolution-of-ux-design-1.webp"
+                alt="The Evolution Of UX Design Blog Image 1"
+              />
+            </div>
+
+            <h2>
               Once Upon a Time: The Birth of UX Design
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               The term "User Experience Design" was first coined by the
               legendary Donald Norman in the early 1990s. Norman, a cognitive
               scientist and cofounder of the Nielsen Norman Group, was an early
@@ -342,8 +157,8 @@ export default function evolutionofdesign() {
               importance of understanding users' needs and designing products
               that catered to them, leading to the development of the UX design
               discipline.
-              <br />
-              <br />
+              </p>
+              <p>
               While the term UX design might have originated in the 90s, the
               concept of designing for the user has been around for much longer.
               In fact, some might argue that the field's roots can be traced
@@ -352,20 +167,9 @@ export default function evolutionofdesign() {
               in mind.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/3.png"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            <br />
-            <br />
-            <h3 className="bold-h">
+            <h2>
               The First Steps: UX Design's Emergence as a Discipline
-            </h3>
+            </h2>
 
             <p>
               The field of UX design began to take shape in the 20th century, as
@@ -373,8 +177,8 @@ export default function evolutionofdesign() {
               people interacted with products. The invention of the telephone,
               for example, necessitated the need for a user-friendly interface,
               paving the way for early iterations of UX design principles.
-              <br />
-              <br />
+              </p>
+              <p>
               The rapid rise of the computer industry in the mid-20th century
               further fuelled the growth of UX design. As computers became more
               accessible to the general public, the demand for easy-to-use
@@ -383,11 +187,16 @@ export default function evolutionofdesign() {
               advocating for the prioritization of user needs in design.
             </p>
 
-            <br />
-            <br />
-            <h3 className="bold-h">
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/evolution-of-ux-design/evolution-of-ux-design-2.webp"
+                alt="The Evolution Of UX Design Blog Image 2"
+              />
+            </div>
+
+            <h2>
               The Digital Revolution: UX Design in the 21st Century
-            </h3>
+            </h2>
 
             <p>
               With the turn of the century came a surge in digital innovation,
@@ -395,30 +204,19 @@ export default function evolutionofdesign() {
               tech-savvy world. The rise of the internet and the proliferation
               of smartphones, tablets, and other connected devices have made UX
               design a critical component of digital success.
-              <br />
-              <br />
+              </p>
+              <p>
               Today, UX design is an integral part of the digital landscape,
               with UX agencies in India and around the world offering
               specialized services to help businesses optimize their digital
               presence. Among these agencies, Enigma is one of the best UX
               agency India has to offer can help you create a seamless user
               experience that keeps customers coming back for more.
-            </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            <br />
-            <br />
-
-            <h3 className="bold-h">
+            </p>        
+            
+            <h2>
               The Future: Where UX Design is Headed
-            </h3>
+            </h2>
 
             <p>
               As we look towards the future, UX design is poised to become even
@@ -426,18 +224,25 @@ export default function evolutionofdesign() {
               reality, and other emerging technologies will undoubtedly reshape
               the way we interact with digital products, and UX designers will
               be at the forefront of this transformation.
-              <br />
-              <br />
+              </p>
+              <p>
               As UX design continues to grow and evolve, new trends and best
               practices emerge, reflecting the changing needs and expectations
               of users. To stay competitive in the digital landscape, it's
               essential for businesses to keep up with these developments and
-              incorporate them into their digital strategy. Some of the current
-              and emerging trends in UX design include:
+              incorporate them into their digital strategy. 
             </p>
 
-            <br />
-            <br />
+            <h3>
+              Some of the current and emerging trends in UX design include:
+            </h3>
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/evolution-of-ux-design/evolution-of-ux-design-3.webp"
+                alt="The Evolution Of UX Design Blog Image 3"
+              />
+            </div>
 
             <p>
               <span className="bold">Personalization:</span> Like Sherlock
@@ -447,16 +252,7 @@ export default function evolutionofdesign() {
               preferences, designers can create experiences that are customized
               to individual users, making them feel valued and understood.
             </p>
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/4.png"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            <br />
-            <br />
+            
             <p>
               <span className="bold">Inclusive design: </span>UX UX design is
               increasingly focused on creating experiences that cater to diverse
@@ -464,8 +260,7 @@ export default function evolutionofdesign() {
               that digital products are accessible to as many people as
               possible, regardless of their abilities or limitations.
             </p>
-            <br />
-            <br />
+            
             <p>
               <span className="bold">Voice user interfaces (VUI): </span>
               With the rise of voice-activated technologies like Amazon Alexa
@@ -474,8 +269,7 @@ export default function evolutionofdesign() {
               will continue to grow in importance as more users embrace
               voice-controlled devices and applications.
             </p>
-            <br />
-            <br />
+            
             <p>
               <span className="bold">Dark mode: </span>
               As users become more conscious of their screen time and its
@@ -484,12 +278,9 @@ export default function evolutionofdesign() {
               designers can help reduce eye strain and improve the overall user
               experience.
             </p>
-            <br />
-            <br />
+
             <p>
-              <span className="bold">
-                Augmented reality (AR) and virtual reality (VR):{" "}
-              </span>
+              <span className="bold">Augmented reality (AR) and virtual reality (VR): </span>
               As AR and VR technologies become more accessible, UX designers
               will need to adapt their skills to create immersive experiences in
               these emerging environments. By incorporating AR and VR elements
@@ -497,16 +288,14 @@ export default function evolutionofdesign() {
               engaging experiences that blur the line between the digital and
               physical worlds.
             </p>
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/1.png"
-                  alt="Img"
-                />
-              </div>
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/evolution-of-ux-design/evolution-of-ux-design-4.webp"
+                alt="The Evolution Of UX Design Blog Image 4"
+              />
             </div>
-            <br />
-            <br />
+           
             <p>
               In the end, UX design's exciting history has led us to where we
               are today—a world where user experience is at the heart of digital
@@ -523,8 +312,8 @@ export default function evolutionofdesign() {
               entirely new, remember that the right UX agency can be your key to
               unlocking incredible user experiences and achieving digital
               success.
-              <br />
-              <br />
+              </p>
+              <p>
               By staying abreast of these trends and working closely with a
               skilled UX agency, you can ensure that your digital products
               remain relevant and engaging, meeting the ever-changing needs of
@@ -533,9 +322,6 @@ export default function evolutionofdesign() {
               pulse of UX design to maintain your competitive edge in the
               digital landscape.
             </p>
-
-            <br />
-            <br />
             <p>
               So, the next time you marvel at the intuitiveness of your
               favourite app or the ease with which you navigate a well-designed
@@ -543,90 +329,28 @@ export default function evolutionofdesign() {
               and the experts who've made it their mission to create delightful
               digital experiences.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    AR/VR
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Smart Devices
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Dark Mode
+                </h1>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/experience-design-vs-ux">
-                <img
-                  src="/assets/blogs/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is Experience Design, And How is it Different from User
-              Experience Design (UX)?
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/psychology-in-ux">
-                <img
-                  src="/assets/blogs/uxbrain.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Power of Psychology in UX Design: Unlocking the Human Element
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/evolution-of-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Evolution of UX Design: An Informative Expedition Through The
-              History
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/evolution-of-ux-design"} category={"design"} />
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

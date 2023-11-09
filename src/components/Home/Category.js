@@ -76,7 +76,7 @@ export default function Category() {
 
                       <button aria-label="No Work" className="plus-rotate">
                         <span className="minus-span"></span>
-                        <img className="plus-img" src="/assets/icons/plus.png" 
+                        <img loading="lazy" className="plus-img" src="/assets/icons/plus.png" 
                               width={40} height={40} alt="Plus Icon" />
                         <span className="bottom-span"></span>
                       </button>
@@ -96,7 +96,7 @@ export default function Category() {
                             Transform Your Business
                           </span>
                           <span className="cat-btn-arrow">
-                            <img width={15} height={15} src="/assets/icons/arrow.png" alt="Icon" />
+                            <img loading="lazy" width={15} height={15} src="/assets/icons/arrow.png" alt="Icon" />
                           </span>
                         </a>
                       </div>
@@ -117,7 +117,7 @@ export default function Category() {
                       </h2>
                       <button aria-label="No Work" className="plus-rotate">
                         <span className="minus-span"></span>
-                        <img className="plus-img" src="/assets/icons/plus.png" width={40} height={40} alt="Plus Icon" />
+                        <img className="plus-img" src="/assets/icons/plus.png" loading="lazy" width={40} height={40} alt="Plus Icon" />
                         <span className="bottom-span"></span>
                       </button>
 
@@ -136,7 +136,7 @@ export default function Category() {
                             Upgrade Your Experience
                           </span>
                           <span className="cat-btn-arrow">
-                          <img width={15} height={15} src="/assets/icons/arrow.png" alt="Icon" />
+                          <img width={15} height={15} src="/assets/icons/arrow.png" loading="lazy" alt="Icon" />
                           </span>
                         </a>
                       </div>
@@ -158,7 +158,7 @@ export default function Category() {
 
                       <button aria-label="No Work" className="plus-rotate">
                         <span className="minus-span"></span>
-                        <img className="plus-img" src="/assets/icons/plus.png" width={40} height={40} alt="Plus Icon" />
+                        <img className="plus-img" src="/assets/icons/plus.png" loading="lazy" width={40} height={40} alt="Plus Icon" />
                         <span className="bottom-span"></span>
                       </button>
 
@@ -177,7 +177,7 @@ export default function Category() {
                             Let’s Build Your Idea
                           </span>
                           <span className="cat-btn-arrow">
-                          <img width={15} height={15} src="/assets/icons/arrow.png" alt="Icon" />
+                          <img width={15} height={15} src="/assets/icons/arrow.png" loading="lazy" alt="Icon" />
                           </span>
                         </a>
                       </div>
@@ -195,7 +195,7 @@ export default function Category() {
 
                       <button aria-label="No Work" className="plus-rotate">
                         <span className="minus-span"></span>
-                        <img className="plus-img" src="/assets/icons/plus.png" width={40} height={40} alt="Plus Icon" />
+                        <img className="plus-img" src="/assets/icons/plus.png" width={40} height={40} loading="lazy" alt="Plus Icon" />
                         <span className="bottom-span"></span>
                       </button>
 
@@ -214,7 +214,7 @@ export default function Category() {
                             Ready? Let’s Get Moving
                           </span>
                           <span className="cat-btn-arrow">
-                          <img width={15} height={15} src="/assets/icons/arrow.png" alt="Icon" />
+                          <img width={15} height={15} src="/assets/icons/arrow.png" loading="lazy" alt="Icon" />
                           </span>
                         </a>
                       </div>

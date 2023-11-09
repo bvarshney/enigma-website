@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import styles from "@/styles/404.module.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -23,15 +22,14 @@ export default function NotFound() {
                   "404 Page not found please go back to home. This is Enigma Digital.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
+                    url: "https://weareenigma.com/assets/featured-images/index.png",
+                    width: 1200,
+                    height: 630,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

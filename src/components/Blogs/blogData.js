@@ -111,7 +111,7 @@ const Blogs = [
       name: "Marketing",
       category: "marketing",
       Link: "/benefits-of-organic-digital-marketing",
-      image: "/assets/blogs/featured/search-engines.webp",
+      image: "/assets/blogs/featured/organic-digital-marketing.webp",
       description: "Organic Digital Marketing: The Game Changer Your Business Needs",
     },
     {

@@ -1,4 +1,4 @@
-import CategoryPage from "../../components/Blogs/CategoryPage";
+import CategoryPage from "@/components/Blogs/CategoryPage";
 
 export async function getServerSideProps(context) {
  

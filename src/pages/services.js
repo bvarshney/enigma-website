@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Image from "next/image";
@@ -19,6 +18,7 @@ import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
+import PageLoader from "../components/pageLoader";
 
 gsap.config({
   nullTargetWarn: false,
@@ -148,38 +148,6 @@ export default function services() {
     return () => ctx.revert();
   }, []);
 
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Video Transition on Scroll
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -233,27 +201,6 @@ export default function services() {
   }, []);
 
   // Text Reveal Animation For Each
-  // useEffect(() => {
-  //   const totalSection = document.querySelectorAll(".strategy-box-anim");
-  //   totalSection.forEach(function (elem, index) {
-  //     const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
-  //     let textwords = text.words;
-  //     gsap.from(textwords, {
-  //       scrollTrigger: {
-  //         trigger: elem,
-  //         start: "top 85%",
-  //         markers: false,
-  //       },
-  //       duration: 0.5,
-  //       opacity: 0,
-  //       yPercent: 100,
-  //       ease: "Power3.out",
-  //       stagger: 0.02,
-  //     });
-  //   });
-  // });
-
-  // Text Reveal Animation For Each
   useEffect(() => {
     const totalSection = document.querySelectorAll(".top-box");
     totalSection.forEach(function (elem, index) {
@@ -270,7 +217,6 @@ export default function services() {
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
-        // stagger: 0.2,
       });
     });
   });
@@ -295,26 +241,6 @@ export default function services() {
     );
   });
 
-  // Strategy Image Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".service-box-image",
-        start: "top 85%",
-      },
-    });
-    tl.fromTo(
-      ".anim-img-service",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
-  });
-
-  console.clear();
 
   return (
     <>
@@ -328,43 +254,26 @@ export default function services() {
             "Award-Winning Web Design, UX Design & Digital Marketing Services",
           description:
             "Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow.",
-          images: [
-            {
-              url: "https://i.ibb.co/k0NMQw9/home.png",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+            images: [
+              {
+                url: "https://weareenigma.com/assets/featured-images/service.png",
+                width: 1200,
+                height: 630,
+                alt: "Services Feature Image",
+                type: "image/png",
+              },
+            ],
+          siteName: "Enigma Digital",
         }}
       />
-
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>What We Do</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text={"What We Do"} />
+
+      <Header />
 
       <main>
         <section
@@ -396,9 +305,9 @@ export default function services() {
                 <span className="w-e">We</span>
               </div>
 
-              <h3 className="para-hero" id="service-anim">
+              <p className="para-hero" id="service-anim">
                 We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </h3>
+              </p>
             </div>
 
             <h1
@@ -454,179 +363,6 @@ export default function services() {
           <StrategySection />
         </section>
 
-
-        {/* <div className="service-cap-section strategy-box-anim">
-          <div className="left-box" data-jelly>
-            <h2 className="sub-text ser-text-head-anim">
-              <span>
-                Here's how we help you
-                <br /> grow.
-              </span>
-            </h2>
-          </div>
-          <div className="right-box">
-            <div className="right-sub-content strategy-box-anim">
-              <h1 className="ser-text-head-anim">Our Capabilities</h1>
-              <h4 data-jelly className="ser-text-head-anim">
-                <span>
-                  We create evergreen brands that are highly effective at
-                  boosting revenue, increasing brand equity, and improving ROI.
-                  Our big picture approach powers your entire business, not just
-                  the marketing department.
-                </span>
-              </h4>
-            </div>
-          </div>
-        </div> */}
-
-
-        {/* Strategy Box 1  */}
-        {/* <div className="strategy-box strategy-box-anim">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#2b8c87"
-          >
-            <h1 className="ser-text-head-anim">Strategy</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                Digital Advisory and Consulting, Integrated Digital Marketing
-                Plan (D.M.P.), User Experience Development, Customer Experience
-                Strategy, Consumer Research, Insights & Target Market Analysis,
-                Digital Capabilities Development, Persona Design & Customer
-                Segmentation, Competitive Analysis & Industry Insights, Brand &
-                Content Strategy, Digital Marketing and Website Performance
-                Audit.
-              </span>
-            </h4>
-          </div>
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/strategy.png"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div> */}
-
-        {/* Strategy Box 1  END */}
-
-
-        {/* Strategy Box 2  */}
-        {/* <div className="strategy-box strategy-box-anim flex-reverse">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#000"
-          >
-            <h1 className="ser-text-head-anim">UI/UX Design</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                User Interface Design, User Experience Design, Responsive Web
-                Design, Mobile App Design, Digital Interface Design, Design
-                Systems Creation, Experience Mapping, User Flow Mapping,
-                Wireframing & Prototyping, Illustrations & Animations, Visual
-                Designs, and UI Kits.
-              </span>
-            </h4>
-          </div>
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/design.png"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div> */}
-        {/* Strategy Box 2  END */}
-
-
-        {/* Strategy Box 3  */}
-        {/* <div className="strategy-box strategy-box-anim">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#fcc63d"
-          >
-            <h1 className="ser-text-head-anim">Technology</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                Front-End Development, Native & Hybrid Mobile Application
-                Development, Progressive Web Applications, Database Design &
-                Management, Cloud Infrastructure Services, Testing & Automation
-                TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
-                Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
-                Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
-                Google Cloud.
-              </span>
-            </h4>
-  
-          </div>
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/tech.png"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div> */}
-        {/* Strategy Box 3  END */}
-
-        {/* Strategy Box 4  */}
-        {/* <div className="strategy-box strategy-box-anim flex-reverse">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#000"
-          >
-            <h1 className="ser-text-head-anim">Marketing</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                Social Media Management, Content Creation & Curation, Search
-                Engine Optimisation, Influencer Management, Auction Media
-                Management, Online Reputation Management, Media Planning &
-                Buying, Marketing Automation, Email Marketing, Conversion Rate
-                Optimisation, Website & SEO Analysis.
-              </span>
-            </h4>
-          </div>
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/market.png"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div> */}
-        {/* Strategy Box 4  END */}
         {/* =================== Services and Capabilities Section END ========================= */}
 
         {/* =================== Bottom Image Section ========================= */}

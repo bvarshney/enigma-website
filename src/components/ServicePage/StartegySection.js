@@ -11,7 +11,7 @@ gsap.config({
   });
   
   gsap.registerPlugin(ScrollTrigger);
-  5;
+
   // Hover on the link
   const handleHover = (e) => {
     gsap.to(e.target, {
@@ -32,7 +32,7 @@ gsap.config({
 
 export default function StrategySection() {
 
-      // Parallax Image
+  // Parallax Image
   useEffect(() => {
     gsap.utils.toArray(".image-container").forEach(function (container) {
       let image = container.querySelector("img");
@@ -150,7 +150,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/strategy.png"
+                src="/assets/services/strategy.webp"
                 width={500}
                 height={1000}
                 alt="services"
@@ -190,7 +190,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/design.png"
+                src="/assets/services/design.webp"
                 width={500}
                 height={1000}
                 alt="services"
@@ -231,7 +231,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/tech.png"
+                src="/assets/services/tech.webp"
                 width={500}
                 height={1000}
                 alt="services"
@@ -269,7 +269,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/market.png"
+                src="/assets/services/market.webp"
                 width={500}
                 height={1000}
                 alt="services"

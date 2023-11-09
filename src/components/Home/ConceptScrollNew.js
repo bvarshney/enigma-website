@@ -264,7 +264,7 @@ export default function ConceptScrollNew() {
                     <h2 className="t-d3-fluid cta">
                       <div className="cb-outro-header">
                         <Link
-                          href="/contact"
+                          href="/get-in-touch"
                           data-cursor-size="100px"
                           data-cursor-exclusion
                         >

@@ -1398,7 +1398,7 @@
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:480px) {
     .ham {
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;

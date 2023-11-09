@@ -1,48 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function powerofpsychology() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -71,13 +43,13 @@ export default function powerofpsychology() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -87,10 +59,11 @@ export default function powerofpsychology() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -98,236 +71,87 @@ export default function powerofpsychology() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
 
-    <NextSeo
-      title="Harnessing the Power of Psychology in UX Design"
-      description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
-      canonical="https://weareenigma.com/psychology-in-ux"
-      openGraph={{
-        url: "https://weareenigma.com/psychology-in-ux",
-        title: "Harnessing the Power of Psychology in UX Design",
-        description:
-          "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
-          images: [
+          <NextSeo
+            title="Harnessing the Power of Psychology in UX Design"
+            description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
+            canonical="https://weareenigma.com/psychology-in-ux"
+            openGraph={{
+              url: "https://weareenigma.com/psychology-in-ux",
+              title: "Harnessing the Power of Psychology in UX Design",
+              description:
+                "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
+                images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "psychology in ux",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
-      }}
-    />    
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Psychology in UX Design</h1>
-          </span>
-        </div>
-      </div>
+                ],
+                siteName: "Enigma Digital",
+              }}
+            />    
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Psychology in UX Design" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             The Power of Psychology in UX Design: Unlocking the Human Element
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>21/02/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.png"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.png"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.png"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={
-                    "https://weareenigma.vercel.app/the-power-of-psychology-in-ux-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.png"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"21/02/2023"} shareLink={"psychology-in-ux"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p >
               As a design thinking expert, one of the most fascinating aspects
               of UX design is the intricate relationship between psychology and
               user experience. When we delve into the human mind, we can unlock
               incredible insights that help us create more effective, intuitive,
               and enjoyable experiences for users.
-              <br />
-              <br />
+            </p>
+            
+            <p>
               In this comprehensive blog post, we'll explore the role of
               psychology in UX design and reveal how understanding the inner
               workings of the human brain can elevate your designs to new
               heights.
-              
-              
             </p>
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 The Connection Between Psychology and UX Design
-            </h3>
-            <div className="blog-img">
-              <div className="image-container blog-img-container" id="anim">
-                <img src="/assets/blogs/blog-detail/uxbrain.webp" alt="Img" />
-              </div>
+            </h2>
+            
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-1.webp" 
+                alt="Psychology In UX Design Blog Image 1" />
             </div>
             
             
@@ -341,12 +165,10 @@ export default function powerofpsychology() {
             </p>
             
             
-            <p>
-              <strong>
+            <h3>
                 Some key psychological concepts that can be applied to UX design
                 include:
-              </strong>
-            </p>
+            </h3>
             
             <p>
               <strong>Cognitive psychology:</strong> The study of mental
@@ -365,251 +187,264 @@ export default function powerofpsychology() {
             </p>
             
             
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 Cognitive Load and Information Processing
-            </h3>
-            <br />
+            </h2>
             <p>
               One of the most critical psychological principles to consider in
               UX design is cognitive load – the amount of mental effort required
               to process information. When a user interface is cluttered,
               confusing, or difficult to navigate, it can overwhelm users and
               impair their ability to complete tasks.
-              <br />
-              <br />
-              <strong>
-                To minimize cognitive load and create a more user-friendly
-                experience:
-              </strong>
-              <br />
-              <br />
-              Use clear, concise language and avoid jargon or overly technical
-              terms.
-              <br />
-              <br />
-              Break down complex tasks into simpler steps.
-              <br />
-              <br />
-              Organize information hierarchically, with the most critical
-              content at the top.
-              <br />
-              <br />
-              Leverage visual cues such as colour, contrast, and whitespace to
-              guide users' attention.
             </p>
             
-            
-            <h3 id="anim" 
-                className="bold-h">
-                The Power of Habit in User Behaviour
+            <h3>
+                To minimize cognitive load and create a more user-friendly
+                experience:
             </h3>
-            <br />
+
+            <ul className="b__dt-li">
+              <li>
+                Use clear, concise language and avoid jargon or overly technical
+                terms.
+              </li>
+              <li>
+                Break down complex tasks into simpler steps.
+              </li>
+              <li>
+                Organize information hierarchically, with the most critical
+                content at the top.
+              </li>
+              <li>
+                Leverage visual cues such as colour, contrast, and whitespace to
+                guide users' attention.
+              </li>
+            </ul>
+            
+            <h2>
+                The Power of Habit in User Behaviour
+            </h2>
             <p>
               Habits play a significant role in our daily lives, and they can
               also influence how users interact with digital products. By
               understanding users' habits, we can design interfaces that align
               with their expectations and make it easier for them to complete
               tasks.
-              <br />
-              <br />
-              <strong>Consider the following when designing for habit:</strong>
-              <br />
-              <br />
+            </p>
+            
+            <h3>
+              Consider the following when designing for habit:
+            </h3>
+            <p>
               <strong>Familiarity: </strong>
               Leverage familiar design patterns, icons, and layouts to create a
               sense of comfort and familiarity for users.
-              <br />
-              <br />
+            </p>
+            <p>
               <strong>Consistency: </strong>
               Maintain consistent design elements across your digital product to
               reduce the learning curve and help users build a mental model of
               how the interface works.
-              <br />
-              <br />
+            </p>
+            <p>
               <strong>Feedback loops: </strong>
               Provide users with clear feedback on their actions, helping them
               understand the consequences of their behaviour and reinforcing
               positive habits.
             </p>
 
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 The Role of Emotions in UX Design
-            </h3>
-            <br />
+            </h2>
             <p>
               Emotions have a powerful impact on our decision-making processes
               and overall user experience. A positive emotional experience can
               increase user engagement, satisfaction, and brand loyalty, while a
               negative experience can lead to frustration, abandonment, and
               negative perceptions of your brand.
-              <br />
-              <br />
-              <strong>To create emotionally engaging designs:</strong>
-              <br />
+            </p>
+            <h3>
+              To create emotionally engaging designs:
+            </h3>
+            <p>
               Utilize colour, typography, imagery, and micro-interactions to
               evoke the desired emotional response.
-              <br />
-              <br />
-              <strong>Design for delight: </strong>
+            </p>
+            
+            <h3>
+              Design for delight:
+            </h3>
+            <p>
               Surprise and delight users with unexpected elements, such as
               easter eggs or personalized content.
-              <br />
-              <br />
+            </p>
+            <p>
               Foster a sense of trust and security by using familiar design
               patterns and providing clear, transparent information.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
-              </div>
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-2.webp" 
+                alt="Psychology In UX Design Blog Image 2" />
             </div>
 
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 Social Influence and the Power of Persuasion
-            </h3>
-            <br />
+            </h2>
             <p>
               Social psychology can offer valuable insights into how users are
               influenced by others, which can be harnessed to create more
               persuasive and engaging designs.
-              <br />
-              <br />
-              <strong>Some key principles to consider include:</strong>
-              <br />
-              <br />
+            </p>
+            <h3>
+              Some key principles to consider include:
+            </h3>
+
+            <p>
               <strong>Social proof: </strong>
+              <br />
               People are more likely to engage with a product or service if they
               see others doing so. Leverage testimonials, ratings, and reviews
               to demonstrate social proof.
-              <br />
-              <br />
+            </p>
+
+            <p>
               <strong>Authority: </strong>
+              <br />
               Users are more likely to trust and follow the advice of experts or
               authority figures. Feature endorsements from industry leaders or
               showcase your expertise and credentials to build credibility.
-              <br />
-              <br />
+            </p>
+
+            <p>
               <strong>Reciprocity: </strong>
+              <br />
               People have a natural tendency to return favours or kindness.
               Offer users valuable content, exclusive discounts, or helpful
               tools to encourage engagement and loyalty.
-              <br />
-              <br />
+            </p>
+              
+            <p>
               <strong>Scarcity: </strong>
+              <br />
               Items or opportunities that are limited in availability are often
               perceived as more valuable. Create a sense of urgency by
               highlighting limited-time offers, exclusive content, or low stock
               levels.
             </p>
 
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 Decision-Making and Choice Architecture
-            </h3>
-            <br />
+            </h2>
             <p>
               Understanding the psychological principles behind decision-making
               can help us design interfaces that support users in making choices
               and completing tasks more efficiently.
-              <br />
-              <br />
-              <strong>Key concepts to consider include:</strong>
-              <br />
-              <br />
+            </p>
+            <h3>
+              Key concepts to consider include:
+            </h3>
+
+            <p>
               <strong>Hick's Law: </strong>
+              <br />
               The time it takes to make a decision increases as the number of
               options increases. Limit the number of choices presented to users
               to prevent decision paralysis and simplify the user experience.
-              <br />
-              <br />
+            </p>
+              
+            <p>
               <strong>Loss aversion: </strong>
+              <br />
               People are more motivated to avoid losses than to acquire gains.
               Frame choices and actions in terms of potential losses rather than
               gains to encourage users to take action.
-              <br />
-              <br />
+            </p>
+              
+            <p>
               <strong>Anchoring: </strong>
+              <br />
               People tend to rely heavily on the first piece of information they
               encounter when making decisions. Use anchoring strategically to
               guide users' decision-making processes, such as by highlighting
               the most popular or recommended options.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
-              </div>
-            </div>
-
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 The Psychology of Motivation and Engagement
-            </h3>
-            <br />
+            </h2>
             <p>
               Creating engaging user experiences requires an understanding of
               what motivates users and drives their behaviour.
-              <br />
-              <br />
-              <strong>
-                Some psychological principles to consider include:
-              </strong>
-              <br />
-              <br />
+            </p>
+              
+            <h3>
+              Some psychological principles to consider include:
+            </h3>
+
+            <p>
               <strong>Self-determination theory: </strong>
+              <br />
               People are motivated by the need for autonomy, competence, and
               relatedness. Design interfaces that empower users, help them feel
               capable, and foster a sense of connection with others.
-              <br />
-              <br />
+            </p>
+
+            <p>
               <strong>Flow theory: </strong>
+              <br />
               Users are most engaged when they are fully absorbed in a task that
               is challenging but achievable. Design tasks that balance
               difficulty and skill to promote flow and engagement.
-              <br />
-              <br />
+            </p>
+
+            <p>
               <strong>Gamification: </strong>
+              <br />
               Incorporate game-like elements, such as points, badges, and leader
               boards, to increase motivation and engagement.
             </p>
 
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 The Importance of Empathy in UX Design
-            </h3>
-            <br />
+            </h2>
             <p>
               Empathy – the ability to understand and share the feelings of
               others – is a crucial skill for UX designers. By putting ourselves
               in users' shoes, we can better anticipate their needs,
               preferences, and pain points, resulting in more user-centric
               designs.
-              <br />
-              <br />
-              <strong>To cultivate empathy:</strong>
-              <br />
-              <br />
-              Conduct user research, such as interviews and surveys, to gather
-              insights into users' needs, goals, and frustrations.
-              <br />
-              <br />
-              Create user personas to help you visualize and understand your
-              target audience.
-              <br />
-              <br />
-              Utilize empathy mapping to identify users' thoughts, feelings, and
-              actions at different stages of their journey.
             </p>
 
-            <h3 id="anim" 
-                className="bold-h">
-                Accessibility and Inclusive Design
+            <h3>
+              To cultivate empathy:
             </h3>
-            <br />
+
+            <ul className="b__dt-li">
+              <li>
+                Conduct user research, such as interviews and surveys, to gather
+                insights into users' needs, goals, and frustrations.
+              </li>
+              <li>
+                Create user personas to help you visualize and understand your
+                target audience.
+              </li>
+              <li>
+                Utilize empathy mapping to identify users' thoughts, feelings, and
+                actions at different stages of their journey.
+              </li>
+            </ul>
+
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-3.webp" 
+                alt="Psychology In UX Design Blog Image 3" />
+            </div>
+              
+            <h2>
+                Accessibility and Inclusive Design
+            </h2>
             <p>
               Inclusive design goes beyond just meeting accessibility
               guidelines; it involves creating user experiences that are
@@ -617,63 +452,63 @@ export default function powerofpsychology() {
               regardless of their abilities, age, or background. By considering
               the diverse needs of users, we can create more inclusive and
               equitable experiences.
-              <br />
-              <br />
-              <strong>To design for accessibility and inclusivity:</strong>
-              <br />
-              <br />
-              Follow accessibility best practices, such as providing alternative
-              text for images, ensuring sufficient color contrast, and using
-              clear, legible typography.
-              <br />
-              <br />
-              Design for multiple devices and screen sizes to accommodate
-              different user preferences and contexts.
-              <br />
-              <br />
-              Consider cultural differences and avoid potentially offensive or
-              exclusionary content.
             </p>
-
-            <h3 id="anim" 
-                className="bold-h">
-                The Ethics of Applying Psychology in UX Design
+            <h3>
+              To design for accessibility and inclusivity:
             </h3>
-            <br />
+              
+            <ul className="b__dt-li">
+              <li>
+                Follow accessibility best practices, such as providing alternative
+                text for images, ensuring sufficient color contrast, and using
+                clear, legible typography.
+              </li>
+              <li>
+                Design for multiple devices and screen sizes to accommodate
+                different user preferences and contexts.
+              </li>
+              <li>
+                Consider cultural differences and avoid potentially offensive or
+                exclusionary content.
+              </li>
+            </ul>          
+
+            <h2>
+                The Ethics of Applying Psychology in UX Design
+            </h2>
             <p>
               While psychology offers powerful tools for influencing user
               behaviour, it's essential to consider the ethical implications of
               applying these principles in UX design. Strive to create
               experiences that prioritize users' well-being and respect their
               autonomy and privacy.
-              <br />
-              <br />
-              <strong>To ensure ethical design:</strong>
-              <br />
-              <br />
-              Be transparent about your intentions and the data you collect from
-              users.
-              <br />
-              <br />
-              Avoid dark patterns that manipulate users into taking actions they
-              might not have intended.
-              <br />
-              <br />
-              Prioritize user needs and goals over short-term business
-              objectives.
             </p>
+            <h3>To ensure ethical design:</h3>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
+            <ul className="b__dt-li">
+              <li>
+                Be transparent about your intentions and the data you collect from
+                users.
+              </li>
+              <li>
+                Avoid dark patterns that manipulate users into taking actions they
+                might not have intended.
+              </li>
+              <li>
+                Prioritize user needs and goals over short-term business
+                objectives.
+              </li>       
+            </ul>       
+
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-4.webp" 
+                alt="Psychology In UX Design Blog Image 4" />
             </div>
 
-            <h3 id="anim" 
-                className="bold-h">
+            <h2>
                 Conclusion:
-            </h3>
-            <br />
+            </h2>
             <p>
               The intersection of psychology and UX design offers a wealth of
               opportunities for creating more effective, engaging, and
@@ -685,24 +520,24 @@ export default function powerofpsychology() {
               sense of ethics to ensure we're creating experiences that not only
               look great but also genuinely benefit users and make a positive
               impact on their lives.
-              <br />
-              <br />
+            </p>
+            <p>
               Remember that harnessing the power of psychology in UX design is
               an ongoing journey. As our understanding of the human mind
               continues to evolve, so too should our approach to creating user
               experiences that resonate with people on a deeper level. Stay
               curious, keep learning, and continue exploring new ways to
               integrate psychological insights into your design process.
-              <br />
-              <br />
+            </p>
+            <p>
               By embracing the principles of psychology, we can craft user
               experiences that are not only visually appealing but also
               intuitively designed to facilitate ease of use and foster
               emotional connections with users. In doing so, we elevate our
               designs from mere products to deeply impactful and meaningful
               experiences that truly resonate with the people who use them.
-              <br />
-              <br />
+            </p>
+            <p>
               So, go forth and immerse yourself in the fascinating world of
               psychology and UX design. The insights you gain will not only make
               you a more informed and well-rounded designer but will also
@@ -712,86 +547,28 @@ export default function powerofpsychology() {
               you can make in the ever-evolving landscape of user experience
               design.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                  Psychology and UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                  User Centric Experiences
+                </h1>
+                <h1 className="blog__dt-tag">
+                  Psychology
+                </h1>
+                <h1 className="blog__dt-tag">
+                  User Experience
+                </h1>
+            </div>
           </div>
         </div>
       </div>
 
-       {/* =================== Related Articles =========================== */}
-
-       <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/experience-design-vs-ux">
-                <img
-                  src="/assets/blogs/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is Experience Design, And How is it Different from User
-              Experience Design (UX)?
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/psychology-in-ux">
-                <img
-                  src="/assets/blogs/uxbrain.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Power of Psychology in UX Design: Unlocking the Human Element
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/evolution-of-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Evolution of UX Design: An Informative Expedition Through The
-              History
-            </h1>
-          </div>
-        </div>
-      </div>
+      {/* =================== Related Articles =========================== */}
+        <RelatedBlogs currentBlogLink={"/psychology-in-ux"} category={"design"} />
       {/* =================== Related Articles END =========================== */}
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

@@ -1,44 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function technicleSeo() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -67,13 +43,13 @@ export default function technicleSeo() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -83,10 +59,11 @@ export default function technicleSeo() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -96,70 +73,12 @@ export default function technicleSeo() {
         end: "bottom 80%",
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-  // Parallax Image
-  if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -175,133 +94,46 @@ export default function technicleSeo() {
                   "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/technical-seo-basics.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Technical SEO Basics",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Guide Technical SEO</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Beginner's Guide to Technical SEO" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
-            Beginner's Guide to Technical SEO
+            A Beginner's Guide to Technical SEO
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>31/01/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={
-                    "https://weareenigma.com/beginner-guide-to-technical-seo"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={
-                    "https://weareenigma.com/beginner-guide-to-technical-seo"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={
-                    "https://weareenigma.com/beginner-guide-to-technical-seo"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={
-                    "https://weareenigma.com/beginner-guide-to-technical-seo"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"31/01/2023"} shareLink={"technical-seo-basics"} />
           </div>
-          <div className="right-section" id="right-section">
-            <h3 className="bold-h blog-mt-0" id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <h2>
               What is Technical SEO?
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Technical SEO refers to the process of optimizing your website's
               infrastructure and underlying code, making it easier for search
               engines to crawl, index, and rank your content. It plays a vital
@@ -311,142 +143,118 @@ export default function technicleSeo() {
               addresses the website's foundational aspects.
             </p>
 
-            
+            <div className="b__dt-img">
+                <img
+                  src="/assets/blogs/blog-detail/technical-seo-basics/technical-seo-basics-1.webp"
+                  alt="Technical Seo Guide Blog Image 1"
+                />
+            </div>
 
-            <p id="anim">
+            <p>
               In this guide, we'll explore the various factors that contribute
               to technical SEO, discuss how to optimize your website for search
               engines, and introduce tools to monitor and analyse your website's
               performance.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h-u"
-              id="anim"
-            >
+            <h2 className="under">
               Key Technical Factors and Optimization Techniques
-            </h3>
+            </h2>
 
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h3>
               Site Speed:
             </h3>
-
-            <p id="anim">
+            <p>
               Website loading speed is a crucial factor for both user experience
               and search engine rankings. A faster website improves user
               engagement, reduces bounce rates, and is favoured by search
               engines like Google.
-              <br />
+            </p>
+
+            <p className="bold">
               To optimize site speed:
             </p>
 
-            <div id="anim">
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Compress images using tools like TinyPNG or ShortPixel.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Minify CSS, JavaScript, and HTML files to reduce file sizes.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Use a content delivery network (CDN) to serve your files from
                 servers closer to users.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Enable browser caching to reduce load times for repeat visitors.
-              </p>
-            </div>
-
-            
-            
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+              </li>
+            </ul>
+              
+            <h3>
               Mobile-Friendliness:
             </h3>
 
-            <p id="anim">
+            <p>
               With the increasing use of mobile devices, ensuring your website
               is mobile-friendly is essential. Google employs a mobile-first
               indexing approach, which means it predominantly uses the mobile
               version of a site's content for indexing and ranking.
-              
+            </p> 
+            
+            <p className="bold">
               To optimize for mobile-friendliness:
             </p>
 
-            <div id="anim">
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Use a responsive website design that adjusts to various screen
                 sizes.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Implement mobile-friendly navigation and user interface
                 elements.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Optimize images and media for faster loading on mobile devices.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Test your website's mobile-friendliness using Google's
                 Mobile-Friendly Test tool.
-              </p>
-            </div>
-
+              </li>
+            </ul>            
             
-            
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h3>
               Secure Connections (HTTPS):
             </h3>
 
-            <p id="anim">
+            <p>
               Implementing HTTPS (HyperText Transfer Protocol Secure) on your
               website encrypts data transferred between the user's browser and
               your website, ensuring a secure browsing experience. Google
               considers HTTPS a ranking factor, making it an essential element
               of technical SEO.
-              <br />
+            </p>
+            <p className="bold">
               To transition to HTTPS:
             </p>
 
-            <div id="anim">
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Obtain an SSL certificate from a certificate authority (CA).
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Install the SSL certificate on your web server.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Update your website's internal links and resources to HTTPS.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Set up 301 redirects from HTTP to HTTPS versions of your site.
-              </p>
-            </div>
+              </li>
+            </ul>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/the-technical-seo/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-            >
+            <h3>
               XML Sitemaps:
             </h3>
 
@@ -459,31 +267,26 @@ export default function technicleSeo() {
               To optimize XML sitemaps:
             </p>
 
-            <div>
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Create an XML sitemap using tools like Screaming Frog or Yoast
                 SEO.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Include only essential URLs, excluding low-quality or duplicate
                 pages.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Update your sitemap whenever new content is added or existing
                 content is updated.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Submit your XML sitemap to Google Search Console and Bing
                 Webmaster Tools.
-              </p>
-            </div>
+              </li>
+            </ul>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-            >
+            <h3>
               Robots.txt Files:
             </h3>
 
@@ -496,30 +299,25 @@ export default function technicleSeo() {
               To optimize robots.txt files:
             </p>
 
-            <div>
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Create a robots.txt file in your website's root directory.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Use the "Disallow" directive to block crawlers from accessing
                 specific pages or directories.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Test your robots.txt file using Google Search Console's Robots
                 Testing Tool.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Regularly review and update your robots.txt file to reflect
                 changes in your website's structure.
-              </p>
-            </div>
+              </li>
+            </ul>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-            >
+            <h3>
               Structured Data Markup:
             </h3>
 
@@ -533,44 +331,37 @@ export default function technicleSeo() {
               To optimize structured data markup:
             </p>
 
-            <div>
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Familiarize yourself with schema.org vocabulary and identify
                 relevant schema types for your content.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Use Google's Structured Data Markup Helper to generate the
                 appropriate markup for your content.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Add the generated markup to your website's HTML.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Test your structured data implementation using Google's Rich
                 Results Test tool.
-              </p>
-            </div>
+              </li>
+            </ul>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
+            <div className="b__dt-img">
                 <img
-                  src="/assets/blogs/blog-detail/the-technical-seo/2.jpg"
-                  alt="Img"
+                  src="/assets/blogs/blog-detail/technical-seo-basics/technical-seo-basics-2.webp"
+                  alt="Technical Seo Guide Blog Image 2"
                 />
-              </div>
             </div>
-            
-            
 
-            <h3
-              className="bold-h-u"
-              id="anim"
-            >
+            <h2
+              className="under">
               Monitoring and Analysing Website Performance
-            </h3>
+            </h2>
 
-            <h3
-              className="bold-h blog-mt-0">
+            <h3>
               Google Search Console:
             </h3>
 
@@ -584,31 +375,29 @@ export default function technicleSeo() {
               To use Google Search Console:
             </p>
 
-            <div>
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Sign up for a Google Search Console account and verify your
                 website ownership.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Submit your XML sitemap to ensure Google is aware of all your
                 site's URLs.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Monitor the "Performance" report to track your website's search
                 traffic and ranking positions.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Review the "Coverage" report to identify any indexing issues or
                 crawl errors that need to be addressed.
-              </p>
-            </div>
+              </li>
+            </ul>
 
             
             
 
-            <h3
-              className="bold-h blog-mt-0"
-            >
+            <h3>
               Google Analytics:
             </h3>
 
@@ -622,29 +411,26 @@ export default function technicleSeo() {
               To use Google Analytics:
             </p>
 
-            <div>
-              <p className="list-blog">
+            <ul className="b__dt-li">
+              <li>
                 Sign up for a Google Analytics account and install the tracking
                 code on your website.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Set up goals to track conversions and other important user
                 actions.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Set up goals to track conversions and other important user
                 actions.
-              </p>
-              <p className="list-blog">
+              </li>
+              <li>
                 Review the "Site Speed" report to identify any performance
                 issues that may be affecting user experience and search engine
                 rankings.
-              </p>
-            </div>
-
+              </li>
+            </ul>
             
-            
-
             <p>
               Technical SEO is a critical aspect of optimizing your website for
               search engines, ensuring it's easily discoverable and offers an
@@ -653,8 +439,6 @@ export default function technicleSeo() {
               data markup, you can significantly improve your website's search
               engine visibility.
             </p>
-
-            
 
             <p>
               Utilizing tools like Google Search Console and Google Analytics
@@ -667,85 +451,27 @@ export default function technicleSeo() {
               SEO best practices and trends, as search engine algorithms are
               constantly evolving.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Technical SEO
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Google Serach Console
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Page Speed
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Google Analytics
+                </h1>
+            </div>
           </div>
         </div>
       </div>
 
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/technical-seo-basics"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
 
       {/* ======================== Footer ====================== */}

@@ -243,7 +243,7 @@ const handleBudgetChange = (value) => {
         if (response.ok) {
           setMessageStatus('success');
           setTimeout(() => {
-            router.push('/thankyou');
+            router.push('/thank-you');
           }, 1000);
         } else {
           setMessageStatus('error');
@@ -282,9 +282,9 @@ const handleBudgetChange = (value) => {
     <div className="form-sections">
       
       <div className="popUp-form-step">
-        <h2 ref={inputRef}>
+        <h5 ref={inputRef}>
           <span className="color-primary">01</span> / 06
-        </h2>
+        </h5>
       </div>
   
       <div>
@@ -332,7 +332,7 @@ const handleBudgetChange = (value) => {
           <span>
             Next
           </span>
-          <img src="/assets/icons/next.png" />
+          <img src="/assets/icons/next.png" alt="next button icon"/>
           </button>
         </div>
       </div>
@@ -345,9 +345,9 @@ const handleBudgetChange = (value) => {
   {step === 2 && (
   <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h5>
         <span className="color-primary">02</span> / 06
-      </h2>
+      </h5>
     </div>
     
     <div className="step2">
@@ -435,9 +435,9 @@ const handleBudgetChange = (value) => {
   {step === 3 && (
   <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h5>
         <span className="color-primary">03</span> / 06
-      </h2>
+      </h5>
     </div>
     <div>
       <h1>Superb, <span className="color-primary">{firstName}!</span></h1>
@@ -520,9 +520,9 @@ const handleBudgetChange = (value) => {
 {step === 4 && (
   <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h5>
         <span className="color-primary">04</span> / 06
-      </h2>
+      </h5>
     </div>
 
     
@@ -586,9 +586,9 @@ const handleBudgetChange = (value) => {
 {step === 5 && (
   <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h5>
         <span className="color-primary">05</span> / 06
-      </h2>
+      </h5>
     </div>
 
   <div className="popUp-content-flex step5"> 
@@ -658,9 +658,9 @@ const handleBudgetChange = (value) => {
   {step === 6 && (
   <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h5>
         <span className="color-primary">06</span> / 06
-      </h2>
+      </h5>
     </div>
 
       <div className="popUp-content-flex step6">

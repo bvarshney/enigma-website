@@ -73,11 +73,12 @@ export default function Header() {
             src="/assets/header-logo/enigma-en-logo.svg"
             width={80}
             height={80}
-            alt="main-logo"
+            alt="website logo"
             className="main-logo svg-dark-mode"
             data-cursor-size="60px"
             data-cursor-exclusion
             id="main-logo"
+            priority={true}
           />
         </Link>
       </motion.div>
@@ -145,6 +146,7 @@ export default function Header() {
               width={25}
               height={25}
               className="gsap-dark-img"
+              priority={true}
             />
           </button>
         </motion.div>

@@ -23,8 +23,6 @@ const handleHoverExit = (e) => {
 const Menu = ({ state }) => {
   const router = useRouter();
   const menu = useRef();
-  const backgroundMenu = useRef();
-  const backgroundMenu2 = useRef();
   const revealMenu = useRef();
   const link1 = useRef();
   const link2 = useRef();
@@ -206,7 +204,7 @@ useEffect(() => {
           <div data-cursor-size="60px"
                 data-cursor-opaque>
             <Link href="/">
-              <img src="/assets/header-logo/enigma-en-logo.svg"/>
+              <img src="/assets/header-logo/enigma-en-logo.svg" alt="website logo"/>
             </Link>
           </div>
         </div>

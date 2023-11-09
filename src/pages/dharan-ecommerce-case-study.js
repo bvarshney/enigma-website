@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import Image from "next/image";
+import PageLoader from "../components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,39 +40,6 @@ const handleHoverExit = (e) => {
 };
 
 export default function dharan() {
-  
-  
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -195,38 +163,22 @@ export default function dharan() {
                   "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Dharan Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              <span className="loader-font">Dharan</span>
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
+
+      <PageLoader text="Dharan Case Study" />
 
       <main>
         <div>
@@ -280,13 +232,13 @@ export default function dharan() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/dharan/img1.webp"
+                  src="/assets/casestudies/dharan/dharan-casestudy-image-1.webp"
+                  alt="Dharan Casestudy Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#FF8395"
                   data-cursor-text="Dharan"
-                  alt="portfolio image"
                 />
               </div>
             </div>
@@ -335,14 +287,14 @@ export default function dharan() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/dharan/img2.webp"
+                  src="/assets/casestudies/dharan/dharan-casestudy-image-2.webp"
+                  alt="Dharan Casestudy Image 2"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
-                  loading="lazy"
                   data-cursor-size="100px"
                   data-cursor-color="#FF8395"
                   data-cursor-text="Dharan"
-                  alt="portfolio image"
               />
             </div>
           </section>
@@ -397,8 +349,8 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-3.webp"
+                    alt="Dharan Casestudy Image 3"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -414,8 +366,8 @@ export default function dharan() {
                     width={1000}
                     loading="lazy"
                     height={1000}
-                    src="/assets/casestudies/dharan/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-4.webp"
+                    alt="Dharan Casestudy Image 4"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -432,8 +384,8 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-5.webp"
+                    alt="Dharan Casestudy Image 5"
                     data-cursor-color="#FF8395"
                     loading="lazy"
                     data-cursor-text="Dharan"
@@ -449,8 +401,8 @@ export default function dharan() {
                     width={1000}
                     loading="lazy"
                     height={1000}
-                    src="/assets/casestudies/dharan/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-6.webp"
+                    alt="Dharan Casestudy Image 6"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -518,8 +470,8 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-7.webp"
+                    alt="Dharan Casestudy Image 7"
                     loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -534,8 +486,8 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web6.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-8.webp"
+                    alt="Dharan Casestudy Image 8"
                     loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -553,8 +505,8 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web7.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-9.webp"
+                    alt="Dharan Casestudy Image 9"
                     loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -570,8 +522,8 @@ export default function dharan() {
                     width={1000}
                     height={1000}
                     loading="lazy"
-                    src="/assets/casestudies/dharan/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-10.webp"
+                    alt="Dharan Casestudy Image 10"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -591,7 +543,7 @@ export default function dharan() {
               <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={styles.dharanfontImagebox}>
-              <img src="/assets/casestudies/dharan/font.png" alt="Fonts" />
+              <img src="/assets/casestudies/dharan/dharan-casestudy-font.webp" loading="lazy" alt="dharan casestudy font image" />
             </div>
           </section>
           {/* ====================== Fonts Section END ==================== */}
@@ -625,8 +577,9 @@ export default function dharan() {
               </div>
               <div className={styles.dharanmobileImg}>
                 <img
-                  src="/assets/casestudies/dharan/mobile-lady.webp"
-                  alt="Mobile"
+                  src="/assets/casestudies/dharan/dharan-casestudy-mobile-image.webp"
+                  alt="dharan casestudy mobile image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -733,9 +686,9 @@ export default function dharan() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                  alt="portfolio image"
                     loading="lazy"
-                    src="/assets/casestudies/dharan/img3.webp"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-11.webp"
+                    alt="Dharan Casestudy Image 11"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -801,11 +754,11 @@ export default function dharan() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/dharan/img4.webp"
+                    src="/assets/casestudies/dharan/dharan-casestudy-image-12.webp"
+                    alt="Dharan Casestudy Image 12"
                     className={styles.img}
                     id="img"
                     loading="lazy"
-                    alt="portfolio image"
                     data-cursor-size="100px"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
@@ -849,7 +802,7 @@ export default function dharan() {
                           height={100}
                           width={100}  
                           alt="client image"
-                          src="/assets/casestudies/dharan/dharanclient.png" />
+                          src="/assets/casestudies/dharan/dharan-client.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

@@ -40,17 +40,17 @@ export default function HomeVideoSection() {
             <span className="emoji-dark">🚀</span>
           </h1>
           <div className="cb-outro-header">
-            <Link href="/contact" className="para-anim-mobile">
+            <Link href="/get-in-touch" className="para-anim-mobile">
               Say, Hello! <span className="emoji-dark">👋</span>
             </Link>
           </div>
         </div>
 
         <div className="video-box">
-        <LazyVideo
-        src="/assets/reels/hero.webm"
-        title="official reel video"
-      />
+          <LazyVideo
+            src="/assets/reels/hero.webm"
+            title="official reel video"
+          />
         </div>
       </div>
     </>

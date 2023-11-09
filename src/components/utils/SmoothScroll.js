@@ -162,6 +162,61 @@ const SmoothScroll = ({ onScroll }) => {
     }
   }
 
+  class AnchorPlugin extends ScrollbarPlugin {
+    static pluginName = 'anchor';
+  
+    onHashChange = () => {
+      this.jumpToHash(window.location.hash);
+    };
+  
+    onClick = (event) => {
+      const { target } = event;
+  
+      if (target.tagName !== 'A') {
+        return;
+      }
+  
+      const hash = target.getAttribute('href');
+  
+      if (!hash || hash.charAt(0) !== '#') {
+        return;
+      }
+  
+      this.jumpToHash(hash);
+    };
+  
+    jumpToHash = (hash) => {
+      console.log('hash:', hash);
+      const { scrollbar } = this;
+  
+      if (!hash) {
+        return;
+      }
+  
+      console.log('scrollTop:', scrollbar.containerEl.scrollTop);
+  
+      // reset scrollTop
+      scrollbar.containerEl.scrollTop = 0;
+  
+      scrollbar.scrollIntoView(document.querySelector(hash));
+    };
+  
+    onInit() {
+      this.jumpToHash(window.location.hash);
+  
+      window.addEventListener('hashchange', this.onHashChange);
+  
+      this.scrollbar.contentEl.addEventListener('click', this.onClick);
+    }
+  
+    onDestory() {
+      window.removeEventListener('hashchange', this.onHashChange);
+  
+      this.scrollbar.contentEl.removeEventListener('click', this.onClick);
+    }
+  }
+  
+
   //$ Run on Page Load
   useEffect(() => {
     const view = document.body; //` Declare View Reference
@@ -182,10 +237,10 @@ const SmoothScroll = ({ onScroll }) => {
           // speed: 10,
         },
       },
-    }; //` Options
-
+    };
+ 
     //$ Initialize with View and Settings
-    Scrollbar.use(SmoothTouchendScrollPlugin, SmoothTouchScrollPlugin);
+    Scrollbar.use(SmoothTouchendScrollPlugin, SmoothTouchScrollPlugin, AnchorPlugin);
     const smoothscroll = Scrollbar.init(view, settings);
     smoothscrollRef.current = smoothscroll;
     const cursorRef = document.getElementById("c-cursor");
@@ -194,7 +249,6 @@ const SmoothScroll = ({ onScroll }) => {
     ScrollTrigger.defaults({ scroller: document.body });
 
     // Mobile Plugin
-
     //$ Jelly Motion Scroll for Mobiles
     //@ Jelly Scroll Class
     const JellyScroll = (options) => {
@@ -225,8 +279,8 @@ const SmoothScroll = ({ onScroll }) => {
       cursorRef.style.left = offset.x + "px";
     });
 
-    // Menu SVG Fixed
 
+    // Menu SVG Fixed
     const fixedElem = document.getElementById("header-fixed");
 
     smoothscroll.addListener(function (status) {
@@ -236,8 +290,8 @@ const SmoothScroll = ({ onScroll }) => {
       fixedElem.style.left = offset.x + "px";
     });
 
-    // Menu Wrapper
 
+    // Menu Wrapper
     const fixedMenu = document.querySelector(".nav");
 
     smoothscroll.addListener(function (status) {
@@ -269,17 +323,29 @@ const SmoothScroll = ({ onScroll }) => {
         fixedPopButton.style.left = offset.x + "px";
       });
     }
-        
-    // Loader
 
+    // Progress Bar
+    const progressBar = document.querySelector(".progress-bar-container");
+
+    if (progressBar) {
+      smoothscroll.addListener(function (status) {
+        var offset = status.offset;
+        progressBar.style.top = offset.y + "px";
+        progressBar.style.left = offset.x + "px";
+      });
+    }
+    
+    // Loader
     const fixedLoader = document.getElementById("loader");
 
+    if (fixedLoader) {
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
 
       fixedLoader.style.top = offset.y + "px";
       fixedLoader.style.left = offset.x + "px";
     });
+  }
 
     // LOGO Fixed
 

@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,38 +40,6 @@ const handleHoverExit = (e) => {
 };
 
 export default function quickx() {
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -212,39 +181,22 @@ export default function quickx() {
           "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "QuickX Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              <span className="loader-font">QuickX</span>
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
+
+      <PageLoader text="QuickX Crypto Case Study" />
 
       <main>
         <div>
@@ -264,7 +216,7 @@ export default function quickx() {
                   data-cursor-text="Visit!"
                   data-cursor-color="#0D0A29"
                 >
-                  <Link href="#" target="_blank" className={styles.Link}>
+                  <Link href="/quickx-crypto-case-study" className={styles.Link}>
                   <button aria-label="link button">
                     quickx.app
                     <span className={styles.linkSvg}>
@@ -299,11 +251,11 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/quickx/img1.png"
+                  src="/assets/casestudies/quickx/quickx-casestudy-image-1.webp"
+                  alt="QuickX Casestudy Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#0D0A29"
                   data-cursor-text="QuickX"
                 />
@@ -347,11 +299,12 @@ export default function quickx() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/quickx/img2.png"
+                src="/assets/casestudies/quickx/quickx-casestudy-image-2.webp"
+                alt="QuickX Casestudy Image 2"
+                loading="lazy"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
-                alt="portfolio image"
                 data-cursor-color="#0D0A29"
                 data-cursor-text="QuickX"
               />
@@ -417,8 +370,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web1.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-3.webp"
+                    alt="QuickX Casestudy Image 3"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -432,8 +386,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web2.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-4.webp"
+                    alt="QuickX Casestudy Image 4"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -450,8 +405,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web3.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-5.webp"
+                    alt="QuickX Casestudy Image 5"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -465,8 +421,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web4.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-6.webp"
+                    alt="QuickX Casestudy Image 6"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -541,8 +498,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web5.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-7.webp"
+                    alt="QuickX Casestudy Image 7"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -556,8 +514,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web6.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-8.webp"
+                    alt="QuickX Casestudy Image 8"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -574,8 +533,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web7.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-9.webp"
+                    alt="QuickX Casestudy Image 9"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -589,8 +549,9 @@ export default function quickx() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/quickx/web8.png"
-                    alt="Logo"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-10.webp"
+                    alt="QuickX Casestudy Image 10"
+                    loading="lazy"
                     data-cursor-color="#0D0A29"
                     data-cursor-text="QuickX"
                     data-cursor-size="120px"
@@ -611,18 +572,18 @@ export default function quickx() {
             </div>
             <div className={styles.quickxfontImagebox}>
               <img
-                src="/assets/casestudies/quickx/font.webp"
-                alt="Fonts"
+                src="/assets/casestudies/quickx/quickx-casestudy-font-image-1.webp"
+                alt="QuickX casestudy font image 1"
                 className={styles.desktopFont}
               />
               <img
-                src="/assets/casestudies/quickx/font1.webp"
-                alt="Fonts"
+                src="/assets/casestudies/quickx/quickx-casestudy-font-image-2.webp"
+                alt="QuickX casestudy font image 2"
                 className={styles.mobileFont}
               />
               <img
-                src="/assets/casestudies/quickx/font2.webp"
-                alt="Fonts"
+                src="/assets/casestudies/quickx/quickx-casestudy-font-image-3.webp"
+                alt="QuickX casestudy font image 3"
                 className={styles.mobileFont}
               />
             </div>
@@ -680,7 +641,7 @@ export default function quickx() {
                   autoPlay
                   loop
                   muted
-                  alt='quickx video'
+                  alt='quickx casestudy video'
                 />
               </div>
             </div>
@@ -720,12 +681,13 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/quickx/img3.png"
+                    src="/assets/casestudies/quickx/quickx-casestudy-image-11.webp"
+                    alt="QuickX Casestudy Image 11"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#0D0A29"
-                    alt="portfolio image"
                     data-cursor-text="QuickX"
                   />
               </div>
@@ -774,12 +736,13 @@ export default function quickx() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/quickx/img4.png"
+                  src="/assets/casestudies/quickx/quickx-casestudy-image-12.webp"
+                  alt="QuickX Casestudy Image 12"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#0D0A29"
-                  alt="portfolio image"
                   data-cursor-text="QuickX"
                 />
               </div>
@@ -816,7 +779,7 @@ export default function quickx() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/quickx/client.webp" alt="client image"></img>
+                    <img src="/assets/casestudies/quickx/quickx-client-image.webp" alt="QuickX client image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
