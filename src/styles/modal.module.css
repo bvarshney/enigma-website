@@ -1,0 +1,69 @@
+.modalWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 991;
+  animation: fadeInDown 0.8s;
+  animation: all 0.3s ease-in;
+}
+
+.modal video {
+  width: 100%;
+  height: 100%;
+  animation: fadeInDown 0.8s;
+  object-fit: cover;
+  border-radius: 2.5vw;
+  padding: 1vw;
+}
+
+.btnClose {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  border: none;
+  cursor: none !important;
+  background: transparent;
+}
+
+.btnClose span {
+  font-size: 1.2vw;
+  color: #000;
+  font-weight: 600;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .modalWrapper{
+    background: #00000095;
+    height: 100vh;
+  }
+
+  .modal{
+    height: 50%;
+  }
+}

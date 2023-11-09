@@ -1,0 +1,677 @@
+/*===========================Service Detail Page======================*/
+
+.main-container{
+    width: 85%;
+    margin: auto;
+  }
+  .main-container p{
+    font-family: 'Ageo';
+    text-align: justify;
+  }
+  .m-10{
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  .m-10-15{
+    margin: 5% 0 10%;
+  }
+  .m-15{
+    margin: 15% 0;
+  }
+  .mb-10{
+    margin-bottom: 10% !important;
+  }
+  .mt-10{
+    margin-top: 10%;
+  }
+
+
+  .service-detail-hero{
+    height: 85vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-detail-hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .service-detail-hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-detail-hero-top.design{
+    justify-content: center;
+  }
+
+  .service-detail-hero-content h1{
+      font-size: 11vw;
+      font-weight: 500;
+      color: var(--black1);
+      line-height: 1.2;
+  }
+  .hero-top-para {
+    width: 30vw;
+    font-size: 1.4vw;
+    font-weight: 500;
+    color: var(--black2);
+    letter-spacing: .4px;
+    line-height: 1.5;
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+.service-detail-hero-content.tech{
+  width: 100%;
+}
+  .service-detail-hero-top.tech {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .hero-top-para.tech{
+    display: none;
+  }
+
+  .hero-bottom.design{
+    right: 6vw
+  }
+
+  .contentContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10% 0;
+  }
+
+  .service-detail-content{
+    width: 65%;
+    text-align: left;
+    height: 100%;
+    font-family: 'Ageo';
+  }
+  .m-50{
+    margin: 50px 0;
+  }
+  
+  .service-detail-content h2{
+    font-size: 1.7vw;
+    letter-spacing: 0.5px;
+    color: var(--black1);
+    font-weight: 500;
+    text-align: justify;
+  }
+  .service-detail-content p{
+    font-size: 1.5vw;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-bottom: 15px;
+  }
+  .btn-10{
+      font-size: 1.2vw;
+      font-weight: 600;
+      padding: 0.7vw 2vw;
+      border-radius: 100px;
+      text-transform: uppercase;
+      border: 0.01vw solid var(--black1);
+      transition: all .3s ease-in;
+      font-family: Ageo;
+  }
+  
+  /* Service Portfolio Section */
+  .service-portfolio{
+    padding: 15px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .service-anim-portfolio{
+    overflow: hidden;
+    border-radius: 24px;
+    height: 100%;
+  }
+  .service-portfolio-main{
+    height: 100%;
+    width: fit-content;
+    display: inline-flex;
+    border-radius: 24px;
+    background: #EFEFEF;
+    overflow-x: hidden;
+  }
+  .service-portfolio-title{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .service-portfolio-title h2{
+    font-size: 8vw;
+    color: var(--black2);
+    font-weight: 500;
+    text-align: center;
+  }
+  .service-portfolio-cards{
+    display: flex;
+    padding: 15px 0;
+    height: 100%;
+  }
+  .service-portfolio-cards-item{
+    background: var(--white);
+    width: 48vw;
+    border-radius: 18px;
+    margin: 0 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw;
+  }
+  .service-card-top{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  .service-card-top div{
+    overflow: hidden;
+    border-radius: 18px;
+  }
+  
+  .service-card-top img{
+    width: 21vw;
+    height: auto;
+  }
+  .service-card-bottom h3{
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: var(--black-2);
+    padding-bottom: 25px;
+  }
+  .service-card-bottom p{
+  font-size: 1.4vw;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: .5px;
+  padding-bottom: 15px;
+  font-family: 'Ageo';
+  }
+  
+  /* Approach and Process */
+  .service-detail-process {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15% 0 0;
+    justify-content: space-between;
+  }
+  .service-detail-process-left {
+    width: 40%;
+  }
+  
+  .service-detail-process-right{
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  .sd__approach{
+    font-size: 4vw;
+    font-weight: 500;
+    color: var(--black1);
+    line-height: normal;
+  }
+
+  .sd__approach span{
+    letter-spacing: 2px;
+  }
+  
+  .service-detail-process-right h4{
+    font-size: 1.7vw;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: var(--black1);
+    font-family: 'Ageo';
+    text-align: justify;
+  }
+  
+  .service-detail-process-right p{
+    font-size: 1.5vw;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--black1);
+    font-family: 'Ageo';
+  }
+  
+
+  /* Service Approach Img and cards*/
+
+  .service-approach-main{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 10vh;
+  }
+  
+  .service-approach-left{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    width: 40%;
+  }
+
+  .service-approach-img-container{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .service-approach-img-container:nth-child(1) {
+    z-index: 3;
+  }
+  .service-approach-img-container:nth-child(2) {
+    z-index: 2;
+  }
+  .service-approach-img-container:nth-child(3) {
+    z-index: 1;
+  }
+
+  .service-approach-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .service-approach-right{
+    width: 50%;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .service-approach-text-container{
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-approach-text-box{
+    width: 40vw;
+    background: var(--white);
+    padding: 40px 40px;
+    border-radius: 24px;
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .dark-mode .service-approach-text-box {
+    background: var(--black2);
+  }
+  
+  .service-approach-text-box h4{
+    font-size: 2.2vw;
+    padding-bottom: 25px;
+    font-weight: 500;
+  }
+  .service-approach-text-box p{
+    font-size: 1.4vw;
+    color: var(--black-1);
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  /*================Media Queries for Service detail page============================*/
+  
+  @media screen and (max-width: 1536px) {
+    .service-offer-bottom{
+      gap: 30px;
+    }
+    .our-service-text{
+      height: 180px;
+    }
+  }
+
+@media screen and (max-width: 991px) {
+  
+  .service-detail-hero-top.design{
+    justify-content: unset;
+  }
+    .service-detail-hero{
+      height: 70vh;
+      margin-bottom: 20%;
+    }
+    .service-detail-hero-top{
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
+    .service-detail-hero-content{
+      width: 100%;
+      align-items: flex-start;
+    }
+    .service-detail-hero-content h1{
+      font-size: 16vw;
+      line-height: 1.1;
+      margin-left: 10px;
+    }
+    .hero-top-para{
+      position: absolute;
+      width: 85%;
+      font-size: 4vw;
+      line-height: 1.3;
+      left: 0;
+      margin-left: 10px;
+      padding-top: 70px;
+      top: 60%;
+    }
+
+    /* Section 2 */
+    .service-detail-content{
+      padding: 0;
+      height: auto;
+      width: 100%;
+    }
+    .service-detail-content h2{
+      font-size: 3.5vw;
+    }
+    .service-detail-content p{
+      font-size: 3vw;
+    }
+    .mb-10{
+        margin-bottom: 15%;
+    }
+    .btn-10{
+      font-size: 2.5vw;
+      padding: 2vw 5vw;
+    }
+
+    /* Service Portfolio */
+    .service-anim-portfolio{
+      margin-bottom: 15%;
+    }
+    .service-portfolio{
+      position: relative;
+      height: fit-content;
+      padding-top: 20vh;
+    }
+    .service-portfolio-main{
+      display: block;
+    }
+    .service-portfolio-title{
+      width: 100%;
+      padding: 10%;
+    }
+    .service-portfolio-title h2{
+      font-size: 15vw;
+      line-height: 1.3;
+    }
+  
+    .service-portfolio-cards{
+      display: block;
+      padding: 0;
+    }
+    .service-portfolio-cards-item{
+      width: auto;
+      margin: 20px;
+      padding: 3vw;
+    }
+    .service-card-top img{
+     width: 50vw;
+    }
+    .service-card-bottom h3{
+      font-size: 7vw;
+    }
+    .service-card-bottom p{
+      font-size: 3.2vw;
+    }
+
+     /* New Start*/
+    .service-detail-process{
+      height: auto;
+      display: block;
+      padding: 15% 0;
+    }
+    .service-detail-process-left, .service-detail-process-right{
+      width: 100%;
+      padding: 5% 0;
+    }
+    .sd__approach{
+      font-size: 8vw;
+      line-height: 1.2;
+    }
+    .service-detail-process-right h4{
+      font-size: 3.5vw;
+    }
+    .service-detail-process-right p{
+      font-size: 3vw;
+    }
+    .service-approach-main{
+      padding-bottom: 10vh;
+      height: auto;
+      display: block;
+    }
+    .service-approach-left {
+      height: 50vh;
+      width: auto;
+      border-radius: 24px;
+    }
+    .service-approach-img-container{
+        overflow: visible;
+    }
+
+    .service-approach-img-container:nth-child(1),
+    .service-approach-img-container:nth-child(3) {
+        display: none !important;
+    }
+    .service-approach-left img{
+        width: 100%;
+        height: 100%;
+    }
+    .service-approach-right{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    .service-approach-text-container{
+        height: 100%;
+        display: block;
+    }
+    .service-approach-text-box{
+      width: 100%;
+      margin: 30px 0;
+    }
+    .service-approach-text-box h4{
+      font-size: 4vw;
+    }
+    .service-approach-text-box p {
+      font-size: 3vw;
+      font-weight: 400;
+    }
+    .service-offer-bottom{
+      margin: 10% 0;
+      justify-content: space-around;
+    }
+    .service-offer-bottom > div{
+      width: 45%;
+      height: 180px;
+    }
+    .our-service-text p {
+      font-size: 2.7vw;
+    }
+    .our-service-img {
+      display: none;
+    }
+   }
+  
+   @media screen and (max-width: 768px) {
+    #header-fixed svg{
+      width: 110px;
+    }
+    #header-fixed button {
+      right: 10px;
+      top: 20px;
+  }
+    .text-container h1 {
+      font-size: 7vw !important;
+    }
+    .text-stroke-fill-ltr {
+      font-size: 5vw;
+    }
+    .menu-content{
+      height: 100vh;
+    }
+    .content-left{
+      margin-top: 20vw;
+    }
+    .content-right .content-title{
+      font-size: 3vw;
+    }
+    .content-right-body-more-column a{
+      font-size: 4vw;
+    }
+    .menu-num .cb-menu-nav-item a{
+      font-size: 4vw;
+    }
+   }
+  
+   @media screen and (max-width: 450px) {
+    #header-fixed svg {
+      width: 80px;
+  }
+  #header-fixed button {
+    right: 0px;
+    top: 0px;
+  }
+  .service-detail-hero{
+    height: 70vh;
+    margin-bottom: 30%;
+  }
+  .hero-top-para {
+    width: 80vw;
+    font-size: 5vw;
+    top: 50%;
+  }
+
+  .contentContainer{
+    margin: 15% 0;
+  }
+  .service-detail-content h2 {
+    font-size: 4.8vw;
+  }
+  .service-detail-content p {
+    font-size: 4.5vw;
+    padding-bottom: 0;
+    text-align: justify;
+  }
+  .btn-10 {
+    text-align: center;
+    font-size: 5vw;
+    width: 100%;
+    padding: 4vw 0vw;
+    display: block;
+  }
+  .service-portfolio{
+    padding: 0;
+    margin-top: 10vh;
+  }
+  .service-anim-portfolio{
+    border-radius: 0;
+  }
+  
+  .service-portfolio-main{
+    border-radius: 0;
+    padding-bottom: 50px;
+  }
+  .service-portfolio-cards-item{
+    padding: 4vw;
+    gap: 20px;
+  }
+  .service-card-top .btn-10{
+    font-size: 4vw;
+    width: auto;
+    padding: 3vw 7vw;
+  }
+  .service-card-top{
+    gap: 30px;
+    align-items: flex-start;
+  }
+  
+  .service-card-top img{
+    width: 100vw;
+  }
+  .service-card-bottom h3{
+    font-size: 9vw;
+    padding-bottom: 10px;
+  }
+  .service-card-bottom p {
+    font-size: 4.5vw;
+    text-align: justify;
+  }
+  .sd__approach, .service-offer-top h2 {
+    font-size: 11vw;
+  }
+  .service-detail-process-right h4{
+    font-size: 4.8vw;
+  }
+  .service-detail-process-right p{
+    font-size: 4.5vw;
+  }
+  .service-approach-text-box {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 18px;
+    padding: 30px 20px;
+  }
+  .service-approach-text-box h4 {
+    font-size: 6vw;
+  }
+  .service-approach-text-box p {
+    font-size: 4.5vw;
+    text-align: justify;
+  }
+  .service-offer-bottom > div {
+    width: 100%;
+    height: 120px;
+    padding: 40px;
+  }
+  .service-offer-bottom{
+    gap: 20px;
+  }
+  .our-service-text p {
+    font-size: 5vw;
+  }
+  .footer-copyright-label, .footer-location-label{
+    font-size: 13px;
+  }
+  .text-stroke-fill-ltr {
+    font-size: 12vw;
+  }
+  .content-right .content-title {
+    font-size: 4vw;
+  }
+  .menu-num .cb-menu-nav-item a {
+    font-size: 5vw;
+  }
+  .content-right-body-more-column a{
+    font-size: 5vw;
+  }
+   }
+  
+  /*================Dark Mode Strategy Page==================*/
+
+  /*===========================Service Detail Page======================*/

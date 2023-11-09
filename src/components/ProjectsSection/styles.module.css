@@ -1,0 +1,52 @@
+.projectSectionMain {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto 5vw;
+  }
+  
+  .mt20 {
+    margin-top: 10vw;
+  }
+  
+  .projectHeading {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 3rem;
+  }
+  
+  .projectFirstBox {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headContainer{
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+  }
+
+  .projectHeading h1 {
+    font-size: 9vw;
+    color: var(--black1);
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .paraProject {
+    font-size: 1.2vw;
+    max-width: 25vw;
+    font-weight: 500;
+    color: var(--black1);
+    text-align: justify;
+    font-family: 'Ageo';
+    line-height: 1.5;
+  }
+    
+  
