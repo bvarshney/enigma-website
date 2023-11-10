@@ -174,7 +174,6 @@ export default function gcm() {
             <NextSeo
               title="Garden City Mall - Phygital Shopping Experience Case Study | Enigma"
               description="Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma."
-              canonical="https://weareenigma.com/gcm-phygital-shopping-case-study"
               openGraph={{
                 url: "https://weareenigma.com/gcm-phygital-shopping-case-study",
                 title: "Garden City Mall - Phygital Shopping Experience Case Study | Enigma",

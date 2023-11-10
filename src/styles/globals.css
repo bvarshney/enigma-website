@@ -1214,7 +1214,7 @@ label:hover circle {
 }
 
 .text-stroke-fill-ltr {
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 500;
   -webkit-text-stroke: var(--white2);
   -webkit-text-stroke-width: 0;
@@ -6981,7 +6981,7 @@ a:hover {
   }
 
   .text-stroke-fill-ltr {
-    font-size: 8vw;
+    font-size: 7vw;
   }
 
   .content-heading-serial {
@@ -10201,7 +10201,7 @@ a:hover {
   height: 85vh;
 }
 .text-stroke-fill-ltr{
-  font-size: 11vw;
+  font-size: 10vw;
 }
 .content-right-body {
   width: 100%;

@@ -1,4 +1,4 @@
-const categoryData = [
+const CategoryData = [
     {
       slug: 'strategy',
       categoryName: 'Strategy',
@@ -36,4 +36,4 @@ const categoryData = [
     },
   ];
   
-  export default categoryData;
+  export default CategoryData;

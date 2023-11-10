@@ -267,7 +267,6 @@ useEffect(() => {
       <NextSeo
         title="Digital Strategy & Marketing Planning Services | Enigma"
         description="Digital Strategy and Marketing Planning services that help brands gain clarity, define measurable goals, craft strategies for growth and achieve digital success."
-        canonical="https://weareenigma.com/strategy-and-planning-services"
         openGraph={{
           url: "https://weareenigma.com/strategy-and-planning-services",
           title:"Digital Strategy & Marketing Planning Services | Enigma",

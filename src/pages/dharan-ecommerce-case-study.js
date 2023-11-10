@@ -155,7 +155,6 @@ export default function dharan() {
             <NextSeo
               title="Dharan E-Commerce Design & Development Case Study | Enigma"
               description="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
-              canonical="https://weareenigma.com/dharan-ecommerce-case-study"
               openGraph={{
                 url: "https://weareenigma.com/dharan-ecommerce-case-study",
                 title: "Dharan E-Commerce Design & Development Case Study | Enigma",

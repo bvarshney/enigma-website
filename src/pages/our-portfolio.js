@@ -37,7 +37,6 @@ export default function studio() {
     <NextSeo
       title="Enigma's Portfolio: Showcasing Digital Mastery"
       description="Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results."
-      canonical="https://weareenigma.com/our-portfolio"
       openGraph={{
         url: "https://weareenigma.com/our-portfolio",
         title: "Enigma's Portfolio: Showcasing Digital Mastery",

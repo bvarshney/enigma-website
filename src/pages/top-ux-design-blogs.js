@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Top 20 UX Design Blogs for Creative Insights"
       description="Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design."
-      canonical="https://weareenigma.com/top-ux-design-blogs"
       openGraph={{
         url: "https://weareenigma.com/top-ux-design-blogs",
         title: "Top 20 UX Design Blogs for Creative Insights",

@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
             <NextSeo
               title="Comprehensive Guide to Technical SEO Essentials"
               description="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
-              canonical="https://weareenigma.com/technical-seo-basics"
               openGraph={{
                 url: "https://weareenigma.com/technical-seo-basics",
                 title: "Comprehensive Guide to Technical SEO Essentials",

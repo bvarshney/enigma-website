@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="The Power & Benefits of Organic Digital Marketing"
       description="Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
-      canonical=" https://weareenigma.com/benefits-of-organic-digital-marketing"
       openGraph={{
         url: " https://weareenigma.com/benefits-of-organic-digital-marketing",
         title: "The Power & Benefits of Organic Digital Marketing",

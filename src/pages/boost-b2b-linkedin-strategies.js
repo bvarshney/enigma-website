@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Boost B2B LinkedIn Success: 6 Proven Strategies"
       description="Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing."
-      canonical="https://weareenigma.com/boost-b2b-linkedin-strategies"
       openGraph={{
         url: "https://weareenigma.com/boost-b2b-linkedin-strategies",
         title: "Boost B2B LinkedIn Success: 6 Proven Strategies",

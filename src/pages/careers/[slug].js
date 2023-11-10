@@ -1,58 +1,53 @@
-import { useRouter } from 'next/router';
-import jobs from "@/components/Careers/JobsData";
 import Image from 'next/image';
-import SmoothScroll from "@/components/utils/SmoothScroll";
-import { Cursor } from "../../../cursor/index";
-import "react-creative-cursor/dist/styles.css";
+import { useEffect } from 'react';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
+import jobs from "@/components/Careers/JobsData";
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer';
 import FooterMobile from '@/components/Mobile/FooterMobile';
 import JobApply from '../../components/Careers/JobApply';
-import { useEffect } from 'react';
-import { NextSeo } from 'next-seo';
-import Head from 'next/head';
+import SmoothScroll from "@/components/utils/SmoothScroll";
+import { Cursor } from "../../../cursor/index";
+import "react-creative-cursor/dist/styles.css";
 import PageLoader from '@/components/pageLoader';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function JobDetail() {  
-  const router = useRouter();
-  const { slug } = router.query;
+function JobDetail({ job }) {  
+  
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  // Find the job by its id or slug
-  const job = jobs.find(j => j.slug === slug);
+    const triggerElement = document.querySelector(".jd__s1"); 
+    const logoElement = document.querySelector(".jd__main .header-section .header-logo .main-logo");
+    const hamburgerElement = document.querySelectorAll(".jd__main .menu svg path");
 
+    ScrollTrigger.create({
+      trigger: triggerElement,
+      start: "100% top", 
+      onEnter: () => {
+        gsap.to(logoElement, { filter: "invert(0)", delay: 0.2, duration: 0.5, stagger: 0});
+        gsap.to(hamburgerElement, { stroke: "#000000",delay: -2, duration: 0, stagger: 0});
+      },
+      onLeaveBack: () => {
+        gsap.to(logoElement, { filter: "invert(1)", delay: 0.5, duration: 0.5, stagger: 0 });
+        gsap.to(hamburgerElement, { stroke: "#ffffff", delay: -2, duration: 0, stagger: 0 });
+      }
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
+  // Check if the job is defined (job data is now passed as a prop)
   if (!job) {
     return <div>Job not found</div>;
   }
-
-    useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-  
-      const triggerElement = document.querySelector(".jd__s1"); 
-      const logoElement = document.querySelector(".jd__main .header-section .header-logo .main-logo");
-      const hamburgerElement = document.querySelectorAll(".jd__main .menu svg path");
-  
-      ScrollTrigger.create({
-        trigger: triggerElement,
-        start: "100% top", 
-        onEnter: () => {
-          gsap.to(logoElement, { filter: "invert(0)", delay: 0.2, duration: 0.5, stagger: 0});
-          gsap.to(hamburgerElement, { stroke: "#000000",delay: -2, duration: 0, stagger: 0});
-        },
-        onLeaveBack: () => {
-          gsap.to(logoElement, { filter: "invert(1)", delay: 0.5, duration: 0.5, stagger: 0 });
-          gsap.to(hamburgerElement, { stroke: "#ffffff", delay: -2, duration: 0, stagger: 0 });
-        }
-      });
-  
-      return () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      };
-    }, []);
 
   const structuredData = {
     "@context": "https://schema.org/",
@@ -102,7 +97,6 @@ function JobDetail() {
       <NextSeo
         title={`${job.title} | Careers at Enigma Digital`}
         description={job.sDescription}
-        canonical={`https://weareenigma.com/job/${job.slug}`}
         openGraph={{
           url: `https://weareenigma.com/job/${job.slug}`,
           title: `${job.title} | Careers at Enigma Digital`,
@@ -254,3 +248,19 @@ function JobDetail() {
 }
 
 export default JobDetail;
+
+// Implement getServerSideProps to fetch job data based on slug
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
+
+  // Find the job by its slug
+  const job = jobs.find(j => j.slug === slug);
+
+  // If no job is found, return notFound: true
+  if (!job) {
+    return { notFound: true };
+  }
+
+  // Return the found job as a prop
+  return { props: { job } };
+}

@@ -85,7 +85,6 @@ if (globalThis.innerWidth>1024) {
       <NextSeo
         title="List of 30 Link Building Websites - SEO Guide"
         description="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
-        canonical="https://weareenigma.com/link-building-website-list"
         openGraph={{
           url: "https://weareenigma.com/link-building-website-list",
           title: "List of 30 Link Building Websites - SEO Guide",

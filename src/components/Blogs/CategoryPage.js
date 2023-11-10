@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import FooterMobile from '@/components/Mobile/FooterMobile';
 import Blogs from '@/components/Blogs/blogData';
 import Modal from '@/components/PopupForm/formModal';
-import categoryData from './categoryData';
+import CategoryData from './CategoryData';
 
 // Hover on the link
 const handleHover = (e) => {
@@ -33,7 +33,7 @@ const handleHoverExit = (e) => {
 
 const CategoryPage = ({ category }) => {
   // Find the category data based on the category slug
-  const categoryInfo = categoryData.find((data) => data.slug === category);
+  const categoryInfo = CategoryData.find((data) => data.slug === category);
 
   if (!categoryInfo) {
     // Handle the case where the category is not found
@@ -111,7 +111,6 @@ const CategoryPage = ({ category }) => {
       <NextSeo
         title={metaTitle}
         description={metaDescription}
-        canonical={`https://weareenigma.com/blog/${category.toLowerCase()}`}
         openGraph={{
           url: `https://weareenigma.com/blog/${category.toLowerCase()}`,
           title: metaTitle,
@@ -153,7 +152,7 @@ const CategoryPage = ({ category }) => {
                   <span>All</span>
                 </button>
               </Link>
-            {categoryData.map((data, index) => (
+            {CategoryData.map((data, index) => (
               <Link className="blog-cat-button" href={data.slug} key={index}>
                 <button className={data.slug === category ? 'active' : 'button--calypso'} id="anim">
                   <span>{data.categoryName}</span>

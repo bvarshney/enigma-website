@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Tracing the Evolution of UX Design - Past, Present & Future"
       description="A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences."
-      canonical="https://weareenigma.com/evolution-of-ux-design"
       openGraph={{
         url: "https://weareenigma.com/evolution-of-ux-design",
         title: "Tracing the Evolution of UX Design - Past, Present & Future",

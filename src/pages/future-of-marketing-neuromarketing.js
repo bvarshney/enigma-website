@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Bracing for the Future - How Marketing Will Evolve in 2030s"
       description="Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing."
-      canonical="https://weareenigma.com/future-of-marketing-neuromarketing"
       openGraph={{
         url: "https://weareenigma.com/future-of-marketing-neuromarketing",
         title: "Bracing for the Future - How Marketing Will Evolve in 2030s",

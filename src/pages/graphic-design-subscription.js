@@ -80,7 +80,6 @@ useEffect(() => {
             <NextSeo
               title="Graphic Design Services | Graphic Design Subscription"
               description="Graphic Design Services | Graphic Design Subscription"
-              canonical="https://weareenigma.com/graphic-design-subscription"
               openGraph={{
                 url: "https://weareenigma.com/graphic-design-subscription",
                 title: "Graphic Design Services | Graphic Design Subscription",

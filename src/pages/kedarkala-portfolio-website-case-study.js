@@ -154,7 +154,6 @@ export default function kedarkala() {
       <NextSeo
         title="Kedarkala Web Design, UX & Branding Case Study | Enigma"
         description="Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved."
-        canonical="https://weareenigma.com/kedarkala-portfolio-website-case-study"
         openGraph={{
           url: "https://weareenigma.com/kedarkala-portfolio-website-case-study",
           title:

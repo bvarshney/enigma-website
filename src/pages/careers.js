@@ -24,7 +24,6 @@ export default function Careers(){
             <NextSeo
               title="Enigma Digital | Careers | Find The Right Jobs"
               description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
-              canonical="https://weareenigma.com/careers"
               openGraph={{
                 url: "https://weareenigma.com/careers",
                 title: "Enigma Digital | Careers | Find The Right Jobs",
@@ -100,43 +99,43 @@ export default function Careers(){
                             UI/UX Design
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Business Development
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Account Management
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Frontend Development
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Search Engine Optimisation
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Content Writing
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
                             Social Media Marketing
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
-                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" src="/assets/icons/arrow-circle.svg"/>
+                            <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                     </div>
                 </section>
@@ -159,7 +158,7 @@ export default function Careers(){
                         <div className="w-full 2xl:w-3/5 grid-cols-1 grid md:grid-cols-2 gap-16">
                             <div>
                                 <div className="tw-no-invert bg-[#E7F2FF] rounded-md p-6 w-24 h-24 mb-8">
-                                    <img src="/assets/careers/listing/career-1.svg" className="w-full h-full"/>
+                                    <img alt="job listing image" src="/assets/careers/listing/career-1.svg" className="w-full h-full"/>
                                 </div>
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Innovative Culture:
@@ -171,7 +170,7 @@ export default function Careers(){
 
                             <div>
                                 <div className="tw-no-invert bg-[#F1F7E8] rounded-md p-6 w-24 h-24 mb-8">
-                                    <img src="/assets/careers/listing/career-2.svg" className="w-full h-full"/>
+                                    <img alt="job listing image" src="/assets/careers/listing/career-2.svg" className="w-full h-full"/>
                                 </div>
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Professional Growth:
@@ -183,7 +182,7 @@ export default function Careers(){
 
                             <div>
                                 <div className="tw-no-invert bg-[#EFF2F5] rounded-md p-5 w-24 h-24 mb-8">
-                                    <img src="/assets/careers/listing/career-3.svg" className="w-full h-full"/>
+                                    <img alt="job listing image" src="/assets/careers/listing/career-3.svg" className="w-full h-full"/>
                                 </div>
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Impactful Work:
@@ -195,7 +194,7 @@ export default function Careers(){
 
                             <div>
                                 <div className="tw-no-invert bg-[#FFEEED] rounded-md p-6 w-24 h-24 mb-8">
-                                    <img src="/assets/careers/listing/career-4.svg" className="w-full h-full"/>
+                                    <img alt="job listing image" src="/assets/careers/listing/career-4.svg" className="w-full h-full"/>
                                 </div>
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Collaborative Environment:
@@ -206,7 +205,7 @@ export default function Careers(){
                             </div>
                             <div>
                                 <div className="tw-no-invert bg-[#F1F3FF] rounded-md p-6 w-24 h-24 mb-8">
-                                    <img src="/assets/careers/listing/career-5.svg" className="w-full h-full"/>
+                                    <img alt="job listing image" src="/assets/careers/listing/career-5.svg" className="w-full h-full"/>
                                 </div>
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Work-Life Synergy:

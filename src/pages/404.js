@@ -14,7 +14,6 @@ export default function NotFound() {
       <NextSeo
               title="404 | Page Not Found"
               description="404 Page not found please go back to home. This is Enigma Digital."
-              canonical="https://weareenigma.com/404"
               openGraph={{
                 url: "https://weareenigma.com/404",
                 title: "404 | Page Not Found",

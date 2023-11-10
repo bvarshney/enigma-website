@@ -174,7 +174,6 @@ export default function certvault() {
             <NextSeo
               title="Certvault Design & Development Case Study | Enigma"
               description="Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform."
-              canonical="https://weareenigma.com/certvault-case-study"
               openGraph={{
                 url: "https://weareenigma.com/certvault-case-study",
                 title: "Certvault Design & Development Case Study | Enigma",

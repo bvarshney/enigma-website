@@ -174,7 +174,6 @@ export default function pdtl() {
     <NextSeo
       title="PDTL Ecommerce & Marketing Automation Case Study | Enigma"
       description="Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance."
-      canonical="https://weareenigma.com/pdtl-ecommerce-automation-case-study"
       openGraph={{
         url: "https://weareenigma.com/pdtl-ecommerce-automation-case-study",
         title: "PDTL Ecommerce & Marketing Automation Case Study | Enigma",

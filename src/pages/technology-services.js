@@ -267,7 +267,6 @@ useEffect(() => {
       <NextSeo
         title="Award-Winning Web Development and Technology Services | Enigma"
         description="Enigma offers front-end development, custom web and app development, DevOps, cloud engineering, and other technology services to build seamless digital experiences."
-        canonical="https://weareenigma.com/technology-services"
         openGraph={{
           url: "https://weareenigma.com/technology-services",
           title:

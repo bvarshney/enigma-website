@@ -209,7 +209,6 @@ export default function about() {
       <NextSeo
         title="About Enigma - UI/UX Design & Digital Marketing Agency India"
         description="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
-        canonical="https://weareenigma.com/who-we-are"
         openGraph={{
           url: "https://weareenigma.com/who-we-are",
           title: "About Enigma - UI/UX Design & Digital Marketing Agency India",

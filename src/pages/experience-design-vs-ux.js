@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Experience Design vs UX: Key Differences Explained"
       description="Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
-      canonical="https://weareenigma.com/experience-design-vs-ux"
       openGraph={{
         url: "https://weareenigma.com/experience-design-vs-ux",
         title: "Experience Design vs UX: Key Differences Explained",

@@ -88,7 +88,6 @@ if (globalThis.innerWidth>1024) {
               description="Your product ideas deserve the best possible user experience (UX)
               design, and to achieve that, you need to partner with the right UX
               agency."
-              canonical="https://weareenigma.com/how-to-choose-right-ux-agency"
               openGraph={{
                 url: "https://weareenigma.com/how-to-choose-right-ux-agency",
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",

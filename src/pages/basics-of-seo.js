@@ -85,7 +85,6 @@ if (globalThis.innerWidth>1024) {
       <NextSeo
         title="A Beginner's Guide to Search Engine Optimization | Enigma"
         description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
-        canonical="https://weareenigma.com/basics-of-seo"
         openGraph={{
           url: "https://weareenigma.com/basics-of-seo",
           title: "A Beginner's Guide to Search Engine Optimization | Enigma",

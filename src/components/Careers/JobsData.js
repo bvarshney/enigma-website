@@ -305,7 +305,7 @@ const jobs = [
         'Hybrid/Onsite',
         "3/6 months",
       ],
-      bgImage: "design.webp",
+      bgImage: "ui-ux-design.webp",
 
       sDescription: 'Kickstart your design career with an internship at Enigma Digital.',
       lDescription: 'As a Design Intern at Enigma Digital, you will have the unique opportunity to contribute to real-world projects that redefine the digital space. You will work closely with our team of experienced designers to learn the ropes of digital design, from conceptualization to execution. This internship is designed to offer you a hands-on experience in the industry while contributing to impactful projects.',

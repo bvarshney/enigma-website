@@ -136,7 +136,6 @@ export default function BlogsPage() {
             <NextSeo
               title="The Enigma Blog | Discover, Learn & Be Future Ready"
               description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
-              canonical="https://weareenigma.com/blog"
               openGraph={{
                 url: "https://weareenigma.com/blog",
                 title: "The Enigma Blog | Discover, Learn & Be Future Ready",

@@ -114,7 +114,6 @@ export default function contact() {
       <NextSeo
         title="We Elevate Your Digital Presence | Contact Enigma"
         description="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
-        canonical="https://weareenigma.com/get-in-touch"
         openGraph={{
           url: "https://weareenigma.com/get-in-touch",
           title:

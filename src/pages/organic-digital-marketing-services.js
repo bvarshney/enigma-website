@@ -267,7 +267,6 @@ useEffect(() => {
             <NextSeo
               title="Organic Digital Marketing Services To Grow Your Business"
               description="Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
-              canonical="https://weareenigma.com/organic-digital-marketing-services"
               openGraph={{
                 url: "https://weareenigma.com/organic-digital-marketing-services",
                 title: "Organic Digital Marketing Services To Grow Your Business",

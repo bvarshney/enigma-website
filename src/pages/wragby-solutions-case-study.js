@@ -174,7 +174,6 @@ export default function wragby() {
     <NextSeo
       title="Wragby Solutions: A Case Study in Digital Innovation"
       description="Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results."
-      canonical="https://weareenigma.com/wragby-solutions-case-study"
       openGraph={{
         url: "https://weareenigma.com/wragby-solutions-case-study",
         title: "Wragby Solutions: A Case Study in Digital Innovation",

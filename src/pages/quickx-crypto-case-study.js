@@ -173,7 +173,6 @@ export default function quickx() {
     <NextSeo
       title="QuickX - Branding & Mobile App Design Case Study | Enigma"
       description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step."
-      canonical="https://weareenigma.com/quickx-crypto-case-study"
       openGraph={{
         url: "https://weareenigma.com/quickx-crypto-case-study",
         title: "QuickX - Branding & Mobile App Design Case Study | Enigma",

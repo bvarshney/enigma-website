@@ -24,7 +24,7 @@ export default function FullTime() {
                                  className="content-between grid-rows-[auto auto auto auto] grid group font-body px-7 2xl:px-7 xl:px-5 py-10 shadow-3xl rounded-2xl"
                                  >
                                  <div className="mb-8 flex items-center justify-start gap-4 md:gap-6">
-                                    <img src={`/assets/careers/listing/${job.image}`} className="w-20 lg:w-24 h-20 lg:h-24"/>
+                                    <img alt="Job Post Image" src={`/assets/careers/listing/${job.image}`} className="w-20 lg:w-24 h-20 lg:h-24"/>
                                     <div>
                                         <h4 className="font-display 3xl:text-3xl text-2xl text-black font-medium w-full md:flex block items-center justify-between">{job.title}</h4>
                                     </div>

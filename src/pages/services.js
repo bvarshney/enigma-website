@@ -247,7 +247,6 @@ export default function services() {
       <NextSeo
         title="Award-Winning Web Design, UX Design & Digital Marketing Services"
         description="Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow."
-        canonical="https://weareenigma.com/services"
         openGraph={{
           url: "https://weareenigma.com/services",
           title:

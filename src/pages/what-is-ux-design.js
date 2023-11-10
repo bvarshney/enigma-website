@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="UX Design Explained: A Simple Guide for Everyone"
       description="Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
-      canonical="https://weareenigma.com/what-is-ux-design"
       openGraph={{
         url: "https://weareenigma.com/what-is-ux-design",
         title: "UX Design Explained: A Simple Guide for Everyone",

@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
             <NextSeo
               title="Marketing Psychology: Secrets to Captivating Audiences"
               description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior."
-              canonical="https://weareenigma.com/captivate-audiences-marketing-psychology"
               openGraph={{
                 url: "https://weareenigma.com/captivate-audiences-marketing-psychology",
                 title: "Marketing Psychology: Secrets to Captivating Audiences",

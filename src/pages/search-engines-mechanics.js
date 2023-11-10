@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
             <NextSeo
               title="Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
               description="Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
-              canonical="https://weareenigma.com/search-engines-mechanics"
               openGraph={{
                 url: "https://weareenigma.com/search-engines-mechanics",
                 title: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",

@@ -90,7 +90,7 @@ export default function FooterMobile() {
               </div>
               <div className="contact-content-socials-icon" id="say-anim-links">
                 <a target="blank" href="https://www.youtube.com/">
-                  <span>Youtube</span>
+                  <span data-text="Youtube">Youtube</span>
                 </a>
               </div>
             </div>

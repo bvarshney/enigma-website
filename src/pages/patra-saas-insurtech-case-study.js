@@ -174,7 +174,6 @@ export default function patra() {
     <NextSeo
       title="Catapulting Patra's CX  Through UX - Case Study | Enigma"
       description="Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients."
-      canonical="https://weareenigma.com/patra-saas-insurtech-case-study"
       openGraph={{
         url: "https://weareenigma.com/patra-saas-insurtech-case-study",
         title: "Catapulting Patra's CX  Through UX - Case Study | Enigma",
@@ -542,14 +541,14 @@ export default function patra() {
             </div>
             <div className={styles.fontImagebox}>
               <img
-                src="/assets/casestudies/patronum/fonts.webp"
-                alt="Patra Case study fonts Mobile Image"
+                src="/assets/casestudies/patronum/patronum-casestudy-font-desktop.webp"
+                alt="Patra Case study fonts Desktop Image"
                 loading="lazy"
                 className={styles.desktopFont}
                 id="fonts-dark-casestudy"
               />
               <img
-                src="/assets/casestudies/patronum/font-mobile.webp"
+                src="/assets/casestudies/patronum/patronum-casestudy-font-mobile.webp"
                 alt="Patra Case study fonts Mobile Image"
                 loading="lazy"
                 className={styles.mobileFont}

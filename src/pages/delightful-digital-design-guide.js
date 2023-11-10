@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
             <NextSeo
               title="Enigma's Guide to Delightful UX Design for Digital Platforms"
               description="Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design."
-              canonical="https://weareenigma.com/delightful-digital-design-guide"
               openGraph={{
                 url: "https://weareenigma.com/delightful-digital-design-guide",
                 title: "Enigma's Guide to Delightful UX Design for Digital Platforms",

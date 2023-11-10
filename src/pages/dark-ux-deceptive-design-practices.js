@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Psychology of Dark UX Patterns"
       description="Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences."
-      canonical="https://weareenigma.com/dark-ux-deceptive-design-practices"
       openGraph={{
         url: "https://weareenigma.com/dark-ux-deceptive-design-practices",
         title: "Psychology of Dark UX Patterns",

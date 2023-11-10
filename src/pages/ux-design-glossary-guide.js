@@ -87,7 +87,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="UX Design Glossary: Mastering UX Terms & Concepts"
       description="Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
-      canonical="https://weareenigma.com/ux-design-glossary-guide"
       openGraph={{
         url: "https://weareenigma.com/ux-design-glossary-guide",
         title: "UX Design Glossary: Mastering UX Terms & Concepts",

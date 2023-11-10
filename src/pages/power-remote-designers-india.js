@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Maximizing Remote Designers: Outsourcing to India"
       description="Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business"
-      canonical="https://weareenigma.com/power-remote-designers-india"
       openGraph={{
         url: "https://weareenigma.com/power-remote-designers-india",
         title: "Maximizing Remote Designers: Outsourcing to India",

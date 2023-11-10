@@ -86,7 +86,6 @@ if (globalThis.innerWidth>1024) {
     <NextSeo
       title="Cognitive Biases in E-commerce - A Marketer's Guide"
       description="Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate."
-      canonical="https://weareenigma.com/cognitive-biases-ecommerce"
       openGraph={{
         url: "https://weareenigma.com/cognitive-biases-ecommerce",
         title: "Cognitive Biases in E-commerce - A Marketer's Guide",

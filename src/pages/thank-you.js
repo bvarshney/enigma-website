@@ -64,7 +64,6 @@ const ThankYou = () => {
     <NextSeo
         title="Thank You! We'll Be in Touch Soon | Enigma"
         description="Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online."
-        canonical="https://weareenigma.com/thank-you"
         openGraph={{
           url: "https://weareenigma.com/thank-you",
           title: "Thank You! We'll Be in Touch Soon | Enigma",

@@ -174,7 +174,6 @@ export default function dmtca() {
             <NextSeo
               title="DMTCA - Branding, Web Design & Development Case Study | Enigma"
               description="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma."
-              canonical="https://weareenigma.com/dmtca-digital-branding-case-study"
               openGraph={{
                 url: "https://weareenigma.com/dmtca-digital-branding-case-study",
                 title: "DMTCA - Branding, Web Design & Development Case Study | Enigma",

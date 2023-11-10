@@ -267,7 +267,6 @@ useEffect(() => {
       <NextSeo
         title="Award-Winning UI/UX Design Services for Digital Excellence | Enigma"
         description="Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty."
-        canonical="https://weareenigma.com/ui-ux-design-services"
         openGraph={{
           url: "https://weareenigma.com/ui-ux-design-services",
           title:
