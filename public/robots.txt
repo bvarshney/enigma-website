@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://weareenigma.com
+
+# Sitemaps
+Sitemap: https://weareenigma.com/sitemap.xml
