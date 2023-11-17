@@ -43,14 +43,14 @@ export default function NotFound() {
                 },
                 {
                   name: "twitter:image",
-                  content: "https://weareenigma.com/assets/featured-images/thankyou.png"
+                  content: "https://weareenigma.com/assets/featured-images/404.png"
                 },
               ]}
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/404/" />
-        <link rel="alternate" href="https://weareenigma.com/404/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/404" />
+        <link rel="alternate" href="https://weareenigma.com/404" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -60,7 +60,7 @@ export default function NotFound() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/404/"
+                  "@id": "https://weareenigma.com/404"
                 },
                 "name": "404",
                 "description": "404 Page not found please go back to home. This is Enigma Digital.",

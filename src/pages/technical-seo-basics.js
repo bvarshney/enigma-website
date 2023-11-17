@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Technical-SEO', 'Google-Search-Console', 'Page-Speed', 'Google-Analytics'],
                 },
-                url: "https://weareenigma.com/technical-seo-basics/",
+                url: "https://weareenigma.com/technical-seo-basics",
                 title: "Comprehensive Guide to Technical SEO Essentials",
                 description:
                   "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/technical-seo-basics/" />
-            <link rel="alternate" href="https://weareenigma.com/technical-seo-basics/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/technical-seo-basics" />
+            <link rel="alternate" href="https://weareenigma.com/technical-seo-basics" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

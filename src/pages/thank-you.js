@@ -66,7 +66,7 @@ const ThankYou = () => {
         title="Thank You! We'll Be in Touch Soon | Enigma"
         description="Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online."
         openGraph={{
-          url: "https://weareenigma.com/thank-you/",
+          url: "https://weareenigma.com/thank-you",
           title: "Thank You! We'll Be in Touch Soon | Enigma",
           description:
             "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online.",
@@ -99,8 +99,8 @@ const ThankYou = () => {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/thank-you/" />
-        <link rel="alternate" href="https://weareenigma.com/thank-you/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/thank-you" />
+        <link rel="alternate" href="https://weareenigma.com/thank-you" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,7 +110,7 @@ const ThankYou = () => {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/thank-you/"
+                  "@id": "https://weareenigma.com/thank-you"
                 },
                 "name": "Thank You",
                 "description": "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online.",

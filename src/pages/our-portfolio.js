@@ -39,7 +39,7 @@ export default function studio() {
       title="Enigma's Portfolio: Showcasing Digital Mastery"
       description="Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results."
       openGraph={{
-        url: "https://weareenigma.com/our-portfolio/",
+        url: "https://weareenigma.com/our-portfolio",
         title: "Enigma's Portfolio: Showcasing Digital Mastery",
         description:
           "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
@@ -72,8 +72,8 @@ export default function studio() {
                 />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/our-portfolio/" />
-            <link rel="alternate" href="https://weareenigma.com/our-portfolio/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/our-portfolio" />
+            <link rel="alternate" href="https://weareenigma.com/our-portfolio" hreflang="x-default" />
             <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -83,7 +83,7 @@ export default function studio() {
                     "@type": "WebPage",
                     "mainEntityOfPage":{
                     "@type": "WebPage",
-                    "@id": "https://weareenigma.com/our-portfolio/"
+                    "@id": "https://weareenigma.com/our-portfolio"
                     },
                     "name": "Works",
                     "description": "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",

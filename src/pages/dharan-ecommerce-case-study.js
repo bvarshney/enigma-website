@@ -157,7 +157,7 @@ export default function dharan() {
               title="Dharan E-Commerce Design & Development Case Study | Enigma"
               description="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
               openGraph={{
-                url: "https://weareenigma.com/dharan-ecommerce-case-study/",
+                url: "https://weareenigma.com/dharan-ecommerce-case-study",
                 title: "Dharan E-Commerce Design & Development Case Study | Enigma",
                 description:
                   "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
@@ -190,8 +190,8 @@ export default function dharan() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/dharan-ecommerce-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/dharan-ecommerce-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/dharan-ecommerce-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/dharan-ecommerce-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -201,7 +201,7 @@ export default function dharan() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/dharan-ecommerce-case-study/"
+                  "@id": "https://weareenigma.com/dharan-ecommerce-case-study"
                 },
                 "name": "Dharan E-Commerce Design & Development Case Study | Enigma",
                 "description": "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",

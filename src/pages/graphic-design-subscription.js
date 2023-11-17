@@ -82,7 +82,7 @@ useEffect(() => {
               title="Graphic Design Services | Graphic Design Subscription"
               description="Graphic Design Services | Enigma"
               openGraph={{
-                url: "https://weareenigma.com/graphic-design-subscription/",
+                url: "https://weareenigma.com/graphic-design-subscription",
                 title: "Graphic Design Services | Graphic Design Subscription",
                 description:
                   "Graphic Design Services | Enigma",
@@ -115,8 +115,8 @@ useEffect(() => {
                 />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/graphic-design-subscription/" />
-            <link rel="alternate" href="https://weareenigma.com/graphic-design-subscription/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/graphic-design-subscription" />
+            <link rel="alternate" href="https://weareenigma.com/graphic-design-subscription" hreflang="x-default" />
             <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -126,7 +126,7 @@ useEffect(() => {
                     "@type": "WebPage",
                     "mainEntityOfPage":{
                     "@type": "WebPage",
-                    "@id": "https://weareenigma.com/graphic-design-subscription/"
+                    "@id": "https://weareenigma.com/graphic-design-subscription"
                     },
                     "name": "Graphic Design Subscription",
                     "description": "Graphic Design Services | Enigma",

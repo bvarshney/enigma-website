@@ -176,7 +176,7 @@ export default function patra() {
       title="Catapulting Patra's CX  Through UX - Case Study | Enigma"
       description="Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients."
       openGraph={{
-        url: "https://weareenigma.com/patra-saas-insurtech-case-study/",
+        url: "https://weareenigma.com/patra-saas-insurtech-case-study",
         title: "Catapulting Patra's CX  Through UX - Case Study | Enigma",
         description:
           "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients.",
@@ -209,8 +209,8 @@ export default function patra() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/patra-saas-insurtech-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/patra-saas-insurtech-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/patra-saas-insurtech-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/patra-saas-insurtech-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function patra() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/patra-saas-insurtech-case-study/"
+                  "@id": "https://weareenigma.com/patra-saas-insurtech-case-study"
                 },
                 "name": "Catapulting Patra's CX  Through UX - Case Study | Enigma",
                 "description": "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients.",

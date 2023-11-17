@@ -176,7 +176,7 @@ export default function certvault() {
               title="Certvault Design & Development Case Study | Enigma"
               description="Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform."
               openGraph={{
-                url: "https://weareenigma.com/certvault-case-study/",
+                url: "https://weareenigma.com/certvault-case-study",
                 title: "Certvault Design & Development Case Study | Enigma",
                 description:
                   "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
@@ -209,8 +209,8 @@ export default function certvault() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/certvault-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/certvault-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/certvault-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/certvault-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function certvault() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/certvault-case-study/"
+                  "@id": "https://weareenigma.com/certvault-case-study"
                 },
                 "name": "Certvault Design & Development Case Study | Enigma",
                 "description": "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",

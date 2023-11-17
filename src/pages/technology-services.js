@@ -269,7 +269,7 @@ useEffect(() => {
         title="Award-Winning Web Development and Technology Services | Enigma"
         description="Enigma offers front-end development, custom web and app development, DevOps, cloud engineering, and other technology services to build seamless digital experiences."
         openGraph={{
-          url: "https://weareenigma.com/technology-services/",
+          url: "https://weareenigma.com/technology-services",
           title:
             "Award-Winning Web Development and Technology Services | Enigma",
           description:
@@ -303,8 +303,8 @@ useEffect(() => {
             /> 
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/technology-services/" />
-        <link rel="alternate" href="https://weareenigma.com/technology-services/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/technology-services" />
+        <link rel="alternate" href="https://weareenigma.com/technology-services" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -314,7 +314,7 @@ useEffect(() => {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/technology-services/"
+                  "@id": "https://weareenigma.com/technology-services"
                 },
                 "name": "Award-Winning Web Development and Technology Services",
                 "description": "Enigma offers front-end development, custom web and app development, DevOps, cloud engineering, and other technology services to build seamless digital experiences.",
@@ -391,7 +391,7 @@ useEffect(() => {
               "provider": {
                 "@type": "Organization",
                 "name": "Enigma Digital",
-                "url": "https://weareengima.com"
+                "url": "https://weareenigma.com/"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",

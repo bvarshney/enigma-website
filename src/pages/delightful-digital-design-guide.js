@@ -125,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Design-Guide', 'App-Design', 'UI/UX-Design', 'UI-Principles'],
                 },
-                url: "https://weareenigma.com/delightful-digital-design-guide/",
+                url: "https://weareenigma.com/delightful-digital-design-guide",
                 title: "Enigma's Guide to Delightful UX Design for Digital Platforms",
                 description:
                   "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design.",
@@ -158,8 +158,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/delightful-digital-design-guide/" />
-            <link rel="alternate" href="https://weareenigma.com/delightful-digital-design-guide/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/delightful-digital-design-guide" />
+            <link rel="alternate" href="https://weareenigma.com/delightful-digital-design-guide" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

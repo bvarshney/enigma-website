@@ -116,7 +116,7 @@ export default function contact() {
         title="We Elevate Your Digital Presence | Contact Enigma"
         description="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
         openGraph={{
-          url: "https://weareenigma.com/get-in-touch/",
+          url: "https://weareenigma.com/get-in-touch",
           title:
             "We Elevate Your Digital Presence | Contact Enigma",
           description:
@@ -150,8 +150,8 @@ export default function contact() {
           />
 
         <Head>
-            <link rel="canonical" href="https://weareenigma.com/get-in-touch/" />
-            <link rel="alternate" href="https://weareenigma.com/get-in-touch/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/get-in-touch" />
+            <link rel="alternate" href="https://weareenigma.com/get-in-touch" hreflang="x-default" />
             <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -161,7 +161,7 @@ export default function contact() {
                     "@type": "WebPage",
                     "mainEntityOfPage":{
                     "@type": "WebPage",
-                    "@id": "https://weareenigma.com/get-in-touch/"
+                    "@id": "https://weareenigma.com/get-in-touch"
                     },
                     "name": "Contact",
                     "description": "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",

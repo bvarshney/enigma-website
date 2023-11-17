@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['On-Page-Seo', 'Marketing', 'Digital-Marketing', 'DA'],
                 },
-        url: "https://weareenigma.com/beginner-seo-guide/",
+        url: "https://weareenigma.com/beginner-seo-guide",
         title: "On-Page & Off-Page SEO: Optimize Your Website with Enigma",
         description:
           "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",
@@ -156,8 +156,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/beginner-seo-guide/" />
-        <link rel="alternate" href="https://weareenigma.com/beginner-seo-guide/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/beginner-seo-guide" />
+        <link rel="alternate" href="https://weareenigma.com/beginner-seo-guide" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

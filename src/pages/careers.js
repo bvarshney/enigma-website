@@ -26,7 +26,7 @@ export default function Careers(){
               title="Enigma Digital | Careers | Find The Right Jobs"
               description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
               openGraph={{
-                url: "https://weareenigma.com/careers/",
+                url: "https://weareenigma.com/careers",
                 title: "Enigma Digital | Careers | Find The Right Jobs",
                 description:
                   "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
@@ -59,8 +59,8 @@ export default function Careers(){
           />
 
         <Head>
-            <link rel="canonical" href="https://weareenigma.com/careers/" />
-            <link rel="alternate" href="https://weareenigma.com/careers/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/careers" />
+            <link rel="alternate" href="https://weareenigma.com/careers" hreflang="x-default" />
             <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -70,7 +70,7 @@ export default function Careers(){
                     "@type": "WebPage",
                     "mainEntityOfPage":{
                     "@type": "WebPage",
-                    "@id": "https://weareenigma.com/careers/"
+                    "@id": "https://weareenigma.com/careers"
                     },
                     "name": "Careers",
                     "description": "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",

@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Organic-Marketing', 'Marketing', 'SEO', 'Startegies'],
                 },
-        url: " https://weareenigma.com/benefits-of-organic-digital-marketing/",
+        url: " https://weareenigma.com/benefits-of-organic-digital-marketing",
         title: "The Power & Benefits of Organic Digital Marketing",
         description:
           "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",
@@ -157,8 +157,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" />
-        <link rel="alternate" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/benefits-of-organic-digital-marketing" />
+        <link rel="alternate" href="https://weareenigma.com/benefits-of-organic-digital-marketing" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

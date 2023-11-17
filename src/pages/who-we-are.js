@@ -211,7 +211,7 @@ export default function about() {
         title="About Enigma - UI/UX Design & Digital Marketing Agency India"
         description="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
         openGraph={{
-          url: "https://weareenigma.com/who-we-are/",
+          url: "https://weareenigma.com/who-we-are",
           title: "About Enigma - UI/UX Design & Digital Marketing Agency India",
           description:
             "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
@@ -244,8 +244,8 @@ export default function about() {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/who-we-are/" />
-        <link rel="alternate" href="https://weareenigma.com/who-we-are/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/who-we-are" />
+        <link rel="alternate" href="https://weareenigma.com/who-we-are" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -255,7 +255,7 @@ export default function about() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/who-we-are/"
+                  "@id": "https://weareenigma.com/who-we-are"
                 },
                 "name": "About",
                 "description": "Enigma is a team of creators, discoverers, 	dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",

@@ -176,7 +176,7 @@ export default function pdtl() {
       title="PDTL Ecommerce & Marketing Automation Case Study | Enigma"
       description="Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance."
       openGraph={{
-        url: "https://weareenigma.com/pdtl-ecommerce-automation-case-study/",
+        url: "https://weareenigma.com/pdtl-ecommerce-automation-case-study",
         title: "PDTL Ecommerce & Marketing Automation Case Study | Enigma",
         description:
           "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance.",
@@ -209,8 +209,8 @@ export default function pdtl() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function pdtl() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/pdtl-ecommerce-automation-case-study/"
+                  "@id": "https://weareenigma.com/pdtl-ecommerce-automation-case-study"
                 },
                 "name": "PDTL Ecommerce & Marketing Automation Case Study | Enigma",
                 "description": "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance.",

@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Dark-UX', 'Copyblogger', 'Deceptive Practices', 'Dark Web Concepts'],
                 },
-        url: "https://weareenigma.com/dark-ux-deceptive-design-practices/",
+        url: "https://weareenigma.com/dark-ux-deceptive-design-practices",
         title: "Psychology of Dark UX Patterns",
         description:
           "Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences.",
@@ -157,8 +157,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/dark-ux-deceptive-design-practices/" />
-        <link rel="alternate" href="https://weareenigma.com/dark-ux-deceptive-design-practices/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/dark-ux-deceptive-design-practices" />
+        <link rel="alternate" href="https://weareenigma.com/dark-ux-deceptive-design-practices" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

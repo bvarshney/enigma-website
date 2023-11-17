@@ -123,7 +123,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Link-Building', 'Marketing', 'Website-Development', 'Backlinks'],
                 },
-          url: "https://weareenigma.com/link-building-website-list/",
+          url: "https://weareenigma.com/link-building-website-list",
           title: "List of 30 Link Building Websites - SEO Guide",
           description:
             "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",
@@ -156,8 +156,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/link-building-website-list/" />
-            <link rel="alternate" href="https://weareenigma.com/link-building-website-list/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/link-building-website-list" />
+            <link rel="alternate" href="https://weareenigma.com/link-building-website-list" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

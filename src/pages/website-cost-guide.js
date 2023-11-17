@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Website-Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
                 },
-                url: "https://weareenigma.com/website-cost-guide/",
+                url: "https://weareenigma.com/website-cost-guide",
                 title: "How Much Should a Website Cost? Enigma's Insightful Guide",
                 description:
                   "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/website-cost-guide/" />
-            <link rel="alternate" href="https://weareenigma.com/website-cost-guide/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/website-cost-guide" />
+            <link rel="alternate" href="https://weareenigma.com/website-cost-guide" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

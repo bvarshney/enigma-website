@@ -176,7 +176,7 @@ export default function patronum() {
       title="Patronum Branding & Website Design Case Study | Enigma"
       description="Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product."
       openGraph={{
-        url: "https://weareenigma.com/patronum-saas-case-study/",
+        url: "https://weareenigma.com/patronum-saas-case-study",
         title: "Patronum Branding & Website Design Case Study | Enigma",
         description:
           "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product.",
@@ -209,8 +209,8 @@ export default function patronum() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/patronum-saas-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/patronum-saas-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/patronum-saas-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/patronum-saas-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function patronum() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/patronum-saas-case-study/"
+                  "@id": "https://weareenigma.com/patronum-saas-case-study"
                 },
                 "name": "Patronum Branding & Website Design Case Study | Enigma",
                 "description": "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product.",

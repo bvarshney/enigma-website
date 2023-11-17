@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Marketing-Psychology', 'Insights', 'Strategy', 'Agency'],
                 },
-                url: "https://weareenigma.com/captivate-audiences-marketing-psychology/",
+                url: "https://weareenigma.com/captivate-audiences-marketing-psychology",
                 title: "Marketing Psychology: Secrets to Captivating Audiences",
                 description:
                   "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour.",
@@ -157,8 +157,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/captivate-audiences-marketing-psychology/" />
-        <link rel="alternate" href="https://weareenigma.com/captivate-audiences-marketing-psychology/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/captivate-audiences-marketing-psychology" />
+        <link rel="alternate" href="https://weareenigma.com/captivate-audiences-marketing-psychology" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

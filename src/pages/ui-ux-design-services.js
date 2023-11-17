@@ -269,7 +269,7 @@ useEffect(() => {
         title="Award-Winning UI/UX Design Services for Digital Excellence | Enigma"
         description="Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty."
         openGraph={{
-          url: "https://weareenigma.com/ui-ux-design-services/",
+          url: "https://weareenigma.com/ui-ux-design-services",
           title:
             "Award-Winning UI/UX Design Services for Digital Excellence | Enigma",
           description:
@@ -303,8 +303,8 @@ useEffect(() => {
             /> 
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/ui-ux-design-services/" />
-        <link rel="alternate" href="https://weareenigma.com/ui-ux-design-services/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/ui-ux-design-services" />
+        <link rel="alternate" href="https://weareenigma.com/ui-ux-design-services" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -391,7 +391,7 @@ useEffect(() => {
               "provider": {
                 "@type": "Organization",
                 "name": "Enigma Digital",
-                "url": "https://weareengima.com"
+                "url": "https://weareenigma.com/"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",

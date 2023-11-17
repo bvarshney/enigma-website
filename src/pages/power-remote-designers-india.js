@@ -123,7 +123,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['WFH-Designers', 'Remote-Working', 'UI/UX-Design', 'Growth-&-Productivity'],
                 },
-        url: "https://weareenigma.com/power-remote-designers-india/",
+        url: "https://weareenigma.com/power-remote-designers-india",
         title: "Maximizing Remote Designers: Outsourcing to India",
         description:
           "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business.",
@@ -156,8 +156,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/power-remote-designers-india/" />
-            <link rel="alternate" href="https://weareenigma.com/power-remote-designers-india/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/power-remote-designers-india" />
+            <link rel="alternate" href="https://weareenigma.com/power-remote-designers-india" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

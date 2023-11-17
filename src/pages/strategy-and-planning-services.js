@@ -269,7 +269,7 @@ useEffect(() => {
         title="Digital Strategy & Marketing Planning Services | Enigma"
         description="Digital Strategy and Marketing Planning services that help brands gain clarity, define measurable goals, craft strategies for growth and achieve digital success."
         openGraph={{
-          url: "https://weareenigma.com/strategy-and-planning-services/",
+          url: "https://weareenigma.com/strategy-and-planning-services",
           title:"Digital Strategy & Marketing Planning Services | Enigma",
           description:"Digital Strategy and Marketing Planning services that help brands gain clarity, define measurable goals, craft strategies for growth and achieve digital success.",
           images: [
@@ -301,8 +301,8 @@ useEffect(() => {
             /> 
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/strategy-and-planning-services/" />
-        <link rel="alternate" href="https://weareenigma.com/strategy-and-planning-services/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/strategy-and-planning-services" />
+        <link rel="alternate" href="https://weareenigma.com/strategy-and-planning-services" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -312,7 +312,7 @@ useEffect(() => {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/strategy-and-planning-services/"
+                  "@id": "https://weareenigma.com/strategy-and-planning-services"
                 },
                 "name": "Digital Strategy & Marketing Planning Services",
                 "description": "Digital Strategy and Marketing Planning services that help brands gain clarity, define measurable goals, craft strategies for growth and achieve digital success.",
@@ -389,7 +389,7 @@ useEffect(() => {
               "provider": {
                 "@type": "Organization",
                 "name": "Enigma Digital",
-                "url": "https://weareengima.com"
+                "url": "https://weareenigma.com/"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",

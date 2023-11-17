@@ -158,8 +158,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/cognitive-biases-ecommerce/" />
-        <link rel="alternate" href="https://weareenigma.com/cognitive-biases-ecommerce/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/cognitive-biases-ecommerce" />
+        <link rel="alternate" href="https://weareenigma.com/cognitive-biases-ecommerce" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

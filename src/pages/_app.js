@@ -72,42 +72,42 @@ export default function App({ Component, pageProps }) {
                 "position":1,
                 "name": "About",
                 "description": "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
-                "url":"https://weareenigma.com/who-we-are/"
+                "url":"https://weareenigma.com/who-we-are"
               },
               {
                 "@type":"SiteNavigationElement",
                 "position":2,
                 "name": "Services",
                 "description": "Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow.",
-                "url":"https://weareenigma.com/services/"
+                "url":"https://weareenigma.com/services"
               },
               {
                 "@type":"SiteNavigationElement",
                 "position":3,
                 "name": "Works",
                 "description": "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
-                "url":"https://weareenigma.com/our-portfolio/"
+                "url":"https://weareenigma.com/our-portfolio"
               },
               {
                 "@type":"SiteNavigationElement",
                 "position":4,
                 "name": "Insights",
                 "description": "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
-                "url":"https://weareenigma.com/blog/"
+                "url":"https://weareenigma.com/blog"
               },
               {
                 "@type":"SiteNavigationElement",
                 "position":5,
                 "name": "Careers",
                 "description": "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
-                "url":"https://weareenigma.com/careers/"
+                "url":"https://weareenigma.com/careers"
               },
               {
                 "@type":"SiteNavigationElement",
                 "position":6,
                 "name": "Contact",
                 "description": "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",
-                "url":"https://weareenigma.com/get-in-touch/"
+                "url":"https://weareenigma.com/get-in-touch"
               }
             ]
           }

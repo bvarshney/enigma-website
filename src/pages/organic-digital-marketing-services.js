@@ -269,7 +269,7 @@ useEffect(() => {
               title="Organic Digital Marketing Services To Grow Your Business"
               description="Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
               openGraph={{
-                url: "https://weareenigma.com/organic-digital-marketing-services/",
+                url: "https://weareenigma.com/organic-digital-marketing-services",
                 title: "Organic Digital Marketing Services To Grow Your Business",
                 description:
                   "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
@@ -302,8 +302,8 @@ useEffect(() => {
             /> 
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/organic-digital-marketing-services/" />
-        <link rel="alternate" href="https://weareenigma.com/organic-digital-marketing-services/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/organic-digital-marketing-services" />
+        <link rel="alternate" href="https://weareenigma.com/organic-digital-marketing-services" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -313,7 +313,7 @@ useEffect(() => {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/organic-digital-marketing-services/"
+                  "@id": "https://weareenigma.com/organic-digital-marketing-services"
                 },
                 "name": "Organic Digital Marketing Services",
                 "description": "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
@@ -390,7 +390,7 @@ useEffect(() => {
               "provider": {
                 "@type": "Organization",
                 "name": "Enigma Digital",
-                "url": "https://weareengima.com"
+                "url": "https://weareenigma.com/"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",

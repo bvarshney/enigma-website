@@ -176,7 +176,7 @@ export default function gcm() {
               title="Garden City Mall - Phygital Shopping Experience Case Study | Enigma"
               description="Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma."
               openGraph={{
-                url: "https://weareenigma.com/gcm-phygital-shopping-case-study/",
+                url: "https://weareenigma.com/gcm-phygital-shopping-case-study",
                 title: "Garden City Mall - Phygital Shopping Experience Case Study | Enigma",
                 description:
                   "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",
@@ -209,8 +209,8 @@ export default function gcm() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/gcm-phygital-shopping-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/gcm-phygital-shopping-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/gcm-phygital-shopping-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/gcm-phygital-shopping-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function gcm() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/gcm-phygital-shopping-case-study/"
+                  "@id": "https://weareenigma.com/gcm-phygital-shopping-case-study"
                 },
                 "name": "Garden City Mall - Phygital Shopping Experience Case Study | Enigma",
                 "description": "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",

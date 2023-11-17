@@ -125,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['UX-Design', 'AR/VR', 'Smart-Devices', 'Dark-Mode'],
                 },
-        url: "https://weareenigma.com/evolution-of-ux-design/",
+        url: "https://weareenigma.com/evolution-of-ux-design",
         title: "Tracing the Evolution of UX Design - Past, Present & Future",
         description:
           "A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences.",
@@ -158,8 +158,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/evolution-of-ux-design/" />
-            <link rel="alternate" href="https://weareenigma.com/evolution-of-ux-design/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/evolution-of-ux-design" />
+            <link rel="alternate" href="https://weareenigma.com/evolution-of-ux-design" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

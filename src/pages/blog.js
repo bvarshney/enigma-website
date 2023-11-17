@@ -138,7 +138,7 @@ export default function BlogsPage() {
               title="The Enigma Blog | Discover, Learn & Be Future Ready"
               description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
               openGraph={{
-                url: "https://weareenigma.com/blog/",
+                url: "https://weareenigma.com/blog",
                 title: "The Enigma Blog | Discover, Learn & Be Future Ready",
                 description:
                   "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
@@ -171,8 +171,8 @@ export default function BlogsPage() {
           />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/blog/" />
-        <link rel="alternate" href="https://weareenigma.com/blog/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/blog" />
+        <link rel="alternate" href="https://weareenigma.com/blog" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -182,7 +182,7 @@ export default function BlogsPage() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/blog/"
+                  "@id": "https://weareenigma.com/blog"
                 },
                 "name": "Blog",
                 "description": "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",

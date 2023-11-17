@@ -156,7 +156,7 @@ export default function kedarkala() {
         title="Kedarkala Web Design, UX & Branding Case Study | Enigma"
         description="Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved."
         openGraph={{
-          url: "https://weareenigma.com/kedarkala-portfolio-website-case-study/",
+          url: "https://weareenigma.com/kedarkala-portfolio-website-case-study",
           title:
             "Kedarkala Web Design, UX & Branding Case Study | Enigma",
           description:
@@ -190,8 +190,8 @@ export default function kedarkala() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/kedarkala-portfolio-website-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/kedarkala-portfolio-website-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/kedarkala-portfolio-website-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/kedarkala-portfolio-website-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -201,7 +201,7 @@ export default function kedarkala() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/kedarkala-portfolio-website-case-study/"
+                  "@id": "https://weareenigma.com/kedarkala-portfolio-website-case-study"
                 },
                 "name": "Kedarkala Web Design, UX & Branding Case Study | Enigma",
                 "description": "Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved.",

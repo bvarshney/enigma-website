@@ -176,7 +176,7 @@ export default function wragby() {
       title="Wragby Solutions: A Case Study in Digital Innovation"
       description="Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results."
       openGraph={{
-        url: "https://weareenigma.com/wragby-solutions-case-study/",
+        url: "https://weareenigma.com/wragby-solutions-case-study",
         title: "Wragby Solutions: A Case Study in Digital Innovation",
         description:
           "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results.",
@@ -209,8 +209,8 @@ export default function wragby() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/wragby-solutions-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/wragby-solutions-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/wragby-solutions-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/wragby-solutions-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function wragby() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/wragby-solutions-case-study/"
+                  "@id": "https://weareenigma.com/wragby-solutions-case-study"
                 },
                 "name": "Wragby Solutions: A Case Study in Digital Innovation",
                 "description": "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results.",

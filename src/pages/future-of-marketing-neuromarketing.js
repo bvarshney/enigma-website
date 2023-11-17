@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Neuromarketing', 'Marketing', 'Ethical-Practices', 'Innovation-&-Creativity'],
                 },
-        url: "https://weareenigma.com/future-of-marketing-neuromarketing/",
+        url: "https://weareenigma.com/future-of-marketing-neuromarketing",
         title: "Bracing for the Future - How Marketing Will Evolve in 2030s",
         description:
           "Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/future-of-marketing-neuromarketing/" />
-            <link rel="alternate" href="https://weareenigma.com/future-of-marketing-neuromarketing/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/future-of-marketing-neuromarketing" />
+            <link rel="alternate" href="https://weareenigma.com/future-of-marketing-neuromarketing" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -125,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['UX-Design', 'Donald-Arthur', 'Experience-Design', 'Website-Animations'],
                 },
-        url: "https://weareenigma.com/experience-design-vs-ux/",
+        url: "https://weareenigma.com/experience-design-vs-ux",
         title: "Experience Design vs UX: Key Differences Explained",
         description:
           "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",
@@ -158,8 +158,8 @@ const structuredData = {
             />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/experience-design-vs-ux/" />
-            <link rel="alternate" href="https://weareenigma.com/experience-design-vs-ux/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/experience-design-vs-ux" />
+            <link rel="alternate" href="https://weareenigma.com/experience-design-vs-ux" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

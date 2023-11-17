@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['UX-Principles', 'UX-55-Terms', 'UX-Glossary'],
                 },
-        url: "https://weareenigma.com/ux-design-glossary-guide/",
+        url: "https://weareenigma.com/ux-design-glossary-guide",
         title: "UX Design Glossary: Mastering UX Terms & Concepts",
         description:
           "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/ux-design-glossary-guide/" />
-            <link rel="alternate" href="https://weareenigma.com/ux-design-glossary-guide/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/ux-design-glossary-guide" />
+            <link rel="alternate" href="https://weareenigma.com/ux-design-glossary-guide" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

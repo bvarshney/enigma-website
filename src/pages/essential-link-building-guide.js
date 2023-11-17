@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Link-Building', 'Seo', 'Marketing', 'Backlinks'],
                 },
-                url: "https://weareenigma.com/essential-link-building-guide/",
+                url: "https://weareenigma.com/essential-link-building-guide",
                 title: "Ultimate Beginner's Guide to Effective Link Building",
                 description:
                   "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/essential-link-building-guide/" />
-            <link rel="alternate" href="https://weareenigma.com/essential-link-building-guide/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/essential-link-building-guide" />
+            <link rel="alternate" href="https://weareenigma.com/essential-link-building-guide" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

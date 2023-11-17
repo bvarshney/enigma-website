@@ -125,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Keyword-Research', 'Local-Seo', 'Targeted-Keyword', 'Seo-Strategy'],
                 },
-                url: "https://weareenigma.com/seo-keyword-research-guide/",
+                url: "https://weareenigma.com/seo-keyword-research-guide",
                 title: "Comprehensive Guide to Keyword Research for SEO Success",
                 description:
                   "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",
@@ -158,8 +158,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/seo-keyword-research-guide/" />
-            <link rel="alternate" href="https://weareenigma.com/seo-keyword-research-guide/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/seo-keyword-research-guide" />
+            <link rel="alternate" href="https://weareenigma.com/seo-keyword-research-guide" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Top-Design-Blogs', 'Design-Inspirations', 'UI/UX-Design', 'Expert-Design-Insights'],
                 },
-        url: "https://weareenigma.com/top-ux-design-blogs/",
+        url: "https://weareenigma.com/top-ux-design-blogs",
         title: "Top 20 UX Design Blogs for Creative Insights",
         description:
           "Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/top-ux-design-blogs/" />
-            <link rel="alternate" href="https://weareenigma.com/top-ux-design-blogs/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/top-ux-design-blogs" />
+            <link rel="alternate" href="https://weareenigma.com/top-ux-design-blogs" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

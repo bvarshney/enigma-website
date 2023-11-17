@@ -175,7 +175,7 @@ export default function quickx() {
       title="QuickX - Branding & Mobile App Design Case Study | Enigma"
       description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step."
       openGraph={{
-        url: "https://weareenigma.com/quickx-crypto-case-study/",
+        url: "https://weareenigma.com/quickx-crypto-case-study",
         title: "QuickX - Branding & Mobile App Design Case Study | Enigma",
         description:
           "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step.",
@@ -208,8 +208,8 @@ export default function quickx() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/quickx-crypto-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/quickx-crypto-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/quickx-crypto-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/quickx-crypto-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -219,7 +219,7 @@ export default function quickx() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/quickx-crypto-case-study/"
+                  "@id": "https://weareenigma.com/quickx-crypto-case-study"
                 },
                 "name": "QuickX - Branding & Mobile App Design Case Study | Enigma",
                 "description": "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step.",

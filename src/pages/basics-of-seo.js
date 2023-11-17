@@ -156,8 +156,8 @@ const structuredData = {
       />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/basics-of-seo/" />
-        <link rel="alternate" href="https://weareenigma.com/basics-of-seo/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/basics-of-seo" />
+        <link rel="alternate" href="https://weareenigma.com/basics-of-seo" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

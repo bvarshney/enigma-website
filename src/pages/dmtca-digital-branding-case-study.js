@@ -176,7 +176,7 @@ export default function dmtca() {
               title="DMTCA - Branding, Web Design & Development Case Study | Enigma"
               description="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma."
               openGraph={{
-                url: "https://weareenigma.com/dmtca-digital-branding-case-study/",
+                url: "https://weareenigma.com/dmtca-digital-branding-case-study",
                 title: "DMTCA - Branding, Web Design & Development Case Study | Enigma",
                 description:
                   "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",
@@ -209,8 +209,8 @@ export default function dmtca() {
             />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/dmtca-digital-branding-case-study/" />
-        <link rel="alternate" href="https://weareenigma.com/dmtca-digital-branding-case-study/" hreflang="x-default" />
+        <link rel="canonical" href="https://weareenigma.com/dmtca-digital-branding-case-study" />
+        <link rel="alternate" href="https://weareenigma.com/dmtca-digital-branding-case-study" hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -220,7 +220,7 @@ export default function dmtca() {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/dmtca-digital-branding-case-study/"
+                  "@id": "https://weareenigma.com/dmtca-digital-branding-case-study"
                 },
                 "name": "DMTCA - Branding, Web Design & Development Case Study | Enigma",
                 "description": "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",

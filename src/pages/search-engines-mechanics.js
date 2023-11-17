@@ -124,7 +124,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Search-Engines-Mechanics', 'UI/UX-Design', 'Google-Search-Console', 'Google-Analytics'],
                 },
-                url: "https://weareenigma.com/search-engines-mechanics/",
+                url: "https://weareenigma.com/search-engines-mechanics",
                 title: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",
                 description:
                   "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",
@@ -157,8 +157,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/search-engines-mechanics/" />
-            <link rel="alternate" href="https://weareenigma.com/search-engines-mechanics/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/search-engines-mechanics" />
+            <link rel="alternate" href="https://weareenigma.com/search-engines-mechanics" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

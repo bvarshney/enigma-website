@@ -126,7 +126,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['What is UX', 'UI/UX Design', 'User Research'],
                 },
-        url: "https://weareenigma.com/what-is-ux-design/",
+        url: "https://weareenigma.com/what-is-ux-design",
         title: "UX Design Explained: A Simple Guide for Everyone",
         description:
           "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",
@@ -159,8 +159,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/what-is-ux-design/" />
-            <link rel="alternate" href="https://weareenigma.com/what-is-ux-design/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/what-is-ux-design" />
+            <link rel="alternate" href="https://weareenigma.com/what-is-ux-design" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

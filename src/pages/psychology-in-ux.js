@@ -126,7 +126,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Psychology-&-UX-Design', 'User-Centric-UX', 'Psychology', 'User-Experience'],
                 },
-              url: "https://weareenigma.com/psychology-in-ux/",
+              url: "https://weareenigma.com/psychology-in-ux",
               title: "Harnessing the Power of Psychology in UX Design",
               description:
                 "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
@@ -159,8 +159,8 @@ const structuredData = {
           />
 
           <Head>
-            <link rel="canonical" href="https://weareenigma.com/psychology-in-ux/" />
-            <link rel="alternate" href="https://weareenigma.com/psychology-in-ux/" hreflang="x-default" />
+            <link rel="canonical" href="https://weareenigma.com/psychology-in-ux" />
+            <link rel="alternate" href="https://weareenigma.com/psychology-in-ux" hreflang="x-default" />
             <script 
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
