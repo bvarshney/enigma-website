@@ -12,6 +12,7 @@ import FooterMobile from '@/components/Mobile/FooterMobile';
 import Blogs from '@/components/Blogs/blogData';
 import Modal from '@/components/PopupForm/formModal';
 import CategoryData from './CategoryData';
+import Head from 'next/head';
 
 // Hover on the link
 const handleHover = (e) => {
@@ -126,7 +127,54 @@ const CategoryPage = ({ category }) => {
           ],
           siteName: 'Enigma Digital Website',
         }}
-      />
+      
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: `${metaTitle}`
+                },
+                {
+                  name: "twitter:description",
+                  content: `${metaDescription}`
+                },
+                {
+                  name: "twitter:image",
+                  content: `${metaImage}`
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href={`https://weareenigma.com/blog/${category.toLowerCase()}`} />
+        <link rel="alternate" href={`https://weareenigma.com/blog/${category.toLowerCase()}`} hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": `https://weareenigma.com/blog/${category.toLowerCase()}`
+                },
+                "name": {metaTitle},
+                "description": {metaDescription},
+                "datePublished": "2023-10-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
       <Cursor isGelly={true} />

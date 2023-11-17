@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -268,7 +269,7 @@ useEffect(() => {
         title="Award-Winning UI/UX Design Services for Digital Excellence | Enigma"
         description="Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty."
         openGraph={{
-          url: "https://weareenigma.com/ui-ux-design-services",
+          url: "https://weareenigma.com/ui-ux-design-services/",
           title:
             "Award-Winning UI/UX Design Services for Digital Excellence | Enigma",
           description:
@@ -284,7 +285,187 @@ useEffect(() => {
                   ],
                 siteName: "Enigma Digital",
         }}
-      />
+      
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Award-Winning UI/UX Design Services for Digital Excellence | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/service-ui-ux.png"
+                },
+              ]}
+            /> 
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/ui-ux-design-services/" />
+        <link rel="alternate" href="https://weareenigma.com/ui-ux-design-services/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/ui-ux-design-services/"
+                },
+                "name": "Award-Winning UI/UX Design Services for Digital Excellence",
+                "description": "Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Enigma Digital",
+                  "url": "https://weareenigma.com/",
+                  "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Suite # 301, Tower A, Grandslam, Ithum A-40, Sector-62",
+                    "addressLocality": "Noida",
+                    "addressRegion": "UP",
+                    "postalCode": "201309",
+                    "addressCountry": "IN"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "14"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "28.627458269319703",
+                    "longitude": " 77.37259286237833"
+                  },
+                  "telephone": "+918178026136",
+                  "priceRange": "$$",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "10:00",
+                      "closes": "20:00"
+                    }
+                  ]
+                }
+              ])
+            }}
+          />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "UI/UX Design Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Experience (UX) Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Interface (UI) Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Interaction Design (IxD)"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "End-to-End Product Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Testing and Evaluation"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Prototyping and Wireframing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Website & Mobile App Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Content Strategy for UX"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Usability Testing & Accessibility Design"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
 
 <SmoothScroll />
 
@@ -390,7 +571,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -419,7 +600,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -448,7 +629,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -477,7 +658,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>

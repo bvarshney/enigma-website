@@ -64,11 +64,7 @@ const HeroDesktop = () => {
                     <span className="line hacker">digital</span>
                   </div>
                   <p className="para-hero" id="anim">
-                  Harnessing the power of{" "}
-                    <span className="bold-600">
-                      Emotion, Design, Technology & Neuromarketing,
-                    </span>
-                    we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes.
+                    Harnessing the power of<span className="bold-600"> Emotion, Design, Technology & Neuromarketing, </span>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes.
                   </p>
                 </div>
 

@@ -17,6 +17,7 @@ export default function Process() {
               start: 'top 90%',
               end: 'bottom top',
               markers: false,
+              scrub: true,
             },
             opacity: 0,
             y: 100,
@@ -31,8 +32,10 @@ export default function Process() {
       
     return(
         <>
-            <p>
+            <p id='fadeIn'>
+              <span>
                 By taking the L.E.A.P. with Enigma Digital, you're not just getting a service; you're partnering with a team that's committed to leaping beyond the ordinary and achieving extraordinary results.
+              </span>
             </p>
         </>
     )

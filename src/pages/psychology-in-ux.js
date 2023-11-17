@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,38 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/psychology-in-ux"
+  },
+  "headline": "Harnessing the Power of Psychology in UX Design",
+  "description": "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-3.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/psychology-in-ux-design/psychology-in-ux-design-4.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-02-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +120,13 @@ if (globalThis.innerWidth>1024) {
             title="Harnessing the Power of Psychology in UX Design"
             description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
             openGraph={{
-              url: "https://weareenigma.com/psychology-in-ux",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-02-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Psychology-&-UX-Design', 'User-Centric-UX', 'Psychology', 'User-Experience'],
+                },
+              url: "https://weareenigma.com/psychology-in-ux/",
               title: "Harnessing the Power of Psychology in UX Design",
               description:
                 "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
@@ -102,7 +141,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />    
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Harnessing the Power of Psychology in UX Design"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/psychology-in-ux/" />
+            <link rel="alternate" href="https://weareenigma.com/psychology-in-ux/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

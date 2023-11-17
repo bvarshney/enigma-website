@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/cognitive-biases-ecommerce"
+  },
+  "headline": "Cognitive Biases in E-commerce - A Marketer's Guide",
+  "description": "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/the-mind-playground/the-mind-playground-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/the-mind-playground/the-mind-playground-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/the-mind-playground/the-mind-playground-1.webp",
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-02-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,6 +119,12 @@ if (globalThis.innerWidth>1024) {
       title="Cognitive Biases in E-commerce - A Marketer's Guide"
       description="Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate."
       openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-02-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Skills', 'Marketing', 'Cognitive-Biases', 'E-Commerce'],
+                },
         url: "https://weareenigma.com/cognitive-biases-ecommerce",
         title: "Cognitive Biases in E-commerce - A Marketer's Guide",
         description:
@@ -102,7 +140,31 @@ if (globalThis.innerWidth>1024) {
           ],
           siteName: "Enigma Digital",
         }}
+
+        additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Cognitive Biases in E-commerce - A Marketer's Guide"
+            },
+            {
+              name: "twitter:description",
+              content: "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/cognitive-biases-ecommerce.png"
+            },
+          ]}
       />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/cognitive-biases-ecommerce/" />
+        <link rel="alternate" href="https://weareenigma.com/cognitive-biases-ecommerce/" hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 

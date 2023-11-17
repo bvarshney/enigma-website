@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from '@/components/pageLoader';
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -268,7 +269,7 @@ useEffect(() => {
               title="Organic Digital Marketing Services To Grow Your Business"
               description="Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
               openGraph={{
-                url: "https://weareenigma.com/organic-digital-marketing-services",
+                url: "https://weareenigma.com/organic-digital-marketing-services/",
                 title: "Organic Digital Marketing Services To Grow Your Business",
                 description:
                   "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
@@ -283,7 +284,180 @@ useEffect(() => {
                   ],
                 siteName: "Enigma Digital",
               }}
-            />  
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Organic Digital Marketing Services To Grow Your Business"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/service-marketing.png"
+                },
+              ]}
+            /> 
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/organic-digital-marketing-services/" />
+        <link rel="alternate" href="https://weareenigma.com/organic-digital-marketing-services/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/organic-digital-marketing-services/"
+                },
+                "name": "Organic Digital Marketing Services",
+                "description": "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Enigma Digital",
+                  "url": "https://weareenigma.com/",
+                  "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Suite # 301, Tower A, Grandslam, Ithum A-40, Sector-62",
+                    "addressLocality": "Noida",
+                    "addressRegion": "UP",
+                    "postalCode": "201309",
+                    "addressCountry": "IN"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "14"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "28.627458269319703",
+                    "longitude": " 77.37259286237833"
+                  },
+                  "telephone": "+918178026136",
+                  "priceRange": "$$",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "10:00",
+                      "closes": "20:00"
+                    }
+                  ]
+                }
+              ])
+            }}
+          />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Organic Marketing Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Content Marketing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Search Engine Optimization"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Social Media Management"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Influencer Partnerships"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Community Building"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "PR and Media Outreach"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Reputation Management"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Analytics and Reporting"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
 
     <SmoothScroll />
 
@@ -332,7 +506,7 @@ useEffect(() => {
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                In the digital landscape, visibility is paramount, yet achieving it organically is becoming increasingly challenging. Businesses grapple with the reality that their voice is just one among millions clamouring for attention in the online arena. Oh! the frustration of crafting quality content that aligns perfectly with your brand ethos, only to watch it languish in the obscurity of search engine back pages can leave many feeling invisible, their valuable content unseen and unheard. At Enigma, we transcends these challenges by cultivate an organic presence for you that not only reaches but resonates with your audience. From content that informs and delights, to social media strategies that engage and build communities – we offer a holistic path to elevate your brand's online presence naturally and sustainably.
+                In the digital landscape, visibility is paramount, yet achieving it organically is becoming increasingly challenging. Businesses grapple with the reality that their voice is just one among millions clamouring for attention in the online arena. Oh! the frustration of crafting quality content that aligns perfectly with your brand ethos, only to watch it languish in the obscurity of search engine back pages can leave many feeling invisible, their valuable content unseen and unheard. At Enigma, we transcend these challenges by cultivate an organic presence for you that not only reaches but resonates with your audience. From content that informs and delights, to social media strategies that engage and build communities – we offer a holistic path to elevate your brand's online presence naturally and sustainably.
               </span>
             </p>
             <a 
@@ -389,7 +563,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -418,7 +592,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -447,7 +621,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -476,7 +650,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -569,7 +743,7 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Gauge and Analyze</h4>
+                    <h4 className='color-primary'>Gauge and Analyse</h4>
                     <p>
                       We begin by gauging your current market standing, analyzing your brand's digital presence, audience demographics, and competitive landscape to inform our strategy.
                     </p>

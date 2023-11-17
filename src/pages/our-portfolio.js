@@ -17,6 +17,7 @@ import ProjectWorks from "@/components/studio/ProjectWorks";
 import WorksNextBox from "@/components/NextBoxes/WorksNextBox";
 import Modal from "@/components/PopupForm/formModal";
 import PageLoader from '@/components/pageLoader';
+import Head from "next/head";
 
 export default function studio() {
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,7 @@ export default function studio() {
       title="Enigma's Portfolio: Showcasing Digital Mastery"
       description="Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results."
       openGraph={{
-        url: "https://weareenigma.com/our-portfolio",
+        url: "https://weareenigma.com/our-portfolio/",
         title: "Enigma's Portfolio: Showcasing Digital Mastery",
         description:
           "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
@@ -53,7 +54,54 @@ export default function studio() {
             ],
           siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                    {
+                      name: "twitter:title",
+                      content: "Enigma's Portfolio: Showcasing Digital Mastery"
+                    },
+                    {
+                      name: "twitter:description",
+                      content: "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results."
+                    },
+                    {
+                      name: "twitter:image",
+                      content: "https://weareenigma.com/assets/featured-images/work.png"
+                    },
+                  ]}
+                />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/our-portfolio/" />
+            <link rel="alternate" href="https://weareenigma.com/our-portfolio/" hreflang="x-default" />
+            <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntityOfPage":{
+                    "@type": "WebPage",
+                    "@id": "https://weareenigma.com/our-portfolio/"
+                    },
+                    "name": "Works",
+                    "description": "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
+                    "datePublished": "2023-01-01T12:00:00+05:30",
+                    "dateModified": "2023-11-17T12:00:00+05:30",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Enigma Digital",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                    }
+                    }
+                }
+                ),
+            }}
+          />
+        </Head>    
 
       <Cursor isGelly={true} />
 

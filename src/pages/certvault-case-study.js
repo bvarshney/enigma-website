@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function certvault() {
               title="Certvault Design & Development Case Study | Enigma"
               description="Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform."
               openGraph={{
-                url: "https://weareenigma.com/certvault-case-study",
+                url: "https://weareenigma.com/certvault-case-study/",
                 title: "Certvault Design & Development Case Study | Enigma",
                 description:
                   "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
@@ -190,7 +191,54 @@ export default function certvault() {
                   ],
                 siteName: "Enigma Digital",
               }}
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Certvault Design & Development Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-certvault.png"
+                },
+              ]}
             />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/certvault-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/certvault-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/certvault-case-study/"
+                },
+                "name": "Certvault Design & Development Case Study | Enigma",
+                "description": "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -529,7 +577,7 @@ export default function certvault() {
 
           <section className={styles.certvaultcolorSection} id="colorsection">
             <div className={styles.certvaultcolorHeading}>
-              <h1>COLORS</h1>
+              <h1>COLOURS</h1>
             </div>
             <div className={styles.certvaultcolorMainBox}>
               <div className={styles.certvaultcolorBox}>

@@ -19,6 +19,7 @@ import Faq from "@/components/LandingPage/Design/Faq";
 import Footer from "@/components/LandingPage/Design/Footer";
 import { NextSeo } from "next-seo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -79,15 +80,15 @@ useEffect(() => {
 
             <NextSeo
               title="Graphic Design Services | Graphic Design Subscription"
-              description="Graphic Design Services | Graphic Design Subscription"
+              description="Graphic Design Services | Enigma"
               openGraph={{
-                url: "https://weareenigma.com/graphic-design-subscription",
+                url: "https://weareenigma.com/graphic-design-subscription/",
                 title: "Graphic Design Services | Graphic Design Subscription",
                 description:
-                  "Graphic Design Services | Graphic Design Subscription",
+                  "Graphic Design Services | Enigma",
                   images: [
                   {
-                    url: "https://weareenigma.com/assets/featured-images/index.png",
+                    url: "https://weareenigma.com/assets/featured-images/graphic-design-subscription.png",
                     width: 1200,
                     height: 630,
                     alt: "Graphic Design Subscription",
@@ -96,7 +97,54 @@ useEffect(() => {
                   ],
                 siteName: "Enigma Digital",
               }}
-            />
+      
+              additionalMetaTags={[
+                    {
+                      name: "twitter:title",
+                      content: "Graphic Design Services | Graphic Design Subscription"
+                    },
+                    {
+                      name: "twitter:description",
+                      content: "Graphic Design Services | Enigma"
+                    },
+                    {
+                      name: "twitter:image",
+                      content: "https://weareenigma.com/assets/featured-images/graphic-design-subscription.png"
+                    },
+                  ]}
+                />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/graphic-design-subscription/" />
+            <link rel="alternate" href="https://weareenigma.com/graphic-design-subscription/" hreflang="x-default" />
+            <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntityOfPage":{
+                    "@type": "WebPage",
+                    "@id": "https://weareenigma.com/graphic-design-subscription/"
+                    },
+                    "name": "Graphic Design Subscription",
+                    "description": "Graphic Design Services | Enigma",
+                    "datePublished": "2023-10-01T12:00:00+05:30",
+                    "dateModified": "2023-11-17T12:00:00+05:30",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Enigma Digital",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                    }
+                    }
+                }
+                ),
+            }}
+          />
+        </Head>
 
         <Cursor isGelly={true} />
 

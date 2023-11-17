@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,17 +80,53 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/power-remote-designers-india"
+  },
+  "headline": "Maximizing Remote Designers: Outsourcing to India",
+  "description": "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/power-of-remote-designers/power-of-remote-designers-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/power-of-remote-designers/power-of-remote-designers-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-12-06T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
     <NextSeo
       title="Maximizing Remote Designers: Outsourcing to India"
-      description="Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business"
+      description="Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business."
       openGraph={{
-        url: "https://weareenigma.com/power-remote-designers-india",
+                type: 'article',
+                article: {
+                    publishedTime: '2022-12-06',
+                    modifiedTime: '2023-11-09',
+                    tags: ['WFH-Designers', 'Remote-Working', 'UI/UX-Design', 'Growth-&-Productivity'],
+                },
+        url: "https://weareenigma.com/power-remote-designers-india/",
         title: "Maximizing Remote Designers: Outsourcing to India",
         description:
-          "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business",
+          "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business.",
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png",
@@ -102,7 +138,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Maximizing Remote Designers: Outsourcing to India"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/power-remote-designers-india/" />
+            <link rel="alternate" href="https://weareenigma.com/power-remote-designers-india/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

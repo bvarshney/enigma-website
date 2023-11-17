@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function dmtca() {
               title="DMTCA - Branding, Web Design & Development Case Study | Enigma"
               description="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma."
               openGraph={{
-                url: "https://weareenigma.com/dmtca-digital-branding-case-study",
+                url: "https://weareenigma.com/dmtca-digital-branding-case-study/",
                 title: "DMTCA - Branding, Web Design & Development Case Study | Enigma",
                 description:
                   "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",
@@ -190,7 +191,54 @@ export default function dmtca() {
                   ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "DMTCA - Branding, Web Design & Development Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-dmtca.png"
+                },
+              ]}
             />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/dmtca-digital-branding-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/dmtca-digital-branding-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/dmtca-digital-branding-case-study/"
+                },
+                "name": "DMTCA - Branding, Web Design & Development Case Study | Enigma",
+                "description": "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -534,7 +582,7 @@ export default function dmtca() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>

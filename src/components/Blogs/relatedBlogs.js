@@ -55,7 +55,7 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
                             <h2 className='blog-list-tag'>{blog.category}</h2>
                         </Link>
                     </div>
-                    <h1>{blog.description}</h1>
+                    <h4>{blog.description}</h4>
                 </div>
             ))}
         </div>

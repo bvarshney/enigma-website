@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Scrollbar, { ScrollbarPlugin } from "smooth-scrollbar";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
-import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
 
 gsap.registerPlugin(ScrollTrigger);
 class ScrollTriggerPlugin extends Scrollbar.ScrollbarPlugin {
@@ -146,7 +145,7 @@ const SmoothScroll = ({ onScroll }) => {
 
     transformDelta(delta, fromEvent) {
       if (fromEvent.type === "touchmove") {
-        this.scrollbar.options.damping = 0.1; // change this to whatever you want
+        this.scrollbar.options.damping = 0.5; // change this to whatever you want
       }
       return delta;
     }
@@ -227,16 +226,6 @@ const SmoothScroll = ({ onScroll }) => {
       delegateTo: document,
       alwaysShowTracks: false,
       continuousScrolling: true,
-      plugins: {
-        overscroll: {
-          effect: "bounce",
-          damping: 0.15,
-          maxOverscroll: 80,
-        },
-        mobile: {
-          // speed: 10,
-        },
-      },
     };
  
     //$ Initialize with View and Settings

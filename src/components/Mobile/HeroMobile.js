@@ -86,12 +86,7 @@ export default function HeroMobile() {
 
             <div className="mobile-hero-para" id="para">
               <p>
-                Leveraging the power of{" "}
-                <strong>
-                  Emotion, Consumer Psychology, and Technology,{" "}
-                </strong>
-                we create Digital Brand Experiences that propel your success in
-                the enigmatic realm of bits & bytes.
+                Leveraging the power of<strong> Emotion, Consumer Psychology, and Technology, </strong>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes.
               </p>
             </div>
           </div>

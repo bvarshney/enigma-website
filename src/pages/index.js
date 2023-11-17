@@ -19,6 +19,7 @@ import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
 import Modal from "@/components/PopupForm/formModal";
 import HomeBlogs from "@/components/Home/HomeBlogs";
+import Head from "next/head";
 
 export default function Home() {
 
@@ -43,7 +44,102 @@ export default function Home() {
             ],
             siteName: "Enigma Digital",
           }}
+          
+          additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency"
+            },
+            {
+              name: "twitter:description",
+              content: "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/index.png"
+            },
+          ]}
         />
+
+    <Head>
+      <link rel="canonical" href="https://weareenigma.com/" />
+      <link rel="alternate" href="https://weareenigma.com/" hreflang="x-default" />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/"
+                },
+                "name": "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
+                "description": "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Enigma Digital",
+              "url": "https://weareenigma.com/",
+              "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Suite # 301, Tower A, Grandslam, Ithum A-40, Sector-62",
+                "addressLocality": "Noida",
+                "addressRegion": "UP",
+                "postalCode": "201309",
+                "addressCountry": "IN"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "14"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "28.627458269319703",
+                "longitude": " 77.37259286237833"
+              },
+              "telephone": "+918178026136",
+              "priceRange": "$$",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "10:00",
+                  "closes": "20:00"
+                }
+              ]
+            }
+          ])
+        }}
+      />
+    </Head>
 
       <Preloader />
 
@@ -64,9 +160,7 @@ export default function Home() {
           </section>
 
 {/* PopUp Modal Button */}
-<div>
   <Modal />
-</div>
 {/* End */}
 
       {/* ======================== Concept Scroll ====================== */}

@@ -5778,7 +5778,7 @@ body.loading {
   list-style: none;
   padding: 0.5vw 1.5vw;
   border-radius: 50px;
-  font-size: 1.3vw;
+  font-size: 1.3vw !important;
   font-weight: 500;
   background: var(--black);
   color: var(--white);
@@ -6107,7 +6107,7 @@ body.loading {
 .img-box-related.service__d img{
   height: 60vh;
 }
-.related-box-img h1 {
+.related-box-img h4 {
   max-width: 96%;
   font-size: 1.4vw;
   margin-top: 1vw;
@@ -6142,7 +6142,7 @@ body.loading {
   padding-top: 5vw;
 }
 
-.en-footer-section .en-f__content h1 {
+.en-footer-section .en-f__content h2 {
   font-size: 7vw;
   color: var(--black1);
   display: inline-flex;
@@ -6785,7 +6785,7 @@ a:hover {
     height: 100vh;
   }
 
-  .en-footer-section .en-f__content h1 {
+  .en-footer-section .en-f__content h2 {
     font-size: 6.5vw;
   }
 
@@ -7222,7 +7222,7 @@ a:hover {
     align-items: center;
   }
 
-  .video-section-mobile .video-content-box h1 {
+  .video-section-mobile .video-content-box h4 {
     max-width: 90%;
     font-size: 5.5vw;
     font-weight: 500;
@@ -8015,7 +8015,7 @@ a:hover {
     top: 2vw;
     left: 2vw;
     padding: 1vw 3vw;
-    font-size: 2.5vw;
+    font-size: 2.5vw !important;
   }
 
   .desc-tag {
@@ -8124,7 +8124,7 @@ a:hover {
     padding: 0.7vw 2.5vw;
   }
 
-  .related-box-img h1 {
+  .related-box-img h4 {
     font-size: 2.5vw;
   }
 
@@ -8690,7 +8690,7 @@ a:hover {
     width: 100%;
     height: 100%;
   }
-  .video-section-mobile .video-content-box h1 {
+  .video-section-mobile .video-content-box h4 {
     max-width: 90%;
     font-size: 5vw;
     font-weight: 500;
@@ -9941,7 +9941,7 @@ a:hover {
     top: 4vw;
     left: 2vw;
     padding: 2vw 4.5vw;
-    font-size: 5vw;
+    font-size: 5vw !important;
   }
 
   .desc-tag {
@@ -10038,7 +10038,7 @@ a:hover {
     padding: 1vw 3vw;
   }
 
-  .related-box-img h1 {
+  .related-box-img h4 {
     font-size: 4.5vw;
     text-align: justify;
   }
@@ -10247,7 +10247,7 @@ a:hover {
 .mobile-hero-para p{
   font-size: 6vw;
 }
-.video-section-mobile .video-content-box h1{
+.video-section-mobile .video-content-box h4{
   font-size: 6.3vw;
   margin-bottom: 30px;
 }
@@ -10824,7 +10824,7 @@ input:-webkit-autofill:active{
   font-weight: 500;  
 }
 
-.form-sections h1{
+.form-sections h2{
   font-size: 3.8vw;
   color: var(--black3);
   font-weight: 500;
@@ -11351,7 +11351,7 @@ label.label:hover:before{
   .PopUpmodal-content{
     width: 90vw !important;
   }
-  .form-sections h1{
+  .form-sections h2{
     font-size: 3.5vw;
   }
   .form-sections .step2 h1{
@@ -11396,7 +11396,7 @@ label.label:hover:before{
   .pop-up-div-form{
     margin: 0;
   }
-  .form-sections h1{
+  .form-sections h2{
     font-size: 8vw;
     margin-top: 13vw !important;
   }
@@ -11568,7 +11568,7 @@ label.label:hover:before{
   .budget-slider-container h3{
     font-size: 4vw;
   }
-  .form-sections h1{
+  .form-sections h2{
     font-size: 10vw;
     margin-top: 20vw !important;
   }

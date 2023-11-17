@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,6 +82,35 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://weareenigma.com/ux-design-glossary-guide"
+    },
+    "headline": "UX Design Glossary: Mastering UX Terms & Conceptsx",
+    "description": "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",
+    "image": [
+        "https://weareenigma.com/assets/featured-images/ux-design-glossary.png"
+    ],  
+    "author": {
+      "@type": "Person",
+      "name": "Bhaskar Varshney",
+      "url": "https://in.linkedin.com/in/bvarshney",
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "Enigma Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+      }
+    },
+    "datePublished": "2023-06-14T12:00:00+05:30",
+    "dateModified": "2023-11-09T12:00:00+05:30",
+  };
+
   return (
     <>
 
@@ -88,7 +118,13 @@ if (globalThis.innerWidth>1024) {
       title="UX Design Glossary: Mastering UX Terms & Concepts"
       description="Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
       openGraph={{
-        url: "https://weareenigma.com/ux-design-glossary-guide",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-06-14',
+                    modifiedTime: '2023-11-09',
+                    tags: ['UX-Principles', 'UX-55-Terms', 'UX-Glossary'],
+                },
+        url: "https://weareenigma.com/ux-design-glossary-guide/",
         title: "UX Design Glossary: Mastering UX Terms & Concepts",
         description:
           "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",
@@ -103,7 +139,31 @@ if (globalThis.innerWidth>1024) {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "UX Design Glossary: Mastering UX Terms & Concepts"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/ux-design-glossary.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/ux-design-glossary-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/ux-design-glossary-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 
@@ -218,7 +278,7 @@ if (globalThis.innerWidth>1024) {
             </p>
             
             <p >
-                During a card sorting session, participants are given a set of cards, each labelled with a piece of content or functionality. Participants are then asked to categorize these cards in a way that makes sense to them. They might be asked to sort them into predefined categories (closed card sort), or they might be allowed to create their own categories (open card sort). There's also a hybrid version where participants sort cards into predefined categories but can also create their own if needed.
+                During a card sorting session, participants are given a set of cards, each labelled with a piece of content or functionality. Participants are then asked to categorize these cards in a way that makes sense to them. They might be asked to sort them into predefined categories (closed card sort), or they might be allowed to create their own categories (open card sort). There's also a hybrid version where participants sort cards into predefined categories, but can also create their own if needed.
             </p>
             
             <p >
@@ -312,7 +372,7 @@ if (globalThis.innerWidth>1024) {
             </p>
             
             <p >
-                The goal is to ensure that the design not only meets functional requirements but also provides a positive user experience. Design Validation is essential because it reduces the risk of developing a product that fails to meet user needs or market demand.
+                The goal is to ensure that the design not only meets functional requirements, but also provides a positive user experience. Design Validation is essential because it reduces the risk of developing a product that fails to meet user needs or market demand.
             </p> 
             <p >
                 By validating designs, UX professionals can refine and optimize the user experience, aligning it with users' needs and expectations. Design Validation ensures that the final product delivers on its promise, providing a satisfying and intuitive experience for the target audience.
@@ -367,7 +427,7 @@ if (globalThis.innerWidth>1024) {
             </p>
             
             <p >
-                An Efficiency Ratio might look at factors like how long it takes a user to complete a task, how many steps they had to take, or how many errors they made along the way. For example, if users can complete a task but it takes them a long time or they make many errors, this suggests that the design is not as efficient as it could be.
+                An Efficiency Ratio might look at factors like how long it takes a user to complete a task, how many steps they had to take, or how many errors they made along the way. For example, if users can complete a task, but it takes them a long time or they make many errors, this suggests that the design is not as efficient as it could be.
             </p>
             
             <p >
@@ -612,7 +672,7 @@ if (globalThis.innerWidth>1024) {
             </p>
             
             <p >
-            <span className="bold">Passives (score 7-8):</span> Satisfied but unenthusiastic customers who are vulnerable to competitive offerings.
+            <span className="bold">Passives (score 7-8):</span> Satisfied, but unenthusiastic customers who are vulnerable to competitive offerings.
             </p>
             
             <p >

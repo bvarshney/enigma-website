@@ -17,6 +17,7 @@ import LogoCarousel from "@/components/About/LogoCarousel";
 import NewGifSection from "@/components/About/NewGifSection";
 import Modal from "@/components/PopupForm/formModal";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.config({
   nullTargetWarn: false,
@@ -210,7 +211,7 @@ export default function about() {
         title="About Enigma - UI/UX Design & Digital Marketing Agency India"
         description="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
         openGraph={{
-          url: "https://weareenigma.com/who-we-are",
+          url: "https://weareenigma.com/who-we-are/",
           title: "About Enigma - UI/UX Design & Digital Marketing Agency India",
           description:
             "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
@@ -225,7 +226,54 @@ export default function about() {
             ],
           siteName: "Enigma Digital",
         }}
+        
+        additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "About Enigma - UI/UX Design & Digital Marketing Agency India"
+            },
+            {
+              name: "twitter:description",
+              content: "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/about.png"
+            },
+          ]}
       />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/who-we-are/" />
+        <link rel="alternate" href="https://weareenigma.com/who-we-are/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/who-we-are/"
+                },
+                "name": "About",
+                "description": "Enigma is a team of creators, discoverers, 	dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -501,7 +549,7 @@ export default function about() {
               <p data-jelly className="why-us-anim">
                 <span>
                   We have been asked this question like a zillion times – How
-                  are you different than the other agencies out there. Well, the
+                  are you different from the other agencies out there. Well, the
                   truth is that we were “Born Different”.{" "}
                 </span>
               </p>

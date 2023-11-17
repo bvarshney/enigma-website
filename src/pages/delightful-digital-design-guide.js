@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,6 +80,38 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/delightful-digital-design-guide"
+  },
+  "headline": "Enigma's Guide to Delightful UX Design for Digital Platforms",
+  "description": "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/how-to-delightfully-design/how-to-delightfully-design-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/how-to-delightfully-design/how-to-delightfully-design-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/how-to-delightfully-design/how-to-delightfully-design-3.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/how-to-delightfully-design/how-to-delightfully-design-4.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-11-15T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +119,13 @@ if (globalThis.innerWidth>1024) {
               title="Enigma's Guide to Delightful UX Design for Digital Platforms"
               description="Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design."
               openGraph={{
-                url: "https://weareenigma.com/delightful-digital-design-guide",
+                type: 'article',
+                article: {
+                    publishedTime: '2022-11-15',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Design-Guide', 'App-Design', 'UI/UX-Design', 'UI-Principles'],
+                },
+                url: "https://weareenigma.com/delightful-digital-design-guide/",
                 title: "Enigma's Guide to Delightful UX Design for Digital Platforms",
                 description:
                   "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design.",
@@ -102,7 +140,31 @@ if (globalThis.innerWidth>1024) {
                   ],
                   siteName: "Enigma Digital",
               }}
-            />     
+              
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Enigma's Guide to Delightful UX Design for Digital Platforms"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/digital-design-guide.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/delightful-digital-design-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/delightful-digital-design-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

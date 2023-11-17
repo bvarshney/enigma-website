@@ -97,16 +97,16 @@ function Footer() {
       <footer className="footer-main">
         <div className="en-footer-section">
           <div className="en-f__content">
-            <h1>
+            <h2>
               <span className="wt-400" id="say">
                 Let's bring your
               </span>
-            </h1>
-            <h1>
+            </h2>
+            <h2>
               <span className="wt-400 mr-11" id="say">
                 ideas to life!
               </span>
-            </h1>
+            </h2>
           </div>
           <div className="right-en-box">
             <div className="image-box contact-us-box">
@@ -211,7 +211,7 @@ function Footer() {
                     data-cursor-size="80px"
                   >
                     <a target="blank" href="https://www.youtube.com/">
-                      <span data-text="Youtube">Youtube</span>
+                      <span data-text="YouTube">YouTube</span>
                     </a>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ function Footer() {
                     data-cursor-size="80px"
                   >
                     <a
-                      href="https://in.linkedin.com/company/in-enigmadigital"
+                      href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing"
                       target="blank"
                     >
                       <span data-text="LinkedIn">LinkedIn</span>

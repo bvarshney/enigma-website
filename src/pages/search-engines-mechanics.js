@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/search-engines-mechanics"
+  },
+  "headline": "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",
+  "description": "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/how-search-engine/how-search-engine-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/how-search-engine/how-search-engine-2.webp",
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-12-30T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +118,13 @@ if (globalThis.innerWidth>1024) {
               title="Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
               description="Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
               openGraph={{
-                url: "https://weareenigma.com/search-engines-mechanics",
+                type: 'article',
+                article: {
+                    publishedTime: '2022-12-30',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Search-Engines-Mechanics', 'UI/UX-Design', 'Google-Search-Console', 'Google-Analytics'],
+                },
+                url: "https://weareenigma.com/search-engines-mechanics/",
                 title: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",
                 description:
                   "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",
@@ -102,7 +139,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/search-engines-mechanics/" />
+            <link rel="alternate" href="https://weareenigma.com/search-engines-mechanics/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+          </Head>
 
       <SmoothScroll />
 

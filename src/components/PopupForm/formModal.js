@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import ContactUs from './contactUs';
+import React, { useState, useEffect } from 'react';
 import { easeInOut, motion } from "framer-motion";
 import Image from 'next/image';
 import { Cursor } from "./../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
+import dynamic from 'next/dynamic';
+
+// Dynamic import for ContactUs
+const DynamicContactUs = dynamic(() => import('./contactUs'), { loading: () => <p>Loading...</p>, ssr: false });
 
 export default function Modal() {
-  // Define a state variable to track the modal's display state
   const [modalOpen, setModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [ContactUs, setContactUs] = useState(null);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -17,6 +20,17 @@ export default function Modal() {
   const handleMouseLeave = () => {
     setIsHovered(false);
   }
+
+  // Function to dynamically load the ContactUs component
+  useEffect(() => {
+    if (modalOpen && !ContactUs) {
+      const loadComponent = async () => {
+        const DynamicComponent = await DynamicContactUs;
+        setContactUs(DynamicComponent);
+      };
+      loadComponent();
+    }
+  }, [modalOpen, ContactUs]);
 
   // Function to open the modal
   const openModal = () => {
@@ -94,7 +108,8 @@ export default function Modal() {
             />
           </button>
         </div>
-        <ContactUs />
+        {ContactUs && <ContactUs />}
+        {/* <ContactUs /> */}
       </div>
     </div>
     </div>

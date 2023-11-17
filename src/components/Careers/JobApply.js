@@ -384,7 +384,7 @@ export default function JobApply(){
 
             <div className="font-body mb-14">
                 <h4 className="text-3xl font-medium mb-4">
-                    Porfolio Url (optional)
+                    Portfolio URL (optional)
                 </h4>
                 <div className="flex flex-col">
                     <label className="text-2xl mb-2">URL (LinkedIn, Behance, Dribble)</label>

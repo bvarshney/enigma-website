@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/essential-link-building-guide"
+  },
+  "headline": "Ultimate Beginner's Guide to Effective Link Building",
+  "description": "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/guide-to-link-building/guide-to-link-building-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/guide-to-link-building/guide-to-link-building-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
     
@@ -87,7 +118,13 @@ if (globalThis.innerWidth>1024) {
               title="Ultimate Beginner's Guide to Effective Link Building"
               description="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
               openGraph={{
-                url: "https://weareenigma.com/essential-link-building-guide",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Link-Building', 'Seo', 'Marketing', 'Backlinks'],
+                },
+                url: "https://weareenigma.com/essential-link-building-guide/",
                 title: "Ultimate Beginner's Guide to Effective Link Building",
                 description:
                   "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
@@ -102,7 +139,31 @@ if (globalThis.innerWidth>1024) {
                   ],
                   siteName: "Enigma Digital",
               }}
+              
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Ultimate Beginner's Guide to Effective Link Building"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/link-building-guide.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/essential-link-building-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/essential-link-building-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+          </Head>
 
       <SmoothScroll />
 
@@ -268,7 +329,7 @@ if (globalThis.innerWidth>1024) {
 
             <p>
               When it comes to link building, it's crucial to prioritize quality
-              over quantity. Acquiring a large number of low-quality backlinks
+              over quantity. Acquiring numerous low-quality backlinks
               can do more harm than good, potentially leading to penalties from
               search engines like Google. Instead, focus on obtaining backlinks
               from reputable websites with high domain authority, relevance to

@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,13 +81,49 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/link-building-website-list"
+  },
+  "headline": "List of 30 Link Building Websites - SEO Guide",
+  "description": "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/link-building-website-list/link-building-website-list-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/link-building-website-list/link-building-website-list-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-04-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
       <NextSeo
         title="List of 30 Link Building Websites - SEO Guide"
         description="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
         openGraph={{
-          url: "https://weareenigma.com/link-building-website-list",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-04-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Link-Building', 'Marketing', 'Website-Development', 'Backlinks'],
+                },
+          url: "https://weareenigma.com/link-building-website-list/",
           title: "List of 30 Link Building Websites - SEO Guide",
           description:
             "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",
@@ -101,7 +138,31 @@ if (globalThis.innerWidth>1024) {
                 ],
             siteName: "Enigma Digital",
         }}
-      />
+      
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "List of 30 Link Building Websites - SEO Guide"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/link-building-website-list.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/link-building-website-list/" />
+            <link rel="alternate" href="https://weareenigma.com/link-building-website-list/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,7 +156,7 @@ export default function kedarkala() {
         title="Kedarkala Web Design, UX & Branding Case Study | Enigma"
         description="Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved."
         openGraph={{
-          url: "https://weareenigma.com/kedarkala-portfolio-website-case-study",
+          url: "https://weareenigma.com/kedarkala-portfolio-website-case-study/",
           title:
             "Kedarkala Web Design, UX & Branding Case Study | Enigma",
           description:
@@ -171,7 +172,54 @@ export default function kedarkala() {
                   ],
                 siteName: "Enigma Digital",
               }}
-      />
+      
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Kedarkala Web Design, UX & Branding Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-kedarkala.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/kedarkala-portfolio-website-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/kedarkala-portfolio-website-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/kedarkala-portfolio-website-case-study/"
+                },
+                "name": "Kedarkala Web Design, UX & Branding Case Study | Enigma",
+                "description": "Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 

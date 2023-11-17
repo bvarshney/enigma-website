@@ -10,14 +10,14 @@ const jobs = [
         slug: generateSlug('Junior-UI-UX-Designer'),
         type: 'FULL_TIME',
         image: 'ui-ux-junior.webp',
-        experience: '6-24 months experience',
+        experience: '6 – 24 months experience',
         location: 'Noida, Sector 62',
-        compensation: 'INR 350,000/- to INR 650,000/-',
+        compensation: 'INR 350,000/ – to INR 650,000/-',
         benefits: [
           'Full-time',
           'Flexible Hours',
-          'Onsite',
-          '6-24 months experience'
+          'On-site',
+          '6 – 24 months experience'
         ],
         bgImage: "ui-ux-design.webp",
 
@@ -66,19 +66,19 @@ const jobs = [
       slug: generateSlug('SEO-Specialist'),
       type: 'FULL_TIME',
       image: 'seo-specialist.webp',
-      experience: '2-4 years experience',
+      experience: '2 – 4 years experience',
       location: 'Noida, Sector 62',
-      compensation: 'INR 400,000/- to INR 700,000/-',
+      compensation: 'INR 400,000/ – to INR 700,000/-',
       benefits: [
         'Full-time',
         'Flexible Hours',
-        'Onsite',
-        '2-4 years experience'
+        'On-site',
+        '2 – 4 years experience'
       ],
       bgImage: "seo.webp",
 
       sDescription: 'Are you passionate about SEO and eager to drive digital excellence?',
-      lDescription: 'We are seeking a detail-oriented and data-driven SEO Specialist to join our dynamic team at Enigma Digital. In this role, you will be responsible for developing and implementing effective search engine optimization strategies to increase the online presence and organic traffic of our diverse clientele. Your expertise will be crucial in analyzing trends, executing tactical SEO initiatives, and measuring the effectiveness of various campaigns.',
+      lDescription: 'We are seeking a detail-oriented and data-driven SEO Specialist to join our dynamic team at Enigma Digital. In this role, you will be responsible for developing and implementing effective search engine optimization strategies to increase the online presence and organic traffic of our diverse clientele. Your expertise will be crucial in analysing trends, executing tactical SEO initiatives, and measuring the effectiveness of various campaigns.',
       responsibilities: [
         "Conduct comprehensive keyword research and competitive analysis to identify opportunities for growth.",
         'Develop and implement SEO strategies that align with client objectives and digital marketing goals.',
@@ -90,12 +90,12 @@ const jobs = [
         "Work with marketing teams to drive SEO in content creation and content programming. Recommend changes to website architecture, content, linking, and other factors to improve SEO positions for target keywords.",
       ],
       qualifications: [
-        '2-5 years of proven experience as an SEO Specialist or similar role with a track record of creating & implementing successful SEO strategies, across technology & SaaS industry.',
+        '2 – 5 years of proven experience as an SEO Specialist or similar role with a track record of creating & implementing successful SEO strategies, across technology & SaaS industry.',
         'Strong understanding of search engine algorithms and ranking methods.',
         'Experience with SEO industry tools, such as Google Analytics, SEMrush, Screaming Frog, and Adobe Analytics.',
         'Proven ability to complete competitive analysis of other companies within the industry.',
         "Excellent written and verbal communication skills (email, phone, etc. for blogger outreach & partnership opportunities).",
-        "Comfortable analyzing high volumes of data on a daily basis.",
+        "Comfortable analysing high volumes of data on a daily basis.",
         "Familiarity with WordPress, Shopify, and other widely used content management systems.",
         "Experience with other aspects of marketing, such as customer growth and promotion, is a plus.",
       ],
@@ -121,14 +121,14 @@ const jobs = [
       slug: generateSlug('Front-End-Developer'),
       type: 'FULL_TIME',
       image: 'front-end.webp',
-      experience: '1-2 years experience',
+      experience: '1 – 2 years experience',
       location: 'Noida, Sector 62',
-      compensation: 'INR 400,000/- to INR 700,000/-',
+      compensation: 'INR 400,000/ – to INR 700,000/-',
       benefits: [
         'Full-time',
         'Flexible Hours',
-        'Onsite',
-        '1-2 years experience'
+        'On-site',
+        '1 – 2 years experience'
       ],
       bgImage: "development.webp",
 
@@ -179,14 +179,14 @@ const jobs = [
       slug: generateSlug('Business-Development-Manager'),
       type: 'FULL_TIME',
       image: 'bd-manager.webp',
-      experience: '2-5 years experience',
+      experience: '2 – 5 years experience',
       location: 'Noida, Sector 62',
-      compensation: 'INR 600,000/- to INR 900,000/- (incentives extra)',
+      compensation: 'INR 600,000/ – to INR 900,000/- (incentives extra)',
       benefits: [
         'Full-time',
         'Flexible Hours',
-        'Onsite',
-        '2-5 years experience'
+        'On-site',
+        '2 – 5 years experience'
       ],
       bgImage: "bd.webp",
 
@@ -236,14 +236,14 @@ const jobs = [
       slug: generateSlug('Senior-Account-Executive'),
       type: 'FULL_TIME',
       image: 'account-manager-senior.webp',
-      experience: ' 2-5 years experience',
+      experience: ' 2 – 5 years experience',
       location: 'Noida, Sector 62',
-      compensation: 'INR 400,000/- to INR 700,000/- (incentives extra)',
+      compensation: 'INR 400,000/ – to INR 700,000/- (incentives extra)',
       benefits: [
         'Full-time',
         'Flexible Hours',
-        'Onsite',
-        ' 2-5 years experience'
+        'On-site',
+        ' 2 – 5 years experience'
       ],
       bgImage: "account.webp",
 
@@ -302,7 +302,7 @@ const jobs = [
       benefits: [
         'Part-time',
         'Flexible Hours',
-        'Hybrid/Onsite',
+        'Hybrid/On-site',
         "3/6 months",
       ],
       bgImage: "ui-ux-design.webp",
@@ -312,7 +312,7 @@ const jobs = [
       responsibilities: [
         'Assist in the creation of digital design assets for a variety of platforms, including web, mobile, and social media.',
         'Participate in brainstorming sessions and contribute creative ideas for campaign strategies and design concepts.',
-        'Support the design team in researching design trends, user behaviors, and new technologies.',
+        'Support the design team in researching design trends, user behaviours, and new technologies.',
         'Help prepare presentations and mock-ups for client pitches and internal reviews.',
         'Collaborate with cross-functional teams, including marketing, development, and product management, to ensure design consistency and coherence.',
         'Receive and act on feedback from senior design staff to refine and iterate on design projects.',
@@ -325,7 +325,7 @@ const jobs = [
         "Basic proficiency in design software (e.g., Adobe Creative Suite, Figma).",
         "A strong desire to learn and grow within the field of digital design.",
         "Excellent communication skills and the ability to work well in a team environment.",
-        "An understanding of design principles, typography, color theory, and user-centered design practices.",
+        "An understanding of design principles, typography, colour theory, and user-centred design practices.",
         "Ability to manage time effectively and meet deadlines.",
         "A positive attitude and eagerness to take on new challenges."
       ],
@@ -357,7 +357,7 @@ const jobs = [
       benefits: [
         'Part-time',
         'Flexible Hours',
-        'Hybrid/Onsite',
+        'Hybrid/On-site',
         "3 months",
       ],
       bgImage: "development.webp",

@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function patronum() {
       title="Patronum Branding & Website Design Case Study | Enigma"
       description="Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product."
       openGraph={{
-        url: "https://weareenigma.com/patronum-saas-case-study",
+        url: "https://weareenigma.com/patronum-saas-case-study/",
         title: "Patronum Branding & Website Design Case Study | Enigma",
         description:
           "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product.",
@@ -190,7 +191,54 @@ export default function patronum() {
                   ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Patronum Branding & Website Design Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-patronum.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/patronum-saas-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/patronum-saas-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/patronum-saas-case-study/"
+                },
+                "name": "Patronum Branding & Website Design Case Study | Enigma",
+                "description": "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>    
 
       <SmoothScroll />
 
@@ -596,7 +644,7 @@ export default function patronum() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>

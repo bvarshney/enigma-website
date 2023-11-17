@@ -288,9 +288,9 @@ const handleBudgetChange = (value) => {
       </div>
   
       <div>
-        <h1 ref={inputRef}>Hi
+        <h2 ref={inputRef}>Hi
           <span className="color-primary"> There!</span>
-        </h1>
+        </h2>
         <p>What is Your Name?</p>
       </div>
 
@@ -351,9 +351,9 @@ const handleBudgetChange = (value) => {
     </div>
     
     <div className="step2">
-      <h1>Nice to meet you,
+      <h2>Nice to meet you,
         <span className="color-primary capitalize"> {firstName}!</span>
-      </h1>
+      </h2>
       <p>Please provide your contact information?</p>
     </div>
     
@@ -440,7 +440,7 @@ const handleBudgetChange = (value) => {
       </h5>
     </div>
     <div>
-      <h1>Superb, <span className="color-primary">{firstName}!</span></h1>
+      <h2>Superb, <span className="color-primary">{firstName}!</span></h2>
       <p>What can we help you with?</p>
     </div>
     

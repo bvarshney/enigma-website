@@ -2,6 +2,23 @@ module.exports = {
     siteUrl: process.env.SITE_URL || 'https://weareenigma.com',
     generateRobotsTxt: true,
     generateIndexSitemap: false,
+    robotsTxtOptions: {
+      transformRobotsTxt: async (_, robotsTxt) => {
+        const withoutHost = robotsTxt.replace(
+          `# Host\nHost: ${process.env.SITE_URL}\n\n`,
+          "",
+        );
+        return withoutHost;
+      },
+      policies: [
+        {
+          userAgent: '*',
+          allow: '/',
+          crawlDelay: '10'
+        },
+      ],
+    },
+    exclude: ["/thank-you","/graphic-design-subscription"],
     additionalPaths: async (config) => [
       await config.transform(config,"/blog/strategy"),
       await config.transform(config,"/blog/design"),

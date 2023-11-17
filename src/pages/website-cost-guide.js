@@ -88,7 +88,7 @@ const structuredData = {
     "@type": "WebPage",
     "@id": "https://weareenigma.com/website-cost-guide"
   },
-  "headline": "The UX Design Glossary: Deciphering The Alphabet Soup Of UX Jargon",
+  "headline": "How Much Should a Website Cost? Enigma's Insightful Guide",
   "description": "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
   "image": [
     "https://weareenigma.com/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-1.webp",
@@ -96,18 +96,19 @@ const structuredData = {
   ],  
   "author": {
     "@type": "Person",
-    "name": "Bhaskar Varshney"
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
     }
   },
-  "datePublished": "2023-03-14",
-  "dateModified": "2023-11-09"
+  "datePublished": "2023-03-14T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
 };
 
   return (
@@ -121,9 +122,9 @@ const structuredData = {
                 article: {
                     publishedTime: '2023-03-14',
                     modifiedTime: '2023-11-09',
-                    tags: ['Website Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
+                    tags: ['Website-Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
                 },
-                url: "https://weareenigma.com/website-cost-guide",
+                url: "https://weareenigma.com/website-cost-guide/",
                 title: "How Much Should a Website Cost? Enigma's Insightful Guide",
                 description:
                   "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
@@ -138,14 +139,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
             
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "How Much Should a Website Cost? Enigma's Insightful Guide"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/website-cost.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/website-cost-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/website-cost-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

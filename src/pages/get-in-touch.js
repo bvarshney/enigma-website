@@ -15,6 +15,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
 import Modal from "../components/PopupForm/formModal";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,7 +116,7 @@ export default function contact() {
         title="We Elevate Your Digital Presence | Contact Enigma"
         description="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
         openGraph={{
-          url: "https://weareenigma.com/get-in-touch",
+          url: "https://weareenigma.com/get-in-touch/",
           title:
             "We Elevate Your Digital Presence | Contact Enigma",
           description:
@@ -131,7 +132,54 @@ export default function contact() {
                   ],
                 siteName: "Enigma Digital",
         }}
-      />
+      
+        additionalMetaTags={[
+              {
+                name: "twitter:title",
+                content: "We Elevate Your Digital Presence | Contact Enigma"
+              },
+              {
+                name: "twitter:description",
+                content: "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
+              },
+              {
+                name: "twitter:image",
+                content: "https://weareenigma.com/assets/featured-images/contact.png"
+              },
+            ]}
+          />
+
+        <Head>
+            <link rel="canonical" href="https://weareenigma.com/get-in-touch/" />
+            <link rel="alternate" href="https://weareenigma.com/get-in-touch/" hreflang="x-default" />
+            <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntityOfPage":{
+                    "@type": "WebPage",
+                    "@id": "https://weareenigma.com/get-in-touch/"
+                    },
+                    "name": "Contact",
+                    "description": "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",
+                    "datePublished": "2023-01-01T12:00:00+05:30",
+                    "dateModified": "2023-11-17T12:00:00+05:30",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Enigma Digital",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                    }
+                    }
+                }
+                ),
+            }}
+            />
+        </Head>
 
       <SmoothScroll />
 

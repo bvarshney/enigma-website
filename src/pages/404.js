@@ -6,12 +6,13 @@ import styles from "@/styles/404.module.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import "react-creative-cursor/dist/styles.css";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function NotFound() {
   return (
     <div>
 
-      <NextSeo
+            <NextSeo
               title="404 | Page Not Found"
               description="404 Page not found please go back to home. This is Enigma Digital."
               openGraph={{
@@ -30,7 +31,54 @@ export default function NotFound() {
                 ],
                 siteName: "Enigma Digital",
               }}
+              
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "404 | Page Not Found"
+                },
+                {
+                  name: "twitter:description",
+                  content: "404 Page not found please go back to home. This is Enigma Digital."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/thankyou.png"
+                },
+              ]}
             />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/404/" />
+        <link rel="alternate" href="https://weareenigma.com/404/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/404/"
+                },
+                "name": "404",
+                "description": "404 Page not found please go back to home. This is Enigma Digital.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 

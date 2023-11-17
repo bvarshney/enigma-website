@@ -80,7 +80,7 @@ const HomeBlogs = () => {
 
     <div ref={homeBlog} className="related-articles">
         <div className="homeBlogs">
-          <h1 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h1>
+          <h2 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h2>
           <Link href="/blog">
             <span>All Articles</span>
           </Link>
@@ -104,7 +104,7 @@ const HomeBlogs = () => {
                             <h2 className='blog-list-tag'>{blog.category}</h2>
                         </Link>
                     </div>
-                    <h1>{blog.description}</h1>
+                    <h4>{blog.description}</h4>
                 </div>
             ))}
         </div>

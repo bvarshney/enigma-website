@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,6 +80,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/benefits-of-organic-digital-marketing"
+  },
+  "headline": "The Power & Benefits of Organic Digital Marketing",
+  "description": "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/organic-digital-marketing/organic-digital-marketing-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-12-20T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +118,13 @@ if (globalThis.innerWidth>1024) {
       title="The Power & Benefits of Organic Digital Marketing"
       description="Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
       openGraph={{
-        url: " https://weareenigma.com/benefits-of-organic-digital-marketing",
+                type: 'article',
+                article: {
+                    publishedTime: '2022-12-20',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Organic-Marketing', 'Marketing', 'SEO', 'Startegies'],
+                },
+        url: " https://weareenigma.com/benefits-of-organic-digital-marketing/",
         title: "The Power & Benefits of Organic Digital Marketing",
         description:
           "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",
@@ -102,7 +139,31 @@ if (globalThis.innerWidth>1024) {
                   ],
                   siteName: "Enigma Digital",
       }}
-    />    
+
+      additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "The Power & Benefits of Organic Digital Marketing"
+            },
+            {
+              name: "twitter:description",
+              content: "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png"
+            },
+          ]}
+      />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" />
+        <link rel="alternate" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -497,7 +558,7 @@ if (globalThis.innerWidth>1024) {
                     Organic Marketing
                 </h1>
                 <h1 className="blog__dt-tag">
-                    Seo
+                    SEO
                 </h1>
                 <h1 className="blog__dt-tag">
                     Startegies

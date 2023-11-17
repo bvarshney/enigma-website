@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import Image from "next/image";
 import PageLoader from "../components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,7 +157,7 @@ export default function dharan() {
               title="Dharan E-Commerce Design & Development Case Study | Enigma"
               description="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
               openGraph={{
-                url: "https://weareenigma.com/dharan-ecommerce-case-study",
+                url: "https://weareenigma.com/dharan-ecommerce-case-study/",
                 title: "Dharan E-Commerce Design & Development Case Study | Enigma",
                 description:
                   "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
@@ -171,7 +172,54 @@ export default function dharan() {
                   ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Dharan E-Commerce Design & Development Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png"
+                },
+              ]}
             />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/dharan-ecommerce-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/dharan-ecommerce-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/dharan-ecommerce-case-study/"
+                },
+                "name": "Dharan E-Commerce Design & Development Case Study | Enigma",
+                "description": "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -311,7 +359,7 @@ export default function dharan() {
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
                     Dharan's existing website was plagued by several issues,
-                    including outdated design, poor navigation, and a lackluster
+                    including outdated design, poor navigation, and a lacklustre
                     user experience.
                   </h4>
                   <p data-jelly>
@@ -551,7 +599,7 @@ export default function dharan() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.dharancolorMainBox}>
               <div className={styles.dharancolorBox}>

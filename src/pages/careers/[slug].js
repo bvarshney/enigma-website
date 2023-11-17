@@ -68,13 +68,14 @@ function JobDetail({ job }) {
     "industry": "Marketing & Advertising",
     "employmentType": job.type,
     "datePosted": job.postingDate,
-    "validThrough": "",
+    "validThrough": "2024-01-31",
     "jobLocation": {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Sector-62",
-        "addressLocality": "Noida",
+        "streetAddress": "A-40, Glandslam Ithum",
+        "addressLocality": "Sector 62",
+        "addressRegion": "Noida",
         "postalCode": "201301",
         "addressCountry": "IN"
       }
@@ -113,9 +114,26 @@ function JobDetail({ job }) {
           ],
           siteName: "Enigma Digital",
         }}
-      />
+
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: `${job.title} | Careers at Enigma Digital`
+                },
+                {
+                  name: "twitter:description",
+                  content: `${job.sDescription}`
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/career.png"
+                },
+              ]}
+            />
 
       <Head>
+        <link rel="canonical" href={`https://weareenigma.com/job/${job.slug}`} />
+        <link rel="alternate" href={`https://weareenigma.com/job/${job.slug}`} hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -172,12 +173,12 @@ export default function quickx() {
 
     <NextSeo
       title="QuickX - Branding & Mobile App Design Case Study | Enigma"
-      description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step."
+      description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step."
       openGraph={{
-        url: "https://weareenigma.com/quickx-crypto-case-study",
+        url: "https://weareenigma.com/quickx-crypto-case-study/",
         title: "QuickX - Branding & Mobile App Design Case Study | Enigma",
         description:
-          "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step.",
+          "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step.",
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png",
@@ -189,7 +190,54 @@ export default function quickx() {
                   ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "QuickX - Branding & Mobile App Design Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/quickx-crypto-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/quickx-crypto-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/quickx-crypto-case-study/"
+                },
+                "name": "QuickX - Branding & Mobile App Design Case Study | Enigma",
+                "description": "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>   
 
       <SmoothScroll />
 
@@ -217,7 +265,7 @@ export default function quickx() {
                 >
                   <Link href="/quickx-crypto-case-study" className={styles.Link}>
                   <button aria-label="link button">
-                    quickx.app
+                    quickX.app
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}
@@ -594,7 +642,7 @@ export default function quickx() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.quickxcolorBox}>
               <div className={styles.quickxcolorBoxHeadingBackground}>

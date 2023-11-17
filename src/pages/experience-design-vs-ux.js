@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/experience-design-vs-ux"
+  },
+  "headline": "Experience Design vs UX: Key Differences Explained",
+  "description": "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-3.webp",
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-02-17T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +119,13 @@ if (globalThis.innerWidth>1024) {
       title="Experience Design vs UX: Key Differences Explained"
       description="Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
       openGraph={{
-        url: "https://weareenigma.com/experience-design-vs-ux",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-02-17',
+                    modifiedTime: '2023-11-09',
+                    tags: ['UX-Design', 'Donald-Arthur', 'Experience-Design', 'Website-Animations'],
+                },
+        url: "https://weareenigma.com/experience-design-vs-ux/",
         title: "Experience Design vs UX: Key Differences Explained",
         description:
           "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",
@@ -102,7 +140,31 @@ if (globalThis.innerWidth>1024) {
                 ],
           siteName: "Enigma Digital",
       }}
-    />    
+
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Experience Design vs UX: Key Differences Explained"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/expeirence-design-vs-ux.png"
+                },
+              ]}
+            />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/experience-design-vs-ux/" />
+            <link rel="alternate" href="https://weareenigma.com/experience-design-vs-ux/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

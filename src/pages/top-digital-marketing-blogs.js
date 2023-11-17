@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/top-digital-marketing-blogs"
+  },
+  "headline": "Top 20 Digital Marketing Blogs for Expert Strategies",
+  "description": "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/top-20-digital-marketing-blogs/top-20-digital-marketing-blogs-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-02-07T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +119,13 @@ if (globalThis.innerWidth>1024) {
       title="Top 20 Digital Marketing Blogs for Expert Strategies"
       description="Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy."
       openGraph={{
-        url: "https://weareenigma.com/top-digital-marketing-blogs",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-02-07',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Top-Marketing-Blogs', 'Successful-Marketing', 'Conversion-Rates', 'SEO-Tactics'],
+                },
+        url: "https://weareenigma.com/top-digital-marketing-blogs/",
         title: "Top 20 Digital Marketing Blogs for Expert Strategies",
         description:
           "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",
@@ -102,7 +140,31 @@ if (globalThis.innerWidth>1024) {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Top 20 Digital Marketing Blogs for Expert Strategies"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/top-digital-marketing-blogs/" />
+            <link rel="alternate" href="https://weareenigma.com/top-digital-marketing-blogs/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

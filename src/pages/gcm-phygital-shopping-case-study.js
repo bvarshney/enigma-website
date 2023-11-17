@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function gcm() {
               title="Garden City Mall - Phygital Shopping Experience Case Study | Enigma"
               description="Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma."
               openGraph={{
-                url: "https://weareenigma.com/gcm-phygital-shopping-case-study",
+                url: "https://weareenigma.com/gcm-phygital-shopping-case-study/",
                 title: "Garden City Mall - Phygital Shopping Experience Case Study | Enigma",
                 description:
                   "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",
@@ -190,7 +191,54 @@ export default function gcm() {
                   ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Garden City Mall - Phygital Shopping Experience Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-gcm.png"
+                },
+              ]}
             />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/gcm-phygital-shopping-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/gcm-phygital-shopping-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/gcm-phygital-shopping-case-study/"
+                },
+                "name": "Garden City Mall - Phygital Shopping Experience Case Study | Enigma",
+                "description": "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -574,7 +622,7 @@ export default function gcm() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>

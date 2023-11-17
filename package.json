@@ -29,7 +29,6 @@
     "intersection-observer": "^0.12.2",
     "jquery": "^3.7.0",
     "libphonenumber-js": "^1.10.44",
-    "locomotive-scroll": "^5.0.0-beta.8",
     "next": "^13.4.19",
     "next-connect": "^1.0.0",
     "next-seo": "^6.1.0",

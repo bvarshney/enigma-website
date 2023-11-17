@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/technical-seo-basics"
+  },
+  "headline": "Comprehensive Guide to Technical SEO Essentials",
+  "description": "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/technical-seo-basics/technical-seo-basics-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/technical-seo-basics/technical-seo-basics-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-31T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +118,13 @@ if (globalThis.innerWidth>1024) {
               title="Comprehensive Guide to Technical SEO Essentials"
               description="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
               openGraph={{
-                url: "https://weareenigma.com/technical-seo-basics",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-31',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Technical-SEO', 'Google-Search-Console', 'Page-Speed', 'Google-Analytics'],
+                },
+                url: "https://weareenigma.com/technical-seo-basics/",
                 title: "Comprehensive Guide to Technical SEO Essentials",
                 description:
                   "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
@@ -102,7 +139,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Comprehensive Guide to Technical SEO Essentials"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/technical-seo-basics.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/technical-seo-basics/" />
+            <link rel="alternate" href="https://weareenigma.com/technical-seo-basics/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+          </Head>
 
       <SmoothScroll />
 
@@ -456,7 +517,7 @@ if (globalThis.innerWidth>1024) {
                     Technical SEO
                 </h1>
                 <h1 className="blog__dt-tag">
-                    Google Serach Console
+                    Google Search Console
                 </h1>
                 <h1 className="blog__dt-tag">
                     Page Speed

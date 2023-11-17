@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/beginner-seo-guide"
+  },
+  "headline": "On-Page & Off-Page SEO: Optimize Your Website with Enigma",
+  "description": "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/beginner-guide-to-seo/beginner-guide-to-seo-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/beginner-guide-to-seo/beginner-guide-to-seo-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-17T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,7 +118,13 @@ if (globalThis.innerWidth>1024) {
       title="On-Page & Off-Page SEO: Optimize Your Website with Enigma"
       description="Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success."
       openGraph={{
-        url: "https://weareenigma.com/beginner-seo-guide",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-17',
+                    modifiedTime: '2023-11-09',
+                    tags: ['On-Page-Seo', 'Marketing', 'Digital-Marketing', 'DA'],
+                },
+        url: "https://weareenigma.com/beginner-seo-guide/",
         title: "On-Page & Off-Page SEO: Optimize Your Website with Enigma",
         description:
           "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",
@@ -101,8 +138,31 @@ if (globalThis.innerWidth>1024) {
                     },
                   ],
                   siteName: "Enigma Digital",
-      }}
-    />    
+          }}
+          additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "On-Page & Off-Page SEO: Optimize Your Website with Enigma"
+            },
+            {
+              name: "twitter:description",
+              content: "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/beginner-seo-guide.png"
+            },
+          ]}
+      />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/beginner-seo-guide/" />
+        <link rel="alternate" href="https://weareenigma.com/beginner-seo-guide/" hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -171,7 +231,7 @@ if (globalThis.innerWidth>1024) {
               <span className="bold">Meta descriptions:</span> Meta descriptions
               are brief summaries of your web page's content that appear in
               search engine results. A well-crafted meta description should
-              include relevant keywords, be between 150-160 characters, and
+              include relevant keywords, be between 150 – 160 characters, and
               entice users to click on your link.
             </p>
 

@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function wragby() {
       title="Wragby Solutions: A Case Study in Digital Innovation"
       description="Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results."
       openGraph={{
-        url: "https://weareenigma.com/wragby-solutions-case-study",
+        url: "https://weareenigma.com/wragby-solutions-case-study/",
         title: "Wragby Solutions: A Case Study in Digital Innovation",
         description:
           "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results.",
@@ -190,7 +191,54 @@ export default function wragby() {
                   ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Wragby Solutions: A Case Study in Digital Innovation"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-wragby.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/wragby-solutions-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/wragby-solutions-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/wragby-solutions-case-study/"
+                },
+                "name": "Wragby Solutions: A Case Study in Digital Innovation",
+                "description": "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -595,7 +643,7 @@ export default function wragby() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>

@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +176,7 @@ export default function pdtl() {
       title="PDTL Ecommerce & Marketing Automation Case Study | Enigma"
       description="Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance."
       openGraph={{
-        url: "https://weareenigma.com/pdtl-ecommerce-automation-case-study",
+        url: "https://weareenigma.com/pdtl-ecommerce-automation-case-study/",
         title: "PDTL Ecommerce & Marketing Automation Case Study | Enigma",
         description:
           "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance.",
@@ -190,7 +191,54 @@ export default function pdtl() {
                   ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "PDTL Ecommerce & Marketing Automation Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-pdtl.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/pdtl-ecommerce-automation-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/pdtl-ecommerce-automation-case-study/"
+                },
+                "name": "PDTL Ecommerce & Marketing Automation Case Study | Enigma",
+                "description": "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>     
 
       <SmoothScroll />
 
@@ -577,7 +625,7 @@ export default function pdtl() {
 
           <section className={styles.pdtlcolorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.pdtlcolorBox}>
               <div className={styles.pdtlcolorBoxHeadingBackground}>

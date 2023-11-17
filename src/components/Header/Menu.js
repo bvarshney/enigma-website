@@ -386,7 +386,7 @@ useEffect(() => {
                         >
 
                           <a target="blank" href="https://www.youtube.com/">
-                            <span data-text="Youtube">Youtube</span>
+                            <span data-text="YouTube">YouTube</span>
                           </a>
 
                         </div>
@@ -408,7 +408,7 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a target="blank" href="https://in.linkedin.com/company/in-enigmadigital">
+                          <a target="blank" href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing">
                             <span data-text="LinkedIn">LinkedIn</span>
                           </a>
                         </div>

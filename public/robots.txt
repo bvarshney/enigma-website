@@ -1,9 +1,7 @@
 # *
 User-agent: *
 Allow: /
-
-# Host
-Host: https://weareenigma.com
+Crawl-delay: 10
 
 # Sitemaps
 Sitemap: https://weareenigma.com/sitemap.xml

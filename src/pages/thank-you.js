@@ -4,6 +4,7 @@ import "react-creative-cursor/dist/styles.css";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import gsap from "gsap";
+import Head from "next/head";
 
 const ThankYou = () => {
   const [countdown, setCountdown] = useState(6);
@@ -65,13 +66,13 @@ const ThankYou = () => {
         title="Thank You! We'll Be in Touch Soon | Enigma"
         description="Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online."
         openGraph={{
-          url: "https://weareenigma.com/thank-you",
+          url: "https://weareenigma.com/thank-you/",
           title: "Thank You! We'll Be in Touch Soon | Enigma",
           description:
             "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/index.png",
+                    url: "https://weareenigma.com/assets/featured-images/thankyou.png",
                     width: 1200,
                     height: 630,
                     alt: "Enigma Image",
@@ -80,7 +81,54 @@ const ThankYou = () => {
           ],
           siteName: "Enigma Digital Website",
         }}
+
+        additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Thank You! We'll Be in Touch Soon | Enigma"
+            },
+            {
+              name: "twitter:description",
+              content: "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/thankyou.png"
+            },
+          ]}
       />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/thank-you/" />
+        <link rel="alternate" href="https://weareenigma.com/thank-you/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/thank-you/"
+                },
+                "name": "Thank You",
+                "description": "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
 
       <Cursor isGelly={true} />
 

@@ -18,7 +18,7 @@ const Blogs = [
       category: "design",
       Link: "/how-to-choose-right-ux-agency",
       image: "/assets/blogs/featured/choose-right-ux-agency.webp",
-      description: "How to Choose the Right UX Agency to Partner withfor Your Product Ideas",
+      description: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
     },
     {
       name: "Design",
@@ -62,7 +62,7 @@ const Blogs = [
       category: "marketing",
       Link: "/link-building-website-list",
       image: "/assets/blogs/featured/link-building.webp",
-      description: "Beginners Guide to SEO: 30 websites to help you getting started on your link building journey",
+      description: "Beginners Guide to SEO: 30 websites to help you get started on your link building journey",
     },
     {
       name: "Marketing",

@@ -204,7 +204,7 @@ export default function NewGifSection() {
             <div className="newsCaption">
               <p className="newsCaption-content">
                 Yes! You read that one just about right. We make magic... We
-                just don’t do campaigns. We focuson user driven outcomes and
+                just don’t do campaigns. We focus on user driven outcomes and
                 endeavour to create meaningful connections between brands and
                 its users. Somewhere between devising a strategy.
               </p>

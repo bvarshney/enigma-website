@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/how-to-choose-right-ux-agency"
+  },
+  "headline": "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
+  "description": "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right agency.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/right-ux-agency/right-ux-agency-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/right-ux-agency/right-ux-agency-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/right-ux-agency/right-ux-agency-3.webp",
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-03-10T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -89,7 +121,13 @@ if (globalThis.innerWidth>1024) {
               design, and to achieve that, you need to partner with the right UX
               agency."
               openGraph={{
-                url: "https://weareenigma.com/how-to-choose-right-ux-agency",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-03-10',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Best UX Agency', 'Enigma Digital', 'UI/UX Design', 'Marketing'],
+                },
+                url: "https://weareenigma.com/how-to-choose-right-ux-agency/",
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
                 description:
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",
@@ -104,7 +142,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
               }}
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "How to Choose the Right UX Agency to Partner with for Your Product Ideas"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/right-ux-agency.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/how-to-choose-right-ux-agency/" />
+            <link rel="alternate" href="https://weareenigma.com/how-to-choose-right-ux-agency/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+          </Head>
 
       <SmoothScroll />
 

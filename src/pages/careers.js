@@ -13,6 +13,7 @@ import PageLoader from "../components/pageLoader";
 import { NextSeo } from "next-seo";
 import FullTime from "../components/Careers/FullTime";
 import PartTime from "../components/Careers/PartTime";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +26,7 @@ export default function Careers(){
               title="Enigma Digital | Careers | Find The Right Jobs"
               description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
               openGraph={{
-                url: "https://weareenigma.com/careers",
+                url: "https://weareenigma.com/careers/",
                 title: "Enigma Digital | Careers | Find The Right Jobs",
                 description:
                   "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
@@ -40,7 +41,54 @@ export default function Careers(){
                 ],
                 siteName: "Enigma Digital",
               }}
+            
+              additionalMetaTags={[
+              {
+                name: "twitter:title",
+                content: "Enigma Digital | Careers | Find The Right Jobs"
+              },
+              {
+                name: "twitter:description",
+                content: "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs."
+              },
+              {
+                name: "twitter:image",
+                content: "https://weareenigma.com/assets/featured-images/career.png"
+              },
+            ]}
+          />
+
+        <Head>
+            <link rel="canonical" href="https://weareenigma.com/careers/" />
+            <link rel="alternate" href="https://weareenigma.com/careers/" hreflang="x-default" />
+            <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntityOfPage":{
+                    "@type": "WebPage",
+                    "@id": "https://weareenigma.com/careers/"
+                    },
+                    "name": "Careers",
+                    "description": "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                    "datePublished": "2023-10-01T12:00:00+05:30",
+                    "dateModified": "2023-11-17T12:00:00+05:30",
+                    "publisher": {
+                    "@type": "Organization",
+                    "name": "Enigma Digital",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                    }
+                    }
+                }
+                ),
+            }}
             />
+        </Head>
 
             <SmoothScroll />
 

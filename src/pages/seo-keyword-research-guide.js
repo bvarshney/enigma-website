@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,14 +81,51 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/seo-keyword-research-guide"
+  },
+  "headline": "Comprehensive Guide to Keyword Research for SEO Success",
+  "description": "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/keyword-research/keyword-research-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/keyword-research/keyword-research-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/keyword-research/keyword-research-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-13T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
-
+    
             <NextSeo
               title="Comprehensive Guide to Keyword Research for SEO Success"
               description="Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche."
               openGraph={{
-                url: "https://weareenigma.com/seo-keyword-research-guide",
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-13',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Keyword-Research', 'Local-Seo', 'Targeted-Keyword', 'Seo-Strategy'],
+                },
+                url: "https://weareenigma.com/seo-keyword-research-guide/",
                 title: "Comprehensive Guide to Keyword Research for SEO Success",
                 description:
                   "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",
@@ -102,7 +140,31 @@ if (globalThis.innerWidth>1024) {
                 ],
                 siteName: "Enigma Digital",
               }}
+           
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Comprehensive Guide to Keyword Research for SEO Success"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/seo-keyword-research-guide.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/seo-keyword-research-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/seo-keyword-research-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+          </Head>
 
       <SmoothScroll />
 
