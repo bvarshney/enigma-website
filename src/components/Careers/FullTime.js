@@ -8,9 +8,9 @@ export default function FullTime() {
 
     return (
         <>
-                    <h2 className="text-4xl leading-[1.2] md:text-[7vw] 2xl:text-[3.5vw] font-medium mb-2">
+                    <p className="text-4xl leading-[1.2] md:text-[7vw] 2xl:text-[3.5vw] font-medium mb-2">
                         Current<span className="color-primary"> Openings</span>
-                    </h2>
+                    </p>
                     <p className="font-body text-black/60 text-xl md:text-3xl pt-2 md:pt-0 2xl:text-xl tracking-wide m-auto">
                         <span>
                             An invitation to be part of a visionary tribe that's shaping the digital future.
@@ -31,7 +31,7 @@ export default function FullTime() {
                                  </div>
 
                                  <div className="w-full mb-6 md:mb-8">
-                                    <p className="md:text-xl leading-[1.3] text-black/70 ">{job.sDescription}</p>
+                                    <h5 className="md:text-xl leading-[1.3] text-black/70 ">{job.sDescription}</h5>
                                  </div>
                             
                                 <div className="mb-6 md:mb-8">

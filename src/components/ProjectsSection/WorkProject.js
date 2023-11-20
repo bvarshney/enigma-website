@@ -70,9 +70,9 @@ export default function WorkProject() {
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
           >
           <div className={`${styles.headContainer}`}>
-            <h1 className={`${styles.select}`} id='line-anim'>
+            <p className={`${styles.select}`} id='line-anim'>
                   Our Work
-              </h1>
+              </p>
           </div>
             <p className={styles.paraProject} id="proj-para-anim">
               <span>
@@ -82,9 +82,9 @@ export default function WorkProject() {
             </p>
           </div>
           <div className={`${styles.headContainer}`}>
-            <h1 className='color-primary' id='line-anim'>
+            <p className='color-primary' id='line-anim'>
                 Showcase
-            </h1>
+            </p>
           </div>
         </div>
       

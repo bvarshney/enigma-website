@@ -214,7 +214,7 @@ export default function carousel() {
                  alt="client logo" />
               </div>
               <div className="bottom-caro-box">
-                <h1>JellyFish</h1>
+                <h4>JellyFish</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -272,7 +272,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>Kedarkala</h1>
+                <h4>Kedarkala</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -328,7 +328,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>DMTCA</h1>
+                <h4>DMTCA</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -385,7 +385,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>Riva</h1>
+                <h4>Riva</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -442,7 +442,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>Quick-X</h1>
+                <h4>Quick-X</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -500,7 +500,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>Bespin Labs</h1>
+                <h4>Bespin Labs</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -558,7 +558,7 @@ export default function carousel() {
                 />
               </div>
               <div className="bottom-caro-box">
-                <h1>Patronum</h1>
+                <h4>Patronum</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}
@@ -613,7 +613,7 @@ export default function carousel() {
                 alt="client logo" />
               </div>
               <div className="bottom-caro-box">
-                <h1>Patra</h1>
+                <h4>Patra</h4>
                 <div className="caro-img-box">
                 <Image
                     height={50}

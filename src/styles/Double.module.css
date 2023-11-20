@@ -30,7 +30,7 @@
   font-size: 16px;
   padding: 10px;
 }
-.double .body h2 {
+.double .body .pname {
   font-size: 1.7vw;
   margin-bottom: 5px;
   margin-top: 0px;
@@ -39,7 +39,7 @@
   color: var(--black1);
 } 
 
-.double .body h3 {
+.double .body .description {
   font-size: 1.5vw;
   margin: 0px;
   color: var(--black2);

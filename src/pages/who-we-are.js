@@ -541,9 +541,9 @@ export default function about() {
         <section className="first-about-content-section m-150">
           <div className="first-sub-section">
             <div className="left-box-heading">
-              <h1 className="why-us-anim">
+              <h2 className="why-us-anim">
                 <span className="stroke">why</span> us.
-              </h1>
+              </h2>
             </div>
             <div className="right-box-content">
               <p data-jelly className="why-us-anim">
@@ -583,9 +583,9 @@ export default function about() {
         <section className="client-about-content-section m-150" id="client-loveus">
           <div className="first-sub-section">
             <div className="left-box-heading">
-              <h1 className="client-anim-heading">
+              <h2 className="client-anim-heading">
                 <span className="stroke">clients</span> love us.
-              </h1>
+              </h2>
             </div>
             <div className="right-box-content">
               <p data-jelly className="client-anim-heading">

@@ -210,7 +210,9 @@ export default function contact() {
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
-                    let's <span> </span>
+                    <h1>
+                      Let's
+                    </h1>
                   </div>
                   <div
                     className="work"
@@ -220,7 +222,9 @@ export default function contact() {
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
-                    Work
+                    <h1>
+                      Work
+                    </h1>
                   </div>
                   <div className="contact-para" id="contact-anim">
                     Old ways won't open new doors. If you have an interesting idea, <span className="bold-600">Let's Build the Future Together!</span>
@@ -235,7 +239,9 @@ export default function contact() {
                     data-cursor-size="300px"
                     data-cursor-color="#000"
                   >
-                    Together
+                    <h1>
+                      Together
+                    </h1>
                   </div>
 
                   <div
@@ -277,13 +283,13 @@ export default function contact() {
             <div className="scnd__container" id="main-contact-container">
               <div className="add__section" id="left-section">
                 <div className="add__content">
-                  <h1>Email</h1>
+                  <h2>Email</h2>
                   <a href="mailto:hi@weareenigma.com">
                     <span>hi@weareenigma.com</span>
                   </a>
                 </div>
                 <div className="add__content pt__20">
-                  <h1>office</h1>
+                  <h2>office</h2>
                   <a href="#" className="address">
                     <span>
                       Suite 301, Grandslam I-Thum,
@@ -293,7 +299,7 @@ export default function contact() {
                   </a>
                 </div>
                 <div className="add__content pt__20">
-                  <h1>Phone</h1>
+                  <h2>Phone</h2>
                   <a href="tel:+91 8178 026 136" className="address">
                     <span>+91 8178 026 136</span>
                   </a>
@@ -305,7 +311,7 @@ export default function contact() {
                   data-cursor-exclusion
                   data-cursor-size="80px"
                 >
-                  <h1>tell Us About Your Project.</h1>
+                  <h3>tell Us About Your Project.</h3>
                 </div>
                 <ContactForm />
               </div>

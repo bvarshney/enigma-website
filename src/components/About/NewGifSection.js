@@ -81,17 +81,16 @@ export default function NewGifSection() {
               autoPlay
               loop
               muted
-              loading="lazy"
               src="/assets/about/gif-section/culture.webm"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">culture</h2>
+            <h3 className="about-gif-text">culture</h3>
             <img
               src="/assets/about/gif-section/arr.png"
               alt="gif arrow img"
               className="about-gif-arrow"
             />
-            <h2 className="about-gif-num">01</h2>
+            <p className="about-gif-num">01</p>
             <div className="newsCaption">
               <p className="newsCaption-content">
                 We don’t work for clients. We work for our brand partners. And
@@ -111,13 +110,13 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">attitude</h2>
+            <h3 className="about-gif-text">attitude</h3>
             <img
               src="/assets/about/gif-section/arr.png"
               alt="gif arrow img"
               className="about-gif-arrow"
             />
-            <h2 className="about-gif-num">02</h2>
+            <p className="about-gif-num">02</p>
             <div className="newsCaption">
               <p className="newsCaption-content">
                 You might have intricate requirements but we’ve got ambition,
@@ -138,13 +137,13 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">ethos</h2>
+            <h3 className="about-gif-text">ethos</h3>
             <img
               src="/assets/about/gif-section/arr.png"
               alt="gif arrow img"
               className="about-gif-arrow"
             />
-            <h2 className="about-gif-num">03</h2>
+            <p className="about-gif-num">03</p>
             <div className="newsCaption">
               <p className="newsCaption-content">
                 While we are definitely smarter than we look (it's not
@@ -167,13 +166,13 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">experience</h2>
+            <h3 className="about-gif-text">experience</h3>
             <img
               src="/assets/about/gif-section/arr.png"
               alt="gif arrow img"
               className="about-gif-arrow"
             />
-            <h2 className="about-gif-num">04</h2>
+            <p className="about-gif-num">04</p>
             <div className="newsCaption">
               <p className="newsCaption-content">
                 An agency is only as strong as its people. Our team members come
@@ -194,13 +193,13 @@ export default function NewGifSection() {
               loading="lazy"
               className="gif-img"
             ></video>
-            <h2 className="about-gif-text">magic</h2>
+            <h3 className="about-gif-text">magic</h3>
             <img
               src="/assets/about/gif-section/arr.png"
               alt="gif arrow img"
               className="about-gif-arrow"
             />
-            <h2 className="about-gif-num">05</h2>
+            <p className="about-gif-num">05</p>
             <div className="newsCaption">
               <p className="newsCaption-content">
                 Yes! You read that one just about right. We make magic... We

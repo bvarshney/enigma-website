@@ -28,9 +28,9 @@ export default function OfferCards() {
                 <div className="service-offer-container" id="card-container">
                     <div className='service-offer'>
                         <div className='service-offer-top'>
-                             <h2 className={`${styles['sd__approach']} our-service-anim`} id="fadeUp">
+                             <h3 className={`${styles['sd__approach']} our-service-anim`} id="fadeUp">
                                 Our Services<span className='stroke'> Include</span>
-                            </h2>
+                            </h3>
                         </div>
                     </div>
                     <div className="service-offer-section width-full flex flex-wrap">
@@ -42,7 +42,7 @@ export default function OfferCards() {
                                     <span className="card-shape-1 card-bg-2"></span>
                                     <span className="card-shape-1 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Digital Marketing Auditing and Consulting</h3>
+                                <h4 className="text-2xl font-medium z-10">Digital Marketing Auditing and Consulting</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -53,7 +53,7 @@ export default function OfferCards() {
                                     <span className="card-shape-2 card-bg-2"></span>
                                     <span className="card-shape-2 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">User Experience Consultation</h3>
+                                <h4 className="text-2xl font-medium z-10">User Experience Consultation</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -76,7 +76,7 @@ export default function OfferCards() {
                                     <span className="card-shape-3 card-bg-2"></span>
                                     <span className="card-shape-3 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Conversion Rate Optimization</h3>
+                                <h4 className="text-2xl font-medium z-10">Conversion Rate Optimization</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -99,7 +99,7 @@ export default function OfferCards() {
                                     <span className="card-shape-4 card-bg-2"></span>
                                     <span className="card-shape-4 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Data Analytics and Insights</h3>
+                                <h4 className="text-2xl font-medium z-10">Data Analytics and Insights</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -110,7 +110,7 @@ export default function OfferCards() {
                                     <span className="card-shape-5 card-bg-2"></span>
                                     <span className="card-shape-5 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Brand & Content Strategy</h3>
+                                <h4 className="text-2xl font-medium z-10">Brand & Content Strategy</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -121,7 +121,7 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">SEO and SMM Optimization</h3>
+                                <h4 className="text-2xl font-medium z-10">SEO and SMM Optimization</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -132,7 +132,7 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Social Media Strategy</h3>
+                                <h4 className="text-2xl font-medium z-10">Social Media Strategy</h4>
                             </div>
                         </div>
                         
@@ -144,7 +144,7 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Omni-Channel Strategy Development</h3>
+                                <h4 className="text-2xl font-medium z-10">Omni-Channel Strategy Development</h4>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -155,7 +155,7 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Customer Journey Mapping</h3>
+                                <h4 className="text-2xl font-medium z-10">Customer Journey Mapping</h4>
                             </div>
                         </div>
                     </div>

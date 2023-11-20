@@ -32,12 +32,12 @@ const ServiceBlogs = ({ category }) => {
     <div className="related-articles service__d">
         <div className="related-article-heading service__d">
             <div className="left-box-heading">
-                <h2 className="why-us-anim service__d-head-blog">
+                <h3 className="why-us-anim service__d-head-blog">
                     Related<span className="stroke"> Articles</span>
-                </h2>
+                </h3>
             </div>
             <Link href="/blog">
-                <h4>All articles</h4>
+                <p>All articles</p>
             </Link>
         </div>   
         <div className="related-box-img">
@@ -54,7 +54,7 @@ const ServiceBlogs = ({ category }) => {
                             onMouseEnter={(e) => handleHover(e)}
                             onMouseOut={(e) => handleHoverExit(e)}
                             />
-                            <h2 className='blog-list-tag'>{blog.category}</h2>
+                            <p className='blog-list-tag'>{blog.category}</p>
                         </Link>
                     </div>
                     <h4>{blog.description}</h4>

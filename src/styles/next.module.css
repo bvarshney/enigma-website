@@ -14,7 +14,22 @@
   color: #a2a2a2;
 }
 
+.subHeading p {
+  margin-right: 11vw;
+  margin-bottom: 0.5vw;
+  font-size: 1.2vw;
+  color: #a2a2a2;
+}
+
 .mainHeading h1 {
+  font-size: 7vw;
+  font-weight: 500;
+  color: var(--black2);
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.mainHeading h5 {
   font-size: 7vw;
   font-weight: 500;
   color: var(--black2);
@@ -35,7 +50,25 @@
   transition: all 300ms ease-out;
 }
 
+.mainHeading h5:before {
+  content: "";
+  display: block;
+  position: absolute !important;
+  height: 2px;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+  background: currentColor;
+  transform: scaleX(1);
+  transition: all 300ms ease-out;
+}
+
 .mainHeading h1:hover:before {
+  transform: scaleX(0);
+  transition: all 300ms ease-out;
+}
+
+.mainHeading h5:hover:before {
   transform: scaleX(0);
   transition: all 300ms ease-out;
 }
@@ -49,7 +82,15 @@
     font-size: 4vw;
   }
 
+  .subHeading p {
+    font-size: 4vw;
+  }
+
   .mainHeading h1 {
+    font-size: 10vw;
+  }
+
+  .mainHeading h5 {
     font-size: 10vw;
   }
 }
@@ -63,7 +104,15 @@
     font-size: 4vw;
   }
 
+  .subHeading p {
+    font-size: 4vw;
+  }
+
   .mainHeading h1 {
+    font-size: 10vw;
+  }
+
+  .mainHeading h5{
     font-size: 10vw;
   }
 }

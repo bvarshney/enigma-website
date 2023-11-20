@@ -97,16 +97,16 @@ function Footer() {
       <footer className="footer-main">
         <div className="en-footer-section">
           <div className="en-f__content">
-            <h2>
+            <p>
               <span className="wt-400" id="say">
                 Let's bring your
               </span>
-            </h2>
-            <h2>
+            </p>
+            <p>
               <span className="wt-400 mr-11" id="say">
                 ideas to life!
               </span>
-            </h2>
+            </p>
           </div>
           <div className="right-en-box">
             <div className="image-box contact-us-box">
@@ -137,7 +137,7 @@ function Footer() {
           <div className="footer-content">
             <div className="left-section">
               <div className="mail f__anim">
-                <p>mail us</p>
+                <h6>mail us</h6>
                 <div className="cb-outro-header">
                   <a
                     href="mailto:hi@weareenigma.com"
@@ -150,7 +150,7 @@ function Footer() {
                 </div>
               </div>
               <div className="phone f__anim">
-                <p> even better call us</p>
+                <h6> even better call us</h6>
                 <div className="num">
                   <div
                     className="footer-nav-item f__anim"
@@ -178,7 +178,7 @@ function Footer() {
               </div>
             </div>
             <div className="right-section">
-              <p className="f__anim">let's be friends</p>
+              <h6 className="f__anim">let's be friends</h6>
               <div className="socials">
                 <div className="top-socials f__anim">
                   <div

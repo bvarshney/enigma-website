@@ -136,7 +136,7 @@
   transition-delay: 1ms, 1ms;
 }
 
-.textContent h1 {
+.textContent h4 {
   background: #fff;
   padding: 0.7vw 3.3vw;
   border-radius: 50px;
@@ -290,7 +290,7 @@
     margin-top: 5vw;
   }
 
-  .textContent h1 {
+  .textContent h4 {
     font-size: 4vw;
     padding: 1vw 5.5vw;
   }
@@ -352,7 +352,7 @@
     border-radius: 8vw;
   }
 
-  .textContent h1 {
+  .textContent h4 {
     font-size: 4.5vw;
     padding: 2.2vw 9vw;
   }

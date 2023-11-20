@@ -7,12 +7,12 @@ const PageLoader = ({ text }) => {
     const tl = gsap.timeline();
 
     let ctx = gsap.context(() => {
-      tl.from(".loader-wrap-heading h1", {
+      tl.from(".loader-wrap-heading p", {
         delay: 0.5,
         y: 200,
         skewY: 10,
         duration: 1,
-      }).to(".loader-wrap-heading h1", {
+      }).to(".loader-wrap-heading p", {
         delay: 0.5,
         y: -200,
         skewY: 10,
@@ -44,7 +44,7 @@ const PageLoader = ({ text }) => {
         </div>
         <div className="loader-wrap-heading">
             <span>
-                <h1>{text}</h1>
+                <p>{text}</p>
             </span>
         </div>
       </div>

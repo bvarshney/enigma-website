@@ -32,7 +32,7 @@
     width: fit-content;
   }
 
-  .projectHeading h1 {
+  .headContainer p {
     font-size: 9vw;
     color: var(--black1);
     line-height: 1;

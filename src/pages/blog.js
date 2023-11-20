@@ -76,9 +76,9 @@ const BlogPost = ({ post }) => {
               height={1160}
               priority={false}
             />
-            <h2 className="blog-list-tag">{post.name}</h2>
+            <h5  className="blog-list-tag">{post.name}</h5>
           </div>
-          <h3 className="desc-tag">{post.description}</h3>
+          <h4 className="desc-tag">{post.description}</h4>
         </Link>
       </div>
     </div>
@@ -231,14 +231,18 @@ export default function BlogsPage() {
               </h1>
             </div>
 
-            <div className="blogs-section">
-                {buttons.map((button, index) => (
-                  <Link href={button.path} key={index}>
-                    <button className={activeIndex === index ? "active" : "button--calypso"} id="anim">
-                      <span>{button.label}</span>
-                    </button>
-                  </Link>
-                ))}
+              <div className="blogs-section">
+                <div style={{display: 'flex', flexWrap: 'wrap'}}>
+                  {buttons.map((button, index) => (
+                    <h2 style={{width: 'fit-content'}}>
+                    <Link href={button.path} key={index}>
+                      <button className={activeIndex === index ? "active" : "button--calypso"} id="anim">
+                        <span>{button.label}</span>
+                      </button>
+                    </Link>
+                    </h2>
+                  ))}
+                </div>
 
                   <div className="ul-items">
                     {Blogs.map((post, index) => (

@@ -97,8 +97,8 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}
             id='double-image-anim'>
-                <h2>{projects[0].name}</h2>
-                <h3>{projects[0].description}</h3>
+                <p className={styles.pname}>{projects[0].name}</p>
+                <p className={styles.description}>{projects[0].description}</p>
                 <p>{projects[0].year}</p>
             </div>
             </Link>
@@ -121,8 +121,8 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}
             id='double-image-anim'>
-                <h2>{projects[1].name}</h2>
-                <h3>{projects[1].description}</h3>
+                <p className={styles.pname}>{projects[1].name}</p>
+                <p className={styles.description}>{projects[1].description}</p>
                 <p>{projects[1].year}</p>
             </div>
           </Link>

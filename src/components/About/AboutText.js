@@ -14,8 +14,6 @@ class Particles {
         repeats: -1,
         timeScale: 2,
         initialSeek: 3000,
-        // fadeInDuration: 5,
-        // fadeInEase: "power1.out",
         fadeOutDuration: 1,
         fadeOutEase: "power4.out",
         yStart: () => this.container.offsetHeight,

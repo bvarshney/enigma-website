@@ -66,31 +66,21 @@ export default function HeroMobile() {
 
           <div className="content-hero-box-mobile">
 
-            <div className="second-text line-height" id="anim2">
-              <h1>Digital</h1>
-            </div>
-
-            <div className="third-text line-height" id="anim2">
-              <h1>Experience</h1>
-            </div>
-
-            <div className="forth-text line-height" id="anim2">
-              <h1>
-                Design
+            <div className="second-text line-height" >
+              <h1 className="second-text line-height">
+                <span id="anim2">Digital </span> 
+                <span className="color-primary" id="anim2">Experience </span> 
+                <span id="anim2">Design </span> 
+                <span id="anim2" className="mob-agency">Agency</span>
               </h1>
             </div>
-
-            <div className="third-text line-height" id="anim2">
-              <h1><span className="mob-agency">Agency</span></h1>
-            </div>
-
             <div className="mobile-hero-para" id="para">
               <p>
                 Leveraging the power of<strong> Emotion, Consumer Psychology, and Technology, </strong>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes.
               </p>
             </div>
-          </div>
         </div>
+      </div>
       </div>
     </>
   );

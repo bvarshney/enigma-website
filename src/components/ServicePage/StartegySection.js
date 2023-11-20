@@ -98,29 +98,29 @@ export default function StrategySection() {
 
     return(
         <>
-            <div className="service-cap-section strategy-box-anim">
-          <div className="left-box" data-jelly>
-            <p className="sub-text ser-text-head-anim">
-              <span>
-                Here's how we help you
-                <br /> grow.
-              </span>
-            </p>
-          </div>
-          <div className="right-box">
-            <div className="right-sub-content strategy-box-anim">
-              <h2 className="ser-text-head-anim">Our Capabilities</h2>
-              <p data-jelly className="ser-text-head-anim">
+          <div className="service-cap-section strategy-box-anim">
+            <div className="left-box" data-jelly>
+              <p className="sub-text ser-text-head-anim">
                 <span>
-                  We create evergreen brands that are highly effective at
-                  boosting revenue, increasing brand equity, and improving ROI.
-                  Our big picture approach powers your entire business, not just
-                  the marketing department.
+                  Here's how we help you
+                  <br /> grow.
                 </span>
               </p>
             </div>
+            <div className="right-box">
+              <div className="right-sub-content strategy-box-anim">
+                <p className="service-right-head ser-text-head-anim">Our Capabilities</p>
+                <p data-jelly className="ser-text-head-anim">
+                  <span>
+                    We create evergreen brands that are highly effective at
+                    boosting revenue, increasing brand equity, and improving ROI.
+                    Our big picture approach powers your entire business, not just
+                    the marketing department.
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
 
 
         {/* Strategy Box 1  */}
@@ -132,7 +132,7 @@ export default function StrategySection() {
             data-cursor-color="#2b8c87"
           >
           <Link href='/strategy-and-planning-services'>
-            <h3 className="ser-text-head-anim">Strategy</h3>
+            <h2 className="ser-text-head-anim">Strategy</h2>
             <p data-jelly className="ser-text-head-anim">
               <span>
                   Digital Advisory and Consulting, Integrated Digital Marketing
@@ -174,7 +174,7 @@ export default function StrategySection() {
             data-cursor-color="#000"
           >
           <Link href='/ui-ux-design-services'>
-            <h3 className="ser-text-head-anim">UI/UX Design</h3>
+            <h2 className="ser-text-head-anim">UI/UX Design</h2>
               <p data-jelly className="ser-text-head-anim">
                 <span>
                   User Interface Design, User Experience Design, Responsive Web
@@ -213,7 +213,7 @@ export default function StrategySection() {
             data-cursor-color="#fcc63d"
           >
           <Link href='/technology-services'>
-            <h3 className="ser-text-head-anim">Technology</h3>
+            <h2 className="ser-text-head-anim">Technology</h2>
               <p data-jelly className="ser-text-head-anim">
                 <span>
                   Front-End Development, Native & Hybrid Mobile Application
@@ -253,7 +253,7 @@ export default function StrategySection() {
             data-cursor-color="#000"
           >
             <Link href='/organic-digital-marketing-services'>
-              <h3 className="ser-text-head-anim">Marketing</h3>
+              <h2 className="ser-text-head-anim">Marketing</h2>
               <p data-jelly className="ser-text-head-anim">
                 <span>
                   Social Media Management, Content Creation & Curation, Search

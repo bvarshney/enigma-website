@@ -72,9 +72,9 @@ useEffect(() => {
         className={`${styles.projectFirstBox} ${styles.lineAnim}`}
       >
       <div className={`${styles.headContainer}`}>
-        <h1 className={`${styles.select}`} id='line-anim'>
+        <p className={`${styles.select}`} id='line-anim'>
               Selected
-          </h1>
+          </p>
       </div>
         <p className={styles.paraProject} id="proj-para-anim">
           <span>
@@ -84,9 +84,9 @@ useEffect(() => {
         </p>
       </div>
       <div className={`${styles.headContainer}`}>
-        <h1 className='color-primary' id='line-anim'>
+        <p className='color-primary' id='line-anim'>
             Projects
-        </h1>
+        </p>
       </div>
     </div>
       

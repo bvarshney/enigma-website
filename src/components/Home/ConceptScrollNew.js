@@ -211,16 +211,6 @@ export default function ConceptScrollNew() {
                       src="/assets/newProject/a.webm"
                       title="Mac Enigma Video"
                     />
-                    {/* <video
-                      width="100%"
-                      height="100%"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      src="/assets/newProject/a.webm"
-                      loading="lazy"
-                    ></video> */}
                     <div className="macbook_frame_background" />
                   </div>
                 </div>
@@ -240,7 +230,6 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media1 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
-                      loading="lazy"
                       className="vid lazyload"
                       src="/assets/reels/left.webm"
                       autoPlay
@@ -248,37 +237,32 @@ export default function ConceptScrollNew() {
                       playsInline
                       loop
                       id="beach-waves"
-                      // preload="auto"
                     />
                   </div>
                 </div>
                 <div className="c-hm-us_s2">
-                  <h4 className="t-lead">
+                  <p className="t-lead">
                   Empowered by Neuromarketing Principles,<br/>
                   our services open endless opportunities<br/>
                   For each brand we partner with.<br/>
                   Let's amplify your potential! 
                   <span className="emoji-dark"> 🚀</span>
-                  </h4>
-                  <div className="c-hm-us_title">
-                    <h2 className="t-d3-fluid cta">
-                      <div className="cb-outro-header">
-                        <Link
-                          href="/get-in-touch"
-                          data-cursor-size="100px"
-                          data-cursor-exclusion
-                        >
-                          Say, Hello!{" "}
-                          <span className="wave emoji-dark">👋</span>
-                        </Link>
-                      </div>
-                    </h2>
-                  </div>
+                  </p>
+                  <Link
+                    className="en-cta-hero"
+                    href="/get-in-touch"
+                    data-cursor-size="100px"
+                    data-cursor-exclusion
+                    >
+                    <span className="en-cta-hero-text">
+                     Say, Hello!{" "}
+                    </span>
+                    <span className="wave emoji-dark">👋</span>
+                  </Link>
                 </div>
                 <div className="o-media o-media2 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
-                      loading="lazy"
                       className="vid lazyload"
                       src="/assets/reels/right.webm"
                       autoPlay
@@ -286,7 +270,6 @@ export default function ConceptScrollNew() {
                       playsInline
                       loop
                       id="beach-waves"
-                      // preload="auto"
                     />
                   </div>
                 </div>

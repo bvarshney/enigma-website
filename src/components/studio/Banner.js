@@ -63,10 +63,10 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row"} id="create">
-      <div className="row-col">
+      <h1 className="row-col">
         <AnimatedLetters title={title} />
-      </div>
-      <motion.div
+      </h1>
+      <motion.h2
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -80,7 +80,7 @@ const BannerRowTop = ({ title }) => {
           We're experts at creating unique, memorable experiences that your
           customers can't get enough of.
         </span>
-      </motion.div>
+      </motion.h2>
     </div>
   );
 };

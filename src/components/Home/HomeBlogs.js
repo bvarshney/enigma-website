@@ -80,7 +80,7 @@ const HomeBlogs = () => {
 
     <div ref={homeBlog} className="related-articles">
         <div className="homeBlogs">
-          <h2 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h2>
+          <h3 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h3>
           <Link href="/blog">
             <span>All Articles</span>
           </Link>
@@ -101,7 +101,7 @@ const HomeBlogs = () => {
                             onMouseEnter={(e) => handleHover(e)}
                             onMouseOut={(e) => handleHoverExit(e)}
                             />
-                            <h2 className='blog-list-tag'>{blog.category}</h2>
+                            <h5 className='blog-list-tag'>{blog.name}</h5>
                         </Link>
                     </div>
                     <h4>{blog.description}</h4>

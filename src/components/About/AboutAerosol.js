@@ -56,9 +56,9 @@ export default function Aerosol() {
       <div className="aero-hover">
         {/* Text Container with Blend Mode Effect */}
         <div className="text-container aero-demo">
-          <h1 className="about-text-aero">
+          <p className="about-text-aero">
             Enigma is a collective of Creators, Discoverers, Dreamers & Doers!
-          </h1>
+          </p>
           <AboutText />
         </div>
 

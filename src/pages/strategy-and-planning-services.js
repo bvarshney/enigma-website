@@ -543,12 +543,10 @@ useEffect(() => {
        className={styles['service-anim-portfolio']}>
         <div className={styles['service-portfolio-main']} id='service-port-main'>
           <div className={styles['service-portfolio-title']}>
-            <h2 data-cursor-size="300px"
+            <h3 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Strategy 
-                <br /> 
-                Success Stories
-            </h2>
+                Strategy<br /> Success Stories
+            </h3>
           </div>
           
           <div className={styles['service-portfolio-cards']}>
@@ -572,9 +570,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   Patronum
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -601,9 +599,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   QuickX
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -630,9 +628,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   DMTCA 
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -659,9 +657,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   Kedarkala
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -677,9 +675,7 @@ useEffect(() => {
       <div className={styles['service-detail-process']}>
         <div className={styles['service-detail-process-left']}>
           <h3 className={`${styles['sd__approach']} why-us-anim`}>
-            Our
-            <br />
-            <span className='stroke'>Approach</span>
+            Our<br /><span className='stroke'> Approach</span>
           </h3>
         </div>
         <div className={styles['service-detail-process-right']}>

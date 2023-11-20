@@ -412,27 +412,27 @@ export default function ProjectsHome() {
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
             id="line-anim"
           >
-            <h1 className={`${styles.select}`}>
+            <h3 className={`${styles.select}`}>
               <span className={styles.span} id="span">
                 Our Work
               </span>
-            </h1>
-            <h4 className={styles.paraProject} id="proj-para-anim">
+            </h3>
+            <p className={styles.paraProject} id="proj-para-anim">
               <span>
               Our showcase of a spectrum of Innovative Collaborations, 
               Redefined Digital Experiences, and Brand Transformations.
               </span>
-            </h4>
+            </p>
           </div>
           <div
             className={`${styles.projectHomeHeading} ${styles.lineAnim}`}
             id="line-anim"
           >
-            <h1 className={styles.project} id="darkMode-project">
+            <h3 className={styles.project} id="darkMode-project">
               <span className={styles.span} id="span">
                 Showcase
               </span>
-            </h1>
+            </h3>
           </div>
         </div>
 
@@ -459,7 +459,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>Branding, Web Design</p>
                     <div className={styles.projectCta}>
-                      <h1>Kedarkala</h1>
+                      <h4>Kedarkala</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -536,7 +536,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Patra</h1>
+                      <h4>Patra</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -618,7 +618,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>UI/ UX Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Wragby</h1>
+                      <h4>Wragby</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -692,7 +692,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Gardencity Mall</h1>
+                      <h4>Gardencity Mall</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -773,7 +773,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>PDTL</h1>
+                      <h4>PDTL</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -847,7 +847,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Dharan</h1>
+                      <h4>Dharan</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -928,7 +928,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2022</p> <p>Web Design, Branding, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>Certvault</h1>
+                      <h4>Certvault</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -1002,7 +1002,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>QuickX</h1>
+                      <h4>QuickX</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -1081,7 +1081,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2019</p> <p>Branding, Web Design, Marketing</p>
                     <div className={styles.projectCta}>
-                      <h1>Patronum</h1>
+                      <h4>Patronum</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >
@@ -1155,7 +1155,7 @@ export default function ProjectsHome() {
                   <div className={styles.c_project_info}>
                     <p>2020</p> <p>E-Commerce, Web Design, Development</p>
                     <div className={styles.projectCta}>
-                      <h1>DMTCA</h1>
+                      <h4>DMTCA</h4>
                       <div
                         className={`${styles.c_prj_btn} ${styles.js_tab_arrow}`}
                       >

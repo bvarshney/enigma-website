@@ -8,7 +8,7 @@ export default function NextBox() {
       <div className={styles.nextContainer}>
         <div className={styles.nextSubContainer}>
           <div className={styles.subHeading}>
-            <h2>next up</h2>
+            <p>next up</p>
           </div>
           <div
             className={styles.mainHeading}
@@ -17,7 +17,7 @@ export default function NextBox() {
             data-cursor-size="400px"
           >
             <Link href="/ui-ux-design-services">
-              <h1>UI & UX Design</h1>
+              <h5>UI & UX Design</h5>
             </Link>
           </div>
         </div>

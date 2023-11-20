@@ -134,13 +134,9 @@ const HeroDesktop = () => {
               <div className="content-section home-page-header">
                 <div className="f-sub-content">
                   <div className="f-content-text">
-                    <h6 className="f-disabled">timezone</h6>
+                    <p className="f-disabled">timezone</p>
                     <div className="f-heading">+5:30 GMT</div>
                   </div>
-                </div>
-                <div className="f-right">
-                  <h6 className="f-disabled">location</h6>
-                  <div className="f-heading">Noida - India</div>
                 </div>
               </div>
             </div>

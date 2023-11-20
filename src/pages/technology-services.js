@@ -540,12 +540,10 @@ useEffect(() => {
        className={styles['service-anim-portfolio']}>
         <div className={styles['service-portfolio-main']} id='service-port-main'>
           <div className={styles['service-portfolio-title']}>
-            <h2 data-cursor-size="300px"
+            <h3 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Development 
-                <br /> 
-                Portfolio
-            </h2>
+                Development<br /> Portfolio
+            </h3>
           </div>
           
           <div className={styles['service-portfolio-cards']}>
@@ -569,9 +567,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   QuickX
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -598,9 +596,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   Dharan
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -627,9 +625,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   PDTL
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>
@@ -656,9 +654,9 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3 className='color-primary'>
+                <h4 className='color-primary'>
                   Certvault
-                </h3>
+                </h4>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
                 </p>

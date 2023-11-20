@@ -23,13 +23,13 @@ export default function Careers(){
         <div className="bg-white">
 
             <NextSeo
-              title="Enigma Digital | Careers | Find The Right Jobs"
-              description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
+              title="Careers in Design, Tech & Marketing | Current Openings"
+              description="Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment."
               openGraph={{
                 url: "https://weareenigma.com/careers",
-                title: "Enigma Digital | Careers | Find The Right Jobs",
+                title: "Careers in Design, Tech & Marketing | Current Openings",
                 description:
-                  "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                  "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment.",
                   images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/career.png",
@@ -45,11 +45,11 @@ export default function Careers(){
               additionalMetaTags={[
               {
                 name: "twitter:title",
-                content: "Enigma Digital | Careers | Find The Right Jobs"
+                content: "Careers in Design, Tech & Marketing | Current Openings"
               },
               {
                 name: "twitter:description",
-                content: "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs."
+                content: "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment."
               },
               {
                 name: "twitter:image",
@@ -73,7 +73,7 @@ export default function Careers(){
                     "@id": "https://weareenigma.com/careers"
                     },
                     "name": "Careers",
-                    "description": "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                    "description": "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment.",
                     "datePublished": "2023-10-01T12:00:00+05:30",
                     "dateModified": "2023-11-17T12:00:00+05:30",
                     "publisher": {
@@ -139,48 +139,48 @@ export default function Careers(){
                 </section>
 
                 <section className="3xl:w-[75%] w-[80%] mx-auto text-center py-24 2xl:px-8 px-0">
-                    <h2 className="2xl:text-[3.5vw] mb-20 md:text-[7vw] text-4xl font-medium">
+                    <p className="2xl:text-[3.5vw] mb-20 md:text-[7vw] text-4xl font-medium">
                         Browse<span className="color-primary"> Jobs</span>
-                    </h2>
+                    </p>
                     <div className="pb-8 mx-auto text-left relative font-body mt-12 flex 2xl:flex-row flex-col justify-start gap-4 2xl:items-center flex-wrap">
                         <button className="tw-hover group duration-300 text-black-1 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            UI/UX Design
+                            <h2>UI/UX Design</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Business Development
+                            <h2>Business Development</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Account Management
+                            <h2>Account Management</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Frontend Development
+                            <h2>Frontend Development</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Search Engine Optimisation
+                            <h2>Search Engine Optimisation</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Content Writing
+                            <h2>Content Writing</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
                         </button>
                         <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
-                            Social Media Marketing
+                            <h2>Social Media Marketing</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
