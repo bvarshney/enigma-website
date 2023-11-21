@@ -15,6 +15,7 @@ import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -281,12 +282,12 @@ export default function patra() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                   SaaS
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                   2022
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -313,25 +314,25 @@ export default function patra() {
           <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
+                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     Patra is a global leader in the insurance industry, specializing in delivering business process outsourcing services. With a focus on insurance processes and insurtech solutions, Patra drives profitability and new customer acquisition across the sector. Their commitment to leveraging both human expertise and cutting-edge technology has positioned them as a trusted partner for insurance firms worldwide.
-                  </h4>
+                  </p>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UX Planning   
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UI Desing
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                   Development
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -361,15 +362,10 @@ export default function patra() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  {/* <h4 className={styles.h4} data-jelly>
-                    The founding team at Patronum was on a quest to create a
-                    brand and online presence that would turn heads and drop
-                    jaws faster than a cheetah chasing its prey.
-                  </h4> */}
                   <p data-jelly>
                     In an era dominated by digital transformation, Patra's clients were still navigating the cumbersome process of manual report management. The reliance on Excel sheets for disseminating reports, costs, and invoices posed significant challenges. Not only was this method time-consuming, but it also lacked the real-time transparency that modern businesses crave. Clients were often left in the dark about their expenditures with Patra, having to wait for monthly reports from their account managers to gain clarity on their spending across various service verticals.
                   </p>
@@ -485,7 +481,7 @@ export default function patra() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -585,7 +581,7 @@ export default function patra() {
           {/* ====================== Fonts Section ======================== */}
           <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h2 className={styles.h2} >Fonts</h2>
+              <h3 className={styles.h2} >Fonts</h3>
             </div>
             <div className={styles.fontImagebox}>
               <img
@@ -611,13 +607,13 @@ export default function patra() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colours</h2>
+              <h3 className={styles.h2} >Colours</h3>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>
-                <h1 data-speed="1.5">
+                <p data-speed="1.5">
                   Colour <br /> Palette
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -648,7 +644,7 @@ export default function patra() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>100% Transparency with <br /> Real-time Data & Insights</h2>
+              <h3 className={styles.videoH2}>100% Transparency with <br /> Real-time Data & Insights</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -670,7 +666,7 @@ export default function patra() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>UX + Tech</h3>
+                <h2 className={styles.h3} data-jelly>UX + Tech</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -716,7 +712,7 @@ export default function patra() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -777,13 +773,13 @@ export default function patra() {
                     <img src="/assets/casestudies/certvault/client-image.webp" alt="Patra Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                       Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         CTO, Patracorp
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -802,18 +798,7 @@ export default function patra() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/patronum-saas-case-study">
-                  <h1>Patronum</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ProjectNextBox text={"Patronum"} link={"/patronum-saas-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

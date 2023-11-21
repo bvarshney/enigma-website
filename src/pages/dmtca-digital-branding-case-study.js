@@ -15,6 +15,7 @@ import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -284,12 +285,12 @@ export default function dmtca() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                   AGENCY
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                   2020
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -316,22 +317,22 @@ export default function dmtca() {
           <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
+                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                      DMTCA, a trailblazing digital marketing agency in the West Africa region, stands tall in the vast digital landscape, known for its unparalleled strategies and groundbreaking solutions. As the digital realm continues to evolve, DMTCA sought a brand identity and digital footprint that mirrors its prowess and showcases its illustrious portfolio.
-                  </h4>
+                  </p>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -361,7 +362,7 @@ export default function dmtca() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -467,7 +468,7 @@ export default function dmtca() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -570,7 +571,7 @@ export default function dmtca() {
           {/* ====================== Fonts Section ======================== */}
           <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h2 className={styles.h2} >Fonts</h2>
+              <h3 className={styles.h2} >Fonts</h3>
             </div>
             <div className={`${styles.dmtcafontImagebox} projectNoInvert`}>
               <img src="/assets/casestudies/dmtca/dmtca-casestudy-font-image.webp" alt="DMTCA Casestudy Fonts Image" />
@@ -582,13 +583,13 @@ export default function dmtca() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colours</h2>
+              <h3 className={styles.h2} >Colours</h3>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>
-                <h1 data-speed="1.5">
+                <p data-speed="1.5">
                   Colour Palette
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -621,7 +622,7 @@ export default function dmtca() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>The Google <br/> Workspace Manager</h2>
+              <h3 className={styles.videoH2}>The Google <br/> Workspace Manager</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -643,7 +644,7 @@ export default function dmtca() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h2 className={styles.h3} data-jelly>Tech Stack</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -683,7 +684,7 @@ export default function dmtca() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -747,13 +748,13 @@ export default function dmtca() {
                     <img src="/assets/casestudies/dmtca/dmtca-client-image.webp" alt="DMTCA Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                       Ankush Chawla
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         CEO, DMTCA
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -772,19 +773,8 @@ export default function dmtca() {
 
 
           {/* ================ Next Project Mobile ============================== */}
-
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/pdtl-ecommerce-automation-case-study">
-                  <h1>PDTL</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          
+          <ProjectNextBox text={"PDTL"} link={"/pdtl-ecommerce-automation-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

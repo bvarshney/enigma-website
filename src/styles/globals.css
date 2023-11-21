@@ -858,6 +858,9 @@ button:focus {
 }
 
 @media screen and (max-width:480px) {
+  #menu-wrapper{
+    margin-top: -4vh;
+  }
   .menu-logo-conatainer{
     top: 25px;
     left: 28px;
@@ -6389,7 +6392,7 @@ a:hover {
   padding: 5vw 0 10vw 0;
 }
 
-.project-slider-heading h1 {
+.project-slider-heading p {
   font-size: 5vw;
   font-weight: 500;
   color: var(--black1);
@@ -10617,11 +10620,11 @@ a:hover {
 }
 
 .dark-mode .service-offer-card h4{
-  opacity: 0.4;
+  opacity: 0.6;
   transition: all 0.3s ease-in;
 }
 
-.dark-mode .service-offer-card:hover p{
+.dark-mode .service-offer-card:hover h4{
   opacity: 1;
 }
 .dark-mode .service-approach-text-box {
@@ -12129,3 +12132,4 @@ label.label:hover:before{
     height: 240px;
   }
 }
+

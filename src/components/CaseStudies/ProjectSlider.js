@@ -47,7 +47,7 @@ const ProjectSlider = ({ currentProjectLink }) => {
       <div className="cb-layout">
         <div className="cb-content">
           <div className="project-slider-heading">
-            <h1>
+            <p>
               More Projects{" "}
               <span>
                 <img
@@ -56,7 +56,7 @@ const ProjectSlider = ({ currentProjectLink }) => {
                   id="case-study-arrow"
                 />
               </span>
-            </h1>
+            </p>
           </div>
 
           <div className='project-slider'>
@@ -71,7 +71,6 @@ const ProjectSlider = ({ currentProjectLink }) => {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

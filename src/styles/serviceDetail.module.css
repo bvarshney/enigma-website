@@ -333,7 +333,20 @@
     line-height: 1.2;
     letter-spacing: 0.5px;
   }
-  
+
+  /* Process Big Text */
+.splitLinesMain{
+  height: 95vh;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+}
+.splitAnimation{
+  max-width: 80%;
+  font-size: 3.5vw;
+  font-weight: 600;
+  text-align: left !important;
+}
   
   /*================Media Queries for Service detail page============================*/
   
@@ -502,6 +515,18 @@
       font-size: 3vw;
       font-weight: 400;
     }
+
+/* Process Big Text */
+.splitLinesMain{
+  height: 50vh;
+  padding-top: 0;
+}
+
+.splitAnimation{
+  max-width: 100%;
+  font-size: 4.8vw;
+}
+  
     .service-offer-bottom{
       margin: 10% 0;
       justify-content: space-around;
@@ -644,6 +669,16 @@
     font-size: 4.5vw;
     text-align: justify;
   }
+
+  /* Process Big Text */
+.splitLinesMain{
+  height: 100%;
+  padding: 5vh 0;
+}
+.splitAnimation{
+  font-size: 5vw;
+}
+
   .service-offer-bottom > div {
     width: 100%;
     height: 120px;

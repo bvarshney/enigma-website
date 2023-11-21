@@ -30,7 +30,7 @@ const ServiceBlogs = ({ category }) => {
   return (
 
     <div className="related-articles service__d">
-        <div className="related-article-heading service__d">
+        <div className="related-article-heading service__d" id='fadeIn'>
             <div className="left-box-heading">
                 <h3 className="why-us-anim service__d-head-blog">
                     Related<span className="stroke"> Articles</span>
@@ -42,17 +42,17 @@ const ServiceBlogs = ({ category }) => {
         </div>   
         <div className="related-box-img">
             {relatedBlogs.map((blog, index) => (
-                <div key={index} className='box-img-content service__d'>
+                <div key={index} className='box-img-content service__d' id='fadeIn'>
                     <div className="img-box-related service__d">
                         <Link href={blog.Link}>
                             <img
-                            src={blog.image}
-                            alt={blog.name}
-                            data-cursor-text="Read Now"
-                            data-cursor-color="#000"
-                            data-cursor-size="100px"
-                            onMouseEnter={(e) => handleHover(e)}
-                            onMouseOut={(e) => handleHoverExit(e)}
+                              src={blog.image}
+                              alt={blog.name}
+                              data-cursor-text="Read Now"
+                              data-cursor-color="#000"
+                              data-cursor-size="100px"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
                             />
                             <p className='blog-list-tag'>{blog.category}</p>
                         </Link>

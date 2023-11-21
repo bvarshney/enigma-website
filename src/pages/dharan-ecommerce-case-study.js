@@ -15,6 +15,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import Image from "next/image";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -264,12 +265,12 @@ export default function dharan() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                     E-COMMERCE
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                     2020
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -296,11 +297,11 @@ export default function dharan() {
           <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
+                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     Dharan, a renowned hand-block-printed clothing manufacturer
                     based in India, is known for its exquisite garments
                     featuring traditional designs, pastel shades, and intricate
@@ -311,19 +312,19 @@ export default function dharan() {
                     e-commerce website that would not only showcase Dharan's
                     magnificent products but also encapsulate the essence of
                     their brand.
-                  </h4>
+                  </p>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     E-Commerce
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Development
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -353,15 +354,15 @@ export default function dharan() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     Dharan's existing website was plagued by several issues,
                     including outdated design, poor navigation, and a lacklustre
                     user experience.
-                  </h4>
+                  </p>
                   <p data-jelly>
                     The website failed to evoke the same feelings of beauty,
                     sophistication, and craftsmanship that Dharan's
@@ -469,7 +470,7 @@ export default function dharan() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -587,7 +588,7 @@ export default function dharan() {
           {/* ====================== Fonts Section ======================== */}
           <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h2 className={styles.h2} >Fonts</h2>
+              <h3 className={styles.h2} >Fonts</h3>
             </div>
             <div className={styles.dharanfontImagebox}>
               <img src="/assets/casestudies/dharan/dharan-casestudy-font.webp" loading="lazy" alt="dharan casestudy font image" />
@@ -599,7 +600,7 @@ export default function dharan() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colours</h2>
+              <h3 className={styles.h2} >Colours</h3>
             </div>
             <div className={styles.dharancolorMainBox}>
               <div className={styles.dharancolorBox}>
@@ -638,7 +639,7 @@ export default function dharan() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>Dharan - Sustainable Faishon</h2>
+              <h3 className={styles.videoH2}>Dharan - Sustainable Faishon</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -660,7 +661,7 @@ export default function dharan() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h2 className={styles.h3} data-jelly>Tech Stack</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -754,7 +755,7 @@ export default function dharan() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -852,13 +853,13 @@ export default function dharan() {
                           src="/assets/casestudies/dharan/dharan-client.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                         Dhananjey Singh
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Founder and Creative Director, Dharan
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -877,19 +878,8 @@ export default function dharan() {
 
 
           {/* ================ Next Project Mobile ============================== */}
-
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/kedarkala-portfolio-website-case-study">
-                  <h1>Kedarkala</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          
+          <ProjectNextBox text={"Kedarkala"} link={"/kedarkala-portfolio-website-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

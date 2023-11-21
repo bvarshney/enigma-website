@@ -15,6 +15,7 @@ import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -283,12 +284,12 @@ export default function pdtl() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                     LOGISTICS
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                     2022
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -315,11 +316,11 @@ export default function pdtl() {
           <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
+                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     Manchester, the bustling heart of the UK, is home to a
                     thriving logistics company that prides itself on providing
                     top-notch services to its clientele. To stay ahead in an
@@ -329,19 +330,19 @@ export default function pdtl() {
                     Enigma was recommended to the client and was tasked with
                     delivering a smashing website transformation that would
                     leave a lasting impression.
-                  </h4>
+                  </p>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Development
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -371,7 +372,7 @@ export default function pdtl() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -495,7 +496,7 @@ export default function pdtl() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -611,7 +612,7 @@ export default function pdtl() {
           {/* ====================== Fonts Section ======================== */}
           <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h2 className={styles.h2} >Fonts</h2>
+              <h3 className={styles.h2} >Fonts</h3>
             </div>
             <div className={styles.pdtlfontImagebox}>
               <img src="/assets/casestudies/pdtl/pdtl-case-study-fonts-light.webp" loading="lazy" alt="PDTL Case Study Fonts Light" />
@@ -625,13 +626,13 @@ export default function pdtl() {
 
           <section className={styles.pdtlcolorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colours</h2>
+              <h3 className={styles.h2} >Colours</h3>
             </div>
             <div className={styles.pdtlcolorBox}>
               <div className={styles.pdtlcolorBoxHeadingBackground}>
-                <h1 data-speed="1.5">
+                <p data-speed="1.5">
                     Colour Palette
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -665,7 +666,7 @@ export default function pdtl() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>PDTL Driver Training Institute</h2>
+              <h3 className={styles.videoH2}>PDTL Driver Training Institute</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -687,7 +688,7 @@ export default function pdtl() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h2 className={styles.h3} data-jelly>Tech Stack</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -749,7 +750,7 @@ export default function pdtl() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -835,13 +836,13 @@ export default function pdtl() {
                     <img src="/assets/casestudies/pdtl/pdtl-client-image.webp" alt="PDTL Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                         Jared Bullock
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Director, PDTL
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -858,21 +859,9 @@ export default function pdtl() {
 
           {/* ========================== Next Project END ======================= */}
 
-
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/wragby-solutions-case-study">
-                  <h1>Wragby</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ProjectNextBox text={"Wragby"} link={"/wragby-solutions-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

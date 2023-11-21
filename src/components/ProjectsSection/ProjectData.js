@@ -27,7 +27,7 @@ export const projects = [
         srcSLider: "kedarkala.webp",
     },
     {
-        name: "Grand City Mall",
+        name: "Garden City Mall",
         client: "GCM",
         description: "Web Design, Development",
         src: "4.webp",

@@ -19,6 +19,8 @@ import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from '@/components/pageLoader';
 import Head from 'next/head';
+import Portfolio from '../components/ServiceDetail/Marketing/Portfolio';
+import Process from '../components/ServiceDetail/Marketing/Process';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -127,52 +129,6 @@ useEffect(() => {
   
   if (globalThis.innerWidth > 1200) {
 
-// Portfolio Section Animation
-  useEffect(() => {
-
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#servicePortfolioAnim',
-          scrub: true,
-          end: "top top",
-          ease: "none",
-          markers: false,
-        },
-      });
-      tl.fromTo( '#servicePortfolioAnim', 0.8, {
-          transform: "translate3d(0px, 0px, 0px) scale(0.5, 0.5)",
-          ease: "none",
-        },{
-          transform: "translate3d(0px, 0px, 0px) scale(1, 1)",
-      });
-    });
-    return () => ctx.revert();
-  });
-
-// Portfolio Section Animation
-useEffect(() => {
-  let ctx = gsap.context(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#section-3",
-        start: "top top",
-        end: "2500 top",
-        scrub: 1,
-        pin: true,
-        markers: false,
-      },
-    });
-    
-  tl.to("#service-port-main", {
-    transform: "translateX(-66.8%)",
-    ease: "power1.out",
-  });
-});
-return () => ctx.revert();
-});
-
-
 // Approach Section Animation
 useEffect(() => {
   let approachImages = gsap.utils.toArray(".service-image-container");
@@ -261,6 +217,28 @@ useEffect(() => {
           stagger: 0.01,
         });
       });
+    }, []);
+
+    // Text Reveal Animation For Offer Cards
+    useEffect(() => {
+      const elementsToAnimate = document.querySelectorAll('#fadeUp');
+      let ctx = gsap.context(() => {
+      elementsToAnimate.forEach(target => {
+        gsap.from(target, {
+          scrollTrigger: {
+            trigger: target,
+            start: 'top 90%',
+            end: 'bottom top',
+            markers: false,
+          },
+          opacity: 0,
+          y: 100,
+          duration: 0.8,
+          ease: 'Power1.out',
+        });
+      });
+    });
+    return () => ctx.revert();
     }, []);
 
   return (
@@ -532,139 +510,9 @@ useEffect(() => {
         </section>
 
 {/* Section 3 Portfolio */}
-    <section className={`${styles['service-portfolio']} ${styles['main-container']}`} 
-        id='section-3'>
-      <div id='servicePortfolioAnim' 
-       className={styles['service-anim-portfolio']}>
-        <div className={styles['service-portfolio-main']} id='service-port-main'>
-          <div className={styles['service-portfolio-title']}>
-            <h3 data-cursor-size="300px"
-                data-cursor-exclusion id='fadeIn'>
-                Marketing <br /> Portfolio
-            </h3>
-          </div>
-          
-          <div className={styles['service-portfolio-cards']}>
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#0F1014"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/patronum.webp'
-                        loading='lazy'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View Case Study
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h4 className='color-primary'>
-                  Patronum
-                </h4>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
 
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#E30B25"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/dmtca.webp'
-                         loading='lazy'
-                         width={600}
-                        height={600}
-                        alt='portfolio image'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View Case Study
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h4 className='color-primary'>
-                  DMTCA
-                </h4>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#FF8395"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        loading='lazy'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View Case Study
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h4 className='color-primary'>
-                  Kedarkala
-                </h4>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-
-            <div className={styles['service-portfolio-cards-item']}
-                 data-cursor-size="100px"
-                 data-cursor-color="#0D0A29"
-                 data-cursor-text="View More" id='fadeIn'>
-              <div className={styles['service-card-top']}>
-                <div>
-                    <Image src='/assets/service-detail/portfolio/enigma.webp'
-                        alt='portfolio image'
-                        width={600}
-                        height={600}
-                        loading='lazy'
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}>
-                    </Image>
-                </div>
-                <a className={styles['btn-10']} href='#'>
-                  View Case Study
-                </a>
-              </div>
-              <div className={styles['service-card-bottom']}>
-                <h4 className='color-primary'>
-                  Enigma
-                </h4>
-                <p>
-                  Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+          <Portfolio />
+    
 {/* Section 4 Approach and Process */}
     <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-4'>
       <div className={styles['service-detail-process']}>
@@ -780,6 +628,10 @@ useEffect(() => {
                 </div>
                 </div>
             </section>
+
+            {/* <section className={`${styles['main-container']}`}>
+              <Process />
+            </section> */}
 
 {/* Section 6 */}
         <section className={`${styles['main-container']}`}>

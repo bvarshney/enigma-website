@@ -32,17 +32,17 @@ const BlogInfo = ({ author, date, shareLink }) => {
   return (
     <>
       <div className="b__dt-auth-box" id='anim'>
-        <h6 className='b__dt-auth-dt'>Author</h6>
+        <p className='b__dt-auth-dt'>Author</p>
         <p className="b__dt-auth-dt-ans">{author}</p>
       </div>
 
       <div className="b__dt-auth-box" id='anim'>
-        <h6 className='b__dt-auth-dt'>Posted on</h6>
+        <p className='b__dt-auth-dt'>Posted on</p>
         <p className="b__dt-auth-dt-ans">{date}</p>
       </div>
 
       <div className="b__dt-auth-box" id='anim'>
-          <h6 className='b__dt-auth-dt'>Share Article</h6>
+          <p className='b__dt-auth-dt'>Share Article</p>
         <div className="b__dt-s-icon">
           <LinkedinShareButton url={"https://weareenigma.com/"} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
             <img src="/assets/blogs/blog-detail/social/linkedin.webp" alt="social icon" />

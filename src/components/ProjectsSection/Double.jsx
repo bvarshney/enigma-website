@@ -85,8 +85,8 @@ export default function Index({projects, reversed}) {
           <Link href={`/${projects[0].link}`}>
             <div className={styles.stretchyWrapper}>
               <Image 
-                data-cursor-size='100px'
-                data-cursor-text='View Project' 
+                data-cursor-size='90px'
+                data-cursor-text='View Details' 
                 data-cursor-color='#5d5ad6'     
                 src={`/assets/homeProject/${projects[0].src}`}
                 fill={true}
@@ -108,8 +108,8 @@ export default function Index({projects, reversed}) {
           <Link href={`/${projects[1].link}`}>        
             <div className={styles.stretchyWrapper}>
               <Image 
-                data-cursor-size='100px'
-                data-cursor-text='View Project' 
+                data-cursor-size='90px'
+                data-cursor-text='View Details' 
                 data-cursor-color='#5d5ad6' 
                 src={`/assets/homeProject/${projects[1].src}`}
                 fill={true}

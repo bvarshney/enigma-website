@@ -15,6 +15,7 @@ import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -282,12 +283,12 @@ export default function certvault() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                     SAAS
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                     2019-20
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -314,23 +315,23 @@ export default function certvault() {
           <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
+                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     CertVault is a pioneering solution in the insurance industry, offering a cloud-based certificate repository and delivery system. Developed under the umbrella of PatraCorp, a global leader in delivering business process outsourcing services to the insurance sector, CertVault aims to revolutionize the way insurance certificates are accessed, managed, and delivered.
-                  </h4>
+                  </p>
                   
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UX Planning
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UI Design
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -360,7 +361,7 @@ export default function certvault() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -459,7 +460,7 @@ export default function certvault() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -561,7 +562,7 @@ export default function certvault() {
           
           <section className={styles.certvaultfontSection}>
             <div className={styles.certvaultfontHeading}>
-              <h1>Fonts</h1>
+              <h3>Fonts</h3>
             </div>
             <div className={`${styles.certvaultfontImagebox}  projectNoInvert`}>
               <img
@@ -577,17 +578,17 @@ export default function certvault() {
 
           <section className={styles.certvaultcolorSection} id="colorsection">
             <div className={styles.certvaultcolorHeading}>
-              <h1>COLOURS</h1>
+              <h3>COLOURS</h3>
             </div>
             <div className={styles.certvaultcolorMainBox}>
               <div className={styles.certvaultcolorBox}>
                 <div className={styles.certvaultcolorBoxHeadingBackground}>
-                  <h2 data-speed="1.3">
+                  <p data-speed="1.3">
                     Colour{" "}
                     <span className={styles.certvaultpalette} id="palette">
                       Palette
                     </span>
-                  </h2>
+                  </p>
                 </div>
               </div>
 
@@ -612,7 +613,7 @@ export default function certvault() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>Certvault <br/>  Application UI</h2>
+              <h3 className={styles.videoH3}>Certvault <br/>  Application UI</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -634,8 +635,8 @@ export default function certvault() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our UX Magic
-                </h3>
+                <h2 className={styles.h3} data-jelly>Our UX Magic
+                </h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -680,7 +681,7 @@ export default function certvault() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -751,13 +752,13 @@ export default function certvault() {
                       src="/assets/casestudies/certvault/client-image.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                       Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                        CTO, Patracorp
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -777,18 +778,7 @@ export default function certvault() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/dmtca-digital-branding-case-study">
-                  <h1>DMTCA</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ProjectNextBox text={"DMTCA"} link={"/dmtca-digital-branding-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

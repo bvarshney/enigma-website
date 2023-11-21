@@ -58,7 +58,7 @@
   justify-content: space-between;
 }
 
-.HeroRightBox h5{
+.HeroRightBox p{
   font-size: 1.2vw;
   font-weight: 500;
   color: var(--black);
@@ -114,7 +114,7 @@
 .thirdSectionRightBox {
   width: 70%;
 }
-.h4 {
+.paraTop .h4 {
   font-size: 2vw;
   letter-spacing: 1.5px;
   color: var(--black1);
@@ -129,7 +129,7 @@
   display: flex;
   justify-content: flex-start;
 }
-.thirdSectionRightBox .buttonBox h6 {
+.thirdSectionRightBox .buttonBox h3 {
   margin-right: 3vw;
   font-size: 1.2vw;
   font-weight: 500;
@@ -231,7 +231,7 @@
   width: 6vw;
   border-radius: 50%;
 }
-.clientTestimonialSectionFigureText h4{
+.clientTestimonialSectionFigureText p{
   font-size: 1.5vw;
   line-height: 1.5;
   font-weight: 500;
@@ -329,7 +329,7 @@
   margin: 0 auto;
   padding-top: 5vh;
 }
-.colorBoxHeadingBackground h1 {
+.colorBoxHeadingBackground p {
   position: absolute;
   font-size: 17vw;
   top: 80%;
@@ -498,7 +498,7 @@
     height: auto;
   }
 
-  .HeroRightBox h5{
+  .HeroRightBox p{
     font-size: 2.5vw;
     margin-bottom: 0.8vh;
   }
@@ -536,7 +536,7 @@
       justify-content: flex-start;
   }
 
-  .thirdSectionRightBox .buttonBox h6 {
+  .thirdSectionRightBox .buttonBox h3 {
       font-size: 1.8vw;
       padding: 7px 12px;
       letter-spacing: 0px;
@@ -579,7 +579,7 @@
   .clientTestimonialSectionFigure img{
     width: 14vw;
   }
-  .clientTestimonialSectionFigureText h4{
+  .clientTestimonialSectionFigureText p{
     font-size: 2.5vw;
   }
 
@@ -630,7 +630,7 @@
   .colorBoxesSection {
     height: 80%;
   }
-  .colorBoxHeadingBackground h1 {
+  .colorBoxHeadingBackground p {
     display: none;
   }
 .colorBoxesSection ul{
@@ -757,7 +757,7 @@
     margin-top: 7vw;
     align-items: flex-start;
   }
-  .HeroRightBox h5{
+  .HeroRightBox p{
     font-size: 3vw;
     margin-bottom: 1.5vh;
   }
@@ -792,7 +792,7 @@
     width: 100%;
     margin-top: 6vw;
   }
-  .thirdSectionRightBox .buttonBox h6 {
+  .thirdSectionRightBox .buttonBox h3 {
     font-size: 3.2vw;
     padding: 1.2vw 3vw;
     margin-right: 20px;
@@ -846,7 +846,7 @@
   .clientTestimonialSectionFigure img{
     width: 25vw;
   }
-  .clientTestimonialSectionFigureText h4{
+  .clientTestimonialSectionFigureText p{
     font-size: 4vw;
     text-align: center;
   }
@@ -1064,7 +1064,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .HeroLeftBox .Link, .HeroRightBox h5 {
+  .HeroLeftBox .Link, .HeroRightBox p {
     font-size: 4vw;
     margin: 0;
   }
@@ -1075,7 +1075,7 @@
     font-size: 4.5vw;
     letter-spacing: 1px;
   }
-  .thirdSectionRightBox .buttonBox h6{
+  .thirdSectionRightBox .buttonBox h3{
     margin-right: 10px;
   }
 }

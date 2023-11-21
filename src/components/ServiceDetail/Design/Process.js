@@ -37,7 +37,7 @@ useEffect(() => {
       <>
         <div className={styles.splitLinesMain} id='section-process'>
             <p className={styles.splitAnimation} id='split-lines'>
-                By taking the <span className='color-primary'>L.E.A.P. </span>with Enigma Digital, you're not just getting a service; you're partnering with a team that's committed to leaping beyond the ordinary and achieving extraordinary results.
+              We solve complex design problems through user research, expert analysis, prototyping and collaborative design with users &amp; stakeholders.
             </p>
         </div>
       </>

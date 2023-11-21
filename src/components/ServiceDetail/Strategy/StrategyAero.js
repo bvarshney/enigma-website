@@ -33,8 +33,8 @@ export default function CursorAero() {
       },
     });
 
-    const demoHeader = document.querySelectorAll(".aero-demo h1");
-    
+    const demoHeader = document.querySelectorAll(".aero-demo p");
+  
     // Header
     tl.fromTo(
       demoHeader,
