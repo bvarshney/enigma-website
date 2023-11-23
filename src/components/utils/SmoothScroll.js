@@ -336,6 +336,18 @@ const SmoothScroll = ({ onScroll }) => {
     });
   }
 
+  // Loader
+    const fixedGlossaryModal = document.getElementById("glossary-modal");
+
+    if (fixedGlossaryModal) {
+    smoothscroll.addListener(function (status) {
+      var offset = status.offset;
+
+      fixedGlossaryModal.style.top = offset.y + "px";
+      fixedGlossaryModal.style.left = offset.x + "px";
+    });
+  }
+
     // LOGO Fixed
 
     const fixedLogo = document.getElementById("main-logo");
