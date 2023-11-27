@@ -415,18 +415,18 @@ const structuredData = {
             </p>
 
             <div className="blog__dt-tags">
-                <h1 className="blog__dt-tag">
+                <h4 className="blog__dt-tag">
                     Website Seo
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     White Hat
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     Black Hat
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     Seo Spaming
-                </h1>
+                </h4>
             </div>
           </div>
         </div>

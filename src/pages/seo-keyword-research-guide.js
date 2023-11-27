@@ -412,18 +412,18 @@ const structuredData = {
             </p>
 
             <div className="blog__dt-tags">
-                <h1 className="blog__dt-tag">
+                <h4 className="blog__dt-tag">
                     Keyword Research
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     Local Seo
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     Targeted Keyword
-                </h1>
-                <h1 className="blog__dt-tag">
+                </h4>
+                <h4 className="blog__dt-tag">
                     Seo Strategy
-                </h1>
+                </h4>
             </div>
 
           </div>

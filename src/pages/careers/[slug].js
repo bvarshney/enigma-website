@@ -68,14 +68,14 @@ function JobDetail({ job }) {
     "industry": "Marketing & Advertising",
     "employmentType": job.type,
     "datePosted": job.postingDate,
-    "validThrough": "2024-01-31",
+    "validThrough": "2023-12-28",
     "jobLocation": {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "A-40, Glandslam Ithum",
-        "addressLocality": "Sector 62",
-        "addressRegion": "Noida",
+        "streetAddress": "A-40, Glandslam Ithum, Sector-62",
+        "addressLocality": "Noida",
+        "addressRegion": "U.P.",
         "postalCode": "201301",
         "addressCountry": "IN"
       }
@@ -267,18 +267,14 @@ function JobDetail({ job }) {
 
 export default JobDetail;
 
-// Implement getServerSideProps to fetch job data based on slug
 export async function getServerSideProps(context) {
   const { slug } = context.params;
 
-  // Find the job by its slug
   const job = jobs.find(j => j.slug === slug);
 
-  // If no job is found, return notFound: true
   if (!job) {
     return { notFound: true };
   }
 
-  // Return the found job as a prop
   return { props: { job } };
 }

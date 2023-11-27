@@ -458,7 +458,7 @@ useEffect(() => {
             <div className={styles['service-detail-hero-top']}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
-                Marketing
+                Organic
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
                 We leverage the power of Emotion, Consumer Psychology & Technology to propel your success in the enigmatic realm of bits & bytes.
@@ -466,7 +466,7 @@ useEffect(() => {
             </div>
             <div>
               <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                <span className='font-ageo'>&</span> Services
+                Marketing
               </h1>
             </div>
           </div>

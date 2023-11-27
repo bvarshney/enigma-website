@@ -55,7 +55,7 @@ const jobs = [
         
         note: "Please be aware that a portfolio is a mandatory component of your application. Submissions without a portfolio will not be reviewed, and applicants may not reapply for a period of six months.",
 
-        postingDate:"2023-11-07",
+        postingDate:"2023-11-27",
         salMin: "350000",
         salMax: "650000"
     },
@@ -110,7 +110,7 @@ const jobs = [
       HowToApply: "Please submit your resume, cover letter, and any relevant case studies or examples of past SEO successes to careers@weareenigma.com or apply through the careers section of our website.",
       message: "If you are passionate about SEO and eager to drive digital excellence, apply to become Enigma Digital's next SEO Specialist and help shape the future of digital engagement!",
 
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "400000",
       salMax: "700000"
     },
@@ -168,7 +168,7 @@ const jobs = [
       HowToApply: "Interested candidates should submit a resume, cover letter, and portfolio showcasing recent projects to careers@weareenigma.com or apply through the careers section of our website. Please include links to live websites or code repositories such as GitHub.",
       message: "Ready to code at the cutting edge of digital innovation? Join Enigma Digital as a Front-End Developer and turn visionary designs into reality. Apply now and let's build the future together!",
 
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "400000",
       salMax: "700000"
     },
@@ -225,7 +225,7 @@ const jobs = [
       HowToApply: "Submit your resume, cover letter, and any relevant work experience or achievements that demonstrate your ability to succeed in this role to careers@weareenigma.com or apply through the careers section of our website. We are looking for candidates who are not just looking for a job but are passionate about building a career in the digital space.",
       message: "As a Business Development Manager at Enigma Digital, you'll have the power to open new horizons for businesses worldwide and be a catalyst for digital transformation. Apply now and let's shape the digital future together!",
 
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "600000",
       salMax: "900000"
     },
@@ -285,7 +285,7 @@ const jobs = [
       HowToApply: "To apply, please submit your resume detailing your relevant experience and a cover letter explaining why you are the ideal candidate for this role to careers@weareenigma.com or apply through the careers section of our website. Include any significant achievements that demonstrate your ability to perform in a high-paced, innovative digital environment.",
       message: "Elevate your career to new heights with Enigma Digital. As a Senior Account Executive, you'll play a pivotal role in our continued growth and success. Apply now to join our team of digital pioneers!",
 
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "400000",
       salMax: "700000"
     },
@@ -340,7 +340,7 @@ const jobs = [
       HowToApply: "If you're passionate about design and eager to learn in a fast-paced, innovative environment, we'd love to hear from you. Please submit your resume, a cover letter, and a link to your online portfolio at to careers@weareenigma.com or apply through the careers section of our website. ",
       message: "Kickstart your design career with an internship at Enigma Digital. Apply today and take the first step towards becoming a digital design expert in an environment that celebrates creativity and innovation!",
 
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "84000",
       salMax: "120000"
     },
@@ -395,7 +395,7 @@ const jobs = [
       HowToApply: "If you are passionate about frontend development and eager to make a mark in the digital world, we want to meet you. Please send us your resume, a cover letter, and any relevant work samples or links to your code repositories to careers@weareenigma.com or apply through the careers section of our website",
       message: "Dive into the world of frontend development with an internship at Enigma Digital. Apply now and start shaping the future of digital experiences!",
       
-      postingDate:"2023-11-07",
+      postingDate:"2023-11-27",
       salMin: "84000",
       salMax: "120000"
     },
