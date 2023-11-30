@@ -16,6 +16,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -629,12 +630,11 @@ export default function kedarkala() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                    src="/assets/casestudies/kedarkala/kedarkala.webm"
-                    autoPlay
-                    loop
-                    muted
-                    alt='kedarkala video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/kedarkala/kedarkala.webm"
+                  srcMp4="/assets/casestudies/kedarkala/kedarkala.mp4"
+                  poster="/assets/casestudies/kedarkala/kedarkala-poster.webp"
+                  title="kedarkala-portfolio-video"
                 />
               </div>
             </div>

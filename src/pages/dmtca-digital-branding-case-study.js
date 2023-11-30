@@ -16,6 +16,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -626,12 +627,11 @@ export default function dmtca() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/dmtca/dmtca.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='patronum video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/dmtca/dmtca.webm"
+                  srcMp4="/assets/casestudies/dmtca/dmtca.mp4"
+                  poster="/assets/casestudies/dmtca/dmtca-poster.webp"
+                  title="dmtca-branding-casestudy-video"
                 />
               </div>
             </div>

@@ -16,6 +16,7 @@ import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -688,12 +689,11 @@ export default function wragby() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                    src="/assets/casestudies/wragby/wragby.webm"
-                    autoPlay
-                    loop
-                    muted
-                    alt='wragby video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/wragby/wragby.webm"
+                  srcMp4="/assets/casestudies/wragby/wragby.mp4"
+                  poster="/assets/casestudies/wragby/wragby-poster.webp"
+                  title="wragby-solutions-casestudy-video"
                 />
               </div>
             </div>

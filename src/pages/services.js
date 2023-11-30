@@ -4,7 +4,6 @@ import "react-creative-cursor/dist/styles.css";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import "intersection-observer";
 import { NextSeo } from "next-seo";
 import SplitType from "split-type";
 
@@ -15,12 +14,11 @@ import MarqueeCata from "@/components/MarqueeCata";
 import SliderMarquee from "@/components/ServicePage/SliderMarquee";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
-import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
-import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
 import Modal from "../components/PopupForm/formModal";
+import LazyVideo from "../components/ServicePage/LazyVideo";
 
 gsap.config({
   nullTargetWarn: false,
@@ -479,6 +477,7 @@ export default function services() {
               <div className="image-en">
                 <div className="absolute-img">
                   <video
+                    poster="/assets/services/services-main-poster.webp"
                     className="vid"
                     autoPlay
                     muted
@@ -505,10 +504,13 @@ export default function services() {
 
         <div className="mobile-video-service-section">
           <div className="video-service-mobile" id="mobile-vid">
-          <FirstVideoLazy className="vid"
-                      src="/assets/services/service-1.webm"
-                      title="Service Video"
-                    />
+            <LazyVideo 
+              src="/assets/services/service-1.webm"
+              poster="/assets/services/services-main-poster.webp"
+              type="video/webm"
+              title="Service-Showcase"
+              className="vid"
+            />
           </div>
         </div>
 
@@ -528,10 +530,13 @@ export default function services() {
                data-cursor-color="#bcd15e"
                onMouseEnter={(f) => handleHoverSecond(f)}
                       onMouseOut={(f) => handleHoverExitSecond(f)}>
-          <SecondVideoLazy
-                      src="/assets/services/service-2.webm"
-                      title="Mac Enigma Video"
-                    />
+              <LazyVideo 
+                src="/assets/services/service-2.webm"
+                poster="/assets/services/service-video-people-sitting.webp"
+                type="video/webm"
+                title="people-disscussion"
+                className="vid"
+              />
             <div className="rotate-idea-svg">
               <Image
                 src="/assets/about/wemakemagic.png"

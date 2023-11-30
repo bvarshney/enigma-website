@@ -73,14 +73,14 @@ export default function Modal() {
         className='popUpRotate'
         alt='Hire Us Image'
         src="/assets/icons/hire-us.svg"
-        priority={true}
+        priority={false}
       />
       <Image 
         height={50}
         width={50}
         alt="Image" className='popUpImg'
         src={isHovered ? '/assets/icons/form-pen.gif' : '/assets/icons/form-pen.png'}
-        priority={true}
+        priority={false}
       />
     </button>
     </motion.div>

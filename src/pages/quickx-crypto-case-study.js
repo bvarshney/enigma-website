@@ -16,6 +16,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -684,12 +685,11 @@ export default function quickx() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/quickx/quickx.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='quickx casestudy video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/quickx/quickx.webm"
+                  srcMp4="/assets/casestudies/quickx/quickx.mp4"
+                  poster="/assets/casestudies/quickx/quickx-poster.webp"
+                  title="quicx-crypto-app-video"
                 />
               </div>
             </div>

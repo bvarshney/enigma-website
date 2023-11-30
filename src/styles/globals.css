@@ -237,8 +237,6 @@
 .mb-150{
   margin-bottom: 150px;
 }
-
-
 /*==============Padding And Margins End==============*/
 
 /* ==========02. Dark Mode ============= */
@@ -398,6 +396,10 @@ body {
   filter: invert(1);
 }
 
+.dark-mode .rotate-idea-svg img{
+  mix-blend-mode: unset;
+}
+
 /* Service Page END */
 
 /* Works Page */
@@ -478,6 +480,10 @@ body {
 /* ========== Dark Mode END ============= */
 
 /* ===============03. Preloader  =================== */
+.dark-mode .preloaderWords{
+  filter: invert(1);
+  color: var(--black);
+}
 
 .loader-wrap {
   position: fixed;
@@ -675,7 +681,20 @@ button:focus {
 
 /* ============================== New Hover =========================================== */
 
+/* Lazy Video for All Components*/
+.hero-main-content-section .video-box .lazy-video{
+  height: 100%;
+  width: 100%;
+}
 
+.dark-mode .newsCard .lazy-video{
+  height: 100%;
+  width: 100%;
+}
+
+.dark-mode .scroll-about-img{
+  filter: invert(0) !important;
+}
 
 
 /* ============================== New Hover END =========================================== */
@@ -4368,7 +4387,6 @@ https://unsplash.com/@vinomamba24
   position: relative;
   width: 27vw;
   height: 70vh;
-  transform: scaleX(-1);
 }
 
 .service-box-image img {

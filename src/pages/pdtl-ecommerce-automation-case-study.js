@@ -16,6 +16,7 @@ import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -670,12 +671,11 @@ export default function pdtl() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                    src="/assets/casestudies/pdtl/pdtl.webm"
-                    autoPlay
-                    loop
-                    muted
-                    alt='pdtl video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/pdtl/pdtl.webm"
+                  srcMp4="/assets/casestudies/pdtl/pdtl.mp4"
+                  poster="/assets/casestudies/pdtl/pdtl-poster.webp"
+                  title="pdtl-casestudy-video"
                 />
               </div>
             </div>

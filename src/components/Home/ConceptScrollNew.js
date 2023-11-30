@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ConceptLazyVideo from "./ConceptLazyVideo";
+
+import LazyVideo from "./ConceptLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -207,10 +208,12 @@ export default function ConceptScrollNew() {
                   <div className="macbook_pro" />
                   <div className="macbook_frame">
                     <div className="macbook_frame_content_upper"></div>
-                    <ConceptLazyVideo
-                      src="/assets/newProject/a.webm"
-                      title="Mac Enigma Video"
-                    />
+                      <LazyVideo 
+                        poster='/assets/newProject/mac-poster.jpg'
+                        srcWebm="/assets/newProject/a.webm"
+                        srcMp4="/assets/newProject/a.webm"
+                        title="Mac-Enigma-Video"
+                      />
                     <div className="macbook_frame_background" />
                   </div>
                 </div>
@@ -230,6 +233,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media1 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
+                      poster="/public/assets/reels/reel-split-left.webp"
                       className="vid lazyload"
                       src="/assets/reels/left.webm"
                       autoPlay
@@ -237,6 +241,7 @@ export default function ConceptScrollNew() {
                       playsInline
                       loop
                       id="beach-waves"
+                      type="video/webm"
                     />
                   </div>
                 </div>
@@ -263,12 +268,14 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media2 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
+                      poster="/public/assets/reels/reel-split-right.webp"
                       className="vid lazyload"
                       src="/assets/reels/right.webm"
                       autoPlay
                       muted
                       playsInline
                       loop
+                      type="video/webm"
                       id="beach-waves"
                     />
                   </div>

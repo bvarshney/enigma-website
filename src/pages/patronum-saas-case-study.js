@@ -16,6 +16,7 @@ import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -686,12 +687,11 @@ export default function patronum() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/patronum/patronum.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='patronum video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/patronum/patronum.webm"
+                  srcMp4="/assets/casestudies/patronum/patronum.mp4"
+                  poster="/assets/casestudies/patronum/patronum-poster.webp"
+                  title="patronum-saas-casestudy-video"
                 />
               </div>
             </div>

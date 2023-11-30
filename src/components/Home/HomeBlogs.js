@@ -81,7 +81,7 @@ const HomeBlogs = () => {
     <div ref={homeBlog} className="related-articles">
         <div className="homeBlogs">
           <h3 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h3>
-          <Link href="/blog">
+          <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
             <span>All Articles</span>
           </Link>
         </div>

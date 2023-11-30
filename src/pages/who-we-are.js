@@ -508,6 +508,8 @@ export default function about() {
               data-cursor-exclusion
             >
               <img
+                loading="lazy"
+                className="scroll-about-img"
                 src="/assets/hero-footer/scroll.svg"
                 alt="scroll below icon"
                 />

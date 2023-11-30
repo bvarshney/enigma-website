@@ -16,6 +16,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -617,12 +618,11 @@ export default function certvault() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/certvault/certvault.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='certvault video'
+                <ProjectLazyVideo 
+                  srcWebm="/assets/casestudies/certvault/certvault.webm"
+                  srcMp4="/assets/casestudies/certvault/certvault.mp4"
+                  poster="/assets/casestudies/certvault/certvault-poster.webp"
+                  title="certvault-casestudy-video"
                 />
               </div>
             </div>

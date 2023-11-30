@@ -132,6 +132,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 .thirdSectionRightBox .buttonBox h3 {
   margin-right: 3vw;

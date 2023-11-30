@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import LazyVideo from "./LazyVideoGif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,13 +78,13 @@ export default function NewGifSection() {
       <div className="gifSectionAbout" id="gif">
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="4">
-            <video
-              autoPlay
-              loop
-              muted
-              src="/assets/about/gif-section/culture.webm"
+            <LazyVideo
+              srcWebm="/assets/about/gif-section/culture.webm"
+              srcMp4="/assets/about/gif-section/culture.mp4"
+              title="About-Culture-Video"
+              poster="/assets/about/gif-section/culture.webp"
               className="gif-img"
-            ></video>
+            />
             <h3 className="about-gif-text">culture</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -102,14 +103,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="5">
-            <video
-              autoPlay
-              loop
-              muted
-              src="/assets/about/gif-section/attitude.webm"
-              loading="lazy"
+            <LazyVideo
+              srcWebm="/assets/about/gif-section/attitude.webm"
+              srcMp4="/assets/about/gif-section/attitude.mp4"
+              title="About-Attitude-Video"
+              poster="/assets/about/gif-section/attitude.webp"
               className="gif-img"
-            ></video>
+            />
             <h3 className="about-gif-text">attitude</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -129,14 +129,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="3.5">
-            <video
-              autoPlay
-              loop
-              muted
-              src="/assets/about/gif-section/ethos.webm"
-              loading="lazy"
+            <LazyVideo
+              srcWebm="/assets/about/gif-section/ethos.webm"
+              srcMp4="/assets/about/gif-section/ethos.mp4"
+              title="About-Ethos-Video"
+              poster="/assets/about/gif-section/ethos.webp"
               className="gif-img"
-            ></video>
+            />
             <h3 className="about-gif-text">ethos</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -158,14 +157,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up MR-20" data-speed="2.5">
-            <video
-              autoPlay
-              loop
-              muted
-              src="/assets/about/gif-section/experience.webm"
-              loading="lazy"
+            <LazyVideo
+              srcWebm="/assets/about/gif-section/experience.webm"
+              srcMp4="/assets/about/gif-section/experience.mp4"
+              title="About-Experience-Video"
+              poster="/assets/about/gif-section/experience.webp"
               className="gif-img"
-            ></video>
+            />       
             <h3 className="about-gif-text">experience</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -185,14 +183,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="3.2">
-            <video
-              autoPlay
-              loop
-              muted
-              src="/assets/about/gif-section/magic.webm"
-              loading="lazy"
+            <LazyVideo
+              srcWebm="/assets/about/gif-section/magic.webm"
+              srcMp4="/assets/about/gif-section/magic.mp4"
+              title="About-Magic-Video"
+              poster="/assets/about/gif-section/magic.webp"
               className="gif-img"
-            ></video>
+            /> 
             <h3 className="about-gif-text">magic</h3>
             <img
               src="/assets/about/gif-section/arr.png"

@@ -13,7 +13,6 @@ import ContactAero from "@/components/Contact/ContactAerosol";
 import MarqueeCata from "@/components/MarqueeCata";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
-import Modal from "../components/PopupForm/formModal";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 
@@ -191,10 +190,6 @@ export default function contact() {
         <main>
             <Header />
 
-{/* PopUp Modal Button */}
-  <Modal />
-{/* End */}
-
             <section className="contact-hero">
               <div
                 className="contact-hero-content"
@@ -266,12 +261,15 @@ export default function contact() {
                 transition={{ duration: 1, delay: 3.5 }}
               >
                 <div className="img">
-                  <video
-                      src="/assets/contact/contact-bg-video.webm"
-                      autoPlay
-                      muted
-                      loop
-                    ></video>
+                  <video 
+                    loop
+                    autoPlay
+                    muted
+                    src="/assets/contact/contact-bg-video.webm"
+                    poster="/assets/contact/contact-video-poster.webp"
+                    title="Contact-Video"
+                    type="video/webm"
+                  />
                 </div>
               </motion.div>
             </div>

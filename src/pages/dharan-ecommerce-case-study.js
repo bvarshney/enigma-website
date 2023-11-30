@@ -16,6 +16,7 @@ import Image from "next/image";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -643,12 +644,11 @@ export default function dharan() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/dharan/dharan.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='patronum video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/dharan/dharan.webm"
+                  srcMp4="/assets/casestudies/dharan/dharan.mp4"
+                  poster="/assets/casestudies/dharan/dharan-poster.webp"
+                  title="dharan-ecommerce-video"
                 />
               </div>
             </div>

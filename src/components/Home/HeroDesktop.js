@@ -83,13 +83,16 @@ const HeroDesktop = () => {
                   <div className="reel-hero">
                     <div className='reel-anim'>
                       <video
-                        src="/assets/reels/hero.webm"
+                        poster='/assets/reels/reel-poster.webp'
                         muted
                         autoPlay
                         loop
                         preload="auto"
                         className="hero-video"
-                      ></video>
+                      >
+                        <source src='/assets/reels/hero.webm' type='video/webm'/>
+                        <source src='/assets/reels/hero.mp4' type='video/mp4'/>
+                      </video>
                     </div>
                   </div>
                 </div>
@@ -127,6 +130,7 @@ const HeroDesktop = () => {
                   width={200}
                   height={200}
                   alt="Scroll Image"
+                  title='Scroll Down Image'
                   className="svg-dark-mode"
                 ></Image>
               </div>

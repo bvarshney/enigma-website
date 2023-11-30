@@ -16,6 +16,7 @@ import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -651,12 +652,11 @@ export default function gcm() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/gcm/gcm.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='gcm video'
+                <ProjectLazyVideo 
+                  srcWebm="/assets/casestudies/gcm/gcm.webm"
+                  srcMp4="/assets/casestudies/gcm/gcm.mp4"
+                  poster="/assets/casestudies/gcm/gcm-poster.webp"
+                  title="patronum-phygital-shopping-video"
                 />
               </div>
             </div>

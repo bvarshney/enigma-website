@@ -16,6 +16,7 @@ import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
+import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -648,12 +649,11 @@ export default function patra() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <video
-                  src="/assets/casestudies/patra/patra.webm"
-                  autoPlay
-                  loop
-                  muted
-                  alt='patronum video'
+                <ProjectLazyVideo
+                  srcWebm="/assets/casestudies/patra/patra.webm"
+                  srcMp4="/assets/casestudies/patra/patra.mp4"
+                  poster="/assets/casestudies/patra/patra-poster.webp"
+                  title="patra-saas-video"
                 />
               </div>
             </div>
