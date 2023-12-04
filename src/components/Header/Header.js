@@ -27,9 +27,9 @@ export default function Header() {
 
     const div = document.body;
     if (invertText) {
-      div.classList.add("dark-mode");
+      div.classList.add("dark");
     } else {
-      div.classList.remove("dark-mode");
+      div.classList.remove("dark");
     }
   }, [invertText]);
 

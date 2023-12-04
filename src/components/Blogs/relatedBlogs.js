@@ -32,7 +32,7 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
     <div className="related-articles">
         <div className="related-article-heading">
           <h3>RELATED ARTICLES</h3>
-          <Link href="/blog">
+          <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
             <p>All articles</p>
           </Link>
         </div>

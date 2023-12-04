@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { easeInOut, motion } from "framer-motion";
 import Image from 'next/image';
 import { Cursor } from "./../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import dynamic from 'next/dynamic';
+import gsap from 'gsap';
 
 // Dynamic import for ContactUs
 const DynamicContactUs = dynamic(() => import('./contactUs'), { loading: () => <p>Loading...</p>, ssr: false });
@@ -49,16 +49,33 @@ export default function Modal() {
     }
   }
 
+useEffect(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".popUpButton-div",
+      start: "top top",
+      end: "bottom top-=20%",
+      scrub: true,
+      ease: "power1.out"
+    }
+  });
+
+  tl.fromTo("#popUpButton", {
+      opacity: 0,
+      y: -100,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 2,
+  });
+});
+
   return (
     <>
 
     {/* Your HTML content here */}
-    <motion.div 
-        className='popUpButton-div'
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 6.2, duration: 0.5, transition: easeInOut }}
-        >
+    <div className='popUpButton-div'>
     <button 
       aria-label='open popup form'
       id="popUpButton" 
@@ -83,7 +100,7 @@ export default function Modal() {
         priority={false}
       />
     </button>
-    </motion.div>
+    </div>
     {/* Modal */}
     <div
       id="PopUpMyModal"

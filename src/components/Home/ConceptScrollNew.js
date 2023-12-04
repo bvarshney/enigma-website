@@ -15,7 +15,7 @@ export default function ConceptScrollNew() {
           trigger: ".hero-concept-scroll",
           start: "-700 top",
           markers: false,
-          scrub: 2,
+          scrub: 1,
         },
       });
       fixed_scrol.to(".container_word_change_t", {
@@ -61,7 +61,7 @@ export default function ConceptScrollNew() {
           end: "3500 center",
           markers: false,
           pin: true,
-          scrub: 2,
+          scrub: 1,
         },
       });
 
@@ -75,7 +75,7 @@ export default function ConceptScrollNew() {
       });
       fixed_scrol.to(".transition_to_lapi", {
         opacity: 1,
-        duration: 10,
+        duration: 5,
         ease: "power2.out",
       });
       fixed_scrol.to(".container_word_change_t", { display: "none" }, 25);
@@ -168,10 +168,10 @@ export default function ConceptScrollNew() {
         {
           gridTemplateColumns: "20% 60% 20%",
           opacity: 1,
-          duration: 10,
+          duration: 15,
           ease: "power1.inOut",
         },
-        80
+        75
       );
       fixed_scrol.fromTo(
         ".c-hm-us_title, .t-lead ",
@@ -183,7 +183,7 @@ export default function ConceptScrollNew() {
           duration: 8,
           ease: "power1.inOut",
         },
-        90
+        80
       );
     });
     return () => ctx.revert();
@@ -233,7 +233,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media1 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
-                      poster="/public/assets/reels/reel-split-left.webp"
+                      poster="/assets/reels/reel-split-left.webp"
                       className="vid lazyload"
                       src="/assets/reels/left.webm"
                       autoPlay
@@ -268,7 +268,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media2 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
-                      poster="/public/assets/reels/reel-split-right.webp"
+                      poster="/assets/reels/reel-split-right.webp"
                       className="vid lazyload"
                       src="/assets/reels/right.webm"
                       autoPlay

@@ -136,10 +136,11 @@ export default function studio() {
                     src={`/assets/reels/showreel.mp4`}
                     loop
                     muted
+                    controls
                     autoPlay
                     layoutId="main-image-1"
-                    data-cursor-text="Enigma"
-                    data-cursor-size="100px"
+                    data-cursor-text="Play/Pause"
+                    data-cursor-size="120px"
                     data-cursor-color="#000"
                     className="studio-img-hero"
                   />

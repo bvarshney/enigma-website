@@ -272,16 +272,31 @@ const SmoothScroll = ({ onScroll }) => {
     // Menu SVG Fixed
     const fixedElem = document.getElementById("header-fixed");
 
+    if(fixedElem){
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
 
       fixedElem.style.top = offset.y + "px";
       fixedElem.style.left = offset.x + "px";
     });
+  }
 
+  // Menu SVG Fixed
+  const fixedNav = document.getElementById("navbar");
+
+  if(fixedNav){
+  smoothscroll.addListener(function (status) {
+    var offset = status.offset;
+
+    fixedNav.style.top = offset.y + "px";
+    fixedNav.style.left = offset.x + "px";
+  });
+}
 
     // Menu Wrapper
     const fixedMenu = document.querySelector(".nav");
+
+    if (fixedMenu) {
 
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
@@ -289,6 +304,7 @@ const SmoothScroll = ({ onScroll }) => {
       fixedMenu.style.top = offset.y + "px";
       fixedMenu.style.left = offset.x + "px";
     });
+  }
 
     // Modal Pop Up form Fixed
 
@@ -351,23 +367,26 @@ const SmoothScroll = ({ onScroll }) => {
     // LOGO Fixed
 
     const fixedLogo = document.getElementById("main-logo");
-
+if(fixedLogo){
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
 
       fixedLogo.style.top = offset.y + "px";
       fixedLogo.style.left = offset.x + "px";
     });
+  }
 
     //  Modal Video Wrapper
     const modalWrapper = document.getElementById("modal-video-wrapper");
 
+    if(modalWrapper){
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
 
       modalWrapper.style.top = offset.y + "px";
       modalWrapper.style.left = offset.x + "px";
     });
+  }
 
     if (onScroll) {
       smoothscroll.addListener(onScroll);
@@ -385,29 +404,29 @@ const SmoothScroll = ({ onScroll }) => {
     smoothscrollRef.current && smoothscrollRef.current.scrollTo(0, 0);
   }, [router, smoothscrollRef]);
 
-  useEffect(() => {
-    window.addEventListener("pagehide", function (e) {
-      document.body.style.display = "none";
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("pagehide", function (e) {
+  //     document.body.style.display = "none";
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      router.events.on("routeChangeComplete", () => {
-        document.body.style.display = "auto";
-      });
-      document.body.style.display = "auto";
-    };
+  // useEffect(() => {
+  //   const handleRouteChange = () => {
+  //     router.events.on("routeChangeComplete", () => {
+  //       document.body.style.display = "auto";
+  //     });
+  //     document.body.style.display = "auto";
+  //   };
 
-    handleRouteChange();
+  //   handleRouteChange();
 
-    return () => {
-      router.events.off("routeChangeComplete", () => {
-        document.body.style.display = "auto";
-      });
-      document.body.style.display = "auto";
-    };
-  }, []);
+  //   return () => {
+  //     router.events.off("routeChangeComplete", () => {
+  //       document.body.style.display = "auto";
+  //     });
+  //     document.body.style.display = "auto";
+  //   };
+  // }, []);
 };
 
 export default SmoothScroll;

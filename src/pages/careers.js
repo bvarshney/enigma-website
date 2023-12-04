@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import SmoothScroll from "@/components/utils/SmoothScroll";
 
 // Components
 import Header from '@/components/Header/Header';
@@ -14,10 +13,46 @@ import { NextSeo } from "next-seo";
 import FullTime from "../components/Careers/FullTime";
 import PartTime from "../components/Careers/PartTime";
 import Head from "next/head";
+import SmoothScroll from "@/components/utils/SmoothScroll";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Careers(){
+
+     // Hero Section Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#anim",
+      {
+        rotationX: -80,
+        opacity: 0,
+        translateY: 300,
+        transformPerspective: "1000",
+        transformOrigin: "top center",
+      },
+      {
+        delay: 3,
+        duration: 1.3,
+        rotationX: 0,
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.2,
+      }
+    ).fromTo("#para-anim", {
+        opacity: 0,
+        y: 100,
+
+    },{
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.1,
+        delay: -0.5,
+    })
+    return () => tl.kill();
+  }, []);
 
     return(
         <div className="bg-white">
@@ -104,22 +139,22 @@ export default function Careers(){
                     <div className="w-[85%] 3xl:w-[80%] m-auto">
                         <div className="">
                             <h1 className="2xl:text-[6.5vw] md:text-[8vw] text-[10vw] font-medium leading-[1.3]">
-                                <span>
-                                    Build the<span className="color-primary"> Future </span> <br />
-                                    of Web With Us!
+                                <span id="anim" className="block">
+                                    Build the<span className="color-primary"> Future </span>
                                 </span>
+                                <span id="anim" className="block">of Web With Us!</span>
                             </h1>
                         </div>
-                        <div className="2xl:w-[75%] w-full mx-auto text-[gray] mt-10">
-                            <p className="2xl:text-[1.4vw] md:text-[3.4vw] text-xl 2xl:text-center text-justify font-body">
+                        <div id="para-anim" className="2xl:w-[75%] w-full mx-auto text-[gray] mt-10">
+                            <p className="2xl:text-[1.4vw] md:text-[3.4vw] text-xl 2xl:text-center text-justify font-body leading-normal">
                                 Embarking on a career at Enigma isn't just about a job; it's about embracing a lifestyle where innovation, creativity, and impact are at the core of everything we do. We don't just follow trends—we set them. Here, your voice is not only heard but valued and your ideas have the power to reshape the digital landscape.
                                 <br/>
                                 <br/>
                                 Join us on our mission to build a brighter tomorrow through innovation & creativity.
                             </p>
                         </div>
-                        <div className="2xl:mt-12 mt-16">
-                            <button className="tw-primary hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-xl py-2 md:py-3 px-6 md:px-8">
+                        <div className="2xl:mt-12 mt-16 flex justify-center">
+                            <a id="para-anim" href="#JobsFullTime" className="w-[fit-content] block w-[fit-content] tw-primary hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-full py-2 md:py-3 px-6 md:px-8">
                                 <span className="flex gap-5 items-center justify-center font-medium 2xl:text-2xl md:text-3xl text-xl font-body">
                                     View Openings
                                     <span>
@@ -133,7 +168,7 @@ export default function Careers(){
                                         </svg>
                                     </span>
                                 </span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -143,48 +178,48 @@ export default function Careers(){
                         Browse<span className="color-primary"> Jobs</span>
                     </p>
                     <div className="pb-8 mx-auto text-left relative font-body mt-12 flex 2xl:flex-row flex-col justify-start gap-4 2xl:items-center flex-wrap">
-                        <button className="tw-hover group duration-300 text-black-1 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        <a href="#JobsFullTime" className="tw-hover group duration-300 text-black-1 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>UI/UX Design</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Business Development</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Account Management</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Frontend Development</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Search Engine Optimisation</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Content Writing</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
-                        <button className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl text-2xl font-medium flex items-center">
+                        </a>
+                        <a href="#JobsFullTime" className="tw-hover group text-black-1 duration-300 hover:text-primary 2xl:text-[2.1vw] md:text-4xl sm:text-2xl text-xl font-medium flex items-center">
                             <h2>Social Media Marketing</h2>
                             <span className="bg-black-1 group-hover:opacity-0 duration-300 md:h-4 md:w-4 h-3 w-3 rounded-full ml-4"> 
                             </span>
                             <img className="w-8 h-8 ml-[-25px] opacity-0 duration-300 group-hover:opacity-100" alt="circular arrow svg" src="/assets/icons/arrow-circle.svg"/>
-                        </button>
+                        </a>
                     </div>
                 </section>
 
@@ -211,7 +246,7 @@ export default function Careers(){
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Innovative Culture:
                                 </p>
-                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-light">
+                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-normal">
                                     Enigma thrives on innovation, fostering a workspace where risk-taking and originality are part of your everyday. You'll join a team eager to push boundaries and champion your groundbreaking ideas.
                                 </p>
                             </div>
@@ -223,7 +258,7 @@ export default function Careers(){
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Professional Growth:
                                 </p>
-                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-light">
+                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-normal">
                                      At Enigma, your career is a dynamic journey of learning and advancement. We offer diverse opportunities to grow with industry experts, ensuring every project polishes your professional prowess.
                                 </p>
                             </div>
@@ -235,7 +270,7 @@ export default function Careers(){
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Impactful Work:
                                 </p>
-                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-light">
+                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-normal">
                                     Your work at Enigma transcends typical client projects, driving industry innovation and making a tangible difference in the world. Here, you're crafting solutions that redefine businesses and lives.
                                 </p>
                             </div>
@@ -247,7 +282,7 @@ export default function Careers(){
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Collaborative Environment:
                                 </p>
-                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-light">
+                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-normal">
                                     Your work at Enigma transcends typical client projects, driving industry innovation and making a tangible difference in the world. Here, you're crafting solutions that redefine businesses and lives.
                                 </p>
                             </div>
@@ -258,7 +293,7 @@ export default function Careers(){
                                 <p className="text-3xl 2xl:text-xl font-medium mb-8">
                                     Work-Life Synergy:
                                 </p>
-                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-light">
+                                <p className="2xl:text-lg text-xl font-body tracking-wide text-black/60 font-normal">
                                     Your work at Enigma transcends typical client projects, driving industry innovation and making a tangible difference in the world. Here, you're crafting solutions that redefine businesses and lives.
                                 </p>
                             </div>
@@ -266,7 +301,7 @@ export default function Careers(){
                     </div>
                 </section>
 
-                <section className="w-[85%] 3xl:w-[75%] px-0 lg:px-4 mx-auto text-center py-12 md:py-24">
+                <section id="JobsFullTime" className="w-[85%] 3xl:w-[75%] px-0 lg:px-4 mx-auto text-center py-12 md:py-24">
                     <FullTime />
                 </section> 
 

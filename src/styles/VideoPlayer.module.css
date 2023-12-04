@@ -16,6 +16,22 @@
   filter: invert(1);
 }
 
+.cursorIconStyle{
+  position: absolute;
+  z-index: 99999;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.cursorIconStyle p{
+  font-size: 1.4vw;
+}
+
 @media screen and (max-width: 776px) {
   .svgBackground img {
     width: 50px;

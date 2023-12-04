@@ -239,7 +239,7 @@ function JobDetail({ job }) {
             </div>            
           </div>
 
-          <div className='w-full lg:w-1/2 shadow-3xl rounded-xl h-[fit-content] px-8 md:px-16 py-10'>
+          <div className='dark:bg-white2 dark:shadow-xl dark:shadow-white w-full lg:w-1/2 shadow-3xl rounded-xl h-[fit-content] px-4 md:px-16 py-10'>
             <div className='text-center mb-12'>
               <h2 className="text-4xl lg:text-[3vw] font-display font-medium">
                 Apply<span className="color-primary"> Now</span>

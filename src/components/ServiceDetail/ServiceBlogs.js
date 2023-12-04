@@ -36,7 +36,7 @@ const ServiceBlogs = ({ category }) => {
                     Related<span className="stroke"> Articles</span>
                 </h3>
             </div>
-            <Link href="/blog">
+            <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
                 <p>All articles</p>
             </Link>
         </div>   

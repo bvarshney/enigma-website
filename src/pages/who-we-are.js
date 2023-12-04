@@ -127,8 +127,8 @@ export default function about() {
         ".small_heading",
         {
           opacity: 0,
-          y: 30,
-          duration: 3,
+          y: 50,
+          duration: 1,
           ease: "power1.In",
         },
         "3.3"
@@ -291,8 +291,8 @@ export default function about() {
 
       <main>
         <section className="hero-about"
-        data-cursor-size="10"
-        data-cursor-text="">
+        data-cursor-size="120px"
+        data-cursor-text="Scroll Down">
           <div
             className="hero-section-about"
           >
@@ -502,7 +502,15 @@ export default function about() {
               </div>
             </div>
 
-            <div
+            <div className="about-hero-scroll">
+              <img 
+                src="/assets/hero-footer/scroll.svg"
+                alt="scroll below icon"
+                title="Scroll Down" 
+              />
+            </div>
+
+            {/* <div
               className="action-icon play-icon"
               id="cursor-stick-area"
               data-cursor-exclusion
@@ -513,7 +521,7 @@ export default function about() {
                 src="/assets/hero-footer/scroll.svg"
                 alt="scroll below icon"
                 />
-              </div>
+              </div> */}
           </div>
         </section>
 

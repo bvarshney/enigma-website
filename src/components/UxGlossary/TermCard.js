@@ -20,13 +20,18 @@ const TermCard = ({ term, onClick }) => {
   }
 
   return (
-    <div className={styles.card} onClick={() => onClick(term)}>
+    <div className={styles.card} onClick={() => onClick(term)} data-cursor-size="110px" data-cursor-text="Read More" data-cursor-color="#000">
       <div className={styles.cardMain}>
-        <img src='/assets/blogs/blog-detail/ux-glossary/icon-2.png' alt='UX Glossary Terms Image' title='UX Glossary Terms Image'/>
-        <div>
-          <h2>{term.name}</h2>
+          <img src={term.icon} alt='UX Glossary Terms Image' title='UX Glossary Terms Image'/>
+          <h2>{term.sName}</h2>
           <p>{truncatedDescription}...</p>
-        </div>
+          <div className={styles.readMore}>
+            <p className='en-link-under'>
+              <span>
+                Read More
+              </span>
+            </p>
+          </div>
       </div>
     </div>
   );

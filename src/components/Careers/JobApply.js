@@ -6,7 +6,7 @@ export default function JobApply(){
     const [number, setNumber] = useState('');
     const [location, setLocation] = useState("");
     const [url, setUrl] = useState("");
-    const [experiences, setExperiences] = useState([]);
+    const [experiences, setExperiences] = useState([1]);
     // const [selectedSkills, setSelectedSkills] = useState([]);
     // const [showDropdown, setShowDropdown] = useState(false);
     const [selectedFileName, setSelectedFileName] = useState("");
@@ -294,17 +294,17 @@ export default function JobApply(){
     return(
         <>
         <form onSubmit={handleSubmit} className="jd__form__content text-left">
-            <div className="font-body mb-16">
-                <h4 className="text-3xl font-medium mb-4">
+            <div className="font-body mb-10">
+                <h4 className="text-3xl font-medium mb-5">
                     Personal Information
                 </h4>
                 <div className="flex flex-col mb-3">
-                    <label className="text-2xl mb-2">Full Name</label>
+                    <label className="text-xl mb-2">Full Name*</label>
                     <input 
                         type="text"
                         name="name"
                         value={name}
-                        placeholder="Name*"
+                        placeholder="Name"
                         onChange={handleNameChange}
                         className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.name ? 'border-red-400 border ring-red-500' : ''}`}
                         />
@@ -312,12 +312,12 @@ export default function JobApply(){
                 </div>
 
                 <div className="flex flex-col mb-3">
-                    <label className="text-2xl mb-2">Email</label>
+                    <label className="text-xl mb-2">Email*</label>
                     <input 
                         type="email"
                         name="email"
                         value={email}
-                        placeholder="Email*"
+                        placeholder="Email"
                         onChange={handleEmailChange}
                         className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.email ? 'border-red-400 border ring-red-500' : ''}`}
                         />
@@ -325,12 +325,12 @@ export default function JobApply(){
                 </div>
 
                 <div className="flex flex-col mb-3">
-                    <label className="text-2xl mb-2">Mobile</label>
+                    <label className="text-xl mb-2">Mobile*</label>
                     <input 
                         type="tel"
                         name="number"
                         value={number}
-                        placeholder="Number*"
+                        placeholder="Number"
                         onChange={handleNumberChange}
                         className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.number ? 'border-red-400 border ring-red-500' : ''}`}
                         />
@@ -338,7 +338,7 @@ export default function JobApply(){
                 </div>
 
                 <div className="flex flex-col mb-3">
-                    <label className="text-2xl mb-2">Location</label>
+                    <label className="text-xl mb-2">Location</label>
                     <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
 
@@ -382,18 +382,18 @@ export default function JobApply(){
                 </div> */}
             </div>
 
-            <div className="font-body mb-14">
-                <h4 className="text-3xl font-medium mb-4">
+            <div className="font-body mb-10">
+                <h4 className="text-3xl font-medium mb-5">
                     Portfolio URL (optional)
                 </h4>
                 <div className="flex flex-col">
-                    <label className="text-2xl mb-2">URL (LinkedIn, Behance, Dribble)</label>
+                    <label className="text-xl mb-2">URL (LinkedIn, Behance, Dribble)</label>
                     <input type="text" name="url" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Portfolio URL" className="tw-border bg-white read-only:bg-gray-500 font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
             </div>
 
-            <div className="font-body mb-14">
-                <h4 className="text-3xl font-medium mb-4">
+            <div className="font-body mb-10">
+                <h4 className="text-3xl font-medium mb-5">
                     Experience Details
                 </h4>
                 {experiences.map((_, index) => (
@@ -403,18 +403,20 @@ export default function JobApply(){
                         <input type="number" name={`years_${index}`} placeholder="Years" className="tw-border border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
                         <input type="number" min="0" max="12" name={`months_${index}`} placeholder="Months" className="tw-border out-of-range:border-red-400 out-of-range:ring-red-500 border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
                         
-                        <button type="button" onClick={() => removeExperience(index)} className="absolute top-2 right-[-2rem] text-2xl text-black">✖</button>
+                        <button type="button" onClick={() => removeExperience(index)} className="absolute top-2 right-[-3rem] text-2xl text-black">
+                            <img className="xl:w-10 xl:h-10 w-8 h-8" src="/assets/icons/form-close.svg" />
+                        </button>
                     </div>
                 ))}
                     <button type="button" onClick={addExperience} className="text-primary text-2xl font-medium py-2 rounded-md tw-no-invert">Add Experience + </button>
                 </div>
 
             <div className="font-body mb-16">
-                <h4 className="text-3xl font-medium mb-4">
+                <h4 className="text-3xl font-medium mb-5">
                     Attachment Details
                 </h4>
                 <div className="flex flex-col mb-5">
-                    <p className="text-2xl mb-2">Only .docx or .pdf files are allowed</p>
+                    <p className="text-xl mb-2">Only .docx or .pdf files are allowed. Max file size is 10 MBs</p>
                     <label htmlFor="dropzone-file" className={`tw-border bg-white flex flex-col items-start justify-center w-full h-32 border border-primary border-dashed rounded-lg cursor-pointer ${errors.selectedFileName ? 'border-red-400' : ''}`}>
                         <div className="flex flex-col items-start justify-center py-4 px-5">
                             <svg className="w-10 h-10 text-primary tw-no-invert" stroke="currentColor" fill="none" viewBox="0 0 55 43" xmlns="http://www.w3.org/2000/svg">
@@ -468,11 +470,11 @@ export default function JobApply(){
                     <p className="tw-no-invert text-red-500 font-medium text-lg mb-4">Please fill in all the required details.</p>
                 )}
                 {isLoading ? (
-                    <button className="bg-primary h-14 w-56 shadow-lg rounded-xl" disabled>
+                    <button className="bg-primary h-14 w-56 shadow-lg rounded-full" disabled>
                         <img className="h-6 w-6 animate-spin" alt="loading icon" src="/assets/icons/loading.svg"/>
                     </button>
                 ) : (
-                    <button type="submit" className="tw-primary hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-xl h-14 w-56">
+                    <button type="submit" className="tw-primary hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-full h-14 w-56">
                     <span className="flex gap-4 items-center justify-center font-medium text-2xl font-body">
                         Submit
                             <span>

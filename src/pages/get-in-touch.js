@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import "react-creative-cursor/dist/styles.css";
@@ -19,6 +19,9 @@ import Head from "next/head";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function contact() {
+
+  const headerRef = useRef(null);
+
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -100,8 +103,6 @@ export default function contact() {
           end: "center center",
           // pin: true,
           scrub: .5,
-
-          // markers: true,
         },
       });
     });
@@ -188,7 +189,7 @@ export default function contact() {
 
       <>
         <main>
-            <Header />
+          <Header />
 
             <section className="contact-hero">
               <div

@@ -1,5 +1,5 @@
 .card {
-    padding: 24px;
+    padding: 1.4vw;
     cursor: pointer;
     font-family: 'Ageo';
     overflow: hidden;
@@ -10,9 +10,13 @@
 
   .cardMain{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
-  }
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
 
   .card img{
     width: 100px;
@@ -23,16 +27,18 @@
   }
 
   .card h2{
-    font-size: 24px;
+    font-size: 1.4vw;
     font-weight: 600;
-    margin-bottom: 10px;
     line-height: 1.2;
   }
 
   .card p{
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: 400;
-    margin-bottom: 10px;
+  }
+
+  .readMore{
+    display: none;
   }
 
   @media screen and (max-width: 1536px) {
@@ -40,15 +46,24 @@
       width: 80px;
       height: 80px;
     }
-    .card h2{
-      font-size: 20px;
-    }
-  
-    .card p{
-      font-size: 16px;
-    }
     .card {
       padding: 20px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .readMore{
+      display: block;
+    }
+    .card img{
+      width: 100px;
+      height: 100px;
+    }
+    .card h2{
+      font-size: 3vw;
+    }
+    .card p{
+      font-size: 2.8vw;
     }
   }
 
