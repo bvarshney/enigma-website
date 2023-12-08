@@ -1,20 +1,30 @@
-import { useState, useRef } from "react";
-import styles from "@/styles/VideoPlayer.module.css";
+import { useState, useRef, useContext } from "react";
 import Image from "next/image";
+import styles from "@/styles/VideoPlayer.module.css";
+import { useAudioPlayer } from '../Audio/AudioPlayer'; // Assuming this is the correct path
 
 const VideoPlayer = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const { isPlaying: isAudioPlaying, playAudio, pauseAudio } = useAudioPlayer();
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [wasAudioPlaying, setWasAudioPlaying] = useState(false);
   const videoRef = useRef(null);
 
   const togglePlay = () => {
     const video = videoRef.current;
 
-    if (isPlaying) {
+    if (isVideoPlaying) {
       video.pause();
-      setIsPlaying(false);
+      setIsVideoPlaying(false);
+      if (wasAudioPlaying) {
+        playAudio();
+      }
     } else {
+      setWasAudioPlaying(isAudioPlaying);
+      if (isAudioPlaying) {
+        pauseAudio();
+      }
       video.play();
-      setIsPlaying(true);
+      setIsVideoPlaying(true);
     }
   };
 
@@ -27,8 +37,8 @@ const VideoPlayer = () => {
     transition: "all 0.3s ease-in",
     zIndex: "99",
   };
-
-  if (isPlaying) {
+    
+  if (isVideoPlaying) {
     playPauseButtonStyle.opacity = 0;
   }
 
@@ -40,29 +50,15 @@ const VideoPlayer = () => {
       data-cursor-size="120px"
       data-cursor-color="#000"
     >
-      <video ref={videoRef} 
-      poster="/assets/about/videoOverlay.webp"
-      src="/assets/reels/showreel.mp4"/>
-      <div
-        className="play-pause-button"
-        style={playPauseButtonStyle}
-        id="darkMode-reel-img"
-      >
-        {isPlaying ? (
+      <video ref={videoRef} poster="/assets/about/videoOverlay.webp" src="/assets/reels/showreel.mp4"/>
+      <div className="play-pause-button" style={playPauseButtonStyle} id="darkMode-reel-img">
+        {isVideoPlaying ? (
           <div className={styles.svgBackground}>
-            <Image
-              width={350}
-              height={350} 
-              src="/assets/icons/pause.png"
-              alt="showreel pause" />
+            <Image width={350} height={350} src="/assets/icons/pause.png" alt="showreel pause" />
           </div>
         ) : (
           <div className={styles.svgBackground}>
-          <Image
-              width={350}
-              height={350}  
-              src="/assets/icons/play.png"
-              alt="showreel play" />
+            <Image width={350} height={350} src="/assets/icons/play.png" alt="showreel play" />
           </div>
         )}
       </div>
@@ -71,3 +67,4 @@ const VideoPlayer = () => {
 };
 
 export default VideoPlayer;
+

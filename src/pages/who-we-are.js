@@ -509,19 +509,6 @@ export default function about() {
                 title="Scroll Down" 
               />
             </div>
-
-            {/* <div
-              className="action-icon play-icon"
-              id="cursor-stick-area"
-              data-cursor-exclusion
-            >
-              <img
-                loading="lazy"
-                className="scroll-about-img"
-                src="/assets/hero-footer/scroll.svg"
-                alt="scroll below icon"
-                />
-              </div> */}
           </div>
         </section>
 

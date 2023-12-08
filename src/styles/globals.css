@@ -255,9 +255,13 @@ body {
   border: none;
   background: var(--white);
   border-radius: 50%;
-  padding: 0.2vw;
   cursor: pointer;
   margin-right: 1.5vw;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark .dark-mode-btn {
@@ -899,6 +903,24 @@ button:focus {
 /* ---------------------------
 ================================
 ------------------------------------- */
+
+/* Header Menu Music Button*/
+.MenuAudio{
+  position: relative;
+  margin-right: 2.5vw;
+}
+.WaveCanvas{
+  padding: 7px;
+  border-radius: 50%;
+  background: white;
+  width: 35px;
+  height: 35px;
+}
+
+.dark .WaveCanvas{
+  filter: invert(1);
+  background: #1f1f1f;
+}
 
 .header-fixed {
   position: fixed;
@@ -3501,6 +3523,10 @@ textarea::placeholder {
 .about-hero-scroll img{
   width: 20px;
   height: auto;
+}
+
+.dark .about-hero-scroll img{
+  filter: invert(0) !important;
 }
 
 .action-icon {
@@ -6769,7 +6795,10 @@ a:hover {
 
 @media screen and (max-width: 1280px) {
 
-
+  .WaveCanvas, .dark-mode-btn{
+    width: 30px;
+    height: 30px;
+  }
   .action-icon .inner {
     left: 3vw;
     top: 3vw;
@@ -7011,6 +7040,10 @@ a:hover {
   }
 
   .right-section-header .showreel {
+    margin-right: 6vw;
+  }
+
+  .MenuAudio{
     margin-right: 6vw;
   }
 
@@ -10252,9 +10285,6 @@ a:hover {
 .menu-links{
   height: 110vh;
 }
-.nav__link{
-  margin-bottom: 10px;
-}
 .menu-content {
   width: 90%;
   background-size: 85vw;
@@ -10280,7 +10310,7 @@ a:hover {
  margin: 0;
 }
 .content-link{
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 }
 .cb-outro-header a:before{
   top: 7vw;

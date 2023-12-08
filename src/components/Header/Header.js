@@ -1,35 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Menu from "./Hamburger";
-import { easeInOut, motion } from "framer-motion";
-import Showreel from "../Home/Showreel";
-import Link from "next/link";
-import gsap from "gsap";
+import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import Menu from './Hamburger';
+import { easeInOut, motion } from 'framer-motion';
+import Showreel from '../Home/Showreel';
+import Link from 'next/link';
+import gsap from 'gsap';
+import { useAudioPlayer } from '../Audio/AudioPlayer';
+import WavyLineCanvas from './WavyLineCanvas';
 
 export default function Header() {
+  const { togglePlay, isPlaying, playAudio, pauseAudio } = useAudioPlayer();
+  const [wasPlayingBeforeShowreel, setWasPlayingBeforeShowreel] = useState(false);
   const [show, setShow] = useState(false);
   const [invertText, setInvertText] = useState(
-    typeof window !== "undefined"
-      ? localStorage.getItem("invertText") === "true"
-      : false
+    typeof window !== 'undefined' ? localStorage.getItem('invertText') === 'true' : false
   );
 
   // Simplified the initial value for imgSrc
-  const [imgSrc, setImgSrc] = useState(
-    invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg"
-  );
+  const [imgSrc, setImgSrc] = useState(invertText ? '/assets/dark/moon.svg' : '/assets/dark/sun.svg');
 
   useEffect(() => {
-    localStorage.setItem("invertText", invertText);
-
-    // Set imgSrc based on invertText
-    setImgSrc(invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg");
+    localStorage.setItem('invertText', invertText);
+    setImgSrc(invertText ? '/assets/dark/moon.svg' : '/assets/dark/sun.svg');
 
     const div = document.body;
     if (invertText) {
-      div.classList.add("dark");
+      div.classList.add('dark');
     } else {
-      div.classList.remove("dark");
+      div.classList.remove('dark');
     }
   }, [invertText]);
 
@@ -37,26 +35,43 @@ export default function Header() {
 
   useEffect(() => {
     const button = buttonRefDarkMode.current;
-    button.addEventListener("click", handleClick);
+
+    const handleClick = () => {
+      const audio = new Audio('/assets/music/click.mp3');
+      audio.play();
+    };
+
+    button.addEventListener('click', handleClick);
+
     return () => {
-      button.removeEventListener("click", handleClick);
+      button.removeEventListener('click', handleClick);
     };
   }, []);
 
-  const handleClick = () => {
-    const audio = new Audio("/assets/music/click.mp3");
-    audio.play();
-  };
-
   useEffect(() => {
+    const button = buttonRefDarkMode.current;
+
     const tl = gsap.timeline();
 
-    tl.fromTo(
-      ".gsap-dark-img",
-      { scale: 0, rotate: "-280deg" },
-      { scale: 1, rotate: "0deg", duration: 0.7 }
-    );
-  });
+    tl.fromTo(button, { scale: 0, rotate: '-280deg' }, { scale: 1, rotate: '0deg', duration: 0.7 });
+
+    return () => {
+      tl.kill(); // Ensure the animation is cleared when the component unmounts
+    };
+  }, [invertText]);
+
+  const handleShowreelOpen = () => {
+    setWasPlayingBeforeShowreel(isPlaying); // Remember if the audio was playing
+    pauseAudio(); // Pause the background music
+    setShow(true);
+  };
+  
+  const handleShowreelClose = () => {
+    if (wasPlayingBeforeShowreel) {
+      playAudio(); // Resume playing the background music only if it was playing before
+    }
+    setShow(false);
+  };
 
   console.clear();
 
@@ -93,7 +108,7 @@ export default function Header() {
             <button
               className="btn-primary"
               aria-label="showreel"
-              onClick={() => setShow(true)}
+              onClick={handleShowreelOpen}
               data-cursor-magnetic
               data-cursor-exclusion
               data-cursor-size="60px"
@@ -115,7 +130,7 @@ export default function Header() {
           >
             <Showreel
               show={show}
-              onClose={() => setShow(false)}
+              onClose={handleShowreelClose}
               data-cursor-text="Close"
               data-cursor-color="#000"
               data-cursor-size="100px"
@@ -129,6 +144,16 @@ export default function Header() {
             </Showreel>
           </div>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
+          className="MenuAudio"
+          >
+          <WavyLineCanvas />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}

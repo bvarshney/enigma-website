@@ -135,16 +135,16 @@ const HeroDesktop = () => {
                 ></Image>
               </div>
 
-              <div class="content-section home-page-header">
-                <div class="f-sub-content">
-                  <div class="f-content-text">
-                    <p class="f-disabled">timezone</p>
-                    <div class="f-heading">+5:30 GMT</div>
+              <div className="content-section home-page-header">
+                <div className="f-sub-content">
+                  <div className="f-content-text">
+                    <p className="f-disabled">timezone</p>
+                    <div className="f-heading">+5:30 GMT</div>
                   </div>
                 </div>
-                <div class="f-right">
-                  <p class="f-disabled">location</p>
-                  <div class="f-heading">Noida - India</div>
+                <div className="f-right">
+                  <p className="f-disabled">location</p>
+                  <div className="f-heading">Noida - India</div>
                 </div>
               </div>
             </div>

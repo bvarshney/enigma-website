@@ -3,11 +3,15 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+import AudioPlayerProvider from '../components/Audio/AudioPlayer';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
 
+  <AudioPlayerProvider>
     <DefaultSeo  
       additionalMetaTags={[{
         name: 'viewport',
@@ -117,7 +121,7 @@ export default function App({ Component, pageProps }) {
     </Head>    
 
       <Component {...pageProps} />
-
+      <SpeedInsights />
       <Analytics />
       <Script
         strategy="afterInteractive"
@@ -146,6 +150,7 @@ export default function App({ Component, pageProps }) {
             });
           `}
       </Script>
+    </AudioPlayerProvider>
     </>
   );
 }
