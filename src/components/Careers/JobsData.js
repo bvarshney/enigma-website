@@ -399,6 +399,59 @@ const jobs = [
       salMin: "84000",
       salMax: "120000"
     },
+    {
+      id: '8',
+      category: 'Marketing',
+      title: 'Growth Marketing & Digital Outreach Intern',
+      slug: generateSlug('Growth-Marketing-Digital-Outreach-Intern'),
+      type: 'PART_TIME',
+      image: 'bd-manager.webp',
+      experience: '3 months',
+      location: 'On-Site, Noida, Sector 62',
+      compensation: 'Paid Internship',
+      benefits: [
+        'Part-time',
+        'Flexible Hours',
+        'On-site',
+        "3 months",
+      ],
+      bgImage: "bd.webp",
+
+      sDescription: 'As a Growth Marketing Intern, you will be instrumental in driving our digital marketing and outreach initiatives.',
+      lDescription: 'As a Growth Marketing Intern, you will be instrumental in driving our digital marketing and outreach initiatives. Your focus will be on organic digital marketing activities, including content creation, social media marketing, LinkedIn outreach, and email marketing. This is an excellent opportunity for someone passionate about marketing and eager to gain hands-on experience in growth strategies and digital outreach.',
+      responsibilities: [
+        'Engage in market research to understand industry trends and competitor activities.',
+        'Develop and implement SEO-optimized long-form blog posts and other website content',
+        'Manage and grow our social media channels (Facebook, Instagram, Twitter, YouTube, etc.) by creating and curating engaging and relevant content.',
+        'Monitor and report on digital performance metrics, including keyword ranking, SOV, trend analysis, visibility, and organic traffic, using tools like Google Analytics and SEMrush',
+        "Identify new platforms and opportunities for brand awareness and link-building to expand our digital footprint.",
+        'Execute brand awareness campaigns via LinkedIn and cold email outreach, targeting potential clients and partnerships.',
+        'Stay up-to-date with the latest digital marketing trends and tools, continuously seeking ways to improve our strategies and tactics.',
+        'Collaborate with the marketing team to develop and refine growth strategies.',
+        'Analyze and report on the effectiveness of marketing campaigns and strategies, providing insights and recommendations for optimization.'
+      ],
+      qualifications: [
+        'Currently pursuing or recently graduated with a degree in Marketing, Communications, or a related field.',
+        'Hands-on experience with relevant industry tools like Google Analytics, SEMRush, Screaming Frog, MS Clarity and Adobe Analytics.',
+        'Strong written and verbal communication skills, with the ability to create tailored content for SEO & outreach purposes.',
+        'Proficiency in Microsoft Office and Google Workspace.',
+        'Excellent time management and organizational abilities.',
+        'An outgoing personality with a creative mindset and a keen interest in digital marketing.',
+        'Ability to work both independently and collaboratively in a team environment.'
+      ],
+      ourOffers: [
+        'A flexible and engaging work culture that fosters creativity and growth.',
+        "Opportunity to undertake marketing certifications to enhance your skills and knowledge.",
+        'Potential for a full-time role upon successful completion of the internship, based on performance.',
+        'Exposure to real-world marketing challenges and the opportunity to contribute to impactful projects.',
+        'Mentorship and guidance from experienced marketing professionals.',
+      ],
+      HowToApply: "Please submit your resume and cover letter, highlighting your relevant experience and interest in the field of growth marketing, to careers@weareenigma.com or apply online at - https://weareenigma.com/careers/growth-marketing-intern. Include any examples of your work or projects that demonstrate your skills and creativity in digital marketing or digital outreach campaigns.",
+      
+      postingDate:"2023-12-15",
+      salMin: "84000",
+      salMax: "120000"
+    },
     ];
 
 export default jobs;

@@ -133,7 +133,7 @@ function JobDetail({ job }) {
 
       <Head>
         <link rel="canonical" href={`https://weareenigma.com/careers/${job.slug}`} />
-        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}`} hreflang="x-default" />
+        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}`} hrefLang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

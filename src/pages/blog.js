@@ -218,9 +218,6 @@ export default function BlogsPage() {
       <main>
         <div className="blogs-main-section">
           <div className="blogs-sub-section">
-            <div className="blogs-featured">
-              
-            </div>
             <div
               className="blogs-heading"
               data-cursor-size="10px"
