@@ -32,6 +32,7 @@ module.exports = {
       await config.transform(config,"/careers/senior-account-executive"),
       await config.transform(config,"/careers/ui-ux-design-intern"),
       await config.transform(config,"/careers/frontend-development-intern"),
+      await config.transform(config,"/careers/growth-marketing-intern"),
       await config.transform(config,"/Creds-2023.pdf"),
     ]
   };
