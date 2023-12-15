@@ -1,12 +1,9 @@
 import { useState, useRef, useContext } from "react";
 import Image from "next/image";
 import styles from "@/styles/VideoPlayer.module.css";
-import { useAudioPlayer } from '../Audio/AudioPlayer'; // Assuming this is the correct path
 
 const VideoPlayer = () => {
-  const { isPlaying: isAudioPlaying, playAudio, pauseAudio } = useAudioPlayer();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [wasAudioPlaying, setWasAudioPlaying] = useState(false);
   const videoRef = useRef(null);
 
   const togglePlay = () => {
@@ -15,14 +12,7 @@ const VideoPlayer = () => {
     if (isVideoPlaying) {
       video.pause();
       setIsVideoPlaying(false);
-      if (wasAudioPlaying) {
-        playAudio();
-      }
     } else {
-      setWasAudioPlaying(isAudioPlaying);
-      if (isAudioPlaying) {
-        pauseAudio();
-      }
       video.play();
       setIsVideoPlaying(true);
     }
