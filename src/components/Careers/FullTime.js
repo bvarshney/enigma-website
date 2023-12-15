@@ -29,7 +29,7 @@ export default function FullTime() {
                                     </div>
 
                                     <div className="w-full mb-6 md:mb-8">
-                                        <h5 className="md:text-2xl text-xl leading-[1.3] text-black/80 ">{job.sDescription}</h5>
+                                        <h5 className="md:text-[1.35rem] text-xl leading-[1.3] text-black/80 ">{job.sDescription}</h5>
                                     </div>
                                 
                                     <div className="mb-6 md:mb-8">

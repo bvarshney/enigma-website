@@ -402,7 +402,7 @@ const jobs = [
     {
       id: '8',
       category: 'Marketing',
-      title: 'Growth Marketing & Digital Outreach Intern',
+      title: 'Growth Marketing Intern',
       slug: generateSlug('Growth-Marketing-Intern'),
       type: 'PART_TIME',
       image: 'bd-manager.webp',
@@ -415,9 +415,9 @@ const jobs = [
         'On-site',
         "3 months",
       ],
-      bgImage: "bd.webp",
+      bgImage: "market-intern.webp",
 
-      sDescription: 'As a Growth Marketing Intern, you will be instrumental in driving our digital marketing and outreach initiatives.',
+      sDescription: 'Kickstart your digital marketing career with an internship at Enigma Digital.',
       lDescription: 'As a Growth Marketing Intern, you will be instrumental in driving our digital marketing and outreach initiatives. Your focus will be on organic digital marketing activities, including content creation, social media marketing, LinkedIn outreach, and email marketing. This is an excellent opportunity for someone passionate about marketing and eager to gain hands-on experience in growth strategies and digital outreach.',
       responsibilities: [
         'Engage in market research to understand industry trends and competitor activities.',
