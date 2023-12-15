@@ -403,7 +403,7 @@ const jobs = [
       id: '8',
       category: 'Marketing',
       title: 'Growth Marketing & Digital Outreach Intern',
-      slug: generateSlug('Growth-Marketing-Digital-Outreach-Intern'),
+      slug: generateSlug('Growth-Marketing-Intern'),
       type: 'PART_TIME',
       image: 'bd-manager.webp',
       experience: '3 months',

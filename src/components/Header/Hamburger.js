@@ -7,33 +7,33 @@ const Hamburger = () => {
   const nav = useRef();
   const buttonRef = useRef(null);
 
-  useEffect(() => {
-    const button = buttonRef.current;
-    button.addEventListener("click", handleClick);
-    return () => {
-      button.removeEventListener("click", handleClick);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const button = buttonRef.current;
+  //   button.addEventListener("click", handleClick);
+  //   return () => {
+  //     button.removeEventListener("click", handleClick);
+  //   };
+  // }, []);
 
-  const handleClick = () => {
-    const audio = new Audio("/assets/music/menu.mp3");
-    audio.play();
-  };
+  // const handleClick = () => {
+  //   const audio = new Audio("/assets/music/menu.mp3");
+  //   audio.play();
+  // };
 
-  // Sound on Click
-  useEffect(() => {
-    const buttons = document.querySelectorAll("#btn-music");
-    const handleClick = () => {
-      const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
-      audio.play();
-    };
-    buttons.forEach((button) => button.addEventListener("click", handleClick));
-    return () => {
-      buttons.forEach((button) =>
-        button.removeEventListener("click", handleClick)
-      );
-    };
-  }, []);
+  // // Sound on Click
+  // useEffect(() => {
+  //   const buttons = document.querySelectorAll("#btn-music");
+  //   const handleClick = () => {
+  //     const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
+  //     audio.play();
+  //   };
+  //   buttons.forEach((button) => button.addEventListener("click", handleClick));
+  //   return () => {
+  //     buttons.forEach((button) =>
+  //       button.removeEventListener("click", handleClick)
+  //     );
+  //   };
+  // }, []);
 
   useEffect(() => {
     gsap.from(nav.current, {

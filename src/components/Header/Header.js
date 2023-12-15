@@ -5,12 +5,8 @@ import { easeInOut, motion } from 'framer-motion';
 import Showreel from '../Home/Showreel';
 import Link from 'next/link';
 import gsap from 'gsap';
-import { useAudioPlayer } from '../Audio/AudioPlayer';
-import WavyLineCanvas from './WavyLineCanvas';
 
 export default function Header() {
-  const { togglePlay, isPlaying, playAudio, pauseAudio } = useAudioPlayer();
-  const [wasPlayingBeforeShowreel, setWasPlayingBeforeShowreel] = useState(false);
   const [show, setShow] = useState(false);
   const [invertText, setInvertText] = useState(
     typeof window !== 'undefined' ? localStorage.getItem('invertText') === 'true' : false
@@ -33,20 +29,20 @@ export default function Header() {
 
   const buttonRefDarkMode = useRef(null);
 
-  useEffect(() => {
-    const button = buttonRefDarkMode.current;
+  // useEffect(() => {
+  //   const button = buttonRefDarkMode.current;
 
-    const handleClick = () => {
-      const audio = new Audio('/assets/music/click.mp3');
-      audio.play();
-    };
+  //   const handleClick = () => {
+  //     const audio = new Audio('/assets/music/click.mp3');
+  //     audio.play();
+  //   };
 
-    button.addEventListener('click', handleClick);
+  //   button.addEventListener('click', handleClick);
 
-    return () => {
-      button.removeEventListener('click', handleClick);
-    };
-  }, []);
+  //   return () => {
+  //     button.removeEventListener('click', handleClick);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const button = buttonRefDarkMode.current;
@@ -61,15 +57,10 @@ export default function Header() {
   }, [invertText]);
 
   const handleShowreelOpen = () => {
-    setWasPlayingBeforeShowreel(isPlaying); // Remember if the audio was playing
-    pauseAudio(); // Pause the background music
     setShow(true);
   };
   
   const handleShowreelClose = () => {
-    if (wasPlayingBeforeShowreel) {
-      playAudio(); // Resume playing the background music only if it was playing before
-    }
     setShow(false);
   };
 
@@ -145,14 +136,14 @@ export default function Header() {
           </div>
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
           className="MenuAudio"
           >
           <WavyLineCanvas />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0, y: -50 }}

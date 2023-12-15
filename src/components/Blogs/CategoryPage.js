@@ -106,7 +106,6 @@ const CategoryPage = ({ category }) => {
     };
   }, [category]);
 
-
   return (
     <>
       <NextSeo
