@@ -20,7 +20,7 @@ const FeaturedPost = ({ post }) => {
             height={1000}
             alt={post.title}
             title={post.title}
-            loading='lazy'
+            priority={true}
           />
           <p className='blog-list-tag'>Featured</p>
         </div>
