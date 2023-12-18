@@ -4,6 +4,7 @@ import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Awards from "../components/Awards";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -114,7 +115,9 @@ export default function App({ Component, pageProps }) {
         ),
       }}
     />
-    </Head>    
+    </Head>  
+
+      <Awards />
 
       <Component {...pageProps} />
       <SpeedInsights />

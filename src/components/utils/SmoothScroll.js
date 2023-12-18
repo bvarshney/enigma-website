@@ -392,6 +392,18 @@ if(fixedLogo){
       smoothscroll.addListener(onScroll);
     }
 
+  // Awards Fixed
+  const fixedAward = document.getElementById("award-fixed");
+
+  if(fixedAward){
+  smoothscroll.addListener(function (status) {
+    var offset = status.offset;
+
+    fixedAward.style.top = offset.y + "px";
+    fixedAward.style.right = offset.x + "px";
+  });
+}
+
     return () => {
       // Cleanup: Remove the custom scroll event listener
       if (onScroll) {

@@ -22,6 +22,7 @@ import HomeBlogs from "@/components/Home/HomeBlogs";
 import Head from "next/head";
 
 import { getHomePagePosts } from '@/lib/posts';
+import Awards from "../components/Awards";
 
 export default function Home({ recentPosts }) {
 
