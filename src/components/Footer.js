@@ -113,7 +113,8 @@ function Footer() {
               <Image
                 src="/assets/footer-main/Vector.png"
                 className="footer-dark-img"
-                alt="Foter contact image"
+                alt="Footer Arrow Icon"
+                title="Footer Arrow Icon"
                 width={500}
                 height={500}
               />

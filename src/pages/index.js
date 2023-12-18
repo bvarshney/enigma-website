@@ -21,7 +21,9 @@ import Modal from "@/components/PopupForm/formModal";
 import HomeBlogs from "@/components/Home/HomeBlogs";
 import Head from "next/head";
 
-export default function Home() {
+import { getHomePagePosts } from '@/lib/posts';
+
+export default function Home({ recentPosts }) {
 
   return (
     <>
@@ -159,9 +161,9 @@ export default function Home() {
             <HeroDesktop />
           </section>
 
-{/* PopUp Modal Button */}
-  <Modal />
-{/* End */}
+        {/* PopUp Modal Button */}
+          <Modal />
+        {/* End */}
 
       {/* ======================== Concept Scroll ====================== */}
       <section>
@@ -211,7 +213,7 @@ export default function Home() {
       {/* ======================== Home Aero END ====================== */}
       
       {/* ======================== Related Blogs ====================== */}
-        <HomeBlogs />
+      <HomeBlogs recentPosts={recentPosts} />
       {/* ======================== Related Blogs ====================== */}
       
       {/* ======================== Footer ====================== */}
@@ -223,9 +225,22 @@ export default function Home() {
         <FooterMobile />
       </section>
       {/* ======================== Footer END ====================== */}
-    
-    </main>
 
+    </main>
+    
     </>
   );
 }
+
+export async function getStaticProps() {
+
+  const recentPosts = await getHomePagePosts();
+
+  return {
+    props: {
+      recentPosts,
+    },
+    revalidate: 10,
+  };
+}
+

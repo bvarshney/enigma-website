@@ -332,7 +332,7 @@ const handleBudgetChange = (value) => {
           <span>
             Next
           </span>
-          <img src="/assets/icons/next.png" alt="next button icon"/>
+          <img src="/assets/icons/next.png" title="Next" alt="next button icon"/>
           </button>
         </div>
       </div>
@@ -409,7 +409,7 @@ const handleBudgetChange = (value) => {
               type="button"
               onClick={prevStep}
             >
-            <img src="/assets/icons/arrow-back.png" />
+            <img src="/assets/icons/arrow-back.png" alt="back arrow icon" title="Back"/>
           </button>
         </div>
       </div>
@@ -422,7 +422,7 @@ const handleBudgetChange = (value) => {
           <span>
             Next
           </span>
-          <img src="/assets/icons/next.png" />
+          <img src="/assets/icons/next.png" alt="next arrow icon" title="Next"/>
           </button>
         </div>
       </div>
@@ -494,7 +494,7 @@ const handleBudgetChange = (value) => {
               type="button"
               onClick={prevStep}
             >
-            <img src="/assets/icons/arrow-back.png" />
+            <img src="/assets/icons/arrow-back.png" alt="back arrow icon" title="Back"/>
           </button>
         </div>
       </div>
@@ -507,7 +507,7 @@ const handleBudgetChange = (value) => {
           <span>
             Next
           </span>
-          <img src="/assets/icons/next.png" />
+          <img src="/assets/icons/next.png" title="Next" alt="next button icon"/>
         </button>
       </div>
     </div>
@@ -560,7 +560,7 @@ const handleBudgetChange = (value) => {
               type="button"
               onClick={prevStep}
             >
-            <img src="/assets/icons/arrow-back.png" />
+            <img src="/assets/icons/arrow-back.png" alt="back arrow icon" title="Back"/>
           </button>
         </div>
       </div>
@@ -573,7 +573,7 @@ const handleBudgetChange = (value) => {
       <span>
         Next
       </span>
-      <img src="/assets/icons/next.png" />
+      <img src="/assets/icons/next.png" title="Next" alt="next button icon"/>
       </button>
     </div>
     </div>
@@ -631,7 +631,7 @@ const handleBudgetChange = (value) => {
               type="button"
               onClick={prevStep}
             >
-            <img src="/assets/icons/arrow-back.png" />
+            <img src="/assets/icons/arrow-back.png" alt="back arrow icon" title="Back"/>
           </button>
         </div>
       </div>
@@ -644,7 +644,7 @@ const handleBudgetChange = (value) => {
       <span>
         Next
       </span>
-      <img src="/assets/icons/next.png" />
+      <img src="/assets/icons/next.png" title="Next" alt="next button icon"/>
       </button>
     </div>
   </div>
@@ -679,7 +679,7 @@ const handleBudgetChange = (value) => {
           />
           <button>
             <label className="label" htmlFor="attach">
-              <img src="/assets/icons/attach.png" />
+              <img src="/assets/icons/attach.png" alt="attachment icon" title="Add Attachmen"/>
               Attach File
             </label>
           </button>
@@ -715,7 +715,7 @@ const handleBudgetChange = (value) => {
               type="button"
               onClick={prevStep}
             >
-            <img src="/assets/icons/arrow-back.png" />
+            <img src="/assets/icons/arrow-back.png" alt="back arrow icon" title="Back"/>
           </button>
         </div>
       </div>
@@ -723,7 +723,7 @@ const handleBudgetChange = (value) => {
             
             {isLoading ? (
                 <div className="loading-state">
-                  <img src="/assets/icons/loading.svg"/>
+                  <img src="/assets/icons/loading.svg" alt="circle icon" title="loading"/>
                 </div>
               ) : (
                 <button className='btn_CTA' onClick={handleSubmit}>

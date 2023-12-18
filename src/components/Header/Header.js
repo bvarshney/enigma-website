@@ -79,7 +79,8 @@ export default function Header() {
             src="/assets/header-logo/enigma-en-logo.svg"
             width={80}
             height={80}
-            alt="website logo"
+            alt="Enigma Digital Logo"
+            title='Enigma Digital'
             className="main-logo svg-dark-mode"
             data-cursor-size="60px"
             data-cursor-exclusion
@@ -158,7 +159,8 @@ export default function Header() {
           >
             <Image
               src={imgSrc}
-              alt="Dark Mode Image"
+              alt="Dark Mode Icon"
+              title='dark mode icon'
               width={25}
               height={25}
               className="gsap-dark-img"

@@ -23,6 +23,9 @@ import Process from '../components/ServiceDetail/Strategy/Process';
 import Portfolio from '../components/ServiceDetail/Strategy/Portfolio';
 // import Faq from '../components/ServiceDetail/Faq';
 
+import { getApolloClient } from '@/lib/apollo-client';
+import {  GET_POSTS_WITH_CATEGORY_NAME } from '@/data/posts';
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.config({
@@ -48,7 +51,7 @@ const handleHover = (e) => {
     });
   };  
 
-export default function Strategy() {
+export default function Strategy({ posts }) {
 
 //   const blogFaqData = [
 //     {
@@ -626,7 +629,7 @@ useEffect(() => {
         {/* <Faq faqData={blogFaqData} /> */}
 
         {/* ================================Related Blogs==================== */}
-          <ServiceBlogs category={"marketing"} />
+          <ServiceBlogs posts={posts} />
 
         {/* ======================= Next Page Box ====================== */}
         <section className={styles['m-10-15']}>
@@ -649,3 +652,25 @@ useEffect(() => {
   );
 }
 
+export async function getStaticProps() {
+  // Initialize Apollo Client
+  const apolloClient = getApolloClient();
+
+  // Fetch posts using your GraphQL query
+  const { data } = await apolloClient.query({
+    query: GET_POSTS_WITH_CATEGORY_NAME,
+    variables: { categoryName: 'strategy' }, // Replace with your desired category name
+  });
+
+  // Extract posts from the query result
+  const { posts: { edges: postEdges } } = data;
+
+  const posts = postEdges.map(({ node }) => node);
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10, // Revalidate the page every 1 hour (adjust as needed)
+  };
+}

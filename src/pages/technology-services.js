@@ -16,11 +16,14 @@ import NextBox from '@/components/ServiceDetail/Technology/TechnologyNext';
 import OfferCards from '@/components/ServiceDetail/Technology/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
-import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
 import Head from 'next/head';
 import Portfolio from '../components/ServiceDetail/Technology/Portfolio';
 // import Faq from '../components/ServiceDetail/Faq';
+
+import { getApolloClient } from '@/lib/apollo-client';
+import {  GET_POSTS_WITH_CATEGORY_NAME } from '@/data/posts';
+import ServiceBlogs from '../components/ServiceDetail/ServiceBlogs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +50,7 @@ const handleHover = (e) => {
     });
   };  
 
-export default function technology() {
+export default function technology({ posts }) {
 
 //   const blogFaqData = [
 //     {
@@ -638,7 +641,7 @@ useEffect(() => {
         {/* <Faq faqData={blogFaqData} /> */}
 
         {/* ================================Related Blogs==================== */}
-        <ServiceBlogs category={"design"} />
+        <ServiceBlogs posts={posts} />
         {/* ================================Related Blogs==================== */}
 
         {/* ======================= Next Page Box ====================== */}
@@ -663,3 +666,25 @@ useEffect(() => {
   );
 }
 
+export async function getStaticProps() {
+  // Initialize Apollo Client
+  const apolloClient = getApolloClient();
+
+  // Fetch posts using your GraphQL query
+  const { data } = await apolloClient.query({
+    query: GET_POSTS_WITH_CATEGORY_NAME,
+    variables: { categoryName: 'marketing' }, // Replace with your desired category name
+  });
+
+  // Extract posts from the query result
+  const { posts: { edges: postEdges } } = data;
+
+  const posts = postEdges.map(({ node }) => node);
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10, // Revalidate the page every 1 hour (adjust as needed)
+  };
+}

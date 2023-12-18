@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['z1'],
+    domains: ['wordpress-156292-4117800.cloudwaysapps.com'],
   },
 }
 

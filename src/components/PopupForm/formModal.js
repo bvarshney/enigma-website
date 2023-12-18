@@ -88,14 +88,16 @@ useEffect(() => {
         width={100}
         height={100}
         className='popUpRotate'
-        alt='Hire Us Image'
+        alt='PopUp Form HireUs Image'
+        title='PopUp Form HireUs Image'
         src="/assets/icons/hire-us.svg"
         priority={false}
       />
       <Image 
         height={50}
         width={50}
-        alt="Image" className='popUpImg'
+        title="PopUp Form Pen Image"
+        alt="PopUp Form Pen Image" className='popUpImg'
         src={isHovered ? '/assets/icons/form-pen.gif' : '/assets/icons/form-pen.png'}
         priority={false}
       />
@@ -120,6 +122,7 @@ useEffect(() => {
               height={50}
               width={50} 
               priority={false} 
+              title='Close Form'
               alt='close form' 
               src='/assets/icons/form-close.svg' 
             />

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Blogs from '@/components/Blogs/blogData'; // Adjust the import path as needed
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect } from 'react';
@@ -26,15 +25,12 @@ const handleHover = (e) => {
     });
   };
 
-const HomeBlogs = () => {
-  // Filter out the current blog and then filter by category
-  const relatedBlogs = Blogs.slice(0, 3); // Get only three blogs
+const HomeBlogs = ({ recentPosts }) => {
 
   const homeBlog = useRef();
 
   useEffect(() => {
-
-    const homeBlogImg = document.querySelectorAll('.related-box-img .box-img-content');
+    const homeBlogImg = document.querySelectorAll('.related-box-img');
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -76,9 +72,10 @@ const HomeBlogs = () => {
     return() => tl.kill();
   }, []);
 
+
   return (
 
-    <div ref={homeBlog} className="related-articles">
+      <div ref={homeBlog} className="related-articles">
         <div className="homeBlogs">
           <h3 className='homeBlogsHeading'>Our Creative <br/> <span className='color-primary'>Musings</span></h3>
           <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
@@ -87,29 +84,30 @@ const HomeBlogs = () => {
         </div>
 
         <div className="related-box-img homeBlog">
-            {relatedBlogs.map((blog, index) => (
-                <div key={index} className='box-img-content homeBlog'>
-                    <div className="img-box-related homeBlog">
-                        <Link href={blog.Link}>
-                            <img
-                            loading='lazy'
-                            src={blog.image}
-                            alt={blog.description}
-                            data-cursor-text="Read Now"
-                            data-cursor-color="#000"
-                            data-cursor-size="100px"
-                            onMouseEnter={(e) => handleHover(e)}
-                            onMouseOut={(e) => handleHoverExit(e)}
-                            />
-                            <h5 className='blog-list-tag'>{blog.name}</h5>
-                        </Link>
-                    </div>
-                    <h4>{blog.description}</h4>
-                </div>
-            ))}
+          {recentPosts.map((blog, index) => (
+            <div key={index} className='homeBlog-pading'>
+              <div className="img-box-related homeBlog">
+                <Link href={blog.slug}>
+                  <img
+                    loading='lazy'
+                    src={blog.featuredImage.node.sourceUrl}
+                    alt={blog.title}
+                    title={blog.title}
+                    data-cursor-text="Read Now"
+                    data-cursor-color="#000"
+                    data-cursor-size="100px"
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseOut={(e) => handleHoverExit(e)}
+                  />
+                    <h5 className='blog-list-tag'>{blog.categories.nodes[0].name}</h5>
+                </Link>
+              </div>
+              <h4>{blog.title}</h4>
+            </div>
+          ))}
         </div>
-    </div>
-  );
-};
+      </div>
+    );
+  };
 
 export default HomeBlogs;

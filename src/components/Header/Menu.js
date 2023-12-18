@@ -207,7 +207,7 @@ useEffect(() => {
           <div data-cursor-size="60px"
                 data-cursor-opaque>
             <Link href="/">
-              <img src="/assets/header-logo/enigma-en-logo.svg" alt="website logo"/>
+              <img src="/assets/header-logo/enigma-en-logo.svg" alt="website logo" title="Enigma Digital"/>
             </Link>
           </div>
         </div>

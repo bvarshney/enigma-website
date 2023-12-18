@@ -16,12 +16,15 @@ import NextBox from '@/components/ServiceDetail/Design/DesignNext';
 import OfferCards from '@/components/ServiceDetail/Design/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
-import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
 import Head from 'next/head';
 import Portfolio from '../components/ServiceDetail/Design/Portfolio';
 import Process from '../components/ServiceDetail/Design/Process';
 // import Faq from '../components/ServiceDetail/Faq';
+
+import { getApolloClient } from '@/lib/apollo-client';
+import {  GET_POSTS_WITH_CATEGORY_NAME } from '@/data/posts';
+import ServiceBlogs from '../components/ServiceDetail/ServiceBlogs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +51,7 @@ const handleHover = (e) => {
     });
   };  
 
-export default function uiuxservices() {
+export default function uiuxservices({ posts }) {
 
 //   const blogFaqData = [
 //     {
@@ -651,7 +654,7 @@ useEffect(() => {
         {/* <Faq faqData={blogFaqData} /> */}
 
         {/* ================================Related Blogs==================== */}
-        <ServiceBlogs category={"design"} />
+        <ServiceBlogs posts={posts} />
         {/* ================================Related Blogs==================== */}
 
         {/* ======================= Next Page Box ====================== */}
@@ -676,3 +679,25 @@ useEffect(() => {
   );
 }
 
+export async function getStaticProps() {
+  // Initialize Apollo Client
+  const apolloClient = getApolloClient();
+
+  // Fetch posts using your GraphQL query
+  const { data } = await apolloClient.query({
+    query: GET_POSTS_WITH_CATEGORY_NAME,
+    variables: { categoryName: 'design' }, // Replace with your desired category name
+  });
+
+  // Extract posts from the query result
+  const { posts: { edges: postEdges } } = data;
+
+  const posts = postEdges.map(({ node }) => node);
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10, // Revalidate the page every 1 hour (adjust as needed)
+  };
+}

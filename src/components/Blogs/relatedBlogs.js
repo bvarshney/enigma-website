@@ -66,3 +66,4 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
 };
 
 export default RelatedBlogs;
+

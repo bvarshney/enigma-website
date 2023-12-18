@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { getPaginatedPosts, sortStickyPosts } from '@/lib/posts';
+import { getPaginatedPosts } from '@/lib/posts';
+import { getAllPosts, getPagesCount } from '@/lib/posts';
+import Pagination from '@/components/WpBlogs/Pagination';
+import PostCard from '@/components/WpBlogs/PostCard';
 import { getCategories } from '@/lib/categories';
 
-import PostCard from '../components/WpBlogs/PostCard';
-import Pagination from '../components/WpBlogs/Pagination';
-import { Cursor } from "../../cursor/index";
+import { Cursor } from "../../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 
 import Header from "@/components/Header/Header";  
@@ -13,17 +13,42 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import PageLoader from "@/components/pageLoader";
 import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
-import FeaturedPost from '@/components/WpBlogs/FeaturedPost';
+import { useEffect, useState } from 'react';
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Blog({ posts, featuredPost, pagination, categories }) {
+export default function Blog({ posts, pagination, categories }) {
   const [activeCategory, setActiveCategory] = useState('all');
+  
+  // Hero Section Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#blog",
+      {
+        rotationX: -80,
+        opacity: 0,
+        translateY: 300,
+        transformPerspective: "1000",
+        transformOrigin: "top center",
+      },
+      {
+        delay: 3.5,
+        duration: 1.3,
+        rotationX: 0,
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.2,
+      }
+    );
+    return () => tl.kill();
+  }, []);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -35,38 +60,11 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
       y: 0,
       stagger: 0.1,
       duration: 1,
-      delay: 3.5,
+      delay: 4,
+      ease: 'power2.out'
     });
     return () => tl.kill();
   }, []);
-
-    useEffect(() => {
-      const elements = document.querySelectorAll('.blog-anim');
-  
-      elements.forEach((element) => {
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-            y: 100,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 85%',
-              ease: 'power2.easeOut',
-            },
-          }
-        );
-      });
-  
-      return () => {
-        gsap.timeline().clear();
-      };
-    }, []);
 
   return (
     <>
@@ -75,7 +73,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
               title="The Enigma Blog | Discover, Learn & Be Future Ready"
               description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
               openGraph={{
-                url: "https://weareenigma.com/blog",
+                url: `https://weareenigma.com/blog/${pagination.currentPage}`,
                 title: "The Enigma Blog | Discover, Learn & Be Future Ready",
                 description:
                   "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
@@ -108,8 +106,8 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
           />
 
       <Head>
-        <link rel="canonical" href="https://weareenigma.com/blog" />
-        <link rel="alternate" href="https://weareenigma.com/blog" hreflang="x-default" />
+        <link rel="canonical" href={`https://weareenigma.com/blog/${pagination.currentPage}`} />
+        <link rel="alternate" href={`https://weareenigma.com/blog/${pagination.currentPage}`} hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -119,7 +117,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": "https://weareenigma.com/blog"
+                  "@id": `https://weareenigma.com/blog/${pagination.currentPage}`
                 },
                 "name": "Blog",
                 "description": "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
@@ -139,45 +137,39 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
         />
       </Head>
 
-      <SmoothScroll />
-      <Cursor isGelly={true}/>
+    <SmoothScroll />
+    <Cursor isGelly={true}/>
 
-      <PageLoader text={"Our Thoughts & Resources"} />
-      <Modal />
+    <PageLoader text={"Our Thoughts & Resources"} />
+    <Modal />
 
-      <main>
-        <Header />
+    <main>
+      <Header />
 
-          {/* Featured Post Component */}
-          {featuredPost && (
-            <FeaturedPost post={featuredPost} />
-          )}
+      <section className='blogs-sub-section'> 
+        <div
+          className="blogs-heading"
+          data-cursor-size="10px"
+          data-cursor-text=""
+        >
+          <h1 id="blog">
+            <span>All Articles</span>
+          </h1>
+        </div>
 
-        <section className='blogs-sub-section'> 
-          <div
-
-            className="blogs-heading blog-anim"
-            data-cursor-size="10px"
-            data-cursor-text=""
-          >
-            <h1 id="blog">
-              <span>All Articles</span>
-            </h1>
-          </div>
-
-          <div className='blog-anim'>
-            <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-          </div>
-
-          <ul className='ul-items'>
-            {posts.map((post) => {
-              return (
-                <li key={post.slug} className='blog-anim'>
-                  <PostCard post={post} />
-                </li>
-              );
-            })}
-          </ul>
+        <div id='fadeUp'>
+          <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+        </div>
+        
+        <ul className='ul-items'>
+          {posts.map((post) => {
+            return (
+              <li key={post.slug} id='fadeUp'>
+                <PostCard post={post} />
+              </li>
+            );
+          })}
+        </ul>
 
           <div className='blog-anim'>
             {pagination && (
@@ -191,7 +183,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
           </div>
         </section>
 
-        {/* ======================== Footer ====================== */}
+      {/* ======================== Footer ====================== */}
         <section className="desktop-footer mt-150">
           <Footer />
         </section>
@@ -199,56 +191,52 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
         <section className="mobile-footer">
           <FooterMobile />
         </section>
-        {/* ======================== Footer END ====================== */}
+      {/* ======================== Footer END ====================== */}
       </main>
     </>
   );
 }
 
-export async function getStaticProps({ params }) {
-  const { slug } = params || {};
-
-  // Fetch paginated posts
-  let { posts, pagination } = await getPaginatedPosts({
+export async function getStaticProps({ params = {} } = {}) {
+  const { posts, pagination } = await getPaginatedPosts({
+    currentPage: params?.page,
     queryIncludes: 'archive',
   });
 
-  // Fetch categories
   const categories = await getCategories();
 
-  // If a category slug is provided, filter posts by category
-  if (slug) {
-    const { posts: filteredPosts, pagination: filteredPagination } = await getPaginatedPosts({
-      queryIncludes: 'archive',
-      categoryId: slug, // Pass the category ID or slug to filter posts
-    });
-
-    posts = filteredPosts;
-    pagination = {
-      ...filteredPagination,
-      basePath: `/categories/${slug}/page`,
+  if (!pagination.currentPage) {
+    return {
+      props: {},
+      notFound: true,
     };
   }
-
-  // Sort posts with sticky posts first
-  posts = sortStickyPosts(posts);
-
-  // Separate the featured post
-  const featuredPost = posts.find((post) => post.isSticky) || null;
-
-  // Remove the featured post from regular posts
-  posts = posts.filter((post) => !post.isSticky);
 
   return {
     props: {
       posts,
-      featuredPost,
       categories,
       pagination: {
         ...pagination,
-        basePath: slug ? `/categories/${slug}/page` : '/blog',
+        basePath: '/blog',
       },
     },
     revalidate: 10,
+  };
+}
+
+export async function getStaticPaths() {
+  const { posts } = await getAllPosts({
+    queryIncludes: 'index',
+  });
+  const pagesCount = await getPagesCount(posts);
+
+  const paths = [...new Array(pagesCount)].map((_, i) => {
+    return { params: { page: String(i + 1) } };
+  });
+
+  return {
+    paths,
+    fallback: 'blocking',
   };
 }
