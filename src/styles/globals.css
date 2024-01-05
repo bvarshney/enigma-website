@@ -3039,13 +3039,15 @@ accordion-item--default .accordion .accordion-item-content {
 }
 
 .first-box-contact .contact-para {
-    font-size: 1.5vw;
-    font-weight: 500;
+    font-size: 1.2vw;
+    font-weight: 400;
     max-width: 22vw;
-    color: var(--black1);
+    color: var(--black2);
     margin-left: 7vw;
     font-family: 'Ageo';
     text-align: justify;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
 }
 
 .first-box-contact .work {
@@ -4276,13 +4278,15 @@ https://unsplash.com/@vinomamba24
 
 
 .first-box-service p {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-weight: 400;
   text-align: justify;
   margin-left: 5vw;
   margin-right: 1vw;
-  line-height: 125%;
   font-family: 'Ageo';
+  color: var(--black2);
+  letter-spacing: .4px;
+  line-height: 1.7;
 }
 
 .second-box-service {
@@ -5076,12 +5080,13 @@ span.row-letter:nth-child(20) {
 }
 
 .banner .banner-row .row-col .row-message {
-  font-weight: 500;
-  font-size: 1.55vw;
-  line-height: 125%;
+  font-weight: 400;
+  font-size: 1.2vw;
+  line-height: 1.7;
   width: 28vw;
   font-family: 'Ageo';
   color: var(--black2) !important;
+  text-align: justify;
 }
 
 .transition-image {
@@ -5172,8 +5177,8 @@ span.row-letter:nth-child(20) {
   align-content: center;
   justify-content: center;
   line-height: 100%;
-  color: #2b2b2b;
-  margin-left: 7vw;
+  color: #383838;
+  margin-left: 6vw;
 }
 
 .marquee {
@@ -7438,10 +7443,11 @@ a:hover {
   }
 
   .first-box-service p {
-    font-size: 4vw;
+    font-size: 3.7vw;
     margin-left: 0vw;
+    line-height: 150%;
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 0;
     max-width: 85vw;
   }
@@ -7457,7 +7463,6 @@ a:hover {
   .do {
     font-size: 20vw;
     position: static !important;
-    margin-left: 35vw;
   }
 
   .mobile-video-service-section {
@@ -7751,12 +7756,13 @@ a:hover {
   }
 
   .contact-mobile-para-hero {
-    color: var(--black1);
+    color: var(--black2);
     margin-top: 7vw;
-    font-size: 4vw;
-    max-width: 65vw;
+    font-size: 3.7vw;
+    max-width: 75vw;
+    line-height: 145%;
     text-align: justify;
-    font-family: 'Ageo';
+    font-family: 'Ageo'
   }
 
   .img-container {
@@ -9365,11 +9371,10 @@ a:hover {
   }
 
   .contact-mobile-para-hero {
-    text-align: left;
-    font-size: 4.5vw;
-    margin-top: 8vw;
-    max-width: 90vw;
-    color: var(--black1);
+    text-align: justify;
+    font-size: 4vw;
+    margin-top: 10vw;
+    max-width: 85vw;
   }
 
   /* Clip Path */
@@ -9512,7 +9517,8 @@ a:hover {
   }
 
   .first-box-service p {
-    bottom: 0;
+    bottom: -20px;
+    font-size: 4vw;
   }
 
   .image-en {
@@ -10475,11 +10481,13 @@ a:hover {
     height: 100vh;
     display: block;
     padding: 20vh 0;
+    margin-bottom: 0;
 }
 .first-box-service p{
-  font-size: 5vw;
+  font-size: 6vw;
   top: 44vh;
   height: 100%;
+  line-height: 145%;
 }
 
 /* Service Page 480px End */
@@ -10505,7 +10513,8 @@ a:hover {
   height: 10vh;
 }
 .contact-mobile-para-hero{
-  font-size: 5vw;
+  font-size: 6vw;
+  margin-top: 6vh;
 }
 .img-container{
   height: 100%;

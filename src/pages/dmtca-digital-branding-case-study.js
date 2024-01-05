@@ -623,7 +623,7 @@ export default function dmtca() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h3 className={styles.videoH2}>The Google <br/> Workspace Manager</h3>
+              <h3 className={styles.videoH2}>The DMTCA <br/> Innovative Website Design</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">

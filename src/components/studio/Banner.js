@@ -77,8 +77,7 @@ const BannerRowTop = ({ title }) => {
         className="row-col"
       >
         <span className="row-message">
-          We're experts at creating unique, memorable experiences that your
-          customers can't get enough of.
+          We specialize in crafting <strong>one-of-a-kind, unforgettable experiences</strong> that captivate and engage your customers, leaving them craving for more.
         </span>
       </motion.h2>
     </div>
