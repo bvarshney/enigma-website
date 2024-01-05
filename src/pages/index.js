@@ -154,6 +154,8 @@ export default function Home({ recentPosts }) {
       
       <Header />
 
+      <Awards />
+
       {/*===============================Hero Section=========================*/}
           <section className="main-section"
                    data-cursor-size="10"

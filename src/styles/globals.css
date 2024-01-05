@@ -12649,3 +12649,11 @@ li.pagi-num.active a{
     margin-top: 10vw;
   }
 }
+
+
+/* Awwwards */
+@media screen and (max-width: 770px) {
+  #award-fixed{
+    display: none;
+  }
+}
