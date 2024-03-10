@@ -6,6 +6,7 @@ const jobs = [
       {
         id: '1',
         category: 'Design',
+        status: 'Closed',
         title: 'Junior UI/UX Designer',
         slug: generateSlug('Junior-UI-UX-Designer'),
         type: 'FULL_TIME',
@@ -62,6 +63,7 @@ const jobs = [
     {
       id: '2',
       category: 'SEO',
+      status: 'Hot',
       title: 'SEO Specialist',
       slug: generateSlug('SEO-Specialist'),
       type: 'FULL_TIME',
@@ -117,6 +119,7 @@ const jobs = [
     {
       id: '3',
       category: 'Development',
+      status: 'New',
       title: 'Front-End Developer',
       slug: generateSlug('Front-End-Developer'),
       type: 'FULL_TIME',
@@ -175,6 +178,7 @@ const jobs = [
       {
       id: '4',
       category: 'BD',
+      status: 'New',
       title: 'Business Development Manager',
       slug: generateSlug('Business-Development-Manager'),
       type: 'FULL_TIME',
@@ -232,6 +236,7 @@ const jobs = [
     {
       id: '5',
       category: 'Accounts',
+      status: 'Hot',
       title: 'Senior Account Executive',
       slug: generateSlug('Senior-Account-Executive'),
       type: 'FULL_TIME',
@@ -292,6 +297,7 @@ const jobs = [
     {
       id: '6',
       category: 'Design',
+      status: 'Closed',
       title: 'UI UX Design Intern',
       slug: generateSlug('UI-UX-Design-Intern'),
       type: 'PART_TIME',
@@ -347,6 +353,7 @@ const jobs = [
     {
       id: '7',
       category: 'Development',
+      status: 'Hot',
       title: 'Frontend Development Intern',
       slug: generateSlug('Frontend-Development-Intern'),
       type: 'PART_TIME',
@@ -402,6 +409,7 @@ const jobs = [
     {
       id: '8',
       category: 'Marketing',
+      status: 'New',
       title: 'Growth Marketing Intern',
       slug: generateSlug('Growth-Marketing-Intern'),
       type: 'PART_TIME',

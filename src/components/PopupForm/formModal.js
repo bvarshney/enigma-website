@@ -75,7 +75,7 @@ useEffect(() => {
     <>
 
     {/* Your HTML content here */}
-    <div className='popUpButton-div'>
+    <div className='popUpButton-div' aria-hidden="true">
     <button 
       aria-label='open popup form'
       id="popUpButton" 

@@ -219,8 +219,8 @@ useEffect(() => {
                     <div className="content-left-body-row">
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link1}>
+                          <span className="content-heading-serial">01</span>
                           <Link href="/who-we-are" className="btn-music">
-                            <span className="content-heading-serial">01</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="About"
@@ -240,8 +240,8 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link2}>
+                          <span className="content-heading-serial">02</span>
                           <Link href="/services" className="btn-music">
-                            <span className="content-heading-serial">02</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Expertise"
@@ -261,8 +261,8 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link3}>
+                          <span className="content-heading-serial">03</span>
                           <Link href="/our-portfolio" className="btn-music">
-                            <span className="content-heading-serial">03</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Works"
@@ -284,8 +284,8 @@ useEffect(() => {
                       </div>
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link4}>
+                          <span className="content-heading-serial">04</span>
                           <Link href="/blog" className="btn-music">
-                            <span className="content-heading-serial">04</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Insights"
@@ -305,8 +305,8 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link5}>
+                          <span className="content-heading-serial">05</span>
                           <Link href="/careers" className="btn-music">
-                            <span className="content-heading-serial">05</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Careers"
@@ -326,8 +326,8 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link16}>
+                          <span className="content-heading-serial">06</span>
                           <Link href="/get-in-touch" className="btn-music">
-                            <span className="content-heading-serial">06</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Contact"

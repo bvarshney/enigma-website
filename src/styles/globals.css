@@ -12051,6 +12051,32 @@ label.label:hover:before{
 
 
 /* Careers Page Testimonial */
+.tag-marquee{
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 1vw;
+  color: white;
+}
+
+.dark .tag-marquee{
+  filter: invert(1);
+}
+
+.status-closed {
+  background-color: #FF7D7D;
+}
+
+.status-hot {
+  background-color: #7DB5FF;
+}
+
+.status-new {
+  background-color: #FF8BE6;
+}
+
 .c__testimain .slick-list{
   padding: 20px 0px;
   width: 90%;
