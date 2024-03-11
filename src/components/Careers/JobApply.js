@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 
 export default function JobApply(){
     const [name, setName] = useState("");
@@ -7,8 +8,6 @@ export default function JobApply(){
     const [location, setLocation] = useState("");
     const [url, setUrl] = useState("");
     const [experiences, setExperiences] = useState([1]);
-    // const [selectedSkills, setSelectedSkills] = useState([]);
-    // const [showDropdown, setShowDropdown] = useState(false);
     const [selectedFileName, setSelectedFileName] = useState("");
     const [fileError, setFileError] = useState("");
     const [messageStatus, setMessageStatus] = useState(null); 
@@ -17,8 +16,6 @@ export default function JobApply(){
     const [errors, setErrors] = useState({});
     const dropdownRef = useRef(null);
     const inputRef = useRef(null);
-
-    // const skills = ["JavaScript", "React", "Node.js", "Python", "CSS"];
 
     // Handle Input Change
     const handleNameChange = (event) => {
@@ -54,54 +51,6 @@ export default function JobApply(){
         }
     };
 
-    // const handleSkillChange = (event) => {
-    //     setSelectedSkills(event.target.value);
-    //     if (event.target.value.trim()) {
-    //         setErrors(prevErrors => {
-    //             const newErrors = { ...prevErrors };
-    //             delete newErrors.selectedSkills;
-    //             return newErrors;
-    //         });
-    //     }
-    // };
-
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target) && 
-                inputRef.current && !inputRef.current.contains(event.target)) {
-                setShowDropdown(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [dropdownRef, inputRef]);
-
-    const normalizeExperience = (years, months) => {
-        const totalMonths = (years * 12) + months;
-        const normalizedYears = Math.floor(totalMonths / 12);
-        const normalizedMonths = totalMonths % 12;
-    
-        return {
-            years: normalizedYears,
-            months: normalizedMonths,
-        };
-    };
-    
-    const getTotalExperience = (experiences) => {
-        let totalYears = 0;
-        let totalMonths = 0;
-    
-        experiences.forEach(exp => {
-            totalYears += exp.years;
-            totalMonths += exp.months;
-        });
-    
-        return normalizeExperience(totalYears, totalMonths);
-    };
-
     const addExperience = () => {
         setExperiences([...experiences, {}]);
     };
@@ -110,39 +59,15 @@ export default function JobApply(){
         setExperiences(experiences.filter((_, index) => index !== indexToRemove));
     };
 
-    // const toggleSkill = (skill) => {
-    //     let newSkills;
-    //     if (selectedSkills.includes(skill)) {
-    //         newSkills = selectedSkills.filter(s => s !== skill);
-    //     } else {
-    //         newSkills = [...selectedSkills, skill];
-    //     }
-    //     setSelectedSkills(newSkills);
-    
-    //     // Clear the custom skill input field after adding
-    //     if (skill === customSkill) {
-    //         setCustomSkill("");
-    //     }
-        
-    //     // Check if the skills array is not empty and remove error if any
-    //     if (newSkills.length > 0) {
-    //         setErrors(prevErrors => {
-    //             const newErrors = { ...prevErrors };
-    //             delete newErrors.selectedSkills;
-    //             return newErrors;
-    //         });
-    //     }
-    // };
-
     const onFileChange = (event) => {
         const file = event.target.files[0];
         if (file && (file.type === "application/pdf" || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) {
             
             setSelectedFileName(file.name);
+            console.log(file);
             setErrors({ ...errors, selectedFileName: '' });
 
         } else {
-            
             setErrors({ ...errors, selectedFileName: 'Invalid file type. Please select a .docx or .pdf file.' });
         }
     };
@@ -159,41 +84,10 @@ export default function JobApply(){
         if (!number.trim()) {
             newErrors.number = "Number is required.";
         }
-        // if (selectedSkills.length === 0) {
-        //     newErrors.selectedSkills = "Please select at least one skill.";
-        // }
         if (!selectedFileName) {
             newErrors.selectedFileName = "Please upload your resume.";
         }
         return newErrors;
-    }
-
-    const formatDataForEmail = (data) => {
-        let message = "New Job Application Submission:\n\n";
-    
-        message += `Name: ${data.name}\n`;
-        message += `Email: ${data.email}\n`;
-        message += `Number: ${data.number}\n`;
-        message += `Location: ${data.location}\n`;
-        // message += `Skills: ${data.skills.join(', ')}\n`;
-        message += `Portfolio URL: ${data.url}\n\n`;
-    
-        message += "Experience Details:\n";
-        data.experiences.forEach((exp, index) => {
-            message += `Experience ${index + 1}:\n`;
-            message += `Job Title: ${exp.jobTitle}\n`;
-            message += `Company: ${exp.company}\n`;
-            message += `Duration: ${exp.years} years ${exp.months} months\n\n`;
-        });
-
-        const totalExperience = getTotalExperience(data.experiences);
-        message += `Total Experience: ${totalExperience.years} years ${totalExperience.months} months\n\n`;
-    
-        if (data.file) {
-            message += `Uploaded File: ${data.file}\n`;
-        }
-    
-        return message;
     }
 
     const resetForm = () => {
@@ -203,15 +97,14 @@ export default function JobApply(){
         setLocation("");
         setUrl("");
         setExperiences([]);
-        // setSelectedSkills([]);
         setSelectedFileName("");
         setFileError("");
-        document.getElementById("dropzone-file").value = ""; // Reset file input
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         
+        // Validate the form data
         const formErrors = validateFormData();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
@@ -219,75 +112,51 @@ export default function JobApply(){
         } else {
             setErrors({});
         }
-
+    
         setIsLoading(true);
     
-        let fileURL = "";
-        if (selectedFileName) {
-            const fileData = new FormData();
-            fileData.append('file', event.target['dropzone-file'].files[0]);
+        // Create FormData object to hold the form data
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('number', number);
+        formData.append('location', location);
+        formData.append('url', url);
     
-            try {
-                const fileUploadResponse = await fetch('/api/upload', {
-                    method: 'POST',
-                    body: fileData
-                });
-    
-                const result = await fileUploadResponse.json();
-                fileURL = result.filePath;
-    
-            } catch (error) {
-                console.error("Error uploading file:", error);
-                return;
-            }
+        // Append experiences as JSON string or in a format that your backend expects
+        formData.append('experiences', JSON.stringify(experiences.map((_, index) => {
+            const years = parseInt(event.target[`years_${index}`].value) || 0;
+            const months = parseInt(event.target[`months_${index}`].value) || 0;
+            const jobTitle = event.target[`jobTitle_${index}`].value;
+            const company = event.target[`company_${index}`].value;
+            return { jobTitle, company, years, months };
+        })));
+
+        // Append file if selected
+        if (event.target['careerCV'].files[0]) {
+            formData.append('careerCV', event.target['careerCV'].files[0]);
         }
+
+          try {
+            const response = await axios.post(
+                "/api/career-send",
+                formData, // directly pass formData
+                { headers: { 'Content-Type': 'multipart/form-data' } } // this is actually optional for FormData
+            );
     
-        const formData = {
-            name: name,
-            email: email,
-            number: number,
-            location: location,
-            // skills: selectedSkills,
-            url: url,
-            experiences: experiences.map((_, index) => {
-                const years = parseInt(event.target[`years_${index}`].value) || 0;
-                const months = parseInt(event.target[`months_${index}`].value) || 0;
-                const normalizedExp = normalizeExperience(years, months);
-                return {
-                    jobTitle: event.target[`jobTitle_${index}`].value,
-                    company: event.target[`company_${index}`].value,
-                    years: normalizedExp.years,
-                    months: normalizedExp.months,
-                };
-            }),
-            file: fileURL
-        };
-    
-        const emailMessage = formatDataForEmail(formData);
-    
-        try {
-            const response = await fetch("/api/send-email", {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: emailMessage })
-            });
-    
-            const result = await response.json();
-            if (response.ok) {
+            if (response.status === 200) {
                 setMessageStatus('success');
                 resetForm();
             } else {
                 setMessageStatus('error');
+                console.error("Failed to send form data");
             }
-    
         } catch (error) {
-            console.error("Error sending email:", error);
+            console.error("Error sending form data:", error);
             setMessageStatus('error');
         } finally {
             setIsLoading(false);
-            setTimeout(() => {
-                setMessageStatus('false');
-              }, 5000);
+            setTimeout(() => setMessageStatus(null), 5000);
         }
     };
     
@@ -342,44 +211,6 @@ export default function JobApply(){
                     <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
 
-                {/* <div className="font-body mb-14 w-full">
-                    <h4 className="text-3xl font-medium mb-4">
-                        Skills
-                    </h4>
-                    <div className="relative w-full">
-                    <input 
-                        type="text"
-                        value={selectedSkills.join(", ")}
-                        placeholder="Select Skills*"
-                        onChange={handleSkillChange}
-                        onClick={() => setShowDropdown(!showDropdown)} 
-                        ref={inputRef}
-                        readOnly
-                        className={`bg-white w-full font-body text-xl px-4 py-3 rounded-md focus:ring-2 mb-2 ring-primary duration-300 ${errors.selectedSkills ? 'border-red-400 border ring-red-500' : ''}`}
-                        />
-                    {errors.selectedSkills && <p className="text-red-400 font-medium text-md mt-2">{errors.selectedSkills}</p>}
-                        
-                        {showDropdown && (
-                            <div ref={dropdownRef} className="absolute bg-white z-10 w-full border rounded-md shadow-lg">
-                                {skills.map(skill => (
-                                    <div key={skill} className="flex items-center border-b border-black/5">
-                                        <label className="tracking-wide text-lg py-3 px-6 hover:bg-primary hover:text-white w-full flex items-center text-black/60 duration-150 hover:text-black" htmlFor={skill}><input id={skill} type="checkbox" checked={selectedSkills.includes(skill)} onChange={() => toggleSkill(skill)} className="mr-2 w-4 h-4 ring-primary"/> {skill}</label>
-                                    </div>
-                                ))}
-                                <div className="flex items-center px-5 py-2">
-                                    <input 
-                                        type="text"
-                                        value={customSkill}
-                                        onChange={(e) => setCustomSkill(e.target.value)}
-                                        placeholder="Add Other Skills Here"
-                                        className="w-full font-body text-lg px-4 py-2 rounded-md border-2 border-primary duration-300"
-                                    />
-                                    <button type="button" onClick={() => toggleSkill(customSkill)} className="ml-2 text-white bg-primary py-2 rounded font-medium text-xl px-8 hover:bg-blue-600">Add</button>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div> */}
             </div>
 
             <div className="font-body mb-10">
@@ -411,59 +242,59 @@ export default function JobApply(){
                     <button type="button" onClick={addExperience} className="text-primary text-2xl font-medium py-2 rounded-md tw-no-invert">Add Experience + </button>
                 </div>
 
-            <div className="font-body mb-16">
-                <h4 className="text-3xl font-medium mb-5">
-                    Attachment Details
-                </h4>
-                <div className="flex flex-col mb-5">
-                    <p className="text-xl mb-2">Only .docx or .pdf files are allowed. Max file size is 10 MBs</p>
-                    <label htmlFor="dropzone-file" className={`tw-border bg-white flex flex-col items-start justify-center w-full h-32 border border-primary border-dashed rounded-lg cursor-pointer ${errors.selectedFileName ? 'border-red-400' : ''}`}>
-                        <div className="flex flex-col items-start justify-center py-4 px-5">
-                            <svg className="w-10 h-10 text-primary tw-no-invert" stroke="currentColor" fill="none" viewBox="0 0 55 43" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.99896 6.82256L13.5247 5.53845V32.7692L10.9976 33.3139C7.69143 34.0265 4.44992 31.867 3.83386 28.5415L1.10852 13.83C0.49886 10.539 2.69967 7.38551 5.99896 6.82256Z" strokeWidth="2"/>
-                                <path d="M49.001 6.82256L41.4753 5.53845V32.7692L44.0024 33.3139C47.3086 34.0265 50.5501 31.867 51.1661 28.5415L53.8915 13.83C54.5011 10.539 52.3003 7.38551 49.001 6.82256Z" strokeWidth="2"/>
-                                <g filter="url(#filter0_dd_25_3290)">
-                                <rect x="12.6226" width="29.7544" height="36" rx="6"/>
-                                <rect x="13.6226" y="1" width="27.7544" height="34" rx="5" strokeWidth="2"/>
-                                </g>
-                                <path d="M36.3769 35H18.6226C15.8611 35 13.6226 32.7614 13.6226 30V28.4605L12.8873 27.7827L13.6226 28.4605L23.1497 18.1243L30.2892 26.5354C31.0913 27.4804 32.5509 27.4757 33.347 26.5257L37.1281 22.0133L41.3769 26.6939V30C41.3769 32.7614 39.1384 35 36.3769 35Z" strokeWidth="2"/>
-                                <path d="M34.1646 11.5384C34.1646 13.3025 32.7738 14.6922 31.1072 14.6922C29.4407 14.6922 28.0498 13.3025 28.0498 11.5384C28.0498 9.77427 29.4407 8.38452 31.1072 8.38452C32.7738 8.38452 34.1646 9.77427 34.1646 11.5384Z" strokeWidth="2"/>
-                                <defs>
-                                <filter id="filter0_dd_25_3290" x="9.62256" y="0" width="35.7544" height="43" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset dy="2"/>
-                                <feGaussianBlur stdDeviation="1"/>
-                                <feComposite in2="hardAlpha" operator="out"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_25_3290"/>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                <feOffset dy="4"/>
-                                <feGaussianBlur stdDeviation="1.5"/>
-                                <feComposite in2="hardAlpha" operator="out"/>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
-                                <feBlend mode="normal" in2="effect1_dropShadow_25_3290" result="effect2_dropShadow_25_3290"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_25_3290" result="shape"/>
-                                </filter>
-                                </defs>
-                            </svg>
-                            <p className="text-xl text-black/50">Upload Resume / Portfolio File</p>
-                        </div>
-                        <input id="dropzone-file" type="file" accept=".pdf,.docx"  className="hidden" onChange={onFileChange} />
-                    </label>
-                    {selectedFileName ? (
-                        <p className="text-black mt-2 ml-1 font-medium text-lg">{selectedFileName}</p>
-                    ) : (
-                        <p className="text-black/50 mt-2 ml-1 font-medium text-lg">No File Chosen</p>
-                    )}
-                    {fileError && (
-                        <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{fileError}</p>
-                    )}
-                    {errors.selectedFileName && (
-                        <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.selectedFileName}</p>
-                    )}
-                </div>
-            </div>
+                <div className="font-body mb-16">
+                    <h4 className="text-3xl font-medium mb-5">
+                        Attachment Details
+                    </h4>
+                    <div className="flex flex-col mb-5">
+                        <p className="text-xl mb-2">Only .docx or .pdf files are allowed. Max file size is 10 MBs</p>
+                        <label htmlFor="careerCV" className={`tw-border bg-white flex flex-col items-start justify-center w-full h-32 border border-primary border-dashed rounded-lg cursor-pointer ${errors.selectedFileName ? 'border-red-400' : ''}`}>
+                            <div className="flex flex-col items-start justify-center py-4 px-5">
+                                <svg className="w-10 h-10 text-primary tw-no-invert" stroke="currentColor" fill="none" viewBox="0 0 55 43" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.99896 6.82256L13.5247 5.53845V32.7692L10.9976 33.3139C7.69143 34.0265 4.44992 31.867 3.83386 28.5415L1.10852 13.83C0.49886 10.539 2.69967 7.38551 5.99896 6.82256Z" strokeWidth="2"/>
+                                    <path d="M49.001 6.82256L41.4753 5.53845V32.7692L44.0024 33.3139C47.3086 34.0265 50.5501 31.867 51.1661 28.5415L53.8915 13.83C54.5011 10.539 52.3003 7.38551 49.001 6.82256Z" strokeWidth="2"/>
+                                    <g filter="url(#filter0_dd_25_3290)">
+                                    <rect x="12.6226" width="29.7544" height="36" rx="6"/>
+                                    <rect x="13.6226" y="1" width="27.7544" height="34" rx="5" strokeWidth="2"/>
+                                    </g>
+                                    <path d="M36.3769 35H18.6226C15.8611 35 13.6226 32.7614 13.6226 30V28.4605L12.8873 27.7827L13.6226 28.4605L23.1497 18.1243L30.2892 26.5354C31.0913 27.4804 32.5509 27.4757 33.347 26.5257L37.1281 22.0133L41.3769 26.6939V30C41.3769 32.7614 39.1384 35 36.3769 35Z" strokeWidth="2"/>
+                                    <path d="M34.1646 11.5384C34.1646 13.3025 32.7738 14.6922 31.1072 14.6922C29.4407 14.6922 28.0498 13.3025 28.0498 11.5384C28.0498 9.77427 29.4407 8.38452 31.1072 8.38452C32.7738 8.38452 34.1646 9.77427 34.1646 11.5384Z" strokeWidth="2"/>
+                                    <defs>
+                                    <filter id="filter0_dd_25_3290" x="9.62256" y="0" width="35.7544" height="43" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="2"/>
+                                    <feGaussianBlur stdDeviation="1"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_25_3290"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="1.5"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
+                                    <feBlend mode="normal" in2="effect1_dropShadow_25_3290" result="effect2_dropShadow_25_3290"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_25_3290" result="shape"/>
+                                    </filter>
+                                    </defs>
+                                </svg>
+                                <p className="text-xl text-black/50">Upload Resume / Portfolio File</p>
+                            </div>
+                            <input id="careerCV" name="careerCV" type="file" accept=".pdf,.docx" className="hidden" onChange={onFileChange} />
+                        </label>
+                        {selectedFileName ? (
+                            <p className="text-black mt-2 ml-1 font-medium text-lg">{selectedFileName}</p>
+                        ) : (
+                            <p className="text-black/50 mt-2 ml-1 font-medium text-lg">No File Chosen</p>
+                        )}
+                        {fileError && (
+                            <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{fileError}</p>
+                        )}
+                        {errors.selectedFileName && (
+                            <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.selectedFileName}</p>
+                        )}
+                    </div>
+                </div>    
 
             <div className="text-center">
                 {Object.keys(errors).length > 0 && (

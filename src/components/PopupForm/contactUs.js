@@ -167,94 +167,59 @@ const handleBudgetChange = (value) => {
       return allowedTypes.includes(file.type);
     };
   
-  const handleFileUpload = async () => {
-      if (file) {
-        const formData = new FormData();
-        formData.append("file", file);
-    
-        try {
-          // Send the file to the server
-          const response = await fetch("/api/upload", {
-            method: "POST",
-            body: formData,
-          });
-    
-          if (response.ok) {
-            const responseData = await response.json();
-            const { filePath } = responseData;
-            return filePath; // Return the file path
-          } else {
-            alert("File upload failed. Please try again later.");
-          }
-        } catch (error) {
-          console.error("Error uploading file:", error);
-        }
-      }
-    
-      return null; // No file path if no file is selected
-    };
-    
     const handleSubmit = async () => {
       setIsLoading(true);
+  
       // Initialize a formData object to send data to the server
       const formData = new FormData();
-  
+    
       // Add user information to the formData
       formData.append("firstName", firstName);
       formData.append("lastName", lastName);
-      formData.append("selectedService", selectedService);
-      formData.append("selectedBudget", selectedBudget);
       formData.append("phoneNumber", phoneNumber);
       formData.append("email", email);
+      formData.append("selectedService", selectedService);
+      formData.append("budgetRangeText", budgetRangeText); // Assuming you want to send the text representation of the budget
       formData.append("orgName", orgName);
       formData.append("role", role);
-
-      // Check if a file is selected
-      const uploadedFilePath = await handleFileUpload();
-  
-      if (uploadedFilePath !== null) {
-          // Add the file URL to the formData
-          formData.append("fileUrl", uploadedFilePath);
-        }
-  
-      // Add the message to the formData
       formData.append("message", message);
+    
+      // Check if a file is selected and append if present
+      if (file) {
+          formData.append("careerCV", file); // Adjust the name 'careerCV' if needed
+      }
+  
+      // Set up the request config
+      let config = {
+          method: "POST",
+          url: "/api/popup-send", // Adjust the endpoint as necessary
+          body: formData, // Axios will automatically set the correct content type header for FormData
+      };
   
       try {
-        // Send the formData to the server for email sending
-        const response = await fetch("/api/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: `Name: ${firstName} ${lastName}
-                    \nConatct Number: ${phoneNumber}
-                    \nEmail: ${email}
-                    \nRequested Service: ${selectedService}
-                    \nBudget Range: ${budgetRangeText}
-                    \nOrganisation Name: ${orgName}
-                    \nYour Role: ${role}
-                    \nFile Url: ${uploadedFilePath}
-                    \nMessage: ${message}`,
-          }),
-        });
-  
-        if (response.ok) {
-          setMessageStatus('success');
-          setTimeout(() => {
-            router.push('/thank-you');
-          }, 1000);
-        } else {
-          setMessageStatus('error');
-        }
+          // Note: Axios automatically sets the content type for FormData
+          const response = await fetch(config.url, {
+              method: config.method,
+              body: config.body,
+          });
+    
+          if (response.ok) {
+              // Handle success
+              setMessageStatus('success');
+              setTimeout(() => {
+                router.push('/thank-you');
+              }, 1000);
+          } else {
+              // Handle failure
+              setMessageStatus('error');
+          }
       } catch (error) {
-        console.error('Error sending email:', error);
-        setMessageStatus('error');
+          console.error('Error:', error);
+          setMessageStatus('error');
       } finally {
-        setIsLoading(false);
+          setIsLoading(false);
       }
-    };
+  };
 
     useEffect(() => {
       function handleClickOutside(event) {

@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { sendContactForm } from "../../../lib/api";
+import Router from "next/router";
 
 const initValues = {
   name: "",
@@ -51,9 +52,9 @@ export default function Home() {
       // Once the form is successfully submitted, set isMessageSent to true
       setIsMessageSent(true);
       // Redirect to the "Message Sent" page after a short delay
-      //   setTimeout(() => {
-      //     Router.push("/message-sent");
-      //   }, 1000);
+        setTimeout(() => {
+          Router.push("/thank-you");
+        }, 1000);
     } catch (error) {
       setState((prev) => ({
         ...prev,
