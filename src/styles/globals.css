@@ -5901,6 +5901,15 @@ body.loading {
 
 /* ================== Blog Details ================================ */
 
+a[data-type="link"] {
+  color: var(--primary);
+  font-weight: 500;
+}
+a[data-type="link"]:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .list-blog {
   display: list-item;
   margin-left: 1.3vw;
