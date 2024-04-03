@@ -370,7 +370,7 @@ const jobs = [
       bgImage: "development.webp",
 
       sDescription: 'Dive into the world of front-end development with an internship at Enigma Digital.',
-      lDescription: 'As a Junior UI/UX Designer at Enigma Digital, you will be an integral part of our design team, working to create seamless and innovative digital experiences. You will collaborate with cross-functional teams to design and refine user interfaces that are not only visually compelling but also intuitively functional.',
+      lDescription: 'As a Frontend Development Intern at Enigma Digital, you will be immersed in a dynamic environment where you will contribute to building seamless and responsive digital interfaces. You will collaborate with a team of skilled developers and designers to create solutions that not only look great but also provide outstanding user experiences.',
       responsibilities: [
         'Assist in the development of responsive web applications using the latest frontend technologies.',
         'Collaborate with UI/UX designers to translate visual concepts into functional online experiences.',

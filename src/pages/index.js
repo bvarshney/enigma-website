@@ -63,7 +63,6 @@ export default function Home({ recentPosts }) {
             },
           ]}
         />
-
     <Head>
       <link rel="canonical" href="https://weareenigma.com/" />
       <link rel="alternate" href="https://weareenigma.com/" hreflang="x-default" />
