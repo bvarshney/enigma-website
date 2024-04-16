@@ -7,34 +7,6 @@ const Hamburger = () => {
   const nav = useRef();
   const buttonRef = useRef(null);
 
-  // useEffect(() => {
-  //   const button = buttonRef.current;
-  //   button.addEventListener("click", handleClick);
-  //   return () => {
-  //     button.removeEventListener("click", handleClick);
-  //   };
-  // }, []);
-
-  // const handleClick = () => {
-  //   const audio = new Audio("/assets/music/menu.mp3");
-  //   audio.play();
-  // };
-
-  // // Sound on Click
-  // useEffect(() => {
-  //   const buttons = document.querySelectorAll("#btn-music");
-  //   const handleClick = () => {
-  //     const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
-  //     audio.play();
-  //   };
-  //   buttons.forEach((button) => button.addEventListener("click", handleClick));
-  //   return () => {
-  //     buttons.forEach((button) =>
-  //       button.removeEventListener("click", handleClick)
-  //     );
-  //   };
-  // }, []);
-
   useEffect(() => {
     gsap.from(nav.current, {
       duration: 1.5,
@@ -80,7 +52,7 @@ const Hamburger = () => {
   };
 
   return (
-    <header className="hamburger">
+    <div className="hamburger">
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
@@ -102,6 +74,7 @@ const Hamburger = () => {
                     />
 
                     <svg
+                      className="menu-svg-icon"
                       viewBox="0 0 100 100"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -124,7 +97,7 @@ const Hamburger = () => {
         </div>
       </div>
       <Menu state={state} />
-    </header>
+    </div>
   );
 };
 

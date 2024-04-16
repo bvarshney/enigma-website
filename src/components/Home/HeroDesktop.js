@@ -127,8 +127,8 @@ const HeroDesktop = () => {
               <div className="scroll-img home-page-header">
                 <Image
                   src="/assets/hero-footer/scroll.svg"
-                  width={200}
-                  height={200}
+                  width={18}
+                  height={234}
                   alt="Scroll Image"
                   title='Scroll Down Image'
                   className="svg-dark-mode"

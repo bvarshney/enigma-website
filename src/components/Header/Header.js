@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Menu from './Hamburger';
+import Hamburger from './Hamburger';
 import { easeInOut, motion } from 'framer-motion';
 import Showreel from '../Home/Showreel';
 import Link from 'next/link';
@@ -29,21 +29,6 @@ export default function Header() {
 
   const buttonRefDarkMode = useRef(null);
 
-  // useEffect(() => {
-  //   const button = buttonRefDarkMode.current;
-
-  //   const handleClick = () => {
-  //     const audio = new Audio('/assets/music/click.mp3');
-  //     audio.play();
-  //   };
-
-  //   button.addEventListener('click', handleClick);
-
-  //   return () => {
-  //     button.removeEventListener('click', handleClick);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const button = buttonRefDarkMode.current;
 
@@ -52,7 +37,7 @@ export default function Header() {
     tl.fromTo(button, { scale: 0, rotate: '-280deg' }, { scale: 1, rotate: '0deg', duration: 0.7 });
 
     return () => {
-      tl.kill(); // Ensure the animation is cleared when the component unmounts
+      tl.kill();
     };
   }, [invertText]);
 
@@ -137,15 +122,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* <motion.div 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
-          className="MenuAudio"
-          >
-          <WavyLineCanvas />
-        </motion.div> */}
-
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -168,7 +144,7 @@ export default function Header() {
             />
           </button>
         </motion.div>
-        <Menu />
+        <Hamburger />
       </div>
     </header>
   );

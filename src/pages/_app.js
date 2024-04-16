@@ -24,6 +24,12 @@ export default function App({ Component, pageProps }) {
         as: 'font',
         type: 'font/woff2',
         crossOrigin: 'anonymous'
+      },{
+        rel: 'preload',
+        href: '/assets/fonts/clash-display/ClashDisplay-Medium.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossOrigin: 'anonymous'
       }
       ]}
 
@@ -115,9 +121,6 @@ export default function App({ Component, pageProps }) {
       }}
     />
     </Head>  
-
-      {/* <Awards /> */}
-
       <Component {...pageProps} />
       <SpeedInsights />
       <Analytics />
