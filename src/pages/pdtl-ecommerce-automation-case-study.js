@@ -513,7 +513,7 @@ export default function pdtl() {
                     After all, what's more British than a good ol' chinwag?
                   </p>
                   <p data-jelly>
-                    <strong>A. Research & Collaboration: </strong>
+                    <strong>B. Design & Development:  </strong>
                     Enigma's design team crafted visually appealing wireframes,
                     incorporating the logistics company's branding and a touch
                     of British flair. The development team then brought the
