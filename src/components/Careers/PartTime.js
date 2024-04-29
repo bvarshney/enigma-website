@@ -33,7 +33,7 @@ export default function PartTime() {
                                 </div>
                             )}
 
-                            <a href={`/careers/${job.slug}`} className="dark:bg-white2 dark:shadow content-between grid-rows-[auto auto auto auto] grid group font-body px-7 2xl:px-7 xl:px-5 py-10">
+                            <a href={`/careers/${job.slug}`} className={`dark:bg-white2 dark:shadow content-between grid-rows-[auto auto auto auto] grid group font-body px-7 2xl:px-7 xl:px-5 py-10 ${job.status === 'Closed' ? 'pointer-events-none cursor-default' : ''}`}>
                                  <div className="mb-8 flex items-center justify-start gap-4 md:gap-6">
                                     <img alt="Job Post Image" src={`/assets/careers/listing/${job.image}`} className="w-20 lg:w-24 h-20 lg:h-24"/>
                                     <div>
