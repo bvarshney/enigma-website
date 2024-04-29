@@ -65,7 +65,7 @@ if (globalThis.innerWidth > 1024) {
   }, []);
 }
 
-useEffect(() => {
+useEffect(() => {  
 
   const menuLoaderBar = document.querySelectorAll(".menuLoaderBar")
 
@@ -86,9 +86,7 @@ useEffect(() => {
       delay: 1.2,
       css: { display: "none" },
     });
-  } else if (
-    state.clicked === true || 
-    (state.clicked === true && state.initial === null)) 
+  } else if (state.clicked === true || (state.clicked === true && state.initial === null)) 
   {
     gsap.to([menu.current], {
       duration: 0,

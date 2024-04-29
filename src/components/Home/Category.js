@@ -58,7 +58,6 @@ export default function Category() {
     return () => ctx.revert();
   }, []);
 
-
   return (
     <>
       <div ref={catSection} className="category-section-new">

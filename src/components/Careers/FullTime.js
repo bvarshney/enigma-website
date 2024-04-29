@@ -1,5 +1,4 @@
 import jobs from "@/components/Careers/JobsData";
-import Link from "next/link";
 
 export default function FullTime() {
 
@@ -53,7 +52,7 @@ export default function FullTime() {
                                         ))}
                                     </div>
                                     
-                                    <button className="md:h-16 h-14 flex items-center justify-center tw-primary block w-full group-hover:bg-primary group-hover:shadow-lg duration-300 group-hover:text-white border-primary border-2 rounded-full">
+                                    <button className="md:h-16 h-14 items-center justify-center tw-primary block w-full group-hover:bg-primary group-hover:shadow-lg duration-300 group-hover:text-white border-primary border-2 rounded-full">
                                         <span className="flex gap-5 items-center justify-center font-medium text-xl md:text-2xl font-body">
                                             View Details
                                             <span>

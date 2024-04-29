@@ -119,7 +119,7 @@ const jobs = [
     {
       id: '3',
       category: 'Development',
-      status: 'New',
+      status: 'Closed',
       title: 'Front-End Developer',
       slug: generateSlug('Front-End-Developer'),
       type: 'FULL_TIME',
@@ -178,7 +178,7 @@ const jobs = [
       {
       id: '4',
       category: 'BD',
-      status: 'New',
+      status: 'Closed',
       title: 'Business Development Manager',
       slug: generateSlug('Business-Development-Manager'),
       type: 'FULL_TIME',
@@ -353,7 +353,7 @@ const jobs = [
     {
       id: '7',
       category: 'Development',
-      status: 'Hot',
+      status: 'Closed',
       title: 'Frontend Development Intern',
       slug: generateSlug('Frontend-Development-Intern'),
       type: 'PART_TIME',
@@ -409,7 +409,7 @@ const jobs = [
     {
       id: '8',
       category: 'Marketing',
-      status: 'New',
+      status: 'Closed',
       title: 'Growth Marketing Intern',
       slug: generateSlug('Growth-Marketing-Intern'),
       type: 'PART_TIME',
