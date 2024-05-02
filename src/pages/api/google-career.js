@@ -1,10 +1,9 @@
 import { google } from 'googleapis';
 import formidable from 'formidable';
 import fs from 'fs';
-import path from 'path';
 
 const googleAuth = new google.auth.GoogleAuth({
-  keyFile: path.join(__dirname, '/google-services.json'), // ensure this is the correct path
+  credentials: JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON),
   scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
 });
 
