@@ -128,6 +128,7 @@ const handleBudgetChange = (value) => {
       setStep(step - 1);
     };
   
+  
     const handleFileChange = (event) => {
       const selectedFile = event.target.files[0];
   
@@ -165,37 +166,45 @@ const handleBudgetChange = (value) => {
       const allowedTypes = ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation"];
       return allowedTypes.includes(file.type);
     };
-
-    const handleSubmit = async (event) => {
-      event.preventDefault();
+  
+    const handleSubmit = async () => {
       setIsLoading(true);
-      const pageUrl = (window.location.href);
+  
+      // Initialize a formData object to send data to the server
       const formData = new FormData();
-      
+    
+      // Add user information to the formData
       formData.append("firstName", firstName);
       formData.append("lastName", lastName);
       formData.append("phoneNumber", phoneNumber);
       formData.append("email", email);
       formData.append("selectedService", selectedService);
-      formData.append("budgetRangeText", budgetRangeText);
+      formData.append("budgetRangeText", budgetRangeText); // Assuming you want to send the text representation of the budget
       formData.append("orgName", orgName);
       formData.append("role", role);
       formData.append("message", message);
-      formData.append("pageUrl", pageUrl);
-
+    
+      // Check if a file is selected and append if present
       if (file) {
-          formData.append("myFile", file);
+          formData.append("careerCV", file); // Adjust the name 'careerCV' if needed
       }
   
+      // Set up the request config
+      let config = {
+          method: "POST",
+          url: "/api/popup-send", // Adjust the endpoint as necessary
+          body: formData, // Axios will automatically set the correct content type header for FormData
+      };
+  
       try {
-          const response = await fetch('/api/resend-popup', {
-              method: 'POST',
-              body: formData,
+          // Note: Axios automatically sets the content type for FormData
+          const response = await fetch(config.url, {
+              method: config.method,
+              body: config.body,
           });
-
-          const result = await response.json();
     
           if (response.ok) {
+              // Handle success
               setMessageStatus('success');
               setTimeout(() => {
                 router.push('/thank-you');
@@ -228,7 +237,7 @@ const handleBudgetChange = (value) => {
       <>
   {/* Main Contact Form Start */}
   
-  <form onSubmit={handleSubmit} className="popUpFormContainer">
+  <div className="popUpFormContainer">
     <LazyVideo
       src="/assets/contact/bg.webm"
       title="PopUp Form BG Video" />
@@ -633,7 +642,7 @@ const handleBudgetChange = (value) => {
             onChange={handleFileChange}
             hidden
           />
-          <button type="button">
+          <button>
             <label className="label" htmlFor="attach">
               <img src="/assets/icons/attach.png" alt="attachment icon" title="Add Attachmen"/>
               Attach File
@@ -642,7 +651,7 @@ const handleBudgetChange = (value) => {
           {isFileSelected ? (
             <span id="file-chosen">
               {file ? file.name : "No file chosen"}
-              <button type="button" onClick={handleFileRemove}>✖</button>
+              <button onClick={handleFileRemove}>✖</button>
             </span>
           ) : (
             <span id="file-chosen">No file chosen</span>
@@ -682,7 +691,7 @@ const handleBudgetChange = (value) => {
                   <img src="/assets/icons/loading.svg" alt="circle icon" title="loading"/>
                 </div>
               ) : (
-                <button className='btn_CTA' type="submit">
+                <button className='btn_CTA' onClick={handleSubmit}>
                   <span className="btn_CTA-ripple">
                     <span></span>
                   </span>
@@ -704,7 +713,7 @@ const handleBudgetChange = (value) => {
       )}
 {/* Form Step 6 END*/}
 
-      </form>
+      </div>
       </>
       
     );

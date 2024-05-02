@@ -8,6 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
+import { sendContactForm } from "../../../lib/api";
 import Router from "next/router";
 
 const initValues = {
@@ -45,14 +46,7 @@ export default function Home() {
     }));
 
     try {
-       fetch("/api/resend-contact", {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-      }).then((res) => {
-        if (!res.ok) throw new Error("Failed to send message");
-        return res.json();
-      });
+      await sendContactForm(values);
       setTouched({});
       setState(initState);
       // Once the form is successfully submitted, set isMessageSent to true
