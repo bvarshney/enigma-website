@@ -10,7 +10,7 @@ const ContactDetails = ({ userName, userEmail, userNumber, userMessage }) => (
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://weareenigma.com/enigma-new.svg"}
+            src={"https://weareenigma.com/enigma-new.png"}
             width="170"
             height="50"
             alt="Enigma"

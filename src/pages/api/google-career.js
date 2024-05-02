@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 const googleAuth = new google.auth.GoogleAuth({
-  keyFile: path.join(__dirname, '../../../../next-spreadsheet/google-services.json'), // ensure this is the correct path
+  keyFile: path.join(__dirname, '../../../../public/google-services.json'), // ensure this is the correct path
   scopes: ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
 });
 
