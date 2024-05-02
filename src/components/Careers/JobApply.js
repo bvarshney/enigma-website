@@ -62,11 +62,9 @@ export default function JobApply(){
     const onFileChange = (event) => {
         const file = event.target.files[0];
         if (file && (file.type === "application/pdf" || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) {
-            
             setSelectedFileName(file.name);
-            console.log(file);
+            // setFile(file);
             setErrors({ ...errors, selectedFileName: '' });
-
         } else {
             setErrors({ ...errors, selectedFileName: 'Invalid file type. Please select a .docx or .pdf file.' });
         }
@@ -122,6 +120,7 @@ export default function JobApply(){
         formData.append('number', number);
         formData.append('location', location);
         formData.append('url', url);
+        formData.append('pageUrl', window.location.href);
     
         // Append experiences as JSON string or in a format that your backend expects
         formData.append('experiences', JSON.stringify(experiences.map((_, index) => {
@@ -139,7 +138,7 @@ export default function JobApply(){
 
           try {
             const response = await axios.post(
-                "/api/career-send",
+                "/api/google-career",
                 formData, // directly pass formData
                 { headers: { 'Content-Type': 'multipart/form-data' } } // this is actually optional for FormData
             );
