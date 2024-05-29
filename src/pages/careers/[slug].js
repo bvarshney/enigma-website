@@ -230,6 +230,16 @@ function JobDetail({ job }) {
               <h3 className='mb-4 md:mb-6 text-3xl md:text-4xl lg:text-[2.4vw]'>How to Apply:</h3>
               <p className='text-black/70 text-xl mb-4'>{job.HowToApply}</p>
               <p className='text-black/70 text-xl mb-4'>{job.message}</p>
+              {job.message2 && (
+                <>
+                <div 
+                  className='text-black/70 text-xl mb-4'
+                  dangerouslySetInnerHTML={{
+                  __html: job.message2,}}
+                />
+                {/* <p className='text-black/70 text-xl mb-4'>{job.message2}</p> */}
+                </>
+              )}
               {job.note && (
                 <p className='text-black/70 text-xl mb-4'>
                   <span className='font-bold'>IMPORTANT NOTE: </span>

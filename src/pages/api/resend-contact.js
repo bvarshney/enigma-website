@@ -8,8 +8,8 @@ export default async (req, res) => {
     const { name, email, number, message } = req.body; // Destructure values from req.body
 
     const { data, error } = await resend.emails.send({
-      from: 'Enigma Webforms <no-reply@weareenigma.com>',
-      to: ['b@weareenigma.com'],
+      from: 'Enigma Webforms <onboarding@resend.dev>',
+      to: ['hitesh@weareenigma.com'],
       subject: "New Lead: New Contact Form Submission",
       react: ContactDetails({ 
         userName: name,

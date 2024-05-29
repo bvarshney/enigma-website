@@ -1079,7 +1079,7 @@ button:focus {
 
 .right-section-header {
   display: flex;
-  margin-right: 3.5vw;
+  /* margin-right: 3.5vw; */
   justify-content: flex-start;
   align-items: center;
 }
@@ -7064,9 +7064,9 @@ a:hover {
     font-size: 3vw;
   }
 
-  .right-section-header{
+  /* .right-section-header{
     margin-right: 10vw;
-  }
+  } */
 
   .loader-wrap .loader-wrap-heading p {
     font-size: 48px;
@@ -8512,7 +8512,7 @@ a:hover {
   }
 
   .right-section-header {
-    margin-right: 10vw;
+    /* margin-right: 10vw; */
     margin-top: 5px;
   }
 
@@ -12084,15 +12084,19 @@ label.label:hover:before{
 }
 
 .status-closed {
-  background-color: #FF7D7D;
+  background-color: #ff4747;
 }
 
 .status-hot {
-  background-color: #7DB5FF;
+  background-color: #ff7d19;
 }
 
 .status-new {
   background-color: #FF8BE6;
+}
+
+.status-urgent {
+  background-color: #218cff;
 }
 
 .c__testimain .slick-list{
