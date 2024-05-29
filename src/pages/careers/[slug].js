@@ -151,32 +151,32 @@ function JobDetail({ job }) {
         <Header/>
 
         <section className='jd__s1 relative h-[50vh] w-screen mx-auto mb-24 flex items-center justify-center'>
-          <span className='jd__bgcover h-[65vh] md:h-[57vh]'> 
+          <span className='jd__bgcover h-[65vh] md:h-[57vh] top-[-7.6vh]'> 
           </span>
           <Image 
-            className='jd__bg absolute z-[-2] w-full h-[65vh] md:h-[57vh] top-[-7.4vh] object-cover'
+            className='jd__bg absolute z-[-2] w-full h-[65vh] md:h-[57vh] top-[-7.6vh] object-cover'
             src={`/assets/careers/${job.bgImage}`}
             alt={`Job Detail ${job.category} Backgorund Image`}
             width={1500}
             priority={true}
             height={800}/>
-          <div className='w-[90%] md:w-[80%]'>
-            <div className='w-full text-white jd__head'>
-                <h1 className='text-[7vw] lg:text-[5vw] font-medium mb-2 md:mb-0'>{job.title}</h1>
+          <div className='w-[90%] md:w-[85%] lg:w-[80%]'>
+            <div className='w-full text-white jd__head space-y-[6vw] md:space-y-[4vw] lg:space-y-[1.5vw]'>
+                <h1 className='text-[7vw] lg:text-[5vw] font-medium leading-[1.1]'>{job.title}</h1>
                 <p className='text-xl md:text-2xl text-gray-100 tracking-wide font-body'>{job.sDescription}</p>
                 
-                <div className='my-4 font-body flex-col md:flex-row gap-2 md:gap-0 flex md:items-center'>
+                <div className='font-body flex-col md:flex-row gap-2 md:gap-0 flex md:items-center'>
                   <div className='flex items-center gap-2 text-xl pr-0 md:pr-8'>
                     <svg className='w-8 mb-1' fill="currentColor" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.25 12.063v3.75c-2.969 1.094-6.656 1.719-10.625 1.719s-7.656-0.625-10.625-1.719v-3.75c0-0.688 0.563-1.25 1.25-1.25h5.156v-0.938c0-1.438 1.188-2.656 2.656-2.656h3.125c1.469 0 2.656 1.219 2.656 2.656v0.938h5.156c0.688 0 1.25 0.563 1.25 1.25zM7.969 9.875v0.938h5.313v-0.938c0-0.594-0.5-1.094-1.094-1.094h-3.125c-0.594 0-1.094 0.5-1.094 1.094zM9.063 15.594v0.625c0 0.188 0.125 0.313 0.313 0.313h2.5c0.188 0 0.313-0.125 0.313-0.313v-0.625c0-0.188-0.125-0.313-0.313-0.313h-2.5c-0.188 0-0.313 0.125-0.313 0.313zM0 23.969v-6.813c3 1.031 6.656 1.625 10.625 1.625s7.625-0.594 10.625-1.625v6.813c0 0.688-0.563 1.25-1.25 1.25h-18.75c-0.688 0-1.25-0.563-1.25-1.25zM12.188 20.75v-0.625c0-0.188-0.125-0.313-0.313-0.313h-2.5c-0.188 0-0.313 0.125-0.313 0.313v0.625c0 0.188 0.125 0.313 0.313 0.313h2.5c0.188 0 0.313-0.125 0.313-0.313z"></path>
                     </svg>
-                    <span>{job.experience}</span>
+                    <span className='whitespace-nowrap'>{job.experience}</span>
                   </div>
                   <div className='flex items-center gap-2 text-xl border-0 md:border-x-2 px-0 md:px-8 border-gray-400'>
                     <svg className='w-8 mb-1' fill="currentColor" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                       <path d="M21.25 12.063v3.75c-2.969 1.094-6.656 1.719-10.625 1.719s-7.656-0.625-10.625-1.719v-3.75c0-0.688 0.563-1.25 1.25-1.25h5.156v-0.938c0-1.438 1.188-2.656 2.656-2.656h3.125c1.469 0 2.656 1.219 2.656 2.656v0.938h5.156c0.688 0 1.25 0.563 1.25 1.25zM7.969 9.875v0.938h5.313v-0.938c0-0.594-0.5-1.094-1.094-1.094h-3.125c-0.594 0-1.094 0.5-1.094 1.094zM9.063 15.594v0.625c0 0.188 0.125 0.313 0.313 0.313h2.5c0.188 0 0.313-0.125 0.313-0.313v-0.625c0-0.188-0.125-0.313-0.313-0.313h-2.5c-0.188 0-0.313 0.125-0.313 0.313zM0 23.969v-6.813c3 1.031 6.656 1.625 10.625 1.625s7.625-0.594 10.625-1.625v6.813c0 0.688-0.563 1.25-1.25 1.25h-18.75c-0.688 0-1.25-0.563-1.25-1.25zM12.188 20.75v-0.625c0-0.188-0.125-0.313-0.313-0.313h-2.5c-0.188 0-0.313 0.125-0.313 0.313v0.625c0 0.188 0.125 0.313 0.313 0.313h2.5c0.188 0 0.313-0.125 0.313-0.313z"></path>
                     </svg>
-                    <span>{job.compensation}</span>
+                    <span className='whitespace-nowrap'>{job.compensation}</span>
                   </div>
                   <div className='flex items-center gap-2 text-xl pl-0 md:pl-8'>
                     <svg fill="currentColor" className="w-6 mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 413.099 413.099">
@@ -184,7 +184,7 @@ function JobDetail({ job }) {
                           <path d="M206.549,0L206.549,0c-82.6,0-149.3,66.7-149.3,149.3c0,28.8,9.2,56.3,22,78.899l97.3,168.399c6.1,11,18.4,16.5,30,16.5 c11.601,0,23.3-5.5,30-16.5l97.3-168.299c12.9-22.601,22-49.601,22-78.901C355.849,66.8,289.149,0,206.549,0z M206.549,193.4 c-30,0-54.5-24.5-54.5-54.5s24.5-54.5,54.5-54.5s54.5,24.5,54.5,54.5C261.049,169,236.549,193.4,206.549,193.4z"></path>
                         </g>
                     </svg>
-                    <span>{job.location}</span>
+                    <span className='whitespace-nowrap'>{job.location}</span>
                   </div>
                 </div>
               </div>

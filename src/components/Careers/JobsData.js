@@ -411,7 +411,7 @@ const jobs = [
       category: 'Marketing',
       status: 'Urgent',
       title: 'Management Trainee – Growth & Marketing',
-      slug: generateSlug('Management-Trainee–Growth-Marketing'),
+      slug: generateSlug('Management-Trainee-Growth-Marketing'),
       type: 'PART_TIME',
       image: 'bd-manager.webp',
       experience: '3 months',
