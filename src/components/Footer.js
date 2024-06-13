@@ -151,7 +151,7 @@ function Footer() {
                 </div>
               </div>
               <div className="phone f__anim">
-                <h6> even better call us</h6>
+                <h6> for new business</h6>
                 <div className="num">
                   <div
                     className="footer-nav-item f__anim"
@@ -162,17 +162,6 @@ function Footer() {
                       <span data-text="+91 8178 026 136">
                         +91 8178 026 136
                       </span> 
-                    </a>
-                  </div>
-                  <div
-                    className="footer-nav-item f__anim"
-                    data-cursor-exclusion
-                    data-cursor-size="80px"
-                  >
-                    <a href="tel:+91 7303 644 520">
-                      <span data-text="+91 7303 644 520">
-                        +91 7303 644 520
-                      </span>
                     </a>
                   </div>
                 </div>

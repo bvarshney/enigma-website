@@ -63,16 +63,11 @@ export default function FooterMobile() {
           </div>
           <div className="contact-content-call">
             <div className="contact-content-call-title" id="say-anim-links">
-              even better call us
+              for new business
             </div>
             <div className="contact-content-call-desc" id="say-anim-links">
               <a href="tel:+91 8178 026 136" style={{ letterSpacing: "1.3px" }}>
                 <span>+91</span> 8178 026 136
-              </a>
-            </div>
-            <div className="contact-content-call-desc" id="say-anim-links"> 
-              <a href="tel:+91 7303 644 520">
-                <span>+91</span> 7303 644 520
               </a>
             </div>
           </div>

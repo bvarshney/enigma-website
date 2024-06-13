@@ -275,7 +275,7 @@ useEffect(() => {
                 </div>
                 <div className={styles.contentRightBodyTop}>
                   <div className={styles.contentTitle} ref={link14}>
-                    work with us
+                    for new business
                   </div>
                   <div className={styles.contentRightBottom}>
                     <div className={styles.socialItem} ref={link15} data-cursor-opaque data-cursor-size="50px">

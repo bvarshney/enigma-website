@@ -41,48 +41,6 @@ const Menu = ({ state }) => {
   const link15 = useRef();
   const link16 = useRef();
 
-// if (globalThis.innerWidth > 1024) {
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     // Check if running on the client-side
-  //     const buttons = document.querySelectorAll(".btn-music");
-  //     const handleClick = () => {
-  //       const audio = new Audio("/assets/music/click.mp3");
-  //       audio.play();
-  //     };
-  //     buttons.forEach((button) => button.addEventListener("click", handleClick));
-  //     return () => {
-  //       buttons.forEach((button) =>
-  //         button.removeEventListener("click", handleClick)
-  //       );
-  //     };
-  //   }
-  // }, []);
-
-//   useEffect(() => {
-//     if (typeof window !== "undefined") {
-//       // Check if running on the client-side
-//       const buttons = document.querySelectorAll(".btn-music");
-//       const handleMouseOver = (event) => {
-//         const audio = new Audio("/assets/music/hover.mp3");
-//         audio.play();
-//         event.target.addEventListener("mouseout", () => {
-//           audio.pause();
-//           audio.currentTime = 0;
-//         });
-//       };
-//       buttons.forEach((button) =>
-//         button.addEventListener("mouseover", handleMouseOver)
-//       );
-//       return () => {
-//         buttons.forEach((button) =>
-//           button.removeEventListener("mouseover", handleMouseOver)
-//         );
-//       };
-//     }
-//   }, []);
-// }
-
 useEffect(() => {
 
   const menuLoaderBar = document.querySelectorAll(".menuLoaderBar");
@@ -431,7 +389,7 @@ useEffect(() => {
                       className="content-right-body-title content-title nav__link"
                       ref={link13}
                     >
-                      work with us
+                      for new business
                     </div>
                     <div className="content-right-body-more">
                       <div className="content-right-body-more-column">
