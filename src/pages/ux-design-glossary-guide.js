@@ -9,7 +9,6 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
-// import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
 
@@ -96,27 +95,6 @@ export default function BlogDetail() {
         );
         return () => tl.kill();
       }, []);
-
-
-// if (globalThis.innerWidth>1024) {
-//   // Section Pinnnig
-//   useEffect(() => {
-//     let ctx = gsap.context(() => {
-//       let brandImagePin = document.getElementsByClassName("ux-gls-img");
-//       let brandImageNotPin = document.getElementById("right-section");
-//       ScrollTrigger.create({
-//         trigger: brandImagePin,
-//         start: "top 10%",
-//         endTrigger: brandImageNotPin,
-//         end: "bottom 80%",
-//         invalidateOnRefresh: true,
-//         pin: brandImagePin,
-//         markers: false,
-//       });
-//     });
-//     return () => ctx.revert();
-//   });
-// }
 
 const structuredData = {
     "@context": "https://schema.org",

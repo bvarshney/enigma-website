@@ -7,7 +7,7 @@ import Pagination from '../components/WpBlogs/Pagination';
 import { Cursor } from "../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 
-import Header from "@/components/Header/Header";  
+import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import PageLoader from "@/components/pageLoader";
@@ -19,8 +19,28 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
+
+    // Hover on the link
+    const handleHover = (e) => {
+      gsap.to(e.target, {
+        duration: 0.5,
+        scale: 1.1,
+        ease: "power1.inOut",
+      });
+    };
+  
+    // Hover off the link
+    const handleHoverExit = (e) => {
+      gsap.to(e.target, {
+        duration: 0.5,
+        scale: 1,
+        ease: "power1.inOut",
+      });
+    };
 
 export default function Blog({ posts, featuredPost, pagination, categories }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -30,7 +50,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
     tl.fromTo("#fadeUp", {
       opacity: 0,
       y: 100,
-    },{
+    }, {
       opacity: 1,
       y: 0,
       stagger: 0.1,
@@ -40,72 +60,72 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
     return () => tl.kill();
   }, []);
 
-    useEffect(() => {
-      const elements = document.querySelectorAll('.blog-anim');
-  
-      elements.forEach((element) => {
-        gsap.fromTo(
-          element,
-          {
-            opacity: 0,
-            y: 100,
+  useEffect(() => {
+    const elements = document.querySelectorAll('.blog-anim');
+
+    elements.forEach((element) => {
+      gsap.fromTo(
+        element,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%',
+            ease: 'power2.easeOut',
           },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            scrollTrigger: {
-              trigger: element,
-              start: 'top 85%',
-              ease: 'power2.easeOut',
-            },
-          }
-        );
-      });
-  
-      return () => {
-        gsap.timeline().clear();
-      };
-    }, []);
+        }
+      );
+    });
+
+    return () => {
+      gsap.timeline().clear();
+    };
+  }, []);
 
   return (
     <>
 
-            <NextSeo
-              title="The Enigma Blog | Discover, Learn & Be Future Ready"
-              description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
-              openGraph={{
-                url: "https://weareenigma.com/blog",
-                title: "The Enigma Blog | Discover, Learn & Be Future Ready",
-                description:
-                  "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
-                images: [
-                  {
-                    url: "https://weareenigma.com/assets/featured-images/blog.png",
-                    width: 1200,
-                    height: 630,
-                    alt: "Blogs Feature Image",
-                    type: "image/png",
-                  },
-                  ],
-                siteName: "Enigma Digital",
-              }}
+      <NextSeo
+        title="The Enigma Blog | Discover, Learn & Be Future Ready"
+        description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
+        openGraph={{
+          url: "https://weareenigma.com/blog",
+          title: "The Enigma Blog | Discover, Learn & Be Future Ready",
+          description:
+            "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
+          images: [
+            {
+              url: "https://weareenigma.com/assets/featured-images/blog.png",
+              width: 1200,
+              height: 630,
+              alt: "Blogs Feature Image",
+              type: "image/png",
+            },
+          ],
+          siteName: "Enigma Digital",
+        }}
 
-            additionalMetaTags={[
-              {
-                name: "twitter:title",
-                content: "The Enigma Blog | Discover, Learn & Be Future Ready"
-              },
-              {
-                name: "twitter:description",
-                content: "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
-              },
-              {
-                name: "twitter:image",
-                content: "https://weareenigma.com/assets/featured-images/blog.png"
-              },
-            ]}
-          />
+        additionalMetaTags={[
+          {
+            name: "twitter:title",
+            content: "The Enigma Blog | Discover, Learn & Be Future Ready"
+          },
+          {
+            name: "twitter:description",
+            content: "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
+          },
+          {
+            name: "twitter:image",
+            content: "https://weareenigma.com/assets/featured-images/blog.png"
+          },
+        ]}
+      />
 
       <Head>
         <link rel="canonical" href="https://weareenigma.com/blog" />
@@ -117,7 +137,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
               {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                "mainEntityOfPage":{
+                "mainEntityOfPage": {
                   "@type": "WebPage",
                   "@id": "https://weareenigma.com/blog"
                 },
@@ -140,7 +160,7 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
       </Head>
 
       <SmoothScroll />
-      <Cursor isGelly={true}/>
+      <Cursor isGelly={true} />
 
       <PageLoader text={"Our Thoughts & Resources"} />
       <Modal />
@@ -148,12 +168,12 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
       <main>
         <Header />
 
-          {/* Featured Post Component */}
-          {featuredPost && (
-            <FeaturedPost post={featuredPost} />
-          )}
+        {/* Featured Post Component */}
+        {featuredPost && (
+          <FeaturedPost post={featuredPost} />
+        )}
 
-        <section className='blogs-sub-section'> 
+        <section className='blogs-sub-section'>
           <div
 
             className="blogs-heading blog-anim"
@@ -170,6 +190,32 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
           </div>
 
           <ul className='ul-items'>
+            <li className='blog-anim'>
+              <div className='ul-blog'>
+                <Link href="ux-design-glossary-guide">
+                  <div className='image-box-blog'>
+                    <Image
+                      className='img-blog'
+                      data-cursor-size="120px"
+                      data-cursor-text="Read More"
+                      data-cursor-color="#000"
+                      src="/assets/blogs/featured/design-glossary.webp"
+                      alt="ux-design-glossary-guide-image"
+                      title="UX Design Glossary Guide"
+                      width={600}
+                      height={1000}
+                      priority={false}
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                    />
+                    <h5 className='blog-list-tag'>Design</h5>
+                  </div>
+                  <h4 className='desc-tag'>
+                    UX Design Glossary Guide
+                  </h4>
+                </Link>
+              </div>
+            </li>
             {posts.map((post) => {
               return (
                 <li key={post.slug} className='blog-anim'>

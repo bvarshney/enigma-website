@@ -30,7 +30,7 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
   return (
 
     <div className="related-articles">
-        <div className="related-article-heading">
+        <div className="related-article-heading mb-[4vw]">
           <h3>RELATED ARTICLES</h3>
           <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
             <p>All articles</p>
@@ -39,18 +39,18 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
 
         <div className="related-box-img">
             {relatedBlogs.map((blog, index) => (
-                <div key={index} className='box-img-content'>
+                <div key={index} className='box-img-content service__d'>
                     <div className="img-box-related">
                         <Link href={blog.Link}>
                             <img
-                            src={blog.image}
-                            alt={blog.name}
-                            data-cursor-text="Read Now"
-                            data-cursor-color="#000"
-                            data-cursor-size="100px"
-                            onMouseEnter={(e) => handleHover(e)}
-                            onMouseOut={(e) => handleHoverExit(e)}
-                            loading='lazy'
+                              src={blog.image}
+                              alt={blog.name}
+                              data-cursor-text="Read Now"
+                              data-cursor-color="#000"
+                              data-cursor-size="100px"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                              loading='lazy'
                             />
                             <p className='blog-list-tag'>{blog.category}</p>
                         </Link>
