@@ -58,16 +58,16 @@ const BlogInfo = ({ author, date, shareLink, avatar }) => {
 
         <div className="b__dt-s-icon">
           <LinkedinShareButton url={`https://weareenigma.com/${shareLink}`} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/linkedin.webp" alt="LinkedIn Icon" title='LinkedIn Icon'/>
+            <img src="/assets/icons/social/linkedin.webp" alt="LinkedIn Icon" title='LinkedIn Icon'/>
           </LinkedinShareButton>
           <FacebookShareButton url={`https://weareenigma.com/${shareLink}`} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/facebook.webp" alt="Facebook Icon" title='Facebook Icon' />
+            <img src="/assets/icons/social/facebook.webp" alt="Facebook Icon" title='Facebook Icon' />
           </FacebookShareButton>
           <TwitterShareButton url={`https://weareenigma.com/${shareLink}`} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/twitter.webp" alt="Twitter Icon" title='Twitter Icon' />
+            <img src="/assets/icons/social/twitter.webp" alt="Twitter Icon" title='Twitter Icon' />
           </TwitterShareButton>
           <WhatsappShareButton url={`https://weareenigma.com/${shareLink}`} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/whatsapp.webp" alt="WhatsApp Icon" title='WhatsApp Icon' />
+            <img src="/assets/icons/social/whatsapp.webp" alt="WhatsApp Icon" title='WhatsApp Icon' />
           </WhatsappShareButton>
         </div>
       </div>

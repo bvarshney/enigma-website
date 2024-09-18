@@ -23,7 +23,7 @@ const handleHoverExit = (e) => {
 const ServiceBlogs = ({ posts }) => {
   return (
     <div className="related-articles service__d">
-      <div className="related-article-heading service__d" id="fadeIn">
+     <div className="related-article-heading service__d mb-[4vw]" id="fadeIn">
         <div className="left-box-heading">
           <h3 className="why-us-anim service__d-head-blog">
             Related<span className="stroke"> Articles</span>
