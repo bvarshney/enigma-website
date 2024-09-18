@@ -12704,3 +12704,8 @@ li.pagi-num.active a{
     display: none;
   }
 }
+
+
+.testing-class{
+display: static;
+}
