@@ -175,9 +175,9 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
             <li className='blog-anim'>
               <div className='ul-blog'>
                 <Link href="ux-design-glossary-guide">
-                  <div className='image-box-blog'>
+                  <div className='image-box-blog group'>
                     <Image
-                      className='img-blog'
+                      className='img-blog group-hover:scale-[1.08] duration-700 ease-in-out'
                       data-cursor-size="120px"
                       data-cursor-text="Read More"
                       data-cursor-color="#000"
@@ -187,8 +187,6 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
                       width={600}
                       height={1000}
                       priority={false}
-                      onMouseEnter={(e) => handleHover(e)}
-                      onMouseOut={(e) => handleHoverExit(e)}
                     />
                     <h5 className='blog-list-tag'>Design</h5>
                   </div>

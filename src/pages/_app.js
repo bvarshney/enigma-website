@@ -134,15 +134,15 @@ export default function App({ Component, pageProps }) {
           `}
       </Script>
 
-      <Script
+      {/* <Script
         async
         strategy="worker"
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
-      />
+      /> */}
 
       <GoogleTagManager gtmId="GTM-PV4GH9JJ" />
 
-      <Script
+      {/* <Script
         strategy="worker"
         id="google-analytics"
       >
@@ -153,7 +153,7 @@ export default function App({ Component, pageProps }) {
               page_path: window.location.pathname,
             });
           `}
-      </Script>
+      </Script> */}
     </>
   );
 }

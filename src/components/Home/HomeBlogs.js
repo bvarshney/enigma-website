@@ -89,7 +89,7 @@ const HomeBlogs = ({ recentPosts }) => {
             <Link href="/ux-design-glossary-guide">
               <img
                 loading='lazy'
-                src="/assets/blogs/featured/design-glossary.webp"
+                src="/assets/blogs/blog-detail/featured/design-glossary.webp"
                 alt="ux-design-glossary-guide-image"
                 title="UX Design Glossary Guide"
                 data-cursor-text="Read Now"
