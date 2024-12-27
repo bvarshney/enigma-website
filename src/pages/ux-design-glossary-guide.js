@@ -1,15 +1,15 @@
 import Layout from "@/components/Layout";
 import PageLoader from "@/components/PageLoader";
 import { useEffect, useRef, useState } from "react";
-import glossaryData from "@/components/UXGlossary/glossaryData.json";
-import TermCard from "@/components/UXGlossary/TermCard";
-import TermModal from "@/components/UXGlossary/TermModal";
 import { useLenisFunctions } from "@/lib/utils";
 import Image from "next/image";
 import gsap from "gsap";
 import { fadeUp } from "@/lib/gsapAnimations";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import MetaData from "@/components/MetaData";
+import Termcard from "@/components/UXGlossary/TermCard";
+import Termmodal from "@/components/UXGlossary/TermModal";
+import glossaryData from "@/components/UXGlossary/glossaryData.json";
 
 export default function Page() {
     const { startLenis, stopLenis } = useLenisFunctions();
@@ -123,10 +123,10 @@ export default function Page() {
                                 .filter((term) => term.name.toLowerCase().startsWith(filter.toLowerCase()))
                                 .sort((a, b) => a.name.localeCompare(b.name))
                                 .map((term) => (
-                                    <TermCard key={term.id} term={term} onClick={handleCardClick} />
+                                    <Termcard key={term.id} term={term} onClick={handleCardClick} />
                                 ))}
                         </div>
-                        {selectedTerm && <TermModal term={selectedTerm} onClose={handleCloseModal} />}
+                        {selectedTerm && <Termmodal term={selectedTerm} onClose={handleCloseModal} />}
                     </div>
                 </section>
             </Layout>

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import Image from 'next/image';
 
-const TermCard = ({ term, onClick }) => {
+const Termcard = ({ term, onClick }) => {
   let truncatedDescription;
 
   if (Array.isArray(term.description)) {
@@ -38,4 +38,4 @@ const TermCard = ({ term, onClick }) => {
   );
 };
 
-export default TermCard;
+export default Termcard;

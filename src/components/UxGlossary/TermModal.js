@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import { XIcon } from 'lucide-react';
 import Image from 'next/image';
 
-const TermModal = ({ term, onClose }) => {
+const Termmodal = ({ term, onClose }) => {
 
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0 z-[200] h-screen w-screen flex items-center justify-center bg-[#00000080] backdrop-blur-md bg-opacity-40" onClick={onClose}>
@@ -29,4 +29,4 @@ const TermModal = ({ term, onClose }) => {
   );
 };
 
-export default TermModal;
+export default Termmodal;
