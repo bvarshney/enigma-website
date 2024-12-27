@@ -7,9 +7,9 @@ import gsap from "gsap";
 import { fadeUp } from "@/lib/gsapAnimations";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import MetaData from "@/components/MetaData";
-import Termcard from "../components/UXGlossary/Termcard";
-import Termmodal from "../components/UXGlossary/Termmodal";
-import glossaryData from "../components/UXGlossary/glossaryData.json"
+import Modal from "@/components/ux-glossary/modal";
+import Card from "@/components/ux-glossary/card";
+import Data from "@/components/ux-glossary/Data.json";
 
 export default function Page() {
     const { startLenis, stopLenis } = useLenisFunctions();
@@ -119,14 +119,14 @@ export default function Page() {
                             />
                         </div>
                         <div className="grid grid-cols-4 gap-[2.5vw] tablet:grid-cols-2 tablet:gap-[4.5vw] mobile:grid-cols-1 mobile:gap-[8vw]">
-                            {glossaryData.terms
+                            {Data.terms
                                 .filter((term) => term.name.toLowerCase().startsWith(filter.toLowerCase()))
                                 .sort((a, b) => a.name.localeCompare(b.name))
                                 .map((term) => (
-                                    <Termcard key={term.id} term={term} onClick={handleCardClick} />
+                                    <Card key={term.id} term={term} onClick={handleCardClick} />
                                 ))}
                         </div>
-                        {selectedTerm && <Termmodal term={selectedTerm} onClose={handleCloseModal} />}
+                        {selectedTerm && <Modal term={selectedTerm} onClose={handleCloseModal} />}
                     </div>
                 </section>
             </Layout>

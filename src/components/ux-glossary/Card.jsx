@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './index.module.css';
+import styles from './styles.module.css';
 import Image from 'next/image';
 
-const Termcard = ({ term, onClick }) => {
+export default function Card ({ term, onClick }) {
   let truncatedDescription;
 
   if (Array.isArray(term.description)) {
@@ -37,5 +37,3 @@ const Termcard = ({ term, onClick }) => {
     </div>
   );
 };
-
-export default Termcard;
