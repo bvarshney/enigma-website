@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "@/styles/designLanding.module.css";
+import styles from "./designLanding.module.css";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -81,7 +81,7 @@ export default function Section2() {
                                         01
                                     </h3>
                                     <p>
-                                        Subscribe to a plan & request as many designs as you'd like.
+                                        Subscribe to a plan & request as many designs as you&apos;d like.
                                     </p>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ export default function Section2() {
                                         03
                                     </h3>
                                     <p>
-                                        We'll revise the designs until you're 100% satisfied.
+                                        We&apos;ll revise the designs until you&apos;re 100% satisfied.
                                     </p>
                                 </div>
                             </div>

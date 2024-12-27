@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "@/styles/designLanding.module.css";
+import styles from "./designLanding.module.css";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -81,14 +81,14 @@ export default function Pricing() {
                         <div id="fadeIn" className={`${styles.priceCard} text-white/75 hover:text-white hover:bg-gray-800 w-1/3`}>
                             <div className="mb-10">
                                 <span className={styles.h5}>Monthly</span>
-                                <p>Add as many design requests to your board as you'd like.</p>
+                                <p>Add as many design requests to your board as you&apos;d like.</p>
                             </div>
                             <div className="mb-10">
                                 <span className={styles.priceh5}>$2,999/m</span>
                                 <p>Pause or cancel anytime</p>
                             </div>
                             <div className="mb-16">
-                                <span className={styles.priceh5}>What's included:</span>
+                                <span className={styles.priceh5}>What&apos;s included:</span>
                                 <ul>
                                     <li>Unlimited request</li>
                                     <li>Unlimited brands</li>
@@ -112,14 +112,14 @@ export default function Pricing() {
                         <div id="fadeIn" className={`${styles.priceCard} text-white/75 hover:text-white hover:bg-gray-800 w-1/3`}>
                             <div className="mb-10">
                                 <span className={styles.h5}>Quaterly</span>
-                                <p>Add as many design requests to your board as you'd like.</p>
+                                <p>Add as many design requests to your board as you&apos;d like.</p>
                             </div>
                             <div className="mb-10">
                                 <span className={styles.priceh5}>$2,999/m</span>
                                 <p>Pause or cancel anytime</p>
                             </div>
                             <div className="mb-16">
-                                <span className={styles.priceh5}>What's included:</span>
+                                <span className={styles.priceh5}>What&apos;s included:</span>
                                 <ul>
                                     <li>Unlimited request</li>
                                     <li>Unlimited brands</li>
@@ -146,14 +146,14 @@ export default function Pricing() {
                             </div>
                             <div className="mb-10">
                                 <span className={styles.h5}>Yearly</span>
-                                <p>Add as many design requests to your board as you'd like.</p>
+                                <p>Add as many design requests to your board as you&apos;d like.</p>
                             </div>
                             <div className="mb-10">
                                 <span className={styles.priceh5}>$2,999/m</span>
                                 <p>Pause or cancel anytime</p>
                             </div>
                             <div className="mb-16">
-                                <span className={styles.priceh5}>What's included:</span>
+                                <span className={styles.priceh5}>What&apos;s included:</span>
                                 <ul>
                                     <li>Unlimited request</li>
                                     <li>Unlimited brands</li>

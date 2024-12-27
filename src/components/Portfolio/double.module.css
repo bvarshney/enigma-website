@@ -1,0 +1,90 @@
+.double {
+  display: flex;
+  margin-top: 5vw;
+  height: 45vw;
+  position: relative;
+  overflow: hidden;
+}
+.double .imageContainer {
+  flex: 1;
+  margin: 0 15px;
+  border-radius: 18px;
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+.double .stretchyWrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 25vw;
+  transition: transform 0.3s ease-out;
+}
+.double .stretchyWrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.double .body {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+.double .body .pname {
+  font-size: 1.7vw;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-family: "CLashDisplay";
+  color: var(--black1);
+}
+.double .body .description {
+  font-size: 1.5vw;
+  margin: 0px;
+  color: var(--black2);
+  font-family: "Ageo";
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.double .body p {
+  font-size: 1.3vw;
+  margin: 0px;
+  color: var(--gray1);
+}
+.double .body p:nth-of-type(2) {
+  color: #656565;
+}
+
+/* Initial Positions */
+.double .imageContainer [data-first] {
+  transform-origin: left top;
+  transform: scale(1.3);
+}
+.double .imageContainer [data-second] {
+  transform-origin: right top;
+  transform: scale(0.7);
+}
+
+/* Reverse */
+.double:nth-child(even) .imageContainer [data-first] {
+  transform: scale(0.76);
+}
+.double:nth-child(even) .imageContainer [data-second] {
+  transform: scale(1.23);
+}
+
+.double .body[data-first-content] {
+  transform: translate(0, 100%);
+}
+.double .body[data-second-content] {
+  transform: translate(30%, -90%);
+}
+/* Reverse */
+.double:nth-child(even) .body[data-first-content] {
+  transform: translate(0, -70%);
+}
+.double:nth-child(even) .body[data-second-content] {
+  transform: translate(-22%, 80%);
+}

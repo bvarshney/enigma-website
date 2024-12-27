@@ -1,899 +1,216 @@
-import React, { useEffect } from "react";
+import Layout from "@/components/Layout";
+import PageLoader from "@/components/PageLoader";
+import Client from "@/components/PortfolioDetail/Client";
+import ContentSection from "@/components/PortfolioDetail/ContentSection";
+import Hero from "@/components/PortfolioDetail/Hero";
+import ImageGrid from "@/components/PortfolioDetail/ImageGrid";
+import ParallaxImage from "@/components/PortfolioDetail/ParallaxImage";
+import Testimonial from "@/components/PortfolioDetail/Testimonial";
+import VideoSection from "@/components/PortfolioDetail/VideoSection";
+import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { Cursor } from "../../cursor/index";
-import "react-creative-cursor/dist/styles.css";
-import styles from "../styles/dharan.module.css";
-import Link from "next/link";
-import { NextSeo } from "next-seo";
-
-import Header from "@/components/Header/Header";
-import SmoothScroll from "@/components/utils/SmoothScroll";
-import Footer from "@/components/Footer";
-import FooterMobile from "@/components/Mobile/FooterMobile";
-import ProjectSlider from "../components/CaseStudies/ProjectSlider";
-import Image from "next/image";
-import PageLoader from "../components/pageLoader";
-import Head from "next/head";
-import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
-import ProjectLazyVideo from "../components/CaseStudies/ProjectLazyVideo";
+import { useEffect, useRef } from "react";
+import ProjectSlider from "@/components/PortfolioDetail/ProjectSlider";
+import { WebpageJsonLd } from "@/lib/json-ld";
+import MetaData from "@/components/MetaData";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
+export default function PortfolioDetail() {
+    const colorContainer = useRef(null);
+    const text = useRef(null);
 
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
-
-export default function dharan() {
-
-  // Hero Section Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#patro",
-      {
-        rotationX: -50,
-        opacity: 0,
-        translateY: 300,
-        transformPerspective: "1000",
-        transformOrigin: "top center",
-      },
-      {
-        delay: 3.5,
-        duration: 1.3,
-        rotationX: 0,
-        opacity: 1,
-        translateY: 0,
-        stagger: 0.2,
-      }
-    );
-  });
-
-  // Hero Section Sub Text Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#patroSub",
-      {
-        opacity: 0,
-        translateY: 100,
-      },
-      {
-        delay: 3.5,
-        duration: 1.3,
-        opacity: 1,
-        translateY: 0,
-        stagger: 0.4,
-      }
-    );
-  });
-
-  // Hero Section Image Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      ".image-anim",
-      {
-        opacity: 0,
-        translateY: 300,
-        transformOrigin: "top center",
-      },
-      {
-        delay: 4,
-        duration: 1.3,
-        opacity: 1,
-        translateY: 0,
-      }
-    );
-  });
-
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray("#image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to(text.current, {
+                scrollTrigger: {
+                    trigger: colorContainer.current,
+                    invalidateOnRefresh: true,
+                    scrub: true,
+                    start: "center bottom",
+                },
+                y: "-20%",
+                ease: "none",
+            });
         });
-      });
+        return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
 
-  // Data Speed Control
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const color = document.querySelector("#colorsection");
-      gsap.to("[data-speed]", {
-        y: (i, el) =>
-          -1 *
-          parseFloat(el.getAttribute("data-speed")) *
-          (color.offsetHeight / 3),
-        ease: "none",
-        scrollTrigger: {
-          trigger: color,
-          invalidateOnRefresh: true,
-          scrub: 0,
-          markers: false,
-          start: "center bottom",
-        },
-      });
+    useEffect(() => {
+        const lines = colorContainer.current.querySelectorAll(".color")
+        let ctx = gsap.context(() => {
+            gsap.from(lines, {
+                scrollTrigger: {
+                    trigger: lines,
+                    start: "center 80%",
+                },
+                opacity: 0,
+                scaleX: "0",
+                stagger: 0.2,
+                duration: 0.5,
+            });
+        });
+        return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
 
-  return (
-    <>
+    const metadata = {
+        title: "Dharan E-Commerce Design & Development Case Study | Enigma",
+        description: "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
+        img: "portfolio-dharan.png",
+        slug: "dharan-ecommerce-case-study",
+        date_published: "2023-01-01T00:00",
+        date_modified: "2024-12-25T00:00",
+    }
 
-          
-            <NextSeo
-              title="Dharan E-Commerce Design & Development Case Study | Enigma"
-              description="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
-              openGraph={{
-                url: "https://weareenigma.com/dharan-ecommerce-case-study",
-                title: "Dharan E-Commerce Design & Development Case Study | Enigma",
-                description:
-                  "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
-                  images: [
-                  {
-                    url: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png",
-                    width: 1200,
-                    height: 630,
-                    alt: "Dharan Casestudy Feature Image",
-                    type: "image/png",
-                  },
-                  ],
-                siteName: "Enigma Digital",
-              }}
-            
-              additionalMetaTags={[
-                {
-                  name: "twitter:title",
-                  content: "Dharan E-Commerce Design & Development Case Study | Enigma"
-                },
-                {
-                  name: "twitter:description",
-                  content: "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
-                },
-                {
-                  name: "twitter:image",
-                  content: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png"
-                },
-              ]}
-            />
-
-      <Head>
-        <link rel="canonical" href="https://weareenigma.com/dharan-ecommerce-case-study" />
-        <link rel="alternate" href="https://weareenigma.com/dharan-ecommerce-case-study" hreflang="x-default" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "mainEntityOfPage":{
-                  "@type": "WebPage",
-                  "@id": "https://weareenigma.com/dharan-ecommerce-case-study"
-                },
-                "name": "Dharan E-Commerce Design & Development Case Study | Enigma",
-                "description": "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
-                "datePublished": "2023-01-01T12:00:00+05:30",
-                "dateModified": "2023-11-17T12:00:00+05:30",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Enigma Digital",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
-                  }
-                }
-              }
-            ),
-          }}
-        />
-      </Head>
-
-      <SmoothScroll />
-
-      <Cursor isGelly={true} />
-
-      <PageLoader text="Dharan Case Study" />
-
-      <main>
-        <div>
-          <Header />
-        </div>
-
-        <div className={styles.Main}>
-          {/*Section 1  */}
-          <section
-            className={styles.HeroSection}>
-            <div className={styles.mainSubSection}>
-              <div className={styles.HeroLeftBox} data-jelly>
-                <div
-                  id="patroSub"
-                  data-cursor-size="60px"
-                  data-cursor-color="#FF8395"
-                  data-cursor-text="Visit!"
-                >
-                  <Link href="https://www.dharanclothing.com/" target="_blank" className={styles.Link}>
-                  <button aria-label="link button">
-                    dharanclothing.co.in
-                    <span className={styles.linkSvg}>
-                      <Image
-                        width={20}
-                        height={20}
-                        src="/assets/casestudies/Vector.svg"
-                        alt="Svg"
-                        id="case-study-arrow"
-                      />
-                    </span>
-                    </button>
-                  </Link>
-                </div>
-                <h1 id="patro">
-                    Dharan - Fashionable <br /> Ecommerce Website
-                </h1>
-              </div>
-              <div className={styles.HeroRightBox}>
-                <p className={styles.work} id="patroSub">
-                    E-COMMERCE
-                </p>
-                <p className={styles.year} id="patroSub">
-                    2020
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Parallax Image Second =========================== */}
-          <section className={styles.imageSection}>
-            <div className="image-anim">
-              <div className={styles.imageBox} id="image-container">
-                <img
-                  src="/assets/casestudies/dharan/dharan-casestudy-image-1.webp"
-                  alt="Dharan Casestudy Image 1"
-                  className={styles.img}
-                  id="img"
-                  data-cursor-size="100px"
-                  data-cursor-color="#FF8395"
-                  data-cursor-text="Dharan"
+    return (
+        <>
+            <WebpageJsonLd metadata={metadata} />
+            <MetaData metadata={metadata} />
+            <Layout>
+                <Hero cursorColor="#FF8395" title="Dharan - Fashionable Ecommerce Website" linkText="dharanclothing.com" link="https://www.dharanclothing.com/" industry="E-COMMERCE" year="2020" />
+                <ParallaxImage id="firstFade" imgSrc="/dharan/dharan-casestudy-image-1.webp" alt="dharan casestudy image 1" cursorColor="#FF8395" cursorText="Dharan" />
+                <Client content="Dharan, a renowned hand-block-printed clothing manufacturer based in India, is known for its exquisite garments featuring traditional designs, pastel shades, and intricate craftsmanship. Despite having a loyal customer base, Dharan struggled to translate its unique essence and charm into a compelling online presence. The client was on the lookout for a partner that would help them create a state-of-the-art e-commerce website that would not only showcase Dharan's magnificent products but also encapsulate the essence of their brand." tags={['E-Commerce', 'Web Design', 'Development']} />
+                <ParallaxImage imgSrc="/dharan/dharan-casestudy-image-2.webp" alt="dharan casestudy image 1" cursorColor="#FF8395" cursorText="Dharan" />
+                <ContentSection
+                    title="The Ask"
+                    contentB={["Dharan's existing website was plagued by several issues, including outdated design, poor navigation, and a lacklustre user experience."]}
+                    contentN={[
+                        "The website failed to evoke the same feelings of beauty, sophistication, and craftsmanship that Dharan's hand-block-printed clothing offered. The team at Enigma was tasked to design a website that reflects tradition, craftsmanship, and quality as the key brand identifiers.",
+                        "The key challenge was to design & develop an engaging and interactive platform that highlights the unique aspects of Dharan's products, such as the traditional techniques, intricate designs, and pastel color palette that is used in traditional hand-block-printing. Next, we had to integrate an e-commerce solution that streamlines the purchasing process and ensures a secure, efficient, and hassle-free experience for customers.",
+                    ]}
                 />
-              </div>
-            </div>
-          </section>
-          {/* ====================== Parallax Image Second  END ====================== */}
-
-          {/* ====================== Third Section ============================ */}
-          <section className={styles.thirdSection}>
-            <div className={styles.thirdSectionContent}>
-              <div className={styles.thirdSectionLeftBox}>
-                <h2 className={styles.h3} data-jelly>THE CLIENT</h2>
-              </div>
-              <div className={styles.thirdSectionRightBox}>
-                <div className={styles.paraTop}>
-                  <p className={styles.h4} data-jelly>
-                    Dharan, a renowned hand-block-printed clothing manufacturer
-                    based in India, is known for its exquisite garments
-                    featuring traditional designs, pastel shades, and intricate
-                    craftsmanship. Despite having a loyal customer base, Dharan
-                    struggled to translate its unique essence and charm into a
-                    compelling online presence. The client was on the lookout
-                    for a partner that would help them create a state-of-the-art
-                    e-commerce website that would not only showcase Dharan's
-                    magnificent products but also encapsulate the essence of
-                    their brand.
-                  </p>
-                </div>
-
-                <div className={styles.buttonBox}>
-                  <h3 data-cursor-size="30px" data-cursor-exclusion>
-                    E-Commerce
-                  </h3>
-                  <h3 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h3>
-                  <h3 data-cursor-size="30px" data-cursor-exclusion>
-                    Development
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* ====================== Third Section END ======================== */}
-
-          {/* ====================== Parallax Image =========================== */}
-          <section className={styles.imageSection}>
-            <div className={styles.imageBox} id="image-container">
-              <img
-                  src="/assets/casestudies/dharan/dharan-casestudy-image-2.webp"
-                  alt="Dharan Casestudy Image 2"
-                  loading="lazy"
-                  className={styles.img}
-                  id="img"
-                  data-cursor-size="100px"
-                  data-cursor-color="#FF8395"
-                  data-cursor-text="Dharan"
-              />
-            </div>
-          </section>
-          {/* ====================== Parallax Image  END ====================== */}
-
-
-          {/* ====================== Third Section ============================ */}
-
-          <section className={styles.forthSection}>
-            <div className={styles.forthSectionContent}>
-              <div className={styles.forthSectionLeftBox}>
-                <h2 className={styles.h3} data-jelly>THE ASK</h2>
-              </div>
-              <div className={styles.forthSectionRightBox}>
-                <div className={styles.paraTop}>
-                  <p className={styles.h4} data-jelly>
-                    Dharan's existing website was plagued by several issues,
-                    including outdated design, poor navigation, and a lacklustre
-                    user experience.
-                  </p>
-                  <p data-jelly>
-                    The website failed to evoke the same feelings of beauty,
-                    sophistication, and craftsmanship that Dharan's
-                    hand-block-printed clothing offered. The team at Enigma was
-                    tasked to design a website that reflects tradition,
-                    craftsmanship, and quality as the key brand identifiers.
-                  </p>
-                  <p data-jelly>
-                    The key challenge was to design & develop an engaging and
-                    interactive platform that highlights the unique aspects of
-                    Dharan's products, such as the traditional techniques,
-                    intricate designs, and pastel color palette that is used in
-                    traditional hand-block-printing. Next, we had to integrate
-                    an e-commerce solution that streamlines the purchasing
-                    process and ensures a secure, efficient, and hassle-free
-                    experience for customers.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Third Section END ======================== */}
-
-
-          {/* ========================== The LOGO Section =========================== */}
-
-          <section className={styles.logoSection}>
-            <div className={styles.logoImageSection}>
-              <div className={styles.firstLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-3.webp"
-                    alt="Dharan Casestudy Image 3"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className={styles.secondLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    loading="lazy"
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-4.webp"
-                    alt="Dharan Casestudy Image 4"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.logoImageSectionSecond}>
-              <div className={styles.firstLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-5.webp"
-                    alt="Dharan Casestudy Image 5"
-                    data-cursor-color="#FF8395"
-                    loading="lazy"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-              <div className={styles.secondLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    loading="lazy"
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-6.webp"
-                    alt="Dharan Casestudy Image 6"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ========================== The LOGO Section END ======================= */}
-
-
-          {/* ====================== FOURTH Section ============================ */}
-
-          <section className={styles.forthSection}>
-            <div className={styles.forthSectionContent}>
-              <div className={styles.forthSectionLeftBox}>
-                <h2 className={styles.h3} data-jelly>Our Approach</h2>
-              </div>
-              <div className={styles.forthSectionRightBox}>
-                <div className={styles.paraTop}>
-                  <p data-jelly>
-                    To address these challenges, Enigma adopted a groundbreaking
-                    approach, which involved a meticulous blend of art and
-                    technology, resulting in a website that was both visually
-                    captivating and highly functional. Our team immersed
-                    themselves in Dharan's history, design philosophy, and hand
-                    block printing techniques to gain a comprehensive
-                    understanding of the brand. This deep dive laid the
-                    foundation for a website design that would effectively
-                    embody Dharan's unique aesthetic.
-                  </p>
-                  <p data-jelly>
-                    We then prioritized user experience, creating an intuitive
-                    site layout that would guide visitors through the shopping
-                    process with ease. The site was designed with a focus on
-                    product discovery, enticing visitors to explore Dharan's
-                    stunning collection. To create an engaging and immersive
-                    experience, we integrated storytelling elements throughout
-                    the website, sharing the history of Dharan's craftsmanship
-                    and the journey behind each unique garment.
-                  </p>
-                  <p data-jelly>
-                    Lastly, we drew inspiration from Dharan's clothing designs
-                    and prints and incorporated pastel color schemes reflecting
-                    the traditional hues used in Indian block printing and
-                    intricate patterns throughout the website, evoking the
-                    beauty and craftsmanship of the garments themselves.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== FOURTH Section END ============================ */}
-
-          {/* ========================== The LOGO Section =========================== */}
-
-          <section className={styles.logoSection}>
-            <div className={styles.logoImageSection}>
-              <div className={styles.firstLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-7.webp"
-                    alt="Dharan Casestudy Image 7"
-                    loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-              <div className={styles.secondLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-8.webp"
-                    alt="Dharan Casestudy Image 8"
-                    loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.logoImageSectionSecond}>
-              <div className={styles.firstLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-9.webp"
-                    alt="Dharan Casestudy Image 9"
-                    loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-              <div className={styles.secondLogoBox}>
-                <div className={styles.imageContainer} id="image-container">
-                  <Image
-                    width={1000}
-                    height={1000}
-                    loading="lazy"
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-10.webp"
-                    alt="Dharan Casestudy Image 10"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                    data-cursor-size="120px"
-                    onMouseEnter={(e) => handleHover(e)}
-                    onMouseOut={(e) => handleHoverExit(e)}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ========================== The LOGO Section END ======================= */}
-          
-          {/* ====================== Fonts Section ======================== */}
-          <section className={styles.fontSection}>
-            <div className={styles.fontHeading}>
-              <h3 className={styles.h2} >Fonts</h3>
-            </div>
-            <div className={styles.dharanfontImagebox}>
-              <img src="/assets/casestudies/dharan/dharan-casestudy-font.webp" loading="lazy" alt="dharan casestudy font image" />
-            </div>
-          </section>
-          {/* ====================== Fonts Section END ==================== */}
-
-          {/* ====================== COLORS Section ==================== */}
-
-          <section className={styles.colorSection} id="colorsection">
-            <div className={styles.colorHeading}>
-              <h3 className={styles.h2} >Colours</h3>
-            </div>
-            <div className={styles.dharancolorMainBox}>
-              <div className={styles.dharancolorBox}>
-                <div className={styles.dharancolorBoxHeadingBackground}>
-                  <h2 data-speed="1.3">
-                    Colour <span className={styles.dharanpalette}>Palette</span>
-                  </h2>
-                </div>
-              </div>
-
-              <div
-                className={styles.dharancolorBoxesSection}
-                id="dark-mode-colors-casestudy">
-                <ul>
-                  <li className={styles.dharancolorOne} id="line">
-                    #EB298E
-                  </li>
-                  <li className={styles.dharancolorTwo} id="line">
-                    #48484B
-                  </li>
-                </ul>
-              </div>
-              <div className={styles.dharanmobileImg}>
-                <img
-                  src="/assets/casestudies/dharan/dharan-casestudy-mobile-image.webp"
-                  alt="dharan casestudy mobile image"
-                  loading="lazy"
+                <ImageGrid images={ImageGrid1} alt="Dharan Casestudy Image" />
+                <ContentSection
+                    title="Our Approach"
+                    contentN={[
+                        "To address these challenges, Enigma adopted a groundbreaking approach, which involved a meticulous blend of art and technology, resulting in a website that was both visually captivating and highly functional. Our team immersed themselves in Dharan's history, design philosophy, and hand block printing techniques to gain a comprehensive understanding of the brand. This deep dive laid the foundation for a website design that would effectively embody Dharan's unique aesthetic.",
+                        "We then prioritized user experience, creating an intuitive site layout that would guide visitors through the shopping process with ease. The site was designed with a focus on product discovery, enticing visitors to explore Dharan's stunning collection. To create an engaging and immersive experience, we integrated storytelling elements throughout the website, sharing the history of Dharan's craftsmanship and the journey behind each unique garment.",
+                        "Lastly, we drew inspiration from Dharan's clothing designs and prints and incorporated pastel color schemes reflecting the traditional hues used in Indian block printing and intricate patterns throughout the website, evoking the beauty and craftsmanship of the garments themselves.",
+                    ]}
                 />
-              </div>
-            </div>
-          </section>
+                <ImageGrid images={ImageGrid2} alt="Dharan Casestudy Image" />
 
-          {/* ====================== COLORS Section END ==================== */}
+                {/* Fonts Section */}
+                <section id="font-section">
+                    <div className="w-[85%] mx-auto my-[10vw] tablet:my-[15vw] mobile:my-[20vw]">
+                        <h3 className="font-heading font-medium text-[4vw] text-black2 uppercase mb-[2.5vw] tablet:text-[5vw] mobile:text-[7vw] mobile:mb-[5vw]">Fonts</h3>
+                        <div className="w-[85%] mx-auto h-[100vw] mix-blend-multiply overflow-hidden tablet:w-full tablet:h-[120vw] dark:mix-blend-screen">
+                            <Image
+                                priority={false}
+                                width={1000}
+                                height={1000}
+                                src="/assets/portfolio/detail/dharan/dharan-casestudy-font.webp"
+                                alt="Dharan Casestudy Fonts Image"
+                                className="block w-full"
+                            />
+                        </div>
+                    </div>
+                </section>
 
+                {/* Colors Section */}
+                <section ref={colorContainer} id="color-section">
+                    <div className="h-screen w-[85%] relative mx-auto my-[10vw] tablet:my-[15vw] tablet:h-auto">
+                        <h3 className="font-heading font-medium text-[4vw] text-black2 uppercase mb-[2.5vw] tablet:text-[5vw] mobile:text-[7vw] tablet:mb-[6vw] mobile:mb-10">Colours</h3>
+                        <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-start mobile:hidden">
+                            <p ref={text} className="text-[15vw] leading-[1] font-heading font-semibold text-white2 tablet:text-[12vw] translate-y-[20%]">
+                                Colour <br /> Palette
+                            </p>
+                        </div>
+                        <div className="w-[50%] h-4/5 ml-auto relative z-10 flex items-center justify-center mobile:w-4/5 mobile:mx-auto">
+                            <div className="flex flex-col items-center gap-4 justify-start w-full text-[1.5vw] font-heading tracking-wider text-white tablet:text-[2vw] mobile:text-[3vw] dark:text-black">
+                                <div className="w-[45%] rounded-br-[100px] mobile:rounded-br-[50px] p-[2vw] flex justify-start items-start origin-left bg-[#eb298e] h-[8vw] color tablet:w-4/5 tablet:h-[15vw] mobile:h-[25vw] mobile:p-4">#EB298E</div>
+                                <div className="w-[45%] rounded-br-[100px] mobile:rounded-br-[50px] p-[2vw] flex justify-start items-start origin-left bg-[#48484b] h-[8vw] color tablet:w-4/5 tablet:h-[15vw] mobile:h-[25vw] mobile:p-4">#48484B</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-          {/* ====================== Video Section ======================== */}
-          <section className={styles.videoSection}>
-            <div className={styles.videoHeading}>
-              <h3 className={styles.videoH2}>Dharan - Sustainable Faishon</h3>
-            </div>
-            <div className={styles.videoMainSection}>
-              <div className={styles.videoContainer} id="video-container">
-                <ProjectLazyVideo
-                  srcWebm="/assets/casestudies/dharan/dharan.webm"
-                  srcMp4="/assets/casestudies/dharan/dharan.mp4"
-                  poster="/assets/casestudies/dharan/dharan-poster.webp"
-                  title="dharan-ecommerce-video"
+                <VideoSection
+                    title="Dharan - Sustainable Faishon"
+                    videoSrc="dharan/dharan.mp4"
+                    poster="dharan/dharan-poster.webp"
                 />
-              </div>
-            </div>
-          </section>
-          
-          {/* ====================== Video Section END ======================== */}
-
-          {/* ====================== Forth Section  ======================== */}
-
-          <section className={styles.forthSection}>
-            <div className={styles.forthSectionContent}>
-              <div className={styles.forthSectionLeftBox}>
-                <h2 className={styles.h3} data-jelly>Tech Stack</h2>
-              </div>
-              <div className={styles.forthSectionRightBox}>
-                <div className={styles.paraTop}>
-                    <h4 className={styles.h4} data-jelly>
-                        HTML, CSS, JS, jQuery, GSAP, and Woo-Commerce
-                    </h4>
-                    <p data-jelly>
-                        Our decision to choose WooCommerce over other e-commerce
-                        platforms including Shopify and Magento was driven by
-                        several factors, including:
-                    </p>
-                    <p data-jelly>
-                        <strong>Seamless integration with WordPress: </strong>As
-                        Dharan's team was already familiar with wordpress and they
-                        wanted their new website to be built on WordPress,
-                        WooCommerce offered seamless integration and a unified
-                        experience, enabling the team to manage both the website and
-                        e-commerce functionalities effortlessly.
-                    </p>
-                    <p data-jelly>
-                        <strong>Cost-effectiveness: </strong>WooCommerce, being an
-                        open-source platform, is more cost-effective than Shopify
-                        and Magento, especially for small to medium-sized businesses
-                        like Dharan. This allowed Dharan to focus on other aspects
-                        of their business without having to worry about hefty
-                        platform fees.
-                  </p>
-                  <p data-jelly>
-                        <strong>Flexibility and Customizability: </strong>
-                        WooCommerce provides a high degree of flexibility and
-                        customization options compared to Shopify and Magento. This
-                        was essential for Dharan, as it allowed Enigma to create a
-                        truly unique and tailor-made e-commerce experience that
-                        aligned with the brand's aesthetics and requirements.
-                  </p>
-                  <p data-jelly>
-                        <strong>Extensive Plugin Ecosystem: </strong>WooCommerce
-                        boasts an extensive plugin ecosystem that can be leveraged
-                        to add additional functionality and features to the
-                        e-commerce platform. This enabled Enigma to easily integrate
-                        various tools and plugins to enhance the shopping experience
-                        and streamline operations for Dharan.
-                  </p>
-                  <p data-jelly>
-                        <strong>Scalability: </strong>WooCommerce offered a scalable
-                        solution that could grow alongside Dharan's business. As the
-                        brand expands its product range and customer base, the
-                        WooCommerce platform can be easily adapted to accommodate
-                        this growth, ensuring a consistent and reliable e-commerce
-                        experience.
-                  </p>
-                  <p data-jelly>
-                        By leveraging this powerful technology stack, Enigma was
-                        able to create a visually captivating, highly engaging, and
-                        user-friendly e-commerce website that not only showcased
-                        Dharan's exquisite hand block-printed clothing but also
-                        encapsulated the essence of the brand.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Forth Section  ======================== */}
-
-          {/* ====================== Parallax Image Second =========================== */}
-
-          <section className={styles.imageSection}>
-            <div className="image-anim">
-              <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
-                  <img
-                    loading="lazy"
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-11.webp"
-                    alt="Dharan Casestudy Image 11"
-                    className={styles.img}
-                    id="img"
-                    data-cursor-size="100px"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
-                  />
-                </figure>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Parallax Image Second  END ====================== */}
-
-          {/* ====================== FOURTH Section ============================ */}
-
-          <section className={styles.forthSection}>
-            <div className={styles.forthSectionContent}>
-              <div className={styles.forthSectionLeftBox}>
-                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
-              </div>
-              <div className={styles.forthSectionRightBox}>
-                <div className={styles.paraTop}>
-                    <p data-jelly>
-                        The end result was a visually stunning, highly engaging, and
-                        user-friendly e-commerce website that not only showcased
-                        Dharan's exquisite hand-block-printed clothing but also
-                        encapsulated the essence of the brand. Key achievements of
-                        the project included:
-                    </p>
-                    <p data-jelly>
-                        A dramatic increase in online sales, attributable to the
-                        improved user experience, intuitive navigation, and
-                        captivating visual design.
-                    </p>
-                    <p data-jelly>
-                        Enhanced brand recognition and credibility, as the new
-                        website effectively communicated Dharan's unique value
-                        proposition and commitment to quality and craftsmanship
-                    </p>
-                    <p data-jelly>
-                        An increase in organic search traffic, driven by the
-                        website's mobile-first design, optimized performance, and
-                        adherence to SEO best practices.
-                    </p>
-                    <p data-jelly>
-                        As Dharan continues to grow and expand its reach, the
-                        lessons learned from this project will serve as a guiding
-                        light, informing future digital initiatives and ensuring
-                        that the brand's commitment to quality, tradition, and
-                        craftsmanship remains at the forefront of their online
-                        presence.
-                    </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Fourth Section END ======================== */}
-
-          {/* ====================== Parallax Image Second =========================== */}
-
-          <section className={styles.imageSection}>
-            <div className="image-anim">
-              <div className={styles.imageBox} id="image-container">
-                <img
-                    src="/assets/casestudies/dharan/dharan-casestudy-image-12.webp"
-                    alt="Dharan Casestudy Image 12"
-                    className={styles.img}
-                    id="img"
-                    loading="lazy"
-                    data-cursor-size="100px"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                <ContentSection
+                    title="Tech Stack"
+                    contentB={["HTML, CSS, JS, jQuery, GSAP, and Woo-Commerce"]}
+                    contentN={[
+                        "Our decision to choose WooCommerce over other e-commerce platforms including Shopify and Magento was driven by several factors, including:",
+                        "Seamless integration with WordPress: As Dharan's team was already familiar with wordpress and they wanted their new website to be built on WordPress, WooCommerce offered seamless integration and a unified experience, enabling the team to manage both the website and e-commerce functionalities effortlessly.",
+                        "Cost-effectiveness: WooCommerce, being an open-source platform, is more cost-effective than Shopify and Magento, especially for small to medium-sized businesses like Dharan. This allowed Dharan to focus on other aspects of their business without having to worry about hefty platform fees.",
+                        "Flexibility and Customizability: WooCommerce provides a high degree of flexibility and customization options compared to Shopify and Magento. This was essential for Dharan, as it allowed Enigma to create a truly unique and tailor-made e-commerce experience that aligned with the brand's aesthetics and requirements.",
+                        "Extensive Plugin Ecosystem: WooCommerce boasts an extensive plugin ecosystem that can be leveraged to add additional functionality and features to the e-commerce platform. This enabled Enigma to easily integrate various tools and plugins to enhance the shopping experience and streamline operations for Dharan.",
+                        "Scalability: WooCommerce offered a scalable solution that could grow alongside Dharan's business. As the brand expands its product range and customer base, the WooCommerce platform can be easily adapted to accommodate this growth, ensuring a consistent and reliable e-commerce experience.",
+                        "By leveraging this powerful technology stack, Enigma was able to create a visually captivating, highly engaging, and user-friendly e-commerce website that not only showcased Dharan's exquisite hand block-printed clothing but also encapsulated the essence of the brand.",
+                    ]}
                 />
-              </div>
-            </div>
-          </section>
-
-          {/* ====================== Parallax Image Second  END ====================== */}
-
-          {/* ====================== Client Section ============================ */}
-
-
-          <section className={styles.clientTestimonialSection}>
-            <div className={styles.clientTestimonialSectionContent}>
-              <div className={styles.clientTestimonialSectionLeftBox}>
-                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
-              </div>
-              <div className={styles.clientTestimonialSectionRightBox}>
-                <div className={styles.clientTestimonialparaTop}>
-                  <h4 data-jelly>
-                    <span className={styles.clientTestimonialSpan2}>“</span>
-                    Dharan's collaboration with Enigma has been nothing short of
-                    transformative. The team at Enigma not only created a
-                    stunning e-commerce website that perfectly embodies our
-                    brand but also exceeded our expectations in terms of
-                    customer engagement and sales growth. The new website is
-                    truly a reflection of the beauty, craftsmanship, and
-                    tradition that define our hand block-printed clothing. We
-                    couldn't be more thrilled with the results and look forward
-                    to a continued partnership with Enigma as we take our
-                    digital presence to even greater heights.
-                  </h4>
-                </div>
-                <div
-                  className={styles.clientTestimonialSectionBottomBox}
-                  data-jelly
-                >
-                  <div className={styles.clientTestimonialSectionFigure}>
-                    <Image
-                          height={100}
-                          width={100}  
-                          alt="client image"
-                          src="/assets/casestudies/dharan/dharan-client.webp" />
-                  </div>
-                  <div className={styles.clientTestimonialSectionFigureText}>
-                    <p>
-                        Dhananjey Singh
-                      <br />
-                      <span className={styles.clientTestimonialSpan}>
-                        Founder and Creative Director, Dharan
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-
-          {/* ====================== Client Section END ======================== */}
-
-          {/* ========================== Next Project =========================== */}
-          <div className={styles.desktopSlider}>
-            <ProjectSlider currentProjectLink="dharan-ecommerce-case-study" />
-          </div>
-
-          {/* ========================== Next Project END ======================= */}
-
-
-          {/* ================ Next Project Mobile ============================== */}
-          
-          <ProjectNextBox text={"Kedarkala"} link={"/kedarkala-portfolio-website-case-study"} />
-
-          {/* ================ Next Project Mobile ============================== */}
-
-          {/* ======================== Footer ====================== */}
-          <section className="desktop-footer">
-            <Footer />
-          </section>
-
-          <section className="mobile-footer">
-            <FooterMobile />
-          </section>
-          {/* ======================== Footer END ====================== */}
-        </div>
-      </main>
-    </>
-  );
+                <ParallaxImage imgSrc="/dharan/dharan-casestudy-image-11.webp" alt="dharan casestudy image 11" cursorColor="#FF8395" cursorText="Dharan" />
+                <ContentSection
+                    title="The Result"
+                    contentN={[
+                        "The end result was a visually stunning, highly engaging, and user-friendly e-commerce website that not only showcased Dharan's exquisite hand-block-printed clothing but also encapsulated the essence of the brand. Key achievements of the project included:",
+                        "A dramatic increase in online sales, attributable to the improved user experience, intuitive navigation, and captivating visual design.",
+                        "Enhanced brand recognition and credibility, as the new website effectively communicated Dharan's unique value proposition and commitment to quality and craftsmanship",
+                        "An increase in organic search traffic, driven by the website's mobile-first design, optimized performance, and adherence to SEO best practices.",
+                        "As Dharan continues to grow and expand its reach, the lessons learned from this project will serve as a guiding light, informing future digital initiatives and ensuring that the brand's commitment to quality, tradition, and craftsmanship remains at the forefront of their online presence.",
+                    ]}
+                />
+                <ParallaxImage imgSrc="/dharan/dharan-casestudy-image-12.webp" alt="dharan casestudy image 12" cursorColor="#FF8395" cursorText="Dharan" />
+                <Testimonial
+                    cImg="dharan/dharan-client.webp"
+                    text="Dharan's collaboration with Enigma has been nothing short of transformative. The team at Enigma not only created a stunning e-commerce website that perfectly embodies our brand but also exceeded our expectations in terms of customer engagement and sales growth. The new website is truly a reflection of the beauty, craftsmanship, and tradition that define our hand block-printed clothing. We couldn't be more thrilled with the results and look forward to a continued partnership with Enigma as we take our digital presence to even greater heights."
+                    cName="Dhananjey Singh"
+                    cTitle="Founder and Creative Director, Dharan"
+                />
+                <ProjectSlider currentProject="dharan" />
+            </Layout>
+            <PageLoader loaderText="Dharan Case Study"/>
+        </>
+    )
 }
+
+const ImageGrid1 = [
+    {
+        src: "dharan/dharan-casestudy-image-3.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-4.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-5.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-6.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    }
+]
+
+const ImageGrid2 = [
+    {
+        src: "dharan/dharan-casestudy-image-7.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-8.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-9.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    },
+    {
+        src: "dharan/dharan-casestudy-image-10.webp",
+        cursorColor: "#FF8395",
+        cursorText: "Dharan",
+    }
+]

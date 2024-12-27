@@ -1,252 +1,176 @@
-import React, { useEffect } from "react";
-import { Cursor } from "../../cursor/index";
-import SmoothScroll from "@/components/utils/SmoothScroll";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { format } from 'date-fns';
-
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer";
-import FooterMobile from "@/components/Mobile/FooterMobile";
-import PageLoader from "@/components/pageLoader";
-import BlogInfo from "@/components/WpBlogs/BlogInfo";
-import RelatedPosts from '@/components/WpBlogs/RelatedPosts';
-
 import { getApolloClient } from '@/lib/apollo-client';
 import { QUERY_ALL_POST_SLUGS } from '@/data/posts';
-import { getPostBySlug, getAllPosts } from '@/lib/posts';
-import { NextSeo } from "next-seo";
-import Head from "next/head";
+import { getPostBySlug } from '@/lib/posts';
+import { formatDate } from '@/lib/datetime';
+import Layout from '@/components/Layout';
+import { useEffect, useRef } from 'react';
+import BlogInfo from '@/components/Blogs/BlogInfo';
+import styles from "@/styles/blog.module.css"
+import RelatedBlogs from '@/components/Blogs/RelatedBlogs';
+import PageLoader from '@/components/PageLoader';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { fadeUp } from '@/lib/gsapAnimations';
+import { NextSeo } from 'next-seo';
+import { ArticleJsonLd } from '@/lib/json-ld';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function PostDetail({ post, allPosts }) {
+export default function BlogDetail({ post }) {
 
-  if (!post) {
-    return <div>Loading...</div>;
-  }
-
-  const formattedDate = format(new Date(post.date), 'dd/MM/yyyy');
+  const container = useRef(null);
+  const leftSection = useRef(null);
+  const rightSection = useRef(null);
+  const head = useRef(null);
 
   // Hero Section Animation
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#blog",
-      {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.fromTo(head.current, {
         rotationX: -80,
         opacity: 0,
         translateY: 300,
         transformPerspective: "1000",
         transformOrigin: "top center",
-      },
-      {
-        delay: 3.5,
+      }, {
+        delay: 3,
         duration: 1.3,
         rotationX: 0,
         opacity: 1,
         translateY: 0,
         stagger: 0.2,
-      }
-    );
-    return () => tl.kill();
-  }, []);
-
-  // Hero Section Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#right-section",
-      {
-        opacity: 0,
-        translateY: 200,
-      },
-      {
-        delay: 4,
-        duration: 1.3,
-        opacity: 1,
-        stagger: 0.1,
-        translateY: 0,
-      }
-    );
-    return () => tl.kill();
-  }, []);
-
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger:{
-        trigger:".related-articles",
-        start: 'top 85%',
-        ease: 'power2.easeOut',
-      }
+      })
+        .from(leftSection.current, {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          delay: -0.9,
+        })
+        .from(rightSection.current, {
+          y: 100,
+          opacity: 0,
+          duration: 1,
+          delay: -0.9,
+        })
     });
-    tl.fromTo("#fadeUp", {
-      opacity: 0,
-      y: 100,
-    },{
-      opacity: 1,
-      y: 0,
-      stagger: 0.2,
-      duration: 1,
-    });
-    return () => tl.kill();
+    return () => ctx.revert();
   }, []);
 
+  fadeUp();
 
-if (globalThis.innerWidth>1024) {
-  // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImagePin = document.getElementById("left-section");
-      let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
-        trigger: brandImagePin,
-        start: "top 10%",
-        endTrigger: brandImageNotPin,
+        trigger: leftSection.current,
+        start: "top 20%",
+        endTrigger: rightSection.current,
         end: "bottom 80%",
         invalidateOnRefresh: true,
-        pin: brandImagePin,
-        markers: false,
+        pin: leftSection.current,
       });
     });
     return () => ctx.revert();
-  });
-}
+  }, []);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": `https://weareenigma.com/${post.slug}`
-  },
-  "headline": post.seo.title,
-  "description": post.seo.description,
-  "author": {
-    "@type": "Person",
-    "name": post.author.name,
-    "url": "https://in.linkedin.com/in/bvarshney",
-  },  
-  "publisher": {
-    "@type": "Organization",
-    "name": "Enigma Digital",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
-    }
-  },
-  "datePublished": post.date,
-  "dateModified": post.modified,
-};
+  if (!post) {
+    return <div>Loading...</div>;
+  }
 
-return (
-      <>
+  const { title, content, date, slug, author, pageLoader, seo } = post;
+  const formattedDate = formatDate(date, 'dd/MM/yyyy');
+  const relatedPosts = post.relatedPosts.relatedPosts.edges;
+
+  return (
+    <>
       <NextSeo
-        title={post.seo.title}
-        description={post.seo.description}
+        title={title}
+        description={seo.description}
         openGraph={{
           type: 'article',
-          article: {
-            publishedTime: post.date,
-            modifiedTime: post.modified,
-          },
-          url: `https://weareenigma.com/${post.slug}`,
-          title: post.seo.title,
-          description: post.seo.description,
+          url: `https://weareenigma.com/${slug}`,
+          title: title,
+          "description": seo.description,
           images: [
             {
               url: post.seo.openGraph.image.url,
               width: 1200,
               height: 630,
-              alt: post.slug,
+              alt: title,
               type: "image/png",
             },
           ],
-          siteName: "Enigma Digital",
+          siteName: "Enigma Digital Agency",
         }}
         additionalMetaTags={[
           {
             name: "twitter:title",
-            content: post.seo.title
+            content: title
           },
           {
             name: "twitter:description",
-            content: post.seo.description
+            content: seo.description
           },
           {
             name: "twitter:image",
             content: post.seo.openGraph.image.url
           },
         ]}
+        canonical={`https://weareenigma.com/${slug}`}
+        languageAlternates={[{
+          hrefLang: 'en-US',
+          href: `https://weareenigma.com/${slug}`,
+        }]}
       />
-      
-      <Head>
-        <link rel="canonical" href={`https://weareenigma.com/${post.slug}`} />
-        <link rel="alternate" href={`https://weareenigma.com/${post.slug}`} hreflang="x-default" />
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+      <ArticleJsonLd post={post} />
+      <Layout>
+        <section data-cursor-size="10px" data-cursor-text="">
+          <div className='w-[85%] mx-auto tablet:w-[90%]'>
+            <div className='pt-[10vw] w-[70%] tablet:w-full tablet:pt-[22vw] mobile:pt-[30vw]'>
+              <h1 ref={head} className='font-heading font-medium text-[3vw] tablet:text-[4.8vw] mobile:text-[5.8vw]'>{title}</h1>
+            </div>
+          </div>
+        </section>
 
-        <SmoothScroll />
-        <Cursor isGelly={true}/>
-        <PageLoader text={post.pageLoader.pageLoader} />
-        
-        <main>
-          <Header />
-            
-            <div className="b__dt-main">
-              
-              <div
-                className="b__dt-head-contain"
-                data-cursor-size="10px"
-                data-cursor-text="">
-                <h1 data-jelly id='blog'>{post.title}</h1>
+        <section ref={container}>
+          <div className='w-[85%] mx-auto pt-[8%] tablet:w-[90%]'>
+            <div className='flex justify-between items-start tablet:flex-col tablet:gap-[10vw] mobile:gap-[15vw]'>
+              <div ref={leftSection} className='font-medium font-heading uppercase space-y-[2vw] tablet:space-y-8'>
+                <BlogInfo avatar={author.avatar.url} author={author.name} date={formattedDate} shareLink={slug} />
               </div>
+              <div className='hidden tablet:block h-[1px] bg-white3 w-full' />
+              <div ref={rightSection} className='w-[60%] sDesktop:w-[65%] tablet:w-full'>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: content,
+                  }}
+                  className={`${styles.content} blog`}
+                />
 
-              <div className="b__dt-main-blog" id="main-blog-container">
-                
-               <div className="b__dt-auth" id="left-section">
-                 <BlogInfo avatar={post.author.avatar.url} author={post.author.name} date={formattedDate} shareLink={post.slug} />
-               </div>
+                {post.tags && (
+                  <div className={styles.blogTags}>
+                    {post.tags.map((tag, index) => (
+                      <h4 key={index} className={styles.blogTag}>
+                        {tag.name}
+                      </h4>
+                    ))}
+                  </div>
+                )}
 
-               <div 
-                className="b__dt-content" 
-                id="right-section"
-              >
-                <div 
-                dangerouslySetInnerHTML={{
-                  __html: post.content,
-                }}/> 
-
-                <div className="blog__dt-tags">
-                  {post.tags && post.tags.edges.map(({ node }) => (
-                    <h4 key={node.name} className="blog__dt-tag">
-                      {node.name}
-                    </h4>
-                  ))} 
-                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <RelatedPosts posts={allPosts} currentCategory={post.categories[0].name} currentSlug={post.slug} />
-    
-{/* ======================== Footer ====================== */}
-        <div className="desktop-footer">
-          <Footer />
-        </div>
-        <div className="mobile-footer">
-          <FooterMobile />
-        </div>
-{/* ======================== Footer END ====================== */}
-      </main>    
+        {relatedPosts && (
+          <RelatedBlogs posts={relatedPosts} />
+        )}
+
+      </Layout>
+      <PageLoader loaderText={pageLoader.pageLoader} />
     </>
   );
 }
-
-export default PostDetail;
 
 export async function getStaticPaths() {
   const apolloClient = getApolloClient();
@@ -263,8 +187,8 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking', 
-}
+    fallback: 'blocking',
+  }
 }
 
 export async function getStaticProps({ params }) {
@@ -272,10 +196,7 @@ export async function getStaticProps({ params }) {
     const { slug } = params;
     const { post } = await getPostBySlug(slug);
 
-    const { posts: allPosts } = await getAllPosts();
-
     if (!post) {
-      // If the requested post is not found, return a 404 response
       return {
         notFound: true,
       };
@@ -284,19 +205,17 @@ export async function getStaticProps({ params }) {
     return {
       props: {
         post,
-        allPosts,
       },
-      revalidate: 10,
+      revalidate: 1000,
     };
   } catch (error) {
     console.error('Error fetching data:', error);
 
     return {
       props: {
-        post: null, // Use null instead of undefined
-        allPosts: [],
+        post: null,
       },
-      revalidate: 10,
+      revalidate: 1000,
     };
   }
 }

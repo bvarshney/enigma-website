@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
-import styles from "@/styles/designLanding.module.css";
+import styles from "./designLanding.module.css";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -117,7 +117,7 @@ useEffect(() => {
                             width={20} 
                             id="landing-dark-img"
                             alt="dark mode" 
-                            src={isDarkMode ? '/assets/dark/sun.svg' : '/assets/dark/moon.svg'}
+                            src={isDarkMode ? '/assets/header/sun.svg' : '/assets/header/moon.svg'}
                         />
                     </button>
                 </div>

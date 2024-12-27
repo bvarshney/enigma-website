@@ -1,0 +1,59 @@
+.e {
+  transform: scale(5.6) translate(-7.5%, -41%);
+}
+.n {
+  transform: scale(3) translate(-108px, -499px);
+}
+.i {
+  transform: scale(2.5) translate(-170px, 452px);
+}
+.g {
+  transform: scale(2.9) translate(-260px, -556px);
+}
+.m {
+  transform: scale(2.5) translate(-240px, -590px);
+}
+.a {
+  transform: scale(3.5) translate(-546px, 279px);
+}
+
+/* Video Player */
+.svgBackground {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.svgBackground svg {
+  width: 100px;
+}
+
+.svgBackground img {
+  width: 150px;
+  filter: invert(1);
+}
+
+.cursorIconStyle {
+  position: absolute;
+  z-index: 99999;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.cursorIconStyle p {
+  font-size: 1.4vw;
+}
+
+@media screen and (max-width: 776px) {
+  .svgBackground img {
+    width: 50px;
+  }
+}

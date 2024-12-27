@@ -1,198 +1,71 @@
 import { getPaginatedPosts } from '@/lib/posts';
 import { getAllPosts, getPagesCount } from '@/lib/posts';
-import Pagination from '@/components/WpBlogs/Pagination';
-import PostCard from '@/components/WpBlogs/PostCard';
 import { getCategories } from '@/lib/categories';
-
-import { Cursor } from "../../../cursor/index";
-import SmoothScroll from "@/components/utils/SmoothScroll";
-
-import Header from "@/components/Header/Header";  
-import Footer from "@/components/Footer";
-import FooterMobile from "@/components/Mobile/FooterMobile";
-import PageLoader from "@/components/pageLoader";
-import Modal from "@/components/PopupForm/formModal";
-import CategoryList from '@/components/WpBlogs/CategoryList';
-import { useEffect, useState } from 'react';
-
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
-import { NextSeo } from 'next-seo';
-import Head from 'next/head';
-
-gsap.registerPlugin(ScrollTrigger);
+import Layout from '@/components/Layout';
+import { useState } from 'react';
+import CategoryList from '@/components/Blogs/CategoryList';
+import Pagination from '@/components/Blogs/Pagination';
+import BlogCard from '@/components/Blogs/BlogCard';
+import { fadeUp, TitleAnim } from '@/lib/gsapAnimations';
+import { WebpageJsonLd } from '@/lib/json-ld';
+import MetaData from '@/components/MetaData';
 
 export default function Blog({ posts, pagination, categories }) {
   const [activeCategory, setActiveCategory] = useState('all');
-  
-  // Hero Section Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#blog",
-      {
-        rotationX: -80,
-        opacity: 0,
-        translateY: 300,
-        transformPerspective: "1000",
-        transformOrigin: "top center",
-      },
-      {
-        delay: 3.5,
-        duration: 1.3,
-        rotationX: 0,
-        opacity: 1,
-        translateY: 0,
-        stagger: 0.2,
-      }
-    );
-    return () => tl.kill();
-  }, []);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo("#fadeUp", {
-      opacity: 0,
-      y: 100,
-    },{
-      opacity: 1,
-      y: 0,
-      stagger: 0.1,
-      duration: 1,
-      delay: 4,
-      ease: 'power2.out'
-    });
-    return () => tl.kill();
-  }, []);
+  fadeUp();
+  TitleAnim();
+
+  const metadata = {
+    title: `The Enigma Blog Page ${pagination?.currentPage} | Discover, Learn & Be Future Ready`,
+    description: `Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Blog Page ${pagination?.currentPage}`,
+    img: "blog.png",
+    slug: `blog/${pagination?.currentPage}`,
+    date_published: "2023-01-01T00:00",
+    date_modified: "2024-12-25T00:00",
+  }
 
   return (
     <>
+      <WebpageJsonLd metadata={metadata} />
+      <MetaData metadata={metadata} />
+      <Layout>
+        <section data-cursor-size="10px" data-cursor-text="">
+          <div className='w-[85%] mx-auto'>
 
-            <NextSeo
-              title="The Enigma Blog | Discover, Learn & Be Future Ready"
-              description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
-              openGraph={{
-                url: `https://weareenigma.com/blog/${pagination.currentPage}`,
-                title: "The Enigma Blog | Discover, Learn & Be Future Ready",
-                description:
-                  "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
-                images: [
-                  {
-                    url: "https://weareenigma.com/assets/featured-images/blog.png",
-                    width: 1200,
-                    height: 630,
-                    alt: "Blogs Feature Image",
-                    type: "image/png",
-                  },
-                  ],
-                siteName: "Enigma Digital",
-              }}
+            <div className="pt-[8vw] tablet:pt-[15vw] mobile:pt-[25vw]" >
+              <h1 className='font-heading font-medium uppercase text-[7vw] tablet:text-[12vw] title-anim'>All Articles</h1>
+            </div>
 
-            additionalMetaTags={[
-              {
-                name: "twitter:title",
-                content: "The Enigma Blog | Discover, Learn & Be Future Ready"
-              },
-              {
-                name: "twitter:description",
-                content: "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
-              },
-              {
-                name: "twitter:image",
-                content: "https://weareenigma.com/assets/featured-images/blog.png"
-              },
-            ]}
-          />
+            <div className='mt-[2vw] tablet:mt-[4vw] fadeup'>
+              <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+            </div>
 
-      <Head>
-        <link rel="canonical" href={`https://weareenigma.com/blog/${pagination.currentPage}`} />
-        <link rel="alternate" href={`https://weareenigma.com/blog/${pagination.currentPage}`} hreflang="x-default" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "mainEntityOfPage":{
-                  "@type": "WebPage",
-                  "@id": `https://weareenigma.com/blog/${pagination.currentPage}`
-                },
-                "name": "Blog",
-                "description": "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
-                "datePublished": "2023-01-01T12:00:00+05:30",
-                "dateModified": "2023-11-17T12:00:00+05:30",
-                "publisher": {
-                  "@type": "Organization",
-                  "name": "Enigma Digital",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
-                  }
-                }
-              }
-            ),
-          }}
-        />
-      </Head>
+            <div className='my-[6vw] grid grid-cols-3 gap-x-[3vw] gap-y-[5vw] tablet:grid-cols-2 mobile:grid-cols-1 tablet:my-[10vw] tablet:gap-x-[4vw] mobile:gap-y-10'>
+              {posts.map((post) => (
+                <BlogCard
+                  key={post.slug}
+                  href={post.slug}
+                  category={post.categories[0].name}
+                  imgSrc={post.featuredImage.sourceUrl}
+                  title={post.title}
+                />
+              ))}
+            </div>
 
-    <SmoothScroll />
-    <Cursor isGelly={true}/>
-
-    <PageLoader text={"Our Thoughts & Resources"} />
-    <Modal />
-
-    <main>
-      <Header />
-
-      <section className='blogs-sub-section'> 
-        <div
-          className="blogs-heading"
-          data-cursor-size="10px"
-          data-cursor-text=""
-        >
-          <h1 id="blog">
-            <span>All Articles</span>
-          </h1>
-        </div>
-
-        <div id='fadeUp'>
-          <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-        </div>
-        
-        <ul className='ul-items'>
-          {posts.map((post) => {
-            return (
-              <li key={post.slug} id='fadeUp'>
-                <PostCard post={post} />
-              </li>
-            );
-          })}
-        </ul>
-
-          <div className='blog-anim'>
             {pagination && (
-              <Pagination
-                addCanonical={false}
-                currentPage={pagination?.currentPage}
-                pagesCount={pagination?.pagesCount}
-                basePath={pagination?.basePath}
-              />
+              <div>
+                <Pagination
+                  addCanonical={true}
+                  currentPage={pagination?.currentPage}
+                  pagesCount={pagination?.pagesCount}
+                  basePath={pagination?.basePath}
+                />
+              </div>
             )}
           </div>
         </section>
-
-      {/* ======================== Footer ====================== */}
-        <section className="desktop-footer mt-150">
-          <Footer />
-        </section>
-
-        <section className="mobile-footer">
-          <FooterMobile />
-        </section>
-      {/* ======================== Footer END ====================== */}
-      </main>
+      </Layout>
     </>
   );
 }
@@ -221,7 +94,7 @@ export async function getStaticProps({ params = {} } = {}) {
         basePath: '/blog',
       },
     },
-    revalidate: 10,
+    revalidate: 1000,
   };
 }
 

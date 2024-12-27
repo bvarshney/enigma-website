@@ -1,165 +1,74 @@
-import { gsap } from "gsap";
 import Image from "next/image";
-import React from "react";
-import styles from '@/styles/serviceDetail.module.css';
+import { useRef } from "react";
 
-// Hover on the link
-const handleHover2 = (e) => {
-    gsap.to(e.target, {
-      duration: 0.5,
-      scale: 1.05,
-      ease: "power1.inOut",
-    });
-  };
-  
-  // Hover off the link
-  const handleHoverExit2 = (e) => {
-    gsap.to(e.target, {
-      duration: 0.5,
-      scale: 1,
-      ease: "power1.inOut",
-    });
-  };  
-
-export default function OfferCards() {
+const OfferCards = () => {
+    const container = useRef(null);
 
     return (
-            <>
-                <div className="service-offer-container" id="card-container">
-                    <div className='service-offer'>
-                        <div className='service-offer-top'>
-                             <h3 className={`${styles['sd__approach']} our-service-anim`} id="fadeUp">
-                                Our Services<span className='stroke'> Include</span>
-                            </h3>
+        <>
+            <section ref={container} id="offer-cards">
+                <div className="w-[85%] mx-auto py-[10%] tablet:py-[15%]">
+
+                    <h3 className="text-[4vw] font-medium font-heading leading-[1.2] tablet:text-[8vw] mobile:text-[11vw] mb-[8%] title-anim">
+                        Our Services<span className='stroke tracking-wide mobile:text-gray2'> Include</span>
+                    </h3>
+
+                    <div className="grid grid-cols-3 gap-6 w-[85%] h-full ml-auto tablet:grid-cols-2 tablet:w-full mobile:grid-cols-1">
+                        <Card text="Digital Marketing Auditing and Consulting" />
+                        <Card text="User Experience Consultation" />
+
+                        <div className="h-[10vw] tablet:h-[15vh] mobile:h-[20vh] rounded-2xl overflow-hidden shadow-lg group fadeup">
+                            <Image 
+                                className="w-full h-full group-hover:scale-105 duration-500 group-hover:saturate-0"
+                                src='/assets/service-detail/strategy/strategy4.webp'
+                                alt='our service image'
+                                priority={false}
+                                width={450}
+                                height={190}
+                            >
+                            </Image>
                         </div>
-                    </div>
-                    <div className="service-offer-section width-full flex flex-wrap">
-                        <div className="service-offer-card-wrapper w-1/3 p-3 image-card-wrapper">
-                            <div className="service-offer-card" id="fadeUp">
-                               <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg shapes-10">
-                                    <span className="card-shape-1 card-bg-1"></span>
-                                    <span className="card-shape-1 card-bg-2"></span>
-                                    <span className="card-shape-1 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Digital Marketing Auditing and Consulting</h4>
-                            </div>
+
+                        <Card text="Conversion Rate Optimization" />
+
+                        <div className="h-[10vw] tablet:h-[15vh] mobile:h-[20vh] rounded-2xl overflow-hidden shadow-lg group fadeup" >
+                            <Image 
+                                className="w-full h-full group-hover:scale-105 duration-500 group-hover:saturate-0"
+                                src='/assets/service-detail/strategy/strategy5.webp'
+                                alt='our service image'
+                                priority={false}
+                                width={450}
+                                height={190}
+                            />
                         </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-2 card-bg-1"></span>
-                                    <span className="card-shape-2 card-bg-2"></span>
-                                    <span className="card-shape-2 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">User Experience Consultation</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card image-card" id="fadeUp">
-                                <Image src='/assets/service-detail/strategy/strategy4.webp' 
-                                    alt='our service image'
-                                    loading='lazy'
-                                    fill={true}
-                                    sizes="(max-width: 1200px) 100vw, 50vw"
-                                    onMouseEnter={(e) => handleHover2(e)}
-                                    onMouseOut={(e) => handleHoverExit2(e)}>
-                                </Image>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-3 card-bg-1"></span>
-                                    <span className="card-shape-3 card-bg-2"></span>
-                                    <span className="card-shape-3 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Conversion Rate Optimization</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/strategy/strategy5.webp' 
-                                    alt='our service image'
-                                    loading='lazy'
-                                    fill={true}
-                                    sizes="(max-width: 1200px) 50vw,(max-width: 776px) 100vw, 33vw"
-                                    onMouseEnter={(e) => handleHover2(e)}
-                                    onMouseOut={(e) => handleHoverExit2(e)}>
-                                </Image>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-4 card-bg-1"></span>
-                                    <span className="card-shape-4 card-bg-2"></span>
-                                    <span className="card-shape-4 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Data Analytics and Insights</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-5 card-bg-1"></span>
-                                    <span className="card-shape-5 card-bg-2"></span>
-                                    <span className="card-shape-5 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Brand & Content Strategy</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-6 card-bg-1"></span>
-                                    <span className="card-shape-6 card-bg-2"></span>
-                                    <span className="card-shape-6 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">SEO and SMM Optimization</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-6 card-bg-1"></span>
-                                    <span className="card-shape-6 card-bg-2"></span>
-                                    <span className="card-shape-6 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Social Media Strategy</h4>
-                            </div>
-                        </div>
-                        
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-6 card-bg-1"></span>
-                                    <span className="card-shape-6 card-bg-2"></span>
-                                    <span className="card-shape-6 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Omni-Channel Strategy Development</h4>
-                            </div>
-                        </div>
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card" id="fadeUp">
-                                <div className="service-offer-card-blur"></div>
-                                <div className="service-offer-card-bg">
-                                    <span className="card-shape-6 card-bg-1"></span>
-                                    <span className="card-shape-6 card-bg-2"></span>
-                                    <span className="card-shape-6 card-bg-3"></span>
-                                </div>
-                                <h4 className="text-2xl font-medium z-10">Customer Journey Mapping</h4>
-                            </div>
-                        </div>
+
+                        <Card text="Data Analytics and Insights" />
+                        <Card text="Brand & Content Strategy" />
+                        <Card text="SEO and SMM Optimization" />
+                        <Card text="Social Media Strategy" />
+                        <Card text="Omni-Channel Strategy Development" />
+                        <Card text="Customer Journey Mapping" />
                     </div>
                 </div>
+            </section>
+        </>
+    )
+}
+
+export default OfferCards;
+
+const Card = ({ text }) => {
+    return (
+        <>
+            <div className="text-center h-[10vw] flex items-center justify-center rounded-2xl shadow-lg relative overflow-hidden p-10 bg-white dark:bg-white2 group tablet:h-[15vh] mobile:h-[20vh] fadeup" >
+                <div className="absolute top-[-10%] left-0 bottom-0 right-0 backdrop-blur-[80px] z-[1]"></div>
+                <div className="service-offer-card-bg opacity-0 duration-500 group-hover:opacity-90">
+                    <span className="card-shape-6 card-bg-1 bg-[#f5dd94] z-[3] absolute w-[150px] h-[150px] rounded-full blur-[5px]"></span>
+                    <span className="card-shape-6 card-bg-2 bg-[#f79694] z-[2] absolute w-[280px] h-[280px] rounded-full blur-[5px]"></span>
+                    <span className="card-shape-6 card-bg-3 bg-[#7f7de4] z-[1] absolute w-[550px] h-[550px] rounded-full"></span>
+                </div>
+                <h4 className="z-10 text-2xl font-heading font-medium leading-[1.2] mobile:text-xl">{text}</h4>
+            </div>
         </>
     )
 }

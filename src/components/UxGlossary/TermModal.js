@@ -1,33 +1,27 @@
-import React, { useEffect } from 'react';
-import styles from '@/styles/TermModal.module.css';
-import Scrollbar from 'smooth-scrollbar';
+import React from 'react';
+import styles from './index.module.css';
+import { XIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const TermModal = ({ term, onClose }) => {
-  useEffect(() => {
-    const scrollbar = Scrollbar.init(document.querySelector('#my-modal-scroll'));
-
-    return () => {
-      scrollbar.destroy();
-    };
-  }, []); // The empty dependency array ensures that this effect runs once after the initial render
 
   return (
-    <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+    <div className="fixed top-0 left-0 bottom-0 right-0 z-[200] h-screen w-screen flex items-center justify-center bg-[#00000080] backdrop-blur-md bg-opacity-40" onClick={onClose}>
+      <div className={`${styles.modalContent} bg-white dark:bg-white2`} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalContentHead}>
           <div className={styles.modalImage}>
-            <img src={term.icon} alt='glossary image' title='glossary image'/>
+            <Image src={term.icon} alt='glossary image' title='glossary image' height={150} width={150} />
           </div>
           <h3>{term.name}</h3>
         </div>
-        <div className={styles.modalContentPara} id='my-modal-scroll'>
+        <div data-lenis-prevent className={styles.modalContentPara} id='my-modal-scroll'>
           {term.description.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
         <div className={styles.modalClose}>
           <button onClick={onClose}>
-            <img src='/assets/icons/form-close.svg' alt='Modal Close Icon' title='Modal'/>
+            <XIcon className='w-10 h-10'/>
           </button>
         </div>
       </div>

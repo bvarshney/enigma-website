@@ -1,0 +1,78 @@
+body {
+        margin:0;
+        padding:0;
+}
+
+#adArea {
+	background: #ededed;
+    overflow: hidden;
+    text-overflow: clip;
+    cursor:pointer;
+}
+
+#close_btn {
+  right: -32px;
+  top: 0px;
+}
+
+.plusEl {
+  position: absolute;
+  width: 92px;
+  height: 92px; 
+}
+
+
+#pluses {
+  position: absolute;
+}
+
+#clickArea {
+  background-color: red;
+  opacity: 0;
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.abs {
+    position: absolute;
+}
+.rct {
+    width:300px;
+    height:250px;
+    position: absolute;
+}
+.rct2x {
+    width:600px;
+    height:500px;
+    position: absolute;
+}
+.opacity0 { opacity: 0; }
+.opacity1 { opacity: 1; }
+
+.zi1 { z-index: 800; }
+.zi2 { z-index: 900; }
+.zi5 { z-index: 5000; }
+.zi6 { z-index: 6000; }
+.zi7 { z-index: 7000; }
+.zi9 { z-index: 9000; }
+.zIndex99998 { z-index: 99998; }
+.zIndex99999 { z-index: 99999; }
+
+.hidden{
+	visibility: hidden;
+}
+.noEvents{
+  pointer-events: none;
+}
+.noVis{
+    visibility: none;
+}
+.noDisplay{
+    display: none;
+}
+

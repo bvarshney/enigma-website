@@ -1,3 +1,7 @@
 User-agent: *
 
+Allow: /
+Disallow: /_next/static/
+
+# Sitemaps
 Sitemap: https://weareenigma.com/sitemap.xml

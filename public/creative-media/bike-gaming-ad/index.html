@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="esk_adArea">
+      <div class="frame1 abs_full">
+        <img src="./images/ready.png" class="ready abs_full" alt="">
+        <img src="./images/play.png" class="play abs_full" alt="">
+      </div>
+      <div class="frame2 abs_full fromRight">
+        <div class="bike_1 bike_choice">
+          <img src="./images/bike-1.png" width="162" alt="">
+        </div>
+        <div class="bike_2 bike_choice">
+          <img src="./images/bike-2.png" width="179" alt="">
+        </div>
+        <div class="bike_3 bike_choice">
+          <img src="./images/bike-3.png" width="192" alt="">
+        </div>
+      </div>
+      <div class="frame3 abs_full fromRight game_area">
+        <div class="abs_full score_board">
+          <p class="score">00</p>
+        </div>
+        <div class="bike drag">
+          <img src="./images/bike-drag.png" alt="">
+          <!-- <img src="assets/spl.png" class="spl" alt="" /> -->
+        </div>
+
+        <!-- <div class="obst obst_left coin"></div>
+        <div class="obst obst_right coin"></div> -->
+      </div>
+      <div class="frame4 abs_full">
+        <img src="./images/collect.png" class="cta" alt="">
+      </div>
+    </div>
+    <script src="./js/tween.min.js"></script>
+    <script src="./js/draggable.js"></script>
+    <script>
+      var clickTag = "/";
+
+      var o = {
+        events: {
+          mouseOver: false,
+          touch: false,
+          main: false,
+          seenAll: false,
+        },
+      };
+
+      var _dsptr = function (e) {
+        var track = new Image();
+        track.src = "{EVENT_URL}" + e;
+      };
+
+      function startEvent(event_name) {
+        _dsptr(event_name);
+      }
+
+      function ctaFunction() {
+        window.open(clickTag);
+      }
+
+      var adArea = document.getElementById("esk_adArea");
+      var game = {
+        score: 0,
+        restart: false,
+        bike: {
+          x: 0,
+          y: 0,
+        },
+        road: {
+          el1: null,
+          el2: null,
+          el3: null,
+          el4: null,
+        },
+      };
+      var obstacleList = [
+        { class: "coin", pos: "left", delay: 1 },
+        { class: "coin", pos: "right", delay: 1.5 },
+        { class: "coin", pos: "right", delay: 2 },
+        { class: "barrier", pos: "left", delay: 2.5 },
+        { class: "barrier", pos: "right", delay: 3 },
+        { class: "coin", pos: "left", delay: 3 },
+        { class: "coin", pos: "right", delay: 3.5 },
+        { class: "coin", pos: "left", delay: 4 },
+        { class: "barrier", pos: "right", delay: 4.5 },
+        { class: "barrier", pos: "left", delay: 5 },
+        { class: "coin", pos: "right", delay: 5 },
+        { class: "barrier", pos: "right", delay: 5.5 },
+        { class: "coin", pos: "left", delay: 6 },
+        { class: "coin", pos: "right", delay: 6.5 },
+        { class: "coin", pos: "right", delay: 7 },
+        { class: "barrier", pos: "left", delay: 7.5 },
+        { class: "barrier", pos: "right", delay: 8 },
+        { class: "coin", pos: "left", delay: 8 },
+        { class: "coin", pos: "right", delay: 8.5 },
+        { class: "coin", pos: "left", delay: 9 },
+        { class: "barrier", pos: "right", delay: 9.5 },
+        { class: "barrier", pos: "left", delay: 10 },
+        { class: "coin", pos: "right", delay: 10 },
+        { class: "barrier", pos: "right", delay: 11 },
+      ];
+      var playAnim = gsap.to(".play", {
+        scale: 1.07,
+        yoyo: true,
+        repeat: -1,
+        paused: true,
+        y: -10,
+      });
+
+      var bikePulse = gsap
+        .timeline({ paused: true, repeat: -1, repeatDelay: 0.5 })
+        .to(".bike_1", {
+          scale: 1.1,
+          yoyo: true,
+          repeat: 1,
+        })
+        .to(".bike_2", {
+          scale: 1.1,
+          yoyo: true,
+          repeat: 1,
+          delay: -0.5,
+        })
+        .to(".bike_3", {
+          scale: 1.1,
+          yoyo: true,
+          repeat: 1,
+          delay: -0.5,
+        });
+      var bikeSlideIn = gsap
+        .timeline({
+          paused: true,
+          onComplete: () => {
+            bikePulse.play();
+          },
+        })
+        .from(".bike_1", {
+          x: -300,
+          y: -20,
+        })
+        .from(".bike_2", {
+          x: 300,
+          y: -20,
+        })
+        .from(".bike_3", {
+          x: -300,
+          y: -20,
+        });
+      function generateObstacles() {
+        const gameArea = document.querySelector(".game_area");
+        obstacleList.forEach((obs) => {
+          var obst = document.createElement("div");
+          obst.classList.add("obst", "obst_" + obs.pos, obs.class);
+          gameArea.appendChild(obst);
+        });
+      }
+
+      function gameOver() {
+        gsap.to(".frame4", {
+          scale: 1,
+          ease: Back.easeOut.config(3),
+          onComplete: () => {
+            adArea.addEventListener("click", ctaFunction);
+          },
+        });
+
+        gsap.to(".cta", 1, {
+          scale: 1.2,
+          yoyo: true,
+          y: -35,
+          repeat: -1,
+          delay: 1,
+        });
+      }
+
+      function startGame() {
+        var allObsts = document.querySelectorAll(".obst");
+
+        allObsts.forEach((obst, i) => {
+          if (obst.classList.contains("obst_left")) {
+            gsap.fromTo(
+              obst,
+              {
+                y: -300,
+                scale: 0,
+                x: 220,
+              },
+              {
+                duration: 4,
+                y: 100,
+                scale: 2,
+                x: 70,
+                delay: obstacleList[i]?.delay,
+                ease: "back.in(0)",
+              }
+            );
+          }
+
+          if (obst.classList.contains("obst_right")) {
+            gsap.fromTo(
+              obst,
+              {
+                y: -300,
+                scale: 0,
+                x: -220,
+              },
+              {
+                duration: 4,
+                y: 100,
+                scale: 2,
+                x: -50,
+                delay: obstacleList[i]?.delay,
+                ease: "back.in(0)",
+              }
+            );
+          }
+        });
+
+        setInterval(() => {
+          allObsts.forEach((item) => {
+            if (Draggable.hitTest(".drag", item, "60%")) {
+              if (item.classList.contains("coin")) {
+                document.querySelector(".drag").classList.add("glow");
+                item.classList.add("hidden");
+
+                setTimeout(() => {
+                  document.querySelector(".drag").classList.remove("glow");
+                }, 100);
+
+                gsap.to(".drag", 0.05, {
+                  scale: 1.1,
+                  yoyo: true,
+                  repeat: 1,
+                });
+
+                game.score += 10;
+
+                document.querySelector(".score").innerHTML = game.score
+                  .toString()
+                  .padStart(2, "0");
+              }
+            }
+
+            if (Draggable.hitTest(".drag", item, "70%")) {
+              if (item.classList.contains("barrier")) {
+                gsap.to(".drag", 0.05, {
+                  scale: 1.1,
+                  // rotate: -40,
+                  // rotateY: -40,
+                  yoyo: true,
+                  repeat: 1,
+                });
+                gsap.to(item, {
+                  //   rotate: 100,
+                  y: -400,
+                  x: 1200,
+                  duration: 1,
+                  onComplete: () => {
+                    item.classList.add("hidden");
+                  },
+                });
+
+                game.score -= 10;
+
+                document.querySelector(".score").innerHTML = game.score;
+              }
+            }
+          });
+        }, 100);
+
+        setTimeout(() => {
+          gameOver();
+        }, 15000);
+      }
+      function selectBike() {
+        startEvent("Main");
+        var choices = document.querySelectorAll(".bike_choice");
+        gsap.to(".frame2", {
+          x: 0,
+          onComplete: () => {
+            bikeSlideIn.play();
+          },
+        });
+
+        choices.forEach((bike, i) => {
+          bike.addEventListener("click", () => {
+            startEvent("Bike_" + (i + 1));
+            bikePulse.pause();
+
+            gsap.to(".frame3", {
+              x: 0,
+              onComplete: () => {
+                createDraggable();
+                startGame();
+              },
+            });
+          });
+        });
+        generateObstacles();
+      }
+
+      function createDraggable() {
+        Draggable.create(".drag", {
+          type: "x",
+          bounds: ".game_area",
+          edgeResistance: 0.5,
+          // onDragStart: makeActive,
+          onPress: function () {},
+          onDrag: function () {
+            // console.log(this.x, game.bike.x);
+            if (this.x < game.bike.x) {
+              gsap.to(".drag", {
+                rotate: -10,
+              });
+            } else {
+              gsap.to(".drag", {
+                rotate: 10,
+              });
+            }
+            game.bike.x = this.x;
+          },
+        });
+      }
+
+      function mouseEvents() {
+        document.querySelector(".frame1").addEventListener("click", selectBike);
+        adArea.addEventListener("mouseover", () => {
+          if (!o.events.mouseOver) {
+            o.events.mouseOver = true;
+            startEvent("Mouse_Over");
+          }
+        });
+        adArea.addEventListener("touchstart", () => {
+          if (!o.events.touch) {
+            o.events.touch = true;
+            startEvent("Touch");
+          }
+        });
+      }
+
+      window.addEventListener("load", () => {
+        mouseEvents();
+        gsap.from(".ready", {
+          y: 150,
+          opacity: 0,
+        });
+        gsap.from(".play", {
+          delay: 0.2,
+          y: 150,
+          opacity: 0,
+          onComplete: () => {
+            playAnim.play();
+          },
+        });
+      });
+    </script>
+  
+
+</body></html>

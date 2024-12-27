@@ -9,7 +9,7 @@
             "Despite its benefits, Agile UX is not without challenges. Maintaining UX quality in fast-paced sprints, integrating user feedback in real-time, and ensuring designers and developers are in sync are all common issues. Nevertheless, with its focus on collaboration and user-centricity, Agile UX remains a popular methodology in the modern digital landscape."
         ],
         "sName": "Agile UX",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/1.png"
+        "icon": "/assets/ux-glossary/icons/1.png"
       },
       {
         "id": 2,
@@ -20,7 +20,7 @@
             "The major benefit of Automated UX Research is its efficiency. It can quickly gather and analyse large amounts of data, offering broader insights than traditional methods. It's particularly useful for identifying usability issues, tracking user behaviour over time, and A/B testing. However, it's worth noting that Automated UX Research should complement, not replace, traditional research methods. While it excels at gathering quantitative data, it lacks the qualitative, human insights that methods like interviews and user testing provide."
         ],
         "sName": "Automated UX Research",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/2.png"
+        "icon": "/assets/ux-glossary/icons/2.png"
       },
       {
         "id": 3,
@@ -32,7 +32,7 @@
             "Moreover, by comparing a product's usability metrics with those of its competitors, companies can understand where they stand in the market. Are they leading in terms of usability, or are they lagging behind? Benchmark Studies help answer these questions."
         ],
         "sName": "Benchmark Study",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/3.png"
+        "icon": "/assets/ux-glossary/icons/3.png"
       },
       {
         "id": 4,
@@ -44,7 +44,7 @@
             "It's important to note that card sorting doesn't provide all the answers. It's best used in conjunction with other methods and data. Also, it's crucial to involve users who are representative of the end-users in the card sorting sessions. After all, the goal is to understand the mental models of the end-users, not the designers or stakeholders."
         ],
         "sName": "Card Sorting",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/4.png"
+        "icon": "/assets/ux-glossary/icons/4.png"
       },
       {
         "id": 5,
@@ -55,7 +55,7 @@
             "Click Testing is a simple and quick way to validate design assumptions and can be performed early in the design process. It's especially useful for testing navigation paths and call-to-action buttons. However, it's important to remember that Click Testing is limited to analysing isolated interactions and does not replicate the full user experience."
         ],
         "sName": "Click Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/5.png"
+        "icon": "/assets/ux-glossary/icons/5.png"
       },
       {
         "id": 6,
@@ -66,7 +66,7 @@
             "Concept Testing is a proactive step that can save time, money, and resources. It's an excellent way to ensure that the product development team is on the right track and that the final product will meet users' needs and expectations."
         ],
         "sName": "Concept Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/6.png"
+        "icon": "/assets/ux-glossary/icons/6.png"
       },
       {
         "id": 7,
@@ -78,7 +78,7 @@
             "Designing exceptional UX is a critical component of creating a positive CX. By understanding users' goals, motivations, and pain points, UX designers can craft intuitive and engaging experiences that resonate with users and contribute to overall customer satisfaction. UX professionals work hand in hand with other teams, such as marketing and customer support, to ensure a seamless and delightful customer journey at every touchpoint."
         ],
         "sName": "Customer Experience",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/7.png"
+        "icon": "/assets/ux-glossary/icons/7.png"
       },
       {
         "id": 8,
@@ -90,7 +90,7 @@
             "By validating designs, UX professionals can refine and optimize the user experience, aligning it with users' needs and expectations. Design Validation ensures that the final product delivers on its promise, providing a satisfying and intuitive experience for the target audience."
         ],
         "sName": "Design Validation",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/8.png"
+        "icon": "/assets/ux-glossary/icons/8.png"
       },
       {
         "id": 9,
@@ -104,7 +104,7 @@
             "Effectiveness Ratios provide valuable insights into the usability and efficiency of a system, guiding UX professionals in creating interfaces that enable users to accomplish tasks effectively and efficiently."
         ],
         "sName": "Effectiveness Ratios",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/9.png"
+        "icon": "/assets/ux-glossary/icons/9.png"
       },
       {
         "id": 10,
@@ -117,7 +117,7 @@
             "Efficiency Ratios help UX professionals create interfaces that enable users to achieve their goals quickly and with minimal effort. By optimizing efficiency, designers can enhance user satisfaction and overall usability."
         ],
         "sName": "Efficiency Ratios",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/10.png"
+        "icon": "/assets/ux-glossary/icons/10.png"
       },
       {
         "id": 11,
@@ -129,7 +129,7 @@
             "Good IA leads to a good user experience, allowing users to navigate a website or app easily and find the information they need without confusion or frustration."
         ],
         "sName": "Information Architecture (IA)",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/11.png"
+        "icon": "/assets/ux-glossary/icons/11.png"
       },
       {
         "id": 12,
@@ -141,7 +141,7 @@
             "In-lab testing provides rich qualitative and quantitative data that helps identify usability issues, assess user satisfaction, and guide design improvements. It allows researchers to closely observe user behaviour and gather valuable insights to inform decision-making in the UX design process."
         ],
         "sName": "In-Lab Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/12.png"
+        "icon": "/assets/ux-glossary/icons/12.png"
       },
       {
         "id": 13,
@@ -154,7 +154,7 @@
             "Invitation links streamline the process of remote user testing, making it efficient for both researchers and participants while ensuring a smooth and reliable user research experience."
         ],
         "sName": "Invitation Link",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/13.png"
+        "icon": "/assets/ux-glossary/icons/13.png"
       },
       {
         "id": 14,
@@ -166,7 +166,7 @@
             "Internal Usability Testing fosters collaboration and a user-centric culture within organizations. By involving internal stakeholders, companies can improve the efficiency and effectiveness of their internal tools and systems, leading to increased productivity and user satisfaction among employees."
         ],
         "sName": "Internal Usability Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/14.png"
+        "icon": "/assets/ux-glossary/icons/14.png"
       },
       {
         "id": 15,
@@ -178,7 +178,7 @@
             "By conducting iterative testing, UX professionals can uncover usability problems early, make data-driven design decisions, and deliver user-centred solutions. The iterative nature of this approach fosters continuous improvement, resulting in a refined and well-crafted user experience."
         ],
         "sName": "Iterative Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/15.png"
+        "icon": "/assets/ux-glossary/icons/15.png"
       },
       {
         "id": 16,
@@ -190,7 +190,7 @@
             "By conducting mobile app usability testing, UX professionals can optimize app interfaces, streamline workflows, and improve user satisfaction. This iterative process contributes to the development of high-quality mobile applications that meet user needs and expectations."
         ],
         "sName": "Mobile Usability Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/16.png"
+        "icon": "/assets/ux-glossary/icons/16.png"
       },
       {
         "id": 17,
@@ -202,7 +202,7 @@
             "When designing modal windows, it's crucial to strike a balance between capturing user attention and not being overly intrusive. They should be used sparingly and only when necessary to avoid disrupting the user experience. Clear and concise messaging, intuitive controls, and an easy way to dismiss the modal contribute to a positive user interaction."
         ],
         "sName": "Modal Window",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/17.png"
+        "icon": "/assets/ux-glossary/icons/17.png"
       },
       {
         "id": 18,
@@ -214,7 +214,7 @@
             "By providing a multichannel experience, organizations can enhance user engagement, improve customer satisfaction, and foster loyalty. Users appreciate the convenience and flexibility of accessing services through their preferred channels, while businesses can leverage data from different touchpoints to gain insights and optimize the overall user journey."
         ],
         "sName": "Multichannel Experience",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/18.png"
+        "icon": "/assets/ux-glossary/icons/18.png"
       },
       {
         "id": 19,
@@ -229,7 +229,7 @@
             "NPS provides valuable insights into customer satisfaction and helps organizations identify areas for improvement. By tracking NPS over time, businesses can gauge the impact of their efforts to enhance the customer experience and measure the success of their customer-centric strategies."
         ],
         "sName": "Net Promoter Score",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/19.png"
+        "icon": "/assets/ux-glossary/icons/19.png"
       },
       {
         "id": 20,
@@ -241,7 +241,7 @@
             "To maximize the effectiveness of online surveys, it's important to design clear and concise questions, offer appropriate response options, and minimize participant burden. Combining online surveys with other user research methods can provide a comprehensive understanding of user needs and preferences."
         ],
         "sName": "Online Survey",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/20.png"
+        "icon": "/assets/ux-glossary/icons/20.png"
       },
       {
         "id": 21,
@@ -253,7 +253,7 @@
             "Engaging a panel of participants facilitates ongoing and efficient user research. It enables researchers to gather feedback and insights, validate design decisions, and iteratively improve user experiences based on real user perspectives."
         ],
         "sName": "Panel",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/21.png"
+        "icon": "/assets/ux-glossary/icons/21.png"
       },
       {
         "id": 22,
@@ -266,7 +266,7 @@
             "By iterating on prototypes based on user feedback, designers can refine and improve the user experience, ultimately delivering a product that meets user expectations and drives customer satisfaction."
         ],
         "sName": "Prototype Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/22.png"
+        "icon": "/assets/ux-glossary/icons/22.png"
       },
       {
         "id": 23,
@@ -278,7 +278,7 @@
             "Despite these considerations, remote usability testing provides a valuable means of gathering user insights and validating design decisions in a convenient and efficient manner."
         ],
         "sName": "Remote Usability Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/23.png"
+        "icon": "/assets/ux-glossary/icons/23.png"
       },
       {
         "id": 24,
@@ -289,7 +289,7 @@
             "Responsive Design is now considered a best practice in web design, as it ensures that websites are accessible and usable on all devices. It's particularly important given the increasing use of mobile devices for browsing the web."
         ],
         "sName": "Responsive Design",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/24.png"
+        "icon": "/assets/ux-glossary/icons/24.png"
       },
       {
         "id": 25,
@@ -301,7 +301,7 @@
             "Calculating ROI enables organizations to justify UX investments and prioritize UX initiatives based on their potential returns. It also helps build a business case for UX, demonstrating the value it brings in terms of user satisfaction, customer loyalty, and overall business success."
         ],
         "sName": "Return on Investment (ROI)",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/25.png"
+        "icon": "/assets/ux-glossary/icons/25.png"
       },
       {
         "id": 26,
@@ -312,7 +312,7 @@
             "However, Satisfaction Questionnaires also have limitations. They rely on self-reported data, which can be influenced by various factors, and they don't provide deep, qualitative insights into why users feel the way they do."
         ],
         "sName": "Satisfaction Questionnaire",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/26.png"
+        "icon": "/assets/ux-glossary/icons/26.png"
       },
       {
         "id": 27,
@@ -325,7 +325,7 @@
             "Screen recording offers a powerful means of capturing and analysing user interactions, allowing UX professionals to gain valuable insights and improve the user experience of digital products."
         ],
         "sName": "Screen Recording",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/27.png"
+        "icon": "/assets/ux-glossary/icons/27.png"
       },
       {
         "id": 28,
@@ -337,7 +337,7 @@
             "By leveraging Screenshot Click Testing, UX designers can make informed design decisions, optimize the visual aspects of interfaces, and create engaging user experiences that align with user expectations."
         ],
         "sName": "Screenshot Click Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/28.png"
+        "icon": "/assets/ux-glossary/icons/28.png"
       },
       {
         "id": 29,
@@ -348,7 +348,7 @@
             "However, Session Recordings also have potential downsides. They can be time-consuming to analyse, and they don't provide insight into users' thoughts or motivations. It's also important to ensure that session recording is done in a way that respects user privacy and complies with relevant laws and regulations."
         ],
         "sName": "Session Recording",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/29.png"
+        "icon": "/assets/ux-glossary/icons/29.png"
       },
       {
         "id": 30,
@@ -359,7 +359,7 @@
             "However, Shadowing can also be time-consuming and resource-intensive, and it requires a skilled researcher to observe and interpret the user's behaviour. It's also important to ensure that the user feels comfortable and that their privacy is respected."
         ],
         "sName": "Shadowing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/30.png"
+        "icon": "/assets/ux-glossary/icons/30.png"
       },
       {
         "id": 31,
@@ -370,7 +370,7 @@
             "There are two main types of Sitemaps: XML and HTML. XML Sitemaps are used by search engines to crawl and index the site, while HTML Sitemaps are designed for human users."
         ],
         "sName": "Sitemaps",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/31.png"
+        "icon": "/assets/ux-glossary/icons/31.png"
       },
       {
         "id": 32,
@@ -381,7 +381,7 @@
             "Stakeholder Interviews can also help to build buy-in and alignment among stakeholders, by ensuring that their voices are heard and their perspectives are incorporated into the design."
         ],
         "sName": "Stakeholder Interviews",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/32.png"
+        "icon": "/assets/ux-glossary/icons/32.png"
       },
       {
         "id": 33,
@@ -392,7 +392,7 @@
             "The output of a Task Analysis is often a diagram or flowchart that shows the steps involved in the task, the decisions that the user needs to make, and any pain points or challenges they face."
         ],
         "sName": "Task Analysis",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/33.png"
+        "icon": "/assets/ux-glossary/icons/33.png"
       },
       {
         "id": 34,
@@ -404,7 +404,7 @@
             "By conducting task-based user research, UX professionals gain a deeper understanding of user needs and behaviours. The insights gathered inform the design process, enabling the creation of user-centred experiences that align with user expectations and optimize task completion."
         ],
         "sName": "Task-based User Research",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/34.png"
+        "icon": "/assets/ux-glossary/icons/34.png"
       },
       {
         "id": 35,
@@ -417,7 +417,7 @@
             "By incorporating think-aloud into the user research process, UX professionals gain valuable insights into the user experience, enabling them to design intuitive and user-centred solutions."
         ],
         "sName": "Think-Aloud",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/35.png"
+        "icon": "/assets/ux-glossary/icons/35.png"
       },
       {
         "id": 36,
@@ -429,7 +429,7 @@
             "By analysing the results of tree testing, designers can uncover potential improvements to the IA, refine the structure, and enhance the findability of content or functionality. This method ensures that the organization of information aligns with users' mental models and expectations, ultimately improving the overall user experience."
         ],
         "sName": "Tree Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/36.png"
+        "icon": "/assets/ux-glossary/icons/36.png"
       },
       {
         "id": 37,
@@ -441,7 +441,7 @@
             "By conducting True Intent Studies, UX professionals gain a deeper understanding of user behaviours and intentions. This knowledge guides design decisions, informs the development of intuitive user experiences, and fosters a stronger connection between users and the products or interfaces they interact with."
         ],
         "sName": "True Intent Study",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/37.png"
+        "icon": "/assets/ux-glossary/icons/37.png"
       },
       {
         "id": 38,
@@ -452,7 +452,7 @@
             "Common Usability Metrics include success rate (the percentage of tasks completed successfully), error rate (the number of errors made), time-on-task (how long it takes to complete a task), and learnability (how quickly users can learn to use the product)."
         ],
         "sName": "Usability Metrics",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/38.png"
+        "icon": "/assets/ux-glossary/icons/38.png"
       },
       {
         "id": 39,
@@ -464,7 +464,7 @@
             "By conducting usability testing, UX professionals can validate design decisions, discover usability issues, and gain a deeper understanding of user needs and preferences. The insights gathered inform iterative design improvements, leading to a more intuitive and user-friendly product."
         ],
         "sName": "Usability Testing",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/39.png"
+        "icon": "/assets/ux-glossary/icons/39.png"
       },
       {
         "id": 40,
@@ -475,7 +475,7 @@
             "Creating User Flows involves understanding the user's goals, tasks, and decision points, and then mapping out the most likely or desired paths. They can be created at different levels of detail, from high-level flows that show the overall journey, to detailed flows that show each interaction and decision."
         ],
         "sName": "User Flows",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/40.png"
+        "icon": "/assets/ux-glossary/icons/40.png"
       },
       {
         "id": 41,
@@ -487,7 +487,7 @@
             "However, User Interviews also have limitations. They can be time-consuming and resource-intensive, and the quality of the insights depends on the skill of the interviewer. They also provide subjective, self-reported data, which can be influenced by various factors."
         ],
         "sName": "User Interviews",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/41.png"
+        "icon": "/assets/ux-glossary/icons/41.png"
       },
       {
         "id": 42,
@@ -498,7 +498,7 @@
             "Creating a User Journey Map involves research to understand the user's goals, behaviours, and emotions, and then synthesizing this into a visual map. The map can include elements like the stages of the journey, the user's actions, thoughts, emotions, touchpoints, pain points, and opportunities."
         ],
         "sName": "User Journey Maps",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/42.png"
+        "icon": "/assets/ux-glossary/icons/42.png"
       },
       {
         "id": 43,
@@ -510,7 +510,7 @@
             "However, it's important that User Personas are based on real user data, not assumptions or stereotypes. They should also be used as a tool to support design decisions, not as a rigid rule."
         ],
         "sName": "User Personas",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/43.png"
+        "icon": "/assets/ux-glossary/icons/43.png"
       },
       {
         "id": 44,
@@ -521,7 +521,7 @@
             "Creating User Scenarios involves understanding the user's goals, tasks, and context, and then creating a narrative that describes how the user would achieve a goal in a particular situation. They can be used to guide the design process, to generate ideas, or to evaluate designs."
         ],
         "sName": "User Scenarios",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/44.png"
+        "icon": "/assets/ux-glossary/icons/44.png"
       },
       {
         "id": 45,
@@ -532,7 +532,7 @@
             "User Stories are typically used in Agile development as a basis for defining the functions that a business system must provide, and to facilitate requirements management. They drive the creation of the acceptance criteria for a product or a feature."
         ],
         "sName": "User Stories",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/45.png"
+        "icon": "/assets/ux-glossary/icons/45.png"
       },
       {
         "id": 46,
@@ -543,7 +543,7 @@
             "However, User Surveys also have limitations. They rely on self-reported data, which can be influenced by various factors, and they don't provide deep, qualitative insights. The quality of the insights also depends on the quality of the questions, and low response rates can be a challenge."
         ],
         "sName": "User Surveys",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/46.png"
+        "icon": "/assets/ux-glossary/icons/46.png"
       },
       {
         "id": 47,
@@ -555,7 +555,7 @@
             "UX analytics also allows for A/B testing and experimentation, enabling designers to test different design variations, measure their impact on user behaviour, and optimize the user experience based on the results."
         ],
         "sName": "UX Analytics",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/47.png"
+        "icon": "/assets/ux-glossary/icons/47.png"
       },
       {
         "id": 48,
@@ -567,7 +567,7 @@
             "However, it's important to note that while UX automation can enhance efficiency, it should not replace the human element in UX design. Automation should complement the creative and strategic decision-making process, not replace the empathy and intuition that comes with understanding user needs."
         ],
         "sName": "UX Automation",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/48.png"
+        "icon": "/assets/ux-glossary/icons/48.png"
       },
       {
         "id": 49,
@@ -579,7 +579,7 @@
             "The goal of UX design is to optimize the usability, accessibility, and desirability of a product or interface. By placing the user at the centre of the design process, UX designers aim to create solutions that address user needs, solve problems, and provide enjoyable and meaningful interactions."
         ],
         "sName": "UX Design",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/49.png"
+        "icon": "/assets/ux-glossary/icons/49.png"
       },
       {
         "id": 50,
@@ -592,7 +592,7 @@
             "By focusing on user experience, organizations can create products and interfaces that delight users, differentiate themselves from competitors, and drive business success."
         ],
         "sName": "User Experience (UX)",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/50.png"
+        "icon": "/assets/ux-glossary/icons/50.png"
       },
       {
         "id": 51,
@@ -604,7 +604,7 @@
             "However, it's important to note that UX certification is not a requirement to work as a UX professional. Experience, portfolio, and demonstrated skills also play a significant role in the field. Certifications can complement practical experience and formal education, but they should not be considered the sole measure of expertise."
         ],
         "sName": "UX Certification",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/51.png"
+        "icon": "/assets/ux-glossary/icons/51.png"
       },
       {
         "id": 52,
@@ -616,7 +616,7 @@
             "A well-designed UX dashboard provides a comprehensive and real-time view of user experience metrics, empowering UX professionals to continuously optimize and enhance the design of digital products or interfaces."
         ],
         "sName": "UX Dashboard",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/52.png"
+        "icon": "/assets/ux-glossary/icons/52.png"
       },
       {
         "id": 53,
@@ -629,7 +629,7 @@
             "By effectively managing UX initiatives, organizations can foster a culture of user-centred design, improve customer satisfaction, and gain a competitive edge in the market."
         ],
         "sName": "UX Management",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/53.png"
+        "icon": "/assets/ux-glossary/icons/53.png"
       },
       {
         "id": 54,
@@ -642,7 +642,7 @@
             "Overall, video questions offer a valuable means of capturing user insights in a visually engaging and authentic manner, enriching the understanding of user experiences in UX research."
         ],
         "sName": "Video Questions",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/54.png"
+        "icon": "/assets/ux-glossary/icons/54.png"
       },
       {
         "id": 55,
@@ -655,7 +655,7 @@
             "By integrating the voice of the customer into decision-making processes, organizations can make informed design choices, prioritize improvements, and ultimately create products and services that better meet user needs and preferences."
         ],
         "sName": "Voice of the Customer (VoC)",
-        "icon": "/assets/blogs/blog-detail/ux-glossary/icons/55.png"
+        "icon": "/assets/ux-glossary/icons/55.png"
       }
     ]
   }

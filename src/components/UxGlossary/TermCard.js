@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '@/styles/TermCard.module.css'; // You can use a CSS module or any styling method you prefer
+import styles from './index.module.css';
+import Image from 'next/image';
 
 const TermCard = ({ term, onClick }) => {
   let truncatedDescription;
@@ -20,9 +21,9 @@ const TermCard = ({ term, onClick }) => {
   }
 
   return (
-    <div className={styles.card} onClick={() => onClick(term)} data-cursor-size="110px" data-cursor-text="Read More" data-cursor-color="#000">
+    <div className={`${styles.card} bg-white dark:bg-white2 shadow-lg`} onClick={() => onClick(term)} data-cursor-size="110px" data-cursor-text="Read More" data-cursor-color="#000">
       <div className={styles.cardMain}>
-          <img src={term.icon} alt='UX Glossary Terms Image' title='UX Glossary Terms Image'/>
+          <Image src={term.icon} alt='UX Glossary Terms Image' title='UX Glossary Terms Image' priority={false} width={100} height={100}/>
           <h2>{term.sName}</h2>
           <p>{truncatedDescription}...</p>
           <div className={styles.readMore}>

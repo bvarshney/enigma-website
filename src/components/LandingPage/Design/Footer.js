@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "@/styles/designLanding.module.css";
+import styles from "./designLanding.module.css";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
 import Image from "next/image";
 import gsap from "gsap";

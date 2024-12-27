@@ -20,8 +20,6 @@ export default async function handler (req, res) {
 
     const resendClient = new Resend(process.env.RESEND_API_KEY);
 
-    console.log(fields);
-
     let attachments = [];
 
     if (files.myFile) {

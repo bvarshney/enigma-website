@@ -1,69 +1,82 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  important: true,
-  darkMode: 'class',
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-    },
-    extend: {
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      fontFamily: {
-        'display': 'ClashDisplay',
-        'body': 'Ageo',
-        'body-2': 'Arial',
-      },
-      colors: {
-        'black-1': '#1a1a1a',
-        'transparent': 'transparent',
-        'current': 'currentColor',
-        'primary': '#5d5ad6',
-        'white': '#ffffff',
-        'white1': '#f9f9f9',
-        'white2': '#eeeeee',
-        'white3': '#d6d6d6',
-        'black': '#000000',
-        'black1': '#1a1a1a',
-        'black4': '#1f1f1f',
-        'black2': '#383838',
-        'black3': '#101010',
-        'gray': '#a2a2a2',
-        'gray1': '#8c8c8c',
-        'gray2': '#656565', 
-        'dark-primary': '#a2a529',
-      },
-      boxShadow: {
-        '3xl': '0 10px 30px -10px rgba(0, 0, 0, 0.2)',
-      },
-      screens: {
-        '2xl': '1280px',
-        '3xl': '1680px',
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-}
+	darkMode: ["class"],
+	content: [
+		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	theme: {
+		screens: {
+			'sDesktop': { 'max': '1520px' },
+			'tablet': { 'max': '1024px' },
+			'mobile': { 'max': '540px' }
+		},
+		extend: {
+			backgroundSize: {
+				'50%': '50%',
+				'16': '4rem',
+			},
+			colors: {
+				white: "var(--white)",
+				white1: "var(--white1)",
+				white2: "var(--white2)",
+				white3: "var(--white3)",
+				black: "var(--black)",
+				black1: "var(--black1)",
+				black2: "var(--black2)",
+				black3: "var(--black3)",
+				black4: "var(--black4)",
+				primary: "var(--primary)",
+				gray: "var(--gray)",
+				gray1: "var(--gray1)",
+				gray2: "var(--gray2)",
+			},
+			fontFamily: {
+				heading: "var(--heading)",
+				body: "var(--body)",
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				},
+				'fade-in': {
+					from: {
+						transform: 'translateY(-100%)'
+					},
+					to: {
+						transform: 'translateY(0%)'
+					}
+				}
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.5s ease-out',
+				'accordion-up': 'accordion-up 0.5s ease-out',
+				'fade-in': 'fade-in 1s ease-out',
+			},
+			transitionDelay: {
+				'2000': '2000ms',
+				'3000': '3000ms',
+			},
+		}
+	},
+	plugins: [require("tailwindcss-animate")],
+};

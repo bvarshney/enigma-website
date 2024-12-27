@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    
+	<script type="text/javascript" src="js/TweenLite.min.js"></script>
+	<script type="text/javascript" src="js/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="js/Draggable.min.js"></script>
+	<script type="text/javascript" src="js/EasePack.min.js"></script>
+
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		div{
+			position: absolute;
+		}
+
+		.wrapper{
+			width: 300px;
+			height: 250px;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			cursor: pointer;
+
+			opacity: 0;
+		}
+
+		.bg, .connect_cp, .intro_plug, .mic, .speakers, .wires, .logo, .plug, .coke, .artist, .sw_arr_cn, .cl_area, .logo_cn{
+
+			width: 300px;
+			height: 250px;
+			top: 0;
+			left: 0;
+
+			pointer-events: none;
+		}
+
+		.bg{
+			background-color: #ec2024;
+
+		}
+
+		.pulse_bg_cn{
+			width: 400px;
+			height: 400px;
+			top: -35px;
+			left: -55px;
+
+		}
+
+		.pulse_bg{
+			width: 400px;
+			height: 400px;
+			top: 0;
+			left: 0;
+		}
+
+		.plug_dr{
+			width: 40px;
+			height: 40px;
+			top: -10px;
+			left: 130px;
+		}
+
+		.intro_plug_cn{
+			width: 300px;
+			height: 250px;
+			top: 150px;
+			left: 0;
+		}
+
+		.drag_to{
+			width: 10px;
+			height: 10px;
+			top: 180px;
+			left: 210px;
+		}
+
+		.bub_an{
+			width: 30px;
+			height: 30px;
+			top: 180px;
+			left: 200px;
+		}
+
+		.bub_1, .bub_2{
+			width: 30px;
+			height: 30px;
+			top: 0;
+			left: 0;
+
+			border-radius: 50%;
+			background-color: #ec2024;
+		}
+
+		.bub_1{
+			opacity: 0.2;
+		}
+
+		.bub_2{
+			opacity: 0.4;
+		}
+
+		.speaker_cones_cn, .speaker_cones{
+			width: 246px;
+			height: 88px;
+		}
+
+		.speaker_cones_cn{
+			top: 190px;
+			left: 10px;
+		}
+
+		.speaker_cones{
+			top: 0;
+			left: 0;
+			background-size: cover;
+		}
+
+/*=============================================================================*/
+
+	</style>
+
+</head>
+
+<body class="inner-page">
+
+	<div class="wrapper">
+
+		<div class="bg"></div>
+		<div class="pulse_bg_cn">
+			<div class="pulse_bg"></div>
+		</div>
+		<div class="connect_cp"></div>
+	
+		<div class="wires"></div>
+		<div class="speakers">
+			<div class="speaker_cones_cn">
+				<div class="speaker_cones"></div>
+			</div>
+		</div>
+		<div class="mic"></div>
+		<div class="logo_cn">
+			<div class="logo"></div>
+		</div>
+		<div class="bub_an">
+			<div class="bub_1"></div>
+			<div class="bub_2"></div>
+		</div>
+		<div class="plug"></div>
+		<div class="coke"></div>
+		<div class="drag_to"></div>
+		<div class="intro_plug_cn">
+			<div class="intro_plug"></div>
+			<div class="plug_dr"></div>
+		</div>
+		<audio class="noiseAudio">
+			<source src="./media/Chaudhary_intro.mp3" type="audio/mpeg">
+		</audio>
+	
+	</div>
+
+<script type="text/javascript">
+
+	var wrapper = document.querySelector('.wrapper');
+
+	var noiseAudio = document.getElementsByTagName("audio")[0];
+
+// ========================================================================
+
+	var _dsptr = function(event){
+
+		var track = new Image(); 
+		track.src='{EVENT_URL}' + event;
+	}
+
+	function startEvent(event_name){
+
+		_dsptr(event_name);
+	}
+
+	function clickThrough(event){
+
+		window.open('{CLICK_URL}');
+	}
+
+	function endEv(event){
+
+		if(event.target.classList.contains('plug_dr') || event.target.classList.contains('intro_plug_cn')){
+
+			return;
+		}
+
+		window.open('{CLICK_URL}');
+
+	}
+
+	wrapper.addEventListener('mouseup', endEv);
+	wrapper.addEventListener('touchend', endEv);
+
+// ========================================================================
+
+var intro = new TimelineLite({paused: true});
+var animation = new TimelineLite({paused: true});
+var shake = new TimelineLite({paused: true, onComplete: function(){shake.restart()}});
+var pulse = new TimelineLite({onComplete: function(){pulse.restart()}});
+var pulse2 = new TimelineLite({onComplete: function(){pulse2.restart()}});
+var pulse3 = new TimelineLite({onComplete: function(){pulse3.restart()}});
+
+TweenLite.set('.pulse_bg_cn, .logo_cn, .coke, .connect_cp, .intro_plug_cn, .mic, .speakers, .wires', {opacity: 0, transform: 'translate(0, 0) scale(0.5)'});
+TweenLite.set('.plug', {opacity: 0});
+TweenLite.set('.speaker_cones_cn', {opacity: 0, transform: 'translate(-60px, -20px) scale(0.49)'});
+
+shake.to('.logo', 1, {ease: Power0.easeNone, transform: 'rotate(5deg)'});
+shake.to('.logo', 1, {ease: Power0.easeNone, transform: 'rotate(0deg)'});
+shake.to('.logo', 1, {ease: Power0.easeNone, transform: 'rotate(-5deg)'});
+shake.to('.logo', 1, {ease: Power0.easeNone, transform: 'rotate(0deg)'});
+
+pulse.to('.pulse_bg', 0.1, {transform: 'scale(0.9)'});
+pulse.to('.pulse_bg', 0.2, {transform: 'scale(1)'});
+pulse.to('.pulse_bg', 0.1, {transform: 'scale(0.95)'});
+pulse.to('.pulse_bg', 0.2, {transform: 'scale(1)'});
+
+pulse3.to('.speaker_cones', 0.1, {transform: 'scale(0.9)'});
+pulse3.to('.speaker_cones', 0.2, {transform: 'scale(1)'});
+pulse3.to('.speaker_cones', 0.1, {transform: 'scale(0.95)'});
+pulse3.to('.speaker_cones', 0.2, {transform: 'scale(1)'});
+
+pulse2.to('.bub_1', 0.3, {transform: 'scale(0.7)'}, 'an_1');
+pulse2.to('.bub_2', 0.3, {transform: 'scale(0.4)'}, 'an_1');
+pulse2.to('.bub_1', 0.4, {transform: 'scale(1)'}, 'an_2');
+pulse2.to('.bub_2', 0.4, {transform: 'scale(0.7)'}, 'an_2');
+pulse2.to('.bub_1', 0.3, {transform: 'scale(0.5)'}, 'an_3');
+pulse2.to('.bub_2', 0.3, {transform: 'scale(0.9)'}, 'an_3');
+pulse2.to('.bub_1', 0.4, {transform: 'scale(1)'}, 'an_4');
+pulse2.to('.bub_2', 0.4, {transform: 'scale(1)'}, 'an_4');
+
+intro.to('.pulse_bg_cn', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.1');
+intro.to('.logo_cn', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.2');
+intro.to('.speakers', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.3');
+intro.to('.wires', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.4');
+intro.to('.connect_cp', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.5');
+intro.to('.intro_plug_cn', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.6');
+
+animation.to('.intro_plug', 0.2, {transform: 'translate(62px, 33px)'});
+animation.to('.speaker_cones_cn', 0.5, {opacity: 1}, 'an_1');
+animation.to('.speakers', 0.2, {opacity: 1, transform: 'translate(30px, -30px) scale(1.2)'}, 'an_1');
+animation.to('.speakers', 0.2, {opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.2');
+animation.to('.wires, .intro_plug_cn, .bub_an, .connect_cp', 0.2, {opacity: 0}, 'an_1+=0.2');
+animation.to('.logo_cn', 0.5, {ease: Back.easeOut.config(2), transform: 'translate(-120px, 10px) scale(1)'}, 'an_1+=0.3');
+animation.to('.pulse_bg_cn', 0.5, {ease: Back.easeOut.config(2), transform: 'translate(-37px, 7px) scale(1)'}, 'an_1+=0.4');
+animation.to('.speakers', 0.5, {ease: Back.easeOut.config(2), transform: 'translate(150px, 0) scale(1)'}, 'an_1+=0.4');
+animation.to('.mic', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.5');
+animation.to('.coke', 0.5, {ease: Back.easeOut.config(2), opacity: 1, transform: 'translate(0, 0) scale(1)'}, 'an_1+=0.8');
+
+// ========================================================================
+
+var dragged = false;
+
+function playAudio(){
+
+	var checker = setInterval(function(){
+
+		if(noiseAudio.readyState > 3 && dragged){
+
+			noiseAudio.volume = 0.5;
+			noiseAudio.play();
+
+			clearInterval(checker);
+		}
+	}, 100);
+}
+
+wrapper.addEventListener('touchend', playAudio, false);
+wrapper.addEventListener('mouseup', playAudio, false);
+
+// ========================================================================
+
+	var draggables = ['.plug_dr'];
+	
+
+	var mobile = false;
+
+	var dragX = 0;
+	var dragY = 0;
+
+	var clone = document.querySelector('.intro_plug');
+
+	draggables.forEach(function(element){
+
+		var dragging = Draggable.create(element, {
+
+			type: 'x, y',
+			bounds: wrapper,
+			zIndexBoost: true,
+			edgeResistance: 0.65,
+			allowEventDefault: true,
+
+			onDrag: function(){
+				
+				if (this.hitTest('.drag_to', 1)){
+
+					// dragging[0].disable();
+					dragged = true;
+					this.kill();
+
+					startEvent('drag_finish');
+
+					animation.play();
+					// playAudio();
+					
+
+				}
+				else{
+
+					dragX = this.endX;
+					dragY = this.endY;
+
+					TweenLite.to('.intro_plug', 0.1, {transform: 'translate(' + dragX + 'px, ' + dragY + 'px)'});
+				}
+			},
+
+			onDragStart: function(){
+
+				// startEvent('drag_start');
+			},
+
+			onDragEnd: function(){
+
+				document.querySelector(element).style.zIndex = 0;
+
+				if(!dragged){
+
+					TweenLite.to(element, 0.2, {transform: 'translate(0, 0)'});
+					TweenLite.to('.intro_plug', 0.1, {transform: 'translate(0, 0)'});
+					dragged = false;
+				}
+				
+
+			}
+		});	
+	});
+
+
+// ========================================================================
+
+	function init(){
+
+		TweenLite.to('.wrapper', 0.5, {opacity: 1});
+
+		setTimeout(function(){intro.play();}, 500);
+	}
+	
+// ========================================================================
+
+	var url = './imgs/';
+	var imgs = ['pulse_bg.png', 'logo.png', 'coke.png', 'plug.png', 'connect_cp.png', 'intro_plug.png', 'mic.png', 'speakers.png', 'speaker_cones.png', 'wires.png'];
+	var imgsLoaded = 0;
+
+	function loadImgs(){
+
+		var domCollection = document.getElementsByTagName('div');
+		var classNames = [];
+
+		for (var key in domCollection) {
+
+			if (domCollection.hasOwnProperty(key)) {
+
+				classNames.push(domCollection[key].className);
+			}
+		}
+
+	    imgs.forEach(function(element){
+
+	        var img = new Image();
+
+	        img.addEventListener('load', function(event){
+
+				imgsLoaded ++;
+				
+				var imgName = element.split(".")[0];
+
+				classNames.forEach(function(element, index){
+
+					if(element === imgName){
+
+						domCollection[index].style.backgroundImage = 'url(' + event.target.src + ')';
+					}
+				});
+
+	            if(imgsLoaded === imgs.length){
+
+	                init();
+	            }
+	            
+	        });
+
+	        img.src = url + element;
+
+	    });
+	}
+
+	loadImgs();
+
+</script>
+
+
+
+
+</body></html>

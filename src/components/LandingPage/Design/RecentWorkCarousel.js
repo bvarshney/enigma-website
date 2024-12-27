@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from "@/styles/designLanding.module.css";
+import styles from "./designLanding.module.css";
 import Image from 'next/image';
 
 const SliderComponent = () => {

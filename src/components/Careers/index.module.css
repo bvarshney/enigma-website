@@ -1,0 +1,52 @@
+.careerDetail {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.careerDetail p{
+    padding-bottom: 24px;
+    line-height: 1.4;
+}
+
+.careerDetail h3:first-child {
+    padding-top: 0;
+}
+
+.careerDetail h3{
+    font-size: 40px;
+    letter-spacing: normal;
+    line-height: 1.2;
+    font-weight: 500;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.careerDetail ul {
+    line-height: 1.4;
+    padding-bottom: 24px;
+    list-style: disc;
+}
+
+.careerDetail li {
+    margin-bottom: 10px;
+    margin-left: 14px;
+}
+
+.careerDetail li:last-child {
+    margin-bottom: 0;
+}
+
+.careerDetail a {
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+.careerDetail a:hover,
+.careerDetail a:focus {
+    text-decoration: underline;
+    white-space: wrap;
+}
+
+.careerDetail strong {
+    font-weight: 600;
+}

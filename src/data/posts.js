@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const POST_FIELDS = gql`
   fragment PostFields on Post {
@@ -119,42 +119,35 @@ export const QUERY_ALL_POSTS = gql`
 `;
 
 export const QUERY_STICKY_POST = gql`
-{
-  posts(where: {onlySticky: true}, first: 1) {
-    edges {
-      node {
-        title
-        content
-        categories {
-          nodes {
-            name
-          }
-        }
-        author {
-          node {
-            name
-            avatar {
-              url
+  {
+    posts(where: { onlySticky: true }, first: 1) {
+      edges {
+        node {
+          title
+          content
+          categories {
+            nodes {
+              name
             }
           }
-        }
-        date
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-        tags {
-          edges {
+          author {
             node {
               name
+              avatar {
+                url
+              }
+            }
+          }
+          date
+          featuredImage {
+            node {
+              sourceUrl
             }
           }
         }
       }
     }
   }
-}
 `;
 
 export const QUERY_POST_BY_SLUG = gql`
@@ -163,37 +156,17 @@ export const QUERY_POST_BY_SLUG = gql`
       author {
         node {
           avatar {
-            height
             url
-            width
           }
-          id
           name
-          slug
         }
       }
       id
-      categories {
-        edges {
-          node {
-            databaseId
-            id
-            name
-            slug
-          }
-        }
-      }
       content
       date
-      excerpt
       featuredImage {
         node {
-          altText
-          caption
           sourceUrl
-          srcSet
-          sizes
-          id
         }
       }
       pageLoader {
@@ -214,6 +187,38 @@ export const QUERY_POST_BY_SLUG = gql`
       title
       slug
       isSticky
+      tags {
+        edges {
+          node {
+            name
+          }
+        }
+      }
+      relatedPosts {
+        relatedPosts {
+          edges {
+            node {
+              ... on Post {
+                id
+                featuredImage {
+                  node {
+                    sourceUrl
+                  }
+                }
+                slug
+                title
+                categories {
+                  edges {
+                    node {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
@@ -221,7 +226,10 @@ export const QUERY_POST_BY_SLUG = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID_INDEX = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(
+      first: 10000
+      where: { categoryId: $categoryId, hasPassword: false }
+    ) {
       edges {
         node {
           ...PostFields
@@ -234,7 +242,10 @@ export const QUERY_POSTS_BY_CATEGORY_ID_INDEX = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(
+      first: 10000
+      where: { categoryId: $categoryId, hasPassword: false }
+    ) {
       edges {
         node {
           ...PostFields
@@ -260,7 +271,10 @@ export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(
+      first: 10000
+      where: { categoryId: $categoryId, hasPassword: false }
+    ) {
       edges {
         node {
           ...PostFields
