@@ -1,7 +1,7 @@
 import { IncomingForm } from 'formidable';
 import fs from 'fs';
 import { Resend } from 'resend';
-import PopupTemplate from '../../components/EmailTemplate/PopupTemplate';
+import PopupTemplate from '@/components/EmailTemplate/PopupTemplate';
 
 export const config = {
   api: {
