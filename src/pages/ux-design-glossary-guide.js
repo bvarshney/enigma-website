@@ -7,8 +7,8 @@ import gsap from "gsap";
 import { fadeUp } from "@/lib/gsapAnimations";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import MetaData from "@/components/MetaData";
-import Modal from "@/components/ux-glossary/modal";
-import Card from "@/components/ux-glossary/card";
+import Modal from "@/components/ux-glossary/Modal";
+import Card from "@/components/ux-glossary/Card";
 import Data from "@/components/ux-glossary/Data.json";
 
 export default function Page() {
