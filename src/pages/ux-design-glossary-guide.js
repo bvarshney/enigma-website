@@ -7,9 +7,9 @@ import gsap from "gsap";
 import { fadeUp } from "@/lib/gsapAnimations";
 import { WebpageJsonLd } from "@/lib/json-ld";
 import MetaData from "@/components/MetaData";
-import Termcard from "@/components/UXGlossary/TermCard";
-import Termmodal from "@/components/UXGlossary/TermModal";
-import glossaryData from "@/components/UXGlossary/glossaryData.json";
+import Termcard from "../components/UXGlossary/Termcard";
+import Termmodal from "../components/UXGlossary/Termmodal";
+import glossaryData from "../components/UXGlossary/glossaryData.json"
 
 export default function Page() {
     const { startLenis, stopLenis } = useLenisFunctions();
