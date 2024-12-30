@@ -1,0 +1,35 @@
+.offerCardBg {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    place-items: center;
+    display: grid;
+    margin: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    animation-name: translateCardAnimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    scale: 1.5;
+  }
+
+  @keyframes translateCardAnimation {
+    0% {
+      transform: translate(0) rotate(0deg);
+    }
+    25% {
+      transform: translate(80px, 80px) rotate(90deg);
+    }
+    50% {
+      transform: translate(0) rotate(180deg);
+    }
+    75% {
+      transform: translate(-80px, -80px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0) rotate(1turn);
+    }
+  }

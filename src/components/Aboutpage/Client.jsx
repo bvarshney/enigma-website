@@ -9,7 +9,7 @@ const Client = () => {
                         <span className='stroke'>clients{" "}</span>love us.
                     </h2>
                     <div className='w-[60%] ml-auto tablet:w-full text-justify'>
-                        <p className='content para-anim'>
+                        <p className='text-[2vw] leading-[1.5] font-medium para-anim tablet:text-[4vw] mobile:text-[5vw]'>
                             It&apos;s not just the eminence & superior quality of our work. It&apos;s our attitude, our approach, our meticulous attention to detail, our ability to understand their business & their goals, and most of all, it&apos;s the way we treat our clients –They walk in as clients and stay as friends! That&apos;s why we say, we don&apos;t work for clients, we work with our friends.
                         </p>
                     </div>

@@ -34,7 +34,6 @@ const Header = () => {
     const router = useRouter();
 
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-    const [hasBackground, setHasBackground] = useState(false);
 
     useEffect(() => {
         const handleRouteChange = () => {
@@ -56,7 +55,6 @@ const Header = () => {
             const currentScrollY = window.scrollY;
 
             setIsHeaderVisible(currentScrollY <= lastScrollY);
-            setHasBackground(currentScrollY > 100);
 
             lastScrollY = currentScrollY;
         };
@@ -113,7 +111,7 @@ const Header = () => {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-[100] transition-transform duration-500 ${isHeaderVisible ? "translate-y-none" : "-translate-y-full"} ${hasBackground ? "bg-white/50 backdrop-blur-md" : ""}`}>
+            <header className={`fixed top-0 left-0 right-0 z-[100] transition-transform duration-500 ${isHeaderVisible ? "translate-y-none" : "-translate-y-full"}`}>
                 <div className="w-[92%] mx-auto flex justify-between items-center py-[2vw] tablet:py-[3vw] tablet:w-[90%] mobile:w-[85%] mobile:py-[4vw] header-inner-container">
                     <div className="logo w-[2.3vw] h-full tablet:w-[6vw] mobile:w-[34px]">
                         <Link href="/" aria-label="Go to Homepage" prefetch={false}>

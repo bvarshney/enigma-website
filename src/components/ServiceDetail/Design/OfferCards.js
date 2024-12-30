@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRef } from "react";
+import styles from "../index.module.css";
 
 const OfferCards = () => {
     const container = useRef(null);
@@ -62,7 +63,7 @@ const Card = ({ text }) => {
         <>
             <div className="text-center h-[10vw] flex items-center justify-center rounded-2xl shadow-lg relative overflow-hidden p-10 bg-white dark:bg-white2 group tablet:h-[15vh] mobile:h-[20vh] fadeup" >
                 <div className="absolute top-[-10%] left-0 bottom-0 right-0 backdrop-blur-[80px] z-[1]"></div>
-                <div className="service-offer-card-bg opacity-0 duration-500 group-hover:opacity-90">
+                <div className={`${styles.offerCardBg} opacity-0 duration-500 group-hover:opacity-90`}>
                     <span className="card-shape-6 card-bg-1 bg-[#f5dd94] z-[3] absolute w-[150px] h-[150px] rounded-full blur-[5px]"></span>
                     <span className="card-shape-6 card-bg-2 bg-[#f79694] z-[2] absolute w-[280px] h-[280px] rounded-full blur-[5px]"></span>
                     <span className="card-shape-6 card-bg-3 bg-[#7f7de4] z-[1] absolute w-[550px] h-[550px] rounded-full"></span>

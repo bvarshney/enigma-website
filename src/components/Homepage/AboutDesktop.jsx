@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import LazyVideo from "../LazyVideo";
+import styles from "@/styles/cta.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -139,7 +140,6 @@ const AboutDesktop = () => {
                                         muted
                                         playsInline
                                         autoPlay
-                                        // poster="/assets/homepage/ea-logo-poster.jpg"
                                         videoSrc="/assets/homepage/ea-logo-video.webm"
                                         type="video/webm"
                                         className="w-full h-full object-cover"
@@ -155,9 +155,9 @@ const AboutDesktop = () => {
                                 <p className="font-medium text-[2vw] leading-[1.4] mb-[1.5vw] text-center">
                                     Empowered by Neuromarketing Principles, our services open endless opportunities for each brand we partner with. <br /> Let&apos;s amplify your potential! 🚀
                                 </p>
-                                <Link href="/get-in-touch" className="en-cta text-[2vw] font-heading" data-cursor-exclusion data-cursor-size="100px">
-                                    <span className="relative cta-span">Say, Hello!</span>
-                                    <span className="cta-emoji ml-2 inline-block">👋</span>
+                                <Link href="/get-in-touch" className={`${styles.enCta} text-[2vw] font-heading`} data-cursor-exclusion data-cursor-size="100px">
+                                    <span className={`relative ${styles.ctaSpan}`}>Say, Hello!</span>
+                                    <span className={`${styles.ctaEmoji} ml-2 inline-block`}>👋</span>
                                 </Link>
                             </div>
                         </div>

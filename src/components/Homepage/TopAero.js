@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import TopHomeParticles from "./TopAeroParticles";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import styles from "@/styles/particles.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,17 +46,17 @@ export default function TopAero({ text }) {
     <>
       <section ref={container} data-cusrsor-color="#000" data-cursor-size="0px">
         <div className="flex flex-col relative w-screen h-screen z-[-99] tablet:h-[70vh]">
-          <div className="text-container top-aero-demo">
-            <p ref={aeroText} className="aero-desk-1 w-[70%] tablet:w-[90%] font-heading">
+        <div className={`${styles.textContainer} dark:!mix-blend-darken`}>
+            <p ref={aeroText} className="w-[70%] tablet:w-[90%] font-heading">
               {text}
             </p>
             <TopHomeParticles />
           </div>
-          <div ref={aeroMain} className="aerosol-main">
-            <div className="shapes">
-              <div className="shape-10 shape-1"></div>
-              <div className="shape-10 shape-2"></div>
-              <div className="shape-10 shape-3"></div>
+          <div ref={aeroMain} className={styles.aerosolMain}>
+          <div className={styles.shapes}>
+              <div className={`${styles.shape10} ${styles.shape1} shape-10`}></div>
+              <div className={`${styles.shape10} ${styles.shape2} shape-10`}></div>
+              <div className={`${styles.shape10} ${styles.shape3} shape-10`}></div>
             </div>
           </div>
         </div>

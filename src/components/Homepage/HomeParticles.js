@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import styles from "@/styles/particles.module.css";
 
 class Particles {
   constructor(options) {
@@ -240,37 +241,35 @@ class Particles {
   }
 }
 
-export default function partText() {
+export default function PartText() {
+  const containerRef = useRef(null);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const demoParticles = document.querySelector(".cb-particles");
     const particles = new Particles({
-      container: demoParticles,
+      container: containerRef.current,
       itemsSelector: ".cb-particles-item",
     });
   }, []);
 
   return (
-    <div className="cb-tabs-content">
-      <section className="cb-demo">
-        <div className="cb-particles">
-          <span className="cb-particles-item -text -v1 -s4">Hello</span>
-          <span className="cb-particles-item -text -v2 -s4">Namaste</span>
-          <span className="cb-particles-item -text -v3 -s4">Hola</span>
-          <span className="cb-particles-item -text -v4 -s4">Bonjour</span>
-          <span className="cb-particles-item -text -v5 -s4">Nǐn hǎo</span>
-          <span className="cb-particles-item -text -v6 -s4">Olá</span>
-          <span className="cb-particles-item -text -v7 -s4">Shalom</span>
-          <span className="cb-particles-item -text -v8 -s4">Ciao</span>
-          <span className="cb-particles-item -text -v9 -s4">Aloha</span>
-          <span className="cb-particles-item -text -v10 -s4">Hei</span>
-          <span className="cb-particles-item -text -v11 -s4">Hallá</span>
-          <span className="cb-particles-item -text -v12 -s4">Salve</span>
-          <span className="cb-particles-item -text -v13 -s4">Xin Chào</span>
-          <span className="cb-particles-item -text -v14 -s4">Salaam</span>
-          <span className="cb-particles-item -text -v15 -s4">Zdraveĭte</span>
-        </div>
-      </section>
-    </div>
+    <section>
+      <div ref={containerRef}>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v1} cb-particles-item`}>Hello</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v2} cb-particles-item`}>Namaste</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v3} cb-particles-item`}>Hola</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v4} cb-particles-item`}>Bonjour</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v5} cb-particles-item`}>Nǐn hǎo</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v6} cb-particles-item`}>Olá</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v7} cb-particles-item`}>Shalom</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v8} cb-particles-item`}>Ciao</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v9} cb-particles-item`}>Aloha</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v10} cb-particles-item`}>Hei</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v11} cb-particles-item`}>Hallá</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v12} cb-particles-item`}>Salve</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v13} cb-particles-item`}>Xin Chào</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v14} cb-particles-item`}>Salaam</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v15} cb-particles-item`}>Zdraveĭte</span>
+      </div>
+    </section>
   );
 }

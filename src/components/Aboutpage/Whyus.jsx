@@ -11,10 +11,10 @@ const Whyus = () => {
             </h2>
           </div>
           <div className='w-[65%] mt-[10%] space-y-[5%] tablet:mt-0 tablet:w-full text-justify mobile:space-y-[10%]'>
-            <p className='content para-anim'>
-              We have been asked this question like a zillion times – How are you different from the other agencies out there. Well, the truth is that we were “Born Different”.
+            <p className='text-[2vw] leading-[1.5] font-medium para-anim tablet:text-[4vw] mobile:text-[5vw]'>
+              We have been asked this question like a zillion times - How are you different from the other agencies out there. Well, the truth is that we were “Born Different”.
             </p>
-            <p className='content para-anim'>
+            <p className='text-[2vw] leading-[1.5] font-medium para-anim tablet:text-[4vw] mobile:text-[5vw]'>
               We see the bigger picture, we are ambitious, we set the bar high in all facets of our work, we love what we do and most importantly, we were not made for the overpopulated plains of mediocrity. Swayed already? 😏 But we&apos;ve got a few more reasons for why you&apos;d want to work with us:
             </p>
           </div>

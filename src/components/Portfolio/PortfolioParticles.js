@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import styles from "@/styles/particles.module.css";
 
 class Particles {
   constructor(options) {
@@ -241,30 +242,29 @@ class Particles {
 }
 
 export default function Particle() {
+  const containerRef = useRef(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const demoParticles = document.querySelector(".cb-particles");
     const particles = new Particles({
-      container: demoParticles,
+      container: containerRef.current,
       itemsSelector: ".cb-particles-item",
     });
   }, []);
 
   return (
-    <div className="cb-tabs-content">
-      <section className="cb-demo">
-        <div className="cb-particles">
-          <span className="cb-particles-item size-emo -text -v1 -s4">🔥</span>
-          <span className="cb-particles-item size-emo -dot -text -v3 -s4 -c3 -p1"></span>
-          <span className="cb-particles-item size-emo -text -v2 -s4">✊</span>
-          <span className="cb-particles-item size-emo -text -v5 -s4 -dot -c3 -p2"></span>
-          <span className="cb-particles-item size-emo -text -v4 -s4">😎</span>
-          <span className="cb-particles-item size-emo -text -v7 -s4 -dot -c3 -p3"></span>
-          <span className="cb-particles-item size-emo -text -v8 -s4">💻</span>
-          <span className="cb-particles-item size-emo -text -v9 -s4 -dot -c3 -p1"></span>
-          <span className="cb-particles-item size-emo -text -v6 -s4">🎉</span>
-          <span className="cb-particles-item size-emo -text -v10 -s4 -dot -c3 -p3"></span>
-        </div>
-      </section>
-    </div>
+    <section>
+      <div ref={containerRef}>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v1} cb-particles-item`}>🔥</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v3} cb-particles-item`}></span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v2} cb-particles-item`}>✊</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v5} cb-particles-item`}></span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v4} cb-particles-item`}>😎</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v7} cb-particles-item`}></span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v8} cb-particles-item`}>💻</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v9} cb-particles-item`}></span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v6} cb-particles-item`}>🎉</span>
+        <span className={`${styles.cbParticlesItem} ${styles._s4} ${styles._v10} cb-particles-item`}></span>
+      </div>
+    </section>
   );
 }
