@@ -60,7 +60,7 @@ export default function BlogDetail({ post }) {
   fadeUp();
 
   useEffect(() => {
-    if (globalThis.innerWidth < 1024) {
+    if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
         ScrollTrigger.create({
           trigger: leftSection.current,
