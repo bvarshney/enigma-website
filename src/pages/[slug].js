@@ -60,17 +60,19 @@ export default function BlogDetail({ post }) {
   fadeUp();
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: leftSection.current,
-        start: "top 20%",
-        endTrigger: rightSection.current,
-        end: "bottom 80%",
-        invalidateOnRefresh: true,
-        pin: leftSection.current,
+    if (globalThis.innerWidth < 1024) {
+      let ctx = gsap.context(() => {
+        ScrollTrigger.create({
+          trigger: leftSection.current,
+          start: "top 20%",
+          endTrigger: rightSection.current,
+          end: "bottom 80%",
+          invalidateOnRefresh: true,
+          pin: leftSection.current,
+        });
       });
-    });
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }
   }, []);
 
   if (!post) {
