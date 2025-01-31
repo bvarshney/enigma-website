@@ -21,7 +21,6 @@ const AboutMobile = () => {
                     end: "+=2000 top",
                     scrub: 0.5,
                     pin: true,
-                    pinType: "transform"
                 }
             });
 
