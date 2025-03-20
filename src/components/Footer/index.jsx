@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
 
           <div className="w-fit mx-auto pt-[2vw] tablet:pt-[15%] tablet:w-full text-center">
-            <p className="text-[1vw] text-gray2 tracking-[1px] tablet:text-[3vw] tablet:border-t border-slate-300 tablet:pt-[3vw]">© 2023 Enigma Digital Consulting, LLP. All Rights Reserved. All Wrongs Reversed.</p>
+            <p className="text-[1vw] text-gray2 tracking-[1px] tablet:text-[3vw] tablet:border-t border-slate-300 tablet:pt-[3vw]">© 2025 Enigma Digital Consulting, LLP. All Rights Reserved. All Wrongs Reversed.</p>
           </div>
         </div>
       </footer>
