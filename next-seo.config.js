@@ -7,6 +7,10 @@ export default {
             name: 'viewport',
             content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0',
         },
+        {
+          name: 'google-site-verification',
+          content: "aqmk50ZtfefKhtzh9Fr2VOpKByQGeMyL60rwwgl-r7A",
+        }
     ],
     additionalLinkTags: [
         {
