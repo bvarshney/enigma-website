@@ -12,7 +12,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }) {
-
+  
   return (
     <>
       <DefaultSeo {...nextSeoConfig} />
@@ -27,7 +27,6 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </MediaContextProvider>
       </ReactLenis>
-
       <GoogleTagManager gtmId="GTM-PV4GH9JJ" />
       <SpeedInsights />
       <Analytics />

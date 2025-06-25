@@ -86,7 +86,8 @@ const Hero = () => {
                         </div>
                     </h1>
                     <p className="text-[1.2vw] text-black2 text-justify tracking-[0.4px] leading-[1.7] absolute w-[32vw] top-[25%] right-[13%] hero-anim tablet:static tablet:w-full tablet:text-[3.7vw] tablet:leading-[1.4] tablet:mt-[8vw] mobile:text-[6vw]">
-                        Harnessing the power of<span className="font-medium text-black"> Emotion, Design, Technology & Neuromarketing, </span>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes.
+                        {/* Harnessing the power of<span className="font-medium text-black"> Emotion, Design, Technology & Neuromarketing, </span>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes. */}
+                        As a leading UI UX and web design agency, we harness the power of emotion, design, technology, and neuromarketing to craft digital brand experiences that drive real results.
                     </p>
                 </div>
 

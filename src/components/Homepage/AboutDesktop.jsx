@@ -153,7 +153,7 @@ const AboutDesktop = () => {
                         <div className="flex items-center justify-center h-full w-full relative">
                             <div ref={ctaText} className="w-[36.8%] text-center">
                                 <p className="font-medium text-[2vw] leading-[1.4] mb-[1.5vw] text-center">
-                                    Empowered by Neuromarketing Principles, our services open endless opportunities for each brand we partner with. <br /> Let&apos;s amplify your potential! 🚀
+                                    Empowered by neuromarketing principles, our UI UX and web design services open endless opportunities for each brand we partner with. <br /> Let&apos;s amplify your potential! 🚀
                                 </p>
                                 <Link href="/get-in-touch" className={`${styles.enCta} text-[2vw] font-heading`} data-cursor-exclusion data-cursor-size="100px">
                                     <span className={`relative ${styles.ctaSpan}`}>Say, Hello!</span>

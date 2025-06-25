@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    title: 'Enigma | Digital Product Design, UI/UX & Neuromarketing Agency',
-    description: "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
+    title: 'A Global, Award-Winning UI UX & Website Design Agency | Enigma Digital',
+    description: "Enigma Digital, a global website design and UI UX design Agency, delivers cutting-edge website design services across the USA, Canada, the Middle East, and India.",
     additionalMetaTags: [
         {
             name: 'viewport',

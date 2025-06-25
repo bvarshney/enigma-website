@@ -338,7 +338,7 @@ async function getFeedData(apolloClient, process, verbose = false) {
 async function getSitemapData(apolloClient, process, verbose = false) {
   const posts = await getAllPosts(apolloClient, process, verbose);
   const pages = await getPages(apolloClient, process, verbose);
-  const jobs = await getPages(apolloClient, process, verbose);
+  const jobs = await getJobs(apolloClient, process, verbose);
   const categories = await getCategories(apolloClient, process, verbose);
 
   return {
