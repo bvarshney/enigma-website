@@ -23,12 +23,12 @@ const meta = {
 }
 
 export const metadata = generateMetadata({
-    title: meta.title,
-    description: meta.description,
-    datePublished: meta.date_published,
-    dateModified: meta.date_modified,
-    openGraphImage: meta.img,
-    slug: meta.slug,
+  title: meta.title,
+  description: meta.description,
+  datePublished: meta.date_published,
+  dateModified: meta.date_modified,
+  openGraphImage: meta.img,
+  slug: meta.slug,
 });
 
 export default function Homepage() {
