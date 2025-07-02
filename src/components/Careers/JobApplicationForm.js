@@ -1,3 +1,4 @@
+"use client"
 import axios from "axios";
 import { Loader2Icon, XIcon } from "lucide-react";
 import { useState } from "react";
@@ -111,12 +112,12 @@ const JobApplicationForm = ({ jobTitle }) => {
         setIsLoading(true);
 
         const formData = new FormData();
+        formData.append("jobTitle", jobTitle);
         formData.append('name', name);
         formData.append('email', email);
         formData.append('number', number);
         formData.append('location', location);
         formData.append('url', url);
-        formData.append('jobTitle', jobTitle);
 
         formData.append('experiences', JSON.stringify(experiences.map((_, index) => {
             const years = parseInt(event.target[`years_${index}`].value) || 0;
@@ -131,7 +132,7 @@ const JobApplicationForm = ({ jobTitle }) => {
         }
 
         try {
-            const response = await axios.post("/api/jobDetailForm", formData);
+            const response = await axios.post("/api/career-form", formData);
 
             if (response.status === 200) {
                 setMessageStatus('success');

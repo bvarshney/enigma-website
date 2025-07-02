@@ -1,8 +1,8 @@
+"use client"
 import React, { useEffect } from "react";
 import gsap from "gsap";
 
 const ServiceMarquee = () => {
-
     useEffect(() => {
         gsap.utils.toArray(".services-catalog-row").forEach((line, i) => {
             const links = line.querySelectorAll(".services-catalog-row-item"),

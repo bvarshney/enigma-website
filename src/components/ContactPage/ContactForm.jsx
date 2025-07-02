@@ -1,3 +1,4 @@
+'use client';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -12,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import { Loader2Icon } from "lucide-react";
 import { useState } from "react";
-import Router from "next/router";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
     name: z.string().min(2, {
@@ -32,6 +33,7 @@ const FormSchema = z.object({
 
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const router = useRouter();
 
     const form = useForm({
         resolver: zodResolver(FormSchema),
@@ -54,7 +56,7 @@ const ContactForm = () => {
         };
     
         try {
-          const res = await fetch("/api/contactFormSubmission", {
+          const res = await fetch("/api/contact-form", {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
@@ -66,7 +68,7 @@ const ContactForm = () => {
           form.reset();
           setIsSubmitting(false);
           setTimeout(() => {
-            Router.push("/thank-you");
+            router.push("/thank-you");
           }, 1000);
         } catch (error) {
           console.log(error);

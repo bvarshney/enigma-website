@@ -1,3 +1,4 @@
+"use client"
 import React, { FC, useCallback, useLayoutEffect, useRef } from 'react';
 
 import { gsap, Expo, Power4 } from 'gsap';

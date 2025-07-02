@@ -1,7 +1,11 @@
+"use client"
+import { fadeUp } from "@/lib/gsapAnimations";
 import Image from "next/image";
 import Link from "next/link";
 
 const MobilePortfolio = ({ projectData }) => {
+  
+   fadeUp()
     return (
         <>
             <div className="grid grid-cols-2 items-center gap-x-[4vw] gap-y-[14vw] justify-between w-full">

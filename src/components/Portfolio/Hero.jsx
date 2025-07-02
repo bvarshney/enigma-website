@@ -1,9 +1,15 @@
+"use client"
+
+import { fadeUp, TitleAnim } from "@/lib/gsapAnimations";
 import { SplitInChar } from "@/lib/splitText";
 import gsap from "gsap";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
+    fadeUp();
+    TitleAnim();
+    
     const container = useRef(null);
     const videoRef = useRef(null);
     const imageRef = useRef(null);

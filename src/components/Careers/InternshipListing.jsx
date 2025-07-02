@@ -14,15 +14,15 @@ const InternshipListing = ({ jobs }) => {
                     </div>
 
                     <div className="mt-20 grid grid-cols-3 gap-[2.5%] tablet:grid-cols-2 tablet:gap-8 mobile:grid-cols-1">
-                        {jobs.map((item, index) => (
+                        {jobs?.map((job, index) => (
                             <JobCard
                                 key={index}
-                                benefits={item.jobFields.benefits}
-                                link={item.slug}
-                                img={item.featuredImage.sourceUrl}
-                                title={item.title}
-                                text={item.excerpt}
-                                status={item.tags[0].name}
+                                benefits={job.features}
+                                link={job.slug}
+                                img={job.profileImage}
+                                title={job.jobTitle}
+                                text={job.smallDescription}
+                                status={job.tag}
                             />
                         ))}
                     </div>

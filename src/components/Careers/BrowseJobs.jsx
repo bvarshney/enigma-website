@@ -1,8 +1,10 @@
+"use client"
+import { fadeUp } from "@/lib/gsapAnimations";
 import { useLenis } from "lenis/react";
 import Image from "next/image";
 
 const BrowseJobs = () => {
-
+    fadeUp()
     const lenis = useLenis();
 
     const onClick = () => {

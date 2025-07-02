@@ -1,3 +1,4 @@
+"use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
@@ -9,9 +10,11 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { SplitInWord } from '@/lib/splitText';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ClientCarousel = () => {
+
     const container = useRef(null);
     const swiperContainer = useRef(null);
     const swiperRef = useRef(null);

@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useEffect } from "react";
 import Double from "./Double";
 import gsap from "gsap";

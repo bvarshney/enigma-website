@@ -1,9 +1,9 @@
+"use client"
 import { useRef, useEffect } from "react";
 import Double from "./Double";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { SplitInLineWordChar } from "@/lib/splitText";
-import { fadeUp } from "@/lib/gsapAnimations";
 import { Media } from "@/lib/media";
 import { projectData } from "./projectData";
 import MobilePortfolio from "./MobilePortfolio";

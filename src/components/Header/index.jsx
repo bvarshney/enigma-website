@@ -1,14 +1,15 @@
+"use client"
 import Link from "next/link";
 import styles from "./index.module.css";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useLenisFunctions } from "@/lib/utils";
 import Menu from "./Menu";
-import { useRouter } from "next/router";
 import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import Showreel from "./Showreel";
- 
+import { useRouter, usePathname } from "next/navigation";
+
 const Header = () => {
 
     useEffect(() => {
@@ -30,23 +31,29 @@ const Header = () => {
     const [disabled, setDisabled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isShowreel, setIsShowreel] = useState(false);
-
-    const router = useRouter();
-
     const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
+
+    const router = useRouter();
+    const pathname = usePathname();
+
     useEffect(() => {
-        const handleRouteChange = () => {
-            lenis.start();
-            lenis.scrollTo(0, {immediate: true})
-        };
+        lenis&&lenis.start();
+        lenis&&lenis.scrollTo(0, { immediate: true });
+    }, [pathname]);
 
-        router.events.on("routeChangeComplete", handleRouteChange);
+    // useEffect(() => {
+    //     const handleRouteChange = () => {
+    //         lenis.start();
+    //         lenis.scrollTo(0, {immediate: true})
+    //     };
 
-        return () => {
-            router.events.off("routeChangeComplete", handleRouteChange);
-        };
-    }, [router, lenis]);
+    //     router.events.on("routeChangeComplete", handleRouteChange);
+
+    //     return () => {
+    //         router.events.off("routeChangeComplete", handleRouteChange);
+    //     };
+    // }, [router, lenis]);
 
     useEffect(() => {
         let lastScrollY = window.scrollY;

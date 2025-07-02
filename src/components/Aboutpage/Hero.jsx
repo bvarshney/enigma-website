@@ -1,11 +1,14 @@
+"use client"
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import styles from "./index.module.css";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+   
     const container = useRef(null);
     const svgRef = useRef(null);
     const headingRef = useRef(null);

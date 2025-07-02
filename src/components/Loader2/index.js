@@ -1,3 +1,4 @@
+"use client"
 import styles from './style.module.css';
 import { useEffect, useState } from 'react';
 import { m, domAnimation, LazyMotion } from 'framer-motion';

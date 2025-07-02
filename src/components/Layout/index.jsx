@@ -1,19 +1,29 @@
-import { Cursor } from "../Cursor";
 import Header from "../Header";
-import { Media } from "@/lib/media";
+import { Media, MediaContextProvider } from "@/lib/media";
 import Footer from "../Footer";
+import { ReactLenis } from "lenis/react";
+import { Cursor } from "../Cursor";
+import { ImageObjectJsonLd, NavigationListJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <Header />
-            <main>
-                {children}
-            </main>
-            <Footer />
-            <Media greaterThan="tablet">
-                <Cursor />
-            </Media>
+            <OrganizationJsonLd />
+            <WebsiteJsonLd />
+            <NavigationListJsonLd />
+            <ImageObjectJsonLd />
+            <ReactLenis root option={{ lerp: 0.05 }}>
+                <Header />
+                <MediaContextProvider>
+                    <main style={{cursor: "none"}}>
+                        {children}
+                    </main>
+                    <Media greaterThan="tablet">
+                        <Cursor />
+                    </Media>
+                </MediaContextProvider>
+                <Footer />
+            </ReactLenis>
         </>
     )
 }

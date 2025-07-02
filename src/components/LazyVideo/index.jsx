@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useState, useEffect } from 'react';
 
 const LazyVideo = ({ poster, type = "video/mp4", controls = false, autoPlay = false, loop = false, muted = true, videoSrc, className = "" }) => {

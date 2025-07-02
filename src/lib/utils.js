@@ -19,3 +19,4 @@ export function useLenisFunctions() {
 
   return { startLenis, stopLenis };
 }
+

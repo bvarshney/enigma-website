@@ -1,3 +1,4 @@
+"use client"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useRef, useEffect } from "react";
@@ -22,7 +23,7 @@ const Process = () => {
                         pinSpacing: true,
                         start: "top -10%",
                         end: "bottom bottom",
-                        markers: false
+                        markers: false,
                     }
                 });
 

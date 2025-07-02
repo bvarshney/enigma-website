@@ -1,10 +1,14 @@
+"use client"
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
+import { fadeUp } from "@/lib/gsapAnimations";
 
 const Hero = () => {
     const container = useRef(null);
     const videoRef = useRef(null);
+
+    fadeUp();
 
     useEffect(() => {
         const herotext = container.current.querySelectorAll(".hero-anim");
@@ -27,25 +31,25 @@ const Hero = () => {
                 translateY: 0,
                 stagger: 0.1,
             })
-            .fromTo(herobottom, {
-                y: -50,
-                opacity: 0,
-            }, {
-                delay: -1,
-                duration: 1.3,
-                opacity: 1,
-                y: 0,
-                stagger: 0.1
-            })
-            .fromTo(heroreel, {
-                scale: 0,
-                opacity: 0,
-            }, {
-                opacity: 1,
-                scale: 1,
-                delay: -1.2,
-                duration: 1.3,
-            });
+                .fromTo(herobottom, {
+                    y: -50,
+                    opacity: 0,
+                }, {
+                    delay: -1,
+                    duration: 1.3,
+                    opacity: 1,
+                    y: 0,
+                    stagger: 0.1
+                })
+                .fromTo(heroreel, {
+                    scale: 0,
+                    opacity: 0,
+                }, {
+                    opacity: 1,
+                    scale: 1,
+                    delay: -1.2,
+                    duration: 1.3,
+                });
         })
         return () => ctx.revert();
     }, []);
@@ -57,7 +61,7 @@ const Hero = () => {
             video.src = videoSrc;
         }, 6000);
     }, []);
- 
+
     return (
         <>
             <section ref={container} className="h-screen w-screen relative tablet:h-full pb-[5vw] tablet:pb-[10vw]" data-cursor-size="10" data-cursor-text="">
@@ -86,8 +90,7 @@ const Hero = () => {
                         </div>
                     </h1>
                     <p className="text-[1.2vw] text-black2 text-justify tracking-[0.4px] leading-[1.7] absolute w-[32vw] top-[25%] right-[13%] hero-anim tablet:static tablet:w-full tablet:text-[3.7vw] tablet:leading-[1.4] tablet:mt-[8vw] mobile:text-[6vw]">
-                        {/* Harnessing the power of<span className="font-medium text-black"> Emotion, Design, Technology & Neuromarketing, </span>we create Digital Brand Experiences that propel your success in the enigmatic realm of bits & bytes. */}
-                        As a leading UI UX and web design agency, we harness the power of emotion, design, technology, and neuromarketing to craft digital brand experiences that drive real results.
+                        As a leading UI UX and web design agency, we harness the power of <span className="font-medium text-black">Emotion, Design, Technology, and Neuromarketing</span> to craft digital brand experiences that drive real results.
                     </p>
                 </div>
 

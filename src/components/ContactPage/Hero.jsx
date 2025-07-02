@@ -1,3 +1,5 @@
+"use client"
+import { fadeUp , TitleAnim} from "@/lib/gsapAnimations";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -5,6 +7,9 @@ import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+    fadeUp();
+    TitleAnim();
+
     const containerRef = useRef(null);
     const videoRef = useRef(null);
     const videoContainer =useRef(null);

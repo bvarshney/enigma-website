@@ -1,14 +1,10 @@
-import { Helmet } from 'react-helmet';
-import { postPathBySlug } from './posts';
-import config from '../../package.json';
-
 const siteName = 'Enigma Digital Agency';
 
+const homepage = "https://weareenigma.com"
+
 export function ArticleJsonLd({ post = {} }) {
-  const { homepage = '' } = config;
 
   const { slug, date, author, modified, featuredImage, seo, tags } = post;
-  const path = postPathBySlug(slug);
   const datePublished = !!date && new Date(date);
   const dateModified = !!modified && new Date(modified);
 
@@ -17,7 +13,7 @@ export function ArticleJsonLd({ post = {} }) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${homepage}${path}`,
+      '@id': `${homepage}/${slug}`,
     },
     headline: seo.title,
     image: [featuredImage?.sourceUrl],
@@ -41,15 +37,16 @@ export function ArticleJsonLd({ post = {} }) {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function OrganizationJsonLd() {
-  const { homepage = '' } = config;
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -77,15 +74,16 @@ export function OrganizationJsonLd() {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function WebsiteJsonLd() {
-  const { homepage = '' } = config;
-
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -102,15 +100,16 @@ export function WebsiteJsonLd() {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function ImageObjectJsonLd() {
-  const { homepage = '' } = config;
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -122,14 +121,16 @@ export function ImageObjectJsonLd() {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function WebpageJsonLd({ metadata = {} }) {
-  const { homepage = '' } = config;
   const { title, slug, description, date_published, date_modified } = metadata;
 
   const jsonLd = {
@@ -159,15 +160,16 @@ export function WebpageJsonLd({ metadata = {} }) {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function LocalBusiness() {
-  const { homepage = '' } = config;
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -207,14 +209,16 @@ export function LocalBusiness() {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function JobpostingJsonLd({ job }) {
-  const { homepage = '' } = config;
   const { title, seo, date, jobFields } = job
 
   const jsonLd = {
@@ -263,15 +267,16 @@ export function JobpostingJsonLd({ job }) {
   };
 
   return (
-    <Helmet encodeSpecialCharacters={false}>
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
 
 export function NavigationListJsonLd() {
-  const { homepage = '' } = config;
-
   const jsonLd = {
     "@context": "https://schema.org/",
     "@type": "ItemList",
@@ -322,8 +327,11 @@ export function NavigationListJsonLd() {
   }
 
 return (
-  <Helmet encodeSpecialCharacters={false}>
-    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-  </Helmet>
+  <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+  </>
 )
 }

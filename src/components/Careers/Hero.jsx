@@ -1,3 +1,4 @@
+"use client"
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { useLenis } from "lenis/react";

@@ -1,6 +1,11 @@
+"use client"
+import { ParaAnim, TitleAnim } from '@/lib/gsapAnimations';
 import React from 'react'
 
+
 const Client = () => {
+    TitleAnim()
+    ParaAnim()
     return (
         <section className='w-full h-full'>
             <div className="w-[80%] h-full mx-auto py-[10%] tablet:w-[85%] tablet:py-[15%] mobile:py-[20%]">

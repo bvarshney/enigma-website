@@ -1,7 +1,10 @@
+"use client"
 import React, { useState } from "react";
 import Image from "next/image";
 
+
 export default function Faq({ faqData }) {
+    
     const [openIndex, setOpenIndex] = useState(0);
 
     const handleToggle = (index) => {

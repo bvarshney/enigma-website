@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 
 const SecondSection = ({ text1, text2, btnText }) => {

@@ -1,7 +1,9 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { fadeUp, ParaAnim, TitleAnim } from "@/lib/gsapAnimations";
 
 const Hero = ({ cursorColor, title, industry, year, link, linkText }) => {
     const text = useRef(null);
@@ -31,6 +33,39 @@ const Hero = ({ cursorColor, title, industry, year, link, linkText }) => {
         });
         return () => ctx.revert();
     }, []);
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to(".color-text", {
+                scrollTrigger: {
+                    trigger: "#color-section",
+                    invalidateOnRefresh: true,
+                    scrub: true,
+                    start: "center bottom",
+                },
+                y: "-20%",
+                ease: "none",
+            });
+        });
+        return () => ctx.revert();
+    });
+
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.from(".color", {
+                scrollTrigger: {
+                    trigger: ".color",
+                    start: "center 80%",
+                },
+                opacity: 0,
+                scaleX: "0",
+                stagger: 0.2,
+                duration: 0.5,
+            });
+        });
+        return () => ctx.revert();
+    });
+
+    fadeUp();
 
     return (
         <section id="hero" data-cursor-text="" data-cursor-size="10px">

@@ -1,13 +1,14 @@
+"use client"
 import Image from "next/image";
-import { useRef } from "react";
 import styles from '../index.module.css';
+import { fadeUp } from "@/lib/gsapAnimations";
 
 const OfferCards = () => {
-    const container = useRef(null);
+    fadeUp();
 
     return (
         <>
-            <section ref={container} id="offer-cards">
+            <section id="offer-cards">
                 <div className="w-[85%] mx-auto py-[10%] tablet:py-[15%]">
 
                     <h3 className="text-[4vw] font-medium font-heading leading-[1.2] tablet:text-[8vw] mobile:text-[11vw] mb-[8%] title-anim">

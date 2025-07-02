@@ -1,4 +1,10 @@
+"use client"
+
+import { ParaAnim, TitleAnim } from "@/lib/gsapAnimations";
+
 const Approach = ({ content }) => {
+    TitleAnim()
+    ParaAnim()
     return (
         <>
             <section id="approach">

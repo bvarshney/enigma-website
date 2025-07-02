@@ -1,59 +1,60 @@
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("/assets/fonts/clash-display/ClashDisplay-Regular.woff2") format("woff2"),
-    url("/assets/fonts/clash-display/ClashDisplay-Regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "ClashDisplay";
-  src: url("/assets/fonts/clash-display/ClashDisplay-Medium.woff2")
-      format("woff2"),
-    url("/assets/fonts/clash-display/ClashDisplay-Medium.woff") format("woff");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "ClashDisplay";
-  src: url("/assets/fonts/clash-display/ClashDisplay-Semibold.woff2")
-      format("woff2"),
-    url("/assets/fonts/clash-display/ClashDisplay-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Ageo";
-  src: url("/assets/fonts/ageo/Ageo.woff2") format("woff2"),
-    url("/assets/fonts/ageo/Ageo.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ageo";
-  src: url("/assets/fonts/ageo/Ageo-Medium.woff2") format("woff2"),
-    url("/assets/fonts/ageo/Ageo-Medium.woff") format("woff");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ageo";
-  src: url("/assets/fonts/ageo/Ageo-SemiBold.woff2") format("woff2"),
-    url("/assets/fonts/ageo/Ageo-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Ageo";
-  src: url("/assets/fonts/ageo/Ageo-ExtraBold.woff2") format("woff2"),
-    url("/assets/fonts/ageo/Ageo-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-display: swap;
-  font-style: normal;
-}
+    font-family: "ClashDisplay";
+    src: url("/assets/fonts/clash-display/ClashDisplay-Regular.woff2") format("woff2"),
+      url("/assets/fonts/clash-display/ClashDisplay-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay";
+    src: url("/assets/fonts/clash-display/ClashDisplay-Medium.woff2")
+        format("woff2"),
+      url("/assets/fonts/clash-display/ClashDisplay-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ClashDisplay";
+    src: url("/assets/fonts/clash-display/ClashDisplay-Semibold.woff2")
+        format("woff2"),
+      url("/assets/fonts/clash-display/ClashDisplay-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Ageo";
+    src: url("/assets/fonts/ageo/Ageo.woff2") format("woff2"),
+      url("/assets/fonts/ageo/Ageo.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Ageo";
+    src: url("/assets/fonts/ageo/Ageo-Medium.woff2") format("woff2"),
+      url("/assets/fonts/ageo/Ageo-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Ageo";
+    src: url("/assets/fonts/ageo/Ageo-SemiBold.woff2") format("woff2"),
+      url("/assets/fonts/ageo/Ageo-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Ageo";
+    src: url("/assets/fonts/ageo/Ageo-ExtraBold.woff2") format("woff2"),
+      url("/assets/fonts/ageo/Ageo-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+  

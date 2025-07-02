@@ -1,7 +1,8 @@
+"use client"
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitInLineWord, SplitInWord } from "./splitText";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,16 +12,18 @@ export function fadeUp() {
         let ctx = gsap.context(() => {
             const content = document.querySelectorAll(".fadeup");
             content.forEach((content) => {
-                gsap.from(content, {
+                gsap.fromTo(content, {
                     scrollTrigger: {
                         trigger: content,
                         start: "top 90%",
-                        end: "bottom 60%",
                     },
                     opacity: 0,
-                    delay: 0.3,
                     y: 50,
+                }, {
+                    opacity: 1,
+                    y: 0,
                     ease: "power3.Out",
+                    duration: 0.7,
                     duration: 0.7,
                     stagger: 0.5
                 });
@@ -41,6 +44,7 @@ export function TitleAnim() {
                     scrollTrigger: {
                         trigger: el,
                         start: "top 85%",
+                        //  markers:true
                     },
                     opacity: 0,
                     yPercent: 100,

@@ -1,6 +1,10 @@
+"use client"
+import { ParaAnim } from "@/lib/gsapAnimations";
 import Image from "next/image";
 
 const Benefits = () => {
+    ParaAnim()
+   
     return (
         <section id="benefits">
             <div className="w-[75%] tablet:w-[85%] mx-auto pb-[10vw] tablet:py-[15vw] mobile:pb-[20vw] px-4 tablet:px-0">

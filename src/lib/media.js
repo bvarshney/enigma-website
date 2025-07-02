@@ -1,4 +1,5 @@
-// Media.tsx
+"use client";
+
 import { createMedia } from "@artsy/fresnel";
 
 const AppMedia = createMedia({
@@ -9,5 +10,7 @@ const AppMedia = createMedia({
   },
 });
 
-export const mediaStyles = AppMedia.createMediaStyle();
-export const { Media, MediaContextProvider } = AppMedia;
+const mediaStyles = AppMedia.createMediaStyle();
+const { Media, MediaContextProvider } = AppMedia;
+
+export { Media, MediaContextProvider, mediaStyles };

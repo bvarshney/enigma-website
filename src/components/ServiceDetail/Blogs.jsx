@@ -1,8 +1,10 @@
+"use client"
 import Link from "next/link";
 import BlogCard from "../Blogs/BlogCard";
 
-const Blogs = ({ blogs }) => {
 
+const Blogs = ({ blogs }) => {
+ 
     return (
         <section id="recent-blogs" className="w-full h-full">
             <div className="py-[10%] w-[85%] mx-auto">
