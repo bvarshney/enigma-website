@@ -11,8 +11,8 @@ export async function POST(req) {
 
     const { data, error } = await resend.emails.send({
       from: 'Enigma Webforms <no-reply@weareenigma.com>',
-      // to: ['b@weareenigma.com'],
-      to: ['bhardwajhitesh09@gmail.com'],
+      to: ['b@weareenigma.com'],
+      // to: ['bhardwajhitesh09@gmail.com'],
       subject: 'New Lead: New Contact Form Submission',
       react: ContactDetails({
         userName: name,
