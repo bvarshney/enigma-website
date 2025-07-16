@@ -14,8 +14,8 @@ import { LocalBusiness, WebpageJsonLd } from "@/lib/json-ld";
 import { generateMetadata } from "@/lib/metadata";
 
 const meta = {
-  title: "A Global, Award-Winning UI UX & Website Design Agency | Enigma Digital",
-  description: "Enigma Digital, a global website design and UI UX design Agency, delivers cutting-edge website design services across the USA, Canada, the Middle East, and India.",
+  title: "Enigma Digital: A Global, Award-Winning UI UX Design Agency",
+  description: "Enigma Digital, a global UI UX design Agency, delivers cutting-edge user interface design services across the USA, Canada, the Middle East, and India.",
   img: "index.png",
   slug: "",
   date_published: "2020-10-22T00:00",
