@@ -12,7 +12,7 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 export async function generateMetadata({ params }) {
   const data = await getBlogPostBySlug(params.slug);
 
-  if (!data.post) {
+if (!data || !data.post) {
     notFound();
   }
 
@@ -59,8 +59,8 @@ export async function generateMetadata({ params }) {
 // ✅ BlogPost Component
 export default async function BlogPost({ params }) {
   const data = await getBlogPostBySlug(params.slug);
-  
-  if (!data.post) {
+
+  if (!data || !data.post) {
     notFound();
   }
 
@@ -71,7 +71,7 @@ export default async function BlogPost({ params }) {
     slug: data.post.slug.current,
     date_published: data.post.publishedAt,
     date_modified: "2024-12-25T00:00",
-}
+  }
 
   const { post, relatedPosts } = data;
 
@@ -84,7 +84,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <>
-    <WebpageJsonLd metadata={meta}/>
+      <WebpageJsonLd metadata={meta} />
       <Layout>
         <article className="prose mx-auto p-5 w-screen px-[7.5%] tablet:px-[5%] mobile:px-[5%]">
           <h1 className="text-[3vw] tablet:text-[4.8vw] font-heading font-medium py-[2vw] pt-[10vw] w-[70%] blog-title-anim tablet:w-full tablet:pt-[22vw] mobile:pt-[30vw] mobile:text-[5.8vw]">
