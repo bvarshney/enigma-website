@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 const siteName = 'Enigma Digital Agency';
 
 const homepage = "https://weareenigma.com"
@@ -334,4 +336,29 @@ return (
       />
   </>
 )
+}
+
+export function FAQJSONLD({ faqs }) {
+  const faqJSONLD = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <Script
+      id="faq-jsonld"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(faqJSONLD),
+      }}
+    />
+  );
 }

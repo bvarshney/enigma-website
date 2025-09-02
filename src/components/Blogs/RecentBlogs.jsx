@@ -2,17 +2,39 @@
 import Link from "next/link";
 import BlogCard from "./BlogCard";
 import { fadeUp } from "@/lib/gsapAnimations";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const RecentBlogs = ({ line1, line2, blogs }) => {
     fadeUp()
+    const head = useRef(null);
+      const blogContainer = useRef(null);
+    useEffect(() => {
+    const heading = head.current.querySelectorAll("span");
+    
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: blogContainer.current, start: "top 85%" },
+      });
+      tl.from(heading, {
+        yPercent: 100,
+        opacity: 0,
+        ease: "Power3.inOut",
+        skewY: -5,
+        duration: 1.2,
+        stagger: 0.2,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
     return (
-        <section id="recent-blogs" className="w-full h-full">
+        <section ref={blogContainer} id="recent-blogs" className="w-full h-full">
             <div className="py-[10%] w-[85%] mx-auto mobile:py-[20%]">
                 <div className="flex items-end mobile:block">
-                    <h4 className="text-[8vw] fadeup font-heading font-medium leading-[1.1] text-left mobile:text-[12vw]">
-                        <span>{line1}{" "}</span>
+                    <h4 ref={head} className="text-[8vw] fadeup font-heading font-medium leading-[1.1] text-left mobile:text-[12vw]">
+                        <span className="block">{line1}{" "}</span>
                         {line2 && (
-                            <span className="text-primary">{line2}</span>
+                            <span className="text-primary block">{line2}</span>
                         )}
                     </h4>
                     <div className="w-[11%] pb-2 tablet:w-[30%] mobile:mt-[3vw] mobile:w-fit">
